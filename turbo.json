@@ -1,0 +1,119 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**", "build/**", ".expo/**", "coverage/**"],
+      "env": [
+        "NEXT_PUBLIC_SUPABASE_URL",
+        "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+        "EXPO_PUBLIC_SUPABASE_URL", 
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY",
+        "RESEND_API_KEY",
+        "OPENAI_API_KEY",
+        "ANTHROPIC_API_KEY",
+        "GOOGLE_GENERATIVE_AI_API_KEY"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "env": [
+        "NEXT_PUBLIC_SUPABASE_URL",
+        "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+        "EXPO_PUBLIC_SUPABASE_URL",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY",
+        "RESEND_API_KEY",
+        "DATABASE_URL",
+        "OPENAI_API_KEY",
+        "ANTHROPIC_API_KEY",
+        "GOOGLE_GENERATIVE_AI_API_KEY"
+      ]
+    },
+    "start": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "eslint.config.*"],
+      "outputs": []
+    },
+    "lint:fix": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "eslint.config.*"],
+      "cache": false
+    },
+    "type-check": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "tsconfig*.json"],
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "vitest.config.*", "jest.config.*"],
+      "outputs": ["coverage/**"]
+    },
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
+    "test:coverage": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "vitest.config.*"],
+      "outputs": ["coverage/**"]
+    },
+    "clean": {
+      "cache": false
+    },
+    "db:generate": {
+      "cache": false,
+      "inputs": ["supabase/**/*.sql"]
+    },
+    "db:push": {
+      "cache": false
+    },
+    "db:migrate": {
+      "cache": false,
+      "inputs": ["supabase/migrations/**/*.sql"]
+    },
+    "db:reset": {
+      "cache": false
+    },
+    "email:dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "ai:init": {
+      "cache": false
+    },
+    "ai:test": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"]
+    },
+    "ai:validate": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    }
+  },
+  "globalDependencies": [".env*", "turbo.json", "pnpm-workspace.yaml"],
+  "globalEnv": [
+    "NODE_ENV",
+    "NEXT_PUBLIC_SUPABASE_URL",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+    "EXPO_PUBLIC_SUPABASE_URL",
+    "EXPO_PUBLIC_SUPABASE_ANON_KEY",
+    "SUPABASE_SERVICE_ROLE_KEY",
+    "OPENAI_API_KEY",
+    "ANTHROPIC_API_KEY",
+    "GOOGLE_GENERATIVE_AI_API_KEY",
+    "RESEND_API_KEY",
+    "STRIPE_SECRET_KEY",
+    "VERCEL",
+    "VERCEL_ENV",
+    "VERCEL_URL",
+    "CI"
+  ]
+}

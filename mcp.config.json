@@ -1,0 +1,117 @@
+{
+  "servers": {
+    "filesystem": {
+      "command": "npx @modelcontextprotocol/server-filesystem",
+      "args": ["./"],
+      "env": {
+        "ALLOWED_PATHS": "src,public,docs,apps,packages,supabase,scripts",
+        "IGNORED_PATHS": "node_modules,.next,dist,.git"
+      },
+      "description": "Local file system operations for the monorepo"
+    },
+    "github": {
+      "command": "mcp-server-github",
+      "args": ["--token", "$GITHUB_TOKEN"],
+      "description": "Repository management, issues, PRs, and CI/CD automation"
+    },
+    "expo": {
+      "command": "mcp-server-expo",
+      "args": ["--project-root", "./apps/mobile"],
+      "description": "React Native development and mobile automation"
+    },
+    "playwright": {
+      "command": "mcp-server-playwright",
+      "args": ["--config", "./playwright.config.ts"],
+      "description": "Browser automation and E2E testing"
+    },
+    "magicui": {
+      "command": "mcp-server-magicui",
+      "args": ["--registry", "https://magicui.design"],
+      "description": "Premium animation components and advanced UI patterns"
+    },
+    "context7": {
+      "command": "mcp-server-context7",
+      "args": ["--cache-dir", "./.context7"],
+      "description": "Real-time library documentation and code examples"
+    },
+    "shadcn-ui": {
+      "command": "mcp-server-shadcn-ui",
+      "args": ["--registry", "https://ui.shadcn.com"],
+      "description": "shadcn/ui component registry for rapid UI development and proven patterns"
+    },
+    "fetch": {
+      "command": "npx @modelcontextprotocol/server-fetch",
+      "args": [],
+      "description": "Official MCP server for web content fetching and conversion"
+    },
+    "git": {
+      "command": "npx @modelcontextprotocol/server-git",
+      "args": ["--repository", "."],
+      "description": "Official MCP server for Git repository operations"
+    },
+    "memory": {
+      "command": "npx @modelcontextprotocol/server-memory",
+      "args": [],
+      "description": "Official MCP server for knowledge graph-based persistent memory"
+    },
+    "supabase": {
+      "command": "npx @supabase/mcp-server-supabase",
+      "args": [],
+      "env": {
+        "SUPABASE_URL": "$SUPABASE_URL",
+        "SUPABASE_ANON_KEY": "$SUPABASE_ANON_KEY",
+        "SUPABASE_SERVICE_ROLE_KEY": "$SUPABASE_SERVICE_ROLE_KEY"
+      },
+      "description": "Supabase database operations, auth, storage, and edge functions"
+    },
+    "sequential-thinking": {
+      "command": "npx @modelcontextprotocol/server-sequential-thinking",
+      "args": [],
+      "description": "Advanced reasoning and multi-step problem solving"
+    },
+    "everything": {
+      "command": "npx @modelcontextprotocol/server-everything",
+      "args": [],
+      "description": "Reference server with prompts, resources, and tools for testing"
+    },
+    "reddit": {
+      "command": "reddit-mcp-server",
+      "args": [],
+      "env": {
+        "REDDIT_CLIENT_ID": "$REDDIT_CLIENT_ID",
+        "REDDIT_CLIENT_SECRET": "$REDDIT_CLIENT_SECRET",
+        "REDDIT_USER_AGENT": "Avolve Social Listening v1.0"
+      },
+      "description": "Reddit API integration for developer community monitoring and social listening"
+    }
+  },
+  "toolGeneration": {
+    "outputDir": "./apps/web/src/tools/",
+    "typescript": true,
+    "validation": true,
+    "documentation": true,
+    "autoGenerate": true,
+    "includeTypes": true,
+    "generateTests": true
+  },
+  "aiNative": {
+    "enableAgentOrchestration": true,
+    "enableToolChaining": true,
+    "enableContextSharing": true,
+    "maxConcurrentTools": 15,
+    "enableBackgroundTasks": true,
+    "enablePredictivePreloading": true
+  },
+  "accessibility": {
+    "enforceWCAG": "AA",
+    "autoGenerateAriaLabels": true,
+    "validateContrast": true,
+    "checkFocusManagement": true
+  },
+  "performance": {
+    "optimizeBundles": true,
+    "enableCodeSplitting": true,
+    "monitorCoreWebVitals": true,
+    "generateLighthouseReports": true
+  }
+}

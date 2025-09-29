@@ -1,0 +1,43 @@
+{
+  "security": {
+    "promptInjection": {
+      "enabled": true,
+      "threshold": 0.8,
+      "sanitization": true,
+      "monitoring": true
+    },
+    "outputValidation": {
+      "enabled": true,
+      "filters": ["pii", "harmful_content", "hallucination", "code_injection"],
+      "strictMode": true
+    },
+    "rateLimiting": {
+      "tokensPerMinute": 10000,
+      "requestsPerMinute": 100,
+      "burstLimit": 20
+    },
+    "dataProtection": {
+      "encryptInTransit": true,
+      "encryptAtRest": true,
+      "anonymizeLogging": true
+    }
+  },
+  "compliance": {
+    "dataRetention": "30d",
+    "auditLogging": true,
+    "gdprCompliant": true,
+    "soc2Compliant": true,
+    "accessControls": "rbac"
+  },
+  "monitoring": {
+    "realTimeAlerts": true,
+    "anomalyDetection": true,
+    "performanceMetrics": true,
+    "costTracking": true
+  },
+  "fallback": {
+    "enableGracefulDegradation": true,
+    "offlineMode": false,
+    "cachingStrategy": "intelligent"
+  }
+}

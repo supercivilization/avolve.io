@@ -1,0 +1,56 @@
+{
+  "ai_decision_tracking": {
+    "version": "1.0.0",
+    "enabled": true,
+    "auto_log": false,
+    "retention_days": 90,
+    "ai_tools": {
+      "claude-code": {
+        "name": "Claude Code CLI",
+        "cost_per_1k": 0.015,
+        "strengths": [
+          "architecture",
+          "production-code",
+          "security"
+        ]
+      },
+      "gemini": {
+        "name": "Gemini CLI",
+        "cost_per_1k": 0,
+        "strengths": [
+          "analysis",
+          "documentation",
+          "free-tier"
+        ]
+      },
+      "codex": {
+        "name": "GitHub Copilot/Codex",
+        "cost_per_1k": 0.012,
+        "strengths": [
+          "speed",
+          "experimentation",
+          "bulk-generation"
+        ]
+      }
+    },
+    "decision_types": [
+      "architecture",
+      "component-creation",
+      "debugging",
+      "optimization",
+      "testing",
+      "documentation",
+      "security-review",
+      "refactoring"
+    ],
+    "quality_thresholds": {
+      "excellent": 8,
+      "good": 6,
+      "needs_improvement": 4
+    },
+    "cost_alerts": {
+      "daily_threshold": 5,
+      "monthly_threshold": 100
+    }
+  }
+}

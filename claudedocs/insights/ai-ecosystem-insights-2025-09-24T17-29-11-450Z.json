@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "generated_at": "2025-09-24T17:29:11.450Z",
+    "source_report": "comprehensive-github-intelligence-2025-09-24T17-27-09-100Z.json",
+    "engine_version": "1.0.0",
+    "mcp_enabled": true
+  },
+  "executive_summary": {
+    "total_repositories": 26,
+    "average_health_score": 51,
+    "critical_issues": 66,
+    "recommendations_count": 3
+  },
+  "ecosystem_health": [
+    {
+      "ecosystem": "critical_ai",
+      "repoCount": 9,
+      "totalIssues": 363,
+      "highPriorityIssues": 50,
+      "healthScore": 22,
+      "status": "🔴 CRITICAL"
+    },
+    {
+      "ecosystem": "tech_stack",
+      "repoCount": 4,
+      "totalIssues": 76,
+      "highPriorityIssues": 7,
+      "healthScore": 75,
+      "status": "🟢 HEALTHY"
+    },
+    {
+      "ecosystem": "ai_infrastructure",
+      "repoCount": 9,
+      "totalIssues": 237,
+      "highPriorityIssues": 7,
+      "healthScore": 56,
+      "status": "🟡 CAUTION"
+    },
+    {
+      "ecosystem": "dev_tools",
+      "repoCount": 4,
+      "totalIssues": 94,
+      "highPriorityIssues": 2,
+      "healthScore": 50,
+      "status": "🟡 CAUTION"
+    }
+  ],
+  "trends": [
+    {
+      "type": "HIGH_ACTIVITY",
+      "title": "Repositories with High Issue Activity",
+      "description": "These repositories show high development activity",
+      "repos": [
+        {
+          "name": "openai/openai-node",
+          "issues": 58,
+          "highPriority": 8
+        },
+        {
+          "name": "replicate/replicate-python",
+          "issues": 58,
+          "highPriority": 2
+        },
+        {
+          "name": "modelcontextprotocol/typescript-sdk",
+          "issues": 56,
+          "highPriority": 8
+        }
+      ]
+    },
+    {
+      "type": "STABLE",
+      "title": "Most Stable Repositories",
+      "description": "These repositories show excellent maintenance and stability",
+      "repos": [
+        {
+          "name": "microsoft/TypeScript",
+          "issues": 11,
+          "highPriority": 1
+        },
+        {
+          "name": "tailwindlabs/tailwindcss",
+          "issues": 13,
+          "highPriority": 1
+        },
+        {
+          "name": "google/generative-ai-js",
+          "issues": 13,
+          "highPriority": 0
+        },
+        {
+          "name": "groq/groq-python",
+          "issues": 12,
+          "highPriority": 0
+        },
+        {
+          "name": "mistralai/mistral-src",
+          "issues": 13,
+          "highPriority": 0
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "category": "RISK_MITIGATION",
+      "title": "Critical Ecosystem Dependencies",
+      "description": "1 ecosystem(s) show concerning health scores",
+      "action": "Consider alternative solutions or contribute to issue resolution",
+      "ecosystems": [
+        "critical_ai"
+      ]
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "OPPORTUNITY",
+      "title": "High Activity Repositories",
+      "description": "These repositories show rapid development - consider early adoption",
+      "action": "Monitor for breaking changes and new features",
+      "repos": [
+        "openai/openai-node",
+        "replicate/replicate-python",
+        "modelcontextprotocol/typescript-sdk"
+      ]
+    },
+    {
+      "priority": "HIGH",
+      "category": "MCP_INTEGRATION",
+      "title": "Model Context Protocol Development",
+      "description": "MCP ecosystem health score: 22%",
+      "action": "Monitor development closely before major implementations"
+    }
+  ],
+  "next_analysis": "2025-09-24T21:29:11.451Z"
+}
