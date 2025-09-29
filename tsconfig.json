@@ -13,50 +13,23 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/ui/*": ["./packages/ui/src/*"],
-      "@/lib/*": ["./packages/lib/src/*"],
-      "@/config/*": ["./packages/config/src/*"]
+      "@unified/ui": ["./packages/ui/src"],
+      "@unified/ui/*": ["./packages/ui/src/*"],
+      "@unified/lib": ["./packages/lib/src"],
+      "@unified/lib/*": ["./packages/lib/src/*"],
+      "@unified/config": ["./packages/config/src"],
+      "@unified/config/*": ["./packages/config/src/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "apps/**/*.ts",
-    "apps/**/*.tsx",
-    "packages/**/*.ts",
-    "packages/**/*.tsx"
-  ],
+  "include": [],
   "exclude": [
     "node_modules",
     ".next",
     "dist",
-    "build"
-  ],
-  "references": [
-    {
-      "path": "./apps/web"
-    },
-    {
-      "path": "./apps/mobile"
-    },
-    {
-      "path": "./packages/ui"
-    },
-    {
-      "path": "./packages/lib"
-    },
-    {
-      "path": "./packages/config"
-    }
+    "build",
+    "apps",
+    "packages"
   ]
 }

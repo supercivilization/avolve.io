@@ -1,6 +1,6 @@
 {
   "name": "@unified/config",
-  "version": "0.1.0", 
+  "version": "0.1.0",
   "private": true,
   "description": "Shared configuration for ESLint, TypeScript, Tailwind, and other tools",
   "main": "./dist/index.js",
@@ -21,14 +21,14 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@eslint/eslintrc": "^3",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.3",
+    "@eslint/eslintrc": "^3.3.1",
+    "eslint": "^9.36.0",
+    "eslint-config-next": "15.5.4",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "typescript": "^5.9.2"
   },
   "devDependencies": {
-    "@types/node": "^24.5.2"
+    "@types/node": "^24.6.0"
   }
 }

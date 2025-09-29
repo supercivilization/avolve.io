@@ -7,7 +7,6 @@ import { z } from 'zod';
 // Initialize AI providers
 export const openai = createOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
-  compatibility: 'strict',
 });
 
 export const anthropic = createAnthropic({

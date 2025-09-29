@@ -27,17 +27,17 @@
     "ai:generate": "mcp-to-ai-sdk generate --output=./src/tools/"
   },
   "dependencies": {
-    "@ai-sdk/anthropic": "^2.0.16",
-    "@ai-sdk/google": "^2.0.14", 
-    "@ai-sdk/openai": "^2.0.30",
-    "@supabase/supabase-js": "^2.57.4",
-    "ai": "^5.0.47",
-    "zod": "^4.1.8"
+    "@ai-sdk/anthropic": "^2.0.22",
+    "@ai-sdk/google": "^2.0.17",
+    "@ai-sdk/openai": "^2.0.40",
+    "@supabase/supabase-js": "^2.58.0",
+    "ai": "^5.0.57",
+    "zod": "^4.1.11"
   },
   "devDependencies": {
-    "@types/node": "^24.5.2",
-    "eslint": "^9",
-    "tsup": "^8.3.5",
+    "@types/node": "^24.6.0",
+    "eslint": "^9.36.0",
+    "tsup": "^8.5.0",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   }

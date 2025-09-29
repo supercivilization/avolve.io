@@ -103,3 +103,7 @@ temp/
 
 # Supabase temporary files
 supabase/.temp/
+# Build artifacts
+.turbo
+tsconfig.tsbuildinfo
+*.tsbuildinfo

@@ -4,10 +4,7 @@
     "composite": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/ui/*": ["../../packages/ui/src/*"],
-      "@/lib/*": ["../../packages/lib/src/*"],
-      "@/config/*": ["../../packages/config/src/*"]
+      "@/*": ["./src/*"]
     },
     "plugins": [
       {

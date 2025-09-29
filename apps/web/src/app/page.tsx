@@ -1,12 +1,14 @@
+"use client";
+
 import { Suspense } from "react";
 import { cn } from "@unified/ui";
 import { motion } from "framer-motion";
-import { BlurFade } from "@/components/magicui/blur-fade";
-import { BorderBeam } from "@/components/magicui/border-beam";
-import { DotPattern } from "@/components/magicui/dot-pattern";
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
-import { Marquee } from "@/components/magicui/marquee";
-import { Ripple } from "@/components/magicui/ripple";
+import BlurFade from "@/components/blur-fade";
+import { BorderBeam } from "@/components/border-beam";
+import DotPattern from "@/components/dot-pattern";
+import FlickeringGrid from "@/components/flickering-grid";
+import { Marquee } from "@/components/marquee";
+import Ripple from "@/components/ripple";
 import { Icons } from "@/components/ui/icons";
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 
