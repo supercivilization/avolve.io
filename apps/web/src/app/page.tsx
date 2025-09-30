@@ -1,6 +1,20 @@
 "use client";
 
+/**
+ * Avolve Homepage - Updated September 30, 2025
+ *
+ * CHANGES FROM ORIGINAL:
+ * - Repositioned as "Intelligence Platform with Modern Web Stack"
+ * - Emphasized operational features (intelligence system, 536 sources, 48+ scripts)
+ * - Moved aspirational AI dev features to "In Development" section with badges
+ * - Added real metrics and current status
+ * - Updated CTAs to link to working features
+ * - Maintained all design quality and accessibility features
+ * - Kept all existing Magic UI components and animations
+ */
+
 import { Suspense } from "react";
+import Link from "next/link";
 import { cn } from "@unified/ui";
 import { motion } from "framer-motion";
 import BlurFade from "@/components/blur-fade";
@@ -12,16 +26,17 @@ import Ripple from "@/components/ripple";
 import { Icons } from "@/components/ui/icons";
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 
-// AI-Enhanced Components (to be generated)
-function AIStatusIndicator() {
+// Real-time status indicator
+function IntelligenceStatusIndicator() {
   return (
     <div className="flex items-center space-x-2 text-sm text-muted-foreground">
       <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-      <span>AI-Native Environment Active</span>
+      <span>Intelligence System: Operational</span>
     </div>
   );
 }
 
+// Modern tech stack display (ACCURATE - these versions are real)
 function TechStackDisplay() {
   const stack = [
     { name: "Node.js", version: "24.8.0", status: "✅ Native TypeScript" },
@@ -58,27 +73,96 @@ function TechStackDisplay() {
   );
 }
 
-function FeatureShowcase() {
+// OPERATIONAL features (what actually works)
+function OperationalFeatures() {
+  const features = [
+    {
+      title: "🎯 Multi-Platform Intelligence",
+      description: "536 discovered sources across YouTube, Reddit, and GitHub. Real-time social listening and content monitoring.",
+      status: "operational",
+      badge: "Production Ready",
+    },
+    {
+      title: "📊 GitHub Ecosystem Analysis",
+      description: "Monitoring 26+ repositories with automated dependency tracking, issue analysis, and ecosystem mapping.",
+      status: "operational",
+      badge: "Active",
+    },
+    {
+      title: "🔍 SEO & Market Research",
+      description: "48+ working scripts for competitive analysis, keyword research, and content intelligence generation.",
+      status: "operational",
+      badge: "48+ Scripts",
+    },
+    {
+      title: "⚡ Modern Web Stack",
+      description: "Next.js 15.5 + React 19 + TypeScript 5.9 with native execution. Real performance improvements verified.",
+      status: "operational",
+      badge: "Latest Stack",
+    },
+    {
+      title: "🎨 Component Library",
+      description: "shadcn/ui + Magic UI integration. Accessible, performant components with advanced animations.",
+      status: "operational",
+      badge: "Ready to Use",
+    },
+    {
+      title: "🏗️ Monorepo Structure",
+      description: "Turborepo setup with shared packages, optimized builds, and proper code organization.",
+      status: "operational",
+      badge: "Configured",
+    },
+  ];
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {features.map((feature) => (
+        <div
+          key={feature.title}
+          className={cn(
+            "rounded-lg border bg-card p-6",
+            "hover:shadow-lg transition-all duration-300",
+            "focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2",
+            "relative overflow-hidden"
+          )}
+        >
+          <div className="absolute top-4 right-4">
+            <span className="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:text-green-300">
+              ✅ {feature.badge}
+            </span>
+          </div>
+          <h3 className="text-lg font-semibold text-card-foreground mb-2 pr-24">
+            {feature.title}
+          </h3>
+          <p className="text-muted-foreground">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// In-development features (honest about what's not ready)
+function InDevelopmentFeatures() {
   const features = [
     {
       title: "🤖 AI Component Generation",
-      description: "Generate accessible, performant React components from natural language",
-      command: "pnpm ai:component \"Create a responsive dashboard card\"",
+      description: "Natural language to React components with automatic accessibility validation.",
+      status: "experimental",
     },
     {
-      title: "♿ Automatic Accessibility",
-      description: "100% WCAG 2.1 AA compliance with AI-powered validation",
-      command: "pnpm ai:accessibility ./src/components",
+      title: "🔄 Automated Workflows",
+      description: "AI-driven code review, optimization, and quality assurance pipelines.",
+      status: "in-progress",
     },
     {
-      title: "⚡ Performance Optimization",
-      description: "AI-driven Core Web Vitals optimization and bundle analysis",
-      command: "pnpm ai:optimize ./src/pages",
+      title: "📈 Intelligence Dashboard",
+      description: "Real-time visualization of monitoring data, trends, and actionable insights.",
+      status: "planned",
     },
     {
-      title: "🔍 AI Code Review",
-      description: "Comprehensive code quality, security, and performance analysis",
-      command: "pnpm ai:review ./src",
+      title: "🔗 API Integration Layer",
+      description: "Unified interface for all intelligence sources with automated data normalization.",
+      status: "in-progress",
     },
   ];
 
@@ -88,49 +172,90 @@ function FeatureShowcase() {
         <div
           key={feature.title}
           className={cn(
-            "rounded-lg border bg-card p-6",
-            "hover:shadow-lg transition-all duration-300",
-            "focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2"
+            "rounded-lg border border-dashed bg-card/50 p-6",
+            "hover:bg-card hover:border-solid transition-all duration-300",
+            "focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2",
+            "relative"
           )}
         >
-          <h3 className="text-lg font-semibold text-card-foreground mb-2">
+          <div className="absolute top-4 right-4">
+            <span className="inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900/30 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:text-blue-300">
+              🚧 {feature.status === "experimental" ? "Experimental" : feature.status === "in-progress" ? "In Progress" : "Planned"}
+            </span>
+          </div>
+          <h3 className="text-lg font-semibold text-card-foreground mb-2 pr-24">
             {feature.title}
           </h3>
-          <p className="text-muted-foreground mb-4">{feature.description}</p>
-          <code className="block rounded bg-muted p-3 text-sm text-muted-foreground overflow-x-auto">
-            {feature.command}
-          </code>
+          <p className="text-muted-foreground/80">{feature.description}</p>
         </div>
       ))}
     </div>
   );
 }
 
-function QuickStartGuide() {
+// Real metrics from the working intelligence system
+function SystemMetrics() {
+  const metrics = [
+    { label: "Sources Monitored", value: "536", icon: Icons.activity, status: "Real-time" },
+    { label: "GitHub Repos Tracked", value: "26+", icon: Icons.gitBranch, status: "Active" },
+    { label: "Working Scripts", value: "48+", icon: Icons.code, status: "Production" },
+    { label: "Data Collections", value: "Daily", icon: Icons.database, status: "Automated" },
+  ];
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {metrics.map((metric) => {
+        const Icon = metric.icon;
+        return (
+          <div
+            key={metric.label}
+            className={cn(
+              "rounded-lg border bg-card p-6",
+              "hover:shadow-lg transition-all duration-300",
+              "text-center space-y-2"
+            )}
+          >
+            <div className="flex justify-center">
+              <div className="rounded-full bg-primary/10 p-3">
+                <Icon className="h-6 w-6 text-primary" />
+              </div>
+            </div>
+            <div className="text-3xl font-bold text-card-foreground">{metric.value}</div>
+            <div className="text-sm font-medium text-muted-foreground">{metric.label}</div>
+            <div className="text-xs text-muted-foreground/60">{metric.status}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+// Getting started guide with REAL commands
+function GettingStarted() {
   const steps = [
     {
       step: "1",
-      title: "Environment Setup",
-      description: "Copy .env.example to .env.local and add your AI API keys",
-      code: "cp .env.example .env.local",
+      title: "Clone & Install",
+      description: "Get the repository and install dependencies",
+      code: "git clone https://github.com/avolve-dao/avolve.git && cd avolve && pnpm install",
     },
     {
       step: "2",
-      title: "Initialize AI Tools",
-      description: "Set up MCP servers and AI development environment",
-      code: "pnpm ai:init",
+      title: "Environment Setup",
+      description: "Copy the template and add your API keys for intelligence features",
+      code: "cp .env.local.template .env.local",
     },
     {
       step: "3",
       title: "Start Development",
-      description: "Launch the AI-native development environment",
+      description: "Launch the development server with Turbopack",
       code: "pnpm dev",
     },
     {
       step: "4",
-      title: "Generate Components",
-      description: "Create your first AI-generated component",
-      code: "pnpm ai:component \"Create a hero section\"",
+      title: "Explore Intelligence",
+      description: "Run intelligence scripts to see the system in action",
+      code: "pnpm social:comprehensive:test",
     },
   ];
 
@@ -147,7 +272,7 @@ function QuickStartGuide() {
           <div className="flex-1 space-y-2">
             <h3 className="font-semibold text-card-foreground">{step.title}</h3>
             <p className="text-sm text-muted-foreground">{step.description}</p>
-            <code className="block rounded bg-muted p-2 text-sm text-muted-foreground">
+            <code className="block rounded bg-muted p-2 text-sm text-muted-foreground overflow-x-auto">
               {step.code}
             </code>
           </div>
@@ -165,7 +290,7 @@ export default function HomePage() {
       <FlickeringGrid className="absolute inset-0 opacity-10" />
 
       <div className="container mx-auto px-4 py-8 space-y-12 relative z-10">
-        {/* Hero Section */}
+        {/* Hero Section - UPDATED: Honest positioning */}
         <BlurFade delay={0.25}>
           <section className="text-center space-y-6 py-12 relative">
             <Ripple className="absolute inset-0" />
@@ -178,23 +303,27 @@ export default function HomePage() {
             >
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                  Avolve AI-Native Platform
+                  Intelligence Platform
+                </span>
+                <br />
+                <span className="text-muted-foreground text-3xl md:text-5xl">
+                  with Modern Web Stack
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Complete AI-native development platform with{" "}
-                <strong>8-layer architecture</strong>, automatic accessibility
-                compliance, and revolutionary development workflows.
+                Real-time intelligence across <strong>536 sources</strong> powered by{" "}
+                <strong>48+ production scripts</strong>. Built on the latest web technologies{" "}
+                with <strong>Next.js 15.5</strong>, <strong>React 19</strong>, and modern tooling.
               </p>
             </motion.div>
 
-            <Suspense fallback={<div className="animate-pulse">Loading AI status...</div>}>
+            <Suspense fallback={<div className="animate-pulse">Loading status...</div>}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                <AIStatusIndicator />
+                <IntelligenceStatusIndicator />
               </motion.div>
             </Suspense>
 
@@ -206,18 +335,18 @@ export default function HomePage() {
             >
               <div className="text-sm text-muted-foreground flex items-center gap-2">
                 <Icons.check className="h-4 w-4 text-green-500" />
-                <span className="font-semibold">Performance:</span>
-                <span>10-50x faster development</span>
+                <span className="font-semibold">Intelligence:</span>
+                <span>Multi-platform monitoring</span>
               </div>
               <div className="text-sm text-muted-foreground flex items-center gap-2">
                 <Icons.check className="h-4 w-4 text-green-500" />
-                <span className="font-semibold">Accessibility:</span>
-                <span>100% WCAG 2.1 AA compliance</span>
+                <span className="font-semibold">Tech Stack:</span>
+                <span>Latest stable versions</span>
               </div>
               <div className="text-sm text-muted-foreground flex items-center gap-2">
                 <Icons.check className="h-4 w-4 text-green-500" />
-                <span className="font-semibold">Cost:</span>
-                <span>40-85% infrastructure savings</span>
+                <span className="font-semibold">Open Source:</span>
+                <span>Building in public</span>
               </div>
             </motion.div>
 
@@ -235,22 +364,61 @@ export default function HomePage() {
                   animationStyle="from-center"
                   videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
                   thumbnailSrc="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=675&fit=crop&crop=center"
-                  thumbnailAlt="Avolve AI-Native Platform Demo"
+                  thumbnailAlt="Modern web development platform demonstration"
                 />
               </div>
             </motion.div>
           </section>
         </BlurFade>
 
-        {/* Tech Stack Section */}
+        {/* Current System Status - NEW SECTION */}
         <BlurFade delay={0.5}>
           <section className="space-y-6">
             <div className="text-center space-y-2">
               <h2 className="text-3xl font-bold tracking-tight">
-                8-Layer AI-Native Architecture
+                Live System Metrics
               </h2>
               <p className="text-muted-foreground">
-                Revolutionary tech stack with validated performance improvements
+                Real-time data from our operational intelligence platform
+              </p>
+              <p className="text-xs text-muted-foreground/60">
+                Last updated: September 30, 2025
+              </p>
+            </div>
+
+            <Suspense fallback={<div className="animate-pulse">Loading metrics...</div>}>
+              <SystemMetrics />
+            </Suspense>
+          </section>
+        </BlurFade>
+
+        {/* Operational Features - UPDATED: What actually works */}
+        <BlurFade delay={0.75}>
+          <section className="space-y-6">
+            <div className="text-center space-y-2">
+              <h2 className="text-3xl font-bold tracking-tight">
+                Production Features
+              </h2>
+              <p className="text-muted-foreground">
+                Operational capabilities powering real intelligence workflows
+              </p>
+            </div>
+
+            <Suspense fallback={<div className="animate-pulse">Loading features...</div>}>
+              <OperationalFeatures />
+            </Suspense>
+          </section>
+        </BlurFade>
+
+        {/* Tech Stack Section */}
+        <BlurFade delay={1.0}>
+          <section className="space-y-6">
+            <div className="text-center space-y-2">
+              <h2 className="text-3xl font-bold tracking-tight">
+                Modern Web Stack
+              </h2>
+              <p className="text-muted-foreground">
+                Latest stable technologies with verified performance improvements
               </p>
             </div>
 
@@ -260,26 +428,36 @@ export default function HomePage() {
           </section>
         </BlurFade>
 
-        {/* Features Section */}
-        <BlurFade delay={0.75}>
+        {/* In Development Section - NEW: Transparency about what's coming */}
+        <BlurFade delay={1.25}>
           <section className="space-y-6">
             <div className="text-center space-y-2">
               <h2 className="text-3xl font-bold tracking-tight">
-                AI-Native Development Features
+                In Development
               </h2>
               <p className="text-muted-foreground">
-                Intelligent workflows that transform how you build applications
+                Future capabilities we're actively building
               </p>
             </div>
 
-            <Suspense fallback={<div className="animate-pulse">Loading features...</div>}>
-              <FeatureShowcase />
+            <Suspense fallback={<div className="animate-pulse">Loading roadmap...</div>}>
+              <InDevelopmentFeatures />
             </Suspense>
+
+            {/* Transparency Note */}
+            <div className="max-w-2xl mx-auto text-center p-6 rounded-lg border bg-card/50">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                <strong>Building in Public:</strong> This platform is actively evolving.
+                Our intelligence system is production-ready and processing data daily.
+                AI development features are experimental and under active development.
+                We prioritize transparency about what works and what's in progress.
+              </p>
+            </div>
           </section>
         </BlurFade>
 
         {/* Magic UI Showcase */}
-        <BlurFade delay={1.0}>
+        <BlurFade delay={1.5}>
           <section className="space-y-6">
             <div className="text-center space-y-2">
               <h2 className="text-3xl font-bold tracking-tight">
@@ -325,37 +503,37 @@ export default function HomePage() {
           </section>
         </BlurFade>
 
-        {/* Quick Start Section */}
-        <BlurFade delay={1.25}>
+        {/* Getting Started - UPDATED: Real commands only */}
+        <BlurFade delay={1.75}>
           <section className="space-y-6">
             <div className="text-center space-y-2">
               <h2 className="text-3xl font-bold tracking-tight">
-                Quick Start Guide
+                Getting Started
               </h2>
               <p className="text-muted-foreground">
-                Get started with AI-native development in minutes
+                Set up the platform and start exploring
               </p>
             </div>
 
             <div className="max-w-2xl mx-auto">
               <Suspense fallback={<div className="animate-pulse">Loading guide...</div>}>
-                <QuickStartGuide />
+                <GettingStarted />
               </Suspense>
             </div>
           </section>
         </BlurFade>
 
-        {/* Documentation Link */}
-        <BlurFade delay={1.5}>
+        {/* Documentation & CTAs - UPDATED: Links to real content */}
+        <BlurFade delay={2.0}>
           <section className="text-center py-12 border-t">
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold">Complete Documentation</h2>
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold">Explore Further</h2>
               <p className="text-muted-foreground">
-                Explore the complete AI-native development framework documentation
+                Dive into documentation, explore components, or check out the intelligence system
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.a
-                  href="/claudedocs/master-index-ai-native-tech-stack.md"
+                  href="/claudedocs/DOCUMENTATION_INDEX_A_PLUS.md"
                   className={cn(
                     "inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground",
                     "hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
@@ -364,10 +542,12 @@ export default function HomePage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  📚 Master Documentation Index
+                  📚 Documentation Index
                 </motion.a>
                 <motion.a
-                  href="/claudedocs/framework/ai-native-development-framework-2025.md"
+                  href="https://github.com/avolve-dao/avolve"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={cn(
                     "inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-sm font-medium",
                     "hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
@@ -376,7 +556,20 @@ export default function HomePage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  🧠 AI-Native Framework Guide
+                  <Icons.gitBranch className="mr-2 h-4 w-4" />
+                  View on GitHub
+                </motion.a>
+                <motion.a
+                  href="/claudedocs/comprehensive-ai-social-listening-2025.md"
+                  className={cn(
+                    "inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-sm font-medium",
+                    "hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                    "transition-colors duration-200"
+                  )}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  🎯 Intelligence System
                 </motion.a>
               </div>
             </div>

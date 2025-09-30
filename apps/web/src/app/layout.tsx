@@ -5,19 +5,21 @@ import "../styles/globals.css";
 import { cn } from "@unified/ui";
 
 export const metadata: Metadata = {
-  title: "Avolve AI-Native Platform",
-  description: "Complete AI-native development platform with 8-layer architecture, automatic accessibility compliance, and revolutionary development workflows",
+  title: "Avolve - Intelligence Platform with Modern Web Stack",
+  description: "Real-time intelligence across 536 sources powered by 48+ production scripts. Built with Next.js 15.5, React 19, and modern web technologies.",
   keywords: [
-    "ai-native",
+    "intelligence platform",
+    "social listening",
+    "github monitoring",
+    "market research",
     "nextjs",
     "react",
     "typescript",
     "tailwind",
     "shadcn-ui",
-    "vercel-ai-sdk",
-    "mcp",
-    "accessibility",
-    "performance"
+    "modern web stack",
+    "seo research",
+    "competitive analysis"
   ],
   authors: [{ name: "Avolve Team" }],
   creator: "Avolve",
@@ -37,14 +39,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: process.env.NEXT_PUBLIC_APP_URL,
-    title: "Avolve AI-Native Platform",
-    description: "Complete AI-native development platform with revolutionary performance and accessibility",
+    title: "Avolve - Intelligence Platform with Modern Web Stack",
+    description: "Real-time intelligence across 536 sources. Production-ready monitoring powered by modern web technologies.",
     siteName: "Avolve",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Avolve AI-Native Platform",
-    description: "Complete AI-native development platform with revolutionary performance and accessibility",
+    title: "Avolve Intelligence Platform",
+    description: "536 sources monitored. 48+ production scripts. Built on Next.js 15.5 + React 19.",
     creator: "@avolve",
   },
   viewport: {
