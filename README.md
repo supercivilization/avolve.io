@@ -7,7 +7,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.1.13-38B2AC.svg)](https://tailwindcss.com/)
 [![Production Status](https://img.shields.io/badge/Status-Intelligence%20System%20Live-brightgreen.svg)](#current-status)
 
-> **Real-time intelligence across 536 sources powered by 48+ production scripts. Built on the latest web technologies with Next.js 15.5, React 19, and modern tooling.**
+> **Real-time intelligence across 536 sources powered by 40+ production scripts. Built on the latest web technologies with Next.js 15.5, React 19, and modern tooling.**
 
 Avolve is primarily an **operational intelligence platform** with a modern web stack foundation. We monitor and analyze data from YouTube, Reddit, GitHub, and other platforms to provide actionable insights for technical decision-making. The platform is built using the latest stable web technologies and serves as both a production intelligence system and a foundation for future AI-native development features.
 
@@ -17,7 +17,7 @@ Avolve is primarily an **operational intelligence platform** with a modern web s
 
 | Component | Status | Details |
 |-----------|--------|---------|
-| **Intelligence System** | ✅ Production Ready | 536 sources, 48+ scripts, daily data collection |
+| **Intelligence System** | ✅ Production Ready | 536 sources, 40+ scripts, daily data collection |
 | **Web Application** | 🚧 Foundation Layer | Modern stack implemented, core features in development |
 | **Component Library** | ✅ Ready to Use | shadcn/ui + Magic UI integration complete |
 | **Documentation** | 🔄 Active Cleanup | Core docs complete, legacy content being archived |
@@ -43,7 +43,7 @@ Our intelligence platform is **operational and collecting data daily**:
 - **Content intelligence** generation
 - **GitHub ecosystem mapping** and dependency tracking
 
-**🛠️ Working Scripts** (48+ operational)
+**🛠️ Working Scripts** (40+ operational)
 ```bash
 # Social listening and monitoring
 pnpm social:comprehensive:test      # Test all intelligence systems
@@ -58,7 +58,7 @@ pnpm env:validate                   # Check all configurations
 **📈 Real Metrics**
 - 536 sources monitored across platforms
 - 26+ GitHub repositories tracked
-- 48+ automation scripts in production
+- 40+ automation scripts in production
 - Daily data collection and reporting
 
 ### Modern Web Foundation
@@ -304,7 +304,7 @@ avolve/
 │       ├── typescript-config/    # TypeScript configs
 │       └── tailwind-config/      # Tailwind configs
 │
-├── scripts/                        # ✅ 48+ operational intelligence scripts
+├── scripts/                        # ✅ 40+ operational intelligence scripts
 │   ├── social-listening-system.js
 │   ├── github-ecosystem-mapper.js
 │   ├── market-research-engine.js
@@ -384,7 +384,7 @@ avolve/
 ## 🗺️ Roadmap
 
 ### ✅ Foundation Complete
-- [x] Intelligence platform operational (536 sources, 48+ scripts)
+- [x] Intelligence platform operational (536 sources, 40+ scripts)
 - [x] Modern web stack implementation (Next.js 15.5, React 19)
 - [x] Component library setup (shadcn/ui + Magic UI)
 - [x] Monorepo structure with Turborepo
