@@ -296,19 +296,13 @@ ls -la claudedocs/comprehensive-ai-social-listening-2025.md
 ## [0.1.0] - 2025-09-29
 
 ### Added
-- Initial commit: Avolve AI-Native Development Platform
+- Initial commit: Avolve Intelligence Platform
 - Intelligence systems (social listening, market research, SEO)
 - Modern tech stack (Next.js 15.5, React 19, TypeScript 5.9)
 - 48+ working scripts for intelligence gathering
 - 536 discovered sources across YouTube, Reddit, GitHub
 - Component library integration (shadcn/ui + Magic UI)
 - Monorepo structure with Turborepo
-
-### Security
-- Initial security audit completed (2025-09-30)
-- All hardcoded secrets removed from files
-- Git history cleaned with git-filter-repo
-- Team notification process established
 
 ---
 
