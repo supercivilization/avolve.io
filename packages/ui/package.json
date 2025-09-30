@@ -2,7 +2,7 @@
   "name": "@unified/ui",
   "version": "0.1.0",
   "private": true,
-  "description": "Shared UI components with shadcn/ui and Magic UI integration",
+  "description": "Shared utility functions for styling and component composition (cn helper for Tailwind class merging)",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

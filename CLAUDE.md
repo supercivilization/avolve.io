@@ -1,197 +1,208 @@
-# Avolve AI-Native Development Platform - Claude Code Configuration
+# Claude Code Project Guide: Avolve Intelligence Platform
 
-## Project Overview
+**Last Updated**: September 30, 2025
+**Project Type**: Intelligence Platform + Modern Web Foundation
+**Status**: Intelligence System Production Ready, Web App Foundation Layer
 
-**Avolve AI-Native Development Platform** - Complete AI-native development platform with 8-layer architecture, automatic accessibility compliance, and revolutionary development workflows.
+## 1. Project Overview
 
-**Stack**: Next.js 15.5 + React 19.1 + TypeScript 5.9 + Tailwind CSS v4 + shadcn/ui Platform + Supabase AI-first
+**What Avolve Actually Is:**
+- **Primary**: Operational intelligence platform with 40+ production scripts
+- **Secondary**: Modern web application foundation (Next.js 15.5 + React 19)
+- **Reality**: Intelligence system works, web app is experimental/foundational
 
-## Project Structure
+**Core Capabilities:**
+- Multi-platform social listening (YouTube, Reddit, GitHub, X/Twitter)
+- GitHub ecosystem monitoring (26+ repositories across 4 priority tiers)
+- Market research and SEO automation
+- Real-time data collection and reporting
+- Modern component library (Magic UI + shadcn/ui patterns)
+
+## 2. Tech Stack (Verified Reality)
+
+**Production Stack:**
+- Next.js 15.5.4 with Turbopack
+- React 19.1.1 with Server Components
+- TypeScript 5.9.2 (native Node.js execution)
+- Tailwind CSS 4.1.13 (Oxide engine)
+- Node.js 24.8.0+
+- pnpm 9.12+ workspaces
+- Turborepo 2.5.8
+
+**Intelligence APIs:**
+- YouTube Data API v3
+- Reddit API (OAuth)
+- GitHub REST API
+- X/Twitter API (monitoring)
+
+**Database:**
+- Supabase (configured but minimal integration)
+- PostgreSQL with pgvector
+
+**AI SDKs** (used in intelligence scripts only):
+- Vercel AI SDK 5.0.47
+- @ai-sdk/anthropic, @ai-sdk/openai, @ai-sdk/google
+
+## 3. What Works vs What Doesn't
+
+### ✅ Working (Use These Confidently)
+
+**Intelligence System:**
+```bash
+pnpm social:comprehensive:test    # Multi-platform monitoring
+pnpm github:intelligence          # GitHub analysis
+pnpm monitor:comprehensive        # Tech stack monitoring
+pnpm seo:advanced                 # SEO research
+pnpm env:validate                 # Environment validation
+```
+
+**Development:**
+```bash
+pnpm dev                          # Start web app
+pnpm build                        # Build for production
+pnpm type-check                   # TypeScript validation
+```
+
+### ❌ Don't Use (Not Implemented)
+
+**These commands were removed (files don't exist):**
+```bash
+pnpm ai:interface      # REMOVED - ai-interface-generator.js doesn't exist
+pnpm ai:review         # REMOVED - ai-code-reviewer.js doesn't exist
+pnpm ai:optimize       # REMOVED - ai-performance-optimizer.js doesn't exist
+pnpm ai:accessibility  # REMOVED - ai-accessibility-auditor.js doesn't exist
+```
+
+**Mobile app:**
+- apps/mobile/ has been removed (was placeholder only)
+- No mobile functionality exists
+- Not on current roadmap
+
+## 4. Directory Structure (Reality)
 
 ```
-/avolve-ai-native-platform/
+avolve/
 ├── apps/
-│   ├── web/           # Next.js 15.5 web application
-│   ├── mobile/        # Expo SDK 54 mobile app
-│   └── email/         # React Email templates
+│   ├── web/          # Next.js app (foundation layer, minimal pages)
+│   └── email/        # React Email templates
 ├── packages/
-│   ├── ui/            # shadcn/ui components
-│   ├── lib/           # Shared utilities
-│   └── config/        # Shared configuration
-├── scripts/           # Intelligence & monitoring systems
-├── claudedocs/        # AI-generated insights and documentation
-├── config/            # System configurations
-└── supabase/          # Database and backend
+│   ├── @unified/ui/      # Utilities only (not a component library)
+│   ├── @unified/lib/     # Shared utilities
+│   └── @unified/config/  # Shared configs
+├── scripts/          # 41 intelligence automation scripts (THIS IS THE PRODUCT)
+├── claudedocs/       # Documentation (needs cleanup)
+└── supabase/         # Database config
 ```
 
-## Key Technologies & Versions
+## 5. Development Guidelines
 
-### Core Stack
-- **Node.js**: 24.8.0+ (native TypeScript support)
-- **Package Manager**: pnpm 9.12.0+ with workspaces
-- **Build System**: Turbo 2.5+ for monorepo orchestration
-- **Next.js**: 15.5.3 with Turbopack for development
-- **React**: 19.1.1 with Server Components & React Compiler
-- **TypeScript**: 5.9.2 with native Go-based compilation
+**When Working on Intelligence Scripts:**
+- These are production-ready, well-tested
+- Use existing patterns from comprehensive-*.js files
+- Real API integrations with proper error handling
+- Generate reports in /reports/ and /dashboard/
 
-### AI Development Framework
-- **Vercel AI SDK**: 5.0.48 for multi-modal AI applications
-- **MCP Integration**: Model Context Protocol for system connectivity
-- **AI Decision Tracking**: Custom framework for cost optimization
-- **Multi-Provider AI**: OpenAI, Anthropic, Google AI support
+**When Working on Web App:**
+- This is foundational/experimental
+- Use Server Components by default
+- Keep components in apps/web/src/components/
+- Magic UI components are imported, not custom-built
 
-### Styling & Components
-- **Tailwind CSS**: v4.1.13 with Oxide engine (100x faster builds)
-- **shadcn/ui Platform**: Universal component distribution
-- **Magic UI**: Advanced animations and premium components
-- **Framer Motion**: 12.23.12 for advanced animations
+**Don't Promise Features That Don't Exist:**
+- No "AI component generation" claims
+- No "automatic accessibility" claims
+- No "8-layer architecture" references
+- Be honest about what's working vs planned
 
-### Backend & Infrastructure
-- **Supabase**: AI-first backend with pgvector, Edge Functions V2
-- **PostgreSQL**: 15+ with vector search and real-time capabilities
-- **Vercel AI Cloud**: Global edge deployment with Fluid Compute
+## 6. Current Project Status
 
-## Development Commands
+**Intelligence Platform**: ✅ Production Ready
+- 536 sources monitored
+- 41 operational scripts
+- Daily data collection
+- Automated reporting
 
-### Primary Development
-```bash
-pnpm dev                    # Start all apps in development
-pnpm build                  # Build all apps for production
-pnpm test                   # Run all test suites
-pnpm lint                   # Lint all code
-pnpm type-check            # TypeScript checking across monorepo
-```
+**Web Application**: 🚧 Foundation Layer
+- Modern stack implemented
+- Minimal application code
+- Experimental features
+- No production deployment
 
-### AI Decision Tracking
-```bash
-pnpm ai:decision:dashboard  # View AI tool usage analytics
-pnpm ai:decision:analytics  # Detailed cost and effectiveness analysis
-pnpm ai:decision:log       # Log AI tool decisions manually
-```
+**Mobile**: ❌ Removed
+- Was placeholder only with zero code
+- Removed to reduce confusion
 
-### Intelligence & Monitoring
-```bash
-pnpm monitor:comprehensive  # Full tech stack monitoring
-pnpm intelligence:pipeline  # Strategic intelligence analysis
-pnpm social:all            # Social listening across platforms
-pnpm research:intelligence # Market research and insights
-pnpm seo:advanced          # Advanced SEO strategy generation
-```
+## 7. Roadmap (Dependency-Based, No Timelines)
 
-### Environment & Validation
-```bash
-pnpm env:validate          # Validate development environment
-pnpm env:features          # Check feature availability
-pnpm security:clean        # Clean hardcoded secrets
-```
+**Foundation Complete** ✅
+- Modern tech stack
+- Intelligence scripts
+- Data collection
 
-## AI Development Best Practices
+**Next Logical Steps** (no dependencies):
+- Intelligence dashboard UI
+- API documentation
+- Component showcase page
 
-### Tool Selection Strategy
-- **Claude Code**: Architecture, production code, security reviews
-- **Gemini**: Daily development, documentation, free-tier tasks
-- **Codex**: Rapid prototyping, bulk generation, experimentation
+**Then** (depends on: Dashboard):
+- Enhanced visualizations
+- Real-time updates
+- User authentication
 
-### Decision Logging
-Always log AI decisions for cost optimization:
-```javascript
-// After using any AI tool
-await aiTracker.logDecision({
-  tool: 'claude-code',
-  task: 'component-creation',
-  outcome: 'success',
-  quality_score: 8,
-  time_saved_minutes: 30
-});
-```
+**Future** (depends on: API Layer):
+- AI component generation (experimental)
+- Automated workflows
+- Mobile app development
 
-## Architecture Patterns
+## 8. AI Assistant Guidelines
 
-### 8-Layer AI-Native Architecture
-1. **Layer 0**: Node.js 24.8.0 native TypeScript runtime
-2. **Layer 1**: Next.js 15.5 Turbopack optimization
-3. **Layer 2**: React 19.1 Server Components + Compiler
-4. **Layer 3**: TypeScript 5.9.2 Go-based type system
-5. **Layer 4**: Tailwind v4 Oxide styling engine
-6. **Layer 5**: shadcn/ui Platform component distribution
-7. **Layer 6**: Vercel AI Cloud edge deployment
-8. **Layer 7**: Vercel AI SDK 5.0 development amplifier
+**When suggesting changes:**
+- Verify the feature actually exists before recommending it
+- Check if commands work before suggesting them
+- Don't reference removed AI development features
+- Lead with intelligence platform capabilities
 
-### Key Features
-- **Server Components**: Leverage React 19.1 for optimal performance
-- **AI Integration**: Multi-provider AI access with cost tracking
-- **Edge Deployment**: Global edge functions with Fluid Compute
-- **Real-time Systems**: Supabase real-time subscriptions
-- **Vector Search**: AI-powered search with pgvector
+**When debugging:**
+- Intelligence scripts are well-tested, check API keys first
+- Web app is minimal, many features aren't implemented yet
+- Mobile app was removed, don't reference it
 
-## Development Focus Areas
+**When documenting:**
+- Be honest about current state
+- Mark planned features clearly as planned
+- Use working examples only
+- Remove aspirational language
 
-### Current Priorities
-1. **AI-Native Workflows**: Maximize AI tool effectiveness
-2. **Performance Optimization**: Leverage modern stack capabilities
-3. **Intelligence Systems**: Market research and competitive analysis
-4. **Content Generation**: SEO-optimized, AI-enhanced content
-5. **Social Listening**: Comprehensive platform monitoring
+## 9. Key Files to Understand
 
-### Quality Standards
-- **Accessibility**: 100% WCAG 2.1 AA compliance (automated)
-- **Performance**: Core Web Vitals optimization
-- **Security**: No hardcoded secrets, proper environment management
-- **AI Decisions**: All major AI usage tracked and optimized
+**Intelligence System:**
+- scripts/comprehensive-social-listening.js (600+ lines, multi-platform)
+- scripts/comprehensive-github-intelligence.js (1000+ lines, ecosystem analysis)
+- scripts/comprehensive-tech-stack-monitor.js (800+ lines, framework tracking)
 
-## Environment Variables
+**Web App:**
+- apps/web/src/app/page.tsx (honest homepage)
+- apps/web/src/app/layout.tsx (root layout)
+- apps/web/src/components/ (Magic UI imports)
 
-### Required
-```bash
-NODE_ENV=development
-SUPABASE_URL=http://127.0.0.1:54321
-SUPABASE_ANON_KEY=<supabase_anon_key>
-SUPABASE_SERVICE_ROLE_KEY=<service_role_key>
-```
+**Configuration:**
+- package.json (root) - intelligence-focused scripts
+- .env.local.template - required API keys documented
+- turbo.json - monorepo task orchestration
 
-### Optional (Enhanced Features)
-```bash
-# AI Providers
-OPENAI_API_KEY=<your_key>
-ANTHROPIC_API_KEY=<your_key>
-GOOGLE_AI_API_KEY=<your_key>
+## 10. Common Pitfalls
 
-# Intelligence Systems
-GITHUB_TOKEN=<your_token>
-YOUTUBE_API_KEY=<your_key>
-REDDIT_CLIENT_ID=<your_id>
-REDDIT_CLIENT_SECRET=<your_secret>
+❌ **Don't assume AI features work** - Most were removed
+❌ **Don't reference mobile app** - It was removed
+❌ **Don't claim automatic accessibility** - It's not automated
+❌ **Don't promise 10-50x improvements** - Metrics aren't verified
+❌ **Don't use "8-layer architecture"** - It was marketing language
 
-# SEO & Research
-DATAFORSEO_USER=<username>
-DATAFORSEO_PASSWORD=<password>
-```
-
-## Special Considerations
-
-### AI-Enhanced Development
-- This project extensively uses AI for development acceleration
-- AI decision tracking is built-in for cost optimization
-- Multiple AI providers supported with unified interface
-
-### Modern Stack Optimizations
-- TypeScript runs natively in Node.js 24.8.0 (no compilation needed)
-- Turbopack provides 2-5x faster builds than Webpack
-- Tailwind v4 Oxide engine offers 5-100x faster CSS processing
-
-### Intelligence-First Architecture
-- Built-in social listening across platforms
-- Automated market research and competitive analysis
-- SEO strategy generation with AI optimization
-- Real-time tech stack monitoring and alerts
-
-## Documentation
-
-- **Main README**: Project overview and quick start
-- **Development Setup**: Complete development environment guide
-- **AI Decision Tracking**: Cost optimization framework
-- **System Documentation**: Architecture and implementation details
+✅ **Do emphasize intelligence platform** - This actually works
+✅ **Do use working commands** - See section 3 above
+✅ **Do be transparent** - Honesty is the new positioning
+✅ **Do focus on real data** - 536 sources, 41 scripts, etc.
 
 ---
 
-This is a cutting-edge AI-native development platform showcasing the best of 2025 technology stack with intelligent automation, monitoring, and optimization built-in.
+This project guide reflects the reality of September 30, 2025. Intelligence platform is production-ready. Web app is foundational. Be honest, and build on real strengths.
