@@ -219,12 +219,13 @@ pnpm dev
    - `scripts/` - ✅ 48+ operational intelligence scripts
    - `claudedocs/` - 🔄 Documentation (cleanup in progress)
 
-8. **Honest Roadmap with Timeframes**
-   - **Completed (September 2025)** - Intelligence platform, modern stack, security audit
-   - **Short Term (Next 30 Days)** - Intelligence dashboard UI, documentation cleanup
-   - **Medium Term (Next 90 Days)** - AI component generation (experimental), automated workflows
-   - **Long Term (6+ Months)** - Full AI platform features, mobile app, enterprise features
-   - Clear progression from operational to aspirational
+8. **Dependency-Based Roadmap**
+   - **Foundation Complete** - Intelligence platform, modern stack, honest documentation
+   - **Next Steps (No Dependencies)** - Dashboard UI, documentation cleanup, showcase page
+   - **Intelligence Enhancement (Depends on: Dashboard UI)** - Real-time alerts, workflows
+   - **AI Features (Depends on: API Layer)** - Component generation, public API
+   - **Platform Expansion (Depends on: Core API)** - Mobile app, enterprise features
+   - Clear progression based on logical dependencies, not arbitrary timelines
 
 9. **Updated Documentation Links**
    - All links verified to point to real, existing files
