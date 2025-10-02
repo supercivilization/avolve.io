@@ -39,6 +39,7 @@
     "pre-deploy": "pnpm quality && pnpm build",
     "clean": "turbo clean && rm -rf node_modules .turbo",
     "reset": "pnpm clean && pnpm install",
+    "db:generate-types": "supabase gen types typescript --local > packages/database/src/types.ts",
     "db:generate": "turbo db:generate",
     "db:push": "turbo db:push",
     "db:migrate": "turbo db:migrate",

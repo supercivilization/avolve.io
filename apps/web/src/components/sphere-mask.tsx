@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@repo/utils";
 
 export const SphereMask = ({ reverse = false }: { reverse?: boolean }) => {
   return (

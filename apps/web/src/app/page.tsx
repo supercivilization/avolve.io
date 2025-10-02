@@ -15,7 +15,7 @@
 
 import { Suspense } from "react";
 import Link from "next/link";
-import { cn } from "@unified/ui";
+import { cn } from "@repo/ui";
 import { motion } from "framer-motion";
 import BlurFade from "@/components/blur-fade";
 import { BorderBeam } from "@/components/border-beam";

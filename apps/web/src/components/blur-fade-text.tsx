@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@repo/utils";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useMemo } from "react";
 

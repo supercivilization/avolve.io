@@ -72,6 +72,11 @@
       "cache": false,
       "inputs": ["supabase/**/*.sql"]
     },
+    "db:generate-types": {
+      "cache": false,
+      "inputs": ["supabase/**/*.sql"],
+      "outputs": ["packages/database/src/types.ts"]
+    },
     "db:push": {
       "cache": false
     },

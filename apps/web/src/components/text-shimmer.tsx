@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@repo/utils";
 import { CSSProperties, FC, ReactNode } from "react";
 
 interface TextShimmerProps {

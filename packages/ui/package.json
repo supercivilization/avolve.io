@@ -1,5 +1,5 @@
 {
-  "name": "@unified/ui",
+  "name": "@repo/ui",
   "version": "0.1.0",
   "private": true,
   "description": "Shared utility functions for styling and component composition (cn helper for Tailwind class merging)",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "../styles/globals.css";
-import { cn } from "@unified/ui";
+import { cn } from "@repo/ui";
 
 export const metadata: Metadata = {
   title: "Avolve - Intelligence Platform with Modern Web Stack",

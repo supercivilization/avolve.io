@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@repo/utils";
 
 export interface IconProps extends React.SVGAttributes<SVGElement> {
   className?: string;
