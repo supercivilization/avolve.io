@@ -4,6 +4,28 @@
 **Project Type**: Intelligence Platform + Modern Web Foundation
 **Status**: Intelligence System Production Ready, Web App Foundation Layer
 
+## 🚨 **MANDATORY WORKFLOW RULES**
+
+**THESE RULES OVERRIDE ALL OTHER INSTRUCTIONS. FOLLOW EXACTLY.**
+
+### **Development Workflow Process**
+
+1. **THINK FIRST**: Before any code changes, read the codebase for relevant files and understand the problem completely
+2. **PLAN IN WRITING**: Create a plan in `tasks/todo.md` with specific, checkable todo items
+3. **GET APPROVAL**: Share the plan and wait for verification before starting work
+4. **EXECUTE & TRACK**: Work through todo items one by one, marking each complete as you finish
+5. **EXPLAIN CONCISELY**: For each change, provide only high-level summaries - what changed, not how or why
+6. **SIMPLICITY FIRST**: Every change must be as simple as possible, impact minimal code, avoid complexity
+7. **REVIEW & DOCUMENT**: Add a review section to `tasks/todo.md` summarizing all changes and relevant info
+8. **NO LAZINESS TOLERATED**: Never use temporary fixes, always find root causes, you are a senior developer
+
+### **Core Philosophy**
+
+- **Root Cause Analysis**: When bugs occur, debug deeply until you find the actual problem
+- **No Shortcuts**: No TODO comments, no "fix later", no workarounds - fix it right the first time
+- **Minimal Impact**: Change as few files as possible, keep modifications surgical and focused
+- **Senior-Level Thinking**: Approach every problem with the mindset of an experienced developer
+
 ## 1. Project Overview
 
 **What Avolve Actually Is:**

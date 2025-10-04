@@ -1,0 +1,470 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://modern-tech-stack.dev/schemas/stack-config.schema.json",
+  "title": "Technology Stack Configuration",
+  "description": "Schema for validating technology stack configurations in the modern tech stack documentation",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Project name"
+        },
+        "description": {
+          "type": "string",
+          "description": "Brief project description"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["web-app", "mobile-app", "api", "full-stack", "microservice", "static-site"],
+          "description": "Primary project type"
+        },
+        "scale": {
+          "type": "string",
+          "enum": ["prototype", "mvp", "production", "enterprise"],
+          "description": "Project scale and maturity"
+        }
+      },
+      "required": ["name", "type", "scale"]
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "timeline": {
+          "type": "string",
+          "pattern": "^(\\d+)\\s*(hours?|days?|weeks?|months?)$",
+          "description": "Project timeline (e.g., '2 weeks', '3 months')"
+        },
+        "budget": {
+          "type": "object",
+          "properties": {
+            "monthly": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Monthly budget in USD"
+            },
+            "setup": {
+              "type": "number",
+              "minimum": 0,
+              "description": "One-time setup budget in USD"
+            }
+          }
+        },
+        "team": {
+          "type": "object",
+          "properties": {
+            "size": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1000,
+              "description": "Number of developers"
+            },
+            "experience": {
+              "type": "string",
+              "enum": ["beginner", "intermediate", "senior", "mixed"],
+              "description": "Team experience level"
+            },
+            "skills": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "react", "typescript", "node.js", "python", "java",
+                  "mobile", "devops", "ai/ml", "design", "backend", "frontend"
+                ]
+              },
+              "description": "Team skill areas"
+            }
+          }
+        },
+        "performance": {
+          "type": "object",
+          "properties": {
+            "users": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Expected number of users"
+            },
+            "latency": {
+              "type": "string",
+              "pattern": "^<\\s*(\\d+)\\s*(ms|s)$",
+              "description": "Maximum acceptable latency (e.g., '< 200ms')"
+            },
+            "availability": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Required uptime percentage"
+            }
+          }
+        }
+      }
+    },
+    "technologies": {
+      "type": "object",
+      "properties": {
+        "frontend": {
+          "type": "object",
+          "properties": {
+            "framework": {
+              "type": "string",
+              "enum": ["next.js", "react", "vue", "svelte", "vanilla"],
+              "description": "Frontend framework"
+            },
+            "version": {
+              "type": "string",
+              "pattern": "^\\d+\\.\\d+(\\.\\d+)?",
+              "description": "Framework version"
+            },
+            "styling": {
+              "type": "string",
+              "enum": ["tailwind", "css-modules", "styled-components", "emotion", "vanilla-css"],
+              "description": "Styling solution"
+            },
+            "ui_library": {
+              "type": "string",
+              "enum": ["shadcn/ui", "material-ui", "ant-design", "chakra-ui", "custom"],
+              "description": "UI component library"
+            }
+          }
+        },
+        "backend": {
+          "type": "object",
+          "properties": {
+            "runtime": {
+              "type": "string",
+              "enum": ["node.js", "deno", "bun", "python", "go", "rust", "java"],
+              "description": "Backend runtime"
+            },
+            "framework": {
+              "type": "string",
+              "enum": ["next.js", "express", "fastify", "hono", "django", "fastapi", "gin", "actix"],
+              "description": "Backend framework"
+            },
+            "database": {
+              "type": "string",
+              "enum": ["postgresql", "mysql", "sqlite", "mongodb", "redis", "supabase", "planetscale"],
+              "description": "Primary database"
+            }
+          }
+        },
+        "mobile": {
+          "type": "object",
+          "properties": {
+            "platform": {
+              "type": "string",
+              "enum": ["react-native", "expo", "flutter", "native-ios", "native-android"],
+              "description": "Mobile development platform"
+            },
+            "build_type": {
+              "type": "string",
+              "enum": ["expo-go", "development-builds", "bare-workflow"],
+              "description": "Expo build configuration"
+            }
+          }
+        },
+        "ai": {
+          "type": "object",
+          "properties": {
+            "sdk": {
+              "type": "string",
+              "enum": ["vercel-ai", "langchain", "openai", "anthropic", "custom"],
+              "description": "AI SDK or framework"
+            },
+            "models": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "gpt-4", "gpt-3.5-turbo", "claude-3-sonnet", "claude-3-haiku",
+                  "gemini-pro", "llama-2", "local-model"
+                ]
+              },
+              "description": "AI models used"
+            },
+            "features": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "chat", "text-generation", "code-generation", "image-generation",
+                  "embeddings", "function-calling", "agents"
+                ]
+              },
+              "description": "AI features implemented"
+            }
+          }
+        },
+        "deployment": {
+          "type": "object",
+          "properties": {
+            "platform": {
+              "type": "string",
+              "enum": ["vercel", "netlify", "aws", "gcp", "azure", "self-hosted"],
+              "description": "Deployment platform"
+            },
+            "strategy": {
+              "type": "string",
+              "enum": ["static", "serverless", "containers", "traditional-server"],
+              "description": "Deployment strategy"
+            },
+            "cdn": {
+              "type": "boolean",
+              "description": "Whether CDN is used"
+            }
+          }
+        }
+      }
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "authentication": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "providers": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["email", "google", "github", "apple", "microsoft", "custom"]
+              }
+            },
+            "mfa": {
+              "type": "boolean",
+              "description": "Multi-factor authentication required"
+            }
+          }
+        },
+        "real_time": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "technology": {
+              "type": "string",
+              "enum": ["websockets", "sse", "supabase-realtime", "socket.io"],
+              "description": "Real-time technology used"
+            }
+          }
+        },
+        "ai_integration": {
+          "type": "object",
+          "properties": {
+            "chat": {
+              "type": "boolean"
+            },
+            "content_generation": {
+              "type": "boolean"
+            },
+            "embeddings": {
+              "type": "boolean"
+            },
+            "function_calling": {
+              "type": "boolean"
+            }
+          }
+        },
+        "analytics": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "providers": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["vercel-analytics", "google-analytics", "posthog", "mixpanel", "custom"]
+              }
+            }
+          }
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "properties": {
+        "testing": {
+          "type": "object",
+          "properties": {
+            "unit": {
+              "type": "string",
+              "enum": ["vitest", "jest", "mocha", "none"],
+              "description": "Unit testing framework"
+            },
+            "integration": {
+              "type": "string",
+              "enum": ["playwright", "cypress", "testing-library", "none"],
+              "description": "Integration testing framework"
+            },
+            "e2e": {
+              "type": "string",
+              "enum": ["playwright", "cypress", "puppeteer", "none"],
+              "description": "End-to-end testing framework"
+            }
+          }
+        },
+        "linting": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "tools": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["eslint", "prettier", "biome", "typescript"]
+              }
+            }
+          }
+        },
+        "monitoring": {
+          "type": "object",
+          "properties": {
+            "errors": {
+              "type": "string",
+              "enum": ["sentry", "bugsnag", "rollbar", "custom", "none"],
+              "description": "Error monitoring service"
+            },
+            "performance": {
+              "type": "string",
+              "enum": ["vercel-speed-insights", "web-vitals", "custom", "none"],
+              "description": "Performance monitoring"
+            }
+          }
+        }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "properties": {
+        "browsers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["chrome", "firefox", "safari", "edge", "mobile-safari", "chrome-mobile"]
+          },
+          "description": "Required browser support"
+        },
+        "devices": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["desktop", "mobile", "tablet", "ios", "android"]
+          },
+          "description": "Required device support"
+        },
+        "accessibility": {
+          "type": "object",
+          "properties": {
+            "wcag_level": {
+              "type": "string",
+              "enum": ["A", "AA", "AAA"],
+              "description": "WCAG compliance level"
+            },
+            "screen_reader": {
+              "type": "boolean",
+              "description": "Screen reader support required"
+            }
+          }
+        }
+      }
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when configuration was generated"
+    },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Schema version used for validation"
+    }
+  },
+  "required": ["project", "technologies"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "project": {
+        "name": "AI Chat Application",
+        "description": "Real-time AI chat interface with streaming responses",
+        "type": "web-app",
+        "scale": "mvp"
+      },
+      "constraints": {
+        "timeline": "2 weeks",
+        "budget": {
+          "monthly": 500,
+          "setup": 0
+        },
+        "team": {
+          "size": 2,
+          "experience": "intermediate",
+          "skills": ["react", "typescript", "ai/ml"]
+        }
+      },
+      "technologies": {
+        "frontend": {
+          "framework": "next.js",
+          "version": "15.5.3",
+          "styling": "tailwind",
+          "ui_library": "shadcn/ui"
+        },
+        "backend": {
+          "runtime": "node.js",
+          "framework": "next.js",
+          "database": "supabase"
+        },
+        "ai": {
+          "sdk": "vercel-ai",
+          "models": ["gpt-3.5-turbo", "claude-3-sonnet"],
+          "features": ["chat", "text-generation"]
+        },
+        "deployment": {
+          "platform": "vercel",
+          "strategy": "serverless",
+          "cdn": true
+        }
+      },
+      "features": {
+        "authentication": {
+          "enabled": false
+        },
+        "real_time": {
+          "enabled": true,
+          "technology": "sse"
+        },
+        "ai_integration": {
+          "chat": true,
+          "content_generation": true,
+          "embeddings": false,
+          "function_calling": false
+        }
+      },
+      "quality": {
+        "testing": {
+          "unit": "vitest",
+          "integration": "testing-library",
+          "e2e": "none"
+        },
+        "linting": {
+          "enabled": true,
+          "tools": ["eslint", "prettier", "typescript"]
+        }
+      },
+      "compatibility": {
+        "browsers": ["chrome", "firefox", "safari", "edge"],
+        "devices": ["desktop", "mobile"]
+      },
+      "generated_at": "2025-09-26T22:00:00Z",
+      "schema_version": "1.0.0"
+    }
+  ]
+}
