@@ -23,7 +23,14 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "../../packages/ui/src/**/*.ts",
+    "../../packages/utils/src/**/*.ts",
+    "../../packages/database/src/**/*.ts",
+    "../../packages/business-logic/src/**/*.ts",
+    "../../packages/emails/src/**/*.ts",
+    "../../packages/config/src/**/*.ts",
+    "../../packages/lib/src/**/*.ts"
   ],
   "exclude": [
     "node_modules",
