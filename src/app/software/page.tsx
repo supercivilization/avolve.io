@@ -100,7 +100,11 @@ export default function SoftwarePage() {
                   </tr>
                   <tr>
                     <td className="border border-gray-300 px-4 py-2">Framework</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">Next.js</td>
+                    <td className="border border-gray-300 px-4 py-2 font-mono">
+                      <Link href="/software/nextjs" className="text-zinc-700 hover:underline">
+                        Next.js
+                      </Link>
+                    </td>
                     <td className="border border-gray-300 px-4 py-2 font-mono">15.5.4</td>
                     <td className="border border-gray-300 px-4 py-2">Turbopack builds (2-5x faster), Server Components</td>
                   </tr>
