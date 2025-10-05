@@ -66,6 +66,31 @@ export default function SystemsPage() {
             </p>
           </section>
 
+          <section id="systems-index" className="mb-12 border-t pt-8">
+            <h2 className="text-2xl font-bold mb-4">Available Systems</h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              <Link href="/systems/seo" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
+                <h3 className="text-xl font-bold mb-2 text-gray-700">SEO System</h3>
+                <p className="text-gray-600 mb-3">
+                  Modern SEO architecture coordinating metadata, schema markup, Core Web Vitals, and AI citation optimization
+                </p>
+                <p className="text-sm text-gray-500">
+                  Components: Next.js Metadata API, Schema.org markup, Image optimization, Server Components
+                </p>
+              </Link>
+
+              <Link href="/systems#auth-system" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
+                <h3 className="text-xl font-bold mb-2 text-gray-700">Authentication System</h3>
+                <p className="text-gray-600 mb-3">
+                  Production-ready auth with Supabase + Next.js middleware for edge protection
+                </p>
+                <p className="text-sm text-gray-500">
+                  Components: Supabase Auth, Next.js Middleware, Server Components, Client Components
+                </p>
+              </Link>
+            </div>
+          </section>
+
           <section id="auth-system" className="mb-16 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">Pattern: Authentication System</h2>
 

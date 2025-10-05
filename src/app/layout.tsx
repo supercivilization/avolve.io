@@ -7,14 +7,19 @@ export const metadata: Metadata = {
     default: "Avolve.io - Modern Web Development Stack (October 2025)",
     template: "%s | Avolve.io"
   },
-  description: "Canonical reference for modern web development. Ship your first app this week with Next.js 15 + React 19.2 + AI tools.",
-  keywords: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS", "Supabase", "Vercel", "shadcn/ui", "modern web stack", "web development 2025"],
+  description: "Authoritative reference for Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2 modern stack. Verified compatibility, integration patterns, official resources. Optimized for human developers and AI assistants. Updated October 2025.",
+  keywords: [
+    "Next.js 15", "React 19", "TypeScript 5.9", "Tailwind CSS 4", "shadcn/ui 3.0",
+    "Vercel", "Supabase", "modern web stack", "web development 2025",
+    "stack integration", "AI-optimized documentation", "verified compatibility",
+    "Next.js React integration", "Server Components", "App Router"
+  ],
   authors: [{ name: "Joshua Seymour", url: "https://www.joshuaseymour.com" }],
   creator: "Joshua Seymour",
   publisher: "Supercivilization",
   openGraph: {
-    title: "Avolve.io - Modern Web Development Stack",
-    description: "Ship your first app this week. Next.js 15 + React 19.2 + Supabase + AI.",
+    title: "Avolve.io - Modern Web Development Stack (October 2025)",
+    description: "Verified Next.js 15 + React 19.2 + TypeScript 5.9 stack integration. Official resources + integration patterns for developers and AI assistants.",
     url: "https://avolve.io",
     siteName: "Avolve.io",
     locale: "en_US",
@@ -24,14 +29,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Avolve.io - Modern Web Development Stack"
+        alt: "Avolve.io - Modern Web Development Stack Reference"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Avolve.io - Modern Web Development Stack",
-    description: "Ship your first app this week. Next.js 15 + React 19.2 + Supabase + AI.",
+    title: "Avolve.io - Modern Stack Reference (Oct 2025)",
+    description: "Next.js 15 + React 19.2 + TypeScript 5.9 verified integration patterns + official resources",
     images: ["/og-image.png"]
   },
   robots: {
@@ -47,7 +52,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'google-site-verification-code', // Add your verification code
-  }
+  },
+  category: 'technology',
+  classification: 'Technical Documentation'
 };
 
 export default function RootLayout({
@@ -55,7 +62,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Global schema.org structured data
+  // Enhanced schema.org structured data optimized for AI citations (ChatGPT, Claude, Perplexity, Gemini)
   const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -63,17 +70,45 @@ export default function RootLayout({
         "@type": "WebSite",
         "@id": "https://avolve.io/#website",
         "name": "Avolve.io",
-        "description": "Canonical reference for modern web development (October 2025)",
+        "alternateName": "Avolve - Modern Web Development Stack Reference",
+        "description": "Authoritative reference for Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2 modern stack. Verified compatibility matrix, integration patterns, and official resources for developers and AI assistants.",
         "url": "https://avolve.io",
         "inLanguage": "en-US",
+        "datePublished": "2025-10-05",
+        "dateModified": "2025-10-05",
         "publisher": {
           "@id": "https://www.supercivilization.xyz/#organization"
         },
+        "author": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
+        "about": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "Next.js",
+            "applicationCategory": "DeveloperApplication",
+            "softwareVersion": "15.5.4",
+            "operatingSystem": "Node.js 24.8.0"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "React",
+            "applicationCategory": "DeveloperApplication",
+            "softwareVersion": "19.2.0"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "TypeScript",
+            "applicationCategory": "DeveloperApplication",
+            "softwareVersion": "5.9.2"
+          }
+        ],
+        "keywords": "Next.js 15, React 19, TypeScript, modern web stack, stack integration, verified compatibility, Server Components, App Router, Tailwind CSS, shadcn/ui, Vercel, Supabase",
         "potentialAction": {
           "@type": "SearchAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://avolve.io/search?q={search_term_string}"
+            "urlTemplate": "https://avolve.io/?q={search_term_string}"
           },
           "query-input": "required name=search_term_string"
         }
@@ -85,11 +120,15 @@ export default function RootLayout({
         "url": "https://www.supercivilization.xyz",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://avolve.io/logo.png"
+          "url": "https://avolve.io/logo.png",
+          "width": 512,
+          "height": 512
         },
         "sameAs": [
           "https://github.com/supercivilization"
-        ]
+        ],
+        "foundingDate": "2024",
+        "description": "Building modern web development resources and tools"
       },
       {
         "@type": "Person",
@@ -98,6 +137,49 @@ export default function RootLayout({
         "url": "https://www.joshuaseymour.com",
         "sameAs": [
           "https://github.com/supercivilization"
+        ],
+        "jobTitle": "Software Engineer",
+        "knowsAbout": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Web Development",
+          "Modern Tech Stack",
+          "AI Integration",
+          "Full Stack Development"
+        ],
+        "worksFor": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        }
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Modern Web Development Stack Integration Reference",
+        "description": "Comprehensive guide to Next.js 15 + React 19.2 + TypeScript 5.9 stack integration with verified compatibility and official resources",
+        "datePublished": "2025-10-05",
+        "dateModified": "2025-10-05",
+        "author": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://avolve.io/#website"
+        },
+        "articleSection": "Stack Integration",
+        "keywords": "Next.js 15, React 19, TypeScript, Vercel, Supabase, modern web stack",
+        "about": [
+          {
+            "@type": "Thing",
+            "name": "Web Development",
+            "sameAs": "https://en.wikipedia.org/wiki/Web_development"
+          },
+          {
+            "@type": "Thing",
+            "name": "Software Framework",
+            "sameAs": "https://en.wikipedia.org/wiki/Software_framework"
+          }
         ]
       }
     ]
