@@ -110,7 +110,11 @@ export default function SoftwarePage() {
                   </tr>
                   <tr>
                     <td className="border border-gray-300 px-4 py-2">UI Library</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">React</td>
+                    <td className="border border-gray-300 px-4 py-2 font-mono">
+                      <Link href="/software/react" className="text-gray-700 hover:underline">
+                        React
+                      </Link>
+                    </td>
                     <td className="border border-gray-300 px-4 py-2 font-mono">19.2.0</td>
                     <td className="border border-gray-300 px-4 py-2">Server Components, React Compiler optimization</td>
                   </tr>
