@@ -66,6 +66,7 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
   --radius: var(--radius);
+  --font-sans: var(--font-inter);
 }
 
 body {
