@@ -69,13 +69,13 @@ export default function SystemsPage() {
           <section id="systems-index" className="mb-12 border-t pt-8">
             <h2 className="text-2xl font-bold mb-4">Available Systems</h2>
             <div className="grid gap-4 md:grid-cols-2">
-              <Link href="/systems/seo" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
-                <h3 className="text-xl font-bold mb-2 text-gray-700">SEO System</h3>
+              <Link href="/systems/search" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
+                <h3 className="text-xl font-bold mb-2 text-gray-700">Search System</h3>
                 <p className="text-gray-600 mb-3">
-                  Modern SEO architecture coordinating metadata, schema markup, Core Web Vitals, and AI citation optimization
+                  Complete search architecture: traditional SEO, AI citations (ChatGPT, Claude, Perplexity, Gemini), schema markup, Core Web Vitals
                 </p>
                 <p className="text-sm text-gray-500">
-                  Components: Next.js Metadata API, Schema.org markup, Image optimization, Server Components
+                  Components: Next.js Metadata API, Schema.org knowledge graph, Image optimization, Server Components, AI citation optimization
                 </p>
               </Link>
 

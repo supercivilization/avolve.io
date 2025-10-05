@@ -8,22 +8,22 @@ import Link from "next/link";
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {
-  title: "SEO Implementation - How Avolve.io Uses Modern SEO (Oct 2025)",
-  description: "Meta-guide showing how Avolve.io implements modern SEO best practices with Next.js 15 + React 19.2. Schema markup for AI citations, Core Web Vitals optimization, and verified techniques. Updated October 2025.",
-  keywords: ["Next.js SEO", "React SEO", "schema markup", "AI citations", "Core Web Vitals", "ChatGPT optimization", "Claude citations", "Perplexity SEO", "modern SEO 2025"],
+  title: "Search System - SEO + AI Citations + Discoverability (Oct 2025)",
+  description: "Meta-guide showing how Avolve.io implements the search system: traditional SEO, AI-powered search citations (ChatGPT, Claude, Perplexity, Gemini), schema markup, and Core Web Vitals with Next.js 15 + React 19.2. Updated October 2025.",
+  keywords: ["search system", "Next.js SEO", "AI citations", "schema markup", "Core Web Vitals", "ChatGPT optimization", "Claude citations", "Perplexity SEO", "discoverability", "knowledge graph"],
 };
 
-export default function SEOPage() {
+export default function SearchSystemPage() {
   const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "SEO Implementation - Modern Best Practices with Next.js 15",
-        "description": "Meta-analysis of how Avolve.io implements modern SEO strategies including AI citation optimization and Core Web Vitals",
+        "headline": "Search System - SEO + AI Citations + Discoverability",
+        "description": "Meta-analysis of how Avolve.io implements the search system including traditional SEO, AI-powered search citations, and knowledge graph building",
         "datePublished": "2025-10-05",
         "dateModified": "2025-10-05",
-        "articleSection": "SEO Implementation",
+        "articleSection": "Search System Implementation",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         }
@@ -73,12 +73,12 @@ export default function SEOPage() {
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-zinc-700">SEO Implementation - Modern Best Practices</h1>
+          <h1 className="text-4xl font-bold mb-4 text-gray-700">Search System - SEO + AI Citations + Discoverability</h1>
           <p className="text-xl text-gray-700 mb-4">
-            How Avolve.io implements cutting-edge SEO with Next.js 15 + React 19.2
+            How Avolve.io implements the complete search system with Next.js 15 + React 19.2
           </p>
           <p className="text-gray-600 mb-12">
-            This is a meta-guide showing our actual implementation. We don't just document SEO—we practice it. View source to see our schema markup, inspect our Core Web Vitals, and study our AI optimization strategy.
+            This is a meta-guide showing our actual implementation. The search system coordinates traditional SEO, AI-powered citations (ChatGPT, Claude, Perplexity, Gemini), schema markup for knowledge graphs, and Core Web Vitals. View source to see our implementation.
           </p>
 
           <section id="why-meta" className="mb-12 bg-zinc-50 border-l-4 border-zinc-600 p-6 rounded-lg">
