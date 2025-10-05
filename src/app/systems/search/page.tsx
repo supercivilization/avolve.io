@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 // Dependencies (October 5, 2025):
 // - Next.js: 15.5.4
@@ -18,7 +19,22 @@ export default function SearchSystemPage() {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebPage",
+        "@id": "https://avolve.io/systems/search#webpage",
+        "url": "https://avolve.io/systems/search",
+        "name": "Search System - SEO + AI Citations + Discoverability",
+        "isPartOf": {
+          "@id": "https://avolve.io/#website"
+        },
+        "about": {
+          "@id": "https://avolve.io/systems/search#article"
+        },
+        "datePublished": "2025-10-05",
+        "dateModified": "2025-10-05"
+      },
+      {
         "@type": "TechArticle",
+        "@id": "https://avolve.io/systems/search#article",
         "headline": "Search System - SEO + AI Citations + Discoverability",
         "description": "Meta-analysis of how Avolve.io implements the search system including traditional SEO, AI-powered search citations, and knowledge graph building",
         "datePublished": "2025-10-05",
@@ -26,10 +42,25 @@ export default function SearchSystemPage() {
         "articleSection": "Search System Implementation",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
-        }
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://avolve.io/systems/search#webpage"
+        },
+        "about": [
+          {
+            "@id": "https://avolve.io/software/nextjs#software"
+          },
+          {
+            "@id": "https://avolve.io/software/react#software"
+          }
+        ]
       },
       {
         "@type": "FAQPage",
+        "@id": "https://avolve.io/systems/search#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -56,12 +87,63 @@ export default function SearchSystemPage() {
             }
           }
         ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://avolve.io/systems/search#howto-lcp",
+        "name": "How to Optimize Largest Contentful Paint (LCP) with Next.js 15",
+        "description": "Step-by-step guide to achieving LCP under 2.5 seconds using Next.js Image component and Server Components",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Use Next.js Image component with priority",
+            "text": "Import Next.js Image component and add priority attribute for above-the-fold images to preload them",
+            "itemListElement": {
+              "@type": "HowToDirection",
+              "text": "import Image from 'next/image'; <Image src='/hero.jpg' priority />"
+            }
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Enable automatic AVIF/WebP conversion",
+            "text": "Next.js Image automatically serves AVIF (25-50% smaller) and WebP (25-35% smaller) formats with fallbacks",
+            "itemListElement": {
+              "@type": "HowToDirection",
+              "text": "No configuration needed - built into Next.js Image component"
+            }
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Use Server Components for content",
+            "text": "Default to Server Components for all content pages to eliminate client JavaScript and improve LCP",
+            "itemListElement": {
+              "@type": "HowToDirection",
+              "text": "export default async function Page() { const data = await fetch(); return <Content data={data} />; }"
+            }
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Implement ISR caching",
+            "text": "Use Incremental Static Regeneration with revalidate option for optimal performance",
+            "itemListElement": {
+              "@type": "HowToDirection",
+              "text": "fetch(url, { next: { revalidate: 3600 } })"
+            }
+          }
+        ],
+        "totalTime": "PT30M"
       }
     ]
   };
 
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "/" },
+        { name: "Systems", url: "/systems" },
+        { name: "Search", url: "/systems/search" }
+      ]} />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

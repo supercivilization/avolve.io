@@ -85,22 +85,43 @@ export default function RootLayout({
         "about": [
           {
             "@type": "SoftwareApplication",
+            "@id": "https://avolve.io/software/nextjs#software",
             "name": "Next.js",
             "applicationCategory": "DeveloperApplication",
             "softwareVersion": "15.5.4",
-            "operatingSystem": "Node.js 24.8.0"
+            "operatingSystem": "Node.js 24.8.0",
+            "url": "https://nextjs.org",
+            "sameAs": [
+              "https://github.com/vercel/next.js",
+              "https://en.wikipedia.org/wiki/Next.js",
+              "https://www.wikidata.org/wiki/Q28865882"
+            ]
           },
           {
             "@type": "SoftwareApplication",
+            "@id": "https://avolve.io/software/react#software",
             "name": "React",
             "applicationCategory": "DeveloperApplication",
-            "softwareVersion": "19.2.0"
+            "softwareVersion": "19.2.0",
+            "url": "https://react.dev",
+            "sameAs": [
+              "https://github.com/facebook/react",
+              "https://en.wikipedia.org/wiki/React_(JavaScript_library)",
+              "https://www.wikidata.org/wiki/Q19399674"
+            ]
           },
           {
             "@type": "SoftwareApplication",
+            "@id": "https://avolve.io/software/typescript#software",
             "name": "TypeScript",
             "applicationCategory": "DeveloperApplication",
-            "softwareVersion": "5.9.2"
+            "softwareVersion": "5.9.2",
+            "url": "https://www.typescriptlang.org",
+            "sameAs": [
+              "https://github.com/microsoft/TypeScript",
+              "https://en.wikipedia.org/wiki/TypeScript",
+              "https://www.wikidata.org/wiki/Q978185"
+            ]
           }
         ],
         "keywords": "Next.js 15, React 19, TypeScript, modern web stack, stack integration, verified compatibility, Server Components, App Router, Tailwind CSS, shadcn/ui, Vercel, Supabase",
@@ -154,6 +175,7 @@ export default function RootLayout({
       },
       {
         "@type": "TechArticle",
+        "@id": "https://avolve.io/#article",
         "headline": "Modern Web Development Stack Integration Reference",
         "description": "Comprehensive guide to Next.js 15 + React 19.2 + TypeScript 5.9 stack integration with verified compatibility and official resources",
         "datePublished": "2025-10-05",
@@ -167,16 +189,30 @@ export default function RootLayout({
         "mainEntityOfPage": {
           "@id": "https://avolve.io/#website"
         },
+        "isPartOf": {
+          "@id": "https://avolve.io/#website"
+        },
         "articleSection": "Stack Integration",
         "keywords": "Next.js 15, React 19, TypeScript, Vercel, Supabase, modern web stack",
         "about": [
           {
+            "@id": "https://avolve.io/software/nextjs#software"
+          },
+          {
+            "@id": "https://avolve.io/software/react#software"
+          },
+          {
+            "@id": "https://avolve.io/software/typescript#software"
+          },
+          {
             "@type": "Thing",
+            "@id": "https://avolve.io/#web-development",
             "name": "Web Development",
             "sameAs": "https://en.wikipedia.org/wiki/Web_development"
           },
           {
             "@type": "Thing",
+            "@id": "https://avolve.io/#software-framework",
             "name": "Software Framework",
             "sameAs": "https://en.wikipedia.org/wiki/Software_framework"
           }
