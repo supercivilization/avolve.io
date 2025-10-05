@@ -1,0 +1,490 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
+
+// Dependencies (October 5, 2025):
+// - Next.js: 15.5.4 (Metadata API)
+// - React: 19.2.0
+// Last verified: 2025-10-05
+
+export const metadata: Metadata = {
+  title: "Social Sharing System - OpenGraph + Twitter Cards | Avolve.io",
+  description: "Production social sharing with OpenGraph, Twitter Cards, and preview optimization. Next.js Metadata API patterns for maximum engagement.",
+  keywords: ["OpenGraph", "Twitter Cards", "social sharing", "og:image", "meta tags", "Next.js metadata", "social media optimization", "preview cards"]
+};
+
+export default function SocialSystemPage() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://avolve.io/systems/social#webpage",
+        "url": "https://avolve.io/systems/social",
+        "name": "Social Sharing System - OpenGraph + Twitter Cards",
+        "isPartOf": {
+          "@id": "https://avolve.io/#website"
+        },
+        "about": {
+          "@id": "https://avolve.io/systems/social#article"
+        }
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://avolve.io/systems/social#article",
+        "headline": "Social Sharing System: OpenGraph + Twitter Cards Optimization",
+        "datePublished": "2025-10-05",
+        "dateModified": "2025-10-05",
+        "author": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "description": "Complete social sharing architecture using Next.js Metadata API for OpenGraph and Twitter Cards",
+        "about": [
+          { "@id": "https://avolve.io/software/nextjs#software" },
+          { "@id": "https://avolve.io/systems/search#article" }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://avolve.io/systems/social#howto-opengraph",
+        "name": "How to Implement OpenGraph Social Previews in Next.js 15",
+        "description": "Complete guide to social sharing optimization with OpenGraph and Twitter Cards",
+        "totalTime": "PT20M",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Configure base OpenGraph metadata",
+            "text": "Set up default OpenGraph tags in root layout.tsx using Next.js Metadata API with title, description, URL, and site name"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Create optimized social images",
+            "text": "Generate 1200x630px og:image files with readable text, brand colors, and proper contrast for social previews"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Add Twitter Card metadata",
+            "text": "Configure Twitter-specific metadata with summary_large_image card type and dedicated Twitter images"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Test social previews",
+            "text": "Validate using Facebook Sharing Debugger, Twitter Card Validator, and LinkedIn Post Inspector before deployment"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://avolve.io/systems/social#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the correct OpenGraph image size?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use 1200x630px for maximum compatibility across Facebook, Twitter, LinkedIn. Minimum 600x315px. Keep important content in center 1200x600px safe zone. File size under 8MB for Facebook, ideally under 1MB for fast loading."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Next.js Metadata API handle social tags?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Next.js 15.5.4 Metadata API automatically generates OpenGraph and Twitter Card tags from the metadata object. Use openGraph and twitter properties in layout.tsx or page.tsx. Supports static and dynamic metadata with generateMetadata function."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I test social preview cards before deploying?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use Facebook Sharing Debugger (developers.facebook.com/tools/debug), Twitter Card Validator (cards-dev.twitter.com/validator), LinkedIn Post Inspector (linkedin.com/post-inspector), and OpenGraph.xyz for preview testing. Test on localhost using ngrok or similar tunneling."
+            }
+          }
+        ]
+      }
+    ]
+  };
+
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "/" },
+        { name: "Systems", url: "/systems" },
+        { name: "Social", url: "/systems/social" }
+      ]} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+
+      <main className="max-w-6xl mx-auto px-4 py-12">
+        <time className="text-sm text-gray-600" dateTime="2025-10-05">
+          Last updated: October 5, 2025
+        </time>
+
+        <article className="mt-4">
+          <h1 className="text-4xl font-bold mb-4 text-gray-700">Social Sharing System</h1>
+          <p className="text-xl text-gray-700 mb-12">
+            OpenGraph + Twitter Cards for rich social previews and maximum engagement
+          </p>
+
+          {/* Quick Answer */}
+          <section id="overview" className="mb-12 bg-gray-50 p-6 rounded-lg border-l-4 border-gray-600">
+            <h2 className="text-2xl font-bold mb-4">Overview</h2>
+            <p className="text-gray-700 mb-4">
+              Social sharing optimization using <strong>OpenGraph</strong> and <strong>Twitter Cards</strong> creates rich preview cards when your content is shared on social platforms, dramatically increasing click-through rates.
+            </p>
+            <ul className="list-disc list-inside space-y-1 text-gray-700">
+              <li><strong>2-3x higher engagement</strong> with rich preview cards vs plain links</li>
+              <li><strong>Next.js Metadata API</strong> automates OpenGraph tag generation</li>
+              <li><strong>1200x630px images</strong> for maximum platform compatibility</li>
+              <li><strong>Works across all platforms:</strong> Facebook, Twitter, LinkedIn, WhatsApp, Slack</li>
+            </ul>
+          </section>
+
+          {/* Components */}
+          <section id="components" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">System Components</h2>
+
+            <div className="bg-gray-50 p-6 rounded-lg mb-6">
+              <h3 className="text-xl font-bold mb-3">Architecture</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li><strong>OpenGraph Protocol:</strong> Meta tags (og:*) for rich social previews</li>
+                <li><strong>Twitter Cards:</strong> Twitter-specific metadata for enhanced display</li>
+                <li><strong>Next.js Metadata API:</strong> Type-safe metadata generation in layout/page files</li>
+                <li><strong>Social Images:</strong> Optimized 1200x630px images with brand/content</li>
+                <li><strong>Platform Debuggers:</strong> Facebook, Twitter, LinkedIn validation tools</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Implementation */}
+          <section id="implementation" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">Implementation</h2>
+
+            <h3 className="text-2xl font-bold mb-4">1. Base Configuration (Root Layout)</h3>
+            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-6">
+{`// app/layout.tsx
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://yourdomain.com'),
+  title: {
+    default: "Your Site Name",
+    template: "%s | Your Site Name"
+  },
+  description: "Your site description",
+
+  // OpenGraph
+  openGraph: {
+    title: "Your Site Name",
+    description: "Your site description",
+    url: "https://yourdomain.com",
+    siteName: "Your Site Name",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png", // 1200x630px
+        width: 1200,
+        height: 630,
+        alt: "Your Site Name - Description"
+      }
+    ]
+  },
+
+  // Twitter Cards
+  twitter: {
+    card: "summary_large_image",
+    title: "Your Site Name",
+    description: "Your site description",
+    images: ["/og-image.png"],
+    creator: "@yourusername"
+  }
+};`}
+            </pre>
+
+            <h3 className="text-2xl font-bold mb-4">2. Page-Specific Metadata</h3>
+            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-6">
+{`// app/blog/[slug]/page.tsx
+import type { Metadata } from "next";
+
+interface Props {
+  params: { slug: string }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  // Fetch blog post data
+  const post = await getBlogPost(params.slug);
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: \`https://yourdomain.com/blog/\${params.slug}\`,
+      type: "article",
+      publishedTime: post.publishedAt,
+      authors: [post.author.name],
+      images: [
+        {
+          url: post.coverImage, // 1200x630px
+          width: 1200,
+          height: 630,
+          alt: post.title
+        }
+      ]
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.coverImage],
+    }
+  };
+}`}
+            </pre>
+
+            <h3 className="text-2xl font-bold mb-4">3. Dynamic OG Image Generation</h3>
+            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-6">
+{`// app/api/og/route.tsx
+import { ImageResponse } from 'next/og';
+
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const title = searchParams.get('title');
+
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#0070f3',
+          fontSize: 60,
+          fontWeight: 700,
+        }}
+      >
+        <div style={{ color: 'white' }}>{title}</div>
+      </div>
+    ),
+    {
+      width: 1200,
+      height: 630,
+    }
+  );
+}
+
+// Usage in metadata:
+openGraph: {
+  images: [\`/api/og?title=\${encodeURIComponent(post.title)}\`]
+}`}
+            </pre>
+
+            <h3 className="text-2xl font-bold mb-4">4. Image Specifications</h3>
+            <div className="overflow-x-auto mb-6">
+              <table className="w-full border-collapse border border-gray-300">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="border border-gray-300 px-4 py-2 text-left">Platform</th>
+                    <th className="border border-gray-300 px-4 py-2 text-left">Recommended Size</th>
+                    <th className="border border-gray-300 px-4 py-2 text-left">Aspect Ratio</th>
+                    <th className="border border-gray-300 px-4 py-2 text-left">Max File Size</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-2">Facebook</td>
+                    <td className="border border-gray-300 px-4 py-2 font-bold">1200x630px</td>
+                    <td className="border border-gray-300 px-4 py-2">1.91:1</td>
+                    <td className="border border-gray-300 px-4 py-2">8MB</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-2">Twitter</td>
+                    <td className="border border-gray-300 px-4 py-2 font-bold">1200x675px</td>
+                    <td className="border border-gray-300 px-4 py-2">16:9</td>
+                    <td className="border border-gray-300 px-4 py-2">5MB</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-2">LinkedIn</td>
+                    <td className="border border-gray-300 px-4 py-2 font-bold">1200x627px</td>
+                    <td className="border border-gray-300 px-4 py-2">1.91:1</td>
+                    <td className="border border-gray-300 px-4 py-2">5MB</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-2">Universal</td>
+                    <td className="border border-gray-300 px-4 py-2 font-bold">1200x630px</td>
+                    <td className="border border-gray-300 px-4 py-2">1.9:1</td>
+                    <td className="border border-gray-300 px-4 py-2">1MB ideal</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* Testing & Validation */}
+          <section id="testing" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">Testing & Validation</h2>
+
+            <div className="space-y-4">
+              <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+                <h3 className="font-bold mb-2">Facebook Sharing Debugger</h3>
+                <p className="text-sm text-gray-700 mb-2">
+                  <a href="https://developers.facebook.com/tools/debug/" className="text-blue-600 hover:underline" target="_blank" rel="noopener">
+                    developers.facebook.com/tools/debug
+                  </a>
+                </p>
+                <p className="text-sm text-gray-700">
+                  Tests OpenGraph tags, shows preview exactly as Facebook displays it, clears cache for updated images.
+                </p>
+              </div>
+
+              <div className="bg-cyan-50 border-l-4 border-cyan-600 p-4 rounded-lg">
+                <h3 className="font-bold mb-2">Twitter Card Validator</h3>
+                <p className="text-sm text-gray-700 mb-2">
+                  <a href="https://cards-dev.twitter.com/validator" className="text-cyan-600 hover:underline" target="_blank" rel="noopener">
+                    cards-dev.twitter.com/validator
+                  </a>
+                </p>
+                <p className="text-sm text-gray-700">
+                  Validates Twitter Card markup, shows preview with summary_large_image card, validates image dimensions.
+                </p>
+              </div>
+
+              <div className="bg-indigo-50 border-l-4 border-indigo-600 p-4 rounded-lg">
+                <h3 className="font-bold mb-2">LinkedIn Post Inspector</h3>
+                <p className="text-sm text-gray-700 mb-2">
+                  <a href="https://www.linkedin.com/post-inspector/" className="text-indigo-600 hover:underline" target="_blank" rel="noopener">
+                    linkedin.com/post-inspector
+                  </a>
+                </p>
+                <p className="text-sm text-gray-700">
+                  Tests how posts appear on LinkedIn, validates OpenGraph tags, clears LinkedIn cache.
+                </p>
+              </div>
+
+              <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded-lg">
+                <h3 className="font-bold mb-2">OpenGraph.xyz</h3>
+                <p className="text-sm text-gray-700 mb-2">
+                  <a href="https://www.opengraph.xyz/" className="text-purple-600 hover:underline" target="_blank" rel="noopener">
+                    opengraph.xyz
+                  </a>
+                </p>
+                <p className="text-sm text-gray-700">
+                  Universal OpenGraph preview tool, shows how content appears across multiple platforms, validates all meta tags.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* What Breaks */}
+          <section id="limitations" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">What Breaks in Production</h2>
+
+            <div className="bg-stone-50 border-l-4 border-stone-400 p-4 rounded-lg space-y-4">
+              <div>
+                <h3 className="font-bold mb-1">Cached previews not updating</h3>
+                <p className="text-sm text-gray-700 mb-1">
+                  Facebook, Twitter, LinkedIn cache OpenGraph images for days/weeks. Changed images don't appear immediately.
+                </p>
+                <p className="text-stone-700 text-sm"><strong>Fix:</strong> Use platform debugger tools to force cache refresh. Add query params to image URLs (?v=2) to bust cache. Wait 24-48h for natural cache expiration.</p>
+              </div>
+
+              <div>
+                <h3 className="font-bold mb-1">Images not loading from localhost</h3>
+                <p className="text-sm text-gray-700 mb-1">
+                  Social platforms cannot access localhost URLs for preview testing during development.
+                </p>
+                <p className="text-stone-700 text-sm"><strong>Fix:</strong> Use ngrok or similar tunneling service to expose localhost. Deploy to Vercel preview environment. Use absolute production URLs in development.</p>
+              </div>
+
+              <div>
+                <h3 className="font-bold mb-1">Text too small in social preview</h3>
+                <p className="text-sm text-gray-700 mb-1">
+                  1200x630px images get compressed to thumbnail size in feeds. Small text becomes unreadable.
+                </p>
+                <p className="text-stone-700 text-sm"><strong>Fix:</strong> Use minimum 60px font size. Keep important content in center 1200x600px safe zone. Test preview at actual display size (400x210px typical). High contrast colors.</p>
+              </div>
+
+              <div>
+                <h3 className="font-bold mb-1">Missing metadataBase causes broken URLs</h3>
+                <p className="text-sm text-gray-700 mb-1">
+                  Next.js requires metadataBase for relative URLs. Missing causes og:url and og:image to fail validation.
+                </p>
+                <p className="text-stone-700 text-sm"><strong>Fix:</strong> Set metadataBase: new URL('https://yourdomain.com') in root layout.tsx. Use absolute URLs for all OpenGraph images. Validate with debugger tools.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Best Practices */}
+          <section id="best-practices" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">Best Practices</h2>
+
+            <div className="space-y-4">
+              <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded-lg">
+                <h3 className="font-bold mb-2">Image Design Guidelines</h3>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• <strong>1200x630px</strong> for universal compatibility (works everywhere)</li>
+                  <li>• <strong>Center safe zone:</strong> Keep critical content in 1200x600px center area</li>
+                  <li>• <strong>Readable text:</strong> Minimum 60px font size, high contrast</li>
+                  <li>• <strong>Brand consistency:</strong> Use brand colors, logo placement</li>
+                  <li>• <strong>File size:</strong> Under 1MB for fast loading, optimize with compression</li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+                <h3 className="font-bold mb-2">Metadata Optimization</h3>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• <strong>Title length:</strong> 60-90 characters for OpenGraph (longer than SEO title)</li>
+                  <li>• <strong>Description:</strong> 200-300 characters, compelling call to action</li>
+                  <li>• <strong>URL structure:</strong> Clean, readable URLs without parameters when possible</li>
+                  <li>• <strong>Article type:</strong> Use type="article" for blog posts with publishedTime</li>
+                  <li>• <strong>Author attribution:</strong> Include authors array for article credit</li>
+                </ul>
+              </div>
+
+              <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded-lg">
+                <h3 className="font-bold mb-2">Testing Workflow</h3>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• <strong>Test before deployment:</strong> Use ngrok to test localhost with real platforms</li>
+                  <li>• <strong>Multi-platform validation:</strong> Test Facebook, Twitter, LinkedIn separately</li>
+                  <li>• <strong>Mobile preview:</strong> Check how preview cards appear on mobile devices</li>
+                  <li>• <strong>Cache refresh:</strong> Use debugger tools to clear cache after updates</li>
+                  <li>• <strong>A/B testing:</strong> Test different images/titles for engagement metrics</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Relationships */}
+          <section id="relationships" className="mb-12 border-t pt-8">
+            <h2 className="text-2xl font-bold mb-4">How Social System Relates to Other Layers</h2>
+            <ul className="space-y-2 text-gray-700">
+              <li>• <strong>Built with <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>:</strong> Next.js Metadata API, React components</li>
+              <li>• <strong>Extends <Link href="/systems/search" className="text-gray-600 hover:underline">Search System</Link>:</strong> Complements SEO with social discovery</li>
+              <li>• <strong>Increases <Link href="/solutions" className="text-slate-600 hover:underline">Solution</Link> reach:</strong> 2-3x higher engagement through social sharing</li>
+              <li>• <strong>Requires <Link href="/support" className="text-stone-600 hover:underline">Support</Link>:</strong> Monitor click-through rates, A/B test images, track social referrals</li>
+            </ul>
+          </section>
+
+          <nav className="mt-12 pt-8 border-t border-gray-200">
+            <Link href="/systems" className="text-gray-600 hover:underline">
+              ← Back to Systems
+            </Link>
+          </nav>
+        </article>
+      </main>
+    </>
+  );
+}

@@ -84,6 +84,36 @@ export default function SystemsPage() {
                 </p>
               </Link>
 
+              <Link href="/systems/email" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
+                <h3 className="text-xl font-bold mb-2 text-gray-700">Email System</h3>
+                <p className="text-gray-600 mb-3">
+                  Production email with Resend + React Email - type-safe templates, enterprise deliverability, sub-7-second setup
+                </p>
+                <p className="text-sm text-gray-500">
+                  Components: Resend API, React Email components, Next.js API Routes, TypeScript validation
+                </p>
+              </Link>
+
+              <Link href="/systems/social" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
+                <h3 className="text-xl font-bold mb-2 text-gray-700">Social Sharing System</h3>
+                <p className="text-gray-600 mb-3">
+                  OpenGraph + Twitter Cards for rich social previews - 2-3x higher engagement, works across all platforms
+                </p>
+                <p className="text-sm text-gray-500">
+                  Components: Next.js Metadata API, OpenGraph protocol, Twitter Cards, 1200x630px social images
+                </p>
+              </Link>
+
+              <Link href="/systems/mobile" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
+                <h3 className="text-xl font-bold mb-2 text-gray-700">Mobile System</h3>
+                <p className="text-gray-600 mb-3">
+                  React Native 0.81 + Expo SDK 54 + Next.js code sharing - 40-50% code reduction, production-ready mobile architecture
+                </p>
+                <p className="text-sm text-gray-500">
+                  Components: React Native New Architecture, Expo SDK, Monorepo (Nx/Turborepo), EAS Build, code sharing
+                </p>
+              </Link>
+
               <Link href="/systems#auth-system" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
                 <h3 className="text-xl font-bold mb-2 text-gray-700">Authentication System</h3>
                 <p className="text-gray-600 mb-3">

@@ -9,9 +9,9 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {
-  title: "Search System - SEO + AI Citations + Discoverability (Oct 2025)",
-  description: "Meta-guide showing how Avolve.io implements the search system: traditional SEO, AI-powered search citations (ChatGPT, Claude, Perplexity, Gemini), schema markup, and Core Web Vitals with Next.js 15 + React 19.2. Updated October 2025.",
-  keywords: ["search system", "Next.js SEO", "AI citations", "schema markup", "Core Web Vitals", "ChatGPT optimization", "Claude citations", "Perplexity SEO", "discoverability", "knowledge graph"],
+  title: "Search System - Modern SEO Best Practices for Late 2025",
+  description: "Complete search system implementation: AI Overviews (20%+ of queries), E-E-A-T framework, zero-click optimization, topic clusters, semantic SEO, and Core Web Vitals. Next.js 15 + React 19.2 production implementation. Updated October 2025.",
+  keywords: ["search system", "SEO 2025", "AI Overviews", "E-E-A-T", "zero-click optimization", "semantic SEO", "topic clusters", "Core Web Vitals", "Next.js SEO", "ChatGPT optimization"],
 };
 
 export default function SearchSystemPage() {
@@ -164,15 +164,15 @@ export default function SearchSystemPage() {
           </p>
 
           <section id="why-meta" className="mb-12 bg-zinc-50 border-l-4 border-zinc-600 p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Why This Page Exists</h2>
+            <h2 className="text-2xl font-bold mb-4">The Search Landscape in Late 2025</h2>
             <p className="text-gray-700 mb-4">
-              Avolve.io is built for both humans and AI assistants (Claude Code, ChatGPT, Gemini, Perplexity). This page demonstrates how we implement modern SEO best practices from September 2025 research while using our verified stack.
+              <strong>AI Overviews now appear in 20%+ of queries</strong> (up from 7% in June 2024), 60% of searches end without clicks, and Google's market share dropped from 73% to 66.9% in six months. The era of traditional SEO is over—success requires integrated strategies optimized for both traditional search and AI citations.
             </p>
             <p className="text-gray-700 mb-4">
-              <strong>What makes this different:</strong> We show by doing. Every technique described here is implemented on this site. You can inspect the code, validate our schema, measure our Core Web Vitals.
+              <strong>What makes this different:</strong> We show by doing. Every technique described here is implemented on this site. This page demonstrates production-tested implementation of modern SEO best practices from September 2025 research using Next.js 15 + React 19.2.
             </p>
             <p className="text-sm text-gray-600 mt-4">
-              <strong>Key insight:</strong> 13.14% of searches now trigger AI Overviews (up 72% since January 2025). Only pages with well-implemented schema appear in AI-generated results.
+              <strong>Key insight:</strong> Only 5.4% of AI Overviews contain exact query matches. Context and meaning matter more than precise keywords. Intent-driven, entity-based strategies replaced keyword-focused optimization.
             </p>
           </section>
 
@@ -606,21 +606,119 @@ export default function robots() {
             </div>
           </section>
 
+          <section id="modern-seo-2025" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">Modern SEO Priorities (Late 2025)</h2>
+
+            <div className="space-y-6">
+              <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded-lg">
+                <h3 className="text-xl font-bold mb-3">E-E-A-T Framework (Experience, Expertise, Authoritativeness, Trustworthiness)</h3>
+                <p className="text-gray-700 mb-3">
+                  <strong>Trustworthiness is the central component</strong>. "Untrustworthy pages have low E-E-A-T no matter how Experienced, Expert, or Authoritative" — Google Quality Raters Guidelines.
+                </p>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• <strong>Experience</strong> (added Dec 2022): First-hand, real-world experience with topics — critical for product reviews, travel guides, tutorials</li>
+                  <li>• <strong>Expertise</strong>: Demonstrable knowledge through credentials, portfolio, industry recognition</li>
+                  <li>• <strong>Authoritativeness</strong>: Recognition as go-to source through backlinks, citations, mentions</li>
+                  <li>• <strong>Trustworthiness</strong>: Accuracy, transparency, legitimate business information, secure transactions</li>
+                </ul>
+                <p className="text-sm text-gray-600 mt-2">
+                  <strong>Implementation on Avolve.io:</strong> Clear author attribution (Joshua Seymour), verifiable credentials, first-hand testing of Next.js 15 + React 19.2 stack, transparent methodology, consistent publication dates.
+                </p>
+              </div>
+
+              <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+                <h3 className="text-xl font-bold mb-3">Information Gain as Critical Ranking Factor</h3>
+                <p className="text-gray-700 mb-3">
+                  Content must offer unique value unavailable elsewhere:
+                </p>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• <strong>Original research:</strong> Verified compatibility testing of Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2</li>
+                  <li>• <strong>Custom frameworks:</strong> 7-layer stack analysis (Solutions → Systems → Software → Services → Support)</li>
+                  <li>• <strong>Advanced tactics:</strong> Production-tested patterns beyond basic documentation</li>
+                  <li>• <strong>Superior organization:</strong> Topic clusters linking Software → Systems → Solutions</li>
+                </ul>
+                <p className="text-sm text-gray-600 mt-2">
+                  Backlinko achieved <strong>70.43% traffic boost</strong> from updating one article with current data. Content maintenance delivers higher ROI than constantly publishing new material.
+                </p>
+              </div>
+
+              <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded-lg">
+                <h3 className="text-xl font-bold mb-3">Zero-Click Optimization Required</h3>
+                <p className="text-gray-700 mb-3">
+                  <strong>57-60% of mobile searches and 53% of desktop searches end without clicks.</strong> Featured snippets have 44% CTR, but zero-click searches could surpass 70% by end of 2025.
+                </p>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• Answer questions directly in <strong>40-60 word snippets</strong> in first 100 words</li>
+                  <li>• Use question-based headers (H2/H3) with clear, concise responses</li>
+                  <li>• Implement FAQ schema for question-answer content</li>
+                  <li>• Create content that invites deeper exploration while providing value upfront</li>
+                  <li>• Focus on brand visibility and authority even without guaranteed clicks</li>
+                </ul>
+                <p className="text-sm text-gray-600 mt-2">
+                  AI Overviews reduce clicks by <strong>34.5%</strong> but increase engagement quality for those who do click.
+                </p>
+              </div>
+
+              <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded-lg">
+                <h3 className="text-xl font-bold mb-3">Semantic & Entity-Based SEO</h3>
+                <p className="text-gray-700 mb-3">
+                  Google's Knowledge Graph contains <strong>800 billion facts and 8 billion entities</strong>. Search engines understand concepts and relationships, not just text strings.
+                </p>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• Identify primary entities related to topics (Next.js, React, TypeScript are entities)</li>
+                  <li>• Create clear entity relationships in content (Next.js uses React, built with TypeScript)</li>
+                  <li>• Add entity-related schema markup (SoftwareApplication types)</li>
+                  <li>• Cover topics comprehensively with related concepts and questions</li>
+                </ul>
+                <p className="text-sm text-gray-600 mt-2">
+                  One case study showed <strong>1,400% visibility increase in 6 months</strong> through entity-based SEO optimization.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-3">Topic Clusters Establish Topical Authority</h3>
+                <p className="text-gray-700 mb-3">
+                  Google evaluates topic-based content rather than isolated keyword pages. Our implementation:
+                </p>
+                <div className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-3">
+{`// Topic Cluster Structure on Avolve.io
+/software (pillar page)
+  ├── /software/nextjs (cluster page)
+  ├── /software/react (cluster page)
+  ├── /software/typescript (cluster page)
+  ├── /software/nodejs (cluster page)
+  └── All interlink + link back to /software
+
+/systems (pillar page)
+  ├── /systems/search (cluster page - this page)
+  └── /systems/social (cluster page)
+
+Each cluster page: 2,000+ words, specific subtopic coverage
+Each links back to pillar, clusters interconnect when relevant`}
+                </div>
+                <p className="text-sm text-gray-600">
+                  Neil Patel built <strong>800+ content pieces in topic clusters</strong>, driving 561% organic traffic increase and 1,164% increase in position 1-3 rankings year-over-year.
+                </p>
+              </div>
+            </div>
+          </section>
+
           <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-50 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For Claude Code & AI Assistants</h2>
             <p className="text-gray-700 mb-4">
-              When implementing SEO for Next.js 15 + React 19.2 projects:
+              When implementing SEO for Next.js 15 + React 19.2 projects in late 2025:
             </p>
             <ul className="space-y-2 text-gray-700">
-              <li><strong>Schema first:</strong> Implement @graph schema with multiple entity types (WebSite, Organization, Person, TechArticle/Article)</li>
-              <li><strong>Structure matters:</strong> Use H2→H3→bullet hierarchy, direct answers in opening paragraphs, numbered lists for step-by-step</li>
-              <li><strong>Fresh + factual:</strong> Include publication dates, cite sources, provide original data when possible</li>
-              <li><strong>Server Components:</strong> Default to server rendering for content, use 'use client' only when needed for interactivity</li>
-              <li><strong>Core Web Vitals:</strong> Target LCP &lt; 2.5s (Next.js Image with priority), INP &lt; 200ms (debounced inputs), CLS &lt; 0.1 (explicit dimensions)</li>
-              <li><strong>Platform optimization:</strong> ChatGPT prefers comprehensive 2K+ word content, Perplexity needs sub-2s load times, Claude values technical accuracy</li>
+              <li><strong>E-E-A-T first:</strong> Display clear author bylines with credentials, include detailed About pages, show professional certifications, add expert quotes, cite sources</li>
+              <li><strong>Information gain:</strong> Provide unique value through original research, custom frameworks, advanced tactics, superior organization — one excellent piece beats ten mediocre AI-generated articles</li>
+              <li><strong>Zero-click optimization:</strong> Answer questions directly in 40-60 words in first 100 words, use question-based headers, implement FAQ schema, focus on visibility even without guaranteed clicks</li>
+              <li><strong>Semantic SEO:</strong> Identify primary entities, create clear entity relationships, add entity-related schema (SoftwareApplication), cover topics comprehensively</li>
+              <li><strong>Topic clusters:</strong> Build pillar pages (2,000-4,000+ words) linking to cluster pages (1,000-2,000 words), start with 5+ satellite pages per hub, interlink extensively</li>
+              <li><strong>Core Web Vitals:</strong> LCP &lt; 2.5s (Next.js Image with priority), INP &lt; 200ms (debounced inputs, replaced FID in March 2024), CLS &lt; 0.1 (explicit dimensions)</li>
+              <li><strong>AI Overviews:</strong> 20%+ of queries now trigger AI Overviews, only 5.4% contain exact query matches — context and meaning matter more than keywords</li>
             </ul>
             <p className="text-sm text-gray-600 mt-4">
-              <strong>Remember:</strong> 13.14% of searches trigger AI Overviews. Only well-structured, schema-enhanced pages get cited. Implement both traditional SEO and AI optimization.
+              <strong>Remember:</strong> Google's market share dropped from 73% to 66.9%, ChatGPT usage tripled from 4.1% to 12.5%. Implement Search Everywhere Optimization across Google, ChatGPT, Perplexity, YouTube, TikTok, Reddit.
             </p>
           </section>
 
