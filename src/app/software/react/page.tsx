@@ -8,9 +8,9 @@ import Link from "next/link";
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {
-  title: "React 19.2 Complete Guide (October 2025) | Avolve.io",
-  description: "Complete React 19.2 guide: Activity component, useEffectEvent, Performance Tracks, Partial Pre-rendering. Honest assessment, migration guide, and stack integration patterns.",
-  keywords: ["React 19.2", "React 19", "Activity component", "useEffectEvent", "React Compiler", "React Server Components", "Partial Pre-rendering"],
+  title: "React 19.2 + Modern Stack Integration (Oct 2025) | Avolve.io",
+  description: "React 19.2 integration with Next.js 15, AI SDK, and Supabase. Activity component, useEffectEvent, stack patterns. Official resources and verified compatibility.",
+  keywords: ["React 19.2", "React 19", "React Next.js", "React AI SDK", "React stack integration", "useEffectEvent", "Activity component"],
 };
 
 export default function ReactPage() {
@@ -19,7 +19,7 @@ export default function ReactPage() {
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "React 19.2 Complete Guide - October 2025",
+        "headline": "React 19.2 + Modern Stack Integration (October 2025)",
         "datePublished": "2025-10-05",
         "dateModified": "2025-10-05",
         "author": {
@@ -28,6 +28,8 @@ export default function ReactPage() {
         "publisher": {
           "@id": "https://www.supercivilization.xyz/#organization"
         },
+        "description": "React 19.2 integration with Next.js 15, Vercel AI SDK, and Supabase. Verified stack patterns.",
+        "articleSection": "Stack Integration",
         "dependencies": {
           "React": "19.2.0",
           "Node.js": "24.8.0"
@@ -107,11 +109,50 @@ export default function ReactPage() {
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-gray-700">React 19.2 Complete Guide</h1>
+          <h1 className="text-4xl font-bold mb-4 text-gray-700">React 19.2 + Modern Stack</h1>
 
-          <p className="text-xl text-gray-700 mb-8">
-            The definitive guide to React 19.2's server-first revolution, Activity components, Effect Events, and modern ecosystem transformation.
+          <p className="text-xl text-gray-700 mb-4">
+            React 19.2 integration patterns with Next.js 15, Vercel AI SDK, and Supabase
           </p>
+          <p className="text-gray-600 mb-8">
+            This is not the official React documentation. We show how React 19.2 integrates with the modern stack and point you to official resources.
+          </p>
+
+          {/* Official Resources */}
+          <section id="official-resources" className="mb-12 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">📚 Official Documentation</h2>
+            <p className="text-gray-700 mb-4">
+              For the latest React features, API reference, and tutorials:
+            </p>
+            <ul className="space-y-2">
+              <li>
+                → <a href="https://react.dev" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                  react.dev
+                </a> - Official React documentation
+              </li>
+              <li>
+                → <a href="https://react.dev/reference/react" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                  API Reference
+                </a> - Complete API documentation
+              </li>
+              <li>
+                → <a href="https://github.com/facebook/react" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                  GitHub Repository
+                </a> - Source code and issues
+              </li>
+              <li>
+                → <a href="https://react.dev/blog/2024/12/05/react-19" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                  React 19 Release Notes
+                </a> - Official release announcement
+              </li>
+            </ul>
+
+            <div className="mt-4 pt-4 border-t border-blue-200">
+              <p className="text-sm text-gray-600">
+                <strong>What we add:</strong> Stack integration patterns (React 19.2 + Next.js 15 + AI SDK + Supabase), Activity/useEffectEvent real-world usage, verified compatibility (October 2025).
+              </p>
+            </div>
+          </section>
 
           {/* Quick Answer */}
           <section id="overview" className="mb-12 bg-gray-50 p-6 rounded-lg border-l-4 border-gray-600">
@@ -816,6 +857,24 @@ npm install -D eslint-plugin-react-hooks@6.1.0`}
                 </a>
               </li>
             </ul>
+          </section>
+
+          {/* For AI Assistants */}
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-50 p-6 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">🤖 For Claude Code & AI Assistants</h2>
+            <p className="text-gray-700 mb-4">
+              When using React 19.2 in the modern stack:
+            </p>
+            <ul className="space-y-2 text-gray-700">
+              <li><strong>Verified Stack (Oct 2025):</strong> React 19.2.0 + Next.js 15.5.4 + Node.js 24.8.0 + TypeScript 5.9.2</li>
+              <li><strong>Official Docs:</strong> Always check <a href="https://react.dev" className="text-blue-600 hover:underline">react.dev</a> for latest API changes</li>
+              <li><strong>New Features:</strong> Activity component (navigation state), useEffectEvent (stable deps), Performance Tracks (DevTools)</li>
+              <li><strong>Stack Integration:</strong> See sections above for Next.js 15, Vercel AI SDK, Supabase real-time patterns</li>
+              <li><strong>Framework Requirement:</strong> Server Components require Next.js 15+, Remix, or compatible framework</li>
+            </ul>
+            <p className="text-sm text-gray-600 mt-4">
+              This site provides integration patterns. Official docs provide API details. Use both together.
+            </p>
           </section>
 
           <nav className="mt-12 pt-8 border-t border-gray-200">

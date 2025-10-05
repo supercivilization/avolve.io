@@ -8,9 +8,9 @@ import Link from "next/link";
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {
-  title: "Next.js 15 Complete Guide (2025) | Avolve.io",
-  description: "Complete Next.js 15.5 guide: installation, routing, performance, authentication, deployment. Latest features, benchmarks, and best practices for 2025.",
-  keywords: ["Next.js 15", "Next.js tutorial", "Next.js routing", "Next.js authentication", "Next.js vs React", "Next.js deployment"],
+  title: "Next.js 15 + Modern Stack Integration (Oct 2025) | Avolve.io",
+  description: "Next.js 15.5 with React 19.2, TypeScript 5.9, and AI SDK 5.0. Stack integration patterns, version compatibility, and official resources. Verified Oct 2025.",
+  keywords: ["Next.js 15", "Next.js React 19", "Next.js AI SDK", "Next.js stack", "Next.js integration", "Next.js 2025"],
 };
 
 export default function NextJsPage() {
@@ -19,7 +19,7 @@ export default function NextJsPage() {
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "Next.js 15 Complete Guide",
+        "headline": "Next.js 15 + Modern Stack Integration (October 2025)",
         "datePublished": "2025-10-05",
         "dateModified": "2025-10-05",
         "author": {
@@ -28,8 +28,8 @@ export default function NextJsPage() {
         "publisher": {
           "@id": "https://www.supercivilization.xyz/#organization"
         },
-        "description": "Comprehensive guide to Next.js 15.5 including features, performance, and deployment",
-        "articleSection": "Web Development"
+        "description": "Next.js 15.5 integration with React 19.2, AI SDK 5.0, and modern stack. Verified compatibility patterns.",
+        "articleSection": "Stack Integration"
       },
       {
         "@type": "SoftwareApplication",
@@ -110,9 +110,12 @@ export default function NextJsPage() {
 
         <article className="mt-4">
           <header className="mb-8">
-            <h1 className="text-4xl font-bold mb-4">Next.js 15 Complete Guide</h1>
-            <p className="text-xl text-gray-700">
-              Everything you need to build production-ready web applications with Next.js 15.5
+            <h1 className="text-4xl font-bold mb-4 text-zinc-700">Next.js 15 + Modern Stack</h1>
+            <p className="text-xl text-gray-700 mb-4">
+              Integration patterns for Next.js 15.5 + React 19.2 + AI SDK 5.0
+            </p>
+            <p className="text-gray-600">
+              This is not the official Next.js documentation. We show how Next.js integrates with the modern stack and point you to official resources.
             </p>
           </header>
 
@@ -133,6 +136,42 @@ export default function NextJsPage() {
               </div>
             </div>
           </div>
+
+          {/* Official Resources */}
+          <section id="official-resources" className="mb-12 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">📚 Official Documentation</h2>
+            <p className="text-gray-700 mb-4">
+              For the latest Next.js features, API reference, and tutorials:
+            </p>
+            <ul className="space-y-2">
+              <li>
+                → <a href="https://nextjs.org" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                  nextjs.org
+                </a> - Official documentation and guides
+              </li>
+              <li>
+                → <a href="https://nextjs.org/docs" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                  API Reference
+                </a> - Complete API documentation
+              </li>
+              <li>
+                → <a href="https://github.com/vercel/next.js" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                  GitHub Repository
+                </a> - Source code and issues
+              </li>
+              <li>
+                → <a href="https://github.com/vercel/next.js/releases" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                  Release Notes
+                </a> - Latest updates and changelogs
+              </li>
+            </ul>
+
+            <div className="mt-4 pt-4 border-t border-blue-200">
+              <p className="text-sm text-gray-600">
+                <strong>What we add:</strong> Stack integration patterns (Next.js + React 19.2 + AI SDK 5.0), verified compatibility, and real production insights from October 2025.
+              </p>
+            </div>
+          </section>
 
           {/* What is Next.js */}
           <section id="what-is-nextjs" className="mb-12">
@@ -552,6 +591,23 @@ docker run -p 3000:3000 my-nextjs-app`}
                 </ul>
               </div>
             </div>
+          </section>
+
+          {/* For AI Assistants */}
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-50 p-6 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">🤖 For Claude Code & AI Assistants</h2>
+            <p className="text-gray-700 mb-4">
+              When using this stack for development:
+            </p>
+            <ul className="space-y-2 text-gray-700">
+              <li><strong>Verified Stack (Oct 2025):</strong> Next.js 15.5.4 + React 19.2.0 + Node.js 24.8.0 + TypeScript 5.9.2</li>
+              <li><strong>Official Docs:</strong> Always check <a href="https://nextjs.org/docs" className="text-blue-600 hover:underline">nextjs.org/docs</a> for latest API changes</li>
+              <li><strong>Stack Integration:</strong> See sections above for React 19.2 Activity component, AI SDK streaming, Supabase integration</li>
+              <li><strong>Version Compatibility:</strong> Next.js 15+ requires React 19+, works with Node.js 24.8.0 native TypeScript</li>
+            </ul>
+            <p className="text-sm text-gray-600 mt-4">
+              This site provides integration patterns. Official docs provide API details. Use both together.
+            </p>
           </section>
 
           <nav className="mt-12 pt-8 border-t border-gray-200">

@@ -8,8 +8,8 @@ import Link from "next/link";
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {
-  title: "Software - Modern Stack Versions | Avolve.io",
-  description: "Current versions of Next.js, React, TypeScript, Tailwind CSS, and more. Last updated October 5, 2025.",
+  title: "Software - Modern Stack Integration Reference | Avolve.io",
+  description: "Verified compatibility matrix for Next.js 15 + React 19.2 + TypeScript 5.9 modern stack. Integration patterns and official resources. Updated October 2025.",
 };
 
 export default function SoftwarePage() {
@@ -54,18 +54,26 @@ export default function SoftwarePage() {
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-zinc-700">Software</h1>
-          <p className="text-xl text-gray-700 mb-12">
-            Code, frameworks, libraries - what you build with
+          <h1 className="text-4xl font-bold mb-4 text-zinc-700">Software - Modern Stack Integration</h1>
+          <p className="text-xl text-gray-700 mb-4">
+            Verified compatibility matrix and integration patterns for the modern development stack
+          </p>
+          <p className="text-gray-600 mb-12">
+            We show how these tools work together and point you to official documentation for each.
           </p>
 
-          <section id="software-definition" className="mb-12">
-            <h2 className="text-2xl font-bold mb-4">What is Software?</h2>
+          <section id="software-definition" className="mb-12 bg-zinc-50 border-l-4 border-zinc-600 p-6 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">What This Page Provides</h2>
             <p className="text-gray-700 mb-4">
-              Software is the code you write and the frameworks you use. This includes programming languages (TypeScript),
-              UI libraries (React), frameworks (Next.js), and build tools (Turbopack).
+              <strong>Verified Stack Compatibility:</strong> We test and verify that Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0 work together as of October 2025.
+            </p>
+            <p className="text-gray-700 mb-4">
+              <strong>Integration Patterns:</strong> Each tool page shows how it integrates with the rest of the stack, not just isolated features.
             </p>
             <p className="text-gray-700">
+              <strong>Official Resources:</strong> We link to official documentation (nextjs.org, react.dev, etc.) for API details and latest updates.
+            </p>
+            <p className="text-sm text-gray-600 mt-4">
               Software implements <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link>,
               delivers <Link href="/solutions" className="text-slate-600 hover:underline ml-1">Solutions</Link>, and
               runs on <Link href="/services" className="text-neutral-600 hover:underline ml-1">Services</Link>.
