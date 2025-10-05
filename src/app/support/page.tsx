@@ -100,7 +100,7 @@ export default function SupportPage() {
               <h3 className="text-xl font-bold mb-3">Symptom</h3>
               <p className="text-gray-700">
                 API responses taking 5-30 seconds. Users reporting &quot;loading forever&quot; on dashboard.
-                Sentry showing increased database timeout errors.
+                Vercel Analytics showing increased database timeout errors.
               </p>
               <div className="mt-4 grid md:grid-cols-2 gap-4">
                 <div>
@@ -210,7 +210,7 @@ WHERE email = 'test@example.com';
 {`# Vercel Analytics (if using)
 - Check p95 response time improvement
 
-# Sentry
+# Vercel Analytics
 - Verify database timeout errors decreased
 
 # Supabase Dashboard
@@ -299,7 +299,7 @@ WHERE email = 'test@example.com';
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">Sentry</td>
+                    <td className="border border-gray-300 px-4 py-2 font-bold">Vercel Analytics</td>
                     <td className="border border-gray-300 px-4 py-2">
                       <ul className="list-disc list-inside text-sm space-y-1">
                         <li>JavaScript errors</li>
@@ -497,7 +497,7 @@ WHERE email = 'test@example.com';
 
             <ol className="list-decimal list-inside space-y-4 text-gray-700 ml-4">
               <li>
-                <strong>Detect:</strong> Alert fires (Sentry, Vercel, Uptime Robot)
+                <strong>Detect:</strong> Alert fires (Vercel Analytics, deployment logs, user reports)
               </li>
               <li>
                 <strong>Assess Severity:</strong>

@@ -8,7 +8,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Services - External Tools & Pricing | Avolve.io",
-  description: "Current pricing for Vercel, Supabase, Claude API, Stripe, Resend, and Sentry. Last updated October 5, 2025.",
+  description: "Current pricing for Vercel, Supabase, Claude API, Stripe, and Resend. Last updated October 5, 2025.",
 };
 
 export default function ServicesPage() {
@@ -71,18 +71,6 @@ export default function ServicesPage() {
       ],
       whenToUse: "Send transactional emails (signup, reset, receipts)",
       whenToSwitch: "Need >100k emails/mo, advanced deliverability, or email marketing",
-      migration: "Low"
-    },
-    {
-      name: "Sentry",
-      category: "Error Monitoring",
-      pricing: [
-        { tier: "Developer", price: "$0/mo", features: ["5,000 errors/mo", "1 user", "30 day retention"] },
-        { tier: "Team", price: "$26/mo", features: ["50,000 errors/mo", "Unlimited users", "90 day retention"] },
-        { tier: "Business", price: "$80/mo", features: ["200,000 errors/mo", "Priority support", "Custom retention"] }
-      ],
-      whenToUse: "Track errors, performance issues, user feedback",
-      whenToSwitch: "Need >500k errors/mo or self-hosted solution",
       migration: "Low"
     }
   ];
