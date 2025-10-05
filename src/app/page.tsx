@@ -15,24 +15,73 @@ export const metadata: Metadata = {
 export default function Home() {
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Modern Web Development Stack - October 2025",
-    "datePublished": "2025-10-05",
-    "dateModified": "2025-10-05",
-    "author": {
-      "@id": "https://www.joshuaseymour.com/#person"
-    },
-    "publisher": {
-      "@id": "https://www.supercivilization.xyz/#organization"
-    },
-    "dependencies": {
-      "Node.js": "24.8.0",
-      "Next.js": "15.5.4",
-      "React": "19.2.0",
-      "TypeScript": "5.9.2",
-      "Tailwind CSS": "4.1.13",
-      "shadcn/ui": "3.0"
-    }
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "headline": "Modern Web Development Stack - October 2025",
+        "datePublished": "2025-10-05",
+        "dateModified": "2025-10-05",
+        "author": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "dependencies": {
+          "Node.js": "24.8.0",
+          "Next.js": "15.5.4",
+          "React": "19.2.0",
+          "TypeScript": "5.9.2",
+          "Tailwind CSS": "4.1.13",
+          "shadcn/ui": "3.0"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What are Solutions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Solutions are business outcomes delivered to end users. Examples include SaaS applications, e-commerce platforms, and AI-powered tools."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are Systems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Systems are architecture patterns coordinating multiple components. They include authentication flows, database architectures, and API integration patterns."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Software?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Software encompasses the code, frameworks, and libraries used in modern web development, including Next.js 15.5, React 19.2, TypeScript 5.9, and Tailwind CSS 4.1."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are Services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Services are external managed capabilities like Vercel hosting, Supabase databases, Claude AI API, and Stripe payments that you buy instead of building yourself."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Support covers operations maintaining production systems, including debugging, monitoring, incident response, and performance optimization."
+            }
+          }
+        ]
+      }
+    ]
   };
 
   return (
