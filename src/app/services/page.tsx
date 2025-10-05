@@ -11,31 +11,44 @@ export const metadata: Metadata = {
   description: "Current pricing for Vercel, Supabase, Claude API, Stripe, and Resend. Last updated October 5, 2025.",
 };
 
+interface Service {
+  name: string;
+  category: string;
+  pricing: Array<{ tier: string; price: string; features: string[] }>;
+  whenToUse: string;
+  whenToSwitch: string;
+  migration: string;
+  aiFeatures?: string;
+  features?: string;
+}
+
 export default function ServicesPage() {
-  const services = [
+  const services: Service[] = [
     {
       name: "Vercel",
       category: "Hosting & Deployment",
       pricing: [
         { tier: "Hobby", price: "$0/mo", features: ["Personal projects", "100GB bandwidth", "Unlimited websites"] },
-        { tier: "Pro", price: "$20/mo", features: ["Commercial use", "1TB bandwidth", "Advanced analytics"] },
-        { tier: "Enterprise", price: "Custom", features: ["Custom bandwidth", "SLA", "Dedicated support"] }
+        { tier: "Pro", price: "$20/mo", features: ["Commercial use", "1TB bandwidth", "Advanced analytics", "Fluid Compute"] },
+        { tier: "Enterprise", price: "Custom", features: ["Custom bandwidth", "SLA", "Dedicated support", "AI Gateway"] }
       ],
-      whenToUse: "Deploy Next.js apps globally with zero config",
+      whenToUse: "Deploy Next.js apps globally with zero config, AI applications with Gateway, 85% cost savings with Fluid Compute",
       whenToSwitch: "Need multi-cloud, custom infrastructure, or >$500/mo spend",
-      migration: "Low"
+      migration: "Low",
+      aiFeatures: "AI Gateway (100+ models, sub-20ms routing, zero markup), v0 platform ($42M ARR), Sandbox security, 115B weekly requests"
     },
     {
       name: "Supabase",
       category: "Database & Auth",
       pricing: [
-        { tier: "Free", price: "$0/mo", features: ["500MB database", "50MB file storage", "50,000 monthly active users"] },
-        { tier: "Pro", price: "$25/mo", features: ["8GB database", "100GB storage", "100,000 MAU"] },
-        { tier: "Team", price: "$599/mo", features: ["Custom database size", "Custom storage", "Custom MAU"] }
+        { tier: "Free", price: "$0/mo", features: ["500MB database", "50MB file storage", "50,000 monthly active users", "Remote MCP server"] },
+        { tier: "Pro", price: "$25/mo", features: ["8GB database", "100GB storage", "100,000 MAU", "pgvector 0.8", "Real-time"] },
+        { tier: "Team", price: "$599/mo", features: ["Custom database size", "Custom storage", "Custom MAU", "Advanced features"] }
       ],
-      whenToUse: "Need Postgres + Auth + Storage in one service",
+      whenToUse: "Need Postgres + Auth + Storage + AI vectors in one service, 1,185% faster than Pinecone for vector search",
       whenToSwitch: "Need >100GB data, complex multi-region, or database-specific features",
-      migration: "Medium"
+      migration: "Medium",
+      aiFeatures: "pgvector 0.8.0 (4,720 queries/sec), Remote MCP server (mcp.supabase.com), Real-time (250K connections, 800K msg/sec), PostgreSQL 17"
     },
     {
       name: "Claude API",
@@ -65,13 +78,14 @@ export default function ServicesPage() {
       name: "Resend",
       category: "Transactional Email",
       pricing: [
-        { tier: "Free", price: "$0/mo", features: ["3,000 emails/mo", "1 domain", "100 emails/day"] },
-        { tier: "Pro", price: "$20/mo", features: ["50,000 emails/mo", "Unlimited domains", "Email analytics"] },
-        { tier: "Enterprise", price: "Custom", features: ["Custom volume", "Dedicated IP", "SLA"] }
+        { tier: "Free", price: "$0/mo", features: ["3,000 emails/mo", "1 domain", "100 emails/day", "Email API", "React Email"] },
+        { tier: "Pro", price: "$20/mo", features: ["50,000 emails/mo", "Unlimited domains", "Email analytics", "Webhooks"] },
+        { tier: "Enterprise", price: "Custom", features: ["Custom volume", "Dedicated IP", "SLA", "Priority support"] }
       ],
-      whenToUse: "Send transactional emails (signup, reset, receipts)",
-      whenToSwitch: "Need >100k emails/mo, advanced deliverability, or email marketing",
-      migration: "Low"
+      whenToUse: "Send transactional emails (signup, reset, receipts), React Email templates, modern DX",
+      whenToSwitch: "Need >100k emails/mo, advanced deliverability, or email marketing campaigns",
+      migration: "Low",
+      features: "React Email components, TypeScript SDK, 99.9% uptime, instant delivery, detailed analytics, custom domains"
     }
   ];
 
@@ -182,6 +196,20 @@ export default function ServicesPage() {
                   {service.migration === "Medium" && " - Requires data migration, moderate effort"}
                   {service.migration === "High" && " - Complex integration, significant refactoring"}
                 </p>
+
+                {service.aiFeatures && (
+                  <div className="mt-4 bg-purple-50 border-l-4 border-purple-600 p-4 rounded-lg">
+                    <h3 className="font-bold mb-2">AI & Advanced Features</h3>
+                    <p className="text-sm text-gray-700">{service.aiFeatures}</p>
+                  </div>
+                )}
+
+                {service.features && (
+                  <div className="mt-4 bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+                    <h3 className="font-bold mb-2">Key Features</h3>
+                    <p className="text-sm text-gray-700">{service.features}</p>
+                  </div>
+                )}
               </section>
             ))}
           </div>

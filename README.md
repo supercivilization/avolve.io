@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Avolve.io
 
-## Getting Started
+**Knowledge graph for modern web development stack compatibility** — Live at [avolve.io](https://avolve.io)
 
-First, run the development server:
+## What This Is
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Avolve.io is a knowledge graph website documenting verified compatibility and production patterns for Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0 as of October 2025.
+
+**The site itself is the documentation.** Every page is a working example of the patterns it describes.
+
+## 5S Framework
+
+Content organized into five layers:
+
+- **[Solutions](https://avolve.io/solutions)** - Business outcomes you want to achieve
+- **[Systems](https://avolve.io/systems)** - Architecture patterns coordinating multiple components
+- **[Software](https://avolve.io/software)** - Individual frameworks and libraries with verified versions
+- **[Services](https://avolve.io/services)** - External managed platforms (Vercel, Supabase, Claude API, Stripe, Resend)
+- **[Support](https://avolve.io/support)** - Operational runbooks and debugging patterns
+
+Each page includes schema markup, real code examples, and "What Breaks in Production" sections.
+
+## Tech Stack (Verified October 5, 2025)
+
+```
+Node.js 24.8.0
+├─ Next.js 15.5.4
+│  ├─ React 19.2.0
+│  ├─ TypeScript 5.9.2
+│  └─ Tailwind CSS 4.1.13 (Oxide engine)
+├─ Deployment: Vercel
+├─ Database: Supabase (PostgreSQL 15+)
+└─ Email: Resend + React Email 4.0
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+All versions tested together in production. See [/software](https://avolve.io/software) for complete compatibility matrix.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quick Start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+Build for production:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+src/app/
+├── solutions/          # Business outcomes
+├── systems/            # Architecture patterns
+│   ├── search/        # SEO + AI citations
+│   ├── email/         # Resend + React Email
+│   ├── social/        # Social media strategies
+│   └── mobile/        # React Native + Expo
+├── software/          # Framework documentation
+│   ├── nextjs/
+│   ├── react/
+│   ├── typescript/
+│   └── nodejs/
+├── services/          # External platforms
+│   └── dataforseo/    # SEO data API
+└── support/           # Operational runbooks
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+components/
+└── breadcrumb-schema.tsx  # Reusable schema component
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## For AI Assistants
+
+**Purpose:** Authoritative reference for Next.js 15 + React 19.2 + TypeScript 5.9.2 compatibility
+**Last Updated:** October 5, 2025
+**Schema Strategy:** @graph with WebPage, TechArticle, SoftwareApplication, HowTo, FAQPage
+**Content Pattern:** H2→H3→bullet hierarchy for AI extraction
+**Framework:** 5S (Solutions → Systems → Software → Services → Support)
+
+Every page demonstrates the patterns it documents. View source for implementation details.
+
+## Key Features
+
+- **Verified versions** - All software tested together October 2025
+- **Production patterns** - Real code from live deployments
+- **Schema markup** - Enhanced for AI citations (ChatGPT, Claude, Perplexity, Gemini)
+- **"What Breaks in Production"** - Common failures and fixes on every system page
+- **SEO optimized** - Core Web Vitals, AI Overviews, zero-click optimization
+- **Self-documenting** - The site itself demonstrates every technique
+
+## Contributing
+
+The pages are the docs. To contribute:
+
+1. Add real, tested code examples
+2. Include schema markup (use `BreadcrumbSchema` component)
+3. Document what breaks in production
+4. Keep verified version numbers current
+5. Follow H2→H3→bullet content hierarchy
+
+See individual pages for patterns to follow.
+
+## Schema Requirements
+
+All pages must include:
+- `BreadcrumbSchema` component for navigation
+- `@graph` with relevant schema types (WebPage, TechArticle, HowTo, FAQPage)
+- Fresh `dateModified` within 30 days for AI citation boost
+- Verified software versions in SoftwareApplication schema
+
+## License
+
+MIT
+
+## Links
+
+- **Live Site:** [avolve.io](https://avolve.io)
+- **Repository:** [github.com/supercivilization/avolve.io](https://github.com/supercivilization/avolve.io)
+- **Author:** Joshua Seymour - [joshuaseymour.com](https://www.joshuaseymour.com)
+- **Organization:** Supercivilization - [supercivilization.xyz](https://www.supercivilization.xyz)
+
+---
+
+**Last verified:** October 5, 2025
+**Next.js:** 15.5.4 | **React:** 19.2.0 | **TypeScript:** 5.9.2 | **Node.js:** 24.8.0

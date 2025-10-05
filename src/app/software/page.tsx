@@ -133,14 +133,22 @@ export default function SoftwarePage() {
                   </tr>
                   <tr>
                     <td className="border border-gray-300 px-4 py-2">Styling</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">Tailwind CSS</td>
+                    <td className="border border-gray-300 px-4 py-2 font-mono">
+                      <Link href="/software/tailwind" className="text-gray-700 hover:underline">
+                        Tailwind CSS
+                      </Link>
+                    </td>
                     <td className="border border-gray-300 px-4 py-2 font-mono">4.1.13</td>
                     <td className="border border-gray-300 px-4 py-2">Oxide engine (100x faster incremental builds)</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-300 px-4 py-2">Components</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">shadcn/ui</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">3.0</td>
+                    <td className="border border-gray-300 px-4 py-2 font-mono">
+                      <Link href="/software/shadcn-ui" className="text-gray-700 hover:underline">
+                        shadcn/ui
+                      </Link>
+                    </td>
+                    <td className="border border-gray-300 px-4 py-2 font-mono">3.3.1</td>
                     <td className="border border-gray-300 px-4 py-2">Universal registry (182x faster resolution)</td>
                   </tr>
                   <tr>
@@ -151,9 +159,23 @@ export default function SoftwarePage() {
                   </tr>
                   <tr>
                     <td className="border border-gray-300 px-4 py-2">AI SDK</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">Vercel AI SDK</td>
+                    <td className="border border-gray-300 px-4 py-2 font-mono">
+                      <Link href="/software/vercel-ai-sdk" className="text-gray-700 hover:underline">
+                        Vercel AI SDK
+                      </Link>
+                    </td>
                     <td className="border border-gray-300 px-4 py-2 font-mono">5.0.48</td>
                     <td className="border border-gray-300 px-4 py-2">100+ models, streaming, tool calling</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-2">Backend</td>
+                    <td className="border border-gray-300 px-4 py-2 font-mono">
+                      <Link href="/software/supabase" className="text-gray-700 hover:underline">
+                        Supabase
+                      </Link>
+                    </td>
+                    <td className="border border-gray-300 px-4 py-2 font-mono">Current</td>
+                    <td className="border border-gray-300 px-4 py-2">AI-first backend, pgvector 0.8, remote MCP</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-300 px-4 py-2">AI Coding</td>
