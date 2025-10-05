@@ -62,6 +62,15 @@ export const viewport: Viewport = {
   ],
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Avolve',
+  url: process.env.NEXT_PUBLIC_APP_URL || 'https://avolve.io',
+  logo: `${process.env.NEXT_PUBLIC_APP_URL || 'https://avolve.io'}/logo.svg`,
+  description: 'Real-time intelligence across 536 sources powered by 48+ production scripts.',
+};
+
 interface RootLayoutProps {
   children: React.ReactNode;
 }
@@ -78,6 +87,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
       suppressHydrationWarning
     >
       <head>
+        {/* Schema.org JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
         {/* Preload critical fonts */}
         <link rel="preload" href="/fonts/GeistVF.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/GeistMonoVF.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
