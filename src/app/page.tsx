@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 // Dependencies (October 5, 2025):
 // - Next.js: 15.5.4
@@ -92,15 +93,18 @@ export default function Home() {
       />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
-          Last updated: October 5, 2025
-        </time>
+        <div className="flex justify-between items-start mb-4">
+          <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
+            Last updated: October 5, 2025
+          </time>
+          <ThemeToggle />
+        </div>
 
         {/* Hero */}
         <header className="mt-4 mb-16">
           <h1 className="text-5xl font-bold mb-4">Avolve.io</h1>
-          <p className="text-2xl text-gray-700 mb-4">Ship your first app this week</p>
-          <div className="text-sm text-gray-600 space-y-1">
+          <p className="text-2xl text-muted-foreground mb-4">Ship your first app this week</p>
+          <div className="text-sm text-muted-foreground space-y-1">
             <p><strong>Current as of:</strong> October 5, 2025</p>
             <p><strong>Stack:</strong> Next.js 15 + React 19.2 + Supabase + Vercel + AI</p>
           </div>

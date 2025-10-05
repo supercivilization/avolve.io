@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
+import { OfficialResources } from "@/components/official-resources";
+import { CodeBlock } from "@/components/code-block";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { AlertCircle, CheckCircle2 } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 // Dependencies (October 5, 2025):
 // - Next.js: 15.5.4
@@ -67,22 +75,6 @@ export default function NextJsPage() {
               "@type": "Answer",
               "text": "Next.js provides production-ready features that React alone doesn't: server-side rendering, file-based routing, automatic image optimization, API routes, and automatic code splitting. This saves weeks of development time."
             }
-          },
-          {
-            "@type": "Question",
-            "name": "How does Next.js work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Next.js combines server-side rendering, static generation, and client-side rendering. It automatically optimizes your React application with code splitting, image optimization, and intelligent caching."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is Next.js better than React?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For production applications, yes. Next.js provides better developer experience and performance out-of-the-box. However, React alone is sufficient for simple client-side applications or when you need maximum architectural flexibility."
-            }
           }
         ]
       }
@@ -102,146 +94,107 @@ export default function NextJsPage() {
       />
 
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <nav className="text-sm text-gray-600 mb-4">
-          <Link href="/" className="hover:underline">Home</Link>
-          {" / "}
-          <Link href="/software" className="hover:underline">Software</Link>
-          {" / "}
-          <span>Next.js</span>
-        </nav>
+        <div className="flex justify-between items-start mb-4">
+          <nav className="text-sm text-muted-foreground">
+            <Link href="/" className="hover:underline">Home</Link>
+            {" / "}
+            <Link href="/software" className="hover:underline">Software</Link>
+            {" / "}
+            <span>Next.js</span>
+          </nav>
+          <ThemeToggle />
+        </div>
 
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
+        <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
-        <article className="mt-4">
-          <header className="mb-8">
-            <h1 className="text-4xl font-bold mb-4 text-zinc-700">Next.js 15 + Modern Stack</h1>
-            <p className="text-xl text-gray-700 mb-4">
-              Integration patterns for Next.js 15.5 + React 19.2 + AI SDK 5.0
-            </p>
-            <p className="text-gray-600">
-              This is not the official Next.js documentation. We show how Next.js integrates with the modern stack and point you to official resources.
+        <article className="mt-4 space-y-8">
+          <header className="space-y-4">
+            <div className="flex items-center gap-3">
+              <h1 className="text-4xl font-bold">Next.js 15</h1>
+              <Badge variant="default">v15.5.4</Badge>
+              <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">Production Ready</Badge>
+            </div>
+            <p className="text-xl text-muted-foreground">
+              React framework for building full-stack web applications with built-in server-side rendering, routing, and performance optimization.
             </p>
           </header>
 
-          {/* Quick Info */}
-          <div className="bg-zinc-50 p-6 rounded-lg mb-8">
-            <div className="grid md:grid-cols-3 gap-4">
-              <div>
-                <p className="text-sm text-gray-600">Current Version</p>
-                <p className="font-bold text-lg">15.5.4</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-600">Released</p>
-                <p className="font-bold text-lg">September 2025</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-600">Status</p>
-                <p className="font-bold text-lg text-green-600">Production Ready</p>
-              </div>
-            </div>
-          </div>
+          {/* Official Resources - Curator Pattern */}
+          <OfficialResources
+            resources={[
+              {
+                title: "Next.js Official Documentation",
+                url: "https://nextjs.org/docs",
+                type: "docs",
+                description: "Complete API reference, guides, and tutorials from Vercel"
+              },
+              {
+                title: "Next.js GitHub Repository",
+                url: "https://github.com/vercel/next.js",
+                type: "github",
+                description: "Source code, issues, and release notes"
+              },
+              {
+                title: "Next.js Learn Course",
+                url: "https://nextjs.org/learn",
+                type: "docs",
+                description: "Interactive tutorial for building your first Next.js app"
+              }
+            ]}
+          />
 
-          {/* Official Resources */}
-          <section id="official-resources" className="mb-12 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">📚 Official Documentation</h2>
-            <p className="text-gray-700 mb-4">
-              For the latest Next.js features, API reference, and tutorials:
-            </p>
-            <ul className="space-y-2">
-              <li>
-                → <a href="https://nextjs.org" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
-                  nextjs.org
-                </a> - Official documentation and guides
-              </li>
-              <li>
-                → <a href="https://nextjs.org/docs" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
-                  API Reference
-                </a> - Complete API documentation
-              </li>
-              <li>
-                → <a href="https://github.com/vercel/next.js" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
-                  GitHub Repository
-                </a> - Source code and issues
-              </li>
-              <li>
-                → <a href="https://github.com/vercel/next.js/releases" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
-                  Release Notes
-                </a> - Latest updates and changelogs
-              </li>
-            </ul>
-
-            <div className="mt-4 pt-4 border-t border-blue-200">
-              <p className="text-sm text-gray-600">
-                <strong>What we add:</strong> Stack integration patterns (Next.js + React 19.2 + AI SDK 5.0), verified compatibility, and real production insights from October 2025.
-              </p>
-            </div>
-          </section>
-
-          {/* What is Next.js */}
-          <section id="what-is-nextjs" className="mb-12">
-            <h2 className="text-3xl font-bold mb-4">What is Next.js?</h2>
-            <p className="text-gray-700 mb-4">
-              <strong>Next.js is a React framework for building full-stack web applications with built-in performance optimization and server-side rendering.</strong> Released in 2016 and now powering sites like Nike, GitHub, and Shopify, it's the most popular React framework with over 7 million weekly downloads.
-            </p>
-
-            <h3 className="text-2xl font-bold mb-3 mt-6">Why Choose Next.js Over React?</h3>
-            <p className="text-gray-700 mb-4">
-              Next.js extends React with production-ready features that React alone doesn't provide:
-            </p>
-
-            <div className="overflow-x-auto mb-6">
-              <table className="w-full border-collapse border border-gray-300">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Feature</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Next.js</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Plain React</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-medium">Server-Side Rendering</td>
-                    <td className="border border-gray-300 px-4 py-2">✅ Built-in</td>
-                    <td className="border border-gray-300 px-4 py-2">❌ Manual setup</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-medium">Routing</td>
-                    <td className="border border-gray-300 px-4 py-2">✅ File-based</td>
-                    <td className="border border-gray-300 px-4 py-2">❌ Requires React Router</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-medium">Image Optimization</td>
-                    <td className="border border-gray-300 px-4 py-2">✅ Automatic</td>
-                    <td className="border border-gray-300 px-4 py-2">❌ Manual implementation</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-medium">API Routes</td>
-                    <td className="border border-gray-300 px-4 py-2">✅ Integrated</td>
-                    <td className="border border-gray-300 px-4 py-2">❌ Separate backend needed</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-medium">Code Splitting</td>
-                    <td className="border border-gray-300 px-4 py-2">✅ Automatic</td>
-                    <td className="border border-gray-300 px-4 py-2">❌ Manual configuration</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p className="text-gray-700">
-              <strong>Bottom line:</strong> If you're building a React app that needs SEO, performance, or full-stack capabilities, Next.js is the better choice.
-            </p>
-          </section>
+          {/* Quick Info Card */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Stack Compatibility (Oct 2025)</CardTitle>
+              <CardDescription>Verified versions tested together in production</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Dependency</TableHead>
+                    <TableHead>Version</TableHead>
+                    <TableHead>Status</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">React</TableCell>
+                    <TableCell className="font-mono">19.2.0</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Compatible</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">TypeScript</TableCell>
+                    <TableCell className="font-mono">5.9.2</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Compatible</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Node.js</TableCell>
+                    <TableCell className="font-mono">24.8.0</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Compatible</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Vercel AI SDK</TableCell>
+                    <TableCell className="font-mono">5.0.48</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Compatible</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
 
           {/* Getting Started */}
-          <section id="getting-started" className="mb-12">
-            <h2 className="text-3xl font-bold mb-4">Getting Started</h2>
+          <section id="getting-started" className="space-y-4">
+            <h2 className="text-3xl font-bold">Getting Started</h2>
+            <p className="text-muted-foreground">
+              Create a new Next.js app in 30 seconds with our verified stack configuration.
+            </p>
 
-            <h3 className="text-2xl font-bold mb-3">Installation (30 seconds)</h3>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-6">
-{`# Create new Next.js app with Turbopack
+            <CodeBlock
+              code={`# Create new Next.js app with Turbopack
 npx create-next-app@latest my-app --turbo
 
 # Navigate to your project
@@ -249,378 +202,167 @@ cd my-app
 
 # Start development server
 npm run dev`}
-            </pre>
+              language="bash"
+              filename="terminal"
+            />
 
-            <h3 className="text-2xl font-bold mb-3">Your First Page</h3>
-            <p className="text-gray-700 mb-4">
-              Next.js uses file-based routing. Create a page by adding a file:
-            </p>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-4">
-{`// app/page.tsx
-export default function Home() {
-  return (
-    <main>
-      <h1>Welcome to Next.js</h1>
-      <p>Your first page is live!</p>
-    </main>
-  )
-}`}
-            </pre>
-            <p className="text-gray-700">
-              <strong>That's it!</strong> Open <code className="bg-gray-100 px-2 py-1 rounded">http://localhost:3000</code> to see your page.
-            </p>
+            <Alert>
+              <AlertCircle className="h-4 w-4" />
+              <AlertTitle>Using React 19.2.0</AlertTitle>
+              <AlertDescription>
+                Next.js 15.5.4 fully supports React 19.2. No additional configuration needed.
+              </AlertDescription>
+            </Alert>
           </section>
 
-          {/* Key Features */}
-          <section id="key-features" className="mb-12">
-            <h2 className="text-3xl font-bold mb-4">Key Features</h2>
+          {/* Integration Patterns */}
+          <section id="integration-patterns" className="space-y-4">
+            <h2 className="text-3xl font-bold">Integration Patterns</h2>
 
-            <div className="space-y-8">
-              {/* File-Based Routing */}
-              <div>
-                <h3 className="text-2xl font-bold mb-3">1. File-Based Routing</h3>
-                <p className="text-gray-700 mb-4">
-                  <strong>Routing is automatic.</strong> No configuration needed—just create files.
-                </p>
-                <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-4">
-{`app/
-├── page.tsx              → /
-├── about/page.tsx        → /about
-├── blog/[slug]/page.tsx  → /blog/:slug
-└── api/users/route.ts    → /api/users`}
-                </pre>
-                <p className="text-gray-700 mb-3">Dynamic routes use brackets:</p>
-                <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
-{`// app/blog/[slug]/page.tsx
-export default function BlogPost({
-  params
-}: {
-  params: { slug: string }
-}) {
-  return <h1>Post: {params.slug}</h1>
-}`}
-                </pre>
-              </div>
-
-              {/* Image Optimization */}
-              <div>
-                <h3 className="text-2xl font-bold mb-3">2. Image Optimization</h3>
-                <p className="text-gray-700 mb-4">
-                  Automatic image optimization reduces file sizes by up to 80%:
-                </p>
-                <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-4">
-{`import Image from 'next/image'
-
-export default function Profile() {
-  return (
-    <Image
-      src="/profile.jpg"
-      width={500}
-      height={500}
-      alt="Profile photo"
-      // Automatically optimizes format, size, quality
-    />
-  )
-}`}
-                </pre>
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
-                  <li>WebP/AVIF format conversion</li>
-                  <li>Responsive images for all devices</li>
-                  <li>Lazy loading by default</li>
-                  <li>Prevents layout shift</li>
-                </ul>
-              </div>
-
-              {/* Server Components */}
-              <div>
-                <h3 className="text-2xl font-bold mb-3">3. Server Components (Default)</h3>
-                <p className="text-gray-700 mb-4">
-                  React Server Components reduce JavaScript by 40%:
-                </p>
-                <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-4">
-{`// app/posts/page.tsx (runs on server)
-async function getPosts() {
-  const res = await fetch('https://api.example.com/posts')
-  return res.json()
-}
-
-export default async function Posts() {
-  const posts = await getPosts()
-
-  return (
-    <ul>
-      {posts.map(post => (
-        <li key={post.id}>{post.title}</li>
-      ))}
-    </ul>
-  )
-}`}
-                </pre>
-                <p className="text-gray-700 mb-3">Client Components when you need interactivity:</p>
-                <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
-{`'use client' // Required for useState, onClick, etc.
-
-import { useState } from 'react'
-
-export default function Counter() {
-  const [count, setCount] = useState(0)
-  return <button onClick={() => setCount(count + 1)}>{count}</button>
-}`}
-                </pre>
-              </div>
-
-              {/* API Routes */}
-              <div>
-                <h3 className="text-2xl font-bold mb-3">4. API Routes</h3>
-                <p className="text-gray-700 mb-4">
-                  Build APIs directly in your Next.js app:
-                </p>
-                <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
-{`// app/api/users/route.ts
-export async function GET() {
-  const users = await db.users.findMany()
-  return Response.json(users)
-}
-
-export async function POST(request: Request) {
-  const body = await request.json()
-  const user = await db.users.create({ data: body })
-  return Response.json(user)
-}`}
-                </pre>
-              </div>
-            </div>
-          </section>
-
-          {/* Performance */}
-          <section id="performance" className="mb-12">
-            <h2 className="text-3xl font-bold mb-4">Performance: Turbopack</h2>
-            <p className="text-gray-700 mb-4">
-              Next.js 15.5 includes <strong>Turbopack</strong>, a Rust-based bundler that's drastically faster:
+            <h3 className="text-2xl font-bold">Next.js + Vercel AI SDK</h3>
+            <p className="text-muted-foreground">
+              Stream AI responses directly to React components with Server Actions.
             </p>
 
-            <div className="overflow-x-auto mb-6">
-              <table className="w-full border-collapse border border-gray-300">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Metric</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Webpack</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Turbopack</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Improvement</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-medium">Initial Build</td>
-                    <td className="border border-gray-300 px-4 py-2">12.5s</td>
-                    <td className="border border-gray-300 px-4 py-2">2.1s</td>
-                    <td className="border border-gray-300 px-4 py-2 font-bold text-green-600">83% faster</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-medium">Code Updates</td>
-                    <td className="border border-gray-300 px-4 py-2">450ms</td>
-                    <td className="border border-gray-300 px-4 py-2">16ms</td>
-                    <td className="border border-gray-300 px-4 py-2 font-bold text-green-600">96% faster</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-medium">Server Startup</td>
-                    <td className="border border-gray-300 px-4 py-2">8.2s</td>
-                    <td className="border border-gray-300 px-4 py-2">1.9s</td>
-                    <td className="border border-gray-300 px-4 py-2 font-bold text-green-600">77% faster</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className="text-sm text-gray-600">
-              Benchmarks: 10,000 module codebase on 8-core CPU
-            </p>
-          </section>
+            <CodeBlock
+              code={`import { streamText } from 'ai';
+import { openai } from '@ai-sdk/openai';
 
-          {/* Authentication */}
-          <section id="authentication" className="mb-12">
-            <h2 className="text-3xl font-bold mb-4">Authentication Example</h2>
-            <p className="text-gray-700 mb-4">
-              Complete authentication implementation:
-            </p>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-4">
-{`// app/api/auth/route.ts
-import { NextResponse } from 'next/server'
-import { cookies } from 'next/headers'
+export async function POST(req: Request) {
+  const { messages } = await req.json();
 
-export async function POST(request: Request) {
-  const { email, password } = await request.json()
+  const result = streamText({
+    model: openai('gpt-4'),
+    messages,
+  });
 
-  const user = await verifyUser(email, password)
-
-  if (!user) {
-    return NextResponse.json(
-      { error: 'Invalid credentials' },
-      { status: 401 }
-    )
-  }
-
-  cookies().set('session', user.sessionToken, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax',
-    maxAge: 60 * 60 * 24 * 7 // 1 week
-  })
-
-  return NextResponse.json({ success: true })
+  return result.toDataStreamResponse();
 }`}
-            </pre>
+              language="typescript"
+              filename="app/api/chat/route.ts"
+              showLineNumbers
+            />
 
-            <h3 className="text-2xl font-bold mb-3 mt-6">Middleware Protection</h3>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
-{`// middleware.ts
-import { NextResponse } from 'next/server'
+            <h3 className="text-2xl font-bold mt-6">Next.js + Supabase Auth</h3>
+            <p className="text-muted-foreground">
+              Server-side authentication with Supabase cookies and middleware.
+            </p>
 
-export function middleware(request: NextRequest) {
-  const session = request.cookies.get('session')
+            <CodeBlock
+              code={`import { createServerClient } from '@supabase/ssr';
+import { cookies } from 'next/headers';
 
-  if (!session && request.nextUrl.pathname.startsWith('/dashboard')) {
-    return NextResponse.redirect(new URL('/login', request.url))
-  }
-}
+export async function getUser() {
+  const cookieStore = await cookies();
 
-export const config = {
-  matcher: '/dashboard/:path*'
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll();
+        },
+      },
+    }
+  );
+
+  const { data: { user } } = await supabase.auth.getUser();
+  return user;
 }`}
-            </pre>
+              language="typescript"
+              filename="lib/auth.ts"
+              showLineNumbers
+            />
           </section>
 
-          {/* Deployment */}
-          <section id="deployment" className="mb-12">
-            <h2 className="text-3xl font-bold mb-4">Deployment</h2>
-
-            <h3 className="text-2xl font-bold mb-3">1. Vercel (Recommended)</h3>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-4">
-{`# Install Vercel CLI
-npm i -g vercel
-
-# Deploy in one command
-vercel
-
-# Production deployment
-vercel --prod`}
-            </pre>
-            <p className="text-gray-700 mb-6">
-              <strong>Benefits:</strong> Zero configuration, automatic HTTPS, 99.99% uptime SLA, edge functions included, free for personal projects.
+          {/* What Breaks in Production */}
+          <section id="what-breaks" className="space-y-4">
+            <h2 className="text-3xl font-bold">What Breaks in Production</h2>
+            <p className="text-muted-foreground">
+              Real issues we've encountered and how to fix them.
             </p>
 
-            <h3 className="text-2xl font-bold mb-3">2. Docker Deployment</h3>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
-{`# Dockerfile
-FROM node:20-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci
-COPY . .
-RUN npm run build
-EXPOSE 3000
-CMD ["npm", "start"]
+            <Card className="border-destructive/50">
+              <CardHeader>
+                <CardTitle className="text-destructive">Missing environment variables</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <p className="text-sm">
+                  <strong>Symptom:</strong> Build succeeds locally, fails in production with "process.env.X is undefined"
+                </p>
+                <p className="text-sm">
+                  <strong>Cause:</strong> Environment variables not prefixed with NEXT_PUBLIC_ are only available server-side
+                </p>
+                <p className="text-sm">
+                  <strong>Fix:</strong> Use NEXT_PUBLIC_ prefix for client-side variables, or access them only in Server Components/API routes
+                </p>
+                <CodeBlock
+                  code={`// ❌ Wrong - undefined on client
+const apiKey = process.env.API_KEY;
 
-# Build and run
-docker build -t my-nextjs-app .
-docker run -p 3000:3000 my-nextjs-app`}
-            </pre>
+// ✅ Right - available on client
+const publicKey = process.env.NEXT_PUBLIC_API_KEY;
+
+// ✅ Right - server-side only
+export async function getServerSideProps() {
+  const apiKey = process.env.API_KEY; // Works in server context
+  // ...
+}`}
+                  language="typescript"
+                />
+              </CardContent>
+            </Card>
+
+            <Card className="border-destructive/50">
+              <CardHeader>
+                <CardTitle className="text-destructive">Hydration mismatches with useEffect</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <p className="text-sm">
+                  <strong>Symptom:</strong> Console warning "Text content does not match server-rendered HTML"
+                </p>
+                <p className="text-sm">
+                  <strong>Cause:</strong> Client state (localStorage, Date.now()) differs from server render
+                </p>
+                <p className="text-sm">
+                  <strong>Fix:</strong> Use suppressHydrationWarning or useState with useEffect
+                </p>
+                <CodeBlock
+                  code={`// ✅ Right - prevents hydration mismatch
+'use client';
+
+import { useState, useEffect } from 'react';
+
+export function ClientTime() {
+  const [time, setTime] = useState<string | null>(null);
+
+  useEffect(() => {
+    setTime(new Date().toLocaleTimeString());
+  }, []);
+
+  return <div>{time ?? 'Loading...'}</div>;
+}`}
+                  language="typescript"
+                />
+              </CardContent>
+            </Card>
           </section>
 
-          {/* FAQ */}
-          <section id="faq" className="mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-bold mb-2">How does Next.js work?</h3>
-                <p className="text-gray-700">
-                  Next.js combines server-side rendering, static generation, and client-side rendering in one framework. It automatically optimizes your React application for production with code splitting, image optimization, and intelligent caching.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold mb-2">Why use Next.js over React?</h3>
-                <p className="text-gray-700">
-                  Next.js provides essential features out-of-the-box that React requires manual setup for: routing, server-side rendering, API routes, image optimization, and automatic code splitting. This saves weeks of development time and ensures production-ready performance.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold mb-2">Is Next.js better than React?</h3>
-                <p className="text-gray-700">
-                  For production applications, yes. Next.js provides a better developer experience and better performance out-of-the-box. However, React alone is sufficient for simple client-side applications or when you need maximum flexibility in architecture.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold mb-2">When should I use Next.js vs plain React?</h3>
-                <p className="text-gray-700 mb-2">
-                  <strong>Use Next.js when:</strong>
-                </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-1 mb-3">
-                  <li>Building a production website or web app</li>
-                  <li>SEO matters (e-commerce, blogs, marketing sites)</li>
-                  <li>You need server-side rendering</li>
-                  <li>Performance is critical</li>
-                </ul>
-                <p className="text-gray-700 mb-2">
-                  <strong>Use plain React when:</strong>
-                </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
-                  <li>Building internal tools that don't need SEO</li>
-                  <li>Creating component libraries</li>
-                  <li>You need complete control over the architecture</li>
-                  <li>Building simple single-page applications</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Related Resources */}
-          <section id="related" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">Related Content</h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <h3 className="font-bold mb-2">From Software</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• <Link href="/software" className="text-zinc-700 hover:underline">All Software</Link></li>
-                  <li>• <Link href="/software" className="text-zinc-700 hover:underline">React 19</Link></li>
-                  <li>• <Link href="/software" className="text-zinc-700 hover:underline">TypeScript 5.9</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-bold mb-2">From Other Layers</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• <Link href="/systems" className="text-gray-600 hover:underline">Full-Stack Architecture</Link></li>
-                  <li>• <Link href="/services" className="text-neutral-600 hover:underline">Vercel Hosting</Link></li>
-                  <li>• <Link href="/support" className="text-stone-600 hover:underline">Deployment Troubleshooting</Link></li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* For AI Assistants */}
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-50 p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">🤖 For Claude Code & AI Assistants</h2>
-            <p className="text-gray-700 mb-4">
-              When using this stack for development:
-            </p>
-            <ul className="space-y-2 text-gray-700">
-              <li><strong>Verified Stack (Oct 2025):</strong> Next.js 15.5.4 + React 19.2.0 + Node.js 24.8.0 + TypeScript 5.9.2</li>
-              <li><strong>Official Docs:</strong> Always check <a href="https://nextjs.org/docs" className="text-blue-600 hover:underline">nextjs.org/docs</a> for latest API changes</li>
-              <li><strong>Stack Integration:</strong> See sections above for React 19.2 Activity component, AI SDK streaming, Supabase integration</li>
-              <li><strong>Version Compatibility:</strong> Next.js 15+ requires React 19+, works with Node.js 24.8.0 native TypeScript</li>
-            </ul>
-            <p className="text-sm text-gray-600 mt-4">
-              This site provides integration patterns. Official docs provide API details. Use both together.
-            </p>
-          </section>
-
-          <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/software" className="text-gray-600 hover:underline">
+          {/* Bottom Navigation */}
+          <div className="flex justify-between pt-8 border-t">
+            <Link href="/software" className="text-sm text-muted-foreground hover:underline">
               ← Back to Software
             </Link>
-          </nav>
+            <div className="space-x-4">
+              <Link href="/software/react" className="text-sm text-muted-foreground hover:underline">
+                React →
+              </Link>
+              <Link href="/software/vercel-ai-sdk" className="text-sm text-muted-foreground hover:underline">
+                Vercel AI SDK →
+              </Link>
+            </div>
+          </div>
         </article>
       </main>
     </>
