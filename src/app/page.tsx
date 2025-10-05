@@ -92,21 +92,21 @@ export default function Home() {
               </dd>
             </div>
 
-            <div id="services" className="border-l-4 border-orange-600 pl-4">
-              <dt className="text-xl font-bold text-orange-700">Services</dt>
+            <div id="services" className="border-l-4 border-neutral-600 pl-4">
+              <dt className="text-xl font-bold text-neutral-700">Services</dt>
               <dd className="text-gray-700 mt-1">External managed capabilities (Vercel, Supabase, Claude API, Stripe)</dd>
               <dd className="text-sm text-gray-600 mt-2">
-                <Link href="/services" className="text-orange-600 hover:underline">
+                <Link href="/services" className="text-neutral-600 hover:underline">
                   Explore Services →
                 </Link>
               </dd>
             </div>
 
-            <div id="support" className="border-l-4 border-red-600 pl-4">
-              <dt className="text-xl font-bold text-red-700">Support</dt>
+            <div id="support" className="border-l-4 border-stone-600 pl-4">
+              <dt className="text-xl font-bold text-stone-700">Support</dt>
               <dd className="text-gray-700 mt-1">Operations maintaining production systems</dd>
               <dd className="text-sm text-gray-600 mt-2">
-                <Link href="/support" className="text-red-600 hover:underline">
+                <Link href="/support" className="text-stone-600 hover:underline">
                   Explore Support →
                 </Link>
               </dd>
@@ -119,8 +119,8 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-4">What do you want to do?</h2>
           <ul className="space-y-2">
             <li>→ <Link href="/solutions" className="text-slate-600 hover:underline font-medium">Build something new</Link></li>
-            <li>→ <Link href="/support" className="text-red-600 hover:underline font-medium">Fix production issue</Link></li>
-            <li>→ <Link href="/software" className="text-zinc-700 hover:underline font-medium">Choose tools</Link> and <Link href="/services" className="text-orange-600 hover:underline font-medium">services</Link></li>
+            <li>→ <Link href="/support" className="text-stone-600 hover:underline font-medium">Fix production issue</Link></li>
+            <li>→ <Link href="/software" className="text-zinc-700 hover:underline font-medium">Choose tools</Link> and <Link href="/services" className="text-neutral-600 hover:underline font-medium">services</Link></li>
             <li>→ <Link href="/systems" className="text-gray-600 hover:underline font-medium">Understand architecture</Link></li>
             <li>→ <Link href="/about" className="text-gray-600 hover:underline">About this site</Link></li>
           </ul>

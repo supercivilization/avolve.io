@@ -224,24 +224,24 @@ export function LoginForm() {
               </pre>
             </div>
 
-            <div className="bg-red-50 border-l-4 border-red-400 p-4">
+            <div className="bg-stone-50 border-l-4 border-stone-400 p-4">
               <h3 className="text-lg font-bold mb-2">What Breaks in Production</h3>
               <ul className="space-y-3 text-gray-700 text-sm">
                 <li>
                   <strong>Cookie domain mismatch:</strong> localhost works, production fails.<br />
-                  <span className="text-red-700">Fix:</span> Set <code className="bg-red-100 px-1">cookieOptions.domain</code> correctly for your deployment.
+                  <span className="text-stone-700">Fix:</span> Set <code className="bg-red-100 px-1">cookieOptions.domain</code> correctly for your deployment.
                 </li>
                 <li>
                   <strong>Session refresh timing:</strong> Users logged out randomly.<br />
-                  <span className="text-red-700">Fix:</span> Call <code className="bg-red-100 px-1">supabase.auth.refreshSession()</code> in client layout.
+                  <span className="text-stone-700">Fix:</span> Call <code className="bg-red-100 px-1">supabase.auth.refreshSession()</code> in client layout.
                 </li>
                 <li>
                   <strong>Middleware infinite redirects:</strong> /login redirects to /login.<br />
-                  <span className="text-red-700">Fix:</span> Exclude /login from matcher config.
+                  <span className="text-stone-700">Fix:</span> Exclude /login from matcher config.
                 </li>
                 <li>
                   <strong>Server/client data mismatch:</strong> Hydration errors.<br />
-                  <span className="text-red-700">Fix:</span> Use server components for initial user data, sync with client.
+                  <span className="text-stone-700">Fix:</span> Use server components for initial user data, sync with client.
                 </li>
               </ul>
             </div>
@@ -252,8 +252,8 @@ export function LoginForm() {
             <ul className="space-y-2 text-gray-700">
               <li>• <strong>Deliver <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link>:</strong> Authentication enables secure apps, user-specific features</li>
               <li>• <strong>Built with <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>:</strong> Next.js middleware, React components, TypeScript types</li>
-              <li>• <strong>Use <Link href="/services" className="text-orange-600 hover:underline">Services</Link>:</strong> Supabase Auth ($0-25/mo), Vercel Edge ($0-20/mo)</li>
-              <li>• <strong>Require <Link href="/support" className="text-red-600 hover:underline">Support</Link>:</strong> Monitor login failures, session timeouts, security alerts</li>
+              <li>• <strong>Use <Link href="/services" className="text-neutral-600 hover:underline">Services</Link>:</strong> Supabase Auth ($0-25/mo), Vercel Edge ($0-20/mo)</li>
+              <li>• <strong>Require <Link href="/support" className="text-stone-600 hover:underline">Support</Link>:</strong> Monitor login failures, session timeouts, security alerts</li>
             </ul>
           </section>
 

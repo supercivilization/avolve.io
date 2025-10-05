@@ -90,16 +90,16 @@ export default function AboutPage() {
                 </dd>
               </div>
 
-              <div className="border-l-4 border-orange-600 pl-4">
-                <dt className="text-lg font-bold text-orange-700">Services</dt>
+              <div className="border-l-4 border-neutral-600 pl-4">
+                <dt className="text-lg font-bold text-neutral-700">Services</dt>
                 <dd className="text-gray-700">
                   <strong>What you buy.</strong> External managed capabilities. Examples: Vercel ($0-20/mo),
                   Supabase ($0-25/mo), Claude API ($3-15 per 1M tokens).
                 </dd>
               </div>
 
-              <div className="border-l-4 border-red-600 pl-4">
-                <dt className="text-lg font-bold text-red-700">Support</dt>
+              <div className="border-l-4 border-stone-600 pl-4">
+                <dt className="text-lg font-bold text-stone-700">Support</dt>
                 <dd className="text-gray-700">
                   <strong>How you maintain.</strong> Operations keeping production running. Examples: debugging,
                   monitoring, incident response.
@@ -116,7 +116,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold mb-2">If you&apos;re building something new:</h3>
                 <p className="text-gray-700">
                   Start at <Link href="/solutions" className="text-slate-600 hover:underline font-medium">Solutions</Link> to
-                  see working examples → check <Link href="/software" className="text-zinc-700 hover:underline font-medium">Software</Link> and <Link href="/services" className="text-orange-600 hover:underline font-medium">Services</Link> for
+                  see working examples → check <Link href="/software" className="text-zinc-700 hover:underline font-medium">Software</Link> and <Link href="/services" className="text-neutral-600 hover:underline font-medium">Services</Link> for
                   current versions → reference <Link href="/systems" className="text-gray-600 hover:underline font-medium">Systems</Link> for
                   architecture patterns.
                 </p>
@@ -125,7 +125,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-xl font-bold mb-2">If you&apos;re fixing a production issue:</h3>
                 <p className="text-gray-700">
-                  Jump directly to <Link href="/support" className="text-red-600 hover:underline font-medium">Support</Link> for
+                  Jump directly to <Link href="/support" className="text-stone-600 hover:underline font-medium">Support</Link> for
                   debugging runbooks and incident response guides.
                 </p>
               </div>
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold mb-2">If you&apos;re choosing tools:</h3>
                 <p className="text-gray-700">
                   Compare <Link href="/software" className="text-zinc-700 hover:underline font-medium">Software</Link> versions
-                  and <Link href="/services" className="text-orange-600 hover:underline font-medium">Services</Link> pricing
+                  and <Link href="/services" className="text-neutral-600 hover:underline font-medium">Services</Link> pricing
                   to make informed decisions.
                 </p>
               </div>

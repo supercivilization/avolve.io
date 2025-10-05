@@ -74,7 +74,7 @@ export default function SupportPage() {
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-red-700">Support</h1>
+          <h1 className="text-4xl font-bold mb-4 text-stone-700">Support</h1>
           <p className="text-xl text-gray-700 mb-12">
             Operations keeping production running
           </p>
@@ -89,14 +89,14 @@ export default function SupportPage() {
               Support maintains <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link>,
               troubleshoots <Link href="/systems" className="text-gray-600 hover:underline ml-1">Systems</Link>,
               debugs <Link href="/software" className="text-zinc-700 hover:underline ml-1">Software</Link>, and
-              monitors <Link href="/services" className="text-orange-600 hover:underline ml-1">Services</Link>.
+              monitors <Link href="/services" className="text-neutral-600 hover:underline ml-1">Services</Link>.
             </p>
           </section>
 
           <section id="runbook-database-slow" className="mb-16 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">Runbook: Database Queries Suddenly Slow</h2>
 
-            <div className="bg-red-50 p-6 rounded-lg mb-6">
+            <div className="bg-stone-50 p-6 rounded-lg mb-6">
               <h3 className="text-xl font-bold mb-3">Symptom</h3>
               <p className="text-gray-700">
                 API responses taking 5-30 seconds. Users reporting &quot;loading forever&quot; on dashboard.
@@ -407,7 +407,7 @@ WHERE email = 'test@example.com';
               <li>• <strong>Maintain <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link>:</strong> Keep AI chat working, users authenticated</li>
               <li>• <strong>Troubleshoot <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link>:</strong> Debug auth loops, fix data flow issues</li>
               <li>• <strong>Debug <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>:</strong> Fix TypeScript errors, optimize React renders</li>
-              <li>• <strong>Monitor <Link href="/services" className="text-orange-600 hover:underline">Services</Link>:</strong> Track costs, API usage, uptime</li>
+              <li>• <strong>Monitor <Link href="/services" className="text-neutral-600 hover:underline">Services</Link>:</strong> Track costs, API usage, uptime</li>
             </ul>
           </section>
 

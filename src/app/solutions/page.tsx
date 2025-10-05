@@ -86,8 +86,8 @@ export default function SolutionsPage() {
               Solutions are complete, working applications that solve real business problems.
               They combine <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link> (architecture),
               <Link href="/software" className="text-zinc-700 hover:underline ml-1">Software</Link> (frameworks),
-              <Link href="/services" className="text-orange-600 hover:underline ml-1">Services</Link> (external tools), and
-              <Link href="/support" className="text-red-600 hover:underline ml-1">Support</Link> (maintenance).
+              <Link href="/services" className="text-neutral-600 hover:underline ml-1">Services</Link> (external tools), and
+              <Link href="/support" className="text-stone-600 hover:underline ml-1">Support</Link> (maintenance).
             </p>
             <p className="text-gray-700">
               Every solution on this page includes: tech stack with versions, time to build, cost at scale,
@@ -247,9 +247,9 @@ export function Chat() {
             <h2 className="text-2xl font-bold mb-4">How Solutions Relate to Other Layers</h2>
             <ul className="space-y-2 text-gray-700">
               <li>• <strong>Built with <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>:</strong> Next.js 15.5, React 19.2, TypeScript 5.9</li>
-              <li>• <strong>Use <Link href="/services" className="text-orange-600 hover:underline">Services</Link>:</strong> Vercel, Anthropic Claude, Supabase</li>
+              <li>• <strong>Use <Link href="/services" className="text-neutral-600 hover:underline">Services</Link>:</strong> Vercel, Anthropic Claude, Supabase</li>
               <li>• <strong>Implement <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link>:</strong> Real-time chat, authentication, data storage</li>
-              <li>• <strong>Require <Link href="/support" className="text-red-600 hover:underline">Support</Link>:</strong> Monitoring, debugging, cost optimization</li>
+              <li>• <strong>Require <Link href="/support" className="text-stone-600 hover:underline">Support</Link>:</strong> Monitoring, debugging, cost optimization</li>
             </ul>
           </section>
 

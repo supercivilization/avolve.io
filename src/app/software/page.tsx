@@ -68,7 +68,7 @@ export default function SoftwarePage() {
             <p className="text-gray-700">
               Software implements <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link>,
               delivers <Link href="/solutions" className="text-slate-600 hover:underline ml-1">Solutions</Link>, and
-              runs on <Link href="/services" className="text-orange-600 hover:underline ml-1">Services</Link>.
+              runs on <Link href="/services" className="text-neutral-600 hover:underline ml-1">Services</Link>.
             </p>
           </section>
 
@@ -239,8 +239,8 @@ cat package.json | grep '"next"\\|"react"\\|"typescript"'`}
             <ul className="space-y-2 text-gray-700">
               <li>• <strong>Implements <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link>:</strong> Next.js middleware powers auth, React components build UI</li>
               <li>• <strong>Delivers <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link>:</strong> AI chat, real-time apps, e-commerce</li>
-              <li>• <strong>Runs on <Link href="/services" className="text-orange-600 hover:underline">Services</Link>:</strong> Deployed to Vercel, data in Supabase</li>
-              <li>• <strong>Needs <Link href="/support" className="text-red-600 hover:underline">Support</Link>:</strong> Monitoring builds, debugging TypeScript errors</li>
+              <li>• <strong>Runs on <Link href="/services" className="text-neutral-600 hover:underline">Services</Link>:</strong> Deployed to Vercel, data in Supabase</li>
+              <li>• <strong>Needs <Link href="/support" className="text-stone-600 hover:underline">Support</Link>:</strong> Monitoring builds, debugging TypeScript errors</li>
             </ul>
           </section>
 

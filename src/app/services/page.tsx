@@ -119,7 +119,7 @@ export default function ServicesPage() {
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-orange-700">Services</h1>
+          <h1 className="text-4xl font-bold mb-4 text-neutral-700">Services</h1>
           <p className="text-xl text-gray-700 mb-12">
             External managed capabilities - what you buy, not build
           </p>
@@ -220,7 +220,7 @@ export default function ServicesPage() {
               <li>• <strong>Host <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>:</strong> Vercel deploys Next.js, Supabase stores data</li>
               <li>• <strong>Power <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link>:</strong> Auth via Supabase, payments via Stripe</li>
               <li>• <strong>Deliver <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link>:</strong> AI chat uses Claude, emails via Resend</li>
-              <li>• <strong>Need <Link href="/support" className="text-red-600 hover:underline">Support</Link>:</strong> Monitor costs, debug API failures, optimize usage</li>
+              <li>• <strong>Need <Link href="/support" className="text-stone-600 hover:underline">Support</Link>:</strong> Monitor costs, debug API failures, optimize usage</li>
             </ul>
           </section>
 
