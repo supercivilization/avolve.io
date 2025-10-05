@@ -1,27 +1,27 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable experimental features for AI-native development
-  experimental: {
-    // Enable Turbopack for faster builds (stable in Next.js 15.5+)
-    turbo: {
-      resolveAlias: {
-        // Optimize AI SDK imports
-        "ai": "ai/dist/index.mjs",
-        "@ai-sdk/openai": "@ai-sdk/openai/dist/index.mjs",
-        "@ai-sdk/anthropic": "@ai-sdk/anthropic/dist/index.mjs",
-        "@ai-sdk/google": "@ai-sdk/google/dist/index.mjs",
-      },
+  // Turbopack configuration (moved from experimental)
+  turbopack: {
+    root: require('path').resolve(__dirname, '../..'),
+    resolveAlias: {
+      // Optimize AI SDK imports
+      "ai": "ai/dist/index.mjs",
+      "@ai-sdk/openai": "@ai-sdk/openai/dist/index.mjs",
+      "@ai-sdk/anthropic": "@ai-sdk/anthropic/dist/index.mjs",
+      "@ai-sdk/google": "@ai-sdk/google/dist/index.mjs",
     },
-    // Enable server component HMR
-    serverComponentsExternalPackages: [
-      '@ai-sdk/openai',
-      '@ai-sdk/anthropic',
-      '@ai-sdk/google',
-      'ai'
-    ],
-    // Enable compile caching for faster TypeScript compilation
-    typedRoutes: true,
   },
+
+  // Server external packages (moved from experimental)
+  serverExternalPackages: [
+    '@ai-sdk/openai',
+    '@ai-sdk/anthropic',
+    '@ai-sdk/google',
+    'ai'
+  ],
+
+  // Typed routes (moved from experimental)
+  typedRoutes: true,
 
   // Transpile packages from monorepo
   transpilePackages: [
@@ -102,11 +102,6 @@ const nextConfig = {
     ];
   },
 
-  // Enable PWA features
-  pwa: {
-    dest: 'public',
-    disable: process.env.NODE_ENV === 'development',
-  },
 };
 
 module.exports = nextConfig;
