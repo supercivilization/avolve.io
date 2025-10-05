@@ -703,6 +703,115 @@ Each links back to pillar, clusters interconnect when relevant`}
             </div>
           </section>
 
+          <section id="programmatic-seo-data" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">Programmatic SEO Data with DataForSEO</h2>
+
+            <div className="mb-6 bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+              <p className="text-gray-700">
+                <strong>Manual SEO optimization is one half of the equation.</strong> Programmatic access to SERP data, keyword research, and backlink analysis enables data-driven decision-making at scale. DataForSEO provides REST API access to 7B+ keywords, SERP results from 8 search engines, and comprehensive backlink data.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-bold mb-3">Integration with Manual SEO Strategies</h3>
+                <p className="text-gray-700 mb-3">
+                  While implementing manual optimization techniques (schema markup, Core Web Vitals, content structure), DataForSEO provides data for informed decisions:
+                </p>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• <strong>SERP API:</strong> Track ranking positions for your manual optimization efforts across Google, Bing, Yahoo, Baidu</li>
+                  <li>• <strong>Keywords Data API:</strong> Discover 7B+ keyword opportunities to inform your topic cluster strategy</li>
+                  <li>• <strong>Backlinks API:</strong> Monitor backlink quality and authority building (critical for E-E-A-T)</li>
+                  <li>• <strong>On-Page API:</strong> Programmatically audit your schema markup, Core Web Vitals, and technical SEO</li>
+                  <li>• <strong>Content Analysis API:</strong> Measure your content against competitors for information gain</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-3">Next.js Integration Pattern</h3>
+                <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
+{`// app/api/seo/rankings/route.ts
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const keyword = searchParams.get('keyword');
+
+  const response = await fetch(
+    'https://api.dataforseo.com/v3/serp/google/organic/live/advanced',
+    {
+      method: 'POST',
+      headers: {
+        'Authorization': \`Basic \${Buffer.from(
+          \`\${process.env.DATAFORSEO_LOGIN}:\${process.env.DATAFORSEO_PASSWORD}\`
+        ).toString('base64')}\`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify([{
+        keyword: keyword,
+        location_code: 2840, // United States
+        language_code: "en",
+        device: "desktop"
+      }])
+    }
+  );
+
+  const data = await response.json();
+  return Response.json(data);
+}
+
+// Usage in component
+const rankings = await fetch('/api/seo/rankings?keyword=next.js');
+const { tasks } = await rankings.json();
+const position = tasks[0]?.result?.[0]?.items?.findIndex(
+  item => item.url === 'https://avolve.io/software/nextjs'
+);`}
+                </pre>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-3">Use Cases for Avolve.io</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-gray-300 text-sm">
+                    <thead className="bg-gray-100">
+                      <tr>
+                        <th className="border border-gray-300 px-4 py-2 text-left">API Suite</th>
+                        <th className="border border-gray-300 px-4 py-2 text-left">How We Use It</th>
+                        <th className="border border-gray-300 px-4 py-2 text-left">Manual Strategy Enhanced</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border border-gray-300 px-4 py-2 font-mono">SERP API</td>
+                        <td className="border border-gray-300 px-4 py-2">Track ranking for "Next.js 15", "React 19.2", "TypeScript 5.9"</td>
+                        <td className="border border-gray-300 px-4 py-2">Validate schema markup impact on position</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 px-4 py-2 font-mono">Keywords Data</td>
+                        <td className="border border-gray-300 px-4 py-2">Find related keywords for topic clusters</td>
+                        <td className="border border-gray-300 px-4 py-2">Build comprehensive pillar pages with semantic coverage</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 px-4 py-2 font-mono">Backlinks</td>
+                        <td className="border border-gray-300 px-4 py-2">Monitor authority building from citations</td>
+                        <td className="border border-gray-300 px-4 py-2">Track E-E-A-T improvements via backlink profile</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 px-4 py-2 font-mono">On-Page</td>
+                        <td className="border border-gray-300 px-4 py-2">Audit Core Web Vitals programmatically</td>
+                        <td className="border border-gray-300 px-4 py-2">Ensure LCP &lt; 2.5s, INP &lt; 200ms across all pages</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 border-l-4 border-gray-600 p-4 rounded-lg">
+                <p className="text-gray-700">
+                  <strong>Full API documentation:</strong> See <Link href="/services/dataforseo" className="text-blue-600 hover:underline">DataForSEO service page</Link> for complete API reference, pricing ($0.0012 per 100 SERP results), and integration examples for all 8 API suites.
+                </p>
+              </div>
+            </div>
+          </section>
+
           <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-50 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For Claude Code & AI Assistants</h2>
             <p className="text-gray-700 mb-4">
@@ -716,6 +825,7 @@ Each links back to pillar, clusters interconnect when relevant`}
               <li><strong>Topic clusters:</strong> Build pillar pages (2,000-4,000+ words) linking to cluster pages (1,000-2,000 words), start with 5+ satellite pages per hub, interlink extensively</li>
               <li><strong>Core Web Vitals:</strong> LCP &lt; 2.5s (Next.js Image with priority), INP &lt; 200ms (debounced inputs, replaced FID in March 2024), CLS &lt; 0.1 (explicit dimensions)</li>
               <li><strong>AI Overviews:</strong> 20%+ of queries now trigger AI Overviews, only 5.4% contain exact query matches — context and meaning matter more than keywords</li>
+              <li><strong>Programmatic SEO:</strong> Combine manual optimization with data-driven insights from SERP tracking, keyword research, backlink analysis via DataForSEO API</li>
             </ul>
             <p className="text-sm text-gray-600 mt-4">
               <strong>Remember:</strong> Google's market share dropped from 73% to 66.9%, ChatGPT usage tripled from 4.1% to 12.5%. Implement Search Everywhere Optimization across Google, ChatGPT, Perplexity, YouTube, TikTok, Reddit.

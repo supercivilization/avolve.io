@@ -155,6 +155,12 @@ export default function SoftwarePage() {
                     <td className="border border-gray-300 px-4 py-2 font-mono">5.0.48</td>
                     <td className="border border-gray-300 px-4 py-2">100+ models, streaming, tool calling</td>
                   </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-2">AI Coding</td>
+                    <td className="border border-gray-300 px-4 py-2 font-mono">Claude Code</td>
+                    <td className="border border-gray-300 px-4 py-2 font-mono">2025</td>
+                    <td className="border border-gray-300 px-4 py-2">Terminal agent (72.5% SWE-bench), see <Link href="/support#ai-coding" className="text-stone-600 hover:underline">Support</Link></td>
+                  </tr>
                 </tbody>
               </table>
             </div>

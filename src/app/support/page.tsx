@@ -367,6 +367,131 @@ WHERE email = 'test@example.com';
             </div>
           </section>
 
+          <section id="ai-coding" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">AI Coding Assistance Tools (Late 2025)</h2>
+
+            <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-lg mb-8">
+              <p className="text-gray-700 mb-4">
+                <strong>AI coding tools have matured significantly in 2025.</strong> Terminal-native agents like Claude Code achieve 72.5% on SWE-bench Verified, while multi-platform orchestrators like OpenAI Codex hit 74.9%. These tools handle production debugging, complex refactoring, and multi-file edits.
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li>• <strong>Best for terminal-native workflows:</strong> Claude Code, Gemini CLI</li>
+                <li>• <strong>Best for multi-platform orchestration:</strong> OpenAI Codex</li>
+                <li>• <strong>Best for speed-critical tasks:</strong> grok-code-fast-1 (92 tokens/sec)</li>
+              </ul>
+            </div>
+
+            <div className="overflow-x-auto mb-8">
+              <table className="w-full border-collapse border border-gray-300 text-sm">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="border border-gray-300 px-3 py-2 text-left">Tool</th>
+                    <th className="border border-gray-300 px-3 py-2 text-left">SWE-bench</th>
+                    <th className="border border-gray-300 px-3 py-2 text-left">Interface</th>
+                    <th className="border border-gray-300 px-3 py-2 text-left">Pricing</th>
+                    <th className="border border-gray-300 px-3 py-2 text-left">Best For</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 px-3 py-2 font-bold">Claude Code</td>
+                    <td className="border border-gray-300 px-3 py-2">72.5%</td>
+                    <td className="border border-gray-300 px-3 py-2">Terminal</td>
+                    <td className="border border-gray-300 px-3 py-2">$20-200/mo</td>
+                    <td className="border border-gray-300 px-3 py-2">Terminal-native workflows, MCP integrations</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-3 py-2 font-bold">OpenAI Codex</td>
+                    <td className="border border-gray-300 px-3 py-2">74.5-74.9%</td>
+                    <td className="border border-gray-300 px-3 py-2">VS Code/IDE</td>
+                    <td className="border border-gray-300 px-3 py-2">$20-200/mo</td>
+                    <td className="border border-gray-300 px-3 py-2">Multi-platform orchestration, agent swarms</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-3 py-2 font-bold">Gemini CLI</td>
+                    <td className="border border-gray-300 px-3 py-2">N/A</td>
+                    <td className="border border-gray-300 px-3 py-2">Terminal</td>
+                    <td className="border border-gray-300 px-3 py-2">Free (1K/day)</td>
+                    <td className="border border-gray-300 px-3 py-2">Open-source, 1M token context, free tier</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-3 py-2 font-bold">grok-code-fast-1</td>
+                    <td className="border border-gray-300 px-3 py-2">70.8%</td>
+                    <td className="border border-gray-300 px-3 py-2">API</td>
+                    <td className="border border-gray-300 px-3 py-2">$0.20/$1.50 per M</td>
+                    <td className="border border-gray-300 px-3 py-2">Speed-critical tasks (92 tokens/sec)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="space-y-6">
+              <div className="border-l-4 border-indigo-600 pl-4">
+                <h3 className="text-xl font-bold mb-3">Claude Code: Terminal-Native Agent</h3>
+                <p className="text-gray-700 mb-3">
+                  <strong>72.5% SWE-bench Verified</strong> (Claude 3.7 Sonnet), terminal-native with MCP protocol for tool integrations. Agentic workflow with TodoWrite, MultiEdit, and specialized agents for complex tasks.
+                </p>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• <strong>Strengths:</strong> Terminal integration, MCP tools (Supabase, GitHub, Playwright), multi-step reasoning</li>
+                  <li>• <strong>Use Cases:</strong> Production debugging, complex refactoring, full-stack development</li>
+                  <li>• <strong>Pricing:</strong> Pro ($20/mo) to Team ($200/mo), consumption-based API</li>
+                  <li>• <strong>Context:</strong> 200K tokens (Claude 3.7 Sonnet), effective codebase understanding</li>
+                </ul>
+              </div>
+
+              <div className="border-l-4 border-green-600 pl-4">
+                <h3 className="text-xl font-bold mb-3">OpenAI Codex: Multi-Platform Orchestration</h3>
+                <p className="text-gray-700 mb-3">
+                  <strong>74.5-74.9% SWE-bench Verified</strong> (o1 and o3-mini models), multi-platform with VS Code, JetBrains, terminal. Agent orchestration with specialized sub-agents (architect, coder, tester).
+                </p>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• <strong>Strengths:</strong> Platform flexibility, agent swarms, deep reasoning (o1/o3-mini)</li>
+                  <li>• <strong>Use Cases:</strong> Complex architecture, multi-component refactoring, team workflows</li>
+                  <li>• <strong>Pricing:</strong> Pro ($20/mo) to Teams ($200/mo), enhanced reasoning costs more</li>
+                  <li>• <strong>Context:</strong> 128K tokens (o1), 200K tokens (o3-mini)</li>
+                </ul>
+              </div>
+
+              <div className="border-l-4 border-orange-600 pl-4">
+                <h3 className="text-xl font-bold mb-3">Gemini CLI: Open-Source Terminal Agent</h3>
+                <p className="text-gray-700 mb-3">
+                  <strong>Apache 2.0 license</strong>, terminal-native with 1M token context window. Free tier: 1,000 requests/day. Best for open-source projects and developers who want full control.
+                </p>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• <strong>Strengths:</strong> Free tier, 1M token context, open-source, self-hostable</li>
+                  <li>• <strong>Use Cases:</strong> Large codebases, cost-sensitive projects, customization needs</li>
+                  <li>• <strong>Pricing:</strong> Free (1K requests/day), paid tiers for production</li>
+                  <li>• <strong>Context:</strong> 1M tokens (best for large monorepos)</li>
+                </ul>
+              </div>
+
+              <div className="border-l-4 border-blue-600 pl-4">
+                <h3 className="text-xl font-bold mb-3">grok-code-fast-1: Speed-Optimized Model</h3>
+                <p className="text-gray-700 mb-3">
+                  <strong>70.8% SWE-bench Verified</strong> with 92 tokens/sec generation speed. API-first model for speed-critical applications. Best for real-time coding assistance and rapid iteration.
+                </p>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• <strong>Strengths:</strong> 92 tokens/sec speed, cost-effective ($0.20/$1.50 per M tokens)</li>
+                  <li>• <strong>Use Cases:</strong> Real-time assistance, rapid prototyping, live coding sessions</li>
+                  <li>• <strong>Pricing:</strong> $0.20 input / $1.50 output per million tokens</li>
+                  <li>• <strong>Context:</strong> Standard context window, optimized for speed over depth</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 mt-8">
+              <h3 className="text-lg font-bold mb-2">Selection Guide</h3>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>• <strong>Terminal-native workflow?</strong> Claude Code or Gemini CLI</li>
+                <li>• <strong>IDE integration priority?</strong> OpenAI Codex (VS Code/JetBrains)</li>
+                <li>• <strong>Budget constrained?</strong> Gemini CLI (free tier) or grok-code-fast-1 (API)</li>
+                <li>• <strong>Complex multi-component work?</strong> OpenAI Codex (agent orchestration)</li>
+                <li>• <strong>Speed-critical tasks?</strong> grok-code-fast-1 (92 tokens/sec)</li>
+                <li>• <strong>MCP tool integrations?</strong> Claude Code (Supabase, GitHub, Playwright)</li>
+              </ul>
+            </div>
+          </section>
+
           <section id="incident-response" className="mb-12 border-t pt-8">
             <h2 className="text-2xl font-bold mb-4">Incident Response Process</h2>
 
