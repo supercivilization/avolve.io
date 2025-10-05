@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 // Dependencies (October 5, 2025):
 // - Next.js: 15.5.4
@@ -90,6 +91,11 @@ export default function NextJsPage() {
 
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "/" },
+        { name: "Software", url: "/software" },
+        { name: "Next.js", url: "/software/nextjs" }
+      ]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

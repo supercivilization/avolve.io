@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 // Dependencies (October 5, 2025):
 // - React: 19.2.0 (released October 1, 2025)
@@ -90,6 +91,11 @@ export default function ReactPage() {
 
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "/" },
+        { name: "Software", url: "/software" },
+        { name: "React", url: "/software/react" }
+      ]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
