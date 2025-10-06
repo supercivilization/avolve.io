@@ -1,0 +1,116 @@
+AVOLVE.IO SEO CRITICAL FIXES - QUICK REFERENCE
+==============================================
+Date: October 5, 2025 | Status: 7/10 (Good but needs fixes)
+
+🔴 TOP 5 CRITICAL (Do Today - 4-6 hours)
+========================================
+
+1. CREATE MISSING IMAGES (30 min)
+   Location: /Users/avolve/dev/active/avolve/public/
+   Files needed:
+   - og-image.png (1200x630 pixels)
+   - logo.png (512x512 pixels)
+   Content: "Avolve.io - Next.js 15 + React 19.2 Stack Reference"
+
+2. VERIFY GOOGLE SEARCH CONSOLE (15 min)
+   File: /Users/avolve/dev/active/avolve/src/app/layout.tsx
+   Line: 62
+   Replace: 'google-site-verification-code'
+   With: Your actual code from search.google.com/search-console
+
+3. COMPLETE SITEMAP (45 min)
+   File: /Users/avolve/dev/active/avolve/src/app/sitemap.ts
+   Missing: 13 pages (65% of content!)
+   Add: All /software/* and /systems/* pages
+   Submit: To Search Console after deploy
+
+4. REMOVE FAKE RATING (10 min)
+   File: /Users/avolve/dev/active/avolve/src/app/software/nextjs/page.tsx
+   Delete: Lines 54-58 (aggregateRating block)
+   Risk: Structured data penalty if not fixed
+
+5. ADD CANONICAL URLS (2 hours)
+   Files: All 20 page.tsx files
+   Add to each: alternates.canonical in metadata
+   Example: canonical: 'https://avolve.io/software/nextjs'
+
+TESTING CHECKLIST
+=================
+□ Build succeeds: npm run build
+□ Schema valid: validator.schema.org
+□ Rich results: search.google.com/test/rich-results
+□ OG image: developers.facebook.com/tools/debug
+□ Twitter card: cards-dev.twitter.com/validator
+□ Submit sitemap in Search Console
+
+EXPECTED RESULTS
+================
+Week 1: 20/20 pages indexed (up from 7)
+Week 2: 20-30% organic traffic increase
+Month 2: Featured snippets + AI citations
+
+FILES TO CREATE
+===============
+/public/og-image.png
+/public/logo.png
+
+FILES TO EDIT
+=============
+/src/app/layout.tsx (line 62)
+/src/app/sitemap.ts (add 13 pages)
+/src/app/software/nextjs/page.tsx (remove lines 54-58)
+All 20 page.tsx files (add canonical URLs)
+
+QUICK COMMAND REFERENCE
+=======================
+# Find all pages
+find /Users/avolve/dev/active/avolve/src/app -name "page.tsx"
+
+# Test build
+cd /Users/avolve/dev/active/avolve && npm run build
+
+# Check sitemap
+curl http://localhost:3000/sitemap.xml
+
+# Deploy (after fixes)
+git add . && git commit -m "Fix critical SEO issues" && git push
+
+DANGER ZONES
+============
+❌ Don't deploy without fixing fake ratings (penalty risk)
+❌ Don't ignore sitemap (65% content invisible)
+❌ Don't launch social without og-image (broken shares)
+✅ Fix these 5 BEFORE any marketing/promotion
+
+1-HOUR PRIORITY (if time limited)
+==================================
+1. Create og-image.png (15 min)
+2. Complete sitemap (30 min)
+3. Remove fake rating (10 min)
+4. Deploy (5 min)
+
+ROI ESTIMATE
+============
+Investment: 4-6 hours
+Cost: $0 (config only)
+Traffic gain: +20-30% (week 2)
+Value: $1,500-2,500/mo saved on ads
+Annual: $18,000-30,000
+
+NEXT STEPS
+==========
+1. Fix these 5 critical issues
+2. Deploy and test
+3. Submit sitemap to Search Console
+4. Monitor Search Console coverage
+5. Review full audit in /claudedocs/
+
+AUDIT DOCUMENTS
+===============
+Executive Summary: /claudedocs/seo-audit-executive-summary.md
+Full Audit: /claudedocs/seo-discoverability-audit-2025-10-05.md
+Detailed Checklist: /claudedocs/seo-fixes-checklist.md
+This Quick Ref: /claudedocs/seo-quick-fixes.txt
+
+Last Updated: Oct 5, 2025
+Next Review: After Week 1 fixes

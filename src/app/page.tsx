@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ThemeToggle } from "@/components/theme-toggle";
+import {
+  SolutionsIcon,
+  SystemsIcon,
+  SoftwareIcon,
+  ServicesIcon,
+  SupportIcon,
+} from "@/components/icons/sacred-geometry";
 
 // Dependencies (October 5, 2025):
 // - Next.js: 15.5.4
@@ -9,8 +15,11 @@ import { ThemeToggle } from "@/components/theme-toggle";
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {
-  title: "Modern Web Development Stack (October 2025) | Avolve.io",
-  description: "Ship your first app this week. Next.js 15 + React 19.2 + Supabase + AI. Canonical reference for developers and AI assistants.",
+  title: "Next.js 15, React 19, Supabase & Vercel AI: Prod Patterns",
+  description: "A knowledge graph for the modern web stack. Get verified compatibility patterns for Next.js 15, React 19, Vercel AI, Supabase auth, shadcn/ui, and more.",
+  alternates: {
+    canonical: "https://avolve.io",
+  },
 };
 
 export default function Home() {
@@ -93,76 +102,97 @@ export default function Home() {
       />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <div className="flex justify-between items-start mb-4">
-          <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-            Last updated: October 5, 2025
-          </time>
-          <ThemeToggle />
-        </div>
+        <time className="text-sm text-muted-foreground block mb-4" dateTime="2025-10-05">
+          Last updated: October 5, 2025
+        </time>
 
         {/* Hero */}
         <header className="mt-4 mb-16">
           <h1 className="text-5xl font-bold mb-4">Avolve.io</h1>
           <p className="text-2xl text-muted-foreground mb-4">Ship your first app this week</p>
-          <div className="text-sm text-muted-foreground space-y-1">
-            <p><strong>Current as of:</strong> October 5, 2025</p>
-            <p><strong>Stack:</strong> Next.js 15 + React 19.2 + Supabase + Vercel + AI</p>
-          </div>
+          <p className="text-sm text-muted-foreground">
+            <strong>Stack:</strong> Next.js 15 + React 19.2 + Supabase + Vercel + AI
+          </p>
         </header>
 
         {/* Canonical 5S Definition */}
         <section id="definition" className="mb-16">
-          <h2 className="text-3xl font-bold mb-6">Modern Web Development Stack (October 2025)</h2>
+          <h2 className="text-3xl font-bold mb-6">Modern Web Development Stack</h2>
 
-          <dl className="space-y-6">
-            <div id="solutions" className="border-l-4 border-slate-600 pl-4">
-              <dt className="text-xl font-bold text-slate-700">Solutions</dt>
-              <dd className="text-gray-700 mt-1">Business outcomes delivered to end users</dd>
-              <dd className="text-sm text-gray-600 mt-2">
-                <Link href="/solutions" className="text-slate-600 hover:underline">
-                  Explore Solutions →
-                </Link>
-              </dd>
+          <dl className="space-y-8">
+            <div id="solutions" className="border-l-4 border-slate-600 dark:border-slate-400 pl-6 hover:border-slate-500 transition-colors">
+              <div className="flex items-start gap-4">
+                <SolutionsIcon className="text-slate-600 dark:text-slate-400 flex-shrink-0" size={40} />
+                <div className="flex-1">
+                  <dt className="text-xl font-bold text-slate-700 dark:text-slate-300 mb-1">Solutions</dt>
+                  <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">Business outcomes delivered to end users</dd>
+                  <dd className="text-sm">
+                    <Link href="/solutions" className="text-slate-600 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:underline font-medium inline-flex items-center gap-1">
+                      Explore Solutions <span aria-hidden="true">→</span>
+                    </Link>
+                  </dd>
+                </div>
+              </div>
             </div>
 
-            <div id="systems" className="border-l-4 border-gray-600 pl-4">
-              <dt className="text-xl font-bold text-gray-700">Systems</dt>
-              <dd className="text-gray-700 mt-1">Architecture patterns coordinating multiple components</dd>
-              <dd className="text-sm text-gray-600 mt-2">
-                <Link href="/systems" className="text-gray-600 hover:underline">
-                  Explore Systems →
-                </Link>
-              </dd>
+            <div id="systems" className="border-l-4 border-gray-600 dark:border-gray-400 pl-6 hover:border-gray-500 transition-colors">
+              <div className="flex items-start gap-4">
+                <SystemsIcon className="text-gray-600 dark:text-gray-400 flex-shrink-0" size={40} />
+                <div className="flex-1">
+                  <dt className="text-xl font-bold text-gray-700 dark:text-gray-300 mb-1">Systems</dt>
+                  <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">Architecture patterns coordinating multiple components</dd>
+                  <dd className="text-sm">
+                    <Link href="/systems" className="text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:underline font-medium inline-flex items-center gap-1">
+                      Explore Systems <span aria-hidden="true">→</span>
+                    </Link>
+                  </dd>
+                </div>
+              </div>
             </div>
 
-            <div id="software" className="border-l-4 border-zinc-700 pl-4">
-              <dt className="text-xl font-bold text-zinc-700">Software</dt>
-              <dd className="text-gray-700 mt-1">Code, frameworks, libraries (Next.js 15.5, React 19.2, TypeScript 5.9)</dd>
-              <dd className="text-sm text-gray-600 mt-2">
-                <Link href="/software" className="text-zinc-700 hover:underline">
-                  Explore Software →
-                </Link>
-              </dd>
+            <div id="software" className="border-l-4 border-zinc-700 dark:border-zinc-400 pl-6 hover:border-zinc-600 transition-colors">
+              <div className="flex items-start gap-4">
+                <SoftwareIcon className="text-zinc-700 dark:text-zinc-400 flex-shrink-0" size={40} />
+                <div className="flex-1">
+                  <dt className="text-xl font-bold text-zinc-700 dark:text-zinc-300 mb-1">Software</dt>
+                  <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">Code, frameworks, libraries (Next.js 15.5, React 19.2, TypeScript 5.9)</dd>
+                  <dd className="text-sm">
+                    <Link href="/software" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline font-medium inline-flex items-center gap-1">
+                      Explore Software <span aria-hidden="true">→</span>
+                    </Link>
+                  </dd>
+                </div>
+              </div>
             </div>
 
-            <div id="services" className="border-l-4 border-neutral-600 pl-4">
-              <dt className="text-xl font-bold text-neutral-700">Services</dt>
-              <dd className="text-gray-700 mt-1">External managed capabilities (Vercel, Supabase, Claude API, Stripe)</dd>
-              <dd className="text-sm text-gray-600 mt-2">
-                <Link href="/services" className="text-neutral-600 hover:underline">
-                  Explore Services →
-                </Link>
-              </dd>
+            <div id="services" className="border-l-4 border-neutral-600 dark:border-neutral-400 pl-6 hover:border-neutral-500 transition-colors">
+              <div className="flex items-start gap-4">
+                <ServicesIcon className="text-neutral-600 dark:text-neutral-400 flex-shrink-0" size={40} />
+                <div className="flex-1">
+                  <dt className="text-xl font-bold text-neutral-700 dark:text-neutral-300 mb-1">Services</dt>
+                  <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">External managed capabilities (Vercel, Supabase, Claude API, Stripe)</dd>
+                  <dd className="text-sm">
+                    <Link href="/services" className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 hover:underline font-medium inline-flex items-center gap-1">
+                      Explore Services <span aria-hidden="true">→</span>
+                    </Link>
+                  </dd>
+                </div>
+              </div>
             </div>
 
-            <div id="support" className="border-l-4 border-stone-600 pl-4">
-              <dt className="text-xl font-bold text-stone-700">Support</dt>
-              <dd className="text-gray-700 mt-1">Operations maintaining production systems</dd>
-              <dd className="text-sm text-gray-600 mt-2">
-                <Link href="/support" className="text-stone-600 hover:underline">
-                  Explore Support →
-                </Link>
-              </dd>
+            <div id="support" className="border-l-4 border-stone-600 dark:border-stone-400 pl-6 hover:border-stone-500 transition-colors">
+              <div className="flex items-start gap-4">
+                <SupportIcon className="text-stone-600 dark:text-stone-400 flex-shrink-0" size={40} />
+                <div className="flex-1">
+                  <dt className="text-xl font-bold text-stone-700 dark:text-stone-300 mb-1">Support</dt>
+                  <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">Operations maintaining production systems</dd>
+                  <dd className="text-sm">
+                    <Link href="/support" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline font-medium inline-flex items-center gap-1">
+                      Explore Support <span aria-hidden="true">→</span>
+                    </Link>
+                  </dd>
+                </div>
+              </div>
             </div>
           </dl>
         </section>
@@ -232,9 +262,6 @@ export default function Home() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-gray-600 mt-2">
-            Last verified: <time dateTime="2025-10-05">October 5, 2025</time>
-          </p>
         </section>
       </main>
     </>

@@ -10,21 +10,95 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About - AI-Native Development | Avolve.io",
   description: "Learn about the 5S framework and how to use Avolve.io for modern web development with Next.js 15 + React 19.2 + AI tools.",
+  alternates: {
+    canonical: "https://avolve.io/about",
+  },
 };
 
 export default function AboutPage() {
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "About Avolve.io",
-    "datePublished": "2025-10-05",
-    "dateModified": "2025-10-05",
-    "author": {
-      "@id": "https://www.joshuaseymour.com/#person"
-    },
-    "publisher": {
-      "@id": "https://www.supercivilization.xyz/#organization"
-    }
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://avolve.io/about#aboutpage",
+        "name": "About Avolve.io",
+        "url": "https://avolve.io/about",
+        "datePublished": "2025-10-05",
+        "dateModified": "2025-10-05",
+        "author": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://avolve.io/#website"
+        },
+        "about": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://avolve.io/#website",
+        "url": "https://avolve.io",
+        "name": "Avolve.io",
+        "description": "A knowledge graph for the modern web stack. Get verified compatibility patterns for Next.js 15, React 19, Vercel AI, Supabase auth, shadcn/ui, and more.",
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://avolve.io"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://avolve.io/about"
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.supercivilization.xyz/#organization",
+        "name": "Supercivilization",
+        "url": "https://www.supercivilization.xyz",
+        "founder": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.joshuaseymour.com/#person",
+        "name": "Joshua Seymour",
+        "url": "https://www.joshuaseymour.com",
+        "sameAs": [
+          "https://github.com/supercivilization",
+          "https://www.linkedin.com/in/jseymour/"
+        ],
+        "knowsAbout": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Supabase",
+          "Vercel AI SDK",
+          "AI-Native Development",
+          "Web Development",
+          "Full-Stack Development",
+          "shadcn/ui",
+          "Tailwind CSS"
+        ]
+      }
+    ]
   };
 
   return (

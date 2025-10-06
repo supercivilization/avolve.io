@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 // Dependencies (October 5, 2025):
 // - Next.js: 15.5.4
@@ -10,8 +9,11 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {
-  title: "Solutions - Working Examples | Avolve.io",
-  description: "Complete working solutions with Next.js 15 + React 19.2. AI customer support agent example with code, costs, and timelines.",
+  title: "AI Customer Support Agent & Other Next.js 15 Solutions",
+  description: "Explore full-stack app solutions like an AI Support Agent built with Next.js 15, Vercel AI SDK, and Supabase. Includes code, cost analysis, and deploy times.",
+  alternates: {
+    canonical: "https://avolve.io/solutions",
+  },
 };
 
 export default function SolutionsPage() {
@@ -19,44 +21,108 @@ export default function SolutionsPage() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "TechArticle",
-        "headline": "Solutions: Business Outcomes with Modern Stack",
-        "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "@type": "CollectionPage",
+        "@id": "https://avolve.io/solutions#webpage",
+        "url": "https://avolve.io/solutions",
+        "name": "Full-Stack Application Solutions for the Modern Web",
+        "isPartOf": {
+          "@id": "https://avolve.io/#website"
+        },
+        "datePublished": "2025-10-05T17:00:00-06:00",
+        "dateModified": "2025-10-05T17:00:00-06:00",
+        "description": "A collection of complete, working applications that solve real business problems, built with Next.js, React, Supabase, and AI.",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
-        }
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "hasPart": [
+          {
+            "@id": "https://avolve.io/solutions#ai-customer-support-agent"
+          }
+        ]
       },
       {
         "@type": "HowTo",
-        "name": "Build AI Customer Support Agent",
-        "description": "Complete guide to building an AI-powered customer support system",
-        "totalTime": "PT40H",
+        "@id": "https://avolve.io/solutions#ai-customer-support-agent",
+        "name": "How to Build an AI Customer Support Agent",
+        "description": "An AI-powered chat agent that answers customer questions using your documentation and product knowledge base.",
+        "totalTime": "P5D",
         "estimatedCost": {
           "@type": "MonetaryAmount",
           "currency": "USD",
-          "value": "0-25"
+          "value": "95",
+          "name": "$5 to $1000+ per month depending on scale. Starts at $5-10 for up to 1,000 users/month."
         },
+        "tool": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "Next.js",
+            "version": "15.5.4"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "React",
+            "version": "19.2.0"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Vercel AI SDK",
+            "version": "5.0.48"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Claude 3.7 Sonnet"
+          }
+        ],
+        "supply": [
+          {
+            "@type": "HowToSupply",
+            "name": "Anthropic API Key (ANTHROPIC_API_KEY)"
+          }
+        ],
         "step": [
           {
             "@type": "HowToStep",
-            "name": "Set up Next.js project",
-            "text": "Initialize Next.js 15.5.4 with TypeScript and Vercel AI SDK"
+            "name": "Create the Backend API Route",
+            "text": "Set up an edge route in Next.js to stream responses from the Anthropic Claude model using the Vercel AI SDK.",
+            "code": {
+              "@type": "Code",
+              "text": "import { createAnthropic } from '@ai-sdk/anthropic';\nimport { streamText } from 'ai';\n\nexport const runtime = 'edge';\n\nconst anthropic = createAnthropic({\n  apiKey: process.env.ANTHROPIC_API_KEY,\n});\n\nexport async function POST(req: Request) {\n  const { messages } = await req.json();\n\n  const result = streamText({\n    model: anthropic('claude-3-7-sonnet-20250219'),\n    messages,\n    system: `You are a helpful customer support agent.`,\n  });\n\n  return result.toDataStreamResponse();\n}"
+            }
           },
           {
             "@type": "HowToStep",
-            "name": "Configure AI provider",
-            "text": "Connect to Anthropic Claude API with streaming responses"
+            "name": "Build the Frontend Chat Component",
+            "text": "Use the 'useChat' hook from the Vercel AI SDK's React library to easily create a user-facing chat interface.",
+            "code": {
+              "@type": "Code",
+              "text": "'use client';\nimport { useChat } from 'ai/react';\n\nexport function Chat() {\n  const { messages, input, handleInputChange, handleSubmit } = useChat();\n\n  return (\n    <div>\n      {/* ... JSX for messages ... */}\n      <form onSubmit={handleSubmit}>\n        <input\n          value={input}\n          onChange={handleInputChange}\n          placeholder=\"Ask a question...\"\n        />\n        <button type=\"submit\">Send</button>\n      </form>\n    </div>\n  );\n}"
+            }
+          }
+        ],
+        "author": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://avolve.io/solutions#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://avolve.io"
           },
           {
-            "@type": "HowToStep",
-            "name": "Build chat interface",
-            "text": "Create real-time chat UI with React 19.2 Server Components"
-          },
-          {
-            "@type": "HowToStep",
-            "name": "Deploy to production",
-            "text": "Deploy to Vercel with edge functions for global performance"
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Solutions"
           }
         ]
       }
@@ -65,10 +131,6 @@ export default function SolutionsPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={[
-        { name: "Home", url: "/" },
-        { name: "Solutions", url: "/solutions" }
-      ]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

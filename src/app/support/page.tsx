@@ -8,8 +8,11 @@ import Link from "next/link";
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {
-  title: "Support - Production Runbooks | Avolve.io",
-  description: "Production troubleshooting guides for Next.js 15 + React 19.2 + Supabase. Database performance, auth issues, deployment failures.",
+  title: "Production Runbooks: Fix Slow DB Queries & Auth Loops",
+  description: "Fix production issues with runbooks for slow Supabase queries, auth loops & Vercel build failures. Plus, an incident response guide & a 2025 review of AI coding tools.",
+  alternates: {
+    canonical: "https://avolve.io/support",
+  },
 };
 
 export default function SupportPage() {
@@ -17,44 +20,127 @@ export default function SupportPage() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "TechArticle",
-        "headline": "Support: Production Operations & Troubleshooting",
-        "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "@type": "CollectionPage",
+        "@id": "https://avolve.io/support#webpage",
+        "url": "https://avolve.io/support",
+        "name": "Production Support Runbooks and Guides for Modern Web Apps",
+        "isPartOf": {
+          "@id": "https://avolve.io/#website"
+        },
+        "datePublished": "2025-10-05T17:00:00-06:00",
+        "dateModified": "2025-10-05T17:00:00-06:00",
+        "description": "A collection of production runbooks, quick fixes for common issues, incident response guides, and reviews of AI coding tools for the modern web stack.",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
-        }
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "hasPart": [
+          {"@id": "https://avolve.io/support#slow-db-runbook"},
+          {"@id": "https://avolve.io/support#common-issues-faq"},
+          {"@id": "https://avolve.io/support#ai-tools-review"}
+        ]
       },
       {
         "@type": "HowTo",
-        "name": "Diagnose and Fix Slow Database Queries",
-        "description": "Step-by-step guide to identify and resolve database performance issues in production",
-        "totalTime": "PT1H",
+        "@id": "https://avolve.io/support#slow-db-runbook",
+        "name": "Runbook: How to Diagnose and Fix Slow Database Queries",
+        "description": "A step-by-step runbook to identify, debug, and resolve slow database queries in a production Supabase environment.",
+        "totalTime": "PT60M",
         "step": [
           {
             "@type": "HowToStep",
-            "name": "Check query execution time",
-            "text": "Run EXPLAIN ANALYZE on slow queries to identify bottlenecks"
+            "name": "Step 1: Diagnose with Supabase Dashboard",
+            "text": "Check the Supabase Dashboard logs for queries with a duration greater than 1000ms. Look for patterns like Sequential Scans ('Seq Scan') on unindexed columns."
           },
           {
             "@type": "HowToStep",
-            "name": "Verify index usage",
-            "text": "Check if queries are using appropriate indexes with pg_stat_user_indexes"
+            "name": "Step 2: Run EXPLAIN ANALYZE",
+            "text": "Use the Supabase SQL Editor to run EXPLAIN ANALYZE on a sample slow query to confirm if an index is being used. 'Index Scan' is good; 'Seq Scan' is bad."
           },
           {
             "@type": "HowToStep",
-            "name": "Analyze query plan",
-            "text": "Look for sequential scans, nested loops, and missing index hints"
+            "name": "Step 3: Create a Missing Index",
+            "text": "Create the necessary index CONCURRENTLY to avoid locking your production table. For example, CREATE INDEX CONCURRENTLY idx_users_email ON users(email);",
+            "code": {
+              "@type": "Code",
+              "text": "CREATE INDEX CONCURRENTLY idx_users_email ON users(email);"
+            }
           },
           {
             "@type": "HowToStep",
-            "name": "Apply performance fix",
-            "text": "Create missing indexes, optimize WHERE clauses, or rewrite inefficient joins"
+            "name": "Step 4: Verify and Monitor",
+            "text": "Re-run the EXPLAIN ANALYZE command to confirm the 'Index Scan' is now being used and monitor Vercel Analytics for improved p95 response times and fewer database errors."
+          }
+        ],
+        "tip": [
+          {
+            "@type": "HowToTip",
+            "text": "Prevention Tip: Add indexes for all columns used in WHERE, JOIN, and ORDER BY clauses before deploying to production."
           },
           {
-            "@type": "HowToStep",
-            "name": "Verify improvement",
-            "text": "Re-run EXPLAIN ANALYZE and monitor query time reduction"
+            "@type": "HowToTip",
+            "text": "Prevention Tip: Set up monitoring alerts in Supabase for any query that takes longer than 1 second to execute."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://avolve.io/support#common-issues-faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How to fix authentication loops in Next.js?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Users are stuck redirecting between /login and /dashboard. This is typically a middleware configuration issue. Fix it by ensuring your matcher config excludes the /login route. For example: export const config = { matcher: ['/dashboard/:path*'] }"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is my Vercel build failing with a 'Cannot find module' error?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This is a TypeScript type error. The best fix is to run 'npm run build' locally first to identify and resolve all TypeScript errors before pushing to Vercel. You can prevent this by adding an 'npm run type-check' script to your pre-commit hooks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How to handle API Rate Limit Exceeded (429) errors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If you are getting 429 errors from an external API like Claude, you need to implement client-side rate limiting. Use a service like Upstash Redis with the @upstash/ratelimit package to create a sliding window rate limiter."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://avolve.io/support#ai-tools-review",
+        "name": "2025 Review of AI Coding Assistance Tools",
+        "description": "A comparative review of the top AI coding agents for production support, including Claude Code, OpenAI Codex, Gemini CLI, and grok-code-fast-1, based on SWE-bench scores, features, and pricing.",
+        "about": [
+          {"@type": "SoftwareApplication", "name": "Claude Code"},
+          {"@type": "SoftwareApplication", "name": "OpenAI Codex"},
+          {"@type": "SoftwareApplication", "name": "Gemini CLI"},
+          {"@type": "SoftwareApplication", "name": "grok-code-fast-1"}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://avolve.io/support#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://avolve.io"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Support"
           }
         ]
       }

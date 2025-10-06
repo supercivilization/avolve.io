@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: "Next.js 15 + Modern Stack Integration (Oct 2025) | Avolve.io",
   description: "Next.js 15.5 with React 19.2, TypeScript 5.9, and AI SDK 5.0. Stack integration patterns, version compatibility, and official resources. Verified Oct 2025.",
   keywords: ["Next.js 15", "Next.js React 19", "Next.js AI SDK", "Next.js stack", "Next.js integration", "Next.js 2025"],
+  alternates: {
+    canonical: "https://avolve.io/software/nextjs",
+  },
 };
 
 export default function NextJsPage() {
@@ -50,11 +53,6 @@ export default function NextJsPage() {
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "USD"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "ratingCount": "7000000"
         }
       },
       {

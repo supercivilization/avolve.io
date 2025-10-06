@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 // Dependencies (October 5, 2025):
 // Pricing verified: 2025-10-05
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {
-  title: "Services - External Tools & Pricing | Avolve.io",
-  description: "Current pricing for Vercel, Supabase, Claude API, Stripe, and Resend. Last updated October 5, 2025.",
+  title: "Vercel, Supabase, Stripe & Claude API: Services Guide",
+  description: "Compare pricing, features, and when to use Vercel, Supabase, Stripe, Claude API, and Resend for your Next.js app. Includes free tiers and cost optimization tips.",
+  alternates: {
+    canonical: "https://avolve.io/services",
+  },
 };
 
 interface Service {
@@ -91,30 +93,137 @@ export default function ServicesPage() {
 
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": services.map((service, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": "Product",
-        "name": service.name,
-        "description": service.whenToUse,
-        "offers": service.pricing.map(tier => ({
-          "@type": "Offer",
-          "name": tier.tier,
-          "price": tier.price,
-          "priceCurrency": "USD"
-        }))
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://avolve.io/services#webpage",
+        "url": "https://avolve.io/services",
+        "name": "Comparison of Managed Services for Modern Web Development",
+        "isPartOf": {
+          "@id": "https://avolve.io/#website"
+        },
+        "datePublished": "2025-10-05T17:00:00-06:00",
+        "dateModified": "2025-10-05T17:00:00-06:00",
+        "description": "Compare pricing, features, and use cases for essential services like Vercel, Supabase, Claude API, Stripe, and Resend.",
+        "author": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "hasPart": [
+          {"@id": "https://avolve.io/services#vercel"},
+          {"@id": "https://avolve.io/services#supabase"},
+          {"@id": "https://avolve.io/services#claude"},
+          {"@id": "https://avolve.io/services#stripe"},
+          {"@id": "https://avolve.io/services#resend"}
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://avolve.io/services#vercel",
+        "name": "Vercel Hosting & Deployment",
+        "serviceType": ["Web Hosting", "Application Deployment", "Serverless Functions"],
+        "provider": {"@type": "Organization", "name": "Vercel, Inc."},
+        "description": "Global deployment for Next.js apps with zero config, AI Gateway, and cost-saving Fluid Compute.",
+        "offers": {
+          "@type": "OfferCatalog",
+          "name": "Vercel Pricing Tiers",
+          "itemListElement": [
+            {"@type": "Offer", "name": "Hobby", "price": "0", "priceCurrency": "USD"},
+            {"@type": "Offer", "name": "Pro", "price": "20", "priceCurrency": "USD"},
+            {"@type": "Offer", "name": "Enterprise", "priceSpecification": {"@type": "PriceSpecification", "price": "Custom"}}
+          ]
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://avolve.io/services#supabase",
+        "name": "Supabase Database & Auth",
+        "serviceType": ["Backend Service", "Database Hosting", "Authentication Service", "Vector Database"],
+        "provider": {"@type": "Organization", "name": "Supabase, Inc."},
+        "description": "An all-in-one backend with Postgres, Auth, Storage, and pgvector for AI applications.",
+        "offers": {
+          "@type": "OfferCatalog",
+          "name": "Supabase Pricing Tiers",
+          "itemListElement": [
+            {"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"},
+            {"@type": "Offer", "name": "Pro", "price": "25", "priceCurrency": "USD"},
+            {"@type": "Offer", "name": "Team", "price": "599", "priceCurrency": "USD"}
+          ]
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://avolve.io/services#claude",
+        "name": "Claude API",
+        "serviceType": "AI Model API",
+        "provider": {"@type": "Organization", "name": "Anthropic"},
+        "description": "API access to powerful AI models for chat, analysis, and code generation.",
+        "offers": {
+          "@type": "OfferCatalog",
+          "name": "Claude API Pricing",
+          "itemListElement": [
+            {"@type": "Offer", "name": "Claude 3.7 Sonnet (Input)", "price": "3", "priceCurrency": "USD", "unitText": "per 1M tokens"},
+            {"@type": "Offer", "name": "Claude 3.7 Sonnet (Output)", "price": "15", "priceCurrency": "USD", "unitText": "per 1M tokens"},
+            {"@type": "Offer", "name": "Batch API", "priceSpecification": {"@type": "PriceSpecification", "price": "50% discount"}}
+          ]
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://avolve.io/services#stripe",
+        "name": "Stripe Payments",
+        "serviceType": "Payment Processing",
+        "provider": {"@type": "Organization", "name": "Stripe, Inc."},
+        "description": "A complete payments platform to accept payments, manage subscriptions, and handle marketplace transactions.",
+        "offers": {
+          "@type": "OfferCatalog",
+          "name": "Stripe Pricing",
+          "itemListElement": [
+            {"@type": "Offer", "name": "Standard", "priceSpecification": {"@type": "PriceSpecification", "price": "2.9% + 30¢ per charge"}},
+            {"@type": "Offer", "name": "Billing", "priceSpecification": {"@type": "PriceSpecification", "price": "+0.5%"}}
+          ]
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://avolve.io/services#resend",
+        "name": "Resend Transactional Email",
+        "serviceType": "Email Service",
+        "provider": {"@type": "Organization", "name": "Resend"},
+        "description": "Transactional email API for developers, designed for high deliverability and a modern developer experience with React Email components.",
+        "offers": {
+          "@type": "OfferCatalog",
+          "name": "Resend Pricing",
+          "itemListElement": [
+            {"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"},
+            {"@type": "Offer", "name": "Pro", "price": "20", "priceCurrency": "USD"}
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://avolve.io/services#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://avolve.io"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services"
+          }
+        ]
       }
-    }))
+    ]
   };
 
   return (
     <>
-      <BreadcrumbSchema items={[
-        { name: "Home", url: "/" },
-        { name: "Services", url: "/services" }
-      ]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

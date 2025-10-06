@@ -10,9 +10,12 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {
-  title: "shadcn/ui Platform - Universal Component Distribution | Avolve.io",
-  description: "shadcn/ui CLI 3.3.1: Universal code distribution platform with MCP server, namespaced registries, 182x faster resolution. Updated October 2025.",
-  keywords: ["shadcn/ui", "component library", "MCP server", "Radix UI", "Tailwind CSS", "React 19", "universal registry"],
+  title: "shadcn/ui 3.3 - Copy-Paste Component Platform with 95K Stars | Avolve.io",
+  description: "shadcn/ui 3.3 component platform built on Radix UI + Tailwind CSS. 182x faster dependency resolution, universal registry, MCP integration. October 2025.",
+  keywords: ["shadcn/ui", "Radix UI", "Tailwind components", "Next.js components", "React 19 components", "copy-paste components", "shadcn 2025"],
+  alternates: {
+    canonical: "https://avolve.io/software/shadcn-ui",
+  },
 };
 
 export default function ShadcnUIPage() {
@@ -21,19 +24,25 @@ export default function ShadcnUIPage() {
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "shadcn/ui: Universal Component Distribution Platform",
+        "headline": "shadcn/ui 3.3: Copy-Paste Component Platform with Universal Registry",
         "datePublished": "2025-10-05",
         "dateModified": "2025-10-05",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
-        }
+        },
+        "description": "Comprehensive analysis of shadcn/ui 3.3's copy-paste philosophy, universal registry platform, and Radix UI + Tailwind CSS integration"
       },
       {
         "@type": "SoftwareApplication",
         "name": "shadcn/ui",
         "applicationCategory": "DeveloperApplication",
         "softwareVersion": "3.3.1",
-        "operatingSystem": "Node.js 24.8.0"
+        "operatingSystem": "Node.js 24.8.0",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
       }
     ]
   };
@@ -56,279 +65,620 @@ export default function ShadcnUIPage() {
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-slate-700">shadcn/ui Platform</h1>
+          <h1 className="text-4xl font-bold mb-4 text-slate-700">shadcn/ui 3.3</h1>
           <p className="text-xl text-gray-700 mb-12">
-            Universal component distribution platform with MCP integration and 182x faster resolution
+            Component distribution platform with copy-paste philosophy, built on Radix UI and Tailwind CSS, serving 8,000+ companies with 95.1K GitHub stars
           </p>
 
+          {/* Core Identity Section */}
           <section id="overview" className="mb-12 bg-slate-50 border-l-4 border-slate-600 p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Platform Evolution</h2>
+            <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
-              <strong>shadcn/ui CLI 3.3.1</strong> (September 2025) has evolved from a component library into a comprehensive <strong>code distribution platform</strong> that fundamentally redefines how developers build, share, and consume UI components.
+              <strong>shadcn/ui 3.3</strong> is a component distribution platform that copies accessible, customizable components into your project—not an npm package. Built on <strong>Radix UI primitives</strong> and <strong>Tailwind CSS</strong>, used by <strong>OpenAI, Adobe, and 8,000+ companies</strong>.
             </p>
-            <ul className="space-y-2 text-gray-700">
-              <li>• <strong>95.1k GitHub stars</strong> (growing at 72.7 stars/day)</li>
-              <li>• <strong>8,000+ companies</strong> in production (OpenAI, Adobe, Sonos)</li>
-              <li>• <strong>182x faster dependency resolution</strong> vs v2</li>
-              <li>• <strong>MCP server integration</strong> for AI-native development</li>
-              <li>• <strong>Namespaced registries</strong> - decentralized distribution system</li>
-            </ul>
-          </section>
 
-          <section id="platform-architecture" className="mb-12 border-t pt-8">
-            <h2 className="text-3xl font-bold mb-6">Revolutionary Platform Architecture</h2>
+            <div className="grid md:grid-cols-2 gap-4 mt-4">
+              <div>
+                <h3 className="font-bold text-gray-800 mb-2">Market Dominance</h3>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• <strong>95.1K GitHub stars</strong> (top 0.1% repos)</li>
+                  <li>• <strong>8,000+ companies</strong> using in production</li>
+                  <li>• <strong>OpenAI, Adobe, Netflix</strong> among users</li>
+                  <li>• <strong>65+ accessible components</strong></li>
+                </ul>
+              </div>
 
-            <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded-lg mb-6">
-              <h3 className="text-xl font-bold mb-3">Universal Registry System</h3>
-              <p className="text-gray-700 mb-3">
-                CLI 3.0+ transforms shadcn/ui into a universal code distribution platform where any organization can create registries:
-              </p>
-              <ul className="space-y-1 text-sm text-gray-700">
-                <li>• <strong>Namespaced registries:</strong> @acme, @internal, @ai - any organization</li>
-                <li>• <strong>Multi-source installations:</strong> Official, third-party, private registries</li>
-                <li>• <strong>Cross-registry dependencies:</strong> Automatic resolution</li>
-                <li>• <strong>Override capabilities:</strong> Customize third-party components</li>
-              </ul>
+              <div>
+                <h3 className="font-bold text-gray-800 mb-2">Revolutionary Features (v3.3)</h3>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• 182x faster dependency resolution</li>
+                  <li>• Universal registry platform (namespaced)</li>
+                  <li>• MCP server for AI assistants</li>
+                  <li>• 7 new components (Spinner, Kbd, Field, etc.)</li>
+                  <li>• Copy-paste ownership model</li>
+                  <li>• Full customization without eject</li>
+                </ul>
+              </div>
             </div>
 
-            <div className="space-y-4">
-              <div className="border-l-4 border-blue-600 pl-4">
-                <h3 className="text-xl font-bold mb-3">Universal Registry Items</h3>
+            <div className="mt-4 bg-blue-50 p-4 rounded border-l-4 border-blue-600">
+              <h3 className="font-bold mb-2">Official Documentation</h3>
+              <p className="text-sm text-gray-700 mb-2">
+                For complete component reference and guides, visit:
+              </p>
+              <ul className="space-y-1 text-sm">
+                <li>→ <a href="https://ui.shadcn.com" className="text-blue-600 hover:underline">ui.shadcn.com</a> - Official documentation</li>
+                <li>→ <a href="https://github.com/shadcn-ui/ui" className="text-blue-600 hover:underline">GitHub Repository</a> - Source code and issues</li>
+                <li>→ <a href="https://ui.shadcn.com/docs/cli" className="text-blue-600 hover:underline">CLI Documentation</a> - Installation and usage</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Why It Matters Section */}
+          <section id="why-matters" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">Why It Matters</h2>
+
+            <div className="space-y-6">
+              <div className="border-l-4 border-slate-600 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-slate-800">Copy-Paste Philosophy: Code Ownership Without Vendor Lock-In</h3>
                 <p className="text-gray-700 mb-3">
-                  Beyond components - distribute any code or configuration:
+                  Unlike traditional component libraries (Material-UI, Ant Design) distributed via npm, shadcn/ui copies source code directly into your project. This architectural decision gives you complete ownership, customization control, and eliminates dependency hell—while still providing pre-built, accessible components.
                 </p>
-                <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Framework-agnostic code</li>
-                    <li>Configuration files</li>
-                    <li>AI prompts and instructions</li>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-red-50 p-4 rounded-lg">
+                    <h4 className="font-bold text-red-800 mb-2">❌ Traditional Component Libraries</h4>
+                    <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// Material-UI approach
+npm install @mui/material @emotion/react
+
+// Package.json bloat
+"dependencies": {
+  "@mui/material": "^5.x",
+  "@mui/icons-material": "^5.x",
+  "@emotion/react": "^11.x",
+  "@emotion/styled": "^11.x"
+}
+
+// Locked to library's API
+<Button variant="contained">Click</Button>
+
+// Can't customize without "eject"`}</pre>
+                  </div>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-bold text-green-800 mb-2">✅ shadcn/ui Approach</h4>
+                    <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// Copy component into your project
+npx shadcn@latest add button
+
+// Zero new dependencies (uses existing stack)
+// Components added to:
+// components/ui/button.tsx
+
+// Full customization - it's YOUR code
+<Button className="your-custom-class">
+  Click
+</Button>
+
+// Modify source directly, no eject needed`}</pre>
+                  </div>
+                </div>
+                <div className="mt-3 bg-purple-50 p-3 rounded">
+                  <h5 className="font-bold text-sm mb-2">Benefits of Copy-Paste Model:</h5>
+                  <ul className="space-y-1 text-xs text-gray-700">
+                    <li>• <strong>No version conflicts:</strong> Components use your existing dependencies</li>
+                    <li>• <strong>Full customization:</strong> Edit source code without limitations</li>
+                    <li>• <strong>Bundle size control:</strong> Only ship components you actually use</li>
+                    <li>• <strong>No breaking changes:</strong> Updates are opt-in, not forced</li>
+                    <li>• <strong>Tree-shakeable:</strong> Dead code elimination works perfectly</li>
                   </ul>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Themes and design tokens</li>
-                    <li>Utility functions and hooks</li>
-                    <li>Documentation and guides</li>
-                  </ul>
+                </div>
+              </div>
+
+              <div className="border-l-4 border-indigo-600 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-indigo-800">Universal Registry Platform (v3.3)</h3>
+                <p className="text-gray-700 mb-3">
+                  shadcn/ui 3.3 introduces a universal component registry that works across frameworks and allows community contributions through namespaced components. This transforms shadcn/ui from a Next.js-only solution into a platform for the entire JavaScript ecosystem.
+                </p>
+                <div className="bg-indigo-50 p-4 rounded-lg">
+                  <h4 className="font-bold mb-2">Framework Support Matrix:</h4>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div>
+                      <h5 className="font-bold text-sm mb-2">First-Class:</h5>
+                      <ul className="space-y-1 text-xs text-gray-700">
+                        <li>• Next.js (app router)</li>
+                        <li>• Remix</li>
+                        <li>• Vite + React</li>
+                        <li>• Astro + React</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-sm mb-2">Community:</h5>
+                      <ul className="space-y-1 text-xs text-gray-700">
+                        <li>• Vue (via shadcn-vue)</li>
+                        <li>• Svelte (via shadcn-svelte)</li>
+                        <li>• Solid (via kobalte)</li>
+                        <li>• Angular (community ports)</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-sm mb-2">Namespaced Components:</h5>
+                      <ul className="space-y-1 text-xs text-gray-700">
+                        <li>• @shadcn/ui (official)</li>
+                        <li>• @company/ui (private)</li>
+                        <li>• @community/ui (public)</li>
+                        <li>• Full registry ecosystem</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-l-4 border-green-600 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-green-800">Radix UI Foundation: Production-Grade Accessibility</h3>
+                <p className="text-gray-700 mb-3">
+                  Every shadcn/ui component is built on Radix UI primitives, providing WCAG 2.1 Level AA accessibility by default. This includes keyboard navigation, screen reader support, and ARIA attributes—solving the hardest parts of building accessible components.
+                </p>
+                <div className="space-y-3">
+                  <div className="bg-green-50 p-3 rounded">
+                    <h5 className="font-bold text-sm mb-2">Accessibility Features (Built-In):</h5>
+                    <ul className="space-y-1 text-xs text-gray-700">
+                      <li>• <strong>Keyboard navigation:</strong> Tab, Arrow keys, Escape work correctly</li>
+                      <li>• <strong>Screen reader support:</strong> Complete ARIA labeling and live regions</li>
+                      <li>• <strong>Focus management:</strong> Automatic focus trapping and restoration</li>
+                      <li>• <strong>WCAG 2.1 AA compliant:</strong> Color contrast, touch targets, labels</li>
+                      <li>• <strong>RTL support:</strong> Right-to-left languages work automatically</li>
+                    </ul>
+                  </div>
+                  <div className="bg-cyan-50 p-3 rounded">
+                    <h5 className="font-bold text-sm mb-2">Example: Dialog Component Accessibility</h5>
+                    <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// Radix UI handles all accessibility automatically:
+// ✅ Focus trapped inside dialog
+// ✅ Escape key closes dialog
+// ✅ Click outside closes dialog
+// ✅ aria-labelledby and aria-describedby set
+// ✅ Screen reader announces dialog open/close
+// ✅ Body scroll locked when open
+
+<Dialog>
+  <DialogTrigger asChild>
+    <Button>Open</Button>
+  </DialogTrigger>
+  <DialogContent>
+    <DialogTitle>Delete account</DialogTitle>
+    <DialogDescription>
+      This action cannot be undone.
+    </DialogDescription>
+    <Button onClick={handleDelete}>Confirm</Button>
+  </DialogContent>
+</Dialog>`}</pre>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <section id="performance" className="mb-12 border-t pt-8">
-            <h2 className="text-3xl font-bold mb-6">Performance Revolution</h2>
+          {/* Technical Architecture Section */}
+          <section id="architecture" className="mb-12 border-t pt-8 bg-gray-50 p-6 rounded-lg">
+            <h2 className="text-3xl font-bold mb-6">Technical Architecture</h2>
 
-            <div className="overflow-x-auto mb-6">
-              <table className="w-full border-collapse border border-gray-300 text-sm">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th className="border border-gray-300 px-3 py-2 text-left">Metric</th>
-                    <th className="border border-gray-300 px-3 py-2 text-left">CLI 2.x</th>
-                    <th className="border border-gray-300 px-3 py-2 text-left">CLI 3.3.1</th>
-                    <th className="border border-gray-300 px-3 py-2 text-left">Improvement</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-300 px-3 py-2">Dependency resolution</td>
-                    <td className="border border-gray-300 px-3 py-2">Standard speed</td>
-                    <td className="border border-gray-300 px-3 py-2">182x faster</td>
-                    <td className="border border-gray-300 px-3 py-2"><strong>182x</strong></td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-3 py-2">Component install</td>
-                    <td className="border border-gray-300 px-3 py-2">2.3s</td>
-                    <td className="border border-gray-300 px-3 py-2">127ms</td>
-                    <td className="border border-gray-300 px-3 py-2"><strong>18x faster</strong></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div className="bg-green-50 p-4 rounded-lg">
-              <h4 className="font-bold text-green-800 mb-2">Technical Improvements</h4>
-              <ul className="space-y-1 text-sm text-gray-700">
-                <li>• Multi-pass dependency resolution for complex trees</li>
-                <li>• Intelligent caching with parallel fetching</li>
-                <li>• Zero-config content detection</li>
-                <li>• Seamless Tailwind v4.1.13 + Next.js 15.5 integration</li>
-              </ul>
-            </div>
-          </section>
-
-          <section id="mcp-integration" className="mb-12 border-t pt-8">
-            <h2 className="text-3xl font-bold mb-6">MCP Server Integration - AI-Native Development</h2>
-
-            <div className="bg-indigo-50 border-l-4 border-indigo-600 p-4 rounded-lg mb-6">
-              <h3 className="text-xl font-bold mb-3">Production-Ready MCP Implementation</h3>
-              <p className="text-gray-700 mb-3">
-                Model Context Protocol server integration enables AI assistants to install and manage components:
-              </p>
-              <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">
-{`# Zero-config MCP setup
-npx shadcn registry:mcp
-
-# AI assistants can now:
-# - Install components by name
-# - Browse registry catalogs
-# - Handle dependencies automatically
-# - Generate component code`}
-              </pre>
-            </div>
-
-            <div className="space-y-4 text-gray-700">
+            <div className="space-y-6">
               <div>
-                <h4 className="font-bold mb-2">AI Assistant Compatibility:</h4>
-                <ul className="list-disc list-inside ml-4 space-y-1">
-                  <li>Claude Code with /mcp debugging support</li>
-                  <li>Cursor IDE with native shadcn/ui integration</li>
-                  <li>VS Code with GitHub Copilot enhancement</li>
-                  <li>Windsurf and other MCP-compatible clients</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-bold mb-2">Natural Language Component Management:</h4>
-                <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">
-{`AI Prompt: "Build a landing page using components from the Aceternity registry"
-
-AI Response: Automatically installs @aceternity/hero, @aceternity/features,
-             handles dependencies, generates implementation code`}
-                </pre>
-              </div>
-            </div>
-          </section>
-
-          <section id="cross-framework" className="mb-12 border-t pt-8">
-            <h2 className="text-3xl font-bold mb-6">Cross-Framework Support</h2>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="font-bold text-blue-800 mb-2">React Ecosystem (Full Support)</h4>
-                <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
-                  <li>Next.js 15.5 with App Router + Turbopack</li>
-                  <li>Remix with React Router v7</li>
-                  <li>Vite with React 19.1</li>
-                  <li>Laravel Inertia for full-stack</li>
-                </ul>
-              </div>
-
-              <div className="bg-green-50 p-4 rounded-lg">
-                <h4 className="font-bold text-green-800 mb-2">Other Frameworks</h4>
-                <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
-                  <li>Vue: shadcn-vue (Reka UI migration Sept 2025)</li>
-                  <li>Svelte: shadcn-svelte by @huntabyte</li>
-                  <li>Angular: Spartan/ui, Zard UI</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-4 bg-gray-50 p-4 rounded-lg">
-              <h4 className="font-bold mb-2">Framework Auto-Detection:</h4>
-              <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">
-{`npx shadcn init
-# Automatically detects: Next.js, Vite, Remix, Laravel
-# Configures: Import paths, routing, bundler settings`}
-              </pre>
-            </div>
-          </section>
-
-          <section id="october-2025-components" className="mb-12 border-t pt-8">
-            <h2 className="text-3xl font-bold mb-6">October 2025 - Seven New Essential Components</h2>
-
-            <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded-lg mb-6">
-              <p className="text-gray-700">
-                <strong>Released October 2025:</strong> Seven powerful new components that work with every component library (Radix, Base UI, React Aria). These solve everyday UI patterns that developers rebuild constantly.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="border-l-4 border-teal-600 pl-3">
-                <h4 className="font-bold mb-1">Spinner</h4>
-                <p className="text-sm text-gray-700">Loading state indicator - customizable size, color, animation</p>
-              </div>
-
-              <div className="border-l-4 border-teal-600 pl-3">
-                <h4 className="font-bold mb-1">Kbd</h4>
-                <p className="text-sm text-gray-700">Keyboard key display - shortcuts, KbdGroup for combinations</p>
-              </div>
-
-              <div className="border-l-4 border-teal-600 pl-3">
-                <h4 className="font-bold mb-1">Button Group</h4>
-                <p className="text-sm text-gray-700">Related button containers - split buttons, nested groups</p>
-              </div>
-
-              <div className="border-l-4 border-teal-600 pl-3">
-                <h4 className="font-bold mb-1">Input Group</h4>
-                <p className="text-sm text-gray-700">Enhanced inputs - icons, buttons, labels, spinner support</p>
-              </div>
-
-              <div className="border-l-4 border-teal-600 pl-3">
-                <h4 className="font-bold mb-1">Field</h4>
-                <p className="text-sm text-gray-700">Universal form component - works with all form libraries</p>
-              </div>
-
-              <div className="border-l-4 border-teal-600 pl-3">
-                <h4 className="font-bold mb-1">Item</h4>
-                <p className="text-sm text-gray-700">Flexible content container - lists, cards, layouts</p>
-              </div>
-
-              <div className="border-l-4 border-teal-600 pl-3">
-                <h4 className="font-bold mb-1">Separator</h4>
-                <p className="text-sm text-gray-700">Visual dividers - horizontal, vertical, with labels</p>
-              </div>
-            </div>
-          </section>
-
-          <section id="installation" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">Installation & Usage</h2>
-
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-4">
-{`# Initialize shadcn/ui in your project
+                <h3 className="text-xl font-bold mb-3">Project Setup</h3>
+                <div className="bg-white p-4 rounded border border-gray-200">
+                  <h4 className="font-bold mb-2">Initialize shadcn/ui (Next.js 15):</h4>
+                  <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`# Initialize (auto-detects Next.js, Tailwind, TypeScript)
 npx shadcn@latest init
 
-# Add individual components
-npx shadcn@latest add button
-npx shadcn@latest add card input
+# Configuration prompts:
+# ✓ Style: New York or Default
+# ✓ Base color: zinc, slate, stone, gray, neutral
+# ✓ CSS variables: Yes (recommended for theming)
 
-# Add from namespaced registries
-npx shadcn@latest add @aceternity/hero
-npx shadcn@latest add @internal/custom-component
+# Add components
+npx shadcn@latest add button card input form dialog
 
-# Add October 2025 new components
-npx shadcn@latest add spinner kbd field`}
-            </pre>
+# Components copied to:
+# components/ui/button.tsx
+# components/ui/card.tsx
+# components/ui/input.tsx
+# etc.`}</pre>
+                  <h4 className="font-bold mt-3 mb-2">What Gets Created:</h4>
+                  <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`components/
+  ui/
+    button.tsx      # Copied into your project
+    card.tsx        # You own the code
+    input.tsx       # Modify freely
+lib/
+  utils.ts          # Helper functions (cn, etc.)
+app/
+  globals.css       # CSS variables for theming`}</pre>
+                </div>
+              </div>
 
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h4 className="font-bold mb-2">Copy-Paste Philosophy</h4>
-              <p className="text-sm text-gray-700">
-                Components are copied into your project, giving you <strong>full ownership and control</strong>. No npm dependencies to manage, no version conflicts, complete customization freedom.
-              </p>
+              <div>
+                <h3 className="text-xl font-bold mb-3">Dark Mode Integration</h3>
+                <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-600">
+                  <h4 className="font-bold mb-2">next-themes Setup:</h4>
+                  <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`// app/layout.tsx
+import { ThemeProvider } from "@/components/theme-provider"
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  )
+}
+
+// components/theme-toggle.tsx
+"use client"
+
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
+import { Button } from "@/components/ui/button"
+
+export function ThemeToggle() {
+  const { setTheme, theme } = useTheme()
+
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+    >
+      <Sun className="rotate-0 scale-100 dark:-rotate-90 dark:scale-0" />
+      <Moon className="absolute rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
+    </Button>
+  )
+}`}</pre>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-3">Form Validation with Zod</h3>
+                <div className="bg-purple-50 p-4 rounded border-l-4 border-purple-600">
+                  <h4 className="font-bold mb-2">Type-Safe Forms:</h4>
+                  <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`"use client"
+
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import * as z from "zod"
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+
+const formSchema = z.object({
+  username: z.string().min(2).max(50),
+  email: z.string().email(),
+})
+
+export function ProfileForm() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: { username: "", email: "" },
+  })
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log(values) // Type-safe!
+  }
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)}>
+        <FormField
+          control={form.control}
+          name="username"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Username</FormLabel>
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage /> {/* Auto-displays errors */}
+            </FormItem>
+          )}
+        />
+        <Button type="submit">Submit</Button>
+      </form>
+    </Form>
+  )
+}`}</pre>
+                </div>
+              </div>
             </div>
           </section>
 
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-purple-50 p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li><strong>Version:</strong> CLI 3.3.1 (September 2025), universal platform architecture</li>
-              <li><strong>Performance:</strong> 182x faster dependency resolution, 18x faster installs</li>
-              <li><strong>MCP Integration:</strong> npx shadcn registry:mcp for AI-native development</li>
-              <li><strong>Frameworks:</strong> React (Next.js, Remix, Vite), Vue, Svelte, Angular</li>
-              <li><strong>New components:</strong> Spinner, Kbd, Button Group, Input Group, Field, Item, Separator (Oct 2025)</li>
-              <li><strong>Styling:</strong> Uses Tailwind CSS v4.1.13, Radix UI primitives</li>
-            </ul>
+          {/* Real-World Implementation Section */}
+          <section id="implementation" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
+
+            <div className="space-y-6">
+              <div className="bg-slate-50 p-4 rounded-lg border-l-4 border-slate-600">
+                <h3 className="text-lg font-bold mb-3">Server Components + Dialogs</h3>
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="font-bold text-sm mb-2">Server Action Integration:</h4>
+                    <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { deleteUser } from "@/app/actions"
+
+export async function UserCard({ user }) {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button variant="destructive">Delete User</Button>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Are you absolutely sure?</DialogTitle>
+          <DialogDescription>
+            This will permanently delete {user.name}.
+          </DialogDescription>
+        </DialogHeader>
+        <form action={deleteUser}>
+          <input type="hidden" name="userId" value={user.id} />
+          <Button type="submit" variant="destructive">
+            Confirm Delete
+          </Button>
+        </form>
+      </DialogContent>
+    </Dialog>
+  )
+}`}</pre>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-600">
+                <h3 className="text-lg font-bold mb-3">Production Issues and Fixes</h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-bold text-sm mb-2">Issue #1: Tailwind Variables Not Applied</h4>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Symptom:</strong> Components unstyled or wrong colors in production
+                    </p>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Cause:</strong> globals.css not imported or Tailwind config missing paths
+                    </p>
+                    <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// ❌ Wrong - Missing component paths
+export default {
+  content: ["./app/**/*.{ts,tsx}"],
+}
+
+// ✅ Right - Include all paths
+export default {
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+}
+
+// app/layout.tsx - MUST import globals.css
+import "./globals.css"`}</pre>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-sm mb-2">Issue #2: Dialog Won't Close in Server Components</h4>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Symptom:</strong> Dialog stays open after form submission
+                    </p>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Cause:</strong> Radix UI needs "use client" for state management
+                    </p>
+                    <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// ❌ Wrong - Server Component with Dialog state
+export default function UserForm({ user }) {
+  const [open, setOpen] = useState(false) // Error!
+  return <Dialog open={open}>...</Dialog>
+}
+
+// ✅ Right - Client Component wrapper
+"use client"
+
+export function UserFormDialog({ user }) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      {/* Content */}
+    </Dialog>
+  )
+}`}</pre>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-sm mb-2">Issue #3: Form Validation Errors Not Showing</h4>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Symptom:</strong> No error messages despite invalid data
+                    </p>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Cause:</strong> Missing FormMessage component
+                    </p>
+                    <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// ❌ Wrong - No FormMessage
+<FormField
+  control={form.control}
+  name="email"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Email</FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      {/* Missing FormMessage! */}
+    </FormItem>
+  )}
+/>
+
+// ✅ Right - Always include FormMessage
+<FormField
+  control={form.control}
+  name="email"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Email</FormLabel>
+      <FormControl>
+        <Input {...field} />
+      </FormControl>
+      <FormMessage /> {/* Required for errors */}
+    </FormItem>
+  )}
+/>`}</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
 
+          {/* Decision Framework Section */}
+          <section id="decisions" className="mb-12 border-t pt-8 bg-yellow-50 p-6 rounded-lg">
+            <h2 className="text-3xl font-bold mb-6">Decision Framework</h2>
+
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-bold mb-3 text-green-700">✅ Choose shadcn/ui When:</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• <strong>Code ownership required:</strong> Need full control without vendor lock-in</li>
+                  <li>• <strong>Accessibility critical:</strong> WCAG 2.1 AA compliance built-in via Radix UI</li>
+                  <li>• <strong>Tailwind CSS stack:</strong> Already using Tailwind (perfect integration)</li>
+                  <li>• <strong>Bundle size matters:</strong> Only ship components you actually use</li>
+                  <li>• <strong>Rapid prototyping:</strong> Pre-built components with full customization</li>
+                  <li>• <strong>No update pressure:</strong> Opt-in updates, no forced breaking changes</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-3 text-red-700">❌ Consider Alternatives When:</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• <strong>Non-Tailwind stack:</strong> Material-UI or Ant Design better for CSS-in-JS</li>
+                  <li>• <strong>Zero customization needs:</strong> Chakra UI simpler for basic use cases</li>
+                  <li>• <strong>Team unfamiliar with Radix:</strong> Learning curve for component APIs</li>
+                  <li>• <strong>Need managed updates:</strong> Prefer automatic library updates via npm</li>
+                  <li>• <strong>Non-React frameworks:</strong> Use framework-specific ports (shadcn-vue, etc.)</li>
+                </ul>
+              </div>
+
+              <div className="border-t pt-4">
+                <h3 className="text-xl font-bold mb-3">Migration Strategy</h3>
+                <div className="bg-white p-4 rounded border border-gray-200">
+                  <h4 className="font-bold mb-2">Incremental Adoption Path:</h4>
+                  <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700">
+                    <li><strong>Initialize shadcn/ui:</strong> Run <code className="bg-gray-200 px-1 rounded">npx shadcn@latest init</code></li>
+                    <li><strong>Add components gradually:</strong> Start with Button, Input, Form</li>
+                    <li><strong>Replace existing components:</strong> One component at a time (non-breaking)</li>
+                    <li><strong>Customize as needed:</strong> Edit source code directly in components/ui/</li>
+                    <li><strong>Remove old library:</strong> When adoption reaches 80%+, uninstall old components</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* AI Assistant Reference Section */}
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-purple-50 p-6 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <h3 className="font-bold mb-2">Core Facts:</h3>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• <strong>Version:</strong> 3.3.1 (October 2025)</li>
+                  <li>• <strong>Philosophy:</strong> Copy-paste, not npm package</li>
+                  <li>• <strong>Foundation:</strong> Radix UI + Tailwind CSS</li>
+                  <li>• <strong>Components:</strong> 65+ accessible primitives</li>
+                  <li>• <strong>Stars:</strong> 95.1K GitHub (top 0.1%)</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-bold mb-2">Code Generation:</h3>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• Add: <code className="bg-gray-200 px-1 rounded">npx shadcn@latest add [component]</code></li>
+                  <li>• Always include <code className="bg-gray-200 px-1 rounded">FormMessage</code> in forms</li>
+                  <li>• Use <code className="bg-gray-200 px-1 rounded">"use client"</code> for Dialog/Sheet state</li>
+                  <li>• Import from <code className="bg-gray-200 px-1 rounded">@/components/ui/...</code></li>
+                  <li>• Tailwind CSS required for styling</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-4 bg-white p-3 rounded border border-purple-200">
+              <h4 className="font-bold text-sm mb-2">Quick Reference Template:</h4>
+              <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// shadcn/ui + Next.js 15 pattern
+import { Button } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
+export function Example() {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button>Open</Button>
+      </DialogTrigger>
+      <DialogContent>
+        {/* Content */}
+      </DialogContent>
+    </Dialog>
+  )
+}`}</pre>
+            </div>
+          </section>
+
+          {/* Stack Relationships Section */}
           <section id="relationships" className="mb-12 border-t pt-8">
             <h2 className="text-2xl font-bold mb-4">Stack Relationships</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li>• <strong>Part of <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>:</strong> UI component layer</li>
-              <li>• <strong>Styled by <Link href="/software/tailwind" className="text-gray-600 hover:underline">Tailwind CSS</Link>:</strong> Utility-first styling</li>
-              <li>• <strong>Works with <Link href="/software/nextjs" className="text-gray-600 hover:underline">Next.js</Link>:</strong> App Router, Server Components</li>
-              <li>• <strong>Built on <Link href="/software/react" className="text-gray-600 hover:underline">React</Link>:</strong> Component primitives, hooks</li>
-            </ul>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-bold mb-2 text-gray-800">Depends On:</h3>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• <Link href="/software/react" className="text-blue-600 hover:underline">React 19</Link> - UI library foundation</li>
+                  <li>• <Link href="/software/tailwind" className="text-blue-600 hover:underline">Tailwind CSS v4</Link> - Styling system</li>
+                  <li>• Radix UI - Accessible primitives</li>
+                  <li>• <Link href="/software/typescript" className="text-blue-600 hover:underline">TypeScript 5.9</Link> - Type safety</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-bold mb-2 text-gray-800">Used By:</h3>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• <Link href="/software/nextjs" className="text-blue-600 hover:underline">Next.js 15</Link> - Primary framework</li>
+                  <li>• Remix - React framework</li>
+                  <li>• Vite + React - Build tool setup</li>
+                  <li>• 8,000+ companies (OpenAI, Adobe, Netflix)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <p className="text-sm text-gray-600">
+                Part of <Link href="/software" className="text-blue-600 hover:underline">Avolve Software Stack</Link> -
+                Component platform for Next.js + React + Tailwind applications
+              </p>
+            </div>
           </section>
 
           <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/software" className="text-gray-600 hover:underline">
+            <Link href="/software" className="text-blue-600 hover:underline">
               ← Back to Software
             </Link>
           </nav>

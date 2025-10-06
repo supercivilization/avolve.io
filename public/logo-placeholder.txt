@@ -1,0 +1,20 @@
+LOGO PLACEHOLDER - NEEDS CREATION
+
+Requirements:
+- Filename: logo.png
+- Dimensions: 512x512 pixels
+- Format: PNG with transparency
+- Purpose: Organization logo for schema.org markup
+
+Suggested Design:
+- Simple, recognizable icon
+- Works well at small sizes
+- Represents "evolution" or "modern tech"
+- Professional, clean aesthetic
+
+Tools to Create:
+1. Figma (https://figma.com) - Vector design
+2. LogoMakr (https://logomakr.com) - Quick logo creation
+3. AI Generation: DALL-E, Midjourney with "simple tech logo" prompt
+
+Once created, replace this file with actual logo.png

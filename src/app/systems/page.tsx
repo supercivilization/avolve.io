@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 // Dependencies (October 5, 2025):
 // - Next.js: 15.5.4
@@ -9,8 +8,11 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {
-  title: "Systems - Architecture Patterns | Avolve.io",
-  description: "Copy-paste architecture patterns for Next.js 15 + React 19.2. Authentication system with Supabase + middleware.",
+  title: "Auth, Search & Email Systems for Next.js 15 Apps",
+  description: "Production-ready architecture patterns for Next.js 15. Get a complete auth system with Supabase & Middleware, including code and \"What Breaks in Production\" fixes.",
+  alternates: {
+    canonical: "https://avolve.io/systems",
+  },
 };
 
 export default function SystemsPage() {
@@ -18,31 +20,111 @@ export default function SystemsPage() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "TechArticle",
-        "headline": "Systems: Architecture Patterns That Work",
-        "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "@type": "CollectionPage",
+        "@id": "https://avolve.io/systems#webpage",
+        "url": "https://avolve.io/systems",
+        "name": "Architecture Systems for Modern Web Applications",
+        "isPartOf": {
+          "@id": "https://avolve.io/#website"
+        },
+        "datePublished": "2025-10-05T17:00:00-06:00",
+        "dateModified": "2025-10-05T17:00:00-06:00",
+        "description": "A collection of architecture patterns for coordinating multiple components in Next.js 15 applications, including systems for authentication, search, email, and more.",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "hasPart": [
+          {
+            "@id": "https://avolve.io/systems#auth-system"
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://avolve.io/systems#auth-system",
+        "name": "How to Build a Production-Ready Authentication System",
+        "description": "A complete authentication pattern using Supabase Auth and Next.js Middleware for secure, edge-protected routes in a server-component architecture.",
+        "tool": [
+          {"@type": "SoftwareApplication", "name": "Supabase Auth"},
+          {"@type": "SoftwareApplication", "name": "Next.js Middleware"},
+          {"@type": "SoftwareApplication", "name": "React Server Components"},
+          {"@type": "SoftwareApplication", "name": "React Client Components"}
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Step 1: Protect Routes with Middleware",
+            "text": "Use Next.js Middleware running on the edge to check for a valid user session before allowing access to protected routes like a dashboard.",
+            "code": {
+              "@type": "Code",
+              "text": "import { createServerClient } from '@supabase/ssr';\nimport { NextResponse, type NextRequest } from 'next/server';\n\nexport async function middleware(request: NextRequest) {\n  let response = NextResponse.next({ request });\n\n  const supabase = createServerClient(\n    process.env.NEXT_PUBLIC_SUPABASE_URL!,\n    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,\n    {\n      cookies: {\n        get(name: string) {\n          return request.cookies.get(name)?.value;\n        },\n        set(name: string, value: string, options: any) {\n          response.cookies.set({ name, value, ...options });\n        },\n        remove(name: string, options: any) {\n          response.cookies.set({ name, value: '', ...options });\n        },\n      },\n    }\n  );\n\n  const { data: { session } } = await supabase.auth.getSession();\n\n  if (request.nextUrl.pathname.startsWith('/dashboard') && !session) {\n    return NextResponse.redirect(new URL('/login', request.url));\n  }\n\n  return response;\n}\n\nexport const config = {\n  matcher: ['/dashboard/:path*'],\n};"
+            }
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 2: Securely Fetch Data in a Server Component",
+            "text": "Once a user is authenticated, fetch their data securely on the server using a Server Component. This prevents exposing sensitive information to the client.",
+            "code": {
+              "@type": "Code",
+              "text": "import { createServerClient } from '@supabase/ssr';\nimport { cookies } from 'next/headers';\n\nexport default async function Dashboard() {\n  const supabase = createServerClient(\n    process.env.NEXT_PUBLIC_SUPABASE_URL!,\n    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,\n    {\n      cookies: {\n        get(name: string) {\n          return cookies().get(name)?.value;\n        },\n      },\n    }\n  );\n\n  const { data: { user } } = await supabase.auth.getUser();\n\n  return (\n    <div>\n      <h1>Welcome, {user?.email}</h1>\n    </div>\n  );\n}"
+            }
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 3: Create the Client-Side Login UI",
+            "text": "Build a Client Component with a form that uses the Supabase Browser Client to handle user login and session creation.",
+            "code": {
+              "@type": "Code",
+              "text": "'use client';\nimport { createBrowserClient } from '@supabase/ssr';\nimport { useState } from 'react';\n\nexport function LoginForm() {\n  const [email, setEmail] = useState('');\n  const [password, setPassword] = useState('');\n\n  const supabase = createBrowserClient(\n    process.env.NEXT_PUBLIC_SUPABASE_URL!,\n    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!\n  );\n\n  async function handleLogin(e: React.FormEvent) {\n    e.preventDefault();\n    const { error } = await supabase.auth.signInWithPassword({\n      email,\n      password,\n    });\n    if (!error) window.location.href = '/dashboard';\n  }\n\n  return (\n    <form onSubmit={handleLogin} className=\"space-y-4 max-w-md\">\n      <input\n        type=\"email\"\n        value={email}\n        onChange={(e) => setEmail(e.target.value)}\n        placeholder=\"Email\"\n        className=\"w-full p-2 border rounded\"\n      />\n      <input\n        type=\"password\"\n        value={password}\n        onChange={(e) => setPassword(e.target.value)}\n        placeholder=\"Password\"\n        className=\"w-full p-2 border rounded\"\n      />\n      <button\n        type=\"submit\"\n        className=\"w-full p-2 bg-blue-600 text-white rounded\"\n      >\n        Login\n      </button>\n    </form>\n  );\n}"
+            }
+          }
+        ],
+        "tip": [
+          {
+            "@type": "HowToTip",
+            "text": "Production Failure: Cookie domain mismatch between localhost and your production URL. Fix: Set cookieOptions.domain correctly for your deployment."
+          },
+          {
+            "@type": "HowToTip",
+            "text": "Production Failure: Users are logged out randomly due to session refresh timing. Fix: Call supabase.auth.refreshSession() in a client-side layout component."
+          },
+          {
+            "@type": "HowToTip",
+            "text": "Production Failure: Middleware causes infinite redirect loops. Fix: Exclude your login page (e.g., '/login') from the middleware's matcher config."
+          }
+        ],
+        "author": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
         }
       },
       {
-        "@type": "SoftwareSourceCode",
-        "name": "Authentication System Pattern",
-        "description": "Production-ready authentication with Supabase + Next.js 15",
-        "programmingLanguage": "TypeScript",
-        "runtimePlatform": "Next.js 15.5.4",
-        "codeRepository": "https://github.com/supercivilization/avolve.io"
+        "@type": "BreadcrumbList",
+        "@id": "https://avolve.io/systems#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://avolve.io"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Systems"
+          }
+        ]
       }
     ]
   };
 
   return (
     <>
-      <BreadcrumbSchema items={[
-        { name: "Home", url: "/" },
-        { name: "Systems", url: "/systems" }
-      ]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
