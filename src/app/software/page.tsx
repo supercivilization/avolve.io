@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { authorRef, publisherRef, websiteRef, LAST_VERIFIED_DATE } from "@/lib/schema";
 
-// Dependencies (October 5, 2025):
-// - Next.js: 15.5.5
+// Dependencies (October 6, 2025):
+// - Next.js: 15.5.4
 // - React: 19.2.0
-// - TypeScript: 5.9.2
-// Last verified: 2025-10-05
+// - TypeScript: 5.9.3
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
   title: "Verified Stack: Next.js 15.5, React 19.2, TypeScript 5.9",
@@ -26,17 +27,11 @@ export default function SoftwarePage() {
         "name": "Verified Stack: Next.js 15.5, React 19.2, TypeScript 5.9 Compatibility",
         "headline": "Verified compatibility matrix and integration patterns for the modern development stack as of October 2025.",
         "description": "Get the verified stack for Oct 2025 including Next.js 15.5, React 19.2, TypeScript 5.9, Supabase, and Tailwind CSS 4.1. Includes installation commands and patterns for a faster, production-ready setup.",
-        "isPartOf": {
-          "@id": "https://avolve.io/#website"
-        },
+        "isPartOf": websiteRef,
         "datePublished": "2025-10-05T17:00:00-06:00",
-        "dateModified": "2025-10-05T17:00:00-06:00",
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        },
-        "publisher": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        },
+        "dateModified": LAST_VERIFIED_DATE,
+        "author": authorRef,
+        "publisher": publisherRef,
         "technicalAudience": "Web Developers, Software Engineers, Full-Stack Developers",
         "proficiencyLevel": "Intermediate",
         "dependencies": [

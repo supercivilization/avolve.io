@@ -9,6 +9,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { AlertCircle, CheckCircle2 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { authorRef, publisherRef, LAST_VERIFIED_DATE } from "@/lib/schema";
 
 // Dependencies (October 6, 2025):
 // - Next.js: 15.5.4
@@ -33,13 +34,9 @@ export default function NextJsPage() {
         "@type": "TechArticle",
         "headline": "Next.js 15 + Modern Stack Integration (October 2025)",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        },
-        "publisher": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        },
+        "dateModified": LAST_VERIFIED_DATE,
+        "author": authorRef,
+        "publisher": publisherRef,
         "description": "Next.js 15.5 integration with React 19.2, AI SDK 5.0, and modern stack. Verified compatibility patterns.",
         "articleSection": "Stack Integration"
       },

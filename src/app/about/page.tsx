@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { authorRef, publisherRef, personSchema, organizationSchema, websiteRef, LAST_VERIFIED_DATE } from "@/lib/schema";
 
-// Dependencies (October 5, 2025):
-// - Next.js: 15.5.5
+// Dependencies (October 6, 2025):
+// - Next.js: 15.5.4
 // - React: 19.2.0
-// - TypeScript: 5.9.2
-// Last verified: 2025-10-05
+// - TypeScript: 5.9.3
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
   title: "About - AI-Native Development | Avolve.io",
@@ -25,30 +26,11 @@ export default function AboutPage() {
         "name": "About Avolve.io",
         "url": "https://avolve.io/about",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        },
-        "publisher": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        },
-        "isPartOf": {
-          "@id": "https://avolve.io/#website"
-        },
-        "about": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://avolve.io/#website",
-        "url": "https://avolve.io",
-        "name": "Avolve.io",
-        "description": "A knowledge graph for the modern web stack. Get verified compatibility patterns for Next.js 15, React 19, Vercel AI, Supabase auth, shadcn/ui, and more.",
-        "publisher": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        },
-        "inLanguage": "en-US"
+        "dateModified": LAST_VERIFIED_DATE,
+        "author": authorRef,
+        "publisher": publisherRef,
+        "isPartOf": websiteRef,
+        "about": publisherRef
       },
       {
         "@type": "BreadcrumbList",
@@ -67,37 +49,8 @@ export default function AboutPage() {
           }
         ]
       },
-      {
-        "@type": "Organization",
-        "@id": "https://www.supercivilization.xyz/#organization",
-        "name": "Supercivilization",
-        "url": "https://www.supercivilization.xyz",
-        "founder": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://www.joshuaseymour.com/#person",
-        "name": "Joshua Seymour",
-        "url": "https://www.joshuaseymour.com",
-        "sameAs": [
-          "https://github.com/supercivilization",
-          "https://www.linkedin.com/in/jseymour/"
-        ],
-        "knowsAbout": [
-          "Next.js",
-          "React",
-          "TypeScript",
-          "Supabase",
-          "Vercel AI SDK",
-          "AI-Native Development",
-          "Web Development",
-          "Full-Stack Development",
-          "shadcn/ui",
-          "Tailwind CSS"
-        ]
-      }
+      organizationSchema,
+      personSchema
     ]
   };
 
@@ -109,8 +62,8 @@ export default function AboutPage() {
       />
 
       <main className="page-container">
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+        <time className="text-sm text-muted-foreground block mb-6" dateTime={LAST_VERIFIED_DATE}>
+          Last updated: October 6, 2025
         </time>
 
         <article>

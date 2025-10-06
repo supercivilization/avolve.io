@@ -4,6 +4,7 @@ import { Rocket, Network, Code, Cloud, LifeBuoy } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { getPageDates, formatDate, formatSchemaDate } from "@/lib/dates";
+import { authorRef, publisherRef, LAST_VERIFIED_DATE } from "@/lib/schema";
 
 // Dependencies (verified October 6, 2025):
 // - Node.js: 22.20.0 LTS (24.9.0 becomes LTS Oct 28, 2025)
@@ -32,13 +33,9 @@ export default function Home() {
         "@type": "TechArticle",
         "headline": "Modern Web Development Stack - October 2025",
         "datePublished": formatSchemaDate(pageDates.published),
-        "dateModified": formatSchemaDate(pageDates.modified),
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        },
-        "publisher": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        },
+        "dateModified": LAST_VERIFIED_DATE,
+        "author": authorRef,
+        "publisher": publisherRef,
         "dependencies": {
           "Node.js": "22.20.0 LTS",
           "TypeScript": "5.9.3",
@@ -73,10 +70,8 @@ export default function Home() {
           {"@type": "SoftwareApplication", "name": "@supabase/ssr", "version": "0.7.0"}
         ],
         "datePublished": formatSchemaDate(pageDates.published),
-        "dateModified": formatSchemaDate(pageDates.modified),
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        }
+        "dateModified": LAST_VERIFIED_DATE,
+        "author": authorRef
       },
       {
         "@type": "FAQPage",
