@@ -2,13 +2,13 @@ import Link from "next/link";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t bg-muted/40">
-      <div className="container py-12 md:py-16">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+    <footer className="border-t-2 bg-muted/40">
+      <div className="container py-16 md:py-20">
+        <div className="grid gap-12 md:gap-16 sm:grid-cols-2 md:grid-cols-4">
           {/* Framework */}
           <div>
-            <h4 className="font-semibold mb-4">5S Framework</h4>
-            <nav className="flex flex-col gap-2 text-sm">
+            <h4 className="text-sm font-semibold mb-4">5S Framework</h4>
+            <nav className="flex flex-col gap-3 text-sm">
               <Link href="/solutions" className="text-muted-foreground hover:text-foreground transition-colors">
                 Solutions
               </Link>
@@ -29,8 +29,8 @@ export function SiteFooter() {
 
           {/* Resources */}
           <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <nav className="flex flex-col gap-2 text-sm">
+            <h4 className="text-sm font-semibold mb-4">Resources</h4>
+            <nav className="flex flex-col gap-3 text-sm">
               <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
                 About
               </Link>
@@ -63,8 +63,8 @@ export function SiteFooter() {
 
           {/* Creator */}
           <div>
-            <h4 className="font-semibold mb-4">Creator</h4>
-            <nav className="flex flex-col gap-2 text-sm">
+            <h4 className="text-sm font-semibold mb-4">Creator</h4>
+            <nav className="flex flex-col gap-3 text-sm">
               <a
                 href="https://www.joshuaseymour.com"
                 target="_blank"
@@ -102,8 +102,8 @@ export function SiteFooter() {
 
           {/* Tech Stack */}
           <div>
-            <h4 className="font-semibold mb-4">Tech Stack</h4>
-            <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+            <h4 className="text-sm font-semibold mb-4">Tech Stack</h4>
+            <div className="flex flex-col gap-3 text-sm text-muted-foreground">
               <p>Next.js 15.5.4</p>
               <p>React 19.2.0</p>
               <p>TypeScript 5.9.2</p>
