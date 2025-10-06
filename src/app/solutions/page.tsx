@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
-// Dependencies (October 5, 2025):
+// Dependencies (October 6, 2025):
 // - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
 // - Vercel AI SDK: 5.0.48
-// Last verified: 2025-10-05
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "AI Customer Support Agent & Other Next.js 15 Solutions",
-  description: "Complete AI chat application using Next.js 15.5, Vercel AI SDK 5.0, Claude 3.7 Sonnet. Authentication, streaming, cost breakdown ($5-10/mo for 1K users), production failure modes. Verified October 2025.",
+  title: "Solutions - Complete Application Examples",
+  description: "Fast lookup: AI chat, tech stacks, time to build, cost at scale. Complete working code. Verified October 2025.",
   alternates: {
     canonical: "https://avolve.io/solutions",
   },
@@ -138,15 +138,63 @@ export default function SolutionsPage() {
       />
 
       <main className="page-container">
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
+          Last updated: October 6, 2025
         </time>
 
         <article>
           <h1 className="text-4xl font-bold mb-4">Solutions</h1>
           <p className="text-xl text-muted-foreground section-spacing">
-            Business outcomes delivered to end users
+            Fast lookup: complete apps, tech stacks, build time, costs
           </p>
+
+          {/* QUICK REFERENCE TABLE - Primary utility for fast solution lookup */}
+          <section id="quick-reference" className="mb-12 border border-border/50 rounded-lg overflow-hidden shadow-sm">
+            <div className="bg-muted/30 px-6 py-3 border-b border-border/40">
+              <h2 className="text-xl font-bold">Solution Examples (Verified October 6, 2025)</h2>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-muted/20">
+                  <tr className="border-b border-border/40">
+                    <th className="px-4 py-3 text-left font-semibold">Solution</th>
+                    <th className="px-4 py-3 text-left font-semibold">Tech Stack</th>
+                    <th className="px-4 py-3 text-left font-semibold">Time to Build</th>
+                    <th className="px-4 py-3 text-left font-semibold">Cost at 1K Users</th>
+                    <th className="px-4 py-3 text-left font-semibold">Guide</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border/40">
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">AI Customer Support</td>
+                    <td className="px-4 py-3 text-sm">
+                      <div className="space-y-1">
+                        <div>Next.js 15.5 + React 19.2</div>
+                        <div>Vercel AI SDK 5.0</div>
+                        <div>Claude 3.7 Sonnet</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      <div className="font-bold">3-5 days</div>
+                      <div className="text-muted-foreground">1 developer</div>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      <div className="font-mono font-bold">$5-10/mo</div>
+                      <div className="text-muted-foreground">Scales to $95-145</div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <a href="#ai-customer-support" className="text-blue-600 hover:underline text-sm">View Example →</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
+              <p className="text-sm text-muted-foreground">
+                <strong>All solutions include</strong> • Complete code • Tech stack versions • Build time estimate • Cost breakdown • Production considerations • Last verified: October 6, 2025
+              </p>
+            </div>
+          </section>
 
           <section id="solutions-definition" className="section-spacing">
             <h2 className="text-2xl font-bold mb-4">What are Solutions?</h2>

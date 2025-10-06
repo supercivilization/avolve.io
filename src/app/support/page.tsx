@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Dependencies (October 5, 2025):
+// Dependencies (October 6, 2025):
 // - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
-// Last verified: 2025-10-05
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "Production Runbooks: Fix Slow DB Queries & Auth Loops",
-  description: "Production debugging: Supabase slow queries (EXPLAIN ANALYZE, index creation), auth loops (middleware config), Vercel build failures, Claude API rate limits (429 errors). AI coding tool comparison (Claude Code, Cursor). October 2025.",
+  title: "Support - Production Runbooks & Tools",
+  description: "Fast lookup: debug runbooks, common fixes, AI coding tools, monitoring setup. Verified October 2025.",
   alternates: {
     canonical: "https://avolve.io/support",
   },
@@ -155,15 +155,146 @@ export default function SupportPage() {
       />
 
       <main className="page-container">
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
+          Last updated: October 6, 2025
         </time>
 
         <article>
           <h1 className="mb-4">Support</h1>
           <p className="lead section-spacing">
-            Operations keeping production running
+            Fast lookup: runbooks, quick fixes, tools, monitoring
           </p>
+
+          {/* QUICK REFERENCE TABLE - Primary utility for fast troubleshooting */}
+          <section id="quick-reference" className="mb-12 border border-border/50 rounded-lg overflow-hidden shadow-sm">
+            <div className="bg-muted/30 px-6 py-3 border-b border-border/40">
+              <h2 className="text-xl font-bold">Common Issues (Verified October 6, 2025)</h2>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-muted/20">
+                  <tr className="border-b border-border/40">
+                    <th className="px-4 py-3 text-left font-semibold">Issue</th>
+                    <th className="px-4 py-3 text-left font-semibold">Symptom</th>
+                    <th className="px-4 py-3 text-left font-semibold">Quick Fix</th>
+                    <th className="px-4 py-3 text-left font-semibold">Runbook</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border/40">
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Slow DB Queries</td>
+                    <td className="px-4 py-3 text-sm">API responses 5-30s, timeouts</td>
+                    <td className="px-4 py-3 text-sm">
+                      <code className="bg-muted/30 px-1 text-xs">CREATE INDEX CONCURRENTLY</code>
+                    </td>
+                    <td className="px-4 py-3">
+                      <a href="#runbook-database-slow" className="text-blue-600 hover:underline text-sm">Full Runbook →</a>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Auth Loops</td>
+                    <td className="px-4 py-3 text-sm">Redirecting /login ↔ /dashboard</td>
+                    <td className="px-4 py-3 text-sm">
+                      Exclude /login from middleware matcher
+                    </td>
+                    <td className="px-4 py-3">
+                      <a href="#common-issues" className="text-blue-600 hover:underline text-sm">Quick Fix →</a>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Build Failures</td>
+                    <td className="px-4 py-3 text-sm">Type errors during Vercel deploy</td>
+                    <td className="px-4 py-3 text-sm">
+                      Run <code className="bg-muted/30 px-1 text-xs">npm run build</code> locally first
+                    </td>
+                    <td className="px-4 py-3">
+                      <a href="#common-issues" className="text-blue-600 hover:underline text-sm">Quick Fix →</a>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">API Rate Limits</td>
+                    <td className="px-4 py-3 text-sm">429 errors from Claude API</td>
+                    <td className="px-4 py-3 text-sm">
+                      Implement rate limiting with Upstash
+                    </td>
+                    <td className="px-4 py-3">
+                      <a href="#common-issues" className="text-blue-600 hover:underline text-sm">Quick Fix →</a>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Missing Env Vars</td>
+                    <td className="px-4 py-3 text-sm">process.env.VAR undefined</td>
+                    <td className="px-4 py-3 text-sm">
+                      Add to Vercel dashboard, redeploy
+                    </td>
+                    <td className="px-4 py-3">
+                      <a href="#common-issues" className="text-blue-600 hover:underline text-sm">Quick Fix →</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
+              <p className="text-sm text-muted-foreground">
+                <strong>All fixes verified</strong> • Includes runbooks, code examples, prevention tips • Last verified: October 6, 2025
+              </p>
+            </div>
+          </section>
+
+          {/* AI TOOLS QUICK REFERENCE */}
+          <section id="ai-tools-quick-ref" className="mb-12 border border-border/50 rounded-lg overflow-hidden shadow-sm">
+            <div className="bg-muted/30 px-6 py-3 border-b border-border/40">
+              <h2 className="text-xl font-bold">AI Coding Tools (Late 2025)</h2>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-muted/20">
+                  <tr className="border-b border-border/40">
+                    <th className="px-4 py-3 text-left font-semibold">Tool</th>
+                    <th className="px-4 py-3 text-left font-semibold">SWE-bench</th>
+                    <th className="px-4 py-3 text-left font-semibold">Interface</th>
+                    <th className="px-4 py-3 text-left font-semibold">Best For</th>
+                    <th className="px-4 py-3 text-left font-semibold">Pricing</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border/40">
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Claude Code</td>
+                    <td className="px-4 py-3 text-sm font-mono">72.5%</td>
+                    <td className="px-4 py-3 text-sm">Terminal</td>
+                    <td className="px-4 py-3 text-sm">Terminal workflows, MCP integrations</td>
+                    <td className="px-4 py-3 text-sm font-mono">$20-200/mo</td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">OpenAI Codex</td>
+                    <td className="px-4 py-3 text-sm font-mono">74.5-74.9%</td>
+                    <td className="px-4 py-3 text-sm">VS Code/IDE</td>
+                    <td className="px-4 py-3 text-sm">Multi-platform, agent orchestration</td>
+                    <td className="px-4 py-3 text-sm font-mono">$20-200/mo</td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Gemini CLI</td>
+                    <td className="px-4 py-3 text-sm">N/A</td>
+                    <td className="px-4 py-3 text-sm">Terminal</td>
+                    <td className="px-4 py-3 text-sm">Open-source, 1M token context</td>
+                    <td className="px-4 py-3 text-sm font-mono">Free tier</td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">grok-code-fast-1</td>
+                    <td className="px-4 py-3 text-sm font-mono">70.8%</td>
+                    <td className="px-4 py-3 text-sm">API</td>
+                    <td className="px-4 py-3 text-sm">Speed-critical (92 tok/sec)</td>
+                    <td className="px-4 py-3 text-sm font-mono">$0.20/$1.50/M</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
+              <p className="text-sm text-muted-foreground">
+                <strong>Full comparison below</strong> • Features, use cases, selection guide • <a href="#ai-coding" className="text-blue-600 hover:underline">View Details →</a>
+              </p>
+            </div>
+          </section>
 
           <section id="support-definition" className="section-spacing">
             <h2 className="mb-4">What is Support?</h2>
