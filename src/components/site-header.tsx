@@ -7,15 +7,18 @@ import { Button } from "@/components/ui/button";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-6 md:px-8">
+    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 max-w-screen-2xl items-center px-4 md:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <span className="font-bold text-2xl tracking-tight bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent transition-all group-hover:from-foreground group-hover:to-foreground">
+        <Link
+          href="/"
+          className="mr-8 flex items-center gap-2.5 group"
+        >
+          <span className="font-semibold text-[15px] tracking-tight text-foreground transition-colors group-hover:text-foreground/80">
             Avolve
           </span>
-          <span className="hidden lg:inline-flex items-center gap-1.5 text-[11px] font-medium text-muted-foreground/70 tracking-wide uppercase">
-            <span className="inline-block w-1 h-1 rounded-full bg-emerald-500/60" />
+          <span className="hidden lg:inline-flex items-center gap-1.5 text-[11px] font-medium text-muted-foreground/60 tracking-wide uppercase">
+            <span className="inline-block w-1 h-1 rounded-full bg-emerald-500" />
             Oct 2025
           </span>
         </Link>
@@ -24,55 +27,58 @@ export function SiteHeader() {
         <nav className="hidden md:flex items-center gap-1">
           <Link
             href="/about"
-            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all"
+            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
           >
             About
           </Link>
           <Link
             href="/solutions"
-            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all"
+            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
           >
             Solutions
           </Link>
           <Link
             href="/systems"
-            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all"
+            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
           >
             Systems
           </Link>
           <Link
             href="/software"
-            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all"
+            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
           >
             Software
           </Link>
           <Link
             href="/services"
-            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all"
+            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
           >
             Services
           </Link>
           <Link
             href="/support"
-            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all"
+            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
           >
             Support
           </Link>
         </nav>
 
+        {/* Spacer */}
+        <div className="flex-1" />
+
         {/* Right Actions */}
-        <div className="flex items-center gap-2">
-          {/* Mobile Menu - Simple Links */}
-          <nav className="flex md:hidden items-center gap-1 mr-2">
+        <div className="flex items-center gap-1.5">
+          {/* Mobile Navigation */}
+          <nav className="flex md:hidden items-center gap-0.5 mr-1">
             <Link
               href="/about"
-              className="px-3 py-2 text-xs font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-md transition-all"
+              className="px-2.5 py-1.5 text-[13px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
             >
               About
             </Link>
             <Link
               href="/solutions"
-              className="px-3 py-2 text-xs font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-md transition-all"
+              className="px-2.5 py-1.5 text-[13px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
             >
               Solutions
             </Link>
@@ -82,15 +88,17 @@ export function SiteHeader() {
           <Button
             variant="ghost"
             size="icon"
-            className="h-9 w-9 rounded-lg hover:bg-accent/50 transition-all"
+            className="h-8 w-8 rounded-md hover:bg-accent/80 transition-colors duration-150"
             aria-label="Search"
             disabled
           >
-            <Search className="h-4 w-4 text-muted-foreground/70" />
+            <Search className="h-[15px] w-[15px] text-muted-foreground/70" />
           </Button>
 
           {/* Theme Toggle */}
-          <ThemeToggle />
+          <div className="h-8 flex items-center">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </header>
