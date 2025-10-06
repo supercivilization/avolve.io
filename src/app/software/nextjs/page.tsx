@@ -11,7 +11,7 @@ import { AlertCircle, CheckCircle2 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 // Dependencies (October 5, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - React: 19.2.0
 // - Node.js: 24.8.0
 // Last verified: 2025-10-05
@@ -46,7 +46,7 @@ export default function NextJsPage() {
       {
         "@type": "SoftwareApplication",
         "name": "Next.js",
-        "softwareVersion": "15.5.4",
+        "softwareVersion": "15.5.5",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Node.js 24.8.0",
         "offers": {
@@ -111,7 +111,7 @@ export default function NextJsPage() {
           <header className="space-y-4">
             <div className="flex items-center gap-3">
               <h1 className="text-4xl font-bold">Next.js 15</h1>
-              <Badge variant="default">v15.5.4</Badge>
+              <Badge variant="default">v15.5.5</Badge>
               <Badge variant="outline" className="bg-zinc-100 text-zinc-600 border-zinc-300">Production Ready</Badge>
             </div>
             <p className="text-xl text-muted-foreground">
@@ -208,7 +208,7 @@ npm run dev`}
               <AlertCircle className="h-4 w-4" />
               <AlertTitle>Using React 19.2.0</AlertTitle>
               <AlertDescription>
-                Next.js 15.5.4 fully supports React 19.2. No additional configuration needed.
+                Next.js 15.5.5 fully supports React 19.2. No additional configuration needed.
               </AlertDescription>
             </Alert>
           </section>

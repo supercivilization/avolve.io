@@ -5,7 +5,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 // Dependencies (October 5, 2025):
 // - TypeScript: 5.9.2
 // - Node.js: 24.8.0 (native TypeScript support)
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {

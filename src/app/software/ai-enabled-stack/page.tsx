@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 // Dependencies (October 6, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - Vercel AI SDK: 5.0.48
 // - Claude Sonnet 4.5: claude-sonnet-4-5-20250929
 // Last verified: 2025-10-06
@@ -66,7 +66,7 @@ export default function AIEnabledStackPage() {
               <div>
                 <p className="font-bold mb-1">Stack (October 2025):</p>
                 <p className="font-mono text-sm">
-                  Next.js 15.5.4 → Vercel AI SDK 5.0.48 → Claude Sonnet 4.5 (claude-sonnet-4-5-20250929) OR GPT-4 → @upstash/ratelimit → Supabase (conversation history)
+                  Next.js 15.5.5 → Vercel AI SDK 5.0.48 → Claude Sonnet 4.5 (claude-sonnet-4-5-20250929) OR GPT-4 → @upstash/ratelimit → Supabase (conversation history)
                 </p>
               </div>
 

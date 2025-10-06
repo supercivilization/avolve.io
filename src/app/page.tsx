@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 // Dependencies (October 5, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
 // Last verified: 2025-10-05
@@ -35,7 +35,7 @@ export default function Home() {
         },
         "dependencies": {
           "Node.js": "24.8.0",
-          "Next.js": "15.5.4",
+          "Next.js": "15.5.5",
           "React": "19.2.0",
           "TypeScript": "5.9.2",
           "Tailwind CSS": "4.1.13",
@@ -58,7 +58,7 @@ export default function Home() {
           {"@type": "SoftwareApplication", "name": "Node.js", "version": "24.8.0"},
           {"@type": "SoftwareApplication", "name": "TypeScript", "version": "5.9.2"},
           {"@type": "SoftwareApplication", "name": "React", "version": "19.2.0"},
-          {"@type": "SoftwareApplication", "name": "Next.js", "version": "15.5.4"},
+          {"@type": "SoftwareApplication", "name": "Next.js", "version": "15.5.5"},
           {"@type": "SoftwareApplication", "name": "Tailwind CSS", "version": "4.1.13"},
           {"@type": "SoftwareApplication", "name": "shadcn/ui", "version": "3.3.1"},
           {"@type": "SoftwareApplication", "name": "Vercel AI SDK", "version": "5.0.48"},
@@ -304,7 +304,7 @@ export default function Home() {
                   <p className="text-sm">→ Requires: Node.js 18.18+ (we use 24.8.0 for performance)</p>
                 </div>
                 <div>
-                  <p className="font-bold">4. Next.js 15.5.4</p>
+                  <p className="font-bold">4. Next.js 15.5.5</p>
                   <p className="text-sm text-muted-foreground">Full-stack framework</p>
                   <p className="text-sm">→ Requires: React 19.x, Node.js 18.18+</p>
                   <p className="text-sm">→ Provides: Turbopack (2-5x faster), Server Components, Edge Runtime</p>
@@ -407,7 +407,7 @@ export default function Home() {
                 <TableRow>
                   <TableCell>Framework</TableCell>
                   <TableCell className="font-mono text-sm">Next.js</TableCell>
-                  <TableCell className="font-mono text-sm">15.5.4</TableCell>
+                  <TableCell className="font-mono text-sm">15.5.5</TableCell>
                   <TableCell>Sep 2025</TableCell>
                 </TableRow>
                 <TableRow>

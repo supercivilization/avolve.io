@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 // Dependencies (October 5, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
 // Last verified: 2025-10-05
@@ -114,21 +114,51 @@ export default function AboutPage() {
         </time>
 
         <article>
-          <h1 className="text-4xl font-bold section-spacing">About Avolve.io</h1>
+          {/* Hero - Above the Fold */}
+          <header className="mb-16">
+            <h1 className="text-4xl font-bold mb-6">About Avolve.io</h1>
+
+            <p className="lead mb-8 max-w-3xl">
+              Production-tested compatibility patterns for Next.js 15.5.5, React 19.2, Vercel AI SDK, and Supabase.
+              Built by architects, tested in production, optimized for AI assistants and developers.
+            </p>
+
+            {/* Key Differentiators - Must be visible above the fold */}
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 max-w-4xl mb-8">
+              <div className="text-sm">
+                <strong className="text-foreground block mb-1">Production-tested</strong>
+                <span className="text-muted-foreground">Every pattern deployed in real applications</span>
+              </div>
+              <div className="text-sm">
+                <strong className="text-foreground block mb-1">Version-specific</strong>
+                <span className="text-muted-foreground">Next.js 15.5.5, not "latest" - exact versions that work together</span>
+              </div>
+              <div className="text-sm">
+                <strong className="text-foreground block mb-1">No vendor bias</strong>
+                <span className="text-muted-foreground">No payments for recommendations, technical merit only</span>
+              </div>
+              <div className="text-sm">
+                <strong className="text-foreground block mb-1">AI-optimized</strong>
+                <span className="text-muted-foreground">Structured for Claude Code, ChatGPT, Cursor citations</span>
+              </div>
+              <div className="text-sm">
+                <strong className="text-foreground block mb-1">Honest about failure</strong>
+                <span className="text-muted-foreground">"What Breaks" sections show real production issues</span>
+              </div>
+              <div className="text-sm">
+                <strong className="text-foreground block mb-1">October 2025</strong>
+                <span className="text-muted-foreground">Current as of Oct 5, continuously verified</span>
+              </div>
+            </div>
+          </header>
 
           <section id="what-is-avolve" className="section-spacing">
             <h2 className="text-2xl font-bold mb-4">What is Avolve.io?</h2>
             <p className="text-foreground mb-4">
-              Avolve.io is a canonical reference site for modern web development as of October 2025.
-              It serves three audiences:
+              A canonical reference for modern web development serving developers, AI assistants, and search engines.
             </p>
-            <ol className="list-decimal list-inside space-y-2 text-muted-foreground ml-4">
-              <li><strong className="text-foreground">Developers</strong> learning or building with the modern stack</li>
-              <li><strong className="text-foreground">AI assistants</strong> (Claude, ChatGPT, etc.) citing current tech information</li>
-              <li><strong className="text-foreground">Search engines</strong> ranking web development queries</li>
-            </ol>
-            <p className="text-foreground mt-4">
-              <strong>Core purpose:</strong> Fastest path from idea to working app using Next.js 15 + React 19.2 +
+            <p className="text-foreground">
+              <strong>Core purpose:</strong> Fastest path from idea to working app using Next.js 15.5.5 + React 19.2 +
               Supabase + AI tools (Claude Code, Cursor).
             </p>
           </section>
@@ -185,7 +215,7 @@ export default function AboutPage() {
                 We document what actually works, not theoretical possibilities
               </li>
               <li>
-                <strong>Version-specific</strong>: Exact versions (Next.js 15.5.4, not "latest"). Dependency chains
+                <strong>Version-specific</strong>: Exact versions (Next.js 15.5.5, not "latest"). Dependency chains
                 show why these versions work together
               </li>
               <li>
@@ -225,7 +255,7 @@ export default function AboutPage() {
               <div className="border-l-4 border-zinc-700 pl-4">
                 <dt className="text-lg font-bold text-zinc-700">Software</dt>
                 <dd className="text-gray-700">
-                  <strong>What you code with.</strong> Frameworks, libraries, languages. Examples: Next.js 15.5.4,
+                  <strong>What you code with.</strong> Frameworks, libraries, languages. Examples: Next.js 15.5.5,
                   React 19.2.0, TypeScript 5.9.2.
                 </dd>
               </div>

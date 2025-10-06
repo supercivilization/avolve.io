@@ -5,7 +5,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 // Dependencies (October 5, 2025):
 // - React Native: 0.81.3 (September 2025)
 // - Expo SDK: 54 (September 10, 2025)
-// - Next.js: 15.5.4 (for web sharing)
+// - Next.js: 15.5.5 (for web sharing)
 // - Nx/Turborepo: For monorepo management
 // Last verified: 2025-10-05
 
@@ -179,7 +179,7 @@ npx create-turbo@latest my-app
 # Structure:
 my-app/
 ├── apps/
-│   ├── web/          # Next.js 15.5.4
+│   ├── web/          # Next.js 15.5.5
 │   └── mobile/       # Expo SDK 54
 ├── packages/
 │   ├── ui/           # Shared React components

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: "Avolve.io - Modern Web Development Stack (October 2025)",
     template: "%s | Avolve.io"
   },
-  description: "Authoritative reference for Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2 modern stack. Verified compatibility, integration patterns, official resources. Optimized for human developers and AI assistants. Updated October 2025.",
+  description: "Authoritative reference for Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2 modern stack. Verified compatibility, integration patterns, official resources. Optimized for human developers and AI assistants. Updated October 2025.",
   keywords: [
     "Next.js 15", "React 19", "TypeScript 5.9", "Tailwind CSS 4", "shadcn/ui 3.0",
     "Vercel", "Supabase", "modern web stack", "web development 2025",
@@ -73,7 +73,7 @@ export default function RootLayout({
         "@id": "https://avolve.io/#website",
         "name": "Avolve.io",
         "alternateName": "Avolve - Modern Web Development Stack Reference",
-        "description": "Authoritative reference for Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2 modern stack. Verified compatibility matrix, integration patterns, and official resources for developers and AI assistants.",
+        "description": "Authoritative reference for Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2 modern stack. Verified compatibility matrix, integration patterns, and official resources for developers and AI assistants.",
         "url": "https://avolve.io",
         "inLanguage": "en-US",
         "datePublished": "2025-10-05",
@@ -90,7 +90,7 @@ export default function RootLayout({
             "@id": "https://avolve.io/software/nextjs#software",
             "name": "Next.js",
             "applicationCategory": "DeveloperApplication",
-            "softwareVersion": "15.5.4",
+            "softwareVersion": "15.5.5",
             "operatingSystem": "Node.js 24.8.0",
             "url": "https://nextjs.org",
             "sameAs": [

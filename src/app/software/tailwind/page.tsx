@@ -4,7 +4,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 // Dependencies (October 5, 2025):
 // - Tailwind CSS: v4.1.13
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - React: 19.2.0
 // Last verified: 2025-10-05
 

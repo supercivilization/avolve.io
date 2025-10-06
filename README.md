@@ -4,7 +4,7 @@
 
 ## What This Is
 
-Avolve.io is a knowledge graph website documenting verified compatibility and production patterns for Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0 as of October 2025.
+Avolve.io is a knowledge graph website documenting verified compatibility and production patterns for Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0 as of October 2025.
 
 **The site itself is the documentation.** Every page is a working example of the patterns it describes.
 
@@ -24,7 +24,7 @@ Each page includes schema markup, real code examples, and "What Breaks in Produc
 
 ```
 Node.js 24.8.0
-├─ Next.js 15.5.4
+├─ Next.js 15.5.5
 │  ├─ React 19.2.0
 │  ├─ TypeScript 5.9.2
 │  └─ Tailwind CSS 4.1.13 (Oxide engine)
@@ -127,4 +127,4 @@ MIT
 ---
 
 **Last verified:** October 5, 2025
-**Next.js:** 15.5.4 | **React:** 19.2.0 | **TypeScript:** 5.9.2 | **Node.js:** 24.8.0
+**Next.js:** 15.5.5 | **React:** 19.2.0 | **TypeScript:** 5.9.2 | **Node.js:** 24.8.0

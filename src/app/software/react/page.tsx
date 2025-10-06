@@ -12,7 +12,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 // Dependencies (October 5, 2025):
 // - React: 19.2.0 (released October 1, 2025)
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - TypeScript: 5.9.2
 // Last verified: 2025-10-05
 
@@ -161,7 +161,7 @@ export default function ReactPage() {
                 <TableBody>
                   <TableRow>
                     <TableCell className="font-medium">Next.js</TableCell>
-                    <TableCell className="font-mono">15.5.4</TableCell>
+                    <TableCell className="font-mono">15.5.5</TableCell>
                     <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>

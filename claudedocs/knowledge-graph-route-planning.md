@@ -10,7 +10,7 @@
 
 ### Software Layer
 - ✅ `/software` - Hub page
-- ✅ `/software/nextjs` - Next.js 15.5.4
+- ✅ `/software/nextjs` - Next.js 15.5.5
 - ✅ `/software/react` - React 19.2.0
 - ✅ `/software/nodejs` - Node.js 24.8.0
 - 🔄 `/software/typescript` - TypeScript 5.9.2 (being built in another chat)
@@ -75,7 +75,7 @@
 **Definition:** Individual frameworks, libraries, and tools
 
 #### Core Stack (Priority 1)
-- ✅ `/software/nextjs` - Next.js 15.5.4
+- ✅ `/software/nextjs` - Next.js 15.5.5
 - ✅ `/software/react` - React 19.2.0
 - ✅ `/software/nodejs` - Node.js 24.8.0
 - 🔄 `/software/typescript` - TypeScript 5.9.2 (in progress)
@@ -255,7 +255,7 @@ Based on research findings from `/systems/search` validation:
 ### Content Freshness Strategy
 - Update `dateModified` monthly for high-priority pages
 - Add "Last verified: YYYY-MM-DD" timestamps
-- Include version numbers for all software (Next.js 15.5.4 not just "Next.js 15")
+- Include version numbers for all software (Next.js 15.5.5 not just "Next.js 15")
 - Reference current release dates for credibility
 
 ## Next Actions

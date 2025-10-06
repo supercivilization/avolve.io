@@ -6,7 +6,7 @@
 
 ## Before Contributing
 
-1. **Verify versions** - Test code with Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0
+1. **Verify versions** - Test code with Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0
 2. **Check existing patterns** - Review similar pages to match style and structure
 3. **No speculation** - Only document what you've verified in production or local testing
 
@@ -26,7 +26,7 @@
 5. **Version comments** at top of file:
    ```typescript
    // Dependencies (October 5, 2025):
-   // - Next.js: 15.5.4
+   // - Next.js: 15.5.5
    // - React: 19.2.0
    // Last verified: 2025-10-05
    ```

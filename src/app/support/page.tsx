@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 // Dependencies (October 5, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
 // Last verified: 2025-10-05

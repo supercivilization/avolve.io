@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 // Dependencies (October 6, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
 // Last verified: 2025-10-06
@@ -63,7 +63,7 @@ export default function ReactToProductionPage() {
             </p>
             <div className="bg-white dark:bg-gray-900 p-4 rounded border border-border">
               <p className="font-mono text-sm">
-                Node.js 24.8.0 → TypeScript 5.9.2 → React 19.2.0 → Next.js 15.5.4 → Tailwind CSS 4.1.13 → shadcn/ui 3.3.1 → Vercel Deploy
+                Node.js 24.8.0 → TypeScript 5.9.2 → React 19.2.0 → Next.js 15.5.5 → Tailwind CSS 4.1.13 → shadcn/ui 3.3.1 → Vercel Deploy
               </p>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
@@ -263,7 +263,7 @@ npm install react@19.2.0 react-dom@19.2.0
                 <p className="text-sm text-muted-foreground mb-3">Full-stack framework • Requires: React 19.x, Node.js 18.18+</p>
 
                 <div className="bg-muted p-4 rounded-lg mb-4">
-                  <p className="font-bold mb-2">Create Next.js 15.5.4 App</p>
+                  <p className="font-bold mb-2">Create Next.js 15.5.5 App</p>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">
 {`# Create new Next.js app with all recommended settings
 npx create-next-app@latest my-app \\

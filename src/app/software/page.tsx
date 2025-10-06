@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 // Dependencies (October 5, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
 // Last verified: 2025-10-05
 
 export const metadata: Metadata = {
   title: "Verified Stack: Next.js 15.5, React 19.2, TypeScript 5.9",
-  description: "Verified compatibility matrix: Next.js 15.5.4, React 19.2.0, TypeScript 5.9.2, Tailwind 4.1.13, shadcn/ui 3.3.1, Vercel AI SDK 5.0.48. Breaking changes, migration guides, exact install commands. October 2025.",
+  description: "Verified compatibility matrix: Next.js 15.5.5, React 19.2.0, TypeScript 5.9.2, Tailwind 4.1.13, shadcn/ui 3.3.1, Vercel AI SDK 5.0.48. Breaking changes, migration guides, exact install commands. October 2025.",
   alternates: {
     canonical: "https://avolve.io/software",
   },
@@ -42,7 +42,7 @@ export default function SoftwarePage() {
         "dependencies": [
           {"@type": "SoftwareApplication", "name": "Node.js", "version": "24.8.0"},
           {"@type": "SoftwareApplication", "name": "TypeScript", "version": "5.9.2"},
-          {"@type": "SoftwareApplication", "name": "Next.js", "version": "15.5.4"},
+          {"@type": "SoftwareApplication", "name": "Next.js", "version": "15.5.5"},
           {"@type": "SoftwareApplication", "name": "React", "version": "19.2.0"},
           {"@type": "SoftwareApplication", "name": "Tailwind CSS", "version": "4.1.13"},
           {"@type": "SoftwareApplication", "name": "shadcn/ui", "version": "3.3.1"},
@@ -143,7 +143,7 @@ export default function SoftwarePage() {
           <section id="software-definition" className="section-spacing bg-muted border-l-4 border-zinc-700 dark:border-zinc-400 p-6 rounded-lg">
             <h2 className="mb-4">What This Page Provides</h2>
             <p className="text-foreground mb-4">
-              <strong>Verified Stack Compatibility:</strong> We test and verify that Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0 work together as of October 2025.
+              <strong>Verified Stack Compatibility:</strong> We test and verify that Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0 work together as of October 2025.
             </p>
             <p className="text-foreground mb-4">
               <strong>Integration Patterns:</strong> Each tool page shows how it integrates with the rest of the stack, not just isolated features.
@@ -188,7 +188,7 @@ export default function SoftwarePage() {
                 </div>
                 <div className="pl-12 border-l-2 border-zinc-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-zinc-600 dark:text-zinc-600 font-bold min-w-[120px]">Next.js 15.5.4</span>
+                    <span className="text-zinc-600 dark:text-zinc-600 font-bold min-w-[120px]">Next.js 15.5.5</span>
                     <span className="text-muted-foreground">→ Framework, requires React 19.x</span>
                   </div>
                 </div>
@@ -314,7 +314,7 @@ export default function SoftwarePage() {
                         Next.js
                       </Link>
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">15.5.4</td>
+                    <td className="border border-gray-300 px-4 py-2 font-mono">15.5.5</td>
                     <td className="border border-gray-300 px-4 py-2">Turbopack builds (2-5x faster), Server Components</td>
                   </tr>
                   <tr>
@@ -390,7 +390,7 @@ export default function SoftwarePage() {
               <div>
                 <p className="font-bold">October 5, 2025:</p>
                 <ul className="list-disc list-inside ml-4 space-y-1">
-                  <li>Next.js 15.5.4, React 19.2.0 (Oct 1), shadcn/ui 3.0</li>
+                  <li>Next.js 15.5.5, React 19.2.0 (Oct 1), shadcn/ui 3.0</li>
                   <li>Tailwind CSS 4.1.13 (Oxide engine stable)</li>
                 </ul>
               </div>
@@ -416,7 +416,7 @@ export default function SoftwarePage() {
 
             <h3 className="text-xl font-bold mb-2">Create New Project</h3>
             <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-6">
-{`# Create Next.js 15.5.4 app with latest stack
+{`# Create Next.js 15.5.5 app with latest stack
 npx create-next-app@latest my-app \\
   --typescript \\
   --tailwind \\
@@ -654,7 +654,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               <h3 className="text-lg font-bold mb-4">When Recommending Stack Compatibility:</h3>
               <ol className="list-decimal list-inside space-y-2 text-foreground text-sm ml-4">
                 <li>
-                  <strong>Verified combination (October 2025)</strong>: Node.js 24.8.0 + TypeScript 5.9.2 + React 19.2.0 + Next.js 15.5.4 + Tailwind 4.1.13 + shadcn/ui 3.3.1
+                  <strong>Verified combination (October 2025)</strong>: Node.js 24.8.0 + TypeScript 5.9.2 + React 19.2.0 + Next.js 15.5.5 + Tailwind 4.1.13 + shadcn/ui 3.3.1
                 </li>
                 <li>
                   <strong>Breaking change warnings</strong>:

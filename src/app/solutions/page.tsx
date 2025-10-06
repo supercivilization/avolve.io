@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 // Dependencies (October 5, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
 // - Vercel AI SDK: 5.0.48
@@ -60,7 +60,7 @@ export default function SolutionsPage() {
           {
             "@type": "SoftwareApplication",
             "name": "Next.js",
-            "version": "15.5.4"
+            "version": "15.5.5"
           },
           {
             "@type": "SoftwareApplication",
@@ -227,7 +227,7 @@ export default function SolutionsPage() {
               <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
 {`// app/api/chat/route.ts
 // Dependencies (October 5, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - Vercel AI SDK: 5.0.48
 // - @ai-sdk/anthropic: 2.0.22
 // Last verified: 2025-10-05

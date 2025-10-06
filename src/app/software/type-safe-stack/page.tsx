@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 // Dependencies (October 6, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - TypeScript: 5.9.2
 // - Supabase: Current
 // - Zod: 3.x

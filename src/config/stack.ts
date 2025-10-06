@@ -12,7 +12,7 @@ export const STACK_VERSIONS = {
   },
   framework: {
     name: 'Next.js',
-    version: '15.5.4',
+    version: '15.5.5',
     released: 'Sep 2025',
   },
   ui: {

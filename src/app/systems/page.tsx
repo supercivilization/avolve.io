@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 // Dependencies (October 5, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - React: 19.2.0
 // - Supabase: 2.58.0
 // Last verified: 2025-10-05
@@ -240,7 +240,7 @@ export default function SystemsPage() {
               <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-6">
 {`// middleware.ts
 // Dependencies (October 5, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - @supabase/ssr: 0.7.1
 // Last verified: 2025-10-05
 

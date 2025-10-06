@@ -11,12 +11,16 @@ Secondary audience: Developers building AI-native applications
 
 ## Core Value Proposition
 Avolve provides production-tested dependency chains and integration patterns for:
-- Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2
-- Vercel AI SDK 5.0.48 for multi-modal AI applications
-- Supabase (PostgreSQL 17, pgvector 0.8, Auth)
-- Tailwind CSS 4.1.13 + shadcn/ui 3.3.1
+- Node.js 22.20.0 LTS (24.9.0 becomes LTS October 28, 2025)
+- TypeScript 5.9.3 (TypeScript 7.0 with 10x Go compiler: end 2025)
+- React 19.2.0 + Next.js 15.5.5
+- Tailwind CSS 4.1.14 (Oxide engine: 5-100x faster)
+- shadcn/ui 3.4.0 (58 components, universal registry)
+- Vercel AI SDK 5.0.60 for multi-modal AI applications
+- Claude Sonnet 4.5 (claude-sonnet-4-5-20250929, 77.2% SWE-bench)
+- Supabase (PostgreSQL 15.8, pgvector 0.8.0, supabase-js 2.58.0)
 
-All combinations verified together in production as of October 2025.
+All combinations verified together in production as of October 6, 2025.
 
 ## Key Pages for AI Context
 

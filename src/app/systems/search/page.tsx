@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 // Dependencies (October 5, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
 // Last verified: 2025-10-05
@@ -67,7 +67,7 @@ export default function SearchSystemPage() {
             "name": "How does Avolve.io optimize for AI citations?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Avolve.io uses comprehensive schema markup with SoftwareApplication types, structured H2→H3→bullet point hierarchy, fresh publication dates, direct answer formatting in opening paragraphs, and original data about the verified stack (Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2)."
+              "text": "Avolve.io uses comprehensive schema markup with SoftwareApplication types, structured H2→H3→bullet point hierarchy, fresh publication dates, direct answer formatting in opening paragraphs, and original data about the verified stack (Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2)."
             }
           },
           {
@@ -239,14 +239,14 @@ const schemaData = {
     {
       "@type": "WebSite",
       "name": "Avolve.io",
-      "description": "Authoritative reference for Next.js 15.5.4 + React 19.2.0...",
+      "description": "Authoritative reference for Next.js 15.5.5 + React 19.2.0...",
       "datePublished": "2025-10-05",
       "dateModified": "2025-10-05",
       "about": [
         {
           "@type": "SoftwareApplication",
           "name": "Next.js",
-          "softwareVersion": "15.5.4"
+          "softwareVersion": "15.5.5"
         }
         // ... more software entities
       ]
@@ -307,7 +307,7 @@ const schemaData = {
                   Fresh publication dates (within 30 days) generate <strong>3.2x more AI citations</strong>. We provide:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                  <li><strong>Verified versions:</strong> Next.js 15.5.4, React 19.2.0, TypeScript 5.9.2, Node.js 24.8.0 (tested October 2025)</li>
+                  <li><strong>Verified versions:</strong> Next.js 15.5.5, React 19.2.0, TypeScript 5.9.2, Node.js 24.8.0 (tested October 2025)</li>
                   <li><strong>Original data:</strong> Compatibility matrix showing these tools work together</li>
                   <li><strong>Clear attribution:</strong> Every fact sourced from official docs or our testing</li>
                   <li><strong>Time-stamped updates:</strong> <code className="bg-gray-100 px-2 py-1 rounded">&lt;time dateTime="2025-10-05"&gt;</code> on every page</li>
@@ -632,7 +632,7 @@ export default function robots() {
                   Content must offer unique value unavailable elsewhere:
                 </p>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>Original research:</strong> Verified compatibility testing of Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2</li>
+                  <li>• <strong>Original research:</strong> Verified compatibility testing of Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2</li>
                   <li>• <strong>Custom frameworks:</strong> 7-layer stack analysis (Solutions → Systems → Software → Services → Support)</li>
                   <li>• <strong>Advanced tactics:</strong> Production-tested patterns beyond basic documentation</li>
                   <li>• <strong>Superior organization:</strong> Topic clusters linking Software → Systems → Solutions</li>

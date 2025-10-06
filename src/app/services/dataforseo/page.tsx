@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 // Dependencies (October 5, 2025):
-// - Next.js: 15.5.4
+// - Next.js: 15.5.5
 // - REST API authentication
 // Last verified: 2025-10-05
 
