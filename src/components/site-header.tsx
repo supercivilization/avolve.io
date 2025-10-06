@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="w-full border-b border-border/50 bg-background">
       <div className="container flex h-14 max-w-screen-2xl items-center px-4 md:px-6">
         {/* Logo */}
         <Link
@@ -33,31 +33,31 @@ export function SiteHeader() {
           </Link>
           <Link
             href="/solutions"
-            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
+            className="px-3 py-1.5 text-[14px] font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-colors duration-150"
           >
             Solutions
           </Link>
           <Link
             href="/systems"
-            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
+            className="px-3 py-1.5 text-[14px] font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors duration-150"
           >
             Systems
           </Link>
           <Link
             href="/software"
-            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
+            className="px-3 py-1.5 text-[14px] font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-md transition-colors duration-150"
           >
             Software
           </Link>
           <Link
             href="/services"
-            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
+            className="px-3 py-1.5 text-[14px] font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors duration-150"
           >
             Services
           </Link>
           <Link
             href="/support"
-            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
+            className="px-3 py-1.5 text-[14px] font-medium text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-md transition-colors duration-150"
           >
             Support
           </Link>
@@ -78,7 +78,7 @@ export function SiteHeader() {
             </Link>
             <Link
               href="/solutions"
-              className="px-2.5 py-1.5 text-[13px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent/80 rounded-md transition-colors duration-150"
+              className="px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-colors duration-150"
             >
               Solutions
             </Link>
