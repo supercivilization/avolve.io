@@ -143,7 +143,7 @@ export default function NextJsPage() {
           {/* Quick Info Card */}
           <Card>
             <CardHeader>
-              <CardTitle>Stack Compatibility (Oct 2025)</CardTitle>
+              <CardTitle>Stack Compatibility</CardTitle>
               <CardDescription>Verified versions tested together in production</CardDescription>
             </CardHeader>
             <CardContent>
