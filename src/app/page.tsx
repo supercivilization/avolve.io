@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Rocket, Network, Code, Cloud, LifeBuoy } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 // Dependencies (October 5, 2025):
 // - Next.js: 15.5.4
@@ -95,166 +97,207 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      <main className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+      <main className="page-container">
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
         {/* Hero */}
-        <header className="mt-8 mb-24 text-center md:text-left">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight">Avolve.io</h1>
-          <p className="text-2xl md:text-3xl text-muted-foreground mb-6">Ship your first app this week</p>
-          <p className="text-lg text-muted-foreground">
-            <strong>Stack:</strong> Next.js 15 + React 19.2 + Supabase + Vercel + AI
+        <header className="section-spacing text-center md:text-left">
+          <h1 className="mb-8">Avolve.io</h1>
+          <p className="lead mb-8 max-w-2xl">
+            Ship your first app this week
+          </p>
+          <p className="text-muted-foreground max-w-xl">
+            <strong className="text-foreground">Stack:</strong> Next.js 15 + React 19.2 + Supabase + Vercel + AI
           </p>
         </header>
 
         {/* Canonical 5S Definition */}
-        <section id="definition" className="mb-24">
-          <h2 className="text-3xl font-bold mb-6">Modern Web Development Stack</h2>
+        <section id="definition" className="section-spacing">
+          <h2 className="mb-12">Modern Web Development Stack</h2>
 
-          <dl className="space-y-8">
-            <div id="solutions" className="border-l-4 border-slate-600 dark:border-slate-400 pl-6 hover:border-slate-500 transition-colors">
-              <div className="flex items-start gap-4">
-                <Rocket className="text-slate-600 dark:text-slate-400 flex-shrink-0" size={40} strokeWidth={1.5} />
-                <div className="flex-1">
-                  <dt className="text-xl font-bold text-slate-700 dark:text-slate-300 mb-1">Solutions</dt>
-                  <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">Business outcomes delivered to end users</dd>
-                  <dd className="text-sm">
-                    <Link href="/solutions" className="text-slate-600 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:underline font-medium inline-flex items-center gap-1">
-                      Explore Solutions <span aria-hidden="true">→</span>
-                    </Link>
-                  </dd>
+          <div className="space-y-8">
+            <Card id="solutions" className="border-l-4 border-slate-600 dark:border-slate-400 hover:shadow-md transition-all">
+              <CardHeader>
+                <div className="flex items-start gap-6">
+                  <Rocket className="text-slate-600 dark:text-slate-400 flex-shrink-0" size={48} strokeWidth={1.5} />
+                  <div className="flex-1">
+                    <CardTitle className="text-xl">Solutions</CardTitle>
+                    <CardDescription className="text-base leading-relaxed mt-2">
+                      Business outcomes delivered to end users
+                    </CardDescription>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </CardHeader>
+              <CardContent>
+                <Link href="/solutions" className="text-slate-600 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:underline font-medium inline-flex items-center gap-1">
+                  Explore Solutions <span aria-hidden="true">→</span>
+                </Link>
+              </CardContent>
+            </Card>
 
-            <div id="systems" className="border-l-4 border-gray-600 dark:border-gray-400 pl-6 hover:border-gray-500 transition-colors">
-              <div className="flex items-start gap-4">
-                <Network className="text-gray-600 dark:text-gray-400 flex-shrink-0" size={40} strokeWidth={1.5} />
-                <div className="flex-1">
-                  <dt className="text-xl font-bold text-gray-700 dark:text-gray-300 mb-1">Systems</dt>
-                  <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">Architecture patterns coordinating multiple components</dd>
-                  <dd className="text-sm">
-                    <Link href="/systems" className="text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:underline font-medium inline-flex items-center gap-1">
-                      Explore Systems <span aria-hidden="true">→</span>
-                    </Link>
-                  </dd>
+            <Card id="systems" className="border-l-4 border-gray-600 dark:border-gray-400 hover:shadow-md transition-all">
+              <CardHeader>
+                <div className="flex items-start gap-6">
+                  <Network className="text-gray-600 dark:text-gray-400 flex-shrink-0" size={48} strokeWidth={1.5} />
+                  <div className="flex-1">
+                    <CardTitle className="text-xl">Systems</CardTitle>
+                    <CardDescription className="text-base leading-relaxed mt-2">
+                      Architecture patterns coordinating multiple components
+                    </CardDescription>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </CardHeader>
+              <CardContent>
+                <Link href="/systems" className="text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:underline font-medium inline-flex items-center gap-1">
+                  Explore Systems <span aria-hidden="true">→</span>
+                </Link>
+              </CardContent>
+            </Card>
 
-            <div id="software" className="border-l-4 border-zinc-700 dark:border-zinc-400 pl-6 hover:border-zinc-600 transition-colors">
-              <div className="flex items-start gap-4">
-                <Code className="text-zinc-700 dark:text-zinc-400 flex-shrink-0" size={40} strokeWidth={1.5} />
-                <div className="flex-1">
-                  <dt className="text-xl font-bold text-zinc-700 dark:text-zinc-300 mb-1">Software</dt>
-                  <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">Code, frameworks, libraries (Next.js 15.5, React 19.2, TypeScript 5.9)</dd>
-                  <dd className="text-sm">
-                    <Link href="/software" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline font-medium inline-flex items-center gap-1">
-                      Explore Software <span aria-hidden="true">→</span>
-                    </Link>
-                  </dd>
+            <Card id="software" className="border-l-4 border-zinc-700 dark:border-zinc-400 hover:shadow-md transition-all">
+              <CardHeader>
+                <div className="flex items-start gap-6">
+                  <Code className="text-zinc-700 dark:text-zinc-400 flex-shrink-0" size={48} strokeWidth={1.5} />
+                  <div className="flex-1">
+                    <CardTitle className="text-xl">Software</CardTitle>
+                    <CardDescription className="text-base leading-relaxed mt-2">
+                      Code, frameworks, libraries (Next.js 15.5, React 19.2, TypeScript 5.9)
+                    </CardDescription>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </CardHeader>
+              <CardContent>
+                <Link href="/software" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline font-medium inline-flex items-center gap-1">
+                  Explore Software <span aria-hidden="true">→</span>
+                </Link>
+              </CardContent>
+            </Card>
 
-            <div id="services" className="border-l-4 border-neutral-600 dark:border-neutral-400 pl-6 hover:border-neutral-500 transition-colors">
-              <div className="flex items-start gap-4">
-                <Cloud className="text-neutral-600 dark:text-neutral-400 flex-shrink-0" size={40} strokeWidth={1.5} />
-                <div className="flex-1">
-                  <dt className="text-xl font-bold text-neutral-700 dark:text-neutral-300 mb-1">Services</dt>
-                  <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">External managed capabilities (Vercel, Supabase, Claude API, Stripe)</dd>
-                  <dd className="text-sm">
-                    <Link href="/services" className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 hover:underline font-medium inline-flex items-center gap-1">
-                      Explore Services <span aria-hidden="true">→</span>
-                    </Link>
-                  </dd>
+            <Card id="services" className="border-l-4 border-neutral-600 dark:border-neutral-400 hover:shadow-md transition-all">
+              <CardHeader>
+                <div className="flex items-start gap-6">
+                  <Cloud className="text-neutral-600 dark:text-neutral-400 flex-shrink-0" size={48} strokeWidth={1.5} />
+                  <div className="flex-1">
+                    <CardTitle className="text-xl">Services</CardTitle>
+                    <CardDescription className="text-base leading-relaxed mt-2">
+                      External managed capabilities (Vercel, Supabase, Claude API, Stripe)
+                    </CardDescription>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </CardHeader>
+              <CardContent>
+                <Link href="/services" className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 hover:underline font-medium inline-flex items-center gap-1">
+                  Explore Services <span aria-hidden="true">→</span>
+                </Link>
+              </CardContent>
+            </Card>
 
-            <div id="support" className="border-l-4 border-stone-600 dark:border-stone-400 pl-6 hover:border-stone-500 transition-colors">
-              <div className="flex items-start gap-4">
-                <LifeBuoy className="text-stone-600 dark:text-stone-400 flex-shrink-0" size={40} strokeWidth={1.5} />
-                <div className="flex-1">
-                  <dt className="text-xl font-bold text-stone-700 dark:text-stone-300 mb-1">Support</dt>
-                  <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">Operations maintaining production systems</dd>
-                  <dd className="text-sm">
-                    <Link href="/support" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline font-medium inline-flex items-center gap-1">
-                      Explore Support <span aria-hidden="true">→</span>
-                    </Link>
-                  </dd>
+            <Card id="support" className="border-l-4 border-stone-600 dark:border-stone-400 hover:shadow-md transition-all">
+              <CardHeader>
+                <div className="flex items-start gap-6">
+                  <LifeBuoy className="text-stone-600 dark:text-stone-400 flex-shrink-0" size={48} strokeWidth={1.5} />
+                  <div className="flex-1">
+                    <CardTitle className="text-xl">Support</CardTitle>
+                    <CardDescription className="text-base leading-relaxed mt-2">
+                      Operations maintaining production systems
+                    </CardDescription>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </dl>
+              </CardHeader>
+              <CardContent>
+                <Link href="/support" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline font-medium inline-flex items-center gap-1">
+                  Explore Support <span aria-hidden="true">→</span>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
         </section>
 
         {/* Quick Navigation */}
-        <section id="quick-nav" className="mb-24 bg-gray-50 dark:bg-gray-900/20 p-8 rounded-lg">
-          <h2 className="text-2xl font-bold mb-6">What do you want to do?</h2>
-          <ul className="space-y-3">
-            <li>→ <Link href="/solutions" className="text-slate-600 dark:text-slate-400 hover:underline font-medium">Build something new</Link></li>
-            <li>→ <Link href="/support" className="text-stone-600 dark:text-stone-400 hover:underline font-medium">Fix production issue</Link></li>
-            <li>→ <Link href="/software" className="text-zinc-700 dark:text-zinc-400 hover:underline font-medium">Choose tools</Link> and <Link href="/services" className="text-neutral-600 dark:text-neutral-400 hover:underline font-medium">services</Link></li>
-            <li>→ <Link href="/systems" className="text-gray-600 dark:text-gray-400 hover:underline font-medium">Understand architecture</Link></li>
-            <li>→ <Link href="/about" className="text-gray-600 dark:text-gray-400 hover:underline">About this site</Link></li>
-          </ul>
-        </section>
+        <Card className="section-spacing bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-900/20 dark:to-gray-900/10">
+          <CardHeader>
+            <CardTitle className="text-2xl">What do you want to do?</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2 hover:translate-x-1 transition-transform">
+                <span className="text-slate-600 dark:text-slate-400">→</span>
+                <Link href="/solutions" className="text-slate-600 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:underline font-medium">Build something new</Link>
+              </li>
+              <li className="flex items-start gap-2 hover:translate-x-1 transition-transform">
+                <span className="text-stone-600 dark:text-stone-400">→</span>
+                <Link href="/support" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline font-medium">Fix production issue</Link>
+              </li>
+              <li className="flex items-start gap-2 hover:translate-x-1 transition-transform">
+                <span className="text-gray-600 dark:text-gray-400">→</span>
+                <Link href="/software" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline font-medium">Choose tools</Link> and <Link href="/services" className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 hover:underline font-medium">services</Link>
+              </li>
+              <li className="flex items-start gap-2 hover:translate-x-1 transition-transform">
+                <span className="text-gray-600 dark:text-gray-400">→</span>
+                <Link href="/systems" className="text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:underline font-medium">Understand architecture</Link>
+              </li>
+              <li className="flex items-start gap-2 hover:translate-x-1 transition-transform">
+                <span className="text-gray-600 dark:text-gray-400">→</span>
+                <Link href="/about" className="text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:underline">About this site</Link>
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
 
         {/* Current Stack Versions */}
-        <section id="current-stack" className="mb-24">
-          <h2 className="text-2xl font-bold mb-4">Current Stack Versions</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-gray-300">
-              <thead className="bg-gray-100">
-                <tr>
-                  <th className="border border-gray-300 px-4 py-2 text-left">Category</th>
-                  <th className="border border-gray-300 px-4 py-2 text-left">Tool</th>
-                  <th className="border border-gray-300 px-4 py-2 text-left">Version</th>
-                  <th className="border border-gray-300 px-4 py-2 text-left">Released</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 px-4 py-2">Runtime</td>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">Node.js</td>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">24.8.0</td>
-                  <td className="border border-gray-300 px-4 py-2">Aug 2025</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 px-4 py-2">Framework</td>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">Next.js</td>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">15.5.4</td>
-                  <td className="border border-gray-300 px-4 py-2">Sep 2025</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 px-4 py-2">UI Library</td>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">React</td>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">19.2.0</td>
-                  <td className="border border-gray-300 px-4 py-2">Oct 1, 2025</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 px-4 py-2">Language</td>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">TypeScript</td>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">5.9.2</td>
-                  <td className="border border-gray-300 px-4 py-2">Sep 2025</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 px-4 py-2">Styling</td>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">Tailwind CSS</td>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">4.1.13</td>
-                  <td className="border border-gray-300 px-4 py-2">Sep 2025</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 px-4 py-2">Components</td>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">shadcn/ui</td>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">3.0</td>
-                  <td className="border border-gray-300 px-4 py-2">Oct 2025</td>
-                </tr>
-              </tbody>
-            </table>
+        <section id="current-stack" className="section-spacing">
+          <h2 className="mb-12">Current Stack Versions</h2>
+          <div className="rounded-lg border">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Category</TableHead>
+                  <TableHead>Tool</TableHead>
+                  <TableHead>Version</TableHead>
+                  <TableHead>Released</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell>Runtime</TableCell>
+                  <TableCell className="font-mono text-sm">Node.js</TableCell>
+                  <TableCell className="font-mono text-sm">24.8.0</TableCell>
+                  <TableCell>Aug 2025</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Framework</TableCell>
+                  <TableCell className="font-mono text-sm">Next.js</TableCell>
+                  <TableCell className="font-mono text-sm">15.5.4</TableCell>
+                  <TableCell>Sep 2025</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>UI Library</TableCell>
+                  <TableCell className="font-mono text-sm">React</TableCell>
+                  <TableCell className="font-mono text-sm">19.2.0</TableCell>
+                  <TableCell>Oct 1, 2025</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Language</TableCell>
+                  <TableCell className="font-mono text-sm">TypeScript</TableCell>
+                  <TableCell className="font-mono text-sm">5.9.2</TableCell>
+                  <TableCell>Sep 2025</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Styling</TableCell>
+                  <TableCell className="font-mono text-sm">Tailwind CSS</TableCell>
+                  <TableCell className="font-mono text-sm">4.1.13</TableCell>
+                  <TableCell>Sep 2025</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Components</TableCell>
+                  <TableCell className="font-mono text-sm">shadcn/ui</TableCell>
+                  <TableCell className="font-mono text-sm">3.0</TableCell>
+                  <TableCell>Oct 2025</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
           </div>
         </section>
       </main>

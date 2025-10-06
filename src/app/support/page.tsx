@@ -154,37 +154,37 @@ export default function SupportPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
+      <main className="page-container">
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
-        <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-stone-700">Support</h1>
-          <p className="text-xl text-gray-700 mb-12">
+        <article>
+          <h1 className="mb-4">Support</h1>
+          <p className="lead section-spacing">
             Operations keeping production running
           </p>
 
-          <section id="support-definition" className="mb-12">
-            <h2 className="text-2xl font-bold mb-4">What is Support?</h2>
-            <p className="text-gray-700 mb-4">
+          <section id="support-definition" className="section-spacing">
+            <h2 className="mb-4">What is Support?</h2>
+            <p className="text-foreground mb-4">
               Support is the operational work that keeps production systems running smoothly.
               This includes monitoring, debugging, incident response, and optimization.
             </p>
-            <p className="text-gray-700">
-              Support maintains <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link>,
-              troubleshoots <Link href="/systems" className="text-gray-600 hover:underline ml-1">Systems</Link>,
-              debugs <Link href="/software" className="text-zinc-700 hover:underline ml-1">Software</Link>, and
-              monitors <Link href="/services" className="text-neutral-600 hover:underline ml-1">Services</Link>.
+            <p className="text-muted-foreground">
+              Support maintains <Link href="/solutions" className="hover:underline">Solutions</Link>,
+              troubleshoots <Link href="/systems" className="hover:underline ml-1">Systems</Link>,
+              debugs <Link href="/software" className="hover:underline ml-1">Software</Link>, and
+              monitors <Link href="/services" className="hover:underline ml-1">Services</Link>.
             </p>
           </section>
 
-          <section id="runbook-database-slow" className="mb-16 border-t pt-8">
-            <h2 className="text-3xl font-bold mb-6">Runbook: Database Queries Suddenly Slow</h2>
+          <section id="runbook-database-slow" className="section-spacing border-t pt-8">
+            <h2 className="mb-12">Runbook: Database Queries Suddenly Slow</h2>
 
-            <div className="bg-stone-50 p-6 rounded-lg mb-6">
+            <div className="bg-muted p-6 rounded-lg mb-8">
               <h3 className="text-xl font-bold mb-3">Symptom</h3>
-              <p className="text-gray-700">
+              <p className="text-foreground">
                 API responses taking 5-30 seconds. Users reporting &quot;loading forever&quot; on dashboard.
                 Vercel Analytics showing increased database timeout errors.
               </p>
@@ -202,7 +202,7 @@ export default function SupportPage() {
 
             <div className="mb-8">
               <h3 className="text-xl font-bold mb-4">Diagnosis Steps</h3>
-              <ol className="list-decimal list-inside space-y-4 text-gray-700 ml-4">
+              <ol className="list-decimal list-inside space-y-4 text-foreground ml-4">
                 <li>
                   <strong>Check Supabase Dashboard</strong>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded mt-2 text-sm overflow-x-auto">
@@ -256,7 +256,7 @@ ORDER BY idx_scan ASC;
 
             <div className="mb-8">
               <h3 className="text-xl font-bold mb-4">Fix Steps</h3>
-              <ol className="list-decimal list-inside space-y-4 text-gray-700 ml-4">
+              <ol className="list-decimal list-inside space-y-4 text-foreground ml-4">
                 <li>
                   <strong>Create missing index</strong>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded mt-2 text-sm overflow-x-auto">
@@ -306,9 +306,9 @@ WHERE email = 'test@example.com';
               </ol>
             </div>
 
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-4">
+            <div className="bg-muted border-l-4 border-blue-600 dark:border-blue-400 p-6">
               <h3 className="text-lg font-bold mb-2">Prevention</h3>
-              <ul className="space-y-2 text-gray-700 text-sm">
+              <ul className="space-y-2 text-foreground text-sm">
                 <li>
                   <strong>Index planning:</strong> Add indexes for all WHERE, JOIN, and ORDER BY columns
                 </li>
@@ -328,8 +328,8 @@ WHERE email = 'test@example.com';
             </div>
           </section>
 
-          <section id="common-issues" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">Common Production Issues (Quick Reference)</h2>
+          <section id="common-issues" className="section-spacing border-t pt-8">
+            <h2 className="mb-8">Common Production Issues (Quick Reference)</h2>
 
             <div className="space-y-6">
               <div className="border-l-4 border-yellow-400 pl-4">
@@ -370,8 +370,8 @@ WHERE email = 'test@example.com';
             </div>
           </section>
 
-          <section id="monitoring-setup" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">Essential Monitoring Setup</h2>
+          <section id="monitoring-setup" className="section-spacing border-t pt-8">
+            <h2 className="mb-8">Essential Monitoring Setup</h2>
 
             <div className="overflow-x-auto mb-6">
               <table className="w-full border-collapse border border-gray-300">
@@ -453,14 +453,14 @@ WHERE email = 'test@example.com';
             </div>
           </section>
 
-          <section id="ai-coding" className="mb-12 border-t pt-8">
-            <h2 className="text-3xl font-bold mb-6">AI Coding Assistance Tools (Late 2025)</h2>
+          <section id="ai-coding" className="section-spacing border-t pt-8">
+            <h2 className="mb-12">AI Coding Assistance Tools (Late 2025)</h2>
 
-            <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-lg mb-8">
-              <p className="text-gray-700 mb-4">
+            <div className="bg-muted border-l-4 border-purple-600 dark:border-purple-400 p-6 rounded-lg mb-8">
+              <p className="text-foreground mb-4">
                 <strong>AI coding tools have matured significantly in 2025.</strong> Terminal-native agents like Claude Code achieve 72.5% on SWE-bench Verified, while multi-platform orchestrators like OpenAI Codex hit 74.9%. These tools handle production debugging, complex refactoring, and multi-file edits.
               </p>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-foreground">
                 <li>• <strong>Best for terminal-native workflows:</strong> Claude Code, Gemini CLI</li>
                 <li>• <strong>Best for multi-platform orchestration:</strong> OpenAI Codex</li>
                 <li>• <strong>Best for speed-critical tasks:</strong> grok-code-fast-1 (92 tokens/sec)</li>
@@ -578,10 +578,10 @@ WHERE email = 'test@example.com';
             </div>
           </section>
 
-          <section id="incident-response" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">Incident Response Process</h2>
+          <section id="incident-response" className="section-spacing border-t pt-8">
+            <h2 className="mb-8">Incident Response Process</h2>
 
-            <ol className="list-decimal list-inside space-y-4 text-gray-700 ml-4">
+            <ol className="list-decimal list-inside space-y-4 text-foreground ml-4">
               <li>
                 <strong>Detect:</strong> Alert fires (Vercel Analytics, deployment logs, user reports)
               </li>
@@ -612,18 +612,18 @@ WHERE email = 'test@example.com';
             </ol>
           </section>
 
-          <section id="relationships" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">How Support Relates to Other Layers</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li>• <strong>Maintain <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link>:</strong> Keep AI chat working, users authenticated</li>
-              <li>• <strong>Troubleshoot <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link>:</strong> Debug auth loops, fix data flow issues</li>
-              <li>• <strong>Debug <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>:</strong> Fix TypeScript errors, optimize React renders</li>
-              <li>• <strong>Monitor <Link href="/services" className="text-neutral-600 hover:underline">Services</Link>:</strong> Track costs, API usage, uptime</li>
+          <section id="relationships" className="section-spacing border-t pt-8">
+            <h2 className="mb-4">How Support Relates to Other Layers</h2>
+            <ul className="space-y-2 text-foreground">
+              <li>• <strong>Maintain <Link href="/solutions" className="hover:underline">Solutions</Link>:</strong> Keep AI chat working, users authenticated</li>
+              <li>• <strong>Troubleshoot <Link href="/systems" className="hover:underline">Systems</Link>:</strong> Debug auth loops, fix data flow issues</li>
+              <li>• <strong>Debug <Link href="/software" className="hover:underline">Software</Link>:</strong> Fix TypeScript errors, optimize React renders</li>
+              <li>• <strong>Monitor <Link href="/services" className="hover:underline">Services</Link>:</strong> Track costs, API usage, uptime</li>
             </ul>
           </section>
 
-          <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/" className="text-gray-600 hover:underline">
+          <nav className="mt-12 pt-8 border-t">
+            <Link href="/" className="text-muted-foreground hover:underline">
               ← Back to Home
             </Link>
           </nav>

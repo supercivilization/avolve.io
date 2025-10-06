@@ -11,7 +11,7 @@ export function getFileModifiedDate(filePath: string): Date {
     const fullPath = join(process.cwd(), filePath);
     const stats = statSync(fullPath);
     return stats.mtime;
-  } catch (error) {
+  } catch {
     // If file doesn't exist or can't be read, return current date as fallback
     console.warn(`Could not read file stats for ${filePath}, using current date`);
     return new Date();

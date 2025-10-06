@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 // Dependencies (October 5, 2025):
 // - Next.js: 15.5.4
@@ -136,27 +137,27 @@ export default function SolutionsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
+      <main className="page-container">
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
-        <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-slate-700">Solutions</h1>
-          <p className="text-xl text-gray-700 mb-12">
+        <article>
+          <h1 className="text-4xl font-bold mb-4">Solutions</h1>
+          <p className="text-xl text-muted-foreground section-spacing">
             Business outcomes delivered to end users
           </p>
 
-          <section id="solutions-definition" className="mb-12">
+          <section id="solutions-definition" className="section-spacing">
             <h2 className="text-2xl font-bold mb-4">What are Solutions?</h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-foreground mb-4">
               Solutions are complete, working applications that solve real business problems.
-              They combine <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link> (architecture),
-              <Link href="/software" className="text-zinc-700 hover:underline ml-1">Software</Link> (frameworks),
-              <Link href="/services" className="text-neutral-600 hover:underline ml-1">Services</Link> (external tools), and
-              <Link href="/support" className="text-stone-600 hover:underline ml-1">Support</Link> (maintenance).
+              They combine <Link href="/systems" className="hover:underline">Systems</Link> (architecture),
+              <Link href="/software" className="hover:underline ml-1">Software</Link> (frameworks),
+              <Link href="/services" className="hover:underline ml-1">Services</Link> (external tools), and
+              <Link href="/support" className="hover:underline ml-1">Support</Link> (maintenance).
             </p>
-            <p className="text-gray-700">
+            <p className="text-muted-foreground">
               Every solution on this page includes: tech stack with versions, time to build, cost at scale,
               and working code examples.
             </p>
@@ -180,43 +181,43 @@ export default function SolutionsPage() {
 
             <div className="mb-8">
               <h3 className="text-xl font-bold mb-4">Cost at Scale</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-gray-300">
-                  <thead className="bg-gray-100">
-                    <tr>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Users/Month</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Hosting (Vercel)</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">AI API (Claude)</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Database (Supabase)</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Total/Month</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">0-1,000</td>
-                      <td className="border border-gray-300 px-4 py-2">$0 (Hobby)</td>
-                      <td className="border border-gray-300 px-4 py-2">$5-10</td>
-                      <td className="border border-gray-300 px-4 py-2">$0 (Free tier)</td>
-                      <td className="border border-gray-300 px-4 py-2 font-bold">$5-10</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">1,000-10,000</td>
-                      <td className="border border-gray-300 px-4 py-2">$20 (Pro)</td>
-                      <td className="border border-gray-300 px-4 py-2">$50-100</td>
-                      <td className="border border-gray-300 px-4 py-2">$25 (Pro)</td>
-                      <td className="border border-gray-300 px-4 py-2 font-bold">$95-145</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2">10,000+</td>
-                      <td className="border border-gray-300 px-4 py-2">Custom</td>
-                      <td className="border border-gray-300 px-4 py-2">$200-500</td>
-                      <td className="border border-gray-300 px-4 py-2">$599+ (Team)</td>
-                      <td className="border border-gray-300 px-4 py-2 font-bold">$799-1,099+</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div className="rounded-lg border">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Users/Month</TableHead>
+                      <TableHead>Hosting (Vercel)</TableHead>
+                      <TableHead>AI API (Claude)</TableHead>
+                      <TableHead>Database (Supabase)</TableHead>
+                      <TableHead>Total/Month</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell>0-1,000</TableCell>
+                      <TableCell>$0 (Hobby)</TableCell>
+                      <TableCell>$5-10</TableCell>
+                      <TableCell>$0 (Free tier)</TableCell>
+                      <TableCell className="font-bold">$5-10</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>1,000-10,000</TableCell>
+                      <TableCell>$20 (Pro)</TableCell>
+                      <TableCell>$50-100</TableCell>
+                      <TableCell>$25 (Pro)</TableCell>
+                      <TableCell className="font-bold">$95-145</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>10,000+</TableCell>
+                      <TableCell>Custom</TableCell>
+                      <TableCell>$200-500</TableCell>
+                      <TableCell>$599+ (Team)</TableCell>
+                      <TableCell className="font-bold">$799-1,099+</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
               </div>
-              <p className="text-sm text-gray-600 mt-2">
+              <p className="text-sm text-muted-foreground mt-2">
                 Costs verified: October 5, 2025
               </p>
             </div>

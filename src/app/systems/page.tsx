@@ -130,90 +130,90 @@ export default function SystemsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
+      <main className="page-container">
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
-        <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-gray-700">Systems</h1>
-          <p className="text-xl text-gray-700 mb-12">
+        <article>
+          <h1 className="mb-4">Systems</h1>
+          <p className="lead section-spacing">
             Architecture patterns coordinating multiple components
           </p>
 
-          <section id="systems-definition" className="mb-12">
-            <h2 className="text-2xl font-bold mb-4">What are Systems?</h2>
-            <p className="text-gray-700 mb-4">
+          <section id="systems-definition" className="section-spacing">
+            <h2 className="mb-4">What are Systems?</h2>
+            <p className="text-foreground mb-4">
               Systems are architecture patterns that coordinate multiple components to achieve a specific capability.
-              They sit between <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link> (business outcomes)
-              and <Link href="/software" className="text-zinc-700 hover:underline ml-1">Software</Link> (frameworks).
+              They sit between <Link href="/solutions" className="hover:underline">Solutions</Link> (business outcomes)
+              and <Link href="/software" className="hover:underline ml-1">Software</Link> (frameworks).
             </p>
-            <p className="text-gray-700">
+            <p className="text-muted-foreground">
               Every system on this page includes: component list, data flow, complete code, and production failure modes.
             </p>
           </section>
 
-          <section id="systems-index" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">Available Systems</h2>
-            <div className="grid gap-4 md:grid-cols-2">
-              <Link href="/systems/search" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
-                <h3 className="text-xl font-bold mb-2 text-gray-700">Search System</h3>
-                <p className="text-gray-600 mb-3">
+          <section id="systems-index" className="section-spacing border-t pt-8">
+            <h2 className="mb-8">Available Systems</h2>
+            <div className="grid gap-6 md:grid-cols-2">
+              <Link href="/systems/search" className="block p-6 bg-muted hover:shadow-md rounded-lg border transition-all">
+                <h3 className="text-xl font-bold mb-2">Search System</h3>
+                <p className="text-muted-foreground mb-3">
                   Complete search architecture: traditional SEO, AI citations (ChatGPT, Claude, Perplexity, Gemini), schema markup, Core Web Vitals
                 </p>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-muted-foreground">
                   Components: Next.js Metadata API, Schema.org knowledge graph, Image optimization, Server Components, AI citation optimization
                 </p>
               </Link>
 
-              <Link href="/systems/email" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
-                <h3 className="text-xl font-bold mb-2 text-gray-700">Email System</h3>
-                <p className="text-gray-600 mb-3">
+              <Link href="/systems/email" className="block p-6 bg-muted hover:shadow-md rounded-lg border transition-all">
+                <h3 className="text-xl font-bold mb-2">Email System</h3>
+                <p className="text-muted-foreground mb-3">
                   Production email with Resend + React Email - type-safe templates, enterprise deliverability, sub-7-second setup
                 </p>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-muted-foreground">
                   Components: Resend API, React Email components, Next.js API Routes, TypeScript validation
                 </p>
               </Link>
 
-              <Link href="/systems/social" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
-                <h3 className="text-xl font-bold mb-2 text-gray-700">Social Sharing System</h3>
-                <p className="text-gray-600 mb-3">
+              <Link href="/systems/social" className="block p-6 bg-muted hover:shadow-md rounded-lg border transition-all">
+                <h3 className="text-xl font-bold mb-2">Social Sharing System</h3>
+                <p className="text-muted-foreground mb-3">
                   OpenGraph + Twitter Cards for rich social previews - 2-3x higher engagement, works across all platforms
                 </p>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-muted-foreground">
                   Components: Next.js Metadata API, OpenGraph protocol, Twitter Cards, 1200x630px social images
                 </p>
               </Link>
 
-              <Link href="/systems/mobile" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
-                <h3 className="text-xl font-bold mb-2 text-gray-700">Mobile System</h3>
-                <p className="text-gray-600 mb-3">
+              <Link href="/systems/mobile" className="block p-6 bg-muted hover:shadow-md rounded-lg border transition-all">
+                <h3 className="text-xl font-bold mb-2">Mobile System</h3>
+                <p className="text-muted-foreground mb-3">
                   React Native 0.81 + Expo SDK 54 + Next.js code sharing - 40-50% code reduction, production-ready mobile architecture
                 </p>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-muted-foreground">
                   Components: React Native New Architecture, Expo SDK, Monorepo (Nx/Turborepo), EAS Build, code sharing
                 </p>
               </Link>
 
-              <Link href="/systems#auth-system" className="block p-6 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors">
-                <h3 className="text-xl font-bold mb-2 text-gray-700">Authentication System</h3>
-                <p className="text-gray-600 mb-3">
+              <Link href="/systems#auth-system" className="block p-6 bg-muted hover:shadow-md rounded-lg border transition-all">
+                <h3 className="text-xl font-bold mb-2">Authentication System</h3>
+                <p className="text-muted-foreground mb-3">
                   Production-ready auth with Supabase + Next.js middleware for edge protection
                 </p>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-muted-foreground">
                   Components: Supabase Auth, Next.js Middleware, Server Components, Client Components
                 </p>
               </Link>
             </div>
           </section>
 
-          <section id="auth-system" className="mb-16 border-t pt-8">
-            <h2 className="text-3xl font-bold mb-6">Pattern: Authentication System</h2>
+          <section id="auth-system" className="section-spacing border-t pt-8">
+            <h2 className="mb-12">Pattern: Authentication System</h2>
 
-            <div className="bg-gray-50 p-6 rounded-lg mb-6">
-              <h3 className="text-xl font-bold mb-3">Components</h3>
-              <ul className="space-y-2 text-gray-700">
+            <div className="bg-muted p-6 rounded-lg mb-8">
+              <h3 className="text-xl font-bold mb-4">Components</h3>
+              <ul className="space-y-2 text-foreground">
                 <li><strong>Supabase Auth:</strong> User management, sessions, OAuth providers</li>
                 <li><strong>Next.js Middleware:</strong> Route protection at edge</li>
                 <li><strong>Server Components:</strong> Secure data fetching</li>
@@ -223,7 +223,7 @@ export default function SystemsPage() {
 
             <div className="mb-8">
               <h3 className="text-xl font-bold mb-4">Data Flow</h3>
-              <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+              <ol className="list-decimal list-inside space-y-2 text-foreground ml-4">
                 <li>User visits protected route → Middleware checks session</li>
                 <li>No session → Redirect to /login</li>
                 <li>User submits login → Supabase creates session</li>
@@ -366,9 +366,9 @@ export function LoginForm() {
               </pre>
             </div>
 
-            <div className="bg-stone-50 border-l-4 border-stone-400 p-4">
-              <h3 className="text-lg font-bold mb-2">What Breaks in Production</h3>
-              <ul className="space-y-3 text-gray-700 text-sm">
+            <div className="bg-muted border-l-4 border-stone-600 dark:border-stone-400 p-6 mb-8">
+              <h3 className="text-lg font-bold mb-4">What Breaks in Production</h3>
+              <ul className="space-y-3 text-foreground text-sm">
                 <li>
                   <strong>Cookie domain mismatch:</strong> localhost works, production fails.<br />
                   <span className="text-stone-700">Fix:</span> Set <code className="bg-red-100 px-1">cookieOptions.domain</code> correctly for your deployment.
@@ -389,18 +389,18 @@ export function LoginForm() {
             </div>
           </section>
 
-          <section id="relationships" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">How Systems Relate to Other Layers</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li>• <strong>Deliver <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link>:</strong> Authentication enables secure apps, user-specific features</li>
-              <li>• <strong>Built with <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>:</strong> Next.js middleware, React components, TypeScript types</li>
-              <li>• <strong>Use <Link href="/services" className="text-neutral-600 hover:underline">Services</Link>:</strong> Supabase Auth ($0-25/mo), Vercel Edge ($0-20/mo)</li>
-              <li>• <strong>Require <Link href="/support" className="text-stone-600 hover:underline">Support</Link>:</strong> Monitor login failures, session timeouts, security alerts</li>
+          <section id="relationships" className="section-spacing border-t pt-8">
+            <h2 className="mb-4">How Systems Relate to Other Layers</h2>
+            <ul className="space-y-2 text-foreground">
+              <li>• <strong>Deliver <Link href="/solutions" className="hover:underline">Solutions</Link>:</strong> Authentication enables secure apps, user-specific features</li>
+              <li>• <strong>Built with <Link href="/software" className="hover:underline">Software</Link>:</strong> Next.js middleware, React components, TypeScript types</li>
+              <li>• <strong>Use <Link href="/services" className="hover:underline">Services</Link>:</strong> Supabase Auth ($0-25/mo), Vercel Edge ($0-20/mo)</li>
+              <li>• <strong>Require <Link href="/support" className="hover:underline">Support</Link>:</strong> Monitor login failures, session timeouts, security alerts</li>
             </ul>
           </section>
 
-          <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/" className="text-gray-600 hover:underline">
+          <nav className="mt-12 pt-8 border-t">
+            <Link href="/" className="text-muted-foreground hover:underline">
               ← Back to Home
             </Link>
           </nav>

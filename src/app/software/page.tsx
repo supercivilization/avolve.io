@@ -126,40 +126,40 @@ export default function SoftwarePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
+      <main className="page-container">
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
-        <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-zinc-700">Software - Modern Stack Integration</h1>
-          <p className="text-xl text-gray-700 mb-4">
+        <article>
+          <h1 className="mb-4">Software - Modern Stack Integration</h1>
+          <p className="lead mb-4">
             Verified compatibility matrix and integration patterns for the modern development stack
           </p>
-          <p className="text-gray-600 mb-12">
+          <p className="text-muted-foreground section-spacing">
             We show how these tools work together and point you to official documentation for each.
           </p>
 
-          <section id="software-definition" className="mb-12 bg-zinc-50 border-l-4 border-zinc-600 p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">What This Page Provides</h2>
-            <p className="text-gray-700 mb-4">
+          <section id="software-definition" className="section-spacing bg-muted border-l-4 border-zinc-700 dark:border-zinc-400 p-6 rounded-lg">
+            <h2 className="mb-4">What This Page Provides</h2>
+            <p className="text-foreground mb-4">
               <strong>Verified Stack Compatibility:</strong> We test and verify that Next.js 15.5.4 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0 work together as of October 2025.
             </p>
-            <p className="text-gray-700 mb-4">
+            <p className="text-foreground mb-4">
               <strong>Integration Patterns:</strong> Each tool page shows how it integrates with the rest of the stack, not just isolated features.
             </p>
-            <p className="text-gray-700">
+            <p className="text-foreground">
               <strong>Official Resources:</strong> We link to official documentation (nextjs.org, react.dev, etc.) for API details and latest updates.
             </p>
-            <p className="text-sm text-gray-600 mt-4">
-              Software implements <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link>,
-              delivers <Link href="/solutions" className="text-slate-600 hover:underline ml-1">Solutions</Link>, and
-              runs on <Link href="/services" className="text-neutral-600 hover:underline ml-1">Services</Link>.
+            <p className="text-sm text-muted-foreground mt-4">
+              Software implements <Link href="/systems" className="hover:underline">Systems</Link>,
+              delivers <Link href="/solutions" className="hover:underline ml-1">Solutions</Link>, and
+              runs on <Link href="/services" className="hover:underline ml-1">Services</Link>.
             </p>
           </section>
 
-          <section id="current-stack" className="mb-12 border-t pt-8">
-            <h2 className="text-3xl font-bold mb-6">Current Stack (October 2025)</h2>
+          <section id="current-stack" className="section-spacing border-t pt-8">
+            <h2 className="mb-12">Current Stack (October 2025)</h2>
 
             <div className="overflow-x-auto mb-8">
               <table className="w-full border-collapse border border-gray-300">
@@ -261,9 +261,9 @@ export default function SoftwarePage() {
             </div>
           </section>
 
-          <section id="version-history" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">Version History</h2>
-            <div className="space-y-4 text-gray-700">
+          <section id="version-history" className="section-spacing border-t pt-8">
+            <h2 className="mb-8">Version History</h2>
+            <div className="space-y-4 text-foreground">
               <div>
                 <p className="font-bold">October 5, 2025:</p>
                 <ul className="list-disc list-inside ml-4 space-y-1">
@@ -288,8 +288,8 @@ export default function SoftwarePage() {
             </div>
           </section>
 
-          <section id="installation" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">Installation</h2>
+          <section id="installation" className="section-spacing border-t pt-8">
+            <h2 className="mb-8">Installation</h2>
 
             <h3 className="text-xl font-bold mb-2">Create New Project</h3>
             <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-6">
@@ -326,9 +326,9 @@ cat package.json | grep '"next"\\|"react"\\|"typescript"'`}
             </pre>
           </section>
 
-          <section id="why-this-stack" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">Why This Stack?</h2>
-            <div className="space-y-4 text-gray-700">
+          <section id="why-this-stack" className="section-spacing border-t pt-8">
+            <h2 className="mb-8">Why This Stack?</h2>
+            <div className="space-y-4 text-foreground">
               <div>
                 <p className="font-bold mb-2">Performance:</p>
                 <ul className="list-disc list-inside ml-4 space-y-1">
@@ -356,8 +356,8 @@ cat package.json | grep '"next"\\|"react"\\|"typescript"'`}
             </div>
           </section>
 
-          <section id="mcp-integration" className="mb-16 border-t pt-8">
-            <h2 className="text-3xl font-bold mb-6">MCP Integration (AI-Native Development)</h2>
+          <section id="mcp-integration" className="section-spacing border-t pt-8">
+            <h2 className="mb-12">MCP Integration (AI-Native Development)</h2>
 
             <div className="bg-blue-50 dark:bg-blue-950/20 p-6 rounded-lg mb-6 border-l-4 border-blue-500">
               <h3 className="text-xl font-bold mb-3">What is MCP?</h3>
@@ -525,18 +525,18 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
             </div>
           </section>
 
-          <section id="relationships" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">How Software Relates to Other Layers</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li>• <strong>Implements <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link>:</strong> Next.js middleware powers auth, React components build UI</li>
-              <li>• <strong>Delivers <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link>:</strong> AI chat, real-time apps, e-commerce</li>
-              <li>• <strong>Runs on <Link href="/services" className="text-neutral-600 hover:underline">Services</Link>:</strong> Deployed to Vercel, data in Supabase</li>
-              <li>• <strong>Needs <Link href="/support" className="text-stone-600 hover:underline">Support</Link>:</strong> Monitoring builds, debugging TypeScript errors</li>
+          <section id="relationships" className="section-spacing border-t pt-8">
+            <h2 className="mb-4">How Software Relates to Other Layers</h2>
+            <ul className="space-y-2 text-foreground">
+              <li>• <strong>Implements <Link href="/systems" className="hover:underline">Systems</Link>:</strong> Next.js middleware powers auth, React components build UI</li>
+              <li>• <strong>Delivers <Link href="/solutions" className="hover:underline">Solutions</Link>:</strong> AI chat, real-time apps, e-commerce</li>
+              <li>• <strong>Runs on <Link href="/services" className="hover:underline">Services</Link>:</strong> Deployed to Vercel, data in Supabase</li>
+              <li>• <strong>Needs <Link href="/support" className="hover:underline">Support</Link>:</strong> Monitoring builds, debugging TypeScript errors</li>
             </ul>
           </section>
 
-          <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/" className="text-gray-600 hover:underline">
+          <nav className="mt-12 pt-8 border-t">
+            <Link href="/" className="text-muted-foreground hover:underline">
               ← Back to Home
             </Link>
           </nav>

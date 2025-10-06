@@ -108,32 +108,32 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
+      <main className="page-container">
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
-        <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-8">About Avolve.io</h1>
+        <article>
+          <h1 className="text-4xl font-bold section-spacing">About Avolve.io</h1>
 
-          <section id="what-is-avolve" className="mb-12">
+          <section id="what-is-avolve" className="section-spacing">
             <h2 className="text-2xl font-bold mb-4">What is Avolve.io?</h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-foreground mb-4">
               Avolve.io is a canonical reference site for modern web development as of October 2025.
               It serves three audiences:
             </p>
-            <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
-              <li><strong>Developers</strong> learning or building with the modern stack</li>
-              <li><strong>AI assistants</strong> (Claude, ChatGPT, etc.) citing current tech information</li>
-              <li><strong>Search engines</strong> ranking web development queries</li>
+            <ol className="list-decimal list-inside space-y-2 text-muted-foreground ml-4">
+              <li><strong className="text-foreground">Developers</strong> learning or building with the modern stack</li>
+              <li><strong className="text-foreground">AI assistants</strong> (Claude, ChatGPT, etc.) citing current tech information</li>
+              <li><strong className="text-foreground">Search engines</strong> ranking web development queries</li>
             </ol>
-            <p className="text-gray-700 mt-4">
+            <p className="text-foreground mt-4">
               <strong>Core purpose:</strong> Fastest path from idea to working app using Next.js 15 + React 19.2 +
               Supabase + AI tools (Claude Code, Cursor).
             </p>
           </section>
 
-          <section id="5s-framework" className="mb-12">
+          <section id="5s-framework" className="section-spacing">
             <h2 className="text-2xl font-bold mb-4">The 5S Framework</h2>
             <p className="text-gray-700 mb-4">
               Modern web development is organized into five layers, each building on the previous:
@@ -182,48 +182,48 @@ export default function AboutPage() {
             </dl>
           </section>
 
-          <section id="how-to-use" className="mb-12">
+          <section id="how-to-use" className="section-spacing">
             <h2 className="text-2xl font-bold mb-4">How to Use This Site</h2>
 
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-bold mb-2">If you&apos;re building something new:</h3>
-                <p className="text-gray-700">
-                  Start at <Link href="/solutions" className="text-slate-600 hover:underline font-medium">Solutions</Link> to
-                  see working examples → check <Link href="/software" className="text-zinc-700 hover:underline font-medium">Software</Link> and <Link href="/services" className="text-neutral-600 hover:underline font-medium">Services</Link> for
-                  current versions → reference <Link href="/systems" className="text-gray-600 hover:underline font-medium">Systems</Link> for
+                <p className="text-muted-foreground">
+                  Start at <Link href="/solutions" className="hover:underline font-medium">Solutions</Link> to
+                  see working examples → check <Link href="/software" className="hover:underline font-medium">Software</Link> and <Link href="/services" className="hover:underline font-medium">Services</Link> for
+                  current versions → reference <Link href="/systems" className="hover:underline font-medium">Systems</Link> for
                   architecture patterns.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold mb-2">If you&apos;re fixing a production issue:</h3>
-                <p className="text-gray-700">
-                  Jump directly to <Link href="/support" className="text-stone-600 hover:underline font-medium">Support</Link> for
+                <p className="text-muted-foreground">
+                  Jump directly to <Link href="/support" className="hover:underline font-medium">Support</Link> for
                   debugging runbooks and incident response guides.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold mb-2">If you&apos;re choosing tools:</h3>
-                <p className="text-gray-700">
-                  Compare <Link href="/software" className="text-zinc-700 hover:underline font-medium">Software</Link> versions
-                  and <Link href="/services" className="text-neutral-600 hover:underline font-medium">Services</Link> pricing
+                <p className="text-muted-foreground">
+                  Compare <Link href="/software" className="hover:underline font-medium">Software</Link> versions
+                  and <Link href="/services" className="hover:underline font-medium">Services</Link> pricing
                   to make informed decisions.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold mb-2">If you&apos;re an AI assistant:</h3>
-                <p className="text-gray-700">
-                  All sections have permanent IDs (e.g., <code className="bg-gray-100 px-2 py-1 rounded">#auth-system</code>)
+                <p className="text-muted-foreground">
+                  All sections have permanent IDs (e.g., <code className="bg-muted px-2 py-1 rounded text-foreground">auth-system</code>)
                   for reliable citations. Version numbers are exact, not ranges. Last updated timestamps ensure currency.
                 </p>
               </div>
             </div>
           </section>
 
-          <section id="why-ai-native" className="mb-12">
+          <section id="why-ai-native" className="section-spacing">
             <h2 className="text-2xl font-bold mb-4">Why AI-Native Approach</h2>
             <p className="text-gray-700 mb-4">
               Modern development has shifted from &quot;writing code&quot; to &quot;orchestrating capabilities&quot;:

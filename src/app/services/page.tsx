@@ -229,46 +229,46 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
+      <main className="page-container">
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
-        <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-neutral-700">Services</h1>
-          <p className="text-xl text-gray-700 mb-12">
+        <article>
+          <h1 className="mb-4">Services</h1>
+          <p className="lead section-spacing">
             External managed capabilities - what you buy, not build
           </p>
 
-          <section id="services-definition" className="mb-12">
-            <h2 className="text-2xl font-bold mb-4">What are Services?</h2>
-            <p className="text-gray-700 mb-4">
+          <section id="services-definition" className="section-spacing">
+            <h2 className="mb-4">What are Services?</h2>
+            <p className="text-foreground mb-4">
               Services are external, managed capabilities that your application uses. Instead of building
               and maintaining infrastructure, you pay for hosted solutions that scale automatically.
             </p>
-            <p className="text-gray-700">
-              Services host your <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>,
-              power your <Link href="/systems" className="text-gray-600 hover:underline ml-1">Systems</Link>, and
-              deliver your <Link href="/solutions" className="text-slate-600 hover:underline ml-1">Solutions</Link>.
+            <p className="text-muted-foreground">
+              Services host your <Link href="/software" className="hover:underline">Software</Link>,
+              power your <Link href="/systems" className="hover:underline ml-1">Systems</Link>, and
+              deliver your <Link href="/solutions" className="hover:underline ml-1">Solutions</Link>.
             </p>
           </section>
 
-          <div className="space-y-12">
+          <div className="space-y-16">
             {services.map((service) => (
               <section key={service.name} id={service.name.toLowerCase()} className="border-t pt-8">
-                <div className="mb-6">
-                  <h2 className="text-3xl font-bold mb-2">{service.name}</h2>
-                  <p className="text-gray-600">{service.category}</p>
+                <div className="mb-8">
+                  <h2 className="mb-2">{service.name}</h2>
+                  <p className="text-muted-foreground">{service.category}</p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div>
                     <h3 className="font-bold mb-2">When to Use</h3>
-                    <p className="text-gray-700">{service.whenToUse}</p>
+                    <p className="text-foreground">{service.whenToUse}</p>
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">When to Switch</h3>
-                    <p className="text-gray-700">{service.whenToSwitch}</p>
+                    <p className="text-foreground">{service.whenToSwitch}</p>
                   </div>
                 </div>
 
@@ -299,7 +299,7 @@ export default function ServicesPage() {
                   </table>
                 </div>
 
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-muted-foreground">
                   <strong>Migration Difficulty:</strong> {service.migration}
                   {service.migration === "Low" && " - Easy to switch providers"}
                   {service.migration === "Medium" && " - Requires data migration, moderate effort"}
@@ -307,25 +307,25 @@ export default function ServicesPage() {
                 </p>
 
                 {service.aiFeatures && (
-                  <div className="mt-4 bg-purple-50 border-l-4 border-purple-600 p-4 rounded-lg">
+                  <div className="mt-6 bg-muted border-l-4 border-purple-600 dark:border-purple-400 p-6 rounded-lg">
                     <h3 className="font-bold mb-2">AI & Advanced Features</h3>
-                    <p className="text-sm text-gray-700">{service.aiFeatures}</p>
+                    <p className="text-sm text-foreground">{service.aiFeatures}</p>
                   </div>
                 )}
 
                 {service.features && (
-                  <div className="mt-4 bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+                  <div className="mt-6 bg-muted border-l-4 border-blue-600 dark:border-blue-400 p-6 rounded-lg">
                     <h3 className="font-bold mb-2">Key Features</h3>
-                    <p className="text-sm text-gray-700">{service.features}</p>
+                    <p className="text-sm text-foreground">{service.features}</p>
                   </div>
                 )}
               </section>
             ))}
           </div>
 
-          <section id="cost-optimization" className="mt-12 pt-8 border-t">
-            <h2 className="text-2xl font-bold mb-4">Cost Optimization Tips</h2>
-            <ul className="space-y-3 text-gray-700">
+          <section id="cost-optimization" className="section-spacing border-t pt-8">
+            <h2 className="mb-8">Cost Optimization Tips</h2>
+            <ul className="space-y-3 text-foreground">
               <li>
                 <strong>Start free:</strong> All services offer free tiers. Build and validate before paying.
               </li>
@@ -344,18 +344,18 @@ export default function ServicesPage() {
             </ul>
           </section>
 
-          <section id="relationships" className="mb-12 border-t pt-8">
-            <h2 className="text-2xl font-bold mb-4">How Services Relate to Other Layers</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li>• <strong>Host <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>:</strong> Vercel deploys Next.js, Supabase stores data</li>
-              <li>• <strong>Power <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link>:</strong> Auth via Supabase, payments via Stripe</li>
-              <li>• <strong>Deliver <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link>:</strong> AI chat uses Claude, emails via Resend</li>
-              <li>• <strong>Need <Link href="/support" className="text-stone-600 hover:underline">Support</Link>:</strong> Monitor costs, debug API failures, optimize usage</li>
+          <section id="relationships" className="section-spacing border-t pt-8">
+            <h2 className="mb-4">How Services Relate to Other Layers</h2>
+            <ul className="space-y-2 text-foreground">
+              <li>• <strong>Host <Link href="/software" className="hover:underline">Software</Link>:</strong> Vercel deploys Next.js, Supabase stores data</li>
+              <li>• <strong>Power <Link href="/systems" className="hover:underline">Systems</Link>:</strong> Auth via Supabase, payments via Stripe</li>
+              <li>• <strong>Deliver <Link href="/solutions" className="hover:underline">Solutions</Link>:</strong> AI chat uses Claude, emails via Resend</li>
+              <li>• <strong>Need <Link href="/support" className="hover:underline">Support</Link>:</strong> Monitor costs, debug API failures, optimize usage</li>
             </ul>
           </section>
 
-          <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/" className="text-gray-600 hover:underline">
+          <nav className="mt-12 pt-8 border-t">
+            <Link href="/" className="text-muted-foreground hover:underline">
               ← Back to Home
             </Link>
           </nav>
