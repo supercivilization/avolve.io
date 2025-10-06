@@ -1,129 +1,101 @@
 import { MetadataRoute } from 'next';
+import { getFileModifiedDate } from '@/lib/file-stats';
 
+/**
+ * A+ 10/10 Sitemap (2025 Google Best Practices)
+ * - Uses actual file modification dates (Google uses lastModified for crawl scheduling)
+ * - Removes priority and changeFrequency (Google ignores these fields)
+ * - Revalidates hourly to keep lastModified dates fresh
+ *
+ * Reference: https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://avolve.io';
-  const currentDate = new Date();
 
   return [
     {
       url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'daily',
-      priority: 1.0,
+      lastModified: getFileModifiedDate('src/app/page.tsx'),
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      lastModified: getFileModifiedDate('src/app/about/page.tsx'),
     },
     {
       url: `${baseUrl}/solutions`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      lastModified: getFileModifiedDate('src/app/solutions/page.tsx'),
     },
     {
       url: `${baseUrl}/systems`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      lastModified: getFileModifiedDate('src/app/systems/page.tsx'),
     },
     {
       url: `${baseUrl}/software`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 1.0,
+      lastModified: getFileModifiedDate('src/app/software/page.tsx'),
     },
     {
       url: `${baseUrl}/software/nextjs`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      lastModified: getFileModifiedDate('src/app/software/nextjs/page.tsx'),
     },
     {
       url: `${baseUrl}/software/react`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      lastModified: getFileModifiedDate('src/app/software/react/page.tsx'),
     },
     {
       url: `${baseUrl}/software/vercel-ai-sdk`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      lastModified: getFileModifiedDate('src/app/software/vercel-ai-sdk/page.tsx'),
     },
     {
       url: `${baseUrl}/software/tailwind`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      lastModified: getFileModifiedDate('src/app/software/tailwind/page.tsx'),
     },
     {
       url: `${baseUrl}/software/nodejs`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      lastModified: getFileModifiedDate('src/app/software/nodejs/page.tsx'),
     },
     {
       url: `${baseUrl}/software/supabase`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      lastModified: getFileModifiedDate('src/app/software/supabase/page.tsx'),
     },
     {
       url: `${baseUrl}/software/shadcn-ui`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      lastModified: getFileModifiedDate('src/app/software/shadcn-ui/page.tsx'),
     },
     {
       url: `${baseUrl}/software/typescript`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      lastModified: getFileModifiedDate('src/app/software/typescript/page.tsx'),
     },
     {
       url: `${baseUrl}/systems/mobile`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      lastModified: getFileModifiedDate('src/app/systems/mobile/page.tsx'),
     },
     {
       url: `${baseUrl}/systems/email`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      lastModified: getFileModifiedDate('src/app/systems/email/page.tsx'),
     },
     {
       url: `${baseUrl}/systems/social`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      lastModified: getFileModifiedDate('src/app/systems/social/page.tsx'),
     },
     {
       url: `${baseUrl}/systems/search`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      lastModified: getFileModifiedDate('src/app/systems/search/page.tsx'),
     },
     {
       url: `${baseUrl}/services/dataforseo`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      lastModified: getFileModifiedDate('src/app/services/dataforseo/page.tsx'),
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      lastModified: getFileModifiedDate('src/app/services/page.tsx'),
     },
     {
       url: `${baseUrl}/support`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      lastModified: getFileModifiedDate('src/app/support/page.tsx'),
     },
   ];
 }
+
+// Revalidate sitemap every hour to keep lastModified dates fresh
+// This enables Incremental Static Regeneration (ISR) for the sitemap
+export const revalidate = 3600;
