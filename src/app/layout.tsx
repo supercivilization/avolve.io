@@ -82,25 +82,26 @@ export default function RootLayout({
         "@id": "https://avolve.io/#website",
         "name": "Avolve.io",
         "alternateName": "Avolve - Modern Web Development Stack Reference",
-        "description": "Authoritative reference for Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2 modern stack. Verified compatibility matrix, integration patterns, and official resources for developers and AI assistants.",
+        "description": "A knowledge graph for the modern web stack. Get verified compatibility patterns for Next.js 15, React 19, Vercel AI, Supabase auth, shadcn/ui, and more. Optimized for AI assistants and developers.",
         "url": "https://avolve.io",
         "inLanguage": "en-US",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "dateModified": "2025-10-06",
+        "creator": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
         "publisher": {
           "@id": "https://www.supercivilization.xyz/#organization"
         },
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        },
+        "codeRepository": "https://github.com/supercivilization/avolve.io",
         "about": [
           {
             "@type": "SoftwareApplication",
             "@id": "https://avolve.io/software/nextjs#software",
             "name": "Next.js",
             "applicationCategory": "DeveloperApplication",
-            "softwareVersion": "15.5.5",
-            "operatingSystem": "Node.js 24.8.0",
+            "softwareVersion": "15.5.4",
+            "operatingSystem": "Node.js 22.20.0 LTS",
             "url": "https://nextjs.org",
             "sameAs": [
               "https://github.com/vercel/next.js",
@@ -126,7 +127,7 @@ export default function RootLayout({
             "@id": "https://avolve.io/software/typescript#software",
             "name": "TypeScript",
             "applicationCategory": "DeveloperApplication",
-            "softwareVersion": "5.9.2",
+            "softwareVersion": "5.9.3",
             "url": "https://www.typescriptlang.org",
             "sameAs": [
               "https://github.com/microsoft/TypeScript",
@@ -135,7 +136,7 @@ export default function RootLayout({
             ]
           }
         ],
-        "keywords": "Next.js 15, React 19, TypeScript, modern web stack, stack integration, verified compatibility, Server Components, App Router, Tailwind CSS, shadcn/ui, Vercel, Supabase",
+        "keywords": "Next.js 15, React 19, TypeScript, modern web stack, stack integration, verified compatibility, Server Components, App Router, Tailwind CSS, shadcn/ui, Vercel, Supabase, AI-native development",
         "potentialAction": {
           "@type": "SearchAction",
           "target": {
@@ -149,40 +150,84 @@ export default function RootLayout({
         "@type": "Organization",
         "@id": "https://www.supercivilization.xyz/#organization",
         "name": "Supercivilization",
+        "slogan": "Vivify Further, Unify Faster, Thrive Forever",
         "url": "https://www.supercivilization.xyz",
+        "description": "We help you vivify further as an individual superachiever, unify faster as a collective of superachievers, and thrive forever in the supercivilization ecosystem.",
         "logo": {
           "@type": "ImageObject",
           "url": "https://avolve.io/logo.png",
           "width": 512,
           "height": 512
         },
+        "founder": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
         "sameAs": [
           "https://github.com/supercivilization"
         ],
-        "foundingDate": "2024",
-        "description": "Building modern web development resources and tools"
+        "foundingDate": "2024"
       },
       {
         "@type": "Person",
         "@id": "https://www.joshuaseymour.com/#person",
         "name": "Joshua Seymour",
+        "alternateName": "Josh Seymour",
+        "givenName": "Joshua",
+        "familyName": "Seymour",
         "url": "https://www.joshuaseymour.com",
-        "sameAs": [
-          "https://github.com/supercivilization"
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.joshuaseymour.com/profile.png",
+          "width": "1200",
+          "height": "1200",
+          "caption": "Joshua Seymour - Founder of Supercivilization, Creator of Avolve.io"
+        },
+        "description": "Founder of Supercivilization. Creator of Avolve.io — AI-native knowledge graph for modern web development stack compatibility",
+        "jobTitle": "Founder",
+        "email": "admin@joshuaseymour.com",
+        "foundedOrganization": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "worksFor": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "hasOccupation": [
+          {
+            "@type": "Occupation",
+            "name": "Entrepreneur",
+            "occupationalCategory": "11-0000"
+          },
+          {
+            "@type": "Occupation",
+            "name": "Software Developer",
+            "occupationalCategory": "15-1252.00"
+          }
         ],
-        "jobTitle": "Software Engineer",
         "knowsAbout": [
+          "AI-native applications",
+          "Supercivilization",
+          "Avolve.io",
           "Next.js",
           "React",
           "TypeScript",
+          "Vercel AI SDK",
+          "Supabase",
+          "shadcn/ui",
           "Web Development",
           "Modern Tech Stack",
           "AI Integration",
-          "Full Stack Development"
+          "Full Stack Development",
+          "Technology innovation"
         ],
-        "worksFor": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        }
+        "sameAs": [
+          "https://www.youtube.com/@joshuaseymour",
+          "https://github.com/joshuaseymour",
+          "https://tiktok.com/@joshuajseymour",
+          "https://substack.com/@joshuaseymour",
+          "https://x.com/joshuaseymour",
+          "https://t.me/joshuaseymour",
+          "https://www.instagram.com/joshuajseymour/"
+        ]
       },
       {
         "@type": "TechArticle",
@@ -190,7 +235,7 @@ export default function RootLayout({
         "headline": "Modern Web Development Stack Integration Reference",
         "description": "Comprehensive guide to Next.js 15 + React 19.2 + TypeScript 5.9 stack integration with verified compatibility and official resources",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "dateModified": "2025-10-06",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         },
