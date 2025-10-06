@@ -57,9 +57,6 @@ export function SiteFooter() {
                     >
                       AI Chat Application
                     </Link>
-                    <span className="text-muted-foreground/40 text-xs italic">
-                      Complete examples
-                    </span>
                   </nav>
                 </div>
 
@@ -248,9 +245,6 @@ export function SiteFooter() {
                     >
                       AI Coding Tools
                     </Link>
-                    <span className="text-muted-foreground/40 text-xs italic">
-                      Production debugging
-                    </span>
                   </nav>
                 </div>
               </div>
@@ -276,12 +270,6 @@ export function SiteFooter() {
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     AI-Enabled Stack
-                  </Link>
-                  <Link
-                    href="/about"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    About
                   </Link>
                 </nav>
               </div>
@@ -310,6 +298,10 @@ export function SiteFooter() {
                     </a>
                   </p>
                   <div className="flex items-center gap-4 text-xs">
+                    <Link href="/about" className="hover:text-foreground transition-colors">
+                      About
+                    </Link>
+                    <span>·</span>
                     <a
                       href="https://www.joshuaseymour.com"
                       target="_blank"
