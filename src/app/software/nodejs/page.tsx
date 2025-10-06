@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 5, 2025):
-// - Node.js: 24.8.0 (released September 10, 2025)
+// Dependencies (October 6, 2025):
+// - Node.js: 22.20.0 LTS (production), 24.9.0 (becomes LTS Oct 28, 2025)
 // - V8 Engine: 13.6
 // - npm: 11.6.0
-// Last verified: 2025-10-05
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "Node.js 24.8.0 - Native TypeScript + 400% Faster Performance | Avolve.io",
-  description: "Node.js 24.8.0 with native TypeScript execution, 67-400% performance gains, V8 13.6 engine, and stabilized Permission Model. Complete 2025 guide with modern stack integration.",
+  title: "Node.js 24.9.0 - Native TypeScript + LTS Coming Oct 28 | Avolve.io",
+  description: "Node.js 24.9.0 with native TypeScript execution (becomes LTS Oct 28, 2025). Use 22.20.0 LTS for production now. V8 13.6 engine, 400% performance gains, modern stack integration.",
   keywords: ["Node.js 24", "native TypeScript", "Node.js performance", "V8 13.6", "runtime security", "Worker Threads", "Next.js Node.js", "JavaScript runtime 2025"],
   alternates: {
     canonical: "https://avolve.io/software/nodejs",
@@ -23,19 +23,19 @@ export default function NodeJSPage() {
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "Node.js 24.8.0: JavaScript Runtime with Native TypeScript and Revolutionary Performance",
+        "headline": "Node.js 24.9.0: JavaScript Runtime with Native TypeScript (LTS Oct 28, 2025)",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "dateModified": "2025-10-06",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         },
-        "description": "Comprehensive analysis of Node.js 24.8.0's native TypeScript support, 400% performance improvements, and enterprise-grade security features"
+        "description": "Comprehensive analysis of Node.js 24.9.0's native TypeScript support, 400% performance improvements, LTS status (Oct 28, 2025), and production recommendations (use 22.20.0 LTS until then)"
       },
       {
         "@type": "SoftwareApplication",
         "name": "Node.js",
         "applicationCategory": "DeveloperApplication",
-        "softwareVersion": "24.8.0",
+        "softwareVersion": "24.9.0",
         "operatingSystem": "Cross-platform",
         "offers": {
           "@type": "Offer",
@@ -59,21 +59,21 @@ export default function NodeJSPage() {
       />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+        <time className="text-sm text-gray-600" dateTime="2025-10-06">
+          Last updated: October 6, 2025
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-gray-700">Node.js 24.8.0</h1>
+          <h1 className="text-4xl font-bold mb-4 text-gray-700">Node.js 24.9.0 (LTS Oct 28, 2025)</h1>
           <p className="text-xl text-gray-700 mb-12">
-            JavaScript runtime with native TypeScript execution, 67-400% performance improvements, and enterprise-grade security through V8 13.6 engine
+            JavaScript runtime with native TypeScript execution and 400% performance improvements. <strong>Use 22.20.0 LTS for production until Oct 28, 2025</strong>, then upgrade to 24.9.0 LTS.
           </p>
 
           {/* Core Identity Section */}
           <section id="overview" className="mb-12 bg-gray-50 border-l-4 border-gray-600 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
-              <strong>Node.js 24.8.0</strong> is an open-source JavaScript runtime built on Chrome's V8 13.6 engine, enabling native TypeScript execution without build tools, delivering <strong>400% faster URL parsing</strong> and powering <strong>98% of Fortune 500 companies</strong>.
+              <strong>Node.js 24.9.0</strong> (released Sep 25, 2025, <strong>becomes LTS Oct 28, 2025</strong>) is an open-source JavaScript runtime built on Chrome's V8 13.6 engine, enabling native TypeScript execution without build tools, delivering <strong>400% faster URL parsing</strong> and powering <strong>98% of Fortune 500 companies</strong>. For production environments, <strong>use Node.js 22.20.0 LTS</strong> until the Oct 28 transition.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mt-4">
@@ -121,7 +121,7 @@ export default function NodeJSPage() {
               <div className="border-l-4 border-gray-600 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-gray-800">Native TypeScript Revolution</h3>
                 <p className="text-gray-700 mb-3">
-                  Node.js 24.8.0 eliminates the entire TypeScript build pipeline. Direct execution of .ts files without tsc, webpack, or babel fundamentally changes development workflow and deployment architecture.
+                  Node.js 24.9.0 (and 22.20.0 LTS) eliminates the entire TypeScript build pipeline. Direct execution of .ts files without tsc, webpack, or babel fundamentally changes development workflow and deployment architecture.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-neutral-100 p-4 rounded-lg">
@@ -138,7 +138,7 @@ node dist/app.js
 }`}</pre>
                   </div>
                   <div className="bg-zinc-100 p-4 rounded-lg">
-                    <h4 className="font-bold text-zinc-700 mb-2">✅ Now (Node.js 24.8.0)</h4>
+                    <h4 className="font-bold text-zinc-700 mb-2">✅ Now (Node.js 24.9.0 / 22.20.0 LTS)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// Direct execution - zero build
 node app.ts
 
@@ -164,7 +164,7 @@ node app.ts
               <div className="border-l-4 border-zinc-600 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-zinc-700">Performance Transformation</h3>
                 <p className="text-gray-700 mb-3">
-                  Node.js 24.8.0 delivers measurable, dramatic performance improvements that translate to real-world application benefits: 15-20% faster data-heavy workloads, reduced infrastructure costs, and improved user experience.
+                  Node.js 24.9.0 (and 22.20.0 LTS) delivers measurable, dramatic performance improvements that translate to real-world application benefits: 15-20% faster data-heavy workloads, reduced infrastructure costs, and improved user experience.
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="font-bold mb-2">Core Performance Metrics:</h4>
@@ -325,14 +325,14 @@ const sharedArray = new Int32Array(sharedBuffer);`}</pre>
 
             <div className="space-y-6">
               <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-600">
-                <h3 className="text-lg font-bold mb-3">Node.js 24.8.0 + Next.js 15.5 Integration</h3>
+                <h3 className="text-lg font-bold mb-3">Node.js 24.9.0 / 22.20.0 LTS + Next.js 15.5 Integration</h3>
                 <div className="space-y-3">
                   <div>
                     <h4 className="font-bold text-sm mb-2">1. Project Setup:</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// package.json
 {
   "engines": {
-    "node": ">=24.8.0"
+    "node": ">=22.20.0"
   },
   "scripts": {
     "dev": "next dev --turbopack",
@@ -449,7 +449,7 @@ server.listen(3000);
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold mb-3 text-zinc-600">✅ Choose Node.js 24.8.0 When:</h3>
+                <h3 className="text-xl font-bold mb-3 text-zinc-600">✅ Choose Node.js 22.20.0 LTS (Production) or 24.9.0 (Oct 28+) When:</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• <strong>New projects:</strong> No legacy constraints, ready for native TypeScript</li>
                   <li>• <strong>Build tool elimination:</strong> Want to remove tsc, webpack, babel from pipeline</li>
@@ -475,7 +475,7 @@ server.listen(3000);
                 <div className="bg-white p-4 rounded border border-gray-200">
                   <h4 className="font-bold mb-2">Incremental Adoption Path:</h4>
                   <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700">
-                    <li><strong>Install Node.js 24.8.0</strong> using nvm for easy version switching</li>
+                    <li><strong>Install Node.js 22.20.0 LTS</strong> (production) or 24.9.0 (after Oct 28, 2025) using nvm</li>
                     <li><strong>Test native TypeScript</strong> with existing .ts files: <code className="bg-gray-200 px-1 rounded">node app.ts</code></li>
                     <li><strong>Simplify package.json</strong> scripts to remove build steps</li>
                     <li><strong>Enable Permission Model</strong> in staging environment</li>
@@ -494,7 +494,7 @@ server.listen(3000);
               <div>
                 <h3 className="font-bold mb-2">Core Facts:</h3>
                 <ul className="space-y-1 text-sm text-gray-700">
-                  <li>• <strong>Version:</strong> 24.8.0 (September 10, 2025)</li>
+                  <li>• <strong>Version:</strong> 22.20.0 LTS (production) / 24.9.0 (LTS Oct 28, 2025)</li>
                   <li>• <strong>V8 Engine:</strong> 13.6 with Maglev JIT</li>
                   <li>• <strong>Native TypeScript:</strong> Direct <code className="bg-gray-200 px-1 rounded">node app.ts</code> execution</li>
                   <li>• <strong>Performance:</strong> 67-400% improvements, 15-20% real-world</li>
@@ -515,9 +515,9 @@ server.listen(3000);
 
             <div className="mt-4 bg-white p-3 rounded border border-gray-300">
               <h4 className="font-bold text-sm mb-2">Quick Reference Template:</h4>
-              <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// package.json for Node.js 24.8.0
+              <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// package.json for Node.js (Production LTS)
 {
-  "engines": { "node": ">=24.8.0" },
+  "engines": { "node": ">=22.20.0" },
   "scripts": {
     "dev": "node --watch src/app.ts",
     "start": "node src/app.ts",

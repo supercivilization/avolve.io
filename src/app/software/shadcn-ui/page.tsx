@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 5, 2025):
-// - shadcn CLI: 3.3.1
-// - Next.js: 15.5.5
+// Dependencies (October 6, 2025):
+// - shadcn CLI: 3.4.0
+// - Next.js: 15.5.4
 // - React: 19.2.0
-// - Tailwind CSS: v4.1.13
-// Last verified: 2025-10-05
+// - Tailwind CSS: v4.1.14
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
   title: "shadcn/ui 3.3 - Copy-Paste Component Platform with 95K Stars | Avolve.io",
@@ -36,7 +36,7 @@ export default function ShadcnUIPage() {
         "@type": "SoftwareApplication",
         "name": "shadcn/ui",
         "applicationCategory": "DeveloperApplication",
-        "softwareVersion": "3.3.1",
+        "softwareVersion": "3.4.0",
         "operatingSystem": "Node.js 24.8.0",
         "offers": {
           "@type": "Offer",
@@ -601,7 +601,7 @@ export function UserFormDialog({ user }) {
               <div>
                 <h3 className="font-bold mb-2">Core Facts:</h3>
                 <ul className="space-y-1 text-sm text-gray-700">
-                  <li>• <strong>Version:</strong> 3.3.1 (October 2025)</li>
+                  <li>• <strong>Version:</strong> 3.4.0 (October 2025)</li>
                   <li>• <strong>Philosophy:</strong> Copy-paste, not npm package</li>
                   <li>• <strong>Foundation:</strong> Radix UI + Tailwind CSS</li>
                   <li>• <strong>Components:</strong> 65+ accessible primitives</li>

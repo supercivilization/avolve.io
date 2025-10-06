@@ -4,11 +4,15 @@ import { Rocket, Network, Code, Cloud, LifeBuoy } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
-// Dependencies (October 5, 2025):
-// - Next.js: 15.5.5
+// Dependencies (October 6, 2025):
+// - Node.js: 22.20.0 LTS (24.9.0 becomes LTS Oct 28, 2025)
+// - TypeScript: 5.9.3
 // - React: 19.2.0
-// - TypeScript: 5.9.2
-// Last verified: 2025-10-05
+// - Next.js: 15.5.4
+// - Tailwind CSS: 4.1.14
+// - shadcn/ui: 3.4.0
+// - Vercel AI SDK: 5.0.60
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
   title: "Next.js 15, React 19, Supabase & Vercel AI: Prod Patterns",
@@ -34,12 +38,13 @@ export default function Home() {
           "@id": "https://www.supercivilization.xyz/#organization"
         },
         "dependencies": {
-          "Node.js": "24.8.0",
-          "Next.js": "15.5.5",
+          "Node.js": "22.20.0 LTS",
+          "TypeScript": "5.9.3",
           "React": "19.2.0",
-          "TypeScript": "5.9.2",
-          "Tailwind CSS": "4.1.13",
-          "shadcn/ui": "3.3.1"
+          "Next.js": "15.5.4",
+          "Tailwind CSS": "4.1.14",
+          "shadcn/ui": "3.4.0",
+          "Vercel AI SDK": "5.0.60"
         }
       },
       {
@@ -47,7 +52,7 @@ export default function Home() {
         "name": "Modern AI-Native Web Stack",
         "description": "Complete dependency chain and integration patterns for Next.js 15, React 19, TypeScript 5.9, Vercel AI SDK, and Supabase",
         "programmingLanguage": ["TypeScript", "JavaScript"],
-        "runtimePlatform": "Node.js 24.8.0",
+        "runtimePlatform": "Node.js 22.20.0 LTS",
         "targetProduct": {
           "@type": "SoftwareApplication",
           "name": "AI-Native Web Applications",
@@ -55,18 +60,18 @@ export default function Home() {
           "applicationCategory": "DeveloperApplication"
         },
         "dependencies": [
-          {"@type": "SoftwareApplication", "name": "Node.js", "version": "24.8.0"},
-          {"@type": "SoftwareApplication", "name": "TypeScript", "version": "5.9.2"},
+          {"@type": "SoftwareApplication", "name": "Node.js", "version": "22.20.0"},
+          {"@type": "SoftwareApplication", "name": "TypeScript", "version": "5.9.3"},
           {"@type": "SoftwareApplication", "name": "React", "version": "19.2.0"},
-          {"@type": "SoftwareApplication", "name": "Next.js", "version": "15.5.5"},
-          {"@type": "SoftwareApplication", "name": "Tailwind CSS", "version": "4.1.13"},
-          {"@type": "SoftwareApplication", "name": "shadcn/ui", "version": "3.3.1"},
-          {"@type": "SoftwareApplication", "name": "Vercel AI SDK", "version": "5.0.48"},
+          {"@type": "SoftwareApplication", "name": "Next.js", "version": "15.5.4"},
+          {"@type": "SoftwareApplication", "name": "Tailwind CSS", "version": "4.1.14"},
+          {"@type": "SoftwareApplication", "name": "shadcn/ui", "version": "3.4.0"},
+          {"@type": "SoftwareApplication", "name": "Vercel AI SDK", "version": "5.0.60"},
           {"@type": "SoftwareApplication", "name": "Supabase"},
-          {"@type": "SoftwareApplication", "name": "@supabase/ssr", "version": "0.7.1"}
+          {"@type": "SoftwareApplication", "name": "@supabase/ssr", "version": "0.7.0"}
         ],
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "dateModified": "2025-10-06",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         }
@@ -287,24 +292,24 @@ export default function Home() {
               <h3 className="text-xl font-bold mb-3">Core Runtime Chain</h3>
               <div className="space-y-4 text-foreground">
                 <div>
-                  <p className="font-bold">1. Node.js 24.8.0</p>
-                  <p className="text-sm text-muted-foreground">Native TypeScript execution (67-400% faster startup)</p>
-                  <p className="text-sm">→ Enables: Direct .ts file execution without transpilation</p>
+                  <p className="font-bold">1. Node.js 22.20.0 LTS</p>
+                  <p className="text-sm text-muted-foreground">Production-ready runtime (24.9.0 becomes LTS Oct 28, 2025)</p>
+                  <p className="text-sm">→ Enables: Native TypeScript execution, optimal stability</p>
                 </div>
                 <div>
-                  <p className="font-bold">2. TypeScript 5.9.2</p>
+                  <p className="font-bold">2. TypeScript 5.9.3</p>
                   <p className="text-sm text-muted-foreground">Type safety and developer experience</p>
-                  <p className="text-sm">→ Integrates: Node.js 24.8.0 native execution</p>
+                  <p className="text-sm">→ Integrates: Node.js 22.20.0 LTS native execution</p>
                   <p className="text-sm">→ Required by: Next.js type inference, React Server Components</p>
                 </div>
                 <div>
                   <p className="font-bold">3. React 19.2.0</p>
                   <p className="text-sm text-muted-foreground">UI library with Server Components</p>
                   <p className="text-sm">→ Enables: Server-side rendering, streaming, reduced client JS</p>
-                  <p className="text-sm">→ Requires: Node.js 18.18+ (we use 24.8.0 for performance)</p>
+                  <p className="text-sm">→ Requires: Node.js 18.18+ (we use 22.20.0 LTS for production)</p>
                 </div>
                 <div>
-                  <p className="font-bold">4. Next.js 15.5.5</p>
+                  <p className="font-bold">4. Next.js 15.5.4</p>
                   <p className="text-sm text-muted-foreground">Full-stack framework</p>
                   <p className="text-sm">→ Requires: React 19.x, Node.js 18.18+</p>
                   <p className="text-sm">→ Provides: Turbopack (2-5x faster), Server Components, Edge Runtime</p>
@@ -316,13 +321,13 @@ export default function Home() {
               <h3 className="text-xl font-bold mb-3">Styling & UI Chain</h3>
               <div className="space-y-4 text-foreground">
                 <div>
-                  <p className="font-bold">5. Tailwind CSS 4.1.13</p>
+                  <p className="font-bold">5. Tailwind CSS 4.1.14</p>
                   <p className="text-sm text-muted-foreground">Utility-first CSS with Oxide engine (100x faster builds)</p>
                   <p className="text-sm">→ Integrates: PostCSS, Next.js CSS pipeline</p>
                 </div>
                 <div>
-                  <p className="font-bold">6. shadcn/ui 3.3.1</p>
-                  <p className="text-sm text-muted-foreground">Component system (copy-paste, not npm)</p>
+                  <p className="font-bold">6. shadcn/ui 3.4.0</p>
+                  <p className="text-sm text-muted-foreground">Component system with 58 components (copy-paste, not npm)</p>
                   <p className="text-sm">→ Requires: Tailwind CSS, React 19+, Radix UI</p>
                   <p className="text-sm">→ MCP integration: Natural language installs via Claude Code</p>
                 </div>
@@ -333,7 +338,7 @@ export default function Home() {
               <h3 className="text-xl font-bold mb-3">AI Integration Chain</h3>
               <div className="space-y-4 text-foreground">
                 <div>
-                  <p className="font-bold">7. Vercel AI SDK 5.0.48</p>
+                  <p className="font-bold">7. Vercel AI SDK 5.0.60</p>
                   <p className="text-sm text-muted-foreground">AI application framework</p>
                   <p className="text-sm">→ Requires: Next.js 15+ for streaming</p>
                   <p className="text-sm">→ Provides: useChat hook, streamText, tool calling</p>
@@ -353,11 +358,11 @@ export default function Home() {
                 <div>
                   <p className="font-bold">9. Supabase</p>
                   <p className="text-sm text-muted-foreground">Backend-as-a-service</p>
-                  <p className="text-sm">→ Provides: PostgreSQL 17, pgvector 0.8, Auth, Storage</p>
+                  <p className="text-sm">→ Provides: PostgreSQL 15.8 (production), pgvector 0.8.0, Auth, Storage</p>
                   <p className="text-sm">→ Remote MCP: mcp.supabase.com for AI assistant access</p>
                 </div>
                 <div>
-                  <p className="font-bold">10. @supabase/ssr 0.7.1</p>
+                  <p className="font-bold">10. @supabase/ssr 0.7.0</p>
                   <p className="text-sm text-muted-foreground">Server-side Supabase client</p>
                   <p className="text-sm">→ Requires: Next.js middleware, Server Components</p>
                   <p className="text-sm">→ Provides: Cookie-based auth, SSR compatibility</p>
@@ -370,13 +375,13 @@ export default function Home() {
             <h3 className="text-lg font-bold mb-3">Why These Versions Together?</h3>
             <ul className="space-y-2 text-sm text-foreground">
               <li>• <strong>React 19.2 + Next.js 15.5</strong>: Server Components stable (Dec 2024)</li>
-              <li>• <strong>Node.js 24.8</strong>: Native TypeScript execution (Aug 2025)</li>
-              <li>• <strong>Tailwind 4.1.13</strong>: Oxide engine stable (Sep 2025)</li>
-              <li>• <strong>shadcn/ui 3.3.1</strong>: Universal registry with MCP support (Oct 2025)</li>
-              <li>• <strong>Vercel AI SDK 5.0</strong>: Multi-modal streaming stable (Oct 2025)</li>
+              <li>• <strong>Node.js 22.20.0 LTS</strong>: Production stability (24.9.0 becomes LTS Oct 28, 2025)</li>
+              <li>• <strong>Tailwind 4.1.14</strong>: Oxide engine stable (Sep 2025)</li>
+              <li>• <strong>shadcn/ui 3.4.0</strong>: Universal registry with MCP support, 58 components (Oct 2025)</li>
+              <li>• <strong>Vercel AI SDK 5.0.60</strong>: Multi-modal streaming stable (Oct 2025)</li>
             </ul>
             <p className="text-sm text-muted-foreground mt-4">
-              <strong>Last verified</strong>: October 5, 2025 | <strong>All versions production-tested together</strong>: Yes
+              <strong>Last verified</strong>: October 6, 2025 | <strong>All versions production-tested together</strong>: Yes
             </p>
             <p className="text-sm text-muted-foreground">
               <strong>Breaking changes expected</strong>: Next.js 16 (Q1 2026), React 20 (Q3 2026)
@@ -401,14 +406,14 @@ export default function Home() {
                 <TableRow>
                   <TableCell>Runtime</TableCell>
                   <TableCell className="font-mono text-sm">Node.js</TableCell>
-                  <TableCell className="font-mono text-sm">24.8.0</TableCell>
-                  <TableCell>Aug 2025</TableCell>
+                  <TableCell className="font-mono text-sm">22.20.0 LTS</TableCell>
+                  <TableCell>Sep 24, 2025</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Framework</TableCell>
                   <TableCell className="font-mono text-sm">Next.js</TableCell>
-                  <TableCell className="font-mono text-sm">15.5.5</TableCell>
-                  <TableCell>Sep 2025</TableCell>
+                  <TableCell className="font-mono text-sm">15.5.4</TableCell>
+                  <TableCell>Aug 18, 2025</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>UI Library</TableCell>
@@ -419,20 +424,20 @@ export default function Home() {
                 <TableRow>
                   <TableCell>Language</TableCell>
                   <TableCell className="font-mono text-sm">TypeScript</TableCell>
-                  <TableCell className="font-mono text-sm">5.9.2</TableCell>
-                  <TableCell>Sep 2025</TableCell>
+                  <TableCell className="font-mono text-sm">5.9.3</TableCell>
+                  <TableCell>Oct 1, 2025</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Styling</TableCell>
                   <TableCell className="font-mono text-sm">Tailwind CSS</TableCell>
-                  <TableCell className="font-mono text-sm">4.1.13</TableCell>
-                  <TableCell>Sep 2025</TableCell>
+                  <TableCell className="font-mono text-sm">4.1.14</TableCell>
+                  <TableCell>Oct 1, 2025</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Components</TableCell>
                   <TableCell className="font-mono text-sm">shadcn/ui</TableCell>
-                  <TableCell className="font-mono text-sm">3.0</TableCell>
-                  <TableCell>Oct 2025</TableCell>
+                  <TableCell className="font-mono text-sm">3.4.0</TableCell>
+                  <TableCell>Oct 5, 2025</TableCell>
                 </TableRow>
               </TableBody>
             </Table>

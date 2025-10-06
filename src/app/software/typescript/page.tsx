@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 5, 2025):
-// - TypeScript: 5.9.2
-// - Node.js: 24.8.0 (native TypeScript support)
-// - Next.js: 15.5.5
-// Last verified: 2025-10-05
+// Dependencies (October 6, 2025):
+// - TypeScript: 5.9.3
+// - Node.js: 22.20.0 LTS (native TypeScript support)
+// - Next.js: 15.5.4
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
   title: "TypeScript 5.9 - Strongly Typed JavaScript with 10x Faster Compiler | Avolve.io",
-  description: "TypeScript 5.9.2 with native Node.js 24 execution, Project Corsa 10x compiler, and Next.js 15 integration. Complete 2025 guide with modern stack patterns.",
+  description: "TypeScript 5.9.3 with native Node.js 24 execution, Project Corsa 10x compiler, and Next.js 15 integration. Complete 2025 guide with modern stack patterns.",
   keywords: ["TypeScript 5.9", "Project Corsa", "Native TypeScript", "Node.js TypeScript", "TypeScript Next.js", "TypeScript 2025", "Go compiler"],
   alternates: {
     canonical: "https://avolve.io/software/typescript",
@@ -25,7 +25,7 @@ export default function TypeScriptPage() {
         "@type": "TechArticle",
         "headline": "TypeScript 5.9: Strongly Typed JavaScript with Revolutionary Performance",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "dateModified": "2025-10-06",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         },
@@ -35,7 +35,7 @@ export default function TypeScriptPage() {
         "@type": "SoftwareApplication",
         "name": "TypeScript",
         "applicationCategory": "DeveloperApplication",
-        "softwareVersion": "5.9.2",
+        "softwareVersion": "5.9.3",
         "operatingSystem": "Cross-platform",
         "offers": {
           "@type": "Offer",
@@ -73,7 +73,7 @@ export default function TypeScriptPage() {
           <section id="overview" className="mb-12 bg-slate-100 border-l-4 border-slate-600 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
-              <strong>TypeScript 5.9.2</strong> is a strongly typed superset of JavaScript developed by Microsoft, adding static type checking, interfaces, and modern language features. Used by <strong>Microsoft, Google, Airbnb, and Shopify</strong> with <strong>100K+ GitHub stars</strong>.
+              <strong>TypeScript 5.9.3</strong> is a strongly typed superset of JavaScript developed by Microsoft, adding static type checking, interfaces, and modern language features. Used by <strong>Microsoft, Google, Airbnb, and Shopify</strong> with <strong>100K+ GitHub stars</strong>.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mt-4">
@@ -135,7 +135,7 @@ export default function TypeScriptPage() {
     "dev": "ts-node-dev --respawn app.ts"
   },
   "devDependencies": {
-    "typescript": "^5.9.2",
+    "typescript": "^5.9.3",
     "@types/node": "^22.14.0",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0"
@@ -589,7 +589,7 @@ async function getUser(id) {
               <div>
                 <h3 className="font-bold mb-2">Core Facts:</h3>
                 <ul className="space-y-1 text-sm text-gray-700">
-                  <li>• <strong>Version:</strong> 5.9.2 (August 2025)</li>
+                  <li>• <strong>Version:</strong> 5.9.3 (August 2025)</li>
                   <li>• <strong>Native execution:</strong> Node.js 24+ runs .ts directly</li>
                   <li>• <strong>Project Corsa:</strong> 10x compiler in preview (TS 7.0)</li>
                   <li>• <strong>Adoption:</strong> 83.5M weekly downloads, 85% enterprise</li>

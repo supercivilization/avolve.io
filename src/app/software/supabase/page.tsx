@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 5, 2025):
-// - Supabase: PostgreSQL 17, pgvector 0.8.0
-// - Next.js: 15.5.5
+// Dependencies (October 6, 2025):
+// - Supabase: PostgreSQL 15.8 (production), 17 (development), pgvector 0.8.0
+// - Next.js: 15.5.4
 // - React: 19.2.0
-// Last verified: 2025-10-05
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "Supabase - PostgreSQL 17 Backend-as-a-Service with AI Vector Search | Avolve.io",
-  description: "Supabase with PostgreSQL 17, pgvector 0.8.0, and Next.js 15 integration. Complete auth, RLS, real-time, and AI-powered vector search. October 2025.",
-  keywords: ["Supabase", "PostgreSQL 17", "pgvector", "Row Level Security", "Next.js auth", "vector database", "BaaS", "Supabase 2025"],
+  title: "Supabase - PostgreSQL 15.8 Backend-as-a-Service with AI Vector Search | Avolve.io",
+  description: "Supabase with PostgreSQL 15.8 (production default), pgvector 0.8.0, and Next.js 15 integration. Complete auth, RLS, real-time, and AI-powered vector search. October 2025.",
+  keywords: ["Supabase", "PostgreSQL 15", "pgvector", "Row Level Security", "Next.js auth", "vector database", "BaaS", "Supabase 2025"],
   alternates: {
     canonical: "https://avolve.io/software/supabase",
   },
@@ -23,20 +23,20 @@ export default function SupabasePage() {
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "Supabase: Open-Source Backend-as-a-Service with PostgreSQL 17 and AI Vector Search",
+        "headline": "Supabase: Open-Source Backend-as-a-Service with PostgreSQL 15.8 and AI Vector Search",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "dateModified": "2025-10-06",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         },
-        "description": "Comprehensive analysis of Supabase's PostgreSQL 17 backend, authentication system, Row Level Security, and pgvector 0.8.0 AI capabilities"
+        "description": "Comprehensive analysis of Supabase's PostgreSQL 15.8 backend (production default), authentication system, Row Level Security, and pgvector 0.8.0 AI capabilities"
       },
       {
         "@type": "SoftwareApplication",
         "name": "Supabase",
         "applicationCategory": "DeveloperApplication",
-        "softwareVersion": "PostgreSQL 17",
-        "operatingSystem": "PostgreSQL 17",
+        "softwareVersion": "PostgreSQL 15.8",
+        "operatingSystem": "PostgreSQL 15.8",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -59,21 +59,21 @@ export default function SupabasePage() {
       />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+        <time className="text-sm text-gray-600" dateTime="2025-10-06">
+          Last updated: October 6, 2025
         </time>
 
         <article className="mt-4">
           <h1 className="text-4xl font-bold mb-4 text-zinc-600">Supabase</h1>
           <p className="text-xl text-gray-700 mb-12">
-            Open-source Backend-as-a-Service built on PostgreSQL 17 with authentication, Row Level Security, real-time subscriptions, and pgvector 0.8.0 AI search
+            Open-source Backend-as-a-Service built on PostgreSQL 15.8 (production default, CLI uses 17 for development) with authentication, Row Level Security, real-time subscriptions, and pgvector 0.8.0 AI search
           </p>
 
           {/* Core Identity Section */}
           <section id="overview" className="mb-12 bg-zinc-100 border-l-4 border-zinc-600 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
-              <strong>Supabase</strong> is an open-source Firebase alternative built on <strong>PostgreSQL 17</strong>, providing authentication, database, storage, real-time subscriptions, and AI-powered vector search. Used by <strong>1.7M developers</strong> and <strong>40% of Y Combinator startups</strong> with <strong>$70M ARR</strong>.
+              <strong>Supabase</strong> is an open-source Firebase alternative built on <strong>PostgreSQL 15.8</strong> (production default; CLI uses 17 for local development), providing authentication, database, storage, real-time subscriptions, and AI-powered vector search. Used by <strong>1.7M developers</strong> and <strong>40% of Y Combinator startups</strong> with <strong>$70M ARR</strong>.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mt-4">
@@ -91,7 +91,7 @@ export default function SupabasePage() {
               <div>
                 <h3 className="font-bold text-gray-800 mb-2">Core Capabilities</h3>
                 <ul className="space-y-1 text-sm text-gray-700">
-                  <li>• PostgreSQL 17 with pgvector 0.8.0</li>
+                  <li>• PostgreSQL 15.8 (production) with pgvector 0.8.0</li>
                   <li>• Authentication (email, OAuth, magic links)</li>
                   <li>• Row Level Security (RLS)</li>
                   <li>• Real-time subscriptions (websockets)</li>
@@ -122,7 +122,7 @@ export default function SupabasePage() {
               <div className="border-l-4 border-zinc-600 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-zinc-700">Production-Grade PostgreSQL Without DevOps</h3>
                 <p className="text-gray-700 mb-3">
-                  Supabase eliminates database operations complexity while providing full PostgreSQL 17 access. Unlike Firebase's NoSQL limitations, you get SQL joins, transactions, triggers, and extensions—without managing servers, backups, or scaling infrastructure.
+                  Supabase eliminates database operations complexity while providing full PostgreSQL 15.8 access (production default). Unlike Firebase's NoSQL limitations, you get SQL joins, transactions, triggers, and extensions—without managing servers, backups, or scaling infrastructure.
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="font-bold mb-2">What Supabase Manages For You:</h4>
@@ -600,7 +600,7 @@ LIMIT 5;
               <div>
                 <h3 className="font-bold mb-2">Core Facts:</h3>
                 <ul className="space-y-1 text-sm text-gray-700">
-                  <li>• <strong>Database:</strong> PostgreSQL 17, pgvector 0.8.0</li>
+                  <li>• <strong>Database:</strong> PostgreSQL 15.8 (production), pgvector 0.8.0</li>
                   <li>• <strong>Auth Package:</strong> @supabase/ssr (for Next.js)</li>
                   <li>• <strong>RLS:</strong> Database-enforced access control</li>
                   <li>• <strong>Vector Search:</strong> HNSW indexing, cosine similarity</li>
@@ -660,7 +660,7 @@ export async function searchAction(query: string) {
               <div>
                 <h3 className="font-bold mb-2 text-gray-800">Built On:</h3>
                 <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• PostgreSQL 17 (database engine)</li>
+                  <li>• PostgreSQL 15.8 (production default)</li>
                   <li>• pgvector 0.8.0 (vector extension)</li>
                   <li>• GoTrue (auth service)</li>
                   <li>• PostgREST (auto-generated API)</li>

@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 5, 2025):
-// - Tailwind CSS: v4.1.13
-// - Next.js: 15.5.5
+// Dependencies (October 6, 2025):
+// - Tailwind CSS: v4.1.14
+// - Next.js: 15.5.4
 // - React: 19.2.0
-// Last verified: 2025-10-05
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "Tailwind CSS v4.1.13 - 100x Faster CSS with Oxide Engine | Avolve.io",
-  description: "Tailwind CSS v4.1.13 with revolutionary Oxide engine: 100x faster builds, CSS-first configuration, native container queries. Complete architectural rewrite. October 2025.",
+  title: "Tailwind CSS v4.1.14 - 100x Faster CSS with Oxide Engine | Avolve.io",
+  description: "Tailwind CSS v4.1.14 with revolutionary Oxide engine: 100x faster builds, CSS-first configuration, native container queries. Complete architectural rewrite. October 2025.",
   keywords: ["Tailwind CSS v4", "Oxide engine", "CSS-first config", "utility CSS", "100x faster", "container queries", "Rust CSS"],
   alternates: {
     canonical: "https://avolve.io/software/tailwind",
@@ -23,19 +23,19 @@ export default function TailwindPage() {
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "Tailwind CSS v4.1.13: Utility-First CSS with Revolutionary Performance",
+        "headline": "Tailwind CSS v4.1.14: Utility-First CSS with Revolutionary Performance",
         "datePublished": "2025-10-05",
         "dateModified": "2025-10-05",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         },
-        "description": "Comprehensive analysis of Tailwind CSS v4.1.13's Oxide engine architecture, CSS-first configuration, and 100x performance improvements"
+        "description": "Comprehensive analysis of Tailwind CSS v4.1.14's Oxide engine architecture, CSS-first configuration, and 100x performance improvements"
       },
       {
         "@type": "SoftwareApplication",
         "name": "Tailwind CSS",
         "applicationCategory": "DeveloperApplication",
-        "softwareVersion": "v4.1.13",
+        "softwareVersion": "v4.1.14",
         "operatingSystem": "Node.js 24.8.0",
         "offers": {
           "@type": "Offer",
@@ -64,7 +64,7 @@ export default function TailwindPage() {
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-zinc-600">Tailwind CSS v4.1.13</h1>
+          <h1 className="text-4xl font-bold mb-4 text-zinc-600">Tailwind CSS v4.1.14</h1>
           <p className="text-xl text-gray-700 mb-12">
             Utility-first CSS framework rebuilt from the ground up with Rust-powered Oxide engine delivering 100x faster builds and CSS-first configuration
           </p>
@@ -73,7 +73,7 @@ export default function TailwindPage() {
           <section id="overview" className="mb-12 bg-zinc-100 border-l-4 border-zinc-600 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
-              <strong>Tailwind CSS v4.1.13</strong> is a utility-first CSS framework completely rewritten in Rust with the Oxide engine, delivering <strong>100x faster incremental builds</strong> and eliminating JavaScript configuration entirely through CSS-first design tokens.
+              <strong>Tailwind CSS v4.1.14</strong> is a utility-first CSS framework completely rewritten in Rust with the Oxide engine, delivering <strong>100x faster incremental builds</strong> and eliminating JavaScript configuration entirely through CSS-first design tokens.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mt-4">
@@ -109,7 +109,7 @@ export default function TailwindPage() {
               <div className="border-l-4 border-zinc-600 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-zinc-700">Architectural Revolution</h3>
                 <p className="text-gray-700 mb-3">
-                  v4.1.13 represents a complete ground-up rewrite that eliminates the performance bottlenecks of JavaScript-based CSS processing. The Oxide engine delivers microsecond-level rebuilds that fundamentally change the development experience.
+                  v4.1.14 represents a complete ground-up rewrite that eliminates the performance bottlenecks of JavaScript-based CSS processing. The Oxide engine delivers microsecond-level rebuilds that fundamentally change the development experience.
                 </p>
                 <div className="bg-gray-100 p-4 rounded-lg">
                   <h4 className="font-bold mb-2">Build Performance Transformation:</h4>
@@ -119,7 +119,7 @@ export default function TailwindPage() {
                         <tr>
                           <th className="border border-gray-300 px-3 py-2 text-left">Operation</th>
                           <th className="border border-gray-300 px-3 py-2 text-left">v3.x</th>
-                          <th className="border border-gray-300 px-3 py-2 text-left">v4.1.13</th>
+                          <th className="border border-gray-300 px-3 py-2 text-left">v4.1.14</th>
                           <th className="border border-gray-300 px-3 py-2 text-left">Improvement</th>
                         </tr>
                       </thead>
@@ -171,7 +171,7 @@ module.exports = {
 }`}</pre>
                   </div>
                   <div className="bg-zinc-100 p-4 rounded-lg">
-                    <h4 className="font-bold text-zinc-700 mb-2">✅ v4.1.13 (CSS-First)</h4>
+                    <h4 className="font-bold text-zinc-700 mb-2">✅ v4.1.14 (CSS-First)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`/* styles.css */
 @import "tailwindcss";
 
@@ -430,7 +430,7 @@ export function Card({ children }: { children: React.ReactNode }) {
               <div>
                 <h3 className="font-bold mb-2">Core Facts:</h3>
                 <ul className="space-y-1 text-sm text-gray-700">
-                  <li>• <strong>Version:</strong> v4.1.13 (September 2025)</li>
+                  <li>• <strong>Version:</strong> v4.1.14 (September 2025)</li>
                   <li>• <strong>Engine:</strong> Oxide (Rust + TypeScript)</li>
                   <li>• <strong>Performance:</strong> 100x faster incremental, 182x no-change</li>
                   <li>• <strong>Config:</strong> CSS-first with @theme directive</li>

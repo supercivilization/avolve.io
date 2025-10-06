@@ -10,15 +10,15 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { AlertCircle, CheckCircle2 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
-// Dependencies (October 5, 2025):
-// - Vercel AI SDK: 5.0.48
-// - Next.js: 15.5.5
+// Dependencies (October 6, 2025):
+// - Vercel AI SDK: 5.0.60
+// - Next.js: 15.5.4
 // - React: 19.2.0
-// Last verified: 2025-10-05
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "Vercel AI SDK 5.0.48 + Modern Stack Integration (Oct 2025) | Avolve.io",
-  description: "Vercel AI SDK 5.0.48 with Next.js 15, React 19, streaming, tool calling. Stack integration patterns, verified compatibility, and official resources. Updated Oct 2025.",
+  title: "Vercel AI SDK 5.0.60 + Modern Stack Integration (Oct 2025) | Avolve.io",
+  description: "Vercel AI SDK 5.0.60 with Next.js 15, React 19, streaming, tool calling. Stack integration patterns, verified compatibility, and official resources. Updated Oct 2025.",
   keywords: ["Vercel AI SDK", "AI SDK 5.0", "Next.js AI", "streaming AI", "tool calling", "Claude Sonnet 4.5", "GPT-5", "AI Gateway"],
   alternates: {
     canonical: "https://avolve.io/software/vercel-ai-sdk",
@@ -31,7 +31,7 @@ export default function VercelAISDKPage() {
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "Vercel AI SDK 5.0.48 + Modern Stack Integration (October 2025)",
+        "headline": "Vercel AI SDK 5.0.60 + Modern Stack Integration (October 2025)",
         "datePublished": "2025-10-05",
         "dateModified": "2025-10-05",
         "author": {
@@ -40,13 +40,13 @@ export default function VercelAISDKPage() {
         "publisher": {
           "@id": "https://www.supercivilization.xyz/#organization"
         },
-        "description": "Vercel AI SDK 5.0.48 integration with Next.js 15, React 19, and modern stack. Verified compatibility patterns.",
+        "description": "Vercel AI SDK 5.0.60 integration with Next.js 15, React 19, and modern stack. Verified compatibility patterns.",
         "articleSection": "Stack Integration"
       },
       {
         "@type": "SoftwareApplication",
         "name": "Vercel AI SDK",
-        "softwareVersion": "5.0.48",
+        "softwareVersion": "5.0.60",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Node.js 24.8.0",
         "offers": {
@@ -111,7 +111,7 @@ export default function VercelAISDKPage() {
           <header className="space-y-4">
             <div className="flex items-center gap-3">
               <h1 className="text-4xl font-bold">Vercel AI SDK 5.0</h1>
-              <Badge variant="default">v5.0.48</Badge>
+              <Badge variant="default">v5.0.60</Badge>
               <Badge variant="outline" className="bg-zinc-100 text-zinc-600 border-zinc-300">Stable</Badge>
             </div>
             <p className="text-xl text-muted-foreground">
@@ -193,7 +193,7 @@ export default function VercelAISDKPage() {
           <section id="getting-started" className="space-y-4">
             <h2 className="text-3xl font-bold">Getting Started</h2>
             <p className="text-muted-foreground">
-              Install Vercel AI SDK 5.0.48 and start building AI applications with streaming and tool calling.
+              Install Vercel AI SDK 5.0.60 and start building AI applications with streaming and tool calling.
             </p>
 
             <CodeBlock
