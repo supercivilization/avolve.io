@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Dependencies (October 5, 2025):
-// Pricing verified: 2025-10-05
-// Last verified: 2025-10-05
+// Dependencies (October 6, 2025):
+// Pricing verified: 2025-10-06
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "Vercel, Supabase, Stripe & Claude API: Services Guide",
-  description: "Pricing comparison (October 2025): Vercel ($20/mo Pro), Supabase ($25/mo Pro), Claude API (batch 50% discount), Stripe (2.9% + 30¢). Free tier limits, cost triggers, when to upgrade. AI-optimized guidance.",
+  title: "Services - Modern Stack Service Reference",
+  description: "Fast lookup: Vercel, Supabase, Claude API, Stripe, Resend pricing (October 2025). Free tier limits, upgrade triggers, official links, cost optimization.",
   alternates: {
     canonical: "https://avolve.io/services",
   },
@@ -230,15 +230,216 @@ export default function ServicesPage() {
       />
 
       <main className="page-container">
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
+          Last updated: October 6, 2025
         </time>
 
         <article>
           <h1 className="mb-4">Services</h1>
           <p className="lead section-spacing">
-            External managed capabilities - what you buy, not build
+            Fast lookup: pricing, official links, upgrade triggers
           </p>
+
+          {/* QUICK REFERENCE TABLE - Primary utility for fast lookup */}
+          <section id="quick-reference" className="mb-12 border border-border/50 rounded-lg overflow-hidden shadow-sm">
+            <div className="bg-muted/30 px-6 py-3 border-b border-border/40">
+              <h2 className="text-xl font-bold">Service Pricing (Verified October 6, 2025)</h2>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-muted/20">
+                  <tr className="border-b border-border/40">
+                    <th className="px-4 py-3 text-left font-semibold">Service</th>
+                    <th className="px-4 py-3 text-left font-semibold">Category</th>
+                    <th className="px-4 py-3 text-left font-semibold">Free Tier</th>
+                    <th className="px-4 py-3 text-left font-semibold">Paid Tier</th>
+                    <th className="px-4 py-3 text-left font-semibold">Official Links</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border/40">
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Vercel</td>
+                    <td className="px-4 py-3 text-sm">Hosting & Deployment</td>
+                    <td className="px-4 py-3">
+                      <div className="text-sm">
+                        <div className="font-mono font-bold">$0/mo</div>
+                        <div className="text-muted-foreground">100GB bandwidth, unlimited sites</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="text-sm">
+                        <div className="font-mono font-bold">$20/mo Pro</div>
+                        <div className="text-muted-foreground">1TB bandwidth, Fluid Compute</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://vercel.com/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://vercel.com/pricing" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Pricing</a>
+                        <a href="#vercel" className="text-blue-600 hover:underline">Guide →</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Supabase</td>
+                    <td className="px-4 py-3 text-sm">Database & Auth</td>
+                    <td className="px-4 py-3">
+                      <div className="text-sm">
+                        <div className="font-mono font-bold">$0/mo</div>
+                        <div className="text-muted-foreground">500MB DB, 50K MAU, Remote MCP</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="text-sm">
+                        <div className="font-mono font-bold">$25/mo Pro</div>
+                        <div className="text-muted-foreground">8GB DB, 100K MAU, pgvector 0.8</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://supabase.com/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://supabase.com/pricing" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Pricing</a>
+                        <a href="#supabase" className="text-blue-600 hover:underline">Guide →</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Claude API</td>
+                    <td className="px-4 py-3 text-sm">AI Models</td>
+                    <td className="px-4 py-3">
+                      <div className="text-sm">
+                        <div className="font-mono font-bold">Pay-per-use</div>
+                        <div className="text-muted-foreground">No free tier</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="text-sm">
+                        <div className="font-mono font-bold">$3 per 1M input</div>
+                        <div className="text-muted-foreground">Claude 3.7 Sonnet, Batch 50% off</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://docs.anthropic.com" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://www.anthropic.com/pricing" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Pricing</a>
+                        <a href="#claude-api" className="text-blue-600 hover:underline">Guide →</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Stripe</td>
+                    <td className="px-4 py-3 text-sm">Payments</td>
+                    <td className="px-4 py-3">
+                      <div className="text-sm">
+                        <div className="font-mono font-bold">Pay-per-use</div>
+                        <div className="text-muted-foreground">No monthly fee</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="text-sm">
+                        <div className="font-mono font-bold">2.9% + 30¢</div>
+                        <div className="text-muted-foreground">Per successful charge</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://stripe.com/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://stripe.com/pricing" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Pricing</a>
+                        <a href="#stripe" className="text-blue-600 hover:underline">Guide →</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Resend</td>
+                    <td className="px-4 py-3 text-sm">Transactional Email</td>
+                    <td className="px-4 py-3">
+                      <div className="text-sm">
+                        <div className="font-mono font-bold">$0/mo</div>
+                        <div className="text-muted-foreground">3K emails/mo, 100/day, 1 domain</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="text-sm">
+                        <div className="font-mono font-bold">$20/mo Pro</div>
+                        <div className="text-muted-foreground">50K emails/mo, unlimited domains</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://resend.com/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://resend.com/pricing" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Pricing</a>
+                        <a href="#resend" className="text-blue-600 hover:underline">Guide →</a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
+              <p className="text-sm text-muted-foreground">
+                <strong>All pricing verified</strong> • Free tiers available for Vercel, Supabase, Resend • Last verified: October 6, 2025
+              </p>
+            </div>
+          </section>
+
+          {/* DECISION HELPER - When to upgrade */}
+          <section id="upgrade-triggers" className="mb-12 border border-border/50 rounded-lg overflow-hidden shadow-sm">
+            <div className="bg-muted/30 px-6 py-3 border-b border-border/40">
+              <h2 className="text-xl font-bold">When to Upgrade from Free Tier</h2>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-muted/20">
+                  <tr className="border-b border-border/40">
+                    <th className="px-4 py-3 text-left font-semibold">Service</th>
+                    <th className="px-4 py-3 text-left font-semibold">Upgrade Trigger</th>
+                    <th className="px-4 py-3 text-left font-semibold">What You Get</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border/40">
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Vercel</td>
+                    <td className="px-4 py-3 text-sm">
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Commercial use required</li>
+                        <li>&gt;100GB bandwidth/month</li>
+                        <li>Need advanced analytics</li>
+                      </ul>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      <strong className="font-mono">$20/mo Pro</strong>: 1TB bandwidth, Fluid Compute (85% savings), advanced analytics
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Supabase</td>
+                    <td className="px-4 py-3 text-sm">
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Database &gt;400MB</li>
+                        <li>Using pgvector for AI</li>
+                        <li>&gt;50K monthly active users</li>
+                      </ul>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      <strong className="font-mono">$25/mo Pro</strong>: 8GB database, pgvector 0.8, 100K MAU, real-time
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Resend</td>
+                    <td className="px-4 py-3 text-sm">
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>&gt;3K emails/month</li>
+                        <li>Need multiple domains</li>
+                        <li>Want analytics/webhooks</li>
+                      </ul>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      <strong className="font-mono">$20/mo Pro</strong>: 50K emails/mo, unlimited domains, analytics
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
 
           <section id="services-definition" className="section-spacing">
             <h2 className="mb-4">What are Services?</h2>
