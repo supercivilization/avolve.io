@@ -320,7 +320,7 @@ export function SiteFooter() {
                     </a>
                     <span>·</span>
                     <a
-                      href="https://github.com/supercivilization"
+                      href="https://github.com/supercivilization/avolve.io"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-foreground transition-colors"
