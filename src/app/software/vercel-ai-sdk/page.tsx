@@ -112,7 +112,7 @@ export default function VercelAISDKPage() {
             <div className="flex items-center gap-3">
               <h1 className="text-4xl font-bold">Vercel AI SDK 5.0</h1>
               <Badge variant="default">v5.0.60</Badge>
-              <Badge variant="outline" className="bg-zinc-100 text-zinc-600 border-zinc-300">Stable</Badge>
+              <Badge variant="outline" className="bg-muted/30 text-zinc-600 border-zinc-300">Stable</Badge>
             </div>
             <p className="text-xl text-muted-foreground">
               TypeScript toolkit for building AI applications with streaming, tool calling, and agentic control. 2M+ weekly downloads, 100+ models unified.

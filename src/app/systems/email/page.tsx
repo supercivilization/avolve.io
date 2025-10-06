@@ -309,44 +309,44 @@ npm run email:dev
             <h2 className="text-3xl font-bold mb-6">Cost at Scale</h2>
 
             <div className="overflow-x-auto mb-6">
-              <table className="w-full border-collapse border border-gray-300">
-                <thead className="bg-gray-100">
+              <table className="w-full border-collapse">
+                <thead className="bg-muted/30">
                   <tr>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Emails/Month</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Resend</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">SendGrid</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Mailgun</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Amazon SES</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Emails/Month</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Resend</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">SendGrid</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Mailgun</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Amazon SES</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">3,000</td>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">$0 (Free)</td>
-                    <td className="border border-gray-300 px-4 py-2">$0 (100/day)</td>
-                    <td className="border border-gray-300 px-4 py-2">No free tier</td>
-                    <td className="border border-gray-300 px-4 py-2">$0.30</td>
+                    <td className="border border-border/40 px-4 py-2">3,000</td>
+                    <td className="border border-border/40 px-4 py-2 font-bold">$0 (Free)</td>
+                    <td className="border border-border/40 px-4 py-2">$0 (100/day)</td>
+                    <td className="border border-border/40 px-4 py-2">No free tier</td>
+                    <td className="border border-border/40 px-4 py-2">$0.30</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">50,000</td>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">$20 (Pro)</td>
-                    <td className="border border-gray-300 px-4 py-2">$20</td>
-                    <td className="border border-gray-300 px-4 py-2">$90</td>
-                    <td className="border border-gray-300 px-4 py-2">$5</td>
+                    <td className="border border-border/40 px-4 py-2">50,000</td>
+                    <td className="border border-border/40 px-4 py-2 font-bold">$20 (Pro)</td>
+                    <td className="border border-border/40 px-4 py-2">$20</td>
+                    <td className="border border-border/40 px-4 py-2">$90</td>
+                    <td className="border border-border/40 px-4 py-2">$5</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">100,000</td>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">$90</td>
-                    <td className="border border-gray-300 px-4 py-2">$249</td>
-                    <td className="border border-gray-300 px-4 py-2">$90</td>
-                    <td className="border border-gray-300 px-4 py-2">$10</td>
+                    <td className="border border-border/40 px-4 py-2">100,000</td>
+                    <td className="border border-border/40 px-4 py-2 font-bold">$90</td>
+                    <td className="border border-border/40 px-4 py-2">$249</td>
+                    <td className="border border-border/40 px-4 py-2">$90</td>
+                    <td className="border border-border/40 px-4 py-2">$10</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">1,000,000</td>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">$650</td>
-                    <td className="border border-gray-300 px-4 py-2">Custom</td>
-                    <td className="border border-gray-300 px-4 py-2">Custom</td>
-                    <td className="border border-gray-300 px-4 py-2">$100</td>
+                    <td className="border border-border/40 px-4 py-2">1,000,000</td>
+                    <td className="border border-border/40 px-4 py-2 font-bold">$650</td>
+                    <td className="border border-border/40 px-4 py-2">Custom</td>
+                    <td className="border border-border/40 px-4 py-2">Custom</td>
+                    <td className="border border-border/40 px-4 py-2">$100</td>
                   </tr>
                 </tbody>
               </table>
@@ -411,21 +411,21 @@ npm run email:dev
             <h2 className="text-3xl font-bold mb-6">Production Best Practices</h2>
 
             <div className="space-y-6">
-              <div className="bg-slate-100 border-l-4 border-slate-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-slate-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Component Reusability</h3>
                 <p className="text-sm text-gray-700">
                   Build button, header, footer components once. Compose across multiple templates. Track byte cost per component. Use TypeScript interfaces for self-documenting props.
                 </p>
               </div>
 
-              <div className="bg-zinc-100 border-l-4 border-zinc-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-zinc-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Deliverability Optimization</h3>
                 <p className="text-sm text-gray-700">
                   Configure SPF, DKIM, DMARC records. Use Resend's suppression list. Warm up dedicated IPs gradually. Monitor bounce rates. A/B test subject lines. Avoid spam trigger words.
                 </p>
               </div>
 
-              <div className="bg-gray-100 border-l-4 border-gray-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-gray-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Batch Processing Optimization</h3>
                 <p className="text-sm text-gray-700">
                   Group recipients by template variation (not arbitrary batching) for 2-3x throughput. Use idempotency keys to prevent duplicates. Batch API supports 100 emails per request.

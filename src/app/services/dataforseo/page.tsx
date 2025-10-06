@@ -82,7 +82,7 @@ export default function DataForSEOPage() {
             Production-tested by 750+ companies including agencies, SaaS platforms, and enterprise SEO tools. $0.0012 per 100 SERP results with pay-as-you-go pricing.
           </p>
 
-          <section id="overview" className="mb-12 bg-slate-100 border-l-4 border-slate-600 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-muted/30 border-l-4 border-slate-600 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What is DataForSEO?</h2>
             <p className="text-gray-700 mb-4">
               <strong>DataForSEO is a REST API platform</strong> providing programmatic access to SEO data including SERP results, keyword metrics, backlink profiles, on-page analysis, and content data across multiple search engines and locations.
@@ -396,51 +396,51 @@ export async function POST(request: Request) {
           <section id="pricing" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">Pricing Structure</h2>
 
-            <div className="bg-zinc-100 border-l-4 border-zinc-600 p-4 rounded-lg mb-6">
+            <div className="bg-muted/30 border-l-4 border-zinc-600 p-4 rounded-lg mb-6">
               <p className="text-gray-700">
                 <strong>Pay-as-you-go model:</strong> No monthly minimums, no contracts. Pay only for what you use with per-request pricing.
               </p>
             </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse border border-gray-300 text-sm">
-                <thead className="bg-gray-100">
+              <table className="w-full border-collapse text-sm">
+                <thead className="bg-muted/30">
                   <tr>
-                    <th className="border border-gray-300 px-4 py-2 text-left">API Suite</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Pricing</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Example Cost</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">API Suite</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Pricing</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Example Cost</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">SERP API (Live)</td>
-                    <td className="border border-gray-300 px-4 py-2">$0.0012 per 100 results</td>
-                    <td className="border border-gray-300 px-4 py-2">10K queries = $12</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">SERP API (Live)</td>
+                    <td className="border border-border/40 px-4 py-2">$0.0012 per 100 results</td>
+                    <td className="border border-border/40 px-4 py-2">10K queries = $12</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">SERP API (Task)</td>
-                    <td className="border border-gray-300 px-4 py-2">$0.0003 per result</td>
-                    <td className="border border-gray-300 px-4 py-2">10K queries = $3</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">SERP API (Task)</td>
+                    <td className="border border-border/40 px-4 py-2">$0.0003 per result</td>
+                    <td className="border border-border/40 px-4 py-2">10K queries = $3</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">Keywords Data</td>
-                    <td className="border border-gray-300 px-4 py-2">$0.002 per keyword</td>
-                    <td className="border border-gray-300 px-4 py-2">5K keywords = $10</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">Keywords Data</td>
+                    <td className="border border-border/40 px-4 py-2">$0.002 per keyword</td>
+                    <td className="border border-border/40 px-4 py-2">5K keywords = $10</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">Backlinks</td>
-                    <td className="border border-gray-300 px-4 py-2">$0.006 per domain</td>
-                    <td className="border border-gray-300 px-4 py-2">1K domains = $6</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">Backlinks</td>
+                    <td className="border border-border/40 px-4 py-2">$0.006 per domain</td>
+                    <td className="border border-border/40 px-4 py-2">1K domains = $6</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">On-Page</td>
-                    <td className="border border-gray-300 px-4 py-2">$0.002 per page</td>
-                    <td className="border border-gray-300 px-4 py-2">1K pages = $2</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">On-Page</td>
+                    <td className="border border-border/40 px-4 py-2">$0.002 per page</td>
+                    <td className="border border-border/40 px-4 py-2">1K pages = $2</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">DataForSEO Labs</td>
-                    <td className="border border-gray-300 px-4 py-2">$0.0015 per request</td>
-                    <td className="border border-gray-300 px-4 py-2">10K requests = $15</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">DataForSEO Labs</td>
+                    <td className="border border-border/40 px-4 py-2">$0.0015 per request</td>
+                    <td className="border border-border/40 px-4 py-2">10K requests = $15</td>
                   </tr>
                 </tbody>
               </table>
@@ -457,7 +457,7 @@ export async function POST(request: Request) {
             <h2 className="text-3xl font-bold mb-6">Use Cases for Avolve.io</h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-slate-100 p-4 rounded-lg">
+              <div className="bg-muted/30 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Rank Tracking Dashboard</h3>
                 <p className="text-sm text-gray-700 mb-2">
                   Track "Next.js 15", "React 19.2", "TypeScript 5.9" rankings daily using SERP API task-based endpoints.
@@ -467,7 +467,7 @@ export async function POST(request: Request) {
                 </p>
               </div>
 
-              <div className="bg-zinc-100 p-4 rounded-lg">
+              <div className="bg-muted/30 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Topic Cluster Research</h3>
                 <p className="text-sm text-gray-700 mb-2">
                   Use Keywords Data API to find 100+ related keywords for each pillar page, informing content strategy.
@@ -477,7 +477,7 @@ export async function POST(request: Request) {
                 </p>
               </div>
 
-              <div className="bg-gray-100 p-4 rounded-lg">
+              <div className="bg-muted/30 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Competitor Backlink Analysis</h3>
                 <p className="text-sm text-gray-700 mb-2">
                   Monitor backlink profiles of 10 competitor domains monthly to identify link-building opportunities.
@@ -499,7 +499,7 @@ export async function POST(request: Request) {
             </div>
           </section>
 
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-100 p-6 rounded-lg">
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-muted/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <ul className="space-y-2 text-gray-700">
               <li><strong>8 API suites:</strong> SERP (rank tracking), Keywords Data (7B+ keywords), Backlinks (domain authority), On-Page (Core Web Vitals), Labs (keyword difficulty), Content Analysis, Merchant, Business Data</li>

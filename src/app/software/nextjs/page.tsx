@@ -112,7 +112,7 @@ export default function NextJsPage() {
             <div className="flex items-center gap-3">
               <h1 className="text-4xl font-bold">Next.js 15</h1>
               <Badge variant="default">v15.5.4</Badge>
-              <Badge variant="outline" className="bg-zinc-100 text-zinc-600 border-zinc-300">Production Ready</Badge>
+              <Badge variant="outline" className="bg-muted/30 text-zinc-600 border-zinc-300">Production Ready</Badge>
             </div>
             <p className="text-xl text-muted-foreground">
               React framework for building full-stack web applications with built-in server-side rendering, routing, and performance optimization.

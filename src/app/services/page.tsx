@@ -273,20 +273,20 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="overflow-x-auto mb-4">
-                  <table className="w-full border-collapse border border-gray-300">
-                    <thead className="bg-gray-100">
+                  <table className="w-full border-collapse">
+                    <thead className="bg-muted/30">
                       <tr>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Tier</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Price</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Features</th>
+                        <th className="border border-border/40 px-4 py-2 text-left">Tier</th>
+                        <th className="border border-border/40 px-4 py-2 text-left">Price</th>
+                        <th className="border border-border/40 px-4 py-2 text-left">Features</th>
                       </tr>
                     </thead>
                     <tbody>
                       {service.pricing.map((tier) => (
                         <tr key={tier.tier}>
-                          <td className="border border-gray-300 px-4 py-2 font-bold">{tier.tier}</td>
-                          <td className="border border-gray-300 px-4 py-2 font-mono">{tier.price}</td>
-                          <td className="border border-gray-300 px-4 py-2">
+                          <td className="border border-border/40 px-4 py-2 font-bold">{tier.tier}</td>
+                          <td className="border border-border/40 px-4 py-2 font-mono">{tier.price}</td>
+                          <td className="border border-border/40 px-4 py-2">
                             <ul className="list-disc list-inside space-y-1">
                               {tier.features.map((feature, i) => (
                                 <li key={i} className="text-sm">{feature}</li>

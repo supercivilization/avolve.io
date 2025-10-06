@@ -70,7 +70,7 @@ export default function TailwindPage() {
           </p>
 
           {/* Core Identity Section */}
-          <section id="overview" className="mb-12 bg-zinc-100 border-l-2 border-zinc-600/30 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-muted/30 border-l-2 border-zinc-600/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
               <strong>Tailwind CSS v4.1.14</strong> is a utility-first CSS framework completely rewritten in Rust with the Oxide engine, delivering <strong>100x faster incremental builds</strong> and eliminating JavaScript configuration entirely through CSS-first design tokens.
@@ -111,36 +111,36 @@ export default function TailwindPage() {
                 <p className="text-gray-700 mb-3">
                   v4.1.14 represents a complete ground-up rewrite that eliminates the performance bottlenecks of JavaScript-based CSS processing. The Oxide engine delivers microsecond-level rebuilds that fundamentally change the development experience.
                 </p>
-                <div className="bg-gray-100 p-4 rounded-lg">
+                <div className="bg-muted/30 p-4 rounded-lg">
                   <h4 className="font-bold mb-2">Build Performance Transformation:</h4>
                   <div className="overflow-x-auto">
-                    <table className="w-full border-collapse border border-gray-300 text-sm">
-                      <thead className="bg-gray-100">
+                    <table className="w-full border-collapse text-sm">
+                      <thead className="bg-muted/30">
                         <tr>
-                          <th className="border border-gray-300 px-3 py-2 text-left">Operation</th>
-                          <th className="border border-gray-300 px-3 py-2 text-left">v3.x</th>
-                          <th className="border border-gray-300 px-3 py-2 text-left">v4.1.14</th>
-                          <th className="border border-gray-300 px-3 py-2 text-left">Improvement</th>
+                          <th className="border border-border/40 px-3 py-2 text-left">Operation</th>
+                          <th className="border border-border/40 px-3 py-2 text-left">v3.x</th>
+                          <th className="border border-border/40 px-3 py-2 text-left">v4.1.14</th>
+                          <th className="border border-border/40 px-3 py-2 text-left">Improvement</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">Full build</td>
-                          <td className="border border-gray-300 px-3 py-2">378ms</td>
-                          <td className="border border-gray-300 px-3 py-2">100ms</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>3.78x</strong></td>
+                          <td className="border border-border/40 px-3 py-2">Full build</td>
+                          <td className="border border-border/40 px-3 py-2">378ms</td>
+                          <td className="border border-border/40 px-3 py-2">100ms</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>3.78x</strong></td>
                         </tr>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">Incremental + new CSS</td>
-                          <td className="border border-gray-300 px-3 py-2">44ms</td>
-                          <td className="border border-gray-300 px-3 py-2">5ms</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>8.8x</strong></td>
+                          <td className="border border-border/40 px-3 py-2">Incremental + new CSS</td>
+                          <td className="border border-border/40 px-3 py-2">44ms</td>
+                          <td className="border border-border/40 px-3 py-2">5ms</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>8.8x</strong></td>
                         </tr>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">No-change rebuild</td>
-                          <td className="border border-gray-300 px-3 py-2">35ms</td>
-                          <td className="border border-gray-300 px-3 py-2">192µs</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>182x</strong></td>
+                          <td className="border border-border/40 px-3 py-2">No-change rebuild</td>
+                          <td className="border border-border/40 px-3 py-2">35ms</td>
+                          <td className="border border-border/40 px-3 py-2">192µs</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>182x</strong></td>
                         </tr>
                       </tbody>
                     </table>
@@ -170,7 +170,7 @@ module.exports = {
   }
 }`}</pre>
                   </div>
-                  <div className="bg-zinc-100 p-4 rounded-lg">
+                  <div className="bg-muted/30 p-4 rounded-lg">
                     <h4 className="font-bold text-zinc-700 mb-2">✅ v4.1.14 (CSS-First)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`/* styles.css */
 @import "tailwindcss";
@@ -191,7 +191,7 @@ module.exports = {
                   Native support for container queries, 3D transforms, and OKLCH colors eliminates the need for plugins and provides a unified development experience for modern CSS features.
                 </p>
                 <div className="space-y-3">
-                  <div className="bg-zinc-100 p-3 rounded">
+                  <div className="bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Container Queries (No Plugin):</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`<div class="@container">
   <div class="@sm:grid-cols-1 @md:grid-cols-2 @lg:grid-cols-3">
@@ -199,7 +199,7 @@ module.exports = {
   </div>
 </div>`}</pre>
                   </div>
-                  <div className="bg-gray-100 p-3 rounded">
+                  <div className="bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">3D Transform System:</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`<div class="perspective-1000">
   <div class="rotate-x-45 rotate-y-30 scale-z-150">
@@ -240,7 +240,7 @@ module.exports = {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Migration Path from v3.x</h3>
-                <div className="bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
+                <div className="bg-muted/30 p-4 rounded border-l-2 border-slate-600/30">
                   <h4 className="font-bold mb-2">Upgrade Process:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`# Install v4
 npm install tailwindcss@next
@@ -294,7 +294,7 @@ npx @tailwindcss/upgrade@next`}</pre>
             <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
 
             <div className="space-y-6">
-              <div className="bg-zinc-100 p-4 rounded-lg border-l-2 border-zinc-600/30">
+              <div className="bg-muted/30 p-4 rounded-lg border-l-2 border-zinc-600/30">
                 <h3 className="text-lg font-bold mb-3">Complete Next.js 15.5 Integration</h3>
                 <div className="space-y-3">
                   <div>
@@ -353,7 +353,7 @@ export function Card({ children }: { children: React.ReactNode }) {
                 </div>
               </div>
 
-              <div className="bg-gray-100 p-4 rounded-lg border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
+              <div className="bg-muted/30 p-4 rounded-lg border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
                 <h3 className="text-lg font-bold mb-3">Performance Optimization</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
@@ -424,7 +424,7 @@ export function Card({ children }: { children: React.ReactNode }) {
           </section>
 
           {/* AI Assistant Reference Section */}
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-100 p-6 rounded-lg">
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-muted/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
@@ -449,7 +449,7 @@ export function Card({ children }: { children: React.ReactNode }) {
               </div>
             </div>
 
-            <div className="mt-4 bg-white p-3 rounded border border-gray-300">
+            <div className="mt-4 bg-white p-3 rounded border border-border/40">
               <h4 className="font-bold text-sm mb-2">Quick Reference Template:</h4>
               <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// Component with Tailwind v4 best practices
 export function Component() {

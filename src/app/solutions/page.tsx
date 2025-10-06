@@ -272,7 +272,7 @@ export function Chat() {
       <div className="flex-1 overflow-y-auto mb-4 space-y-4">
         {messages.map(m => (
           <div key={m.id} className={\`p-4 rounded-lg \${
-            m.role === 'user' ? 'bg-blue-100 ml-auto' : 'bg-gray-100'
+            m.role === 'user' ? 'bg-blue-100 ml-auto' : 'bg-muted/30'
           } max-w-[80%]\`}>
             <p className="text-sm font-semibold mb-1">
               {m.role === 'user' ? 'You' : 'Support Agent'}

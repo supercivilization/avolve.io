@@ -112,7 +112,7 @@ export default function ReactPage() {
             <div className="flex items-center gap-3">
               <h1 className="text-4xl font-bold">React 19.2</h1>
               <Badge variant="default">v19.2.0</Badge>
-              <Badge variant="outline" className="bg-zinc-100 text-zinc-600 border-zinc-300">Stable</Badge>
+              <Badge variant="outline" className="bg-muted/30 text-zinc-600 border-zinc-300">Stable</Badge>
             </div>
             <p className="text-xl text-muted-foreground">
               JavaScript library for building user interfaces with Server Components, Actions, and automatic optimization via the React Compiler.

@@ -247,7 +247,7 @@ export default function SoftwarePage() {
               </div>
             </div>
 
-            <div className="bg-slate-100 dark:bg-slate-900 border-l-2 border-slate-600/30 dark:border-slate-600 p-6 rounded-lg">
+            <div className="bg-muted/30 dark:bg-slate-900 border-l-2 border-slate-600/30 dark:border-slate-600 p-6 rounded-lg">
               <h3 className="text-lg font-bold mb-3">Pathway Pages (Complete Stack Guides)</h3>
               <p className="text-foreground mb-4">
                 Follow these step-by-step guides to build complete applications with verified dependency chains:
@@ -285,99 +285,99 @@ export default function SoftwarePage() {
             <h2 className="mb-12">Current Stack (October 2025)</h2>
 
             <div className="overflow-x-auto mb-8">
-              <table className="w-full border-collapse border border-gray-300">
-                <thead className="bg-gray-100">
+              <table className="w-full border-collapse">
+                <thead className="bg-muted/30">
                   <tr>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Category</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Tool</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Version</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Why Use It</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Category</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Tool</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Version</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Why Use It</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Runtime</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">Node.js</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">24.8.0</td>
-                    <td className="border border-gray-300 px-4 py-2">Native TypeScript execution (67-400% faster)</td>
+                    <td className="border border-border/40 px-4 py-2">Runtime</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">Node.js</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">24.8.0</td>
+                    <td className="border border-border/40 px-4 py-2">Native TypeScript execution (67-400% faster)</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Language</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">TypeScript</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">5.9.2</td>
-                    <td className="border border-gray-300 px-4 py-2">Type safety, better DX, catches bugs early</td>
+                    <td className="border border-border/40 px-4 py-2">Language</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">TypeScript</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">5.9.2</td>
+                    <td className="border border-border/40 px-4 py-2">Type safety, better DX, catches bugs early</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Framework</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">
+                    <td className="border border-border/40 px-4 py-2">Framework</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">
                       <Link href="/software/nextjs" className="text-zinc-700 hover:underline">
                         Next.js
                       </Link>
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">15.5.5</td>
-                    <td className="border border-gray-300 px-4 py-2">Turbopack builds (2-5x faster), Server Components</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">15.5.5</td>
+                    <td className="border border-border/40 px-4 py-2">Turbopack builds (2-5x faster), Server Components</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">UI Library</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">
+                    <td className="border border-border/40 px-4 py-2">UI Library</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">
                       <Link href="/software/react" className="text-gray-700 hover:underline">
                         React
                       </Link>
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">19.2.0</td>
-                    <td className="border border-gray-300 px-4 py-2">Server Components, React Compiler optimization</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">19.2.0</td>
+                    <td className="border border-border/40 px-4 py-2">Server Components, React Compiler optimization</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Styling</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">
+                    <td className="border border-border/40 px-4 py-2">Styling</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">
                       <Link href="/software/tailwind" className="text-gray-700 hover:underline">
                         Tailwind CSS
                       </Link>
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">4.1.13</td>
-                    <td className="border border-gray-300 px-4 py-2">Oxide engine (100x faster incremental builds)</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">4.1.13</td>
+                    <td className="border border-border/40 px-4 py-2">Oxide engine (100x faster incremental builds)</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Components</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">
+                    <td className="border border-border/40 px-4 py-2">Components</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">
                       <Link href="/software/shadcn-ui" className="text-gray-700 hover:underline">
                         shadcn/ui
                       </Link>
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">3.3.1</td>
-                    <td className="border border-gray-300 px-4 py-2">Universal registry (182x faster resolution)</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">3.3.1</td>
+                    <td className="border border-border/40 px-4 py-2">Universal registry (182x faster resolution)</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Icons</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">lucide-react</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">0.460.0</td>
-                    <td className="border border-gray-300 px-4 py-2">1,500+ icons, tree-shakeable, consistent</td>
+                    <td className="border border-border/40 px-4 py-2">Icons</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">lucide-react</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">0.460.0</td>
+                    <td className="border border-border/40 px-4 py-2">1,500+ icons, tree-shakeable, consistent</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">AI SDK</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">
+                    <td className="border border-border/40 px-4 py-2">AI SDK</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">
                       <Link href="/software/vercel-ai-sdk" className="text-gray-700 hover:underline">
                         Vercel AI SDK
                       </Link>
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">5.0.48</td>
-                    <td className="border border-gray-300 px-4 py-2">100+ models, streaming, tool calling</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">5.0.48</td>
+                    <td className="border border-border/40 px-4 py-2">100+ models, streaming, tool calling</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Backend</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">
+                    <td className="border border-border/40 px-4 py-2">Backend</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">
                       <Link href="/software/supabase" className="text-gray-700 hover:underline">
                         Supabase
                       </Link>
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">Current</td>
-                    <td className="border border-gray-300 px-4 py-2">AI-first backend, pgvector 0.8, remote MCP</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">Current</td>
+                    <td className="border border-border/40 px-4 py-2">AI-first backend, pgvector 0.8, remote MCP</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">AI Coding</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">Claude Code</td>
-                    <td className="border border-gray-300 px-4 py-2 font-mono">2025</td>
-                    <td className="border border-gray-300 px-4 py-2">Terminal agent (72.5% SWE-bench), see <Link href="/support#ai-coding" className="text-stone-600 hover:underline">Support</Link></td>
+                    <td className="border border-border/40 px-4 py-2">AI Coding</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">Claude Code</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">2025</td>
+                    <td className="border border-border/40 px-4 py-2">Terminal agent (72.5% SWE-bench), see <Link href="/support#ai-coding" className="text-stone-600 hover:underline">Support</Link></td>
                   </tr>
                 </tbody>
               </table>
@@ -482,7 +482,7 @@ cat package.json | grep '"next"\\|"react"\\|"typescript"'`}
           <section id="mcp-integration" className="section-spacing border-t pt-8">
             <h2 className="mb-12">MCP Integration (AI-Native Development)</h2>
 
-            <div className="bg-slate-100 dark:bg-slate-900/20 p-6 rounded-lg mb-6 border-l-2 border-slate-600/30">
+            <div className="bg-muted/30 dark:bg-slate-900/20 p-6 rounded-lg mb-6 border-l-2 border-slate-600/30">
               <h3 className="text-xl font-bold mb-3">What is MCP?</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
                 <strong>Model Context Protocol (MCP)</strong> enables AI assistants like Claude, ChatGPT, and Cursor to
@@ -490,7 +490,7 @@ cat package.json | grep '"next"\\|"react"\\|"typescript"'`}
               </p>
               <p className="text-gray-700 dark:text-gray-300">
                 <strong>Example:</strong> Tell your AI assistant &quot;Add a search bar with icon&quot; → AI automatically
-                runs <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm">npx shadcn@latest add input-group</code> and
+                runs <code className="bg-muted/30 dark:bg-gray-800 px-2 py-1 rounded text-sm">npx shadcn@latest add input-group</code> and
                 generates the component code.
               </p>
             </div>
@@ -509,7 +509,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               </pre>
 
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                This creates a <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">.mcp.json</code> configuration file in your project root.
+                This creates a <code className="bg-muted/30 dark:bg-gray-800 px-2 py-1 rounded">.mcp.json</code> configuration file in your project root.
               </p>
 
               <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
@@ -544,7 +544,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
                     <li className="font-bold pt-2">⏱️ Time: ~3 minutes</li>
                   </ol>
                 </div>
-                <div className="border rounded-lg p-4 bg-zinc-100 dark:bg-zinc-900/10 border-zinc-300 dark:border-zinc-700">
+                <div className="border rounded-lg p-4 bg-muted/30 dark:bg-zinc-900/10 border-zinc-300 dark:border-zinc-700">
                   <h4 className="font-bold mb-3 text-zinc-600 dark:text-zinc-600 flex items-center gap-2">
                     <span>✅</span>
                     <span>New Way (MCP)</span>
@@ -570,44 +570,44 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
                 These components were added in August-October 2025 and are available via MCP:
               </p>
               <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-gray-300 dark:border-gray-700">
-                  <thead className="bg-gray-100 dark:bg-gray-800">
+                <table className="w-full border-collapse dark:border-gray-700">
+                  <thead className="bg-muted/30 dark:bg-gray-800">
                     <tr>
-                      <th className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-left">Component</th>
-                      <th className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-left">Use Case</th>
-                      <th className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-left">Install Command</th>
+                      <th className="border border-border/40 dark:border-gray-700 px-4 py-2 text-left">Component</th>
+                      <th className="border border-border/40 dark:border-gray-700 px-4 py-2 text-left">Use Case</th>
+                      <th className="border border-border/40 dark:border-gray-700 px-4 py-2 text-left">Install Command</th>
                     </tr>
                   </thead>
                   <tbody className="text-sm">
                     <tr>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 font-mono">Spinner</td>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2">Loading states, async operations</td>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 font-mono text-xs">npx shadcn@latest add spinner</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2 font-mono">Spinner</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2">Loading states, async operations</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2 font-mono text-xs">npx shadcn@latest add spinner</td>
                     </tr>
                     <tr>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 font-mono">Button Group</td>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2">Navigation clusters, toolbars</td>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 font-mono text-xs">npx shadcn@latest add button-group</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2 font-mono">Button Group</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2">Navigation clusters, toolbars</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2 font-mono text-xs">npx shadcn@latest add button-group</td>
                     </tr>
                     <tr>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 font-mono">Input Group</td>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2">Search bars, icon inputs</td>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 font-mono text-xs">npx shadcn@latest add input-group</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2 font-mono">Input Group</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2">Search bars, icon inputs</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2 font-mono text-xs">npx shadcn@latest add input-group</td>
                     </tr>
                     <tr>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 font-mono">Empty</td>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2">No results states, empty lists</td>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 font-mono text-xs">npx shadcn@latest add empty</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2 font-mono">Empty</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2">No results states, empty lists</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2 font-mono text-xs">npx shadcn@latest add empty</td>
                     </tr>
                     <tr>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 font-mono">Kbd</td>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2">Keyboard shortcuts display</td>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 font-mono text-xs">npx shadcn@latest add kbd</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2 font-mono">Kbd</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2">Keyboard shortcuts display</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2 font-mono text-xs">npx shadcn@latest add kbd</td>
                     </tr>
                     <tr>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 font-mono">Field</td>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2">Form field infrastructure</td>
-                      <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 font-mono text-xs">npx shadcn@latest add field</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2 font-mono">Field</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2">Form field infrastructure</td>
+                      <td className="border border-border/40 dark:border-gray-700 px-4 py-2 font-mono text-xs">npx shadcn@latest add field</td>
                     </tr>
                   </tbody>
                 </table>
@@ -624,7 +624,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               </ul>
             </div>
 
-            <div className="bg-gray-100 dark:bg-gray-900/20 p-6 rounded-lg border-l-2 border-gray-600/30">
+            <div className="bg-muted/30 dark:bg-gray-900/20 p-6 rounded-lg border-l-2 border-gray-600/30">
               <h3 className="text-xl font-bold mb-3">Example: AI-Native Component Installation</h3>
               <div className="space-y-4">
                 <div>

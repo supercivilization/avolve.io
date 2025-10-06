@@ -101,7 +101,7 @@ export default function ShadcnUIPage() {
               </div>
             </div>
 
-            <div className="mt-4 bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
+            <div className="mt-4 bg-muted/30 p-4 rounded border-l-2 border-slate-600/30">
               <h3 className="font-bold mb-2">Official Documentation</h3>
               <p className="text-sm text-gray-700 mb-2">
                 For complete component reference and guides, visit:
@@ -143,7 +143,7 @@ npm install @mui/material @emotion/react
 
 // Can't customize without "eject"`}</pre>
                   </div>
-                  <div className="bg-zinc-100 p-4 rounded-lg">
+                  <div className="bg-muted/30 p-4 rounded-lg">
                     <h4 className="font-bold text-zinc-700 mb-2">✅ shadcn/ui Approach</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// Copy component into your project
 npx shadcn@latest add button
@@ -160,7 +160,7 @@ npx shadcn@latest add button
 // Modify source directly, no eject needed`}</pre>
                   </div>
                 </div>
-                <div className="mt-3 bg-gray-100 p-3 rounded">
+                <div className="mt-3 bg-muted/30 p-3 rounded">
                   <h5 className="font-bold text-sm mb-2">Benefits of Copy-Paste Model:</h5>
                   <ul className="space-y-1 text-xs text-gray-700">
                     <li>• <strong>No version conflicts:</strong> Components use your existing dependencies</li>
@@ -217,7 +217,7 @@ npx shadcn@latest add button
                   Every shadcn/ui component is built on Radix UI primitives, providing WCAG 2.1 Level AA accessibility by default. This includes keyboard navigation, screen reader support, and ARIA attributes—solving the hardest parts of building accessible components.
                 </p>
                 <div className="space-y-3">
-                  <div className="bg-zinc-100 p-3 rounded">
+                  <div className="bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Accessibility Features (Built-In):</h5>
                     <ul className="space-y-1 text-xs text-gray-700">
                       <li>• <strong>Keyboard navigation:</strong> Tab, Arrow keys, Escape work correctly</li>
@@ -227,7 +227,7 @@ npx shadcn@latest add button
                       <li>• <strong>RTL support:</strong> Right-to-left languages work automatically</li>
                     </ul>
                   </div>
-                  <div className="bg-zinc-100 p-3 rounded">
+                  <div className="bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Example: Dialog Component Accessibility</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// Radix UI handles all accessibility automatically:
 // ✅ Focus trapped inside dialog
@@ -295,7 +295,7 @@ app/
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Dark Mode Integration</h3>
-                <div className="bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
+                <div className="bg-muted/30 p-4 rounded border-l-2 border-slate-600/30">
                   <h4 className="font-bold mb-2">next-themes Setup:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`// app/layout.tsx
 import { ThemeProvider } from "@/components/theme-provider"
@@ -343,7 +343,7 @@ export function ThemeToggle() {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Form Validation with Zod</h3>
-                <div className="bg-gray-100 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
+                <div className="bg-muted/30 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
                   <h4 className="font-bold mb-2">Type-Safe Forms:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`"use client"
 
@@ -595,7 +595,7 @@ export function UserFormDialog({ user }) {
           </section>
 
           {/* AI Assistant Reference Section */}
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-100 p-6 rounded-lg">
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-muted/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
@@ -620,7 +620,7 @@ export function UserFormDialog({ user }) {
               </div>
             </div>
 
-            <div className="mt-4 bg-white p-3 rounded border border-gray-300">
+            <div className="mt-4 bg-white p-3 rounded border border-border/40">
               <h4 className="font-bold text-sm mb-2">Quick Reference Template:</h4>
               <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// shadcn/ui + Next.js 15 pattern
 import { Button } from "@/components/ui/button"

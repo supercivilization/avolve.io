@@ -70,7 +70,7 @@ export default function TypeScriptPage() {
           </p>
 
           {/* Core Identity Section */}
-          <section id="overview" className="mb-12 bg-slate-100 border-l-2 border-slate-600/30 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-muted/30 border-l-2 border-slate-600/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
               <strong>TypeScript 5.9.3</strong> is a strongly typed superset of JavaScript developed by Microsoft, adding static type checking, interfaces, and modern language features. Used by <strong>Microsoft, Google, Airbnb, and Shopify</strong> with <strong>100K+ GitHub stars</strong>.
@@ -101,7 +101,7 @@ export default function TypeScriptPage() {
               </div>
             </div>
 
-            <div className="mt-4 bg-gray-100 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
+            <div className="mt-4 bg-muted/30 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
               <h3 className="font-bold mb-2">Official Documentation</h3>
               <p className="text-sm text-gray-700 mb-2">
                 For complete type system reference and language features, visit:
@@ -148,7 +148,7 @@ export default function TypeScriptPage() {
 // 3. Run JavaScript output
 // 4. Repeat for every change`}</pre>
                   </div>
-                  <div className="bg-zinc-100 p-4 rounded-lg">
+                  <div className="bg-muted/30 p-4 rounded-lg">
                     <h4 className="font-bold text-zinc-700 mb-2">✅ Native Execution (Node.js 24+)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// package.json
 {
@@ -183,42 +183,42 @@ export default function TypeScriptPage() {
                 <p className="text-gray-700 mb-3">
                   Microsoft's Project Corsa rewrites the TypeScript compiler in Go, delivering 8-10x faster performance with 50% less memory usage. Expected as TypeScript 7.0 by end of 2025, this represents the biggest compiler improvement since TypeScript's creation.
                 </p>
-                <div className="bg-zinc-100 p-4 rounded-lg">
+                <div className="bg-muted/30 p-4 rounded-lg">
                   <h4 className="font-bold mb-2">Measured Performance Improvements:</h4>
                   <div className="overflow-x-auto">
-                    <table className="w-full border-collapse border border-gray-300 text-sm">
-                      <thead className="bg-gray-100">
+                    <table className="w-full border-collapse text-sm">
+                      <thead className="bg-muted/30">
                         <tr>
-                          <th className="border border-gray-300 px-3 py-2 text-left">Operation</th>
-                          <th className="border border-gray-300 px-3 py-2 text-left">TS 5.9 (JS)</th>
-                          <th className="border border-gray-300 px-3 py-2 text-left">Corsa (Go)</th>
-                          <th className="border border-gray-300 px-3 py-2 text-left">Improvement</th>
+                          <th className="border border-border/40 px-3 py-2 text-left">Operation</th>
+                          <th className="border border-border/40 px-3 py-2 text-left">TS 5.9 (JS)</th>
+                          <th className="border border-border/40 px-3 py-2 text-left">Corsa (Go)</th>
+                          <th className="border border-border/40 px-3 py-2 text-left">Improvement</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">VS Code project load</td>
-                          <td className="border border-gray-300 px-3 py-2">9.6s</td>
-                          <td className="border border-gray-300 px-3 py-2">1.2s</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>8x faster</strong></td>
+                          <td className="border border-border/40 px-3 py-2">VS Code project load</td>
+                          <td className="border border-border/40 px-3 py-2">9.6s</td>
+                          <td className="border border-border/40 px-3 py-2">1.2s</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>8x faster</strong></td>
                         </tr>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">Full type check</td>
-                          <td className="border border-gray-300 px-3 py-2">15.3s</td>
-                          <td className="border border-gray-300 px-3 py-2">1.8s</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>8.5x faster</strong></td>
+                          <td className="border border-border/40 px-3 py-2">Full type check</td>
+                          <td className="border border-border/40 px-3 py-2">15.3s</td>
+                          <td className="border border-border/40 px-3 py-2">1.8s</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>8.5x faster</strong></td>
                         </tr>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">Average workload</td>
-                          <td className="border border-gray-300 px-3 py-2">Baseline</td>
-                          <td className="border border-gray-300 px-3 py-2">10x faster</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>10x faster</strong></td>
+                          <td className="border border-border/40 px-3 py-2">Average workload</td>
+                          <td className="border border-border/40 px-3 py-2">Baseline</td>
+                          <td className="border border-border/40 px-3 py-2">10x faster</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>10x faster</strong></td>
                         </tr>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">Memory usage</td>
-                          <td className="border border-gray-300 px-3 py-2">Baseline</td>
-                          <td className="border border-gray-300 px-3 py-2">50% less</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>2x better</strong></td>
+                          <td className="border border-border/40 px-3 py-2">Memory usage</td>
+                          <td className="border border-border/40 px-3 py-2">Baseline</td>
+                          <td className="border border-border/40 px-3 py-2">50% less</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>2x better</strong></td>
                         </tr>
                       </tbody>
                     </table>
@@ -258,7 +258,7 @@ console.log(user.name.toUpperCase()); // Error: user might be undefined
 // ✅ Incorrect function arguments
 // ✅ Async/await mistakes`}</pre>
                   </div>
-                  <div className="bg-zinc-100 p-3 rounded">
+                  <div className="bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Enterprise Impact (Airbnb Case Study):</h5>
                     <ul className="space-y-1 text-xs text-gray-700">
                       <li>• <strong>38% reduction</strong> in production bugs after TypeScript migration</li>
@@ -341,7 +341,7 @@ export default async function Page() {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Vercel AI SDK Type Safety</h3>
-                <div className="bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
+                <div className="bg-muted/30 p-4 rounded border-l-2 border-slate-600/30">
                   <h4 className="font-bold mb-2">Fully Typed AI Workflows:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`import { openai } from '@ai-sdk/openai'
 import { streamText, tool } from 'ai'
@@ -376,7 +376,7 @@ const { textStream } = await streamText({
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Advanced Type Patterns</h3>
-                <div className="bg-gray-100 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
+                <div className="bg-muted/30 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
                   <h4 className="font-bold mb-2">TypeScript 5.9 Features:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`// Inferred Type Predicates (5.9)
 function isString(value: unknown) {
@@ -416,7 +416,7 @@ const bad: Request = 'INVALID /api/users' // ❌ Type error`}</pre>
             <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
 
             <div className="space-y-6">
-              <div className="bg-slate-100 p-4 rounded-lg border-l-2 border-slate-600/30">
+              <div className="bg-muted/30 p-4 rounded-lg border-l-2 border-slate-600/30">
                 <h3 className="text-lg font-bold mb-3">Production Type-Safe API</h3>
                 <div className="space-y-3">
                   <div>
@@ -566,7 +566,7 @@ function getUserEmail(user: User | undefined): string {
                     <li><strong>Enable strict mode:</strong> When type coverage reaches 80%+</li>
                     <li><strong>Remove "any" types:</strong> Final cleanup for full type safety</li>
                   </ol>
-                  <div className="mt-3 bg-zinc-100 p-3 rounded">
+                  <div className="mt-3 bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Quick Win: JSDoc Comments</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// Get TypeScript benefits in .js files
 /**
@@ -583,7 +583,7 @@ async function getUser(id) {
           </section>
 
           {/* AI Assistant Reference Section */}
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-100 p-6 rounded-lg">
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-muted/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
@@ -608,7 +608,7 @@ async function getUser(id) {
               </div>
             </div>
 
-            <div className="mt-4 bg-white p-3 rounded border border-gray-300">
+            <div className="mt-4 bg-white p-3 rounded border border-border/40">
               <h4 className="font-bold text-sm mb-2">Quick Reference Template:</h4>
               <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// TypeScript + Next.js 15 + Zod pattern
 import { z } from 'zod'

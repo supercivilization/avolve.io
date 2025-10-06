@@ -236,45 +236,45 @@ import { ApiClient } from '@repo/api-client';
             <h2 className="text-3xl font-bold mb-6">Performance Improvements</h2>
 
             <div className="overflow-x-auto mb-6">
-              <table className="w-full border-collapse border border-gray-300">
-                <thead className="bg-gray-100">
+              <table className="w-full border-collapse">
+                <thead className="bg-muted/30">
                   <tr>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Metric</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Before (RN 0.74)</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">After (RN 0.81)</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Improvement</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Metric</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Before (RN 0.74)</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">After (RN 0.81)</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Improvement</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">iOS build time</td>
-                    <td className="border border-gray-300 px-4 py-2">120s</td>
-                    <td className="border border-gray-300 px-4 py-2">10s</td>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">92% faster</td>
+                    <td className="border border-border/40 px-4 py-2">iOS build time</td>
+                    <td className="border border-border/40 px-4 py-2">120s</td>
+                    <td className="border border-border/40 px-4 py-2">10s</td>
+                    <td className="border border-border/40 px-4 py-2 font-bold">92% faster</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Complete renders</td>
-                    <td className="border border-gray-300 px-4 py-2">Baseline</td>
-                    <td className="border border-gray-300 px-4 py-2">New Arch</td>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">1.3x faster</td>
+                    <td className="border border-border/40 px-4 py-2">Complete renders</td>
+                    <td className="border border-border/40 px-4 py-2">Baseline</td>
+                    <td className="border border-border/40 px-4 py-2">New Arch</td>
+                    <td className="border border-border/40 px-4 py-2 font-bold">1.3x faster</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Complex flows</td>
-                    <td className="border border-gray-300 px-4 py-2">Baseline</td>
-                    <td className="border border-gray-300 px-4 py-2">New Arch</td>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">5.3x faster</td>
+                    <td className="border border-border/40 px-4 py-2">Complex flows</td>
+                    <td className="border border-border/40 px-4 py-2">Baseline</td>
+                    <td className="border border-border/40 px-4 py-2">New Arch</td>
+                    <td className="border border-border/40 px-4 py-2 font-bold">5.3x faster</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Cold start</td>
-                    <td className="border border-gray-300 px-4 py-2">Baseline</td>
-                    <td className="border border-gray-300 px-4 py-2">Hermes</td>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">2-3x faster</td>
+                    <td className="border border-border/40 px-4 py-2">Cold start</td>
+                    <td className="border border-border/40 px-4 py-2">Baseline</td>
+                    <td className="border border-border/40 px-4 py-2">Hermes</td>
+                    <td className="border border-border/40 px-4 py-2 font-bold">2-3x faster</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Memory usage</td>
-                    <td className="border border-gray-300 px-4 py-2">Baseline</td>
-                    <td className="border border-gray-300 px-4 py-2">Hermes</td>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">15-25% less</td>
+                    <td className="border border-border/40 px-4 py-2">Memory usage</td>
+                    <td className="border border-border/40 px-4 py-2">Baseline</td>
+                    <td className="border border-border/40 px-4 py-2">Hermes</td>
+                    <td className="border border-border/40 px-4 py-2 font-bold">15-25% less</td>
                   </tr>
                 </tbody>
               </table>
@@ -328,39 +328,39 @@ eas update --branch production --message "Fix critical bug"
 
             <h3 className="text-2xl font-bold mb-4">Cost Comparison</h3>
             <div className="overflow-x-auto mb-6">
-              <table className="w-full border-collapse border border-gray-300">
-                <thead className="bg-gray-100">
+              <table className="w-full border-collapse">
+                <thead className="bg-muted/30">
                   <tr>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Tier</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Price</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Builds/Month</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Build Time</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Tier</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Price</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Builds/Month</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Build Time</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Free</td>
-                    <td className="border border-gray-300 px-4 py-2">$0</td>
-                    <td className="border border-gray-300 px-4 py-2">30 builds</td>
-                    <td className="border border-gray-300 px-4 py-2">8-25 min</td>
+                    <td className="border border-border/40 px-4 py-2">Free</td>
+                    <td className="border border-border/40 px-4 py-2">$0</td>
+                    <td className="border border-border/40 px-4 py-2">30 builds</td>
+                    <td className="border border-border/40 px-4 py-2">8-25 min</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Production</td>
-                    <td className="border border-gray-300 px-4 py-2">$99/mo</td>
-                    <td className="border border-gray-300 px-4 py-2">Unlimited</td>
-                    <td className="border border-gray-300 px-4 py-2">8-25 min</td>
+                    <td className="border border-border/40 px-4 py-2">Production</td>
+                    <td className="border border-border/40 px-4 py-2">$99/mo</td>
+                    <td className="border border-border/40 px-4 py-2">Unlimited</td>
+                    <td className="border border-border/40 px-4 py-2">8-25 min</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">Enterprise</td>
-                    <td className="border border-gray-300 px-4 py-2">$1,999/mo</td>
-                    <td className="border border-gray-300 px-4 py-2">1000 credits</td>
-                    <td className="border border-gray-300 px-4 py-2">Priority queue</td>
+                    <td className="border border-border/40 px-4 py-2">Enterprise</td>
+                    <td className="border border-border/40 px-4 py-2">$1,999/mo</td>
+                    <td className="border border-border/40 px-4 py-2">1000 credits</td>
+                    <td className="border border-border/40 px-4 py-2">Priority queue</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <div className="bg-slate-100 border-l-4 border-slate-600 p-4 rounded-lg">
+            <div className="bg-muted/30 border-l-4 border-slate-600 p-4 rounded-lg">
               <p className="text-sm text-gray-700 mb-2"><strong>Additional Costs:</strong></p>
               <ul className="space-y-1 text-sm text-gray-700">
                 <li>• Apple Developer Program: <strong>$99/year</strong></li>
@@ -414,7 +414,7 @@ eas update --branch production --message "Fix critical bug"
             <h2 className="text-3xl font-bold mb-6">Best Practices</h2>
 
             <div className="space-y-4">
-              <div className="bg-zinc-100 border-l-4 border-zinc-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-zinc-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Code Sharing Strategy</h3>
                 <ul className="space-y-1 text-sm text-gray-700">
                   <li>• <strong>Share business logic:</strong> API clients, data transformations, validation, utilities</li>
@@ -425,7 +425,7 @@ eas update --branch production --message "Fix critical bug"
                 </ul>
               </div>
 
-              <div className="bg-slate-100 border-l-4 border-slate-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-slate-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Performance Optimization</h3>
                 <ul className="space-y-1 text-sm text-gray-700">
                   <li>• <strong>Enable Hermes engine:</strong> 2-3x startup improvement, 15-25% memory reduction</li>
@@ -436,7 +436,7 @@ eas update --branch production --message "Fix critical bug"
                 </ul>
               </div>
 
-              <div className="bg-gray-100 border-l-4 border-gray-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-gray-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Development Workflow</h3>
                 <ul className="space-y-1 text-sm text-gray-700">
                   <li>• <strong>Expo Dev Client:</strong> Custom development builds with any native modules</li>

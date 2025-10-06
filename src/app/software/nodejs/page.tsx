@@ -100,7 +100,7 @@ export default function NodeJSPage() {
               </div>
             </div>
 
-            <div className="mt-4 bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
+            <div className="mt-4 bg-muted/30 p-4 rounded border-l-2 border-slate-600/30">
               <h3 className="font-bold mb-2">Official Documentation</h3>
               <p className="text-sm text-gray-700 mb-2">
                 For API reference and latest releases, visit:
@@ -137,7 +137,7 @@ node dist/app.js
   "start": "node dist/app.js"
 }`}</pre>
                   </div>
-                  <div className="bg-zinc-100 p-4 rounded-lg">
+                  <div className="bg-muted/30 p-4 rounded-lg">
                     <h4 className="font-bold text-zinc-700 mb-2">✅ Now (Node.js 24.9.0 / 22.20.0 LTS)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// Direct execution - zero build
 node app.ts
@@ -150,7 +150,7 @@ node app.ts
 // No tsconfig.json, no dist/, no build step`}</pre>
                   </div>
                 </div>
-                <div className="mt-3 bg-gray-100 p-3 rounded">
+                <div className="mt-3 bg-muted/30 p-3 rounded">
                   <h5 className="font-bold text-sm mb-2">Microsoft's Go-Powered Compiler (Preview):</h5>
                   <ul className="space-y-1 text-xs text-gray-700">
                     <li>• <strong>8x faster project loading</strong> in VS Code (1.2s vs 9.6s)</li>
@@ -169,44 +169,44 @@ node app.ts
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="font-bold mb-2">Core Performance Metrics:</h4>
                   <div className="overflow-x-auto">
-                    <table className="w-full border-collapse border border-gray-300 text-sm">
-                      <thead className="bg-gray-100">
+                    <table className="w-full border-collapse text-sm">
+                      <thead className="bg-muted/30">
                         <tr>
-                          <th className="border border-gray-300 px-3 py-2 text-left">Operation</th>
-                          <th className="border border-gray-300 px-3 py-2 text-left">Improvement</th>
-                          <th className="border border-gray-300 px-3 py-2 text-left">Technology</th>
+                          <th className="border border-border/40 px-3 py-2 text-left">Operation</th>
+                          <th className="border border-border/40 px-3 py-2 text-left">Improvement</th>
+                          <th className="border border-border/40 px-3 py-2 text-left">Technology</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">URL parsing</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>400%</strong></td>
-                          <td className="border border-gray-300 px-3 py-2">Ada parser (C++)</td>
+                          <td className="border border-border/40 px-3 py-2">URL parsing</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>400%</strong></td>
+                          <td className="border border-border/40 px-3 py-2">Ada parser (C++)</td>
                         </tr>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">TextDecoder (UTF-8)</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>364%</strong></td>
-                          <td className="border border-gray-300 px-3 py-2">simdutf (SIMD)</td>
+                          <td className="border border-border/40 px-3 py-2">TextDecoder (UTF-8)</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>364%</strong></td>
+                          <td className="border border-border/40 px-3 py-2">simdutf (SIMD)</td>
                         </tr>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">Buffer.compare()</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>200%</strong></td>
-                          <td className="border border-gray-300 px-3 py-2">Optimized C++</td>
+                          <td className="border border-border/40 px-3 py-2">Buffer.compare()</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>200%</strong></td>
+                          <td className="border border-border/40 px-3 py-2">Optimized C++</td>
                         </tr>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">HTTP server</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>96%</strong></td>
-                          <td className="border border-gray-300 px-3 py-2">Core optimization</td>
+                          <td className="border border-border/40 px-3 py-2">HTTP server</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>96%</strong></td>
+                          <td className="border border-border/40 px-3 py-2">Core optimization</td>
                         </tr>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">TextEncoder (ASCII)</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>93.67%</strong></td>
-                          <td className="border border-gray-300 px-3 py-2">SIMD encoding</td>
+                          <td className="border border-border/40 px-3 py-2">TextEncoder (ASCII)</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>93.67%</strong></td>
+                          <td className="border border-border/40 px-3 py-2">SIMD encoding</td>
                         </tr>
                         <tr>
-                          <td className="border border-gray-300 px-3 py-2">Real-world apps</td>
-                          <td className="border border-gray-300 px-3 py-2"><strong>15-20%</strong></td>
-                          <td className="border border-gray-300 px-3 py-2">Combined gains</td>
+                          <td className="border border-border/40 px-3 py-2">Real-world apps</td>
+                          <td className="border border-border/40 px-3 py-2"><strong>15-20%</strong></td>
+                          <td className="border border-border/40 px-3 py-2">Combined gains</td>
                         </tr>
                       </tbody>
                     </table>
@@ -229,7 +229,7 @@ node app.ts
                       <li>• <strong>Permission Model benefit:</strong> Sandboxing prevents malicious package access to filesystem/network</li>
                     </ul>
                   </div>
-                  <div className="bg-zinc-100 p-3 rounded">
+                  <div className="bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Permission Model Usage:</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`# Granular permission control
 node --permission --allow-fs-read=/app/data --allow-net app.js
@@ -296,7 +296,7 @@ ws.addEventListener('message', (event) => {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Worker Threads Architecture</h3>
-                <div className="bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
+                <div className="bg-muted/30 p-4 rounded border-l-2 border-slate-600/30">
                   <h4 className="font-bold mb-2">Production Use Cases:</h4>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• <strong>Netflix:</strong> Complex video processing with multi-core scaling</li>
@@ -379,7 +379,7 @@ server.listen(3000);
                 </div>
               </div>
 
-              <div className="bg-zinc-100 p-4 rounded-lg border-l-2 border-zinc-600/30">
+              <div className="bg-muted/30 p-4 rounded-lg border-l-2 border-zinc-600/30">
                 <h3 className="text-lg font-bold mb-3">Enterprise Success Stories</h3>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
@@ -409,32 +409,32 @@ server.listen(3000);
                 </div>
               </div>
 
-              <div className="bg-gray-100 p-4 rounded-lg border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
+              <div className="bg-muted/30 p-4 rounded-lg border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
                 <h3 className="text-lg font-bold mb-3">Framework Performance (TechEmpower Round 23)</h3>
                 <div className="overflow-x-auto">
-                  <table className="w-full border-collapse border border-gray-300 text-sm">
-                    <thead className="bg-gray-100">
+                  <table className="w-full border-collapse text-sm">
+                    <thead className="bg-muted/30">
                       <tr>
-                        <th className="border border-gray-300 px-3 py-2 text-left">Framework</th>
-                        <th className="border border-gray-300 px-3 py-2 text-left">Requests/Second</th>
-                        <th className="border border-gray-300 px-3 py-2 text-left">Latency</th>
+                        <th className="border border-border/40 px-3 py-2 text-left">Framework</th>
+                        <th className="border border-border/40 px-3 py-2 text-left">Requests/Second</th>
+                        <th className="border border-border/40 px-3 py-2 text-left">Latency</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="border border-gray-300 px-3 py-2">Koa</td>
-                        <td className="border border-gray-300 px-3 py-2"><strong>55,000</strong></td>
-                        <td className="border border-gray-300 px-3 py-2">Lowest</td>
+                        <td className="border border-border/40 px-3 py-2">Koa</td>
+                        <td className="border border-border/40 px-3 py-2"><strong>55,000</strong></td>
+                        <td className="border border-border/40 px-3 py-2">Lowest</td>
                       </tr>
                       <tr>
-                        <td className="border border-gray-300 px-3 py-2">Fastify</td>
-                        <td className="border border-gray-300 px-3 py-2"><strong>45,743</strong></td>
-                        <td className="border border-gray-300 px-3 py-2">21.36ms</td>
+                        <td className="border border-border/40 px-3 py-2">Fastify</td>
+                        <td className="border border-border/40 px-3 py-2"><strong>45,743</strong></td>
+                        <td className="border border-border/40 px-3 py-2">21.36ms</td>
                       </tr>
                       <tr>
-                        <td className="border border-gray-300 px-3 py-2">Express</td>
-                        <td className="border border-gray-300 px-3 py-2"><strong>18,000-20,000</strong></td>
-                        <td className="border border-gray-300 px-3 py-2">Baseline</td>
+                        <td className="border border-border/40 px-3 py-2">Express</td>
+                        <td className="border border-border/40 px-3 py-2"><strong>18,000-20,000</strong></td>
+                        <td className="border border-border/40 px-3 py-2">Baseline</td>
                       </tr>
                     </tbody>
                   </table>
@@ -488,7 +488,7 @@ server.listen(3000);
           </section>
 
           {/* AI Assistant Reference Section */}
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-100 p-6 rounded-lg">
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-muted/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
@@ -513,7 +513,7 @@ server.listen(3000);
               </div>
             </div>
 
-            <div className="mt-4 bg-white p-3 rounded border border-gray-300">
+            <div className="mt-4 bg-white p-3 rounded border border-border/40">
               <h4 className="font-bold text-sm mb-2">Quick Reference Template:</h4>
               <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// package.json for Node.js (Production LTS)
 {

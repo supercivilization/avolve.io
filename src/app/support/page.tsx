@@ -337,7 +337,7 @@ WHERE email = 'test@example.com';
                 <p className="text-sm text-gray-700">
                   <strong>Symptom:</strong> Users stuck redirecting between /login and /dashboard<br />
                   <strong>Fix:</strong> Check middleware matcher excludes /login route<br />
-                  <strong>Code:</strong> <code className="bg-gray-100 px-1">export const config = {`{ matcher: ['/dashboard/:path*'] }`}</code>
+                  <strong>Code:</strong> <code className="bg-muted/30 px-1">export const config = {`{ matcher: ['/dashboard/:path*'] }`}</code>
                 </p>
               </div>
 
@@ -345,8 +345,8 @@ WHERE email = 'test@example.com';
                 <h3 className="text-lg font-bold">Build Failures on Vercel</h3>
                 <p className="text-sm text-gray-700">
                   <strong>Symptom:</strong> &quot;Type error: Cannot find module&quot; during build<br />
-                  <strong>Fix:</strong> Run <code className="bg-gray-100 px-1">npm run build</code> locally first, fix TypeScript errors<br />
-                  <strong>Prevention:</strong> Add <code className="bg-gray-100 px-1">npm run type-check</code> to pre-commit hooks
+                  <strong>Fix:</strong> Run <code className="bg-muted/30 px-1">npm run build</code> locally first, fix TypeScript errors<br />
+                  <strong>Prevention:</strong> Add <code className="bg-muted/30 px-1">npm run type-check</code> to pre-commit hooks
                 </p>
               </div>
 
@@ -355,14 +355,14 @@ WHERE email = 'test@example.com';
                 <p className="text-sm text-gray-700">
                   <strong>Symptom:</strong> 429 errors from Claude API, users can&apos;t get AI responses<br />
                   <strong>Fix:</strong> Implement client-side rate limiting with Upstash Redis<br />
-                  <strong>Code:</strong> <code className="bg-gray-100 px-1">@upstash/ratelimit</code> with sliding window
+                  <strong>Code:</strong> <code className="bg-muted/30 px-1">@upstash/ratelimit</code> with sliding window
                 </p>
               </div>
 
               <div className="border-l-2 border-stone-600/30 pl-4">
                 <h3 className="text-lg font-bold">Environment Variables Not Loading</h3>
                 <p className="text-sm text-gray-700">
-                  <strong>Symptom:</strong> <code className="bg-gray-100 px-1">process.env.SUPABASE_URL</code> is undefined in production<br />
+                  <strong>Symptom:</strong> <code className="bg-muted/30 px-1">process.env.SUPABASE_URL</code> is undefined in production<br />
                   <strong>Fix:</strong> Add to Vercel dashboard → Settings → Environment Variables<br />
                   <strong>Gotcha:</strong> Redeploy after adding env vars (not automatic)
                 </p>
@@ -374,77 +374,77 @@ WHERE email = 'test@example.com';
             <h2 className="mb-8">Essential Monitoring Setup</h2>
 
             <div className="overflow-x-auto mb-6">
-              <table className="w-full border-collapse border border-gray-300">
-                <thead className="bg-gray-100">
+              <table className="w-full border-collapse">
+                <thead className="bg-muted/30">
                   <tr>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Tool</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">What to Monitor</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Alert Threshold</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Cost</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Tool</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">What to Monitor</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Alert Threshold</th>
+                    <th className="border border-border/40 px-4 py-2 text-left">Cost</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">Vercel Analytics</td>
-                    <td className="border border-gray-300 px-4 py-2">
+                    <td className="border border-border/40 px-4 py-2 font-bold">Vercel Analytics</td>
+                    <td className="border border-border/40 px-4 py-2">
                       <ul className="list-disc list-inside text-sm space-y-1">
                         <li>JavaScript errors</li>
                         <li>API failures</li>
                         <li>Performance issues</li>
                       </ul>
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 text-sm">
+                    <td className="border border-border/40 px-4 py-2 text-sm">
                       &gt;10 errors/min
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 text-sm">
+                    <td className="border border-border/40 px-4 py-2 text-sm">
                       $0-26/mo
                     </td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">Vercel Analytics</td>
-                    <td className="border border-gray-300 px-4 py-2">
+                    <td className="border border-border/40 px-4 py-2 font-bold">Vercel Analytics</td>
+                    <td className="border border-border/40 px-4 py-2">
                       <ul className="list-disc list-inside text-sm space-y-1">
                         <li>Response times (p50, p95, p99)</li>
                         <li>Function execution duration</li>
                         <li>Edge function errors</li>
                       </ul>
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 text-sm">
+                    <td className="border border-border/40 px-4 py-2 text-sm">
                       p95 &gt; 1s
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 text-sm">
+                    <td className="border border-border/40 px-4 py-2 text-sm">
                       $10-20/mo
                     </td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">Supabase Logs</td>
-                    <td className="border border-gray-300 px-4 py-2">
+                    <td className="border border-border/40 px-4 py-2 font-bold">Supabase Logs</td>
+                    <td className="border border-border/40 px-4 py-2">
                       <ul className="list-disc list-inside text-sm space-y-1">
                         <li>Slow queries (&gt;1s)</li>
                         <li>Failed auth attempts</li>
                         <li>Database connection pool</li>
                       </ul>
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 text-sm">
+                    <td className="border border-border/40 px-4 py-2 text-sm">
                       &gt;10 slow queries/min
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 text-sm">
+                    <td className="border border-border/40 px-4 py-2 text-sm">
                       Included in Pro ($25/mo)
                     </td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2 font-bold">Uptime Robot</td>
-                    <td className="border border-gray-300 px-4 py-2">
+                    <td className="border border-border/40 px-4 py-2 font-bold">Uptime Robot</td>
+                    <td className="border border-border/40 px-4 py-2">
                       <ul className="list-disc list-inside text-sm space-y-1">
                         <li>Homepage availability</li>
                         <li>API endpoint health</li>
                         <li>SSL certificate expiry</li>
                       </ul>
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 text-sm">
+                    <td className="border border-border/40 px-4 py-2 text-sm">
                       Any downtime
                     </td>
-                    <td className="border border-gray-300 px-4 py-2 text-sm">
+                    <td className="border border-border/40 px-4 py-2 text-sm">
                       $0 (50 monitors)
                     </td>
                   </tr>
@@ -468,44 +468,44 @@ WHERE email = 'test@example.com';
             </div>
 
             <div className="overflow-x-auto mb-8">
-              <table className="w-full border-collapse border border-gray-300 text-sm">
-                <thead className="bg-gray-100">
+              <table className="w-full border-collapse text-sm">
+                <thead className="bg-muted/30">
                   <tr>
-                    <th className="border border-gray-300 px-3 py-2 text-left">Tool</th>
-                    <th className="border border-gray-300 px-3 py-2 text-left">SWE-bench</th>
-                    <th className="border border-gray-300 px-3 py-2 text-left">Interface</th>
-                    <th className="border border-gray-300 px-3 py-2 text-left">Pricing</th>
-                    <th className="border border-gray-300 px-3 py-2 text-left">Best For</th>
+                    <th className="border border-border/40 px-3 py-2 text-left">Tool</th>
+                    <th className="border border-border/40 px-3 py-2 text-left">SWE-bench</th>
+                    <th className="border border-border/40 px-3 py-2 text-left">Interface</th>
+                    <th className="border border-border/40 px-3 py-2 text-left">Pricing</th>
+                    <th className="border border-border/40 px-3 py-2 text-left">Best For</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 px-3 py-2 font-bold">Claude Code</td>
-                    <td className="border border-gray-300 px-3 py-2">72.5%</td>
-                    <td className="border border-gray-300 px-3 py-2">Terminal</td>
-                    <td className="border border-gray-300 px-3 py-2">$20-200/mo</td>
-                    <td className="border border-gray-300 px-3 py-2">Terminal-native workflows, MCP integrations</td>
+                    <td className="border border-border/40 px-3 py-2 font-bold">Claude Code</td>
+                    <td className="border border-border/40 px-3 py-2">72.5%</td>
+                    <td className="border border-border/40 px-3 py-2">Terminal</td>
+                    <td className="border border-border/40 px-3 py-2">$20-200/mo</td>
+                    <td className="border border-border/40 px-3 py-2">Terminal-native workflows, MCP integrations</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-3 py-2 font-bold">OpenAI Codex</td>
-                    <td className="border border-gray-300 px-3 py-2">74.5-74.9%</td>
-                    <td className="border border-gray-300 px-3 py-2">VS Code/IDE</td>
-                    <td className="border border-gray-300 px-3 py-2">$20-200/mo</td>
-                    <td className="border border-gray-300 px-3 py-2">Multi-platform orchestration, agent swarms</td>
+                    <td className="border border-border/40 px-3 py-2 font-bold">OpenAI Codex</td>
+                    <td className="border border-border/40 px-3 py-2">74.5-74.9%</td>
+                    <td className="border border-border/40 px-3 py-2">VS Code/IDE</td>
+                    <td className="border border-border/40 px-3 py-2">$20-200/mo</td>
+                    <td className="border border-border/40 px-3 py-2">Multi-platform orchestration, agent swarms</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-3 py-2 font-bold">Gemini CLI</td>
-                    <td className="border border-gray-300 px-3 py-2">N/A</td>
-                    <td className="border border-gray-300 px-3 py-2">Terminal</td>
-                    <td className="border border-gray-300 px-3 py-2">Free (1K/day)</td>
-                    <td className="border border-gray-300 px-3 py-2">Open-source, 1M token context, free tier</td>
+                    <td className="border border-border/40 px-3 py-2 font-bold">Gemini CLI</td>
+                    <td className="border border-border/40 px-3 py-2">N/A</td>
+                    <td className="border border-border/40 px-3 py-2">Terminal</td>
+                    <td className="border border-border/40 px-3 py-2">Free (1K/day)</td>
+                    <td className="border border-border/40 px-3 py-2">Open-source, 1M token context, free tier</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 px-3 py-2 font-bold">grok-code-fast-1</td>
-                    <td className="border border-gray-300 px-3 py-2">70.8%</td>
-                    <td className="border border-gray-300 px-3 py-2">API</td>
-                    <td className="border border-gray-300 px-3 py-2">$0.20/$1.50 per M</td>
-                    <td className="border border-gray-300 px-3 py-2">Speed-critical tasks (92 tokens/sec)</td>
+                    <td className="border border-border/40 px-3 py-2 font-bold">grok-code-fast-1</td>
+                    <td className="border border-border/40 px-3 py-2">70.8%</td>
+                    <td className="border border-border/40 px-3 py-2">API</td>
+                    <td className="border border-border/40 px-3 py-2">$0.20/$1.50 per M</td>
+                    <td className="border border-border/40 px-3 py-2">Speed-critical tasks (92 tokens/sec)</td>
                   </tr>
                 </tbody>
               </table>

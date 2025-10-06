@@ -26,7 +26,7 @@ export default function SocialSystemPage() {
             Modern platform strategies for late 2025: authenticity-first content, algorithm optimization, and AI-enhanced workflows
           </p>
 
-          <section id="landscape" className="mb-12 bg-gray-100 border-l-4 border-gray-600 p-6 rounded-lg">
+          <section id="landscape" className="mb-12 bg-muted/30 border-l-4 border-gray-600 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">The 2025 Social Landscape</h2>
             <p className="text-gray-700 mb-4">
               <strong>Social platforms now function as search engines</strong>, with 40% of Gen Z preferring TikTok/Instagram over Google. AI-powered recommendation systems replaced chronological feeds. Authenticity and meaningful engagement trump vanity metrics.
@@ -103,40 +103,40 @@ export default function SocialSystemPage() {
             <h2 className="text-3xl font-bold mb-6">Content Format Strategies</h2>
 
             <div className="space-y-6">
-              <div className="bg-slate-100 border-l-4 border-slate-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-slate-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Short-Form Video: Highest ROI</h3>
                 <p className="text-gray-700 mb-3">
                   <strong>46% of marketers rate video most important,</strong> 30% say short-form brings highest returns.
                 </p>
-                <table className="w-full border-collapse border border-gray-300 text-sm mt-3">
-                  <thead className="bg-gray-100">
+                <table className="w-full border-collapse text-sm mt-3">
+                  <thead className="bg-muted/30">
                     <tr>
-                      <th className="border border-gray-300 px-3 py-2 text-left">Platform</th>
-                      <th className="border border-gray-300 px-3 py-2 text-left">Optimal Length</th>
-                      <th className="border border-gray-300 px-3 py-2 text-left">Nano Engagement</th>
+                      <th className="border border-border/40 px-3 py-2 text-left">Platform</th>
+                      <th className="border border-border/40 px-3 py-2 text-left">Optimal Length</th>
+                      <th className="border border-border/40 px-3 py-2 text-left">Nano Engagement</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="border border-gray-300 px-3 py-2">TikTok</td>
-                      <td className="border border-gray-300 px-3 py-2">5-9s OR 60+ (avoid 10-59s)</td>
-                      <td className="border border-gray-300 px-3 py-2"><strong>10.3%</strong></td>
+                      <td className="border border-border/40 px-3 py-2">TikTok</td>
+                      <td className="border border-border/40 px-3 py-2">5-9s OR 60+ (avoid 10-59s)</td>
+                      <td className="border border-border/40 px-3 py-2"><strong>10.3%</strong></td>
                     </tr>
                     <tr>
-                      <td className="border border-gray-300 px-3 py-2">Instagram</td>
-                      <td className="border border-gray-300 px-3 py-2">30-90s for completion</td>
-                      <td className="border border-gray-300 px-3 py-2"><strong>1.73%</strong> (3x macro)</td>
+                      <td className="border border-border/40 px-3 py-2">Instagram</td>
+                      <td className="border border-border/40 px-3 py-2">30-90s for completion</td>
+                      <td className="border border-border/40 px-3 py-2"><strong>1.73%</strong> (3x macro)</td>
                     </tr>
                     <tr>
-                      <td className="border border-gray-300 px-3 py-2">YouTube</td>
-                      <td className="border border-gray-300 px-3 py-2">24-31s (max 3 min)</td>
-                      <td className="border border-gray-300 px-3 py-2">Focused &gt; rambling</td>
+                      <td className="border border-border/40 px-3 py-2">YouTube</td>
+                      <td className="border border-border/40 px-3 py-2">24-31s (max 3 min)</td>
+                      <td className="border border-border/40 px-3 py-2">Focused &gt; rambling</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <div className="bg-zinc-100 border-l-4 border-zinc-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-zinc-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Long-Form Comeback</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>• 2/3 of marketers believe long-form will rival short-form in 2025</li>
@@ -146,7 +146,7 @@ export default function SocialSystemPage() {
                 </ul>
               </div>
 
-              <div className="bg-gray-100 border-l-4 border-gray-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-gray-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Live Streaming: Rising Star</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>• <strong>52.4% of marketers favor</strong> live streaming (19.7% CAGR 2025-2030)</li>
@@ -197,7 +197,7 @@ export default function SocialSystemPage() {
 
           <section id="ai-integration" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">AI Integration (70/30 Rule)</h2>
-            <div className="bg-gray-100 border-l-4 border-gray-600 p-4 rounded-lg mb-4">
+            <div className="bg-muted/30 border-l-4 border-gray-600 p-4 rounded-lg mb-4">
               <p className="text-gray-700 text-lg font-bold">
                 <strong>70% human strategy/creativity, 30% AI execution/optimization</strong>
               </p>
@@ -207,7 +207,7 @@ export default function SocialSystemPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-zinc-100 p-4 rounded-lg">
+              <div className="bg-muted/30 p-4 rounded-lg">
                 <h4 className="font-bold text-zinc-700 mb-2">✅ AI Excels At</h4>
                 <ul className="space-y-1 text-sm text-gray-700">
                   <li>• Content ideation (35%)</li>
@@ -231,7 +231,7 @@ export default function SocialSystemPage() {
             </div>
           </section>
 
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-100 p-6 rounded-lg">
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-muted/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <ul className="space-y-2 text-gray-700">
               <li><strong>Platform optimization:</strong> TikTok (3s hook, captions), Instagram (DM shares, 3-5 hashtags), YouTube (niche focus), LinkedIn (1-3 posts/week), Facebook (vertical video)</li>

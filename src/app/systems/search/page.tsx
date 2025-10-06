@@ -176,7 +176,7 @@ export default function SearchSystemPage() {
             </p>
           </section>
 
-          <section id="official-resources" className="mb-12 bg-slate-100 border-l-4 border-slate-600 p-6 rounded-lg">
+          <section id="official-resources" className="mb-12 bg-muted/30 border-l-4 border-slate-600 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">📚 Official SEO Resources</h2>
             <p className="text-gray-700 mb-4">
               For authoritative SEO guidance, always reference official sources:
@@ -229,7 +229,7 @@ export default function SearchSystemPage() {
               <div>
                 <h3 className="text-xl font-bold mb-3">1. Enhanced Schema Markup Implementation</h3>
                 <p className="text-gray-700 mb-3">
-                  We use <code className="bg-gray-100 px-2 py-1 rounded">@graph</code> schema with multiple entity types. View our <code className="bg-gray-100 px-2 py-1 rounded">layout.tsx</code> to see the complete implementation:
+                  We use <code className="bg-muted/30 px-2 py-1 rounded">@graph</code> schema with multiple entity types. View our <code className="bg-muted/30 px-2 py-1 rounded">layout.tsx</code> to see the complete implementation:
                 </p>
                 <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
 {`// layout.tsx - Enhanced schema for AI citations
@@ -310,7 +310,7 @@ const schemaData = {
                   <li><strong>Verified versions:</strong> Next.js 15.5.5, React 19.2.0, TypeScript 5.9.2, Node.js 24.8.0 (tested October 2025)</li>
                   <li><strong>Original data:</strong> Compatibility matrix showing these tools work together</li>
                   <li><strong>Clear attribution:</strong> Every fact sourced from official docs or our testing</li>
-                  <li><strong>Time-stamped updates:</strong> <code className="bg-gray-100 px-2 py-1 rounded">&lt;time dateTime="2025-10-05"&gt;</code> on every page</li>
+                  <li><strong>Time-stamped updates:</strong> <code className="bg-muted/30 px-2 py-1 rounded">&lt;time dateTime="2025-10-05"&gt;</code> on every page</li>
                 </ul>
                 <p className="text-sm text-gray-600 mt-2">
                   AI systems prioritize fresh, factual content with clear sources. We deliver all three.
@@ -320,34 +320,34 @@ const schemaData = {
               <div>
                 <h3 className="text-xl font-bold mb-3">4. Platform-Specific Optimization</h3>
                 <div className="overflow-x-auto">
-                  <table className="w-full border-collapse border border-gray-300 text-sm">
-                    <thead className="bg-gray-100">
+                  <table className="w-full border-collapse text-sm">
+                    <thead className="bg-muted/30">
                       <tr>
-                        <th className="border border-gray-300 px-4 py-2 text-left">AI Platform</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Our Implementation</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Expected Result</th>
+                        <th className="border border-border/40 px-4 py-2 text-left">AI Platform</th>
+                        <th className="border border-border/40 px-4 py-2 text-left">Our Implementation</th>
+                        <th className="border border-border/40 px-4 py-2 text-left">Expected Result</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="border border-gray-300 px-4 py-2 font-mono">ChatGPT</td>
-                        <td className="border border-gray-300 px-4 py-2">2,000+ word comprehensive content, high DR through digital PR, .com domain</td>
-                        <td className="border border-gray-300 px-4 py-2">40-60% of AI referral traffic</td>
+                        <td className="border border-border/40 px-4 py-2 font-mono">ChatGPT</td>
+                        <td className="border border-border/40 px-4 py-2">2,000+ word comprehensive content, high DR through digital PR, .com domain</td>
+                        <td className="border border-border/40 px-4 py-2">40-60% of AI referral traffic</td>
                       </tr>
                       <tr>
-                        <td className="border border-gray-300 px-4 py-2 font-mono">Perplexity</td>
-                        <td className="border border-gray-300 px-4 py-2">Sub-2s load time, weekly updates, current statistics</td>
-                        <td className="border border-gray-300 px-4 py-2">15-25% AI traffic share</td>
+                        <td className="border border-border/40 px-4 py-2 font-mono">Perplexity</td>
+                        <td className="border border-border/40 px-4 py-2">Sub-2s load time, weekly updates, current statistics</td>
+                        <td className="border border-border/40 px-4 py-2">15-25% AI traffic share</td>
                       </tr>
                       <tr>
-                        <td className="border border-gray-300 px-4 py-2 font-mono">Claude</td>
-                        <td className="border border-gray-300 px-4 py-2">Technical documentation style, code examples, clear ethics</td>
-                        <td className="border border-gray-300 px-4 py-2">Highest session value ($4.56)</td>
+                        <td className="border border-border/40 px-4 py-2 font-mono">Claude</td>
+                        <td className="border border-border/40 px-4 py-2">Technical documentation style, code examples, clear ethics</td>
+                        <td className="border border-border/40 px-4 py-2">Highest session value ($4.56)</td>
                       </tr>
                       <tr>
-                        <td className="border border-gray-300 px-4 py-2 font-mono">Gemini</td>
-                        <td className="border border-gray-300 px-4 py-2">Tech/education vertical focus, structured data, multimedia</td>
-                        <td className="border border-gray-300 px-4 py-2">Strong in tech searches</td>
+                        <td className="border border-border/40 px-4 py-2 font-mono">Gemini</td>
+                        <td className="border border-border/40 px-4 py-2">Tech/education vertical focus, structured data, multimedia</td>
+                        <td className="border border-border/40 px-4 py-2">Strong in tech searches</td>
                       </tr>
                     </tbody>
                   </table>
@@ -359,7 +359,7 @@ const schemaData = {
           <section id="core-web-vitals" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">Core Web Vitals Implementation</h2>
 
-            <div className="mb-6 bg-zinc-100 border-l-4 border-zinc-600 p-4 rounded-lg">
+            <div className="mb-6 bg-muted/30 border-l-4 border-zinc-600 p-4 rounded-lg">
               <p className="text-gray-700">
                 <strong>Our targets:</strong> LCP &lt; 2.5s, INP &lt; 200ms, CLS &lt; 0.1. Sites achieving all-green see <strong>20-40% conversion rate improvements</strong>.
               </p>
@@ -575,7 +575,7 @@ export default function robots() {
             <h2 className="text-3xl font-bold mb-6">SEO Implementation Checklist</h2>
 
             <div className="space-y-4">
-              <div className="bg-zinc-100 p-4 rounded-lg">
+              <div className="bg-muted/30 p-4 rounded-lg">
                 <h3 className="font-bold text-zinc-700 mb-2">✅ Implemented on Avolve.io</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>✓ Enhanced @graph schema with SoftwareApplication, Organization, Person, TechArticle</li>
@@ -593,7 +593,7 @@ export default function robots() {
                 </ul>
               </div>
 
-              <div className="bg-slate-100 p-4 rounded-lg">
+              <div className="bg-muted/30 p-4 rounded-lg">
                 <h3 className="font-bold text-slate-700 mb-2">🔄 Continuous Optimization</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>→ Monitoring Core Web Vitals via Vercel Analytics</li>
@@ -610,7 +610,7 @@ export default function robots() {
             <h2 className="text-3xl font-bold mb-6">Modern SEO Priorities (Late 2025)</h2>
 
             <div className="space-y-6">
-              <div className="bg-gray-100 border-l-4 border-gray-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-gray-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">E-E-A-T Framework (Experience, Expertise, Authoritativeness, Trustworthiness)</h3>
                 <p className="text-gray-700 mb-3">
                   <strong>Trustworthiness is the central component</strong>. "Untrustworthy pages have low E-E-A-T no matter how Experienced, Expert, or Authoritative" — Google Quality Raters Guidelines.
@@ -626,7 +626,7 @@ export default function robots() {
                 </p>
               </div>
 
-              <div className="bg-slate-100 border-l-4 border-slate-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-slate-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Information Gain as Critical Ranking Factor</h3>
                 <p className="text-gray-700 mb-3">
                   Content must offer unique value unavailable elsewhere:
@@ -642,7 +642,7 @@ export default function robots() {
                 </p>
               </div>
 
-              <div className="bg-zinc-100 border-l-4 border-zinc-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-zinc-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Zero-Click Optimization Required</h3>
                 <p className="text-gray-700 mb-3">
                   <strong>57-60% of mobile searches and 53% of desktop searches end without clicks.</strong> Featured snippets have 44% CTR, but zero-click searches could surpass 70% by end of 2025.
@@ -706,7 +706,7 @@ Each links back to pillar, clusters interconnect when relevant`}
           <section id="programmatic-seo-data" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">Programmatic SEO Data with DataForSEO</h2>
 
-            <div className="mb-6 bg-slate-100 border-l-4 border-slate-600 p-4 rounded-lg">
+            <div className="mb-6 bg-muted/30 border-l-4 border-slate-600 p-4 rounded-lg">
               <p className="text-gray-700">
                 <strong>Manual SEO optimization is one half of the equation.</strong> Programmatic access to SERP data, keyword research, and backlink analysis enables data-driven decision-making at scale. DataForSEO provides REST API access to 7B+ keywords, SERP results from 8 search engines, and comprehensive backlink data.
               </p>
@@ -770,34 +770,34 @@ const position = tasks[0]?.result?.[0]?.items?.findIndex(
               <div>
                 <h3 className="text-xl font-bold mb-3">Use Cases for Avolve.io</h3>
                 <div className="overflow-x-auto">
-                  <table className="w-full border-collapse border border-gray-300 text-sm">
-                    <thead className="bg-gray-100">
+                  <table className="w-full border-collapse text-sm">
+                    <thead className="bg-muted/30">
                       <tr>
-                        <th className="border border-gray-300 px-4 py-2 text-left">API Suite</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">How We Use It</th>
-                        <th className="border border-gray-300 px-4 py-2 text-left">Manual Strategy Enhanced</th>
+                        <th className="border border-border/40 px-4 py-2 text-left">API Suite</th>
+                        <th className="border border-border/40 px-4 py-2 text-left">How We Use It</th>
+                        <th className="border border-border/40 px-4 py-2 text-left">Manual Strategy Enhanced</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="border border-gray-300 px-4 py-2 font-mono">SERP API</td>
-                        <td className="border border-gray-300 px-4 py-2">Track ranking for "Next.js 15", "React 19.2", "TypeScript 5.9"</td>
-                        <td className="border border-gray-300 px-4 py-2">Validate schema markup impact on position</td>
+                        <td className="border border-border/40 px-4 py-2 font-mono">SERP API</td>
+                        <td className="border border-border/40 px-4 py-2">Track ranking for "Next.js 15", "React 19.2", "TypeScript 5.9"</td>
+                        <td className="border border-border/40 px-4 py-2">Validate schema markup impact on position</td>
                       </tr>
                       <tr>
-                        <td className="border border-gray-300 px-4 py-2 font-mono">Keywords Data</td>
-                        <td className="border border-gray-300 px-4 py-2">Find related keywords for topic clusters</td>
-                        <td className="border border-gray-300 px-4 py-2">Build comprehensive pillar pages with semantic coverage</td>
+                        <td className="border border-border/40 px-4 py-2 font-mono">Keywords Data</td>
+                        <td className="border border-border/40 px-4 py-2">Find related keywords for topic clusters</td>
+                        <td className="border border-border/40 px-4 py-2">Build comprehensive pillar pages with semantic coverage</td>
                       </tr>
                       <tr>
-                        <td className="border border-gray-300 px-4 py-2 font-mono">Backlinks</td>
-                        <td className="border border-gray-300 px-4 py-2">Monitor authority building from citations</td>
-                        <td className="border border-gray-300 px-4 py-2">Track E-E-A-T improvements via backlink profile</td>
+                        <td className="border border-border/40 px-4 py-2 font-mono">Backlinks</td>
+                        <td className="border border-border/40 px-4 py-2">Monitor authority building from citations</td>
+                        <td className="border border-border/40 px-4 py-2">Track E-E-A-T improvements via backlink profile</td>
                       </tr>
                       <tr>
-                        <td className="border border-gray-300 px-4 py-2 font-mono">On-Page</td>
-                        <td className="border border-gray-300 px-4 py-2">Audit Core Web Vitals programmatically</td>
-                        <td className="border border-gray-300 px-4 py-2">Ensure LCP &lt; 2.5s, INP &lt; 200ms across all pages</td>
+                        <td className="border border-border/40 px-4 py-2 font-mono">On-Page</td>
+                        <td className="border border-border/40 px-4 py-2">Audit Core Web Vitals programmatically</td>
+                        <td className="border border-border/40 px-4 py-2">Ensure LCP &lt; 2.5s, INP &lt; 200ms across all pages</td>
                       </tr>
                     </tbody>
                   </table>

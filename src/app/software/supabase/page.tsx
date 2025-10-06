@@ -70,7 +70,7 @@ export default function SupabasePage() {
           </p>
 
           {/* Core Identity Section */}
-          <section id="overview" className="mb-12 bg-zinc-100 border-l-2 border-zinc-600/30 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-muted/30 border-l-2 border-zinc-600/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
               <strong>Supabase</strong> is an open-source Firebase alternative built on <strong>PostgreSQL 15.8</strong> (production default; CLI uses 17 for local development), providing authentication, database, storage, real-time subscriptions, and AI-powered vector search. Used by <strong>1.7M developers</strong> and <strong>40% of Y Combinator startups</strong> with <strong>$70M ARR</strong>.
@@ -101,7 +101,7 @@ export default function SupabasePage() {
               </div>
             </div>
 
-            <div className="mt-4 bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
+            <div className="mt-4 bg-muted/30 p-4 rounded border-l-2 border-slate-600/30">
               <h3 className="font-bold mb-2">Official Documentation</h3>
               <p className="text-sm text-gray-700 mb-2">
                 For API reference and guides, visit:
@@ -171,7 +171,7 @@ const allDocs = await supabase
   .from('documents')
   .select('*'); // Returns ALL documents!`}</pre>
                   </div>
-                  <div className="bg-zinc-100 p-4 rounded-lg">
+                  <div className="bg-muted/30 p-4 rounded-lg">
                     <h4 className="font-bold text-zinc-700 mb-2">✅ With RLS (Database-Layer Auth)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`-- RLS policy enforced at database level
 CREATE POLICY "Users see only their documents"
@@ -195,7 +195,7 @@ const { data } = await supabase
                   pgvector 0.8.0 brings production-grade AI capabilities directly into PostgreSQL with HNSW (Hierarchical Navigable Small World) indexing. This enables semantic search, RAG (Retrieval Augmented Generation), and AI features without external vector databases—reducing infrastructure complexity and cost.
                 </p>
                 <div className="space-y-3">
-                  <div className="bg-gray-100 p-3 rounded">
+                  <div className="bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Performance Characteristics:</h5>
                     <ul className="space-y-1 text-xs text-gray-700">
                       <li>• <strong>HNSW indexing:</strong> Sub-10ms queries on millions of vectors</li>
@@ -205,7 +205,7 @@ const { data } = await supabase
                       <li>• <strong>Hybrid search:</strong> Combine SQL filters with semantic similarity</li>
                     </ul>
                   </div>
-                  <div className="bg-zinc-100 p-3 rounded">
+                  <div className="bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Real-World Use Case (RAG Implementation):</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// 1. Store document with embedding
 const { embedding } = await embed({
@@ -295,7 +295,7 @@ export const config = {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Row Level Security Patterns</h3>
-                <div className="bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
+                <div className="bg-muted/30 p-4 rounded border-l-2 border-slate-600/30">
                   <h4 className="font-bold mb-2">Complete RLS Setup:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`-- Enable RLS on table
 ALTER TABLE documents ENABLE ROW LEVEL SECURITY;
@@ -325,7 +325,7 @@ USING (auth.uid() = user_id);`}</pre>
 
               <div>
                 <h3 className="text-xl font-bold mb-3">pgvector 0.8.0 Setup</h3>
-                <div className="bg-gray-100 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
+                <div className="bg-muted/30 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
                   <h4 className="font-bold mb-2">Database Schema with HNSW Index:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`-- Enable pgvector extension
 CREATE EXTENSION IF NOT EXISTS vector;
@@ -376,7 +376,7 @@ $$;`}</pre>
             <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
 
             <div className="space-y-6">
-              <div className="bg-zinc-100 p-4 rounded-lg border-l-2 border-zinc-600/30">
+              <div className="bg-muted/30 p-4 rounded-lg border-l-2 border-zinc-600/30">
                 <h3 className="text-lg font-bold mb-3">Complete Authentication Flow</h3>
                 <div className="space-y-3">
                   <div>
@@ -580,7 +580,7 @@ LIMIT 5;
                     <li><strong>Integrate AI search:</strong> Add pgvector extension and HNSW indexes</li>
                     <li><strong>Production deployment:</strong> Start on Pro tier ($25/mo) for staging/production split</li>
                   </ol>
-                  <div className="mt-3 bg-slate-100 p-3 rounded">
+                  <div className="mt-3 bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Pricing Tiers (October 2025):</h5>
                     <ul className="space-y-1 text-xs text-gray-700">
                       <li>• <strong>Free:</strong> 500MB database, 50K monthly active users, 2GB bandwidth</li>
@@ -594,7 +594,7 @@ LIMIT 5;
           </section>
 
           {/* AI Assistant Reference Section */}
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-100 p-6 rounded-lg">
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-muted/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
@@ -619,7 +619,7 @@ LIMIT 5;
               </div>
             </div>
 
-            <div className="mt-4 bg-white p-3 rounded border border-gray-300">
+            <div className="mt-4 bg-white p-3 rounded border border-border/40">
               <h4 className="font-bold text-sm mb-2">Quick Reference Template:</h4>
               <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// Supabase + Next.js 15 + pgvector pattern
 import { createClient } from '@/lib/supabase/server'
