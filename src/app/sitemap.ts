@@ -66,6 +66,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: getFileModifiedDate('src/app/software/typescript/page.tsx'),
     },
     {
+      url: `${baseUrl}/software/react-to-production`,
+      lastModified: getFileModifiedDate('src/app/software/react-to-production/page.tsx'),
+    },
+    {
+      url: `${baseUrl}/software/type-safe-stack`,
+      lastModified: getFileModifiedDate('src/app/software/type-safe-stack/page.tsx'),
+    },
+    {
+      url: `${baseUrl}/software/ai-enabled-stack`,
+      lastModified: getFileModifiedDate('src/app/software/ai-enabled-stack/page.tsx'),
+    },
+    {
       url: `${baseUrl}/systems/mobile`,
       lastModified: getFileModifiedDate('src/app/systems/mobile/page.tsx'),
     },

@@ -100,15 +100,15 @@ export default function NodeJSPage() {
               </div>
             </div>
 
-            <div className="mt-4 bg-blue-50 p-4 rounded border-l-4 border-blue-600">
+            <div className="mt-4 bg-slate-100 p-4 rounded border-l-4 border-slate-600">
               <h3 className="font-bold mb-2">Official Documentation</h3>
               <p className="text-sm text-gray-700 mb-2">
                 For API reference and latest releases, visit:
               </p>
               <ul className="space-y-1 text-sm">
-                <li>→ <a href="https://nodejs.org" className="text-blue-600 hover:underline">nodejs.org</a> - Official docs and downloads</li>
-                <li>→ <a href="https://nodejs.org/api/" className="text-blue-600 hover:underline">API Documentation</a> - Complete API reference</li>
-                <li>→ <a href="https://github.com/nodejs/node" className="text-blue-600 hover:underline">GitHub Repository</a> - Source code and issues</li>
+                <li>→ <a href="https://nodejs.org" className="text-slate-600 hover:underline">nodejs.org</a> - Official docs and downloads</li>
+                <li>→ <a href="https://nodejs.org/api/" className="text-slate-600 hover:underline">API Documentation</a> - Complete API reference</li>
+                <li>→ <a href="https://github.com/nodejs/node" className="text-slate-600 hover:underline">GitHub Repository</a> - Source code and issues</li>
               </ul>
             </div>
           </section>
@@ -124,8 +124,8 @@ export default function NodeJSPage() {
                   Node.js 24.8.0 eliminates the entire TypeScript build pipeline. Direct execution of .ts files without tsc, webpack, or babel fundamentally changes development workflow and deployment architecture.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-red-800 mb-2">❌ Before (Node.js 22 and Earlier)</h4>
+                  <div className="bg-neutral-100 p-4 rounded-lg">
+                    <h4 className="font-bold text-neutral-700 mb-2">❌ Before (Node.js 22 and Earlier)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// Required build pipeline
 npm install -D typescript @types/node
 npx tsc app.ts
@@ -137,8 +137,8 @@ node dist/app.js
   "start": "node dist/app.js"
 }`}</pre>
                   </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-green-800 mb-2">✅ Now (Node.js 24.8.0)</h4>
+                  <div className="bg-zinc-100 p-4 rounded-lg">
+                    <h4 className="font-bold text-zinc-700 mb-2">✅ Now (Node.js 24.8.0)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// Direct execution - zero build
 node app.ts
 
@@ -150,7 +150,7 @@ node app.ts
 // No tsconfig.json, no dist/, no build step`}</pre>
                   </div>
                 </div>
-                <div className="mt-3 bg-purple-50 p-3 rounded">
+                <div className="mt-3 bg-gray-100 p-3 rounded">
                   <h5 className="font-bold text-sm mb-2">Microsoft's Go-Powered Compiler (Preview):</h5>
                   <ul className="space-y-1 text-xs text-gray-700">
                     <li>• <strong>8x faster project loading</strong> in VS Code (1.2s vs 9.6s)</li>
@@ -161,8 +161,8 @@ node app.ts
                 </div>
               </div>
 
-              <div className="border-l-4 border-teal-600 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-teal-800">Performance Transformation</h3>
+              <div className="border-l-4 border-zinc-600 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-zinc-700">Performance Transformation</h3>
                 <p className="text-gray-700 mb-3">
                   Node.js 24.8.0 delivers measurable, dramatic performance improvements that translate to real-world application benefits: 15-20% faster data-heavy workloads, reduced infrastructure costs, and improved user experience.
                 </p>
@@ -214,13 +214,13 @@ node app.ts
                 </div>
               </div>
 
-              <div className="border-l-4 border-red-600 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-red-800">Enterprise Security Model</h3>
+              <div className="border-l-4 border-neutral-600 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-neutral-700">Enterprise Security Model</h3>
                 <p className="text-gray-700 mb-3">
                   The stabilized Permission Model enables zero-trust architecture by default, allowing granular control over filesystem, network, and process access—critical for running untrusted code and meeting compliance requirements.
                 </p>
                 <div className="space-y-3">
-                  <div className="bg-yellow-50 p-3 rounded">
+                  <div className="bg-stone-100 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">September 2025 Security Context:</h5>
                     <ul className="space-y-1 text-xs text-gray-700">
                       <li>• <strong>"Qix" phishing attack:</strong> Compromised 18-20 packages (chalk, debug) affecting 2.6B weekly downloads</li>
@@ -229,7 +229,7 @@ node app.ts
                       <li>• <strong>Permission Model benefit:</strong> Sandboxing prevents malicious package access to filesystem/network</li>
                     </ul>
                   </div>
-                  <div className="bg-green-50 p-3 rounded">
+                  <div className="bg-zinc-100 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Permission Model Usage:</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`# Granular permission control
 node --permission --allow-fs-read=/app/data --allow-net app.js
@@ -296,7 +296,7 @@ ws.addEventListener('message', (event) => {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Worker Threads Architecture</h3>
-                <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-600">
+                <div className="bg-slate-100 p-4 rounded border-l-4 border-slate-600">
                   <h4 className="font-bold mb-2">Production Use Cases:</h4>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• <strong>Netflix:</strong> Complex video processing with multi-core scaling</li>
@@ -379,7 +379,7 @@ server.listen(3000);
                 </div>
               </div>
 
-              <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-600">
+              <div className="bg-zinc-100 p-4 rounded-lg border-l-4 border-zinc-600">
                 <h3 className="text-lg font-bold mb-3">Enterprise Success Stories</h3>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
@@ -409,7 +409,7 @@ server.listen(3000);
                 </div>
               </div>
 
-              <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-600">
+              <div className="bg-gray-100 p-4 rounded-lg border-l-4 border-gray-600">
                 <h3 className="text-lg font-bold mb-3">Framework Performance (TechEmpower Round 23)</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full border-collapse border border-gray-300 text-sm">
@@ -444,12 +444,12 @@ server.listen(3000);
           </section>
 
           {/* Decision Framework Section */}
-          <section id="decisions" className="mb-12 border-t pt-8 bg-yellow-50 p-6 rounded-lg">
+          <section id="decisions" className="mb-12 border-t pt-8 bg-stone-100 p-6 rounded-lg">
             <h2 className="text-3xl font-bold mb-6">Decision Framework</h2>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold mb-3 text-green-700">✅ Choose Node.js 24.8.0 When:</h3>
+                <h3 className="text-xl font-bold mb-3 text-zinc-600">✅ Choose Node.js 24.8.0 When:</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• <strong>New projects:</strong> No legacy constraints, ready for native TypeScript</li>
                   <li>• <strong>Build tool elimination:</strong> Want to remove tsc, webpack, babel from pipeline</li>
@@ -461,7 +461,7 @@ server.listen(3000);
               </div>
 
               <div>
-                <h3 className="text-xl font-bold mb-3 text-blue-700">🔵 Consider Node.js 22.x LTS When:</h3>
+                <h3 className="text-xl font-bold mb-3 text-slate-600">🔵 Consider Node.js 22.x LTS When:</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• <strong>Production stability priority:</strong> Need LTS support (until April 2027)</li>
                   <li>• <strong>Enterprise constraints:</strong> Risk-averse organizations with change control</li>
@@ -488,7 +488,7 @@ server.listen(3000);
           </section>
 
           {/* AI Assistant Reference Section */}
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-purple-50 p-6 rounded-lg">
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-100 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
@@ -513,7 +513,7 @@ server.listen(3000);
               </div>
             </div>
 
-            <div className="mt-4 bg-white p-3 rounded border border-purple-200">
+            <div className="mt-4 bg-white p-3 rounded border border-gray-300">
               <h4 className="font-bold text-sm mb-2">Quick Reference Template:</h4>
               <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// package.json for Node.js 24.8.0
 {
@@ -535,10 +535,10 @@ server.listen(3000);
               <div>
                 <h3 className="font-bold mb-2 text-gray-800">Foundation For:</h3>
                 <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• <Link href="/software/nextjs" className="text-blue-600 hover:underline">Next.js 15.5</Link> - React framework runtime</li>
-                  <li>• <Link href="/software/react" className="text-blue-600 hover:underline">React 19</Link> - Server Components execution</li>
-                  <li>• <Link href="/software/typescript" className="text-blue-600 hover:underline">TypeScript 5.9</Link> - Native .ts file execution</li>
-                  <li>• <Link href="/software/vercel-ai-sdk" className="text-blue-600 hover:underline">Vercel AI SDK</Link> - AI application runtime</li>
+                  <li>• <Link href="/software/nextjs" className="text-slate-600 hover:underline">Next.js 15.5</Link> - React framework runtime</li>
+                  <li>• <Link href="/software/react" className="text-slate-600 hover:underline">React 19</Link> - Server Components execution</li>
+                  <li>• <Link href="/software/typescript" className="text-slate-600 hover:underline">TypeScript 5.9</Link> - Native .ts file execution</li>
+                  <li>• <Link href="/software/vercel-ai-sdk" className="text-slate-600 hover:underline">Vercel AI SDK</Link> - AI application runtime</li>
                 </ul>
               </div>
               <div>
@@ -554,14 +554,14 @@ server.listen(3000);
 
             <div className="mt-4 pt-4 border-t border-gray-200">
               <p className="text-sm text-gray-600">
-                Part of <Link href="/software" className="text-blue-600 hover:underline">Avolve Software Stack</Link> -
+                Part of <Link href="/software" className="text-slate-600 hover:underline">Avolve Software Stack</Link> -
                 Runtime foundation for Next.js + React + TypeScript modern applications
               </p>
             </div>
           </section>
 
           <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/software" className="text-blue-600 hover:underline">
+            <Link href="/software" className="text-slate-600 hover:underline">
               ← Back to Software
             </Link>
           </nav>

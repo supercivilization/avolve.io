@@ -352,7 +352,7 @@ npm run email:dev
               </table>
             </div>
 
-            <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded-lg">
+            <div className="bg-stone-100 border-l-4 border-stone-600 p-4 rounded-lg">
               <h3 className="text-lg font-bold mb-2">True Infrastructure Cost</h3>
               <p className="text-gray-700 mb-2">Beyond API pricing, budget for:</p>
               <ul className="space-y-1 text-sm text-gray-700">
@@ -411,28 +411,28 @@ npm run email:dev
             <h2 className="text-3xl font-bold mb-6">Production Best Practices</h2>
 
             <div className="space-y-6">
-              <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+              <div className="bg-slate-100 border-l-4 border-slate-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Component Reusability</h3>
                 <p className="text-sm text-gray-700">
                   Build button, header, footer components once. Compose across multiple templates. Track byte cost per component. Use TypeScript interfaces for self-documenting props.
                 </p>
               </div>
 
-              <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded-lg">
+              <div className="bg-zinc-100 border-l-4 border-zinc-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Deliverability Optimization</h3>
                 <p className="text-sm text-gray-700">
                   Configure SPF, DKIM, DMARC records. Use Resend's suppression list. Warm up dedicated IPs gradually. Monitor bounce rates. A/B test subject lines. Avoid spam trigger words.
                 </p>
               </div>
 
-              <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded-lg">
+              <div className="bg-gray-100 border-l-4 border-gray-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Batch Processing Optimization</h3>
                 <p className="text-sm text-gray-700">
                   Group recipients by template variation (not arbitrary batching) for 2-3x throughput. Use idempotency keys to prevent duplicates. Batch API supports 100 emails per request.
                 </p>
               </div>
 
-              <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded-lg">
+              <div className="bg-stone-100 border-l-4 border-stone-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Error Handling and Monitoring</h3>
                 <p className="text-sm text-gray-700">
                   Implement webhook listeners for delivery events. Log failures with context. Set up alerts for bounce rate spikes. Use Resend's retry mechanisms. Track email metrics in analytics.

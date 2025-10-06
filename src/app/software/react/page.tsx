@@ -112,7 +112,7 @@ export default function ReactPage() {
             <div className="flex items-center gap-3">
               <h1 className="text-4xl font-bold">React 19.2</h1>
               <Badge variant="default">v19.2.0</Badge>
-              <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">Stable</Badge>
+              <Badge variant="outline" className="bg-zinc-100 text-zinc-600 border-zinc-300">Stable</Badge>
             </div>
             <p className="text-xl text-muted-foreground">
               JavaScript library for building user interfaces with Server Components, Actions, and automatic optimization via the React Compiler.
@@ -162,22 +162,22 @@ export default function ReactPage() {
                   <TableRow>
                     <TableCell className="font-medium">Next.js</TableCell>
                     <TableCell className="font-mono">15.5.4</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">TypeScript</TableCell>
                     <TableCell className="font-mono">5.9.2</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Node.js</TableCell>
                     <TableCell className="font-mono">24.8.0</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Vercel AI SDK</TableCell>
                     <TableCell className="font-mono">5.0.48</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

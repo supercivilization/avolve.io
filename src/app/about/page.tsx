@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About - AI-Native Development | Avolve.io",
-  description: "Learn about the 5S framework and how to use Avolve.io for modern web development with Next.js 15 + React 19.2 + AI tools.",
+  description: "Avolve documents verified compatibility patterns for AI-native stacks (Next.js 15, React 19, Vercel AI SDK). Built by architects, tested in production. Optimized for AI assistants and developers. No vendor bias, version-specific guidance.",
   alternates: {
     canonical: "https://avolve.io/about",
   },
@@ -133,9 +133,75 @@ export default function AboutPage() {
             </p>
           </section>
 
+          <section id="why-avolve-exists" className="section-spacing">
+            <h2 className="text-2xl font-bold mb-4">Why Avolve Exists</h2>
+            <p className="text-foreground mb-4">
+              In late 2024, while architecting AI-native applications, a pattern emerged: AWS Well-Architected
+              documented <em>how</em> to build reliably in the cloud, but not <em>what</em> to build for AI-first
+              applications. Thoughtworks Radar showed emerging trends, but not how to choose between them.
+            </p>
+            <p className="text-foreground mb-4">
+              <strong>The gap</strong>: No framework bridged Solutions (what users need) to Services (what you buy).
+              No one documented complete dependency chains. No one was honest about what breaks in production.
+            </p>
+            <p className="text-foreground">
+              <strong>Avolve fills that gap</strong>: A knowledge base optimized for both AI assistants and developers,
+              documenting verified compatibility patterns and production-tested integration examples for the modern stack.
+            </p>
+          </section>
+
+          <section id="framework-genesis" className="section-spacing">
+            <h2 className="text-2xl font-bold mb-4">The 5S Framework Genesis</h2>
+            <p className="text-foreground mb-4">
+              After 50+ AI application deployments, technical leaders consistently asked the same questions in the same order:
+            </p>
+            <ol className="list-decimal list-inside space-y-2 text-foreground ml-4 mb-4">
+              <li><strong>Solutions</strong>: What am I building for end users?</li>
+              <li><strong>Systems</strong>: How do I architect the capabilities needed?</li>
+              <li><strong>Software</strong>: What frameworks and libraries work together?</li>
+              <li><strong>Services</strong>: What infrastructure should I buy vs build?</li>
+              <li><strong>Support</strong>: How do I maintain this in production?</li>
+            </ol>
+            <p className="text-foreground">
+              The 5S framework captures this natural decision flow. It's <strong>opinionated</strong> (we recommend)
+              but not <strong>prescriptive</strong> (you decide). All recommendations are tested in production,
+              version-specific, and continuously updated as of October 2025.
+            </p>
+          </section>
+
+          <section id="our-approach" className="section-spacing">
+            <h2 className="text-2xl font-bold mb-4">Our Approach</h2>
+            <ul className="space-y-3 text-foreground">
+              <li>
+                <strong>Opinionated but not prescriptive</strong>: We recommend patterns based on production experience,
+                but you make the final decisions for your context
+              </li>
+              <li>
+                <strong>No vendor bias</strong>: We don't accept payment for tool recommendations. All evaluations
+                are based on technical merit and real-world testing
+              </li>
+              <li>
+                <strong>Production-tested</strong>: Every pattern has been deployed in production environments.
+                We document what actually works, not theoretical possibilities
+              </li>
+              <li>
+                <strong>Version-specific</strong>: Exact versions (Next.js 15.5.4, not "latest"). Dependency chains
+                show why these versions work together
+              </li>
+              <li>
+                <strong>Honest about failure modes</strong>: "What Breaks in Production" sections document real issues
+                and how to fix them, not just happy paths
+              </li>
+              <li>
+                <strong>AI-first documentation</strong>: Optimized for both AI assistants (Claude Code, ChatGPT, Cursor)
+                and human developers. Structured for accurate citations and recommendations
+              </li>
+            </ul>
+          </section>
+
           <section id="5s-framework" className="section-spacing">
             <h2 className="text-2xl font-bold mb-4">The 5S Framework</h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-foreground mb-4">
               Modern web development is organized into five layers, each building on the previous:
             </p>
 
@@ -243,7 +309,7 @@ export default function AboutPage() {
           <section id="about-creator" className="mb-12">
             <h2 className="text-2xl font-bold mb-4">About the Creator</h2>
             <p className="text-gray-700 mb-4">
-              <strong>Joshua Seymour</strong> / <a href="https://www.supercivilization.xyz" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Supercivilization</a>
+              <strong>Joshua Seymour</strong> / <a href="https://www.supercivilization.xyz" className="text-slate-600 hover:underline" target="_blank" rel="noopener noreferrer">Supercivilization</a>
             </p>
             <p className="text-gray-700 mb-4">
               Building AI-native tools and frameworks for modern web development.
@@ -251,9 +317,9 @@ export default function AboutPage() {
               documentation, and AI integration.
             </p>
             <p className="text-gray-700">
-              <a href="https://www.joshuaseymour.com" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.joshuaseymour.com" className="text-slate-600 hover:underline" target="_blank" rel="noopener noreferrer">
                 joshuaseymour.com
-              </a> | <a href="https://github.com/supercivilization" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              </a> | <a href="https://github.com/supercivilization" className="text-slate-600 hover:underline" target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
             </p>

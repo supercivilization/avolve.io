@@ -176,34 +176,34 @@ export default function SearchSystemPage() {
             </p>
           </section>
 
-          <section id="official-resources" className="mb-12 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+          <section id="official-resources" className="mb-12 bg-slate-100 border-l-4 border-slate-600 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">📚 Official SEO Resources</h2>
             <p className="text-gray-700 mb-4">
               For authoritative SEO guidance, always reference official sources:
             </p>
             <ul className="space-y-2">
               <li>
-                → <a href="https://developers.google.com/search" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                → <a href="https://developers.google.com/search" className="text-slate-600 hover:underline font-medium" target="_blank" rel="noopener">
                   Google Search Central
                 </a> - Official SEO documentation and guidelines
               </li>
               <li>
-                → <a href="https://schema.org" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                → <a href="https://schema.org" className="text-slate-600 hover:underline font-medium" target="_blank" rel="noopener">
                   Schema.org
                 </a> - Structured data vocabulary and specifications
               </li>
               <li>
-                → <a href="https://nextjs.org/docs/app/building-your-application/optimizing/metadata" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                → <a href="https://nextjs.org/docs/app/building-your-application/optimizing/metadata" className="text-slate-600 hover:underline font-medium" target="_blank" rel="noopener">
                   Next.js Metadata
                 </a> - Built-in SEO optimization features
               </li>
               <li>
-                → <a href="https://web.dev/vitals/" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                → <a href="https://web.dev/vitals/" className="text-slate-600 hover:underline font-medium" target="_blank" rel="noopener">
                   Core Web Vitals
                 </a> - Google's performance metrics
               </li>
               <li>
-                → <a href="https://vercel.com/docs/speed-insights" className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener">
+                → <a href="https://vercel.com/docs/speed-insights" className="text-slate-600 hover:underline font-medium" target="_blank" rel="noopener">
                   Vercel Speed Insights
                 </a> - Real user monitoring and optimization
               </li>
@@ -219,7 +219,7 @@ export default function SearchSystemPage() {
           <section id="ai-citation-strategy" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">AI Citation Optimization Strategy</h2>
 
-            <div className="mb-6 bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded-lg">
+            <div className="mb-6 bg-stone-100 border-l-4 border-stone-600 p-4 rounded-lg">
               <p className="text-gray-700">
                 <strong>Key finding:</strong> 97% of AI crawlers cannot render JavaScript. ChatGPT shows 80%+ preference for .com domains. Perplexity's L3 reranking requires sub-2 second load times. Our strategy addresses all three.
               </p>
@@ -359,7 +359,7 @@ const schemaData = {
           <section id="core-web-vitals" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">Core Web Vitals Implementation</h2>
 
-            <div className="mb-6 bg-green-50 border-l-4 border-green-600 p-4 rounded-lg">
+            <div className="mb-6 bg-zinc-100 border-l-4 border-zinc-600 p-4 rounded-lg">
               <p className="text-gray-700">
                 <strong>Our targets:</strong> LCP &lt; 2.5s, INP &lt; 200ms, CLS &lt; 0.1. Sites achieving all-green see <strong>20-40% conversion rate improvements</strong>.
               </p>
@@ -575,8 +575,8 @@ export default function robots() {
             <h2 className="text-3xl font-bold mb-6">SEO Implementation Checklist</h2>
 
             <div className="space-y-4">
-              <div className="bg-green-50 p-4 rounded-lg">
-                <h3 className="font-bold text-green-800 mb-2">✅ Implemented on Avolve.io</h3>
+              <div className="bg-zinc-100 p-4 rounded-lg">
+                <h3 className="font-bold text-zinc-700 mb-2">✅ Implemented on Avolve.io</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>✓ Enhanced @graph schema with SoftwareApplication, Organization, Person, TechArticle</li>
                   <li>✓ H2→H3→bullet point content hierarchy on all pages</li>
@@ -593,8 +593,8 @@ export default function robots() {
                 </ul>
               </div>
 
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h3 className="font-bold text-blue-800 mb-2">🔄 Continuous Optimization</h3>
+              <div className="bg-slate-100 p-4 rounded-lg">
+                <h3 className="font-bold text-slate-700 mb-2">🔄 Continuous Optimization</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>→ Monitoring Core Web Vitals via Vercel Analytics</li>
                   <li>→ Tracking AI referral traffic and citation rates</li>
@@ -610,7 +610,7 @@ export default function robots() {
             <h2 className="text-3xl font-bold mb-6">Modern SEO Priorities (Late 2025)</h2>
 
             <div className="space-y-6">
-              <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded-lg">
+              <div className="bg-gray-100 border-l-4 border-gray-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">E-E-A-T Framework (Experience, Expertise, Authoritativeness, Trustworthiness)</h3>
                 <p className="text-gray-700 mb-3">
                   <strong>Trustworthiness is the central component</strong>. "Untrustworthy pages have low E-E-A-T no matter how Experienced, Expert, or Authoritative" — Google Quality Raters Guidelines.
@@ -626,7 +626,7 @@ export default function robots() {
                 </p>
               </div>
 
-              <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+              <div className="bg-slate-100 border-l-4 border-slate-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Information Gain as Critical Ranking Factor</h3>
                 <p className="text-gray-700 mb-3">
                   Content must offer unique value unavailable elsewhere:
@@ -642,7 +642,7 @@ export default function robots() {
                 </p>
               </div>
 
-              <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded-lg">
+              <div className="bg-zinc-100 border-l-4 border-zinc-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Zero-Click Optimization Required</h3>
                 <p className="text-gray-700 mb-3">
                   <strong>57-60% of mobile searches and 53% of desktop searches end without clicks.</strong> Featured snippets have 44% CTR, but zero-click searches could surpass 70% by end of 2025.
@@ -659,7 +659,7 @@ export default function robots() {
                 </p>
               </div>
 
-              <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded-lg">
+              <div className="bg-stone-100 border-l-4 border-stone-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Semantic & Entity-Based SEO</h3>
                 <p className="text-gray-700 mb-3">
                   Google's Knowledge Graph contains <strong>800 billion facts and 8 billion entities</strong>. Search engines understand concepts and relationships, not just text strings.
@@ -706,7 +706,7 @@ Each links back to pillar, clusters interconnect when relevant`}
           <section id="programmatic-seo-data" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">Programmatic SEO Data with DataForSEO</h2>
 
-            <div className="mb-6 bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+            <div className="mb-6 bg-slate-100 border-l-4 border-slate-600 p-4 rounded-lg">
               <p className="text-gray-700">
                 <strong>Manual SEO optimization is one half of the equation.</strong> Programmatic access to SERP data, keyword research, and backlink analysis enables data-driven decision-making at scale. DataForSEO provides REST API access to 7B+ keywords, SERP results from 8 search engines, and comprehensive backlink data.
               </p>
@@ -806,7 +806,7 @@ const position = tasks[0]?.result?.[0]?.items?.findIndex(
 
               <div className="bg-gray-50 border-l-4 border-gray-600 p-4 rounded-lg">
                 <p className="text-gray-700">
-                  <strong>Full API documentation:</strong> See <Link href="/services/dataforseo" className="text-blue-600 hover:underline">DataForSEO service page</Link> for complete API reference, pricing ($0.0012 per 100 SERP results), and integration examples for all 8 API suites.
+                  <strong>Full API documentation:</strong> See <Link href="/services/dataforseo" className="text-slate-600 hover:underline">DataForSEO service page</Link> for complete API reference, pricing ($0.0012 per 100 SERP results), and integration examples for all 8 API suites.
                 </p>
               </div>
             </div>

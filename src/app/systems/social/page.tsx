@@ -26,7 +26,7 @@ export default function SocialSystemPage() {
             Modern platform strategies for late 2025: authenticity-first content, algorithm optimization, and AI-enhanced workflows
           </p>
 
-          <section id="landscape" className="mb-12 bg-purple-50 border-l-4 border-purple-600 p-6 rounded-lg">
+          <section id="landscape" className="mb-12 bg-gray-100 border-l-4 border-gray-600 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">The 2025 Social Landscape</h2>
             <p className="text-gray-700 mb-4">
               <strong>Social platforms now function as search engines</strong>, with 40% of Gen Z preferring TikTok/Instagram over Google. AI-powered recommendation systems replaced chronological feeds. Authenticity and meaningful engagement trump vanity metrics.
@@ -54,7 +54,7 @@ export default function SocialSystemPage() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-pink-600 pl-4">
+              <div className="border-l-4 border-neutral-600 pl-4">
                 <h3 className="text-xl font-bold mb-3">Instagram: DM Shares as Strongest Signal</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>• <strong>DM shares are #1 ranking signal</strong> (Adam Mosseri confirmation)</li>
@@ -66,7 +66,7 @@ export default function SocialSystemPage() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-red-600 pl-4">
+              <div className="border-l-4 border-neutral-600 pl-4">
                 <h3 className="text-xl font-bold mb-3">YouTube: Promoting Small Channels</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>• Explicitly helping creators under 500 subscribers</li>
@@ -77,7 +77,7 @@ export default function SocialSystemPage() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-blue-600 pl-4">
+              <div className="border-l-4 border-slate-600 pl-4">
                 <h3 className="text-xl font-bold mb-3">LinkedIn: Organic Performance Dropped</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>• Views down <strong>50%</strong>, engagement down 25%, follower growth down 59%</li>
@@ -87,7 +87,7 @@ export default function SocialSystemPage() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-blue-700 pl-4">
+              <div className="border-l-4 border-slate-600 pl-4">
                 <h3 className="text-xl font-bold mb-3">Facebook: AI Recommendations</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>• <strong>Up to 50% of Feed</strong> is recommended non-followed content</li>
@@ -103,7 +103,7 @@ export default function SocialSystemPage() {
             <h2 className="text-3xl font-bold mb-6">Content Format Strategies</h2>
 
             <div className="space-y-6">
-              <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+              <div className="bg-slate-100 border-l-4 border-slate-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Short-Form Video: Highest ROI</h3>
                 <p className="text-gray-700 mb-3">
                   <strong>46% of marketers rate video most important,</strong> 30% say short-form brings highest returns.
@@ -136,7 +136,7 @@ export default function SocialSystemPage() {
                 </table>
               </div>
 
-              <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded-lg">
+              <div className="bg-zinc-100 border-l-4 border-zinc-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Long-Form Comeback</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>• 2/3 of marketers believe long-form will rival short-form in 2025</li>
@@ -146,7 +146,7 @@ export default function SocialSystemPage() {
                 </ul>
               </div>
 
-              <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded-lg">
+              <div className="bg-gray-100 border-l-4 border-gray-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Live Streaming: Rising Star</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>• <strong>52.4% of marketers favor</strong> live streaming (19.7% CAGR 2025-2030)</li>
@@ -156,7 +156,7 @@ export default function SocialSystemPage() {
                 </ul>
               </div>
 
-              <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded-lg">
+              <div className="bg-stone-100 border-l-4 border-stone-600 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Authenticity Beats Polish</h3>
                 <ul className="space-y-1 text-gray-700">
                   <li>• <strong>90% value authenticity</strong> when choosing brands</li>
@@ -170,7 +170,7 @@ export default function SocialSystemPage() {
 
           <section id="micro-influencers" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">Micro-Influencer Revolution</h2>
-            <div className="bg-indigo-50 border-l-4 border-indigo-600 p-4 rounded-lg">
+            <div className="bg-stone-100 border-l-4 border-stone-600 p-4 rounded-lg">
               <p className="text-gray-700 mb-4">
                 <strong>Marketers see more success with influencers under 100K followers.</strong> Industry: $32.55B in 2025.
               </p>
@@ -197,7 +197,7 @@ export default function SocialSystemPage() {
 
           <section id="ai-integration" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">AI Integration (70/30 Rule)</h2>
-            <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded-lg mb-4">
+            <div className="bg-gray-100 border-l-4 border-gray-600 p-4 rounded-lg mb-4">
               <p className="text-gray-700 text-lg font-bold">
                 <strong>70% human strategy/creativity, 30% AI execution/optimization</strong>
               </p>
@@ -207,8 +207,8 @@ export default function SocialSystemPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-green-50 p-4 rounded-lg">
-                <h4 className="font-bold text-green-800 mb-2">✅ AI Excels At</h4>
+              <div className="bg-zinc-100 p-4 rounded-lg">
+                <h4 className="font-bold text-zinc-700 mb-2">✅ AI Excels At</h4>
                 <ul className="space-y-1 text-sm text-gray-700">
                   <li>• Content ideation (35%)</li>
                   <li>• Data analysis (30%)</li>
@@ -218,8 +218,8 @@ export default function SocialSystemPage() {
                 </ul>
               </div>
 
-              <div className="bg-red-50 p-4 rounded-lg">
-                <h4 className="font-bold text-red-800 mb-2">❌ Humans Win</h4>
+              <div className="bg-neutral-100 p-4 rounded-lg">
+                <h4 className="font-bold text-neutral-700 mb-2">❌ Humans Win</h4>
                 <ul className="space-y-1 text-sm text-gray-700">
                   <li>• Strategic direction</li>
                   <li>• Final content creation</li>
@@ -231,7 +231,7 @@ export default function SocialSystemPage() {
             </div>
           </section>
 
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-purple-50 p-6 rounded-lg">
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-100 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <ul className="space-y-2 text-gray-700">
               <li><strong>Platform optimization:</strong> TikTok (3s hook, captions), Instagram (DM shares, 3-5 hashtags), YouTube (niche focus), LinkedIn (1-3 posts/week), Facebook (vertical video)</li>

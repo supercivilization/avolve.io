@@ -360,7 +360,7 @@ eas update --branch production --message "Fix critical bug"
               </table>
             </div>
 
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+            <div className="bg-slate-100 border-l-4 border-slate-600 p-4 rounded-lg">
               <p className="text-sm text-gray-700 mb-2"><strong>Additional Costs:</strong></p>
               <ul className="space-y-1 text-sm text-gray-700">
                 <li>• Apple Developer Program: <strong>$99/year</strong></li>
@@ -414,7 +414,7 @@ eas update --branch production --message "Fix critical bug"
             <h2 className="text-3xl font-bold mb-6">Best Practices</h2>
 
             <div className="space-y-4">
-              <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded-lg">
+              <div className="bg-zinc-100 border-l-4 border-zinc-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Code Sharing Strategy</h3>
                 <ul className="space-y-1 text-sm text-gray-700">
                   <li>• <strong>Share business logic:</strong> API clients, data transformations, validation, utilities</li>
@@ -425,7 +425,7 @@ eas update --branch production --message "Fix critical bug"
                 </ul>
               </div>
 
-              <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+              <div className="bg-slate-100 border-l-4 border-slate-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Performance Optimization</h3>
                 <ul className="space-y-1 text-sm text-gray-700">
                   <li>• <strong>Enable Hermes engine:</strong> 2-3x startup improvement, 15-25% memory reduction</li>
@@ -436,7 +436,7 @@ eas update --branch production --message "Fix critical bug"
                 </ul>
               </div>
 
-              <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded-lg">
+              <div className="bg-gray-100 border-l-4 border-gray-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Development Workflow</h3>
                 <ul className="space-y-1 text-sm text-gray-700">
                   <li>• <strong>Expo Dev Client:</strong> Custom development builds with any native modules</li>

@@ -82,7 +82,7 @@ export default function DataForSEOPage() {
             Production-tested by 750+ companies including agencies, SaaS platforms, and enterprise SEO tools. $0.0012 per 100 SERP results with pay-as-you-go pricing.
           </p>
 
-          <section id="overview" className="mb-12 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-slate-100 border-l-4 border-slate-600 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What is DataForSEO?</h2>
             <p className="text-gray-700 mb-4">
               <strong>DataForSEO is a REST API platform</strong> providing programmatic access to SEO data including SERP results, keyword metrics, backlink profiles, on-page analysis, and content data across multiple search engines and locations.
@@ -100,7 +100,7 @@ export default function DataForSEOPage() {
             <h2 className="text-3xl font-bold mb-6">8 Core API Suites</h2>
 
             <div className="space-y-6">
-              <div className="border-l-4 border-blue-600 pl-4">
+              <div className="border-l-4 border-slate-600 pl-4">
                 <h3 className="text-xl font-bold mb-3">1. SERP API - Search Results Data</h3>
                 <p className="text-gray-700 mb-3">
                   Get real-time or scheduled SERP data from Google, Bing, Yahoo, Baidu, Yandex with all elements (organic, paid, featured snippets, People Also Ask, Knowledge Graph).
@@ -114,7 +114,7 @@ export default function DataForSEOPage() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-green-600 pl-4">
+              <div className="border-l-4 border-zinc-600 pl-4">
                 <h3 className="text-xl font-bold mb-3">2. Keywords Data API - Keyword Research</h3>
                 <p className="text-gray-700 mb-3">
                   Access 7B+ keywords with search volume, CPC, competition, trends, and related keywords across Google Ads and organic search.
@@ -128,7 +128,7 @@ export default function DataForSEOPage() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-purple-600 pl-4">
+              <div className="border-l-4 border-gray-600 pl-4">
                 <h3 className="text-xl font-bold mb-3">3. Backlinks API - Link Profile Analysis</h3>
                 <p className="text-gray-700 mb-3">
                   Comprehensive backlink data including referring domains, anchor text, link attributes, historical data, and competitor analysis.
@@ -142,7 +142,7 @@ export default function DataForSEOPage() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-orange-600 pl-4">
+              <div className="border-l-4 border-neutral-600 pl-4">
                 <h3 className="text-xl font-bold mb-3">4. On-Page API - Technical SEO Audits</h3>
                 <p className="text-gray-700 mb-3">
                   Crawl websites for technical SEO issues: broken links, page speed, meta tags, schema markup, Core Web Vitals, and HTML validation.
@@ -156,7 +156,7 @@ export default function DataForSEOPage() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-red-600 pl-4">
+              <div className="border-l-4 border-neutral-600 pl-4">
                 <h3 className="text-xl font-bold mb-3">5. DataForSEO Labs - Advanced SEO Metrics</h3>
                 <p className="text-gray-700 mb-3">
                   Proprietary metrics including domain rank, keyword difficulty, SERP competitor data, ranking distribution, and historical rankings.
@@ -170,7 +170,7 @@ export default function DataForSEOPage() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-yellow-600 pl-4">
+              <div className="border-l-4 border-stone-600 pl-4">
                 <h3 className="text-xl font-bold mb-3">6. Content Analysis API - Content Insights</h3>
                 <p className="text-gray-700 mb-3">
                   Analyze content performance, topic research, sentiment analysis, readability scores, and competitive content gaps.
@@ -184,7 +184,7 @@ export default function DataForSEOPage() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-indigo-600 pl-4">
+              <div className="border-l-4 border-stone-600 pl-4">
                 <h3 className="text-xl font-bold mb-3">7. Merchant API - E-commerce Search Data</h3>
                 <p className="text-gray-700 mb-3">
                   Amazon and Google Shopping data including product rankings, reviews, pricing, sellers, and marketplace analytics.
@@ -198,7 +198,7 @@ export default function DataForSEOPage() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-pink-600 pl-4">
+              <div className="border-l-4 border-neutral-600 pl-4">
                 <h3 className="text-xl font-bold mb-3">8. Business Data API - Local SEO & Business Info</h3>
                 <p className="text-gray-700 mb-3">
                   Google Business Profile data, local pack results, reviews, business categories, and location-based search insights.
@@ -396,7 +396,7 @@ export async function POST(request: Request) {
           <section id="pricing" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">Pricing Structure</h2>
 
-            <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded-lg mb-6">
+            <div className="bg-zinc-100 border-l-4 border-zinc-600 p-4 rounded-lg mb-6">
               <p className="text-gray-700">
                 <strong>Pay-as-you-go model:</strong> No monthly minimums, no contracts. Pay only for what you use with per-request pricing.
               </p>
@@ -446,7 +446,7 @@ export async function POST(request: Request) {
               </table>
             </div>
 
-            <div className="mt-6 bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded-lg">
+            <div className="mt-6 bg-stone-100 border-l-4 border-stone-600 p-4 rounded-lg">
               <p className="text-gray-700 text-sm">
                 <strong>Cost optimization:</strong> Use task-based endpoints (75% cheaper than live), cache results aggressively, batch requests, and start with free tier ($1 credit) to test integration.
               </p>
@@ -457,7 +457,7 @@ export async function POST(request: Request) {
             <h2 className="text-3xl font-bold mb-6">Use Cases for Avolve.io</h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-blue-50 p-4 rounded-lg">
+              <div className="bg-slate-100 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Rank Tracking Dashboard</h3>
                 <p className="text-sm text-gray-700 mb-2">
                   Track "Next.js 15", "React 19.2", "TypeScript 5.9" rankings daily using SERP API task-based endpoints.
@@ -467,7 +467,7 @@ export async function POST(request: Request) {
                 </p>
               </div>
 
-              <div className="bg-green-50 p-4 rounded-lg">
+              <div className="bg-zinc-100 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Topic Cluster Research</h3>
                 <p className="text-sm text-gray-700 mb-2">
                   Use Keywords Data API to find 100+ related keywords for each pillar page, informing content strategy.
@@ -477,7 +477,7 @@ export async function POST(request: Request) {
                 </p>
               </div>
 
-              <div className="bg-purple-50 p-4 rounded-lg">
+              <div className="bg-gray-100 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Competitor Backlink Analysis</h3>
                 <p className="text-sm text-gray-700 mb-2">
                   Monitor backlink profiles of 10 competitor domains monthly to identify link-building opportunities.
@@ -487,7 +487,7 @@ export async function POST(request: Request) {
                 </p>
               </div>
 
-              <div className="bg-orange-50 p-4 rounded-lg">
+              <div className="bg-neutral-100 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Technical SEO Monitoring</h3>
                 <p className="text-sm text-gray-700 mb-2">
                   Weekly On-Page API audits of all pages for Core Web Vitals, broken links, and schema validation.
@@ -499,7 +499,7 @@ export async function POST(request: Request) {
             </div>
           </section>
 
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-purple-50 p-6 rounded-lg">
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-100 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <ul className="space-y-2 text-gray-700">
               <li><strong>8 API suites:</strong> SERP (rank tracking), Keywords Data (7B+ keywords), Backlinks (domain authority), On-Page (Core Web Vitals), Labs (keyword difficulty), Content Analysis, Merchant, Business Data</li>

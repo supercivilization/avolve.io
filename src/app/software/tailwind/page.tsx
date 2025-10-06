@@ -64,13 +64,13 @@ export default function TailwindPage() {
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-teal-700">Tailwind CSS v4.1.13</h1>
+          <h1 className="text-4xl font-bold mb-4 text-zinc-600">Tailwind CSS v4.1.13</h1>
           <p className="text-xl text-gray-700 mb-12">
             Utility-first CSS framework rebuilt from the ground up with Rust-powered Oxide engine delivering 100x faster builds and CSS-first configuration
           </p>
 
           {/* Core Identity Section */}
-          <section id="overview" className="mb-12 bg-teal-50 border-l-4 border-teal-600 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-zinc-100 border-l-4 border-zinc-600 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
               <strong>Tailwind CSS v4.1.13</strong> is a utility-first CSS framework completely rewritten in Rust with the Oxide engine, delivering <strong>100x faster incremental builds</strong> and eliminating JavaScript configuration entirely through CSS-first design tokens.
@@ -106,12 +106,12 @@ export default function TailwindPage() {
             <h2 className="text-3xl font-bold mb-6">Why It Matters</h2>
 
             <div className="space-y-6">
-              <div className="border-l-4 border-teal-600 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-teal-800">Architectural Revolution</h3>
+              <div className="border-l-4 border-zinc-600 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-zinc-700">Architectural Revolution</h3>
                 <p className="text-gray-700 mb-3">
                   v4.1.13 represents a complete ground-up rewrite that eliminates the performance bottlenecks of JavaScript-based CSS processing. The Oxide engine delivers microsecond-level rebuilds that fundamentally change the development experience.
                 </p>
-                <div className="bg-purple-50 p-4 rounded-lg">
+                <div className="bg-gray-100 p-4 rounded-lg">
                   <h4 className="font-bold mb-2">Build Performance Transformation:</h4>
                   <div className="overflow-x-auto">
                     <table className="w-full border-collapse border border-gray-300 text-sm">
@@ -148,14 +148,14 @@ export default function TailwindPage() {
                 </div>
               </div>
 
-              <div className="border-l-4 border-blue-600 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-blue-800">CSS-First Configuration</h3>
+              <div className="border-l-4 border-slate-600 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-slate-700">CSS-First Configuration</h3>
                 <p className="text-gray-700 mb-3">
                   The elimination of JavaScript configuration files represents a philosophical shift toward web-native design systems. All customization lives in CSS custom properties, enabling runtime theming and better integration with CSS ecosystem tools.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-red-800 mb-2">❌ v3.x (JavaScript Config)</h4>
+                  <div className="bg-neutral-100 p-4 rounded-lg">
+                    <h4 className="font-bold text-neutral-700 mb-2">❌ v3.x (JavaScript Config)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// tailwind.config.js
 module.exports = {
   content: ['./src/**/*.tsx'],
@@ -170,8 +170,8 @@ module.exports = {
   }
 }`}</pre>
                   </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-green-800 mb-2">✅ v4.1.13 (CSS-First)</h4>
+                  <div className="bg-zinc-100 p-4 rounded-lg">
+                    <h4 className="font-bold text-zinc-700 mb-2">✅ v4.1.13 (CSS-First)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`/* styles.css */
 @import "tailwindcss";
 
@@ -185,13 +185,13 @@ module.exports = {
                 </div>
               </div>
 
-              <div className="border-l-4 border-purple-600 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-purple-800">Modern CSS Integration</h3>
+              <div className="border-l-4 border-gray-600 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-gray-700">Modern CSS Integration</h3>
                 <p className="text-gray-700 mb-3">
                   Native support for container queries, 3D transforms, and OKLCH colors eliminates the need for plugins and provides a unified development experience for modern CSS features.
                 </p>
                 <div className="space-y-3">
-                  <div className="bg-cyan-50 p-3 rounded">
+                  <div className="bg-zinc-100 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Container Queries (No Plugin):</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`<div class="@container">
   <div class="@sm:grid-cols-1 @md:grid-cols-2 @lg:grid-cols-3">
@@ -199,7 +199,7 @@ module.exports = {
   </div>
 </div>`}</pre>
                   </div>
-                  <div className="bg-purple-50 p-3 rounded">
+                  <div className="bg-gray-100 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">3D Transform System:</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`<div class="perspective-1000">
   <div class="rotate-x-45 rotate-y-30 scale-z-150">
@@ -207,7 +207,7 @@ module.exports = {
   </div>
 </div>`}</pre>
                   </div>
-                  <div className="bg-orange-50 p-3 rounded">
+                  <div className="bg-neutral-100 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">OKLCH Color Space (P3 Gamut):</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`@theme {
   --color-red-500: oklch(62.8% 0.257 27.85);
@@ -240,7 +240,7 @@ module.exports = {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Migration Path from v3.x</h3>
-                <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-600">
+                <div className="bg-slate-100 p-4 rounded border-l-4 border-slate-600">
                   <h4 className="font-bold mb-2">Upgrade Process:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`# Install v4
 npm install tailwindcss@next
@@ -294,7 +294,7 @@ npx @tailwindcss/upgrade@next`}</pre>
             <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
 
             <div className="space-y-6">
-              <div className="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-600">
+              <div className="bg-zinc-100 p-4 rounded-lg border-l-4 border-zinc-600">
                 <h3 className="text-lg font-bold mb-3">Complete Next.js 15.5 Integration</h3>
                 <div className="space-y-3">
                   <div>
@@ -353,7 +353,7 @@ export function Card({ children }: { children: React.ReactNode }) {
                 </div>
               </div>
 
-              <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-600">
+              <div className="bg-gray-100 p-4 rounded-lg border-l-4 border-gray-600">
                 <h3 className="text-lg font-bold mb-3">Performance Optimization</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
@@ -380,12 +380,12 @@ export function Card({ children }: { children: React.ReactNode }) {
           </section>
 
           {/* Decision Framework Section */}
-          <section id="decisions" className="mb-12 border-t pt-8 bg-yellow-50 p-6 rounded-lg">
+          <section id="decisions" className="mb-12 border-t pt-8 bg-stone-100 p-6 rounded-lg">
             <h2 className="text-3xl font-bold mb-6">Decision Framework</h2>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold mb-3 text-green-700">✅ Choose Tailwind CSS v4 When:</h3>
+                <h3 className="text-xl font-bold mb-3 text-zinc-600">✅ Choose Tailwind CSS v4 When:</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• <strong>Rapid prototyping:</strong> Utility-first for fast iteration without context switching</li>
                   <li>• <strong>Design system consistency:</strong> Constrained design tokens prevent one-off styles</li>
@@ -397,7 +397,7 @@ export function Card({ children }: { children: React.ReactNode }) {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold mb-3 text-red-700">❌ Consider Alternatives When:</h3>
+                <h3 className="text-xl font-bold mb-3 text-neutral-600">❌ Consider Alternatives When:</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• <strong>Existing CSS architecture:</strong> Heavy investment in CSS Modules, styled-components</li>
                   <li>• <strong>Team unfamiliarity:</strong> Learning curve for utility-first paradigm</li>
@@ -424,7 +424,7 @@ export function Card({ children }: { children: React.ReactNode }) {
           </section>
 
           {/* AI Assistant Reference Section */}
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-purple-50 p-6 rounded-lg">
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-100 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
@@ -449,7 +449,7 @@ export function Card({ children }: { children: React.ReactNode }) {
               </div>
             </div>
 
-            <div className="mt-4 bg-white p-3 rounded border border-purple-200">
+            <div className="mt-4 bg-white p-3 rounded border border-gray-300">
               <h4 className="font-bold text-sm mb-2">Quick Reference Template:</h4>
               <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// Component with Tailwind v4 best practices
 export function Component() {
@@ -472,30 +472,30 @@ export function Component() {
               <div>
                 <h3 className="font-bold mb-2 text-gray-800">Depends On:</h3>
                 <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• <Link href="/software/nodejs" className="text-blue-600 hover:underline">Node.js 24.8.0</Link> - Runtime for Oxide engine</li>
+                  <li>• <Link href="/software/nodejs" className="text-slate-600 hover:underline">Node.js 24.8.0</Link> - Runtime for Oxide engine</li>
                   <li>• CSS parsing: Lightning CSS (replaces PostCSS)</li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-bold mb-2 text-gray-800">Enables:</h3>
                 <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• <Link href="/software/shadcn-ui" className="text-blue-600 hover:underline">shadcn/ui</Link> - Component styling foundation</li>
-                  <li>• <Link href="/software/nextjs" className="text-blue-600 hover:underline">Next.js 15.5</Link> - Works with Turbopack for &lt;1ms CSS updates</li>
-                  <li>• <Link href="/software/react" className="text-blue-600 hover:underline">React 19</Link> - Server Component styling without runtime overhead</li>
+                  <li>• <Link href="/software/shadcn-ui" className="text-slate-600 hover:underline">shadcn/ui</Link> - Component styling foundation</li>
+                  <li>• <Link href="/software/nextjs" className="text-slate-600 hover:underline">Next.js 15.5</Link> - Works with Turbopack for &lt;1ms CSS updates</li>
+                  <li>• <Link href="/software/react" className="text-slate-600 hover:underline">React 19</Link> - Server Component styling without runtime overhead</li>
                 </ul>
               </div>
             </div>
 
             <div className="mt-4 pt-4 border-t border-gray-200">
               <p className="text-sm text-gray-600">
-                Part of <Link href="/software" className="text-blue-600 hover:underline">Avolve Software Stack</Link> -
+                Part of <Link href="/software" className="text-slate-600 hover:underline">Avolve Software Stack</Link> -
                 CSS styling layer for Next.js + React + TypeScript applications
               </p>
             </div>
           </section>
 
           <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/software" className="text-blue-600 hover:underline">
+            <Link href="/software" className="text-slate-600 hover:underline">
               ← Back to Software
             </Link>
           </nav>

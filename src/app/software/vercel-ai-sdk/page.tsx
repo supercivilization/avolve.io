@@ -112,7 +112,7 @@ export default function VercelAISDKPage() {
             <div className="flex items-center gap-3">
               <h1 className="text-4xl font-bold">Vercel AI SDK 5.0</h1>
               <Badge variant="default">v5.0.48</Badge>
-              <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">Stable</Badge>
+              <Badge variant="outline" className="bg-zinc-100 text-zinc-600 border-zinc-300">Stable</Badge>
             </div>
             <p className="text-xl text-muted-foreground">
               TypeScript toolkit for building AI applications with streaming, tool calling, and agentic control. 2M+ weekly downloads, 100+ models unified.
@@ -162,27 +162,27 @@ export default function VercelAISDKPage() {
                   <TableRow>
                     <TableCell className="font-medium">Next.js</TableCell>
                     <TableCell className="font-mono">15.5.4</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">React</TableCell>
                     <TableCell className="font-mono">19.2.0</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">TypeScript</TableCell>
                     <TableCell className="font-mono">5.9.2</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Node.js</TableCell>
                     <TableCell className="font-mono">24.8.0</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Claude Sonnet 4.5</TableCell>
                     <TableCell className="font-mono">77.2% SWE-bench</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-green-600 inline" /> Best Coding Model</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Best Coding Model</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

@@ -101,15 +101,15 @@ export default function ShadcnUIPage() {
               </div>
             </div>
 
-            <div className="mt-4 bg-blue-50 p-4 rounded border-l-4 border-blue-600">
+            <div className="mt-4 bg-slate-100 p-4 rounded border-l-4 border-slate-600">
               <h3 className="font-bold mb-2">Official Documentation</h3>
               <p className="text-sm text-gray-700 mb-2">
                 For complete component reference and guides, visit:
               </p>
               <ul className="space-y-1 text-sm">
-                <li>→ <a href="https://ui.shadcn.com" className="text-blue-600 hover:underline">ui.shadcn.com</a> - Official documentation</li>
-                <li>→ <a href="https://github.com/shadcn-ui/ui" className="text-blue-600 hover:underline">GitHub Repository</a> - Source code and issues</li>
-                <li>→ <a href="https://ui.shadcn.com/docs/cli" className="text-blue-600 hover:underline">CLI Documentation</a> - Installation and usage</li>
+                <li>→ <a href="https://ui.shadcn.com" className="text-slate-600 hover:underline">ui.shadcn.com</a> - Official documentation</li>
+                <li>→ <a href="https://github.com/shadcn-ui/ui" className="text-slate-600 hover:underline">GitHub Repository</a> - Source code and issues</li>
+                <li>→ <a href="https://ui.shadcn.com/docs/cli" className="text-slate-600 hover:underline">CLI Documentation</a> - Installation and usage</li>
               </ul>
             </div>
           </section>
@@ -125,8 +125,8 @@ export default function ShadcnUIPage() {
                   Unlike traditional component libraries (Material-UI, Ant Design) distributed via npm, shadcn/ui copies source code directly into your project. This architectural decision gives you complete ownership, customization control, and eliminates dependency hell—while still providing pre-built, accessible components.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-red-800 mb-2">❌ Traditional Component Libraries</h4>
+                  <div className="bg-neutral-100 p-4 rounded-lg">
+                    <h4 className="font-bold text-neutral-700 mb-2">❌ Traditional Component Libraries</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// Material-UI approach
 npm install @mui/material @emotion/react
 
@@ -143,8 +143,8 @@ npm install @mui/material @emotion/react
 
 // Can't customize without "eject"`}</pre>
                   </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-green-800 mb-2">✅ shadcn/ui Approach</h4>
+                  <div className="bg-zinc-100 p-4 rounded-lg">
+                    <h4 className="font-bold text-zinc-700 mb-2">✅ shadcn/ui Approach</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// Copy component into your project
 npx shadcn@latest add button
 
@@ -160,7 +160,7 @@ npx shadcn@latest add button
 // Modify source directly, no eject needed`}</pre>
                   </div>
                 </div>
-                <div className="mt-3 bg-purple-50 p-3 rounded">
+                <div className="mt-3 bg-gray-100 p-3 rounded">
                   <h5 className="font-bold text-sm mb-2">Benefits of Copy-Paste Model:</h5>
                   <ul className="space-y-1 text-xs text-gray-700">
                     <li>• <strong>No version conflicts:</strong> Components use your existing dependencies</li>
@@ -172,12 +172,12 @@ npx shadcn@latest add button
                 </div>
               </div>
 
-              <div className="border-l-4 border-indigo-600 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-indigo-800">Universal Registry Platform (v3.3)</h3>
+              <div className="border-l-4 border-stone-600 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-stone-700">Universal Registry Platform (v3.3)</h3>
                 <p className="text-gray-700 mb-3">
                   shadcn/ui 3.3 introduces a universal component registry that works across frameworks and allows community contributions through namespaced components. This transforms shadcn/ui from a Next.js-only solution into a platform for the entire JavaScript ecosystem.
                 </p>
-                <div className="bg-indigo-50 p-4 rounded-lg">
+                <div className="bg-stone-100 p-4 rounded-lg">
                   <h4 className="font-bold mb-2">Framework Support Matrix:</h4>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div>
@@ -211,13 +211,13 @@ npx shadcn@latest add button
                 </div>
               </div>
 
-              <div className="border-l-4 border-green-600 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-green-800">Radix UI Foundation: Production-Grade Accessibility</h3>
+              <div className="border-l-4 border-zinc-600 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-zinc-700">Radix UI Foundation: Production-Grade Accessibility</h3>
                 <p className="text-gray-700 mb-3">
                   Every shadcn/ui component is built on Radix UI primitives, providing WCAG 2.1 Level AA accessibility by default. This includes keyboard navigation, screen reader support, and ARIA attributes—solving the hardest parts of building accessible components.
                 </p>
                 <div className="space-y-3">
-                  <div className="bg-green-50 p-3 rounded">
+                  <div className="bg-zinc-100 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Accessibility Features (Built-In):</h5>
                     <ul className="space-y-1 text-xs text-gray-700">
                       <li>• <strong>Keyboard navigation:</strong> Tab, Arrow keys, Escape work correctly</li>
@@ -227,7 +227,7 @@ npx shadcn@latest add button
                       <li>• <strong>RTL support:</strong> Right-to-left languages work automatically</li>
                     </ul>
                   </div>
-                  <div className="bg-cyan-50 p-3 rounded">
+                  <div className="bg-zinc-100 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Example: Dialog Component Accessibility</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// Radix UI handles all accessibility automatically:
 // ✅ Focus trapped inside dialog
@@ -295,7 +295,7 @@ app/
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Dark Mode Integration</h3>
-                <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-600">
+                <div className="bg-slate-100 p-4 rounded border-l-4 border-slate-600">
                   <h4 className="font-bold mb-2">next-themes Setup:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`// app/layout.tsx
 import { ThemeProvider } from "@/components/theme-provider"
@@ -343,7 +343,7 @@ export function ThemeToggle() {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Form Validation with Zod</h3>
-                <div className="bg-purple-50 p-4 rounded border-l-4 border-purple-600">
+                <div className="bg-gray-100 p-4 rounded border-l-4 border-gray-600">
                   <h4 className="font-bold mb-2">Type-Safe Forms:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`"use client"
 
@@ -450,7 +450,7 @@ export async function UserCard({ user }) {
                 </div>
               </div>
 
-              <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-600">
+              <div className="bg-neutral-100 p-4 rounded-lg border-l-4 border-neutral-600">
                 <h3 className="text-lg font-bold mb-3">Production Issues and Fixes</h3>
                 <div className="space-y-4">
                   <div>
@@ -551,12 +551,12 @@ export function UserFormDialog({ user }) {
           </section>
 
           {/* Decision Framework Section */}
-          <section id="decisions" className="mb-12 border-t pt-8 bg-yellow-50 p-6 rounded-lg">
+          <section id="decisions" className="mb-12 border-t pt-8 bg-stone-100 p-6 rounded-lg">
             <h2 className="text-3xl font-bold mb-6">Decision Framework</h2>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold mb-3 text-green-700">✅ Choose shadcn/ui When:</h3>
+                <h3 className="text-xl font-bold mb-3 text-zinc-600">✅ Choose shadcn/ui When:</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• <strong>Code ownership required:</strong> Need full control without vendor lock-in</li>
                   <li>• <strong>Accessibility critical:</strong> WCAG 2.1 AA compliance built-in via Radix UI</li>
@@ -568,7 +568,7 @@ export function UserFormDialog({ user }) {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold mb-3 text-red-700">❌ Consider Alternatives When:</h3>
+                <h3 className="text-xl font-bold mb-3 text-neutral-600">❌ Consider Alternatives When:</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• <strong>Non-Tailwind stack:</strong> Material-UI or Ant Design better for CSS-in-JS</li>
                   <li>• <strong>Zero customization needs:</strong> Chakra UI simpler for basic use cases</li>
@@ -595,7 +595,7 @@ export function UserFormDialog({ user }) {
           </section>
 
           {/* AI Assistant Reference Section */}
-          <section id="for-ai" className="mb-12 border-t pt-8 bg-purple-50 p-6 rounded-lg">
+          <section id="for-ai" className="mb-12 border-t pt-8 bg-gray-100 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
@@ -620,7 +620,7 @@ export function UserFormDialog({ user }) {
               </div>
             </div>
 
-            <div className="mt-4 bg-white p-3 rounded border border-purple-200">
+            <div className="mt-4 bg-white p-3 rounded border border-gray-300">
               <h4 className="font-bold text-sm mb-2">Quick Reference Template:</h4>
               <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// shadcn/ui + Next.js 15 pattern
 import { Button } from "@/components/ui/button"
@@ -652,16 +652,16 @@ export function Example() {
               <div>
                 <h3 className="font-bold mb-2 text-gray-800">Depends On:</h3>
                 <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• <Link href="/software/react" className="text-blue-600 hover:underline">React 19</Link> - UI library foundation</li>
-                  <li>• <Link href="/software/tailwind" className="text-blue-600 hover:underline">Tailwind CSS v4</Link> - Styling system</li>
+                  <li>• <Link href="/software/react" className="text-slate-600 hover:underline">React 19</Link> - UI library foundation</li>
+                  <li>• <Link href="/software/tailwind" className="text-slate-600 hover:underline">Tailwind CSS v4</Link> - Styling system</li>
                   <li>• Radix UI - Accessible primitives</li>
-                  <li>• <Link href="/software/typescript" className="text-blue-600 hover:underline">TypeScript 5.9</Link> - Type safety</li>
+                  <li>• <Link href="/software/typescript" className="text-slate-600 hover:underline">TypeScript 5.9</Link> - Type safety</li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-bold mb-2 text-gray-800">Used By:</h3>
                 <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• <Link href="/software/nextjs" className="text-blue-600 hover:underline">Next.js 15</Link> - Primary framework</li>
+                  <li>• <Link href="/software/nextjs" className="text-slate-600 hover:underline">Next.js 15</Link> - Primary framework</li>
                   <li>• Remix - React framework</li>
                   <li>• Vite + React - Build tool setup</li>
                   <li>• 8,000+ companies (OpenAI, Adobe, Netflix)</li>
@@ -671,14 +671,14 @@ export function Example() {
 
             <div className="mt-4 pt-4 border-t border-gray-200">
               <p className="text-sm text-gray-600">
-                Part of <Link href="/software" className="text-blue-600 hover:underline">Avolve Software Stack</Link> -
+                Part of <Link href="/software" className="text-slate-600 hover:underline">Avolve Software Stack</Link> -
                 Component platform for Next.js + React + Tailwind applications
               </p>
             </div>
           </section>
 
           <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/software" className="text-blue-600 hover:underline">
+            <Link href="/software" className="text-slate-600 hover:underline">
               ← Back to Software
             </Link>
           </nav>

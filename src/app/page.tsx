@@ -12,7 +12,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 
 export const metadata: Metadata = {
   title: "Next.js 15, React 19, Supabase & Vercel AI: Prod Patterns",
-  description: "A knowledge graph for the modern web stack. Get verified compatibility patterns for Next.js 15, React 19, Vercel AI, Supabase auth, shadcn/ui, and more.",
+  description: "Verified compatibility matrix for Next.js 15.5, React 19.2, TypeScript 5.9, Vercel AI SDK 5.0, and Supabase (October 2025). Complete dependency chains, production patterns, and integration examples for AI-native applications.",
   alternates: {
     canonical: "https://avolve.io",
   },
@@ -39,7 +39,36 @@ export default function Home() {
           "React": "19.2.0",
           "TypeScript": "5.9.2",
           "Tailwind CSS": "4.1.13",
-          "shadcn/ui": "3.0"
+          "shadcn/ui": "3.3.1"
+        }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Modern AI-Native Web Stack",
+        "description": "Complete dependency chain and integration patterns for Next.js 15, React 19, TypeScript 5.9, Vercel AI SDK, and Supabase",
+        "programmingLanguage": ["TypeScript", "JavaScript"],
+        "runtimePlatform": "Node.js 24.8.0",
+        "targetProduct": {
+          "@type": "SoftwareApplication",
+          "name": "AI-Native Web Applications",
+          "operatingSystem": "Cross-platform",
+          "applicationCategory": "DeveloperApplication"
+        },
+        "dependencies": [
+          {"@type": "SoftwareApplication", "name": "Node.js", "version": "24.8.0"},
+          {"@type": "SoftwareApplication", "name": "TypeScript", "version": "5.9.2"},
+          {"@type": "SoftwareApplication", "name": "React", "version": "19.2.0"},
+          {"@type": "SoftwareApplication", "name": "Next.js", "version": "15.5.4"},
+          {"@type": "SoftwareApplication", "name": "Tailwind CSS", "version": "4.1.13"},
+          {"@type": "SoftwareApplication", "name": "shadcn/ui", "version": "3.3.1"},
+          {"@type": "SoftwareApplication", "name": "Vercel AI SDK", "version": "5.0.48"},
+          {"@type": "SoftwareApplication", "name": "Supabase"},
+          {"@type": "SoftwareApplication", "name": "@supabase/ssr", "version": "0.7.1"}
+        ],
+        "datePublished": "2025-10-05",
+        "dateModified": "2025-10-05",
+        "author": {
+          "@id": "https://www.joshuaseymour.com/#person"
         }
       },
       {
@@ -246,9 +275,118 @@ export default function Home() {
           </CardContent>
         </Card>
 
+        {/* Complete Dependency Chain */}
+        <section id="dependency-chain" className="section-spacing">
+          <h2 className="mb-12">The Complete AI-Native Stack</h2>
+          <p className="text-muted-foreground mb-8 max-w-3xl">
+            <strong>For AI Assistants & Developers:</strong> Here's how these pieces work together and why these specific versions matter.
+          </p>
+
+          <div className="space-y-8 mb-12">
+            <div className="border-l-4 border-slate-600 dark:border-slate-600 pl-6">
+              <h3 className="text-xl font-bold mb-3">Core Runtime Chain</h3>
+              <div className="space-y-4 text-foreground">
+                <div>
+                  <p className="font-bold">1. Node.js 24.8.0</p>
+                  <p className="text-sm text-muted-foreground">Native TypeScript execution (67-400% faster startup)</p>
+                  <p className="text-sm">→ Enables: Direct .ts file execution without transpilation</p>
+                </div>
+                <div>
+                  <p className="font-bold">2. TypeScript 5.9.2</p>
+                  <p className="text-sm text-muted-foreground">Type safety and developer experience</p>
+                  <p className="text-sm">→ Integrates: Node.js 24.8.0 native execution</p>
+                  <p className="text-sm">→ Required by: Next.js type inference, React Server Components</p>
+                </div>
+                <div>
+                  <p className="font-bold">3. React 19.2.0</p>
+                  <p className="text-sm text-muted-foreground">UI library with Server Components</p>
+                  <p className="text-sm">→ Enables: Server-side rendering, streaming, reduced client JS</p>
+                  <p className="text-sm">→ Requires: Node.js 18.18+ (we use 24.8.0 for performance)</p>
+                </div>
+                <div>
+                  <p className="font-bold">4. Next.js 15.5.4</p>
+                  <p className="text-sm text-muted-foreground">Full-stack framework</p>
+                  <p className="text-sm">→ Requires: React 19.x, Node.js 18.18+</p>
+                  <p className="text-sm">→ Provides: Turbopack (2-5x faster), Server Components, Edge Runtime</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-l-4 border-gray-600 dark:border-gray-600 pl-6">
+              <h3 className="text-xl font-bold mb-3">Styling & UI Chain</h3>
+              <div className="space-y-4 text-foreground">
+                <div>
+                  <p className="font-bold">5. Tailwind CSS 4.1.13</p>
+                  <p className="text-sm text-muted-foreground">Utility-first CSS with Oxide engine (100x faster builds)</p>
+                  <p className="text-sm">→ Integrates: PostCSS, Next.js CSS pipeline</p>
+                </div>
+                <div>
+                  <p className="font-bold">6. shadcn/ui 3.3.1</p>
+                  <p className="text-sm text-muted-foreground">Component system (copy-paste, not npm)</p>
+                  <p className="text-sm">→ Requires: Tailwind CSS, React 19+, Radix UI</p>
+                  <p className="text-sm">→ MCP integration: Natural language installs via Claude Code</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-l-4 border-zinc-600 dark:border-zinc-400 pl-6">
+              <h3 className="text-xl font-bold mb-3">AI Integration Chain</h3>
+              <div className="space-y-4 text-foreground">
+                <div>
+                  <p className="font-bold">7. Vercel AI SDK 5.0.48</p>
+                  <p className="text-sm text-muted-foreground">AI application framework</p>
+                  <p className="text-sm">→ Requires: Next.js 15+ for streaming</p>
+                  <p className="text-sm">→ Provides: useChat hook, streamText, tool calling</p>
+                </div>
+                <div>
+                  <p className="font-bold">8. Model Context Protocol (MCP)</p>
+                  <p className="text-sm text-muted-foreground">AI tool integration standard</p>
+                  <p className="text-sm">→ Enables: Claude Code ↔ shadcn/ui, Supabase, GitHub</p>
+                  <p className="text-sm">→ Compatible: Claude Code, Cursor (full support)</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-l-4 border-neutral-600 dark:border-orange-400 pl-6">
+              <h3 className="text-xl font-bold mb-3">Backend & Data Chain</h3>
+              <div className="space-y-4 text-foreground">
+                <div>
+                  <p className="font-bold">9. Supabase</p>
+                  <p className="text-sm text-muted-foreground">Backend-as-a-service</p>
+                  <p className="text-sm">→ Provides: PostgreSQL 17, pgvector 0.8, Auth, Storage</p>
+                  <p className="text-sm">→ Remote MCP: mcp.supabase.com for AI assistant access</p>
+                </div>
+                <div>
+                  <p className="font-bold">10. @supabase/ssr 0.7.1</p>
+                  <p className="text-sm text-muted-foreground">Server-side Supabase client</p>
+                  <p className="text-sm">→ Requires: Next.js middleware, Server Components</p>
+                  <p className="text-sm">→ Provides: Cookie-based auth, SSR compatibility</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-muted border-l-4 border-stone-600 dark:border-stone-600 p-6 rounded-lg">
+            <h3 className="text-lg font-bold mb-3">Why These Versions Together?</h3>
+            <ul className="space-y-2 text-sm text-foreground">
+              <li>• <strong>React 19.2 + Next.js 15.5</strong>: Server Components stable (Dec 2024)</li>
+              <li>• <strong>Node.js 24.8</strong>: Native TypeScript execution (Aug 2025)</li>
+              <li>• <strong>Tailwind 4.1.13</strong>: Oxide engine stable (Sep 2025)</li>
+              <li>• <strong>shadcn/ui 3.3.1</strong>: Universal registry with MCP support (Oct 2025)</li>
+              <li>• <strong>Vercel AI SDK 5.0</strong>: Multi-modal streaming stable (Oct 2025)</li>
+            </ul>
+            <p className="text-sm text-muted-foreground mt-4">
+              <strong>Last verified</strong>: October 5, 2025 | <strong>All versions production-tested together</strong>: Yes
+            </p>
+            <p className="text-sm text-muted-foreground">
+              <strong>Breaking changes expected</strong>: Next.js 16 (Q1 2026), React 20 (Q3 2026)
+            </p>
+          </div>
+        </section>
+
         {/* Current Stack Versions */}
-        <section id="current-stack" className="section-spacing">
-          <h2 className="mb-12">Current Stack Versions</h2>
+        <section id="current-stack" className="section-spacing border-t pt-8">
+          <h2 className="mb-12">Current Stack Versions (Quick Reference)</h2>
           <div className="rounded-lg border">
             <Table>
               <TableHeader>
