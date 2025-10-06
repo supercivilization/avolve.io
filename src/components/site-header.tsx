@@ -4,123 +4,89 @@ import Link from "next/link";
 import { Search } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center px-4 md:px-8">
-        {/* Logo with Context */}
-        <Link href="/" className="mr-6 flex items-center">
-          <span className="font-bold text-xl">Avolve.io</span>
-          <span className="hidden lg:inline text-xs text-muted-foreground ml-3">
-            Modern Web Stack · Oct 2025
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-6 md:px-8">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-3 group">
+          <span className="font-bold text-2xl tracking-tight bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent transition-all group-hover:from-foreground group-hover:to-foreground">
+            Avolve
+          </span>
+          <span className="hidden lg:inline-flex items-center gap-1.5 text-[11px] font-medium text-muted-foreground/70 tracking-wide uppercase">
+            <span className="inline-block w-1 h-1 rounded-full bg-emerald-500/60" />
+            Oct 2025
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex flex-1 items-center gap-6 text-sm">
+        <nav className="hidden md:flex items-center gap-1">
           <Link
             href="/about"
-            className="transition-colors hover:text-foreground/80 text-foreground/60"
+            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all"
           >
             About
           </Link>
           <Link
             href="/solutions"
-            className="transition-colors hover:text-foreground text-foreground font-medium"
+            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all"
           >
             Solutions
           </Link>
-
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-auto py-0 text-sm font-normal text-foreground/60 hover:text-foreground/80">
-                  Stack
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[200px] gap-1 p-2">
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="/software"
-                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium">Software</div>
-                          <p className="text-sm leading-snug text-muted-foreground">
-                            Frameworks & libraries
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="/services"
-                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium">Services</div>
-                          <p className="text-sm leading-snug text-muted-foreground">
-                            External platforms
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-
           <Link
             href="/systems"
-            className="transition-colors hover:text-foreground/80 text-foreground/60"
+            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all"
           >
             Systems
           </Link>
           <Link
+            href="/software"
+            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all"
+          >
+            Software
+          </Link>
+          <Link
+            href="/services"
+            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all"
+          >
+            Services
+          </Link>
+          <Link
             href="/support"
-            className="transition-colors hover:text-foreground text-foreground font-medium"
+            className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-lg transition-all"
           >
             Support
           </Link>
         </nav>
 
-        {/* Right Side Actions */}
-        <div className="flex flex-1 items-center justify-end gap-2">
-          {/* Mobile Navigation */}
-          <nav className="flex md:hidden gap-2 mr-2">
+        {/* Right Actions */}
+        <div className="flex items-center gap-2">
+          {/* Mobile Menu - Simple Links */}
+          <nav className="flex md:hidden items-center gap-1 mr-2">
             <Link
               href="/about"
-              className="text-sm transition-colors hover:text-foreground/80 text-foreground/60"
+              className="px-3 py-2 text-xs font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-md transition-all"
             >
               About
             </Link>
             <Link
               href="/solutions"
-              className="text-sm transition-colors hover:text-foreground text-foreground font-medium"
+              className="px-3 py-2 text-xs font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 rounded-md transition-all"
             >
               Solutions
             </Link>
           </nav>
 
-          {/* Search Button Placeholder */}
+          {/* Search */}
           <Button
             variant="ghost"
             size="icon"
-            className="h-9 w-9"
-            aria-label="Search (coming soon)"
+            className="h-9 w-9 rounded-lg hover:bg-accent/50 transition-all"
+            aria-label="Search"
             disabled
           >
-            <Search className="h-4 w-4" />
+            <Search className="h-4 w-4 text-muted-foreground/70" />
           </Button>
 
           {/* Theme Toggle */}
