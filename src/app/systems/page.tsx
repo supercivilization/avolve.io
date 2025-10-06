@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Dependencies (October 5, 2025):
+// Dependencies (October 6, 2025):
 // - Next.js: 15.5.5
 // - React: 19.2.0
 // - Supabase: 2.58.0
-// Last verified: 2025-10-05
+// Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "Auth, Search & Email Systems for Next.js 15 Apps",
-  description: "Production-tested architecture patterns: Supabase Auth + Next.js 15.5 middleware, pgvector search, transactional email. Complete code examples, common failures (auth loops, cookie domains), fixes. Verified October 2025.",
+  title: "Systems - Modern Stack Integration Patterns",
+  description: "Fast lookup: Auth, Search, Email, Social, Mobile system patterns. Complete code, production failures, component lists. Verified October 2025.",
   alternates: {
     canonical: "https://avolve.io/systems",
   },
@@ -131,15 +131,121 @@ export default function SystemsPage() {
       />
 
       <main className="page-container">
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
+          Last updated: October 6, 2025
         </time>
 
         <article>
           <h1 className="mb-4">Systems</h1>
           <p className="lead section-spacing">
-            Architecture patterns coordinating multiple components
+            Fast lookup: integration patterns, components, production failures
           </p>
+
+          {/* QUICK REFERENCE TABLE - Primary utility for fast pattern lookup */}
+          <section id="quick-reference" className="mb-12 border border-border/50 rounded-lg overflow-hidden shadow-sm">
+            <div className="bg-muted/30 px-6 py-3 border-b border-border/40">
+              <h2 className="text-xl font-bold">System Patterns (Verified October 6, 2025)</h2>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-muted/20">
+                  <tr className="border-b border-border/40">
+                    <th className="px-4 py-3 text-left font-semibold">System</th>
+                    <th className="px-4 py-3 text-left font-semibold">Key Components</th>
+                    <th className="px-4 py-3 text-left font-semibold">What It Solves</th>
+                    <th className="px-4 py-3 text-left font-semibold">Guide</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border/40">
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Authentication</td>
+                    <td className="px-4 py-3 text-sm">
+                      <div className="space-y-1">
+                        <div>Supabase Auth</div>
+                        <div>Next.js Middleware</div>
+                        <div>Server + Client Components</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      Edge-protected routes, secure sessions, user management
+                    </td>
+                    <td className="px-4 py-3">
+                      <a href="#auth-system" className="text-blue-600 hover:underline text-sm">View Pattern →</a>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Search</td>
+                    <td className="px-4 py-3 text-sm">
+                      <div className="space-y-1">
+                        <div>Next.js Metadata API</div>
+                        <div>Schema.org markup</div>
+                        <div>Server Components</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      SEO optimization, AI citations, rich search results
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/systems/search" className="text-blue-600 hover:underline text-sm">View Pattern →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Email</td>
+                    <td className="px-4 py-3 text-sm">
+                      <div className="space-y-1">
+                        <div>Resend API</div>
+                        <div>React Email components</div>
+                        <div>Next.js API Routes</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      Transactional emails, type-safe templates, deliverability
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/systems/email" className="text-blue-600 hover:underline text-sm">View Pattern →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Social Sharing</td>
+                    <td className="px-4 py-3 text-sm">
+                      <div className="space-y-1">
+                        <div>Next.js Metadata API</div>
+                        <div>OpenGraph protocol</div>
+                        <div>Twitter Cards</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      Rich social previews, 2-3x higher engagement
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/systems/social" className="text-blue-600 hover:underline text-sm">View Pattern →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Mobile</td>
+                    <td className="px-4 py-3 text-sm">
+                      <div className="space-y-1">
+                        <div>React Native 0.81</div>
+                        <div>Expo SDK 54</div>
+                        <div>Code sharing with Next.js</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      Cross-platform mobile, 40-50% code reduction
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/systems/mobile" className="text-blue-600 hover:underline text-sm">View Pattern →</Link>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
+              <p className="text-sm text-muted-foreground">
+                <strong>All patterns include</strong> • Complete working code • Component list • Data flow • Production failures & fixes • Last verified: October 6, 2025
+              </p>
+            </div>
+          </section>
 
           <section id="systems-definition" className="section-spacing">
             <h2 className="mb-4">What are Systems?</h2>
