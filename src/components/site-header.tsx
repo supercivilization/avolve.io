@@ -7,18 +7,18 @@ import { Button } from "@/components/ui/button";
 
 export function SiteHeader() {
   return (
-    <header className="w-full border-b border-border/50 bg-background">
-      <div className="container flex h-14 max-w-screen-2xl items-center px-4 md:px-6">
+    <header className="w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 max-w-screen-2xl items-center px-6">
         {/* Logo */}
         <Link
           href="/"
-          className="mr-8 flex items-center gap-2.5 group"
+          className="mr-10 flex items-center gap-3 group"
         >
-          <span className="font-semibold text-[15px] tracking-tight text-foreground transition-colors group-hover:text-foreground/80">
+          <span className="font-semibold text-base tracking-tight text-foreground transition-colors group-hover:text-foreground/80">
             Avolve
           </span>
-          <span className="hidden lg:inline-flex items-center gap-1.5 text-[11px] font-medium text-muted-foreground/60 tracking-wide uppercase">
-            <span className="inline-block w-1 h-1 rounded-full bg-emerald-500" />
+          <span className="hidden lg:inline-flex items-center gap-2 text-xs font-medium text-muted-foreground/60 tracking-wide uppercase">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
             Oct 2025
           </span>
         </Link>
@@ -27,37 +27,37 @@ export function SiteHeader() {
         <nav className="hidden md:flex items-center gap-1">
           <Link
             href="/about"
-            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent rounded-md transition-colors duration-150"
+            className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors"
           >
             About
           </Link>
           <Link
             href="/solutions"
-            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent rounded-md transition-colors duration-150"
+            className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors"
           >
             Solutions
           </Link>
           <Link
             href="/systems"
-            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent rounded-md transition-colors duration-150"
+            className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors"
           >
             Systems
           </Link>
           <Link
             href="/software"
-            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent rounded-md transition-colors duration-150"
+            className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors"
           >
             Software
           </Link>
           <Link
             href="/services"
-            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent rounded-md transition-colors duration-150"
+            className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors"
           >
             Services
           </Link>
           <Link
             href="/support"
-            className="px-3 py-1.5 text-[14px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent rounded-md transition-colors duration-150"
+            className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors"
           >
             Support
           </Link>
@@ -67,18 +67,18 @@ export function SiteHeader() {
         <div className="flex-1" />
 
         {/* Right Actions */}
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-2">
           {/* Mobile Navigation */}
-          <nav className="flex md:hidden items-center gap-0.5 mr-1">
+          <nav className="flex md:hidden items-center gap-1">
             <Link
               href="/about"
-              className="px-2.5 py-1.5 text-[13px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent rounded-md transition-colors duration-150"
+              className="px-2.5 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors"
             >
               About
             </Link>
             <Link
               href="/solutions"
-              className="px-2.5 py-1.5 text-[13px] font-medium text-foreground/70 hover:text-foreground hover:bg-accent rounded-md transition-colors duration-150"
+              className="px-2.5 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors"
             >
               Solutions
             </Link>
@@ -88,17 +88,15 @@ export function SiteHeader() {
           <Button
             variant="ghost"
             size="icon"
-            className="h-8 w-8 rounded-md hover:bg-accent transition-colors duration-150"
+            className="h-9 w-9 rounded-md hover:bg-accent/50 transition-colors"
             aria-label="Search"
             disabled
           >
-            <Search className="h-[15px] w-[15px] text-muted-foreground/70" />
+            <Search className="h-4 w-4 text-muted-foreground" />
           </Button>
 
           {/* Theme Toggle */}
-          <div className="h-8 flex items-center">
-            <ThemeToggle />
-          </div>
+          <ThemeToggle />
         </div>
       </div>
     </header>

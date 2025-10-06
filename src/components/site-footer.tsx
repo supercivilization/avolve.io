@@ -11,69 +11,69 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-border/50 bg-background">
-      <div className="container max-w-screen-2xl px-4 md:px-6">
+      <div className="container max-w-screen-2xl px-6">
         {/* Premium Card Footer */}
-        <div className="py-16 md:py-20">
-          <div className="max-w-6xl mx-auto">
-            <div className="relative rounded-lg border border-border/50 bg-gradient-to-b from-background to-muted/20 p-8 md:p-12 shadow-sm">
+        <div className="py-20 md:py-24">
+          <div className="max-w-7xl mx-auto">
+            <div className="relative rounded-xl border border-border/50 bg-gradient-to-b from-background to-muted/20 p-12 md:p-16 shadow-sm">
               {/* Status Bar */}
-              <div className="mb-8 flex items-center justify-between border-b border-border/30 pb-6">
-                <div className="flex items-center gap-2 text-sm">
+              <div className="mb-12 flex items-center justify-between border-b border-border/30 pb-8">
+                <div className="flex items-center gap-2.5 text-sm">
                   <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="font-medium text-foreground">All Systems Operational</span>
+                  <span className="font-semibold text-foreground">All Systems Operational</span>
                   <span className="text-muted-foreground/60">·</span>
-                  <span className="text-muted-foreground/70">Updated Oct 5, 2025</span>
+                  <span className="text-muted-foreground">Updated Oct 5, 2025</span>
                 </div>
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={scrollToTop}
-                  className="h-8 gap-1.5 text-muted-foreground hover:text-foreground"
+                  className="h-9 gap-2 text-muted-foreground hover:text-foreground"
                 >
-                  <ArrowUp className="h-3.5 w-3.5" />
-                  <span className="hidden sm:inline">Back to top</span>
+                  <ArrowUp className="h-4 w-4" />
+                  <span className="hidden sm:inline text-sm">Back to top</span>
                 </Button>
               </div>
 
               {/* Main Content Grid */}
-              <div className="grid gap-8 md:grid-cols-4 mb-8">
+              <div className="grid gap-12 md:grid-cols-4 mb-12">
                 {/* Navigate Column */}
                 <div>
                   <h4 className="mb-4 text-sm font-semibold text-foreground">Navigate</h4>
-                  <nav className="flex flex-col gap-2.5 text-sm">
+                  <nav className="flex flex-col gap-3 text-sm">
                     <Link
                       href="/about"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       About
                     </Link>
                     <Link
                       href="/solutions"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       Solutions
                     </Link>
                     <Link
                       href="/systems"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       Systems
                     </Link>
                     <Link
                       href="/software"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       Software
                     </Link>
                     <Link
                       href="/services"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       Services
                     </Link>
                     <Link
                       href="/support"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       Support
                     </Link>
@@ -83,12 +83,12 @@ export function SiteFooter() {
                 {/* Tech Stack Column */}
                 <div>
                   <h4 className="mb-4 text-sm font-semibold text-foreground">Tech Stack</h4>
-                  <div className="flex flex-col gap-2.5 text-sm text-muted-foreground">
+                  <div className="flex flex-col gap-3 text-sm text-muted-foreground">
                     <a
                       href="https://nextjs.org"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors duration-150"
+                      className="hover:text-foreground transition-colors"
                     >
                       Next.js 15.5
                     </a>
@@ -96,7 +96,7 @@ export function SiteFooter() {
                       href="https://react.dev"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors duration-150"
+                      className="hover:text-foreground transition-colors"
                     >
                       React 19.2
                     </a>
@@ -104,7 +104,7 @@ export function SiteFooter() {
                       href="https://www.typescriptlang.org"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors duration-150"
+                      className="hover:text-foreground transition-colors"
                     >
                       TypeScript 5.9
                     </a>
@@ -112,7 +112,7 @@ export function SiteFooter() {
                       href="https://supabase.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors duration-150"
+                      className="hover:text-foreground transition-colors"
                     >
                       Supabase
                     </a>
@@ -120,7 +120,7 @@ export function SiteFooter() {
                       href="https://ui.shadcn.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors duration-150"
+                      className="hover:text-foreground transition-colors"
                     >
                       shadcn/ui
                     </a>
@@ -128,7 +128,7 @@ export function SiteFooter() {
                       href="https://tailwindcss.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors duration-150"
+                      className="hover:text-foreground transition-colors"
                     >
                       Tailwind CSS
                     </a>
@@ -138,12 +138,12 @@ export function SiteFooter() {
                 {/* Resources Column */}
                 <div>
                   <h4 className="mb-4 text-sm font-semibold text-foreground">Resources</h4>
-                  <nav className="flex flex-col gap-2.5 text-sm">
+                  <nav className="flex flex-col gap-3 text-sm">
                     <a
                       href="https://nextjs.org/docs"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       Documentation
                     </a>
@@ -151,7 +151,7 @@ export function SiteFooter() {
                       href="https://github.com/supercivilization"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       GitHub
                     </a>
@@ -159,7 +159,7 @@ export function SiteFooter() {
                       href="https://vercel.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       Vercel
                     </a>
@@ -169,12 +169,12 @@ export function SiteFooter() {
                 {/* Connect Column */}
                 <div>
                   <h4 className="mb-4 text-sm font-semibold text-foreground">Connect</h4>
-                  <nav className="flex flex-col gap-2.5 text-sm">
+                  <nav className="flex flex-col gap-3 text-sm">
                     <a
                       href="https://www.joshuaseymour.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       Joshua Seymour
                     </a>
@@ -182,7 +182,7 @@ export function SiteFooter() {
                       href="https://github.com/supercivilization"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       GitHub
                     </a>
@@ -190,7 +190,7 @@ export function SiteFooter() {
                       href="https://www.linkedin.com/in/jseymour/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       LinkedIn
                     </a>
@@ -198,7 +198,7 @@ export function SiteFooter() {
                       href="https://www.supercivilization.xyz"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       Supercivilization
                     </a>
@@ -207,25 +207,25 @@ export function SiteFooter() {
               </div>
 
               {/* Bottom Copyright */}
-              <div className="border-t border-border/30 pt-6">
-                <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-muted-foreground/70">
+              <div className="border-t border-border/30 pt-8">
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
                   <p>
                     © 2025{" "}
                     <a
                       href="https://www.supercivilization.xyz"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors duration-150"
+                      className="hover:text-foreground transition-colors"
                     >
                       Supercivilization
                     </a>
                   </p>
-                  <div className="flex items-center gap-3 text-xs">
-                    <Link href="/privacy" className="hover:text-foreground transition-colors duration-150">
+                  <div className="flex items-center gap-4 text-xs">
+                    <Link href="/privacy" className="hover:text-foreground transition-colors">
                       Privacy
                     </Link>
                     <span>·</span>
-                    <Link href="/terms" className="hover:text-foreground transition-colors duration-150">
+                    <Link href="/terms" className="hover:text-foreground transition-colors">
                       Terms
                     </Link>
                   </div>
