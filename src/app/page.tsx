@@ -152,7 +152,7 @@ export default function Home() {
           <h2 className="mb-12">Modern Web Development Stack</h2>
 
           <div className="space-y-8">
-            <Card id="solutions" className="border-l-4 border-slate-600 dark:border-slate-400 hover:shadow-md transition-all">
+            <Card id="solutions" className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm hover:shadow-md transition-all">
               <CardHeader>
                 <div className="flex items-start gap-6">
                   <Rocket className="text-slate-600 dark:text-slate-400 flex-shrink-0" size={48} strokeWidth={1.5} />
@@ -171,7 +171,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card id="systems" className="border-l-4 border-gray-600 dark:border-gray-400 hover:shadow-md transition-all">
+            <Card id="systems" className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm hover:shadow-md transition-all">
               <CardHeader>
                 <div className="flex items-start gap-6">
                   <Network className="text-gray-600 dark:text-gray-400 flex-shrink-0" size={48} strokeWidth={1.5} />
@@ -190,7 +190,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card id="software" className="border-l-4 border-zinc-700 dark:border-zinc-400 hover:shadow-md transition-all">
+            <Card id="software" className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm hover:shadow-md transition-all">
               <CardHeader>
                 <div className="flex items-start gap-6">
                   <Code className="text-zinc-700 dark:text-zinc-400 flex-shrink-0" size={48} strokeWidth={1.5} />
@@ -209,7 +209,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card id="services" className="border-l-4 border-neutral-600 dark:border-neutral-400 hover:shadow-md transition-all">
+            <Card id="services" className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm hover:shadow-md transition-all">
               <CardHeader>
                 <div className="flex items-start gap-6">
                   <Cloud className="text-neutral-600 dark:text-neutral-400 flex-shrink-0" size={48} strokeWidth={1.5} />
@@ -228,7 +228,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card id="support" className="border-l-4 border-stone-600 dark:border-stone-400 hover:shadow-md transition-all">
+            <Card id="support" className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm hover:shadow-md transition-all">
               <CardHeader>
                 <div className="flex items-start gap-6">
                   <LifeBuoy className="text-stone-600 dark:text-stone-400 flex-shrink-0" size={48} strokeWidth={1.5} />
@@ -288,7 +288,7 @@ export default function Home() {
           </p>
 
           <div className="space-y-8 mb-12">
-            <div className="border-l-4 border-slate-600 dark:border-slate-600 pl-6">
+            <div className="border-l-2 border-slate-600/30 dark:border-slate-600/30 pl-6">
               <h3 className="text-xl font-bold mb-3">Core Runtime Chain</h3>
               <div className="space-y-4 text-foreground">
                 <div>
@@ -317,7 +317,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="border-l-4 border-gray-600 dark:border-gray-600 pl-6">
+            <div className="border-l-2 border-gray-600/30 dark:border-gray-600/30 pl-6">
               <h3 className="text-xl font-bold mb-3">Styling & UI Chain</h3>
               <div className="space-y-4 text-foreground">
                 <div>
@@ -334,7 +334,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="border-l-4 border-zinc-600 dark:border-zinc-400 pl-6">
+            <div className="border-l-2 border-zinc-600/30 dark:border-zinc-600/30 pl-6">
               <h3 className="text-xl font-bold mb-3">AI Integration Chain</h3>
               <div className="space-y-4 text-foreground">
                 <div>
@@ -352,7 +352,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="border-l-4 border-neutral-600 dark:border-orange-400 pl-6">
+            <div className="border-l-2 border-neutral-600/30 dark:border-neutral-600/30 pl-6">
               <h3 className="text-xl font-bold mb-3">Backend & Data Chain</h3>
               <div className="space-y-4 text-foreground">
                 <div>
@@ -371,7 +371,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-muted border-l-4 border-stone-600 dark:border-stone-600 p-6 rounded-lg">
+          <div className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm p-6 rounded-lg">
             <h3 className="text-lg font-bold mb-3">Why These Versions Together?</h3>
             <ul className="space-y-2 text-sm text-foreground">
               <li>• <strong>React 19.2 + Next.js 15.5</strong>: Server Components stable (Dec 2024)</li>
@@ -392,7 +392,7 @@ export default function Home() {
         {/* Current Stack Versions */}
         <section id="current-stack" className="section-spacing border-t pt-8">
           <h2 className="mb-12">Current Stack Versions (Quick Reference)</h2>
-          <div className="rounded-lg border">
+          <div className="rounded-lg border border-border/50 shadow-sm">
             <Table>
               <TableHeader>
                 <TableRow>

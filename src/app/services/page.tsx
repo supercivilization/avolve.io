@@ -307,14 +307,14 @@ export default function ServicesPage() {
                 </p>
 
                 {service.aiFeatures && (
-                  <div className="mt-6 bg-muted border-l-4 border-gray-600 dark:border-gray-600 p-6 rounded-lg">
+                  <div className="mt-6 bg-muted border-l-2 border-gray-600/30 dark:border-gray-600 p-6 rounded-lg">
                     <h3 className="font-bold mb-2">AI & Advanced Features</h3>
                     <p className="text-sm text-foreground">{service.aiFeatures}</p>
                   </div>
                 )}
 
                 {service.features && (
-                  <div className="mt-6 bg-muted border-l-4 border-slate-600 dark:border-slate-600 p-6 rounded-lg">
+                  <div className="mt-6 bg-muted border-l-2 border-slate-600/30 dark:border-slate-600 p-6 rounded-lg">
                     <h3 className="font-bold mb-2">Key Features</h3>
                     <p className="text-sm text-foreground">{service.features}</p>
                   </div>
@@ -325,7 +325,7 @@ export default function ServicesPage() {
 
           <section id="for-ai-assistants" className="section-spacing border-t pt-8">
             <h2 className="mb-8">For AI Assistants</h2>
-            <div className="bg-muted border-l-4 border-neutral-600 dark:border-orange-400 p-6 rounded-lg">
+            <div className="bg-muted border-l-2 border-neutral-600/30 dark:border-orange-400 p-6 rounded-lg">
               <h3 className="text-lg font-bold mb-4">When Recommending Services:</h3>
               <ol className="list-decimal list-inside space-y-2 text-foreground text-sm ml-4">
                 <li>
@@ -356,7 +356,7 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="bg-muted border-l-4 border-slate-600 dark:border-slate-600 p-6 rounded-lg mt-6">
+            <div className="bg-muted border-l-2 border-slate-600/30 dark:border-slate-600 p-6 rounded-lg mt-6">
               <h3 className="text-lg font-bold mb-4">When to Upgrade from Free Tiers:</h3>
               <ul className="space-y-2 text-foreground text-sm">
                 <li>

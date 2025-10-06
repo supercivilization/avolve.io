@@ -70,7 +70,7 @@ export default function NodeJSPage() {
           </p>
 
           {/* Core Identity Section */}
-          <section id="overview" className="mb-12 bg-gray-50 border-l-4 border-gray-600 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-gray-50 border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
               <strong>Node.js 24.9.0</strong> (released Sep 25, 2025, <strong>becomes LTS Oct 28, 2025</strong>) is an open-source JavaScript runtime built on Chrome's V8 13.6 engine, enabling native TypeScript execution without build tools, delivering <strong>400% faster URL parsing</strong> and powering <strong>98% of Fortune 500 companies</strong>. For production environments, <strong>use Node.js 22.20.0 LTS</strong> until the Oct 28 transition.
@@ -100,7 +100,7 @@ export default function NodeJSPage() {
               </div>
             </div>
 
-            <div className="mt-4 bg-slate-100 p-4 rounded border-l-4 border-slate-600">
+            <div className="mt-4 bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
               <h3 className="font-bold mb-2">Official Documentation</h3>
               <p className="text-sm text-gray-700 mb-2">
                 For API reference and latest releases, visit:
@@ -118,7 +118,7 @@ export default function NodeJSPage() {
             <h2 className="text-3xl font-bold mb-6">Why It Matters</h2>
 
             <div className="space-y-6">
-              <div className="border-l-4 border-gray-600 pl-4">
+              <div className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm pl-4">
                 <h3 className="text-xl font-bold mb-3 text-gray-800">Native TypeScript Revolution</h3>
                 <p className="text-gray-700 mb-3">
                   Node.js 24.9.0 (and 22.20.0 LTS) eliminates the entire TypeScript build pipeline. Direct execution of .ts files without tsc, webpack, or babel fundamentally changes development workflow and deployment architecture.
@@ -161,7 +161,7 @@ node app.ts
                 </div>
               </div>
 
-              <div className="border-l-4 border-zinc-600 pl-4">
+              <div className="border-l-2 border-zinc-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-zinc-700">Performance Transformation</h3>
                 <p className="text-gray-700 mb-3">
                   Node.js 24.9.0 (and 22.20.0 LTS) delivers measurable, dramatic performance improvements that translate to real-world application benefits: 15-20% faster data-heavy workloads, reduced infrastructure costs, and improved user experience.
@@ -214,7 +214,7 @@ node app.ts
                 </div>
               </div>
 
-              <div className="border-l-4 border-neutral-600 pl-4">
+              <div className="border-l-2 border-neutral-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-neutral-700">Enterprise Security Model</h3>
                 <p className="text-gray-700 mb-3">
                   The stabilized Permission Model enables zero-trust architecture by default, allowing granular control over filesystem, network, and process access—critical for running untrusted code and meeting compliance requirements.
@@ -296,7 +296,7 @@ ws.addEventListener('message', (event) => {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Worker Threads Architecture</h3>
-                <div className="bg-slate-100 p-4 rounded border-l-4 border-slate-600">
+                <div className="bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
                   <h4 className="font-bold mb-2">Production Use Cases:</h4>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• <strong>Netflix:</strong> Complex video processing with multi-core scaling</li>
@@ -324,7 +324,7 @@ const sharedArray = new Int32Array(sharedBuffer);`}</pre>
             <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
 
             <div className="space-y-6">
-              <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-600">
+              <div className="bg-gray-50 p-4 rounded-lg border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
                 <h3 className="text-lg font-bold mb-3">Node.js 24.9.0 / 22.20.0 LTS + Next.js 15.5 Integration</h3>
                 <div className="space-y-3">
                   <div>
@@ -379,7 +379,7 @@ server.listen(3000);
                 </div>
               </div>
 
-              <div className="bg-zinc-100 p-4 rounded-lg border-l-4 border-zinc-600">
+              <div className="bg-zinc-100 p-4 rounded-lg border-l-2 border-zinc-600/30">
                 <h3 className="text-lg font-bold mb-3">Enterprise Success Stories</h3>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
@@ -409,7 +409,7 @@ server.listen(3000);
                 </div>
               </div>
 
-              <div className="bg-gray-100 p-4 rounded-lg border-l-4 border-gray-600">
+              <div className="bg-gray-100 p-4 rounded-lg border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
                 <h3 className="text-lg font-bold mb-3">Framework Performance (TechEmpower Round 23)</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full border-collapse border border-gray-300 text-sm">

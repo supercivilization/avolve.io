@@ -70,7 +70,7 @@ export default function TailwindPage() {
           </p>
 
           {/* Core Identity Section */}
-          <section id="overview" className="mb-12 bg-zinc-100 border-l-4 border-zinc-600 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-zinc-100 border-l-2 border-zinc-600/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
               <strong>Tailwind CSS v4.1.14</strong> is a utility-first CSS framework completely rewritten in Rust with the Oxide engine, delivering <strong>100x faster incremental builds</strong> and eliminating JavaScript configuration entirely through CSS-first design tokens.
@@ -106,7 +106,7 @@ export default function TailwindPage() {
             <h2 className="text-3xl font-bold mb-6">Why It Matters</h2>
 
             <div className="space-y-6">
-              <div className="border-l-4 border-zinc-600 pl-4">
+              <div className="border-l-2 border-zinc-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-zinc-700">Architectural Revolution</h3>
                 <p className="text-gray-700 mb-3">
                   v4.1.14 represents a complete ground-up rewrite that eliminates the performance bottlenecks of JavaScript-based CSS processing. The Oxide engine delivers microsecond-level rebuilds that fundamentally change the development experience.
@@ -148,7 +148,7 @@ export default function TailwindPage() {
                 </div>
               </div>
 
-              <div className="border-l-4 border-slate-600 pl-4">
+              <div className="border-l-2 border-slate-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-slate-700">CSS-First Configuration</h3>
                 <p className="text-gray-700 mb-3">
                   The elimination of JavaScript configuration files represents a philosophical shift toward web-native design systems. All customization lives in CSS custom properties, enabling runtime theming and better integration with CSS ecosystem tools.
@@ -185,7 +185,7 @@ module.exports = {
                 </div>
               </div>
 
-              <div className="border-l-4 border-gray-600 pl-4">
+              <div className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm pl-4">
                 <h3 className="text-xl font-bold mb-3 text-gray-700">Modern CSS Integration</h3>
                 <p className="text-gray-700 mb-3">
                   Native support for container queries, 3D transforms, and OKLCH colors eliminates the need for plugins and provides a unified development experience for modern CSS features.
@@ -240,7 +240,7 @@ module.exports = {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Migration Path from v3.x</h3>
-                <div className="bg-slate-100 p-4 rounded border-l-4 border-slate-600">
+                <div className="bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
                   <h4 className="font-bold mb-2">Upgrade Process:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`# Install v4
 npm install tailwindcss@next
@@ -294,7 +294,7 @@ npx @tailwindcss/upgrade@next`}</pre>
             <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
 
             <div className="space-y-6">
-              <div className="bg-zinc-100 p-4 rounded-lg border-l-4 border-zinc-600">
+              <div className="bg-zinc-100 p-4 rounded-lg border-l-2 border-zinc-600/30">
                 <h3 className="text-lg font-bold mb-3">Complete Next.js 15.5 Integration</h3>
                 <div className="space-y-3">
                   <div>
@@ -353,7 +353,7 @@ export function Card({ children }: { children: React.ReactNode }) {
                 </div>
               </div>
 
-              <div className="bg-gray-100 p-4 rounded-lg border-l-4 border-gray-600">
+              <div className="bg-gray-100 p-4 rounded-lg border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
                 <h3 className="text-lg font-bold mb-3">Performance Optimization</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>

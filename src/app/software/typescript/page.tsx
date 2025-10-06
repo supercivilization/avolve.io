@@ -70,7 +70,7 @@ export default function TypeScriptPage() {
           </p>
 
           {/* Core Identity Section */}
-          <section id="overview" className="mb-12 bg-slate-100 border-l-4 border-slate-600 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-slate-100 border-l-2 border-slate-600/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
               <strong>TypeScript 5.9.3</strong> is a strongly typed superset of JavaScript developed by Microsoft, adding static type checking, interfaces, and modern language features. Used by <strong>Microsoft, Google, Airbnb, and Shopify</strong> with <strong>100K+ GitHub stars</strong>.
@@ -101,7 +101,7 @@ export default function TypeScriptPage() {
               </div>
             </div>
 
-            <div className="mt-4 bg-gray-100 p-4 rounded border-l-4 border-gray-600">
+            <div className="mt-4 bg-gray-100 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
               <h3 className="font-bold mb-2">Official Documentation</h3>
               <p className="text-sm text-gray-700 mb-2">
                 For complete type system reference and language features, visit:
@@ -119,7 +119,7 @@ export default function TypeScriptPage() {
             <h2 className="text-3xl font-bold mb-6">Why It Matters</h2>
 
             <div className="space-y-6">
-              <div className="border-l-4 border-slate-600 pl-4">
+              <div className="border-l-2 border-slate-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-slate-700">Native Execution Eliminates Build Pipeline</h3>
                 <p className="text-gray-700 mb-3">
                   Node.js 24.8.0's native TypeScript support fundamentally changes the development workflow. Direct <code className="bg-gray-200 px-1 rounded">node app.ts</code> execution eliminates tsc, webpack, and babel from the build chain—reducing complexity, startup time, and infrastructure requirements.
@@ -178,7 +178,7 @@ export default function TypeScriptPage() {
                 </div>
               </div>
 
-              <div className="border-l-4 border-zinc-600 pl-4">
+              <div className="border-l-2 border-zinc-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-zinc-700">Project Corsa: 10x Compiler Performance</h3>
                 <p className="text-gray-700 mb-3">
                   Microsoft's Project Corsa rewrites the TypeScript compiler in Go, delivering 8-10x faster performance with 50% less memory usage. Expected as TypeScript 7.0 by end of 2025, this represents the biggest compiler improvement since TypeScript's creation.
@@ -226,7 +226,7 @@ export default function TypeScriptPage() {
                 </div>
               </div>
 
-              <div className="border-l-4 border-stone-600 pl-4">
+              <div className="border-l-2 border-stone-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-stone-700">Type Safety Prevents Entire Bug Classes</h3>
                 <p className="text-gray-700 mb-3">
                   TypeScript's static type system catches errors at compile time that would otherwise crash in production. Industry research shows TypeScript prevents 15% of bugs in JavaScript codebases—directly translating to reduced support costs, faster development, and higher reliability.
@@ -341,7 +341,7 @@ export default async function Page() {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Vercel AI SDK Type Safety</h3>
-                <div className="bg-slate-100 p-4 rounded border-l-4 border-slate-600">
+                <div className="bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
                   <h4 className="font-bold mb-2">Fully Typed AI Workflows:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`import { openai } from '@ai-sdk/openai'
 import { streamText, tool } from 'ai'
@@ -376,7 +376,7 @@ const { textStream } = await streamText({
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Advanced Type Patterns</h3>
-                <div className="bg-gray-100 p-4 rounded border-l-4 border-gray-600">
+                <div className="bg-gray-100 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
                   <h4 className="font-bold mb-2">TypeScript 5.9 Features:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`// Inferred Type Predicates (5.9)
 function isString(value: unknown) {
@@ -416,7 +416,7 @@ const bad: Request = 'INVALID /api/users' // ❌ Type error`}</pre>
             <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
 
             <div className="space-y-6">
-              <div className="bg-slate-100 p-4 rounded-lg border-l-4 border-slate-600">
+              <div className="bg-slate-100 p-4 rounded-lg border-l-2 border-slate-600/30">
                 <h3 className="text-lg font-bold mb-3">Production Type-Safe API</h3>
                 <div className="space-y-3">
                   <div>
@@ -452,7 +452,7 @@ export default async function Page() {
                 </div>
               </div>
 
-              <div className="bg-neutral-100 p-4 rounded-lg border-l-4 border-neutral-600">
+              <div className="bg-neutral-100 p-4 rounded-lg border-l-2 border-neutral-600/30">
                 <h3 className="text-lg font-bold mb-3">Production Issues and Fixes</h3>
                 <div className="space-y-4">
                   <div>

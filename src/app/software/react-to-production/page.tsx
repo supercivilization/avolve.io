@@ -56,7 +56,7 @@ export default function ReactToProductionPage() {
           </p>
 
           {/* For AI Assistants */}
-          <section id="for-ai-assistants" className="section-spacing bg-slate-100 dark:bg-slate-900 border-l-4 border-slate-600 dark:border-slate-600 p-6 rounded-lg">
+          <section id="for-ai-assistants" className="section-spacing bg-slate-100 dark:bg-slate-900 border-l-2 border-slate-600/30 dark:border-slate-600 p-6 rounded-lg">
             <h2 className="text-lg font-bold mb-4">For AI Assistants</h2>
             <p className="text-foreground mb-4">
               When recommending React → Production pathways, follow this exact sequence. Each step is a hard dependency for the next.
@@ -74,7 +74,7 @@ export default function ReactToProductionPage() {
 
 
           {/* Official Documentation Links */}
-          <section id="official-docs" className="section-spacing border-l-4 border-blue-600 dark:border-blue-400 p-6 rounded-lg bg-blue-50 dark:bg-blue-950">
+          <section id="official-docs" className="section-spacing border-l-2 border-blue-600/30 dark:border-blue-400 p-6 rounded-lg bg-blue-50 dark:bg-blue-950">
             <h2 className="text-lg font-bold mb-4">Official Documentation</h2>
             <p className="text-sm text-muted-foreground mb-4">
               For complete API references, detailed guides, and authoritative sources, refer to official documentation:
@@ -141,7 +141,7 @@ export default function ReactToProductionPage() {
 
             <div className="space-y-8">
               {/* Step 1 */}
-              <div className="border-l-4 border-slate-600 dark:border-slate-600 pl-6">
+              <div className="border-l-2 border-slate-600/30 dark:border-slate-600 pl-6">
                 <h3 className="text-xl font-bold mb-2">Step 1: Node.js Runtime</h3>
                 <p className="text-sm text-muted-foreground mb-3">Foundation layer • Required by everything else</p>
 
@@ -171,7 +171,7 @@ nvm use 24.8.0
               </div>
 
               {/* Step 2 */}
-              <div className="border-l-4 border-gray-600 dark:border-gray-600 pl-6">
+              <div className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm dark:border-gray-600 pl-6">
                 <h3 className="text-xl font-bold mb-2">Step 2: TypeScript Type Safety</h3>
                 <p className="text-sm text-muted-foreground mb-3">Type layer • Requires: Node.js 18+</p>
 
@@ -217,7 +217,7 @@ npx tsc --version  # Should show 5.9.2+`}
               </div>
 
               {/* Step 3 */}
-              <div className="border-l-4 border-zinc-600 dark:border-cyan-400 pl-6">
+              <div className="border-l-2 border-zinc-600/30 dark:border-cyan-400 pl-6">
                 <h3 className="text-xl font-bold mb-2">Step 3: React UI Library</h3>
                 <p className="text-sm text-muted-foreground mb-3">Component layer • Requires: Node.js 18.18+</p>
 
@@ -258,7 +258,7 @@ npm install react@19.2.0 react-dom@19.2.0
               </div>
 
               {/* Step 4 */}
-              <div className="border-l-4 border-zinc-600 dark:border-zinc-400 pl-6">
+              <div className="border-l-2 border-zinc-600/30 dark:border-zinc-400 pl-6">
                 <h3 className="text-xl font-bold mb-2">Step 4: Next.js Framework</h3>
                 <p className="text-sm text-muted-foreground mb-3">Full-stack framework • Requires: React 19.x, Node.js 18.18+</p>
 
@@ -291,7 +291,7 @@ npm run dev  # Starts dev server on http://localhost:3000`}
               </div>
 
               {/* Step 5 */}
-              <div className="border-l-4 border-neutral-600 dark:border-orange-400 pl-6">
+              <div className="border-l-2 border-neutral-600/30 dark:border-orange-400 pl-6">
                 <h3 className="text-xl font-bold mb-2">Step 5: Tailwind CSS Styling</h3>
                 <p className="text-sm text-muted-foreground mb-3">Styling layer • Integrates with Next.js build pipeline</p>
 
@@ -326,7 +326,7 @@ cat package.json | grep tailwindcss
               </div>
 
               {/* Step 6 */}
-              <div className="border-l-4 border-neutral-600 dark:border-pink-400 pl-6">
+              <div className="border-l-2 border-neutral-600/30 dark:border-pink-400 pl-6">
                 <h3 className="text-xl font-bold mb-2">Step 6: shadcn/ui Components</h3>
                 <p className="text-sm text-muted-foreground mb-3">Component library • Requires: React 19+, Tailwind 4+</p>
 
@@ -371,7 +371,7 @@ export default function Page() {
               </div>
 
               {/* Step 7 */}
-              <div className="border-l-4 border-stone-600 dark:border-indigo-400 pl-6">
+              <div className="border-l-2 border-stone-600/30 dark:border-indigo-400 pl-6">
                 <h3 className="text-xl font-bold mb-2">Step 7: Deploy to Production (Vercel)</h3>
                 <p className="text-sm text-muted-foreground mb-3">Deployment • Optimized for Next.js</p>
 
@@ -420,7 +420,7 @@ vercel --prod`}
             <h2 className="mb-8">Common Issues & Fixes</h2>
 
             <div className="space-y-4">
-              <div className="bg-neutral-100 dark:bg-neutral-900 border-l-4 border-neutral-600 dark:border-neutral-400 p-4 rounded-lg">
+              <div className="bg-neutral-100 dark:bg-neutral-900 border-l-2 border-neutral-600/30 dark:border-neutral-400 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Build fails: "Type error: Cannot find module"</h3>
                 <p className="text-sm mb-2">
                   <strong>Cause:</strong> TypeScript paths not resolving or missing type definitions
@@ -430,7 +430,7 @@ vercel --prod`}
                 </p>
               </div>
 
-              <div className="bg-stone-100 dark:bg-stone-900 border-l-4 border-stone-600 dark:border-stone-600 p-4 rounded-lg">
+              <div className="bg-stone-100 dark:bg-stone-900 border-l-2 border-stone-600/30 dark:border-stone-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Tailwind classes not applying</h3>
                 <p className="text-sm mb-2">
                   <strong>Cause:</strong> Missing @tailwind directives or wrong content config
@@ -440,7 +440,7 @@ vercel --prod`}
                 </p>
               </div>
 
-              <div className="bg-slate-100 dark:bg-slate-900 border-l-4 border-slate-600 dark:border-slate-600 p-4 rounded-lg">
+              <div className="bg-slate-100 dark:bg-slate-900 border-l-2 border-slate-600/30 dark:border-slate-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Vercel deployment succeeds but page shows 404</h3>
                 <p className="text-sm mb-2">
                   <strong>Cause:</strong> Next.js routing misconfiguration or missing page.tsx
@@ -563,7 +563,7 @@ vercel --prod`}
                 <span>Step 7 (Vercel deployment)</span>
                 <span className="font-bold">20 minutes</span>
               </div>
-              <div className="flex justify-between items-center bg-slate-100 dark:bg-slate-900 p-3 rounded border-l-4 border-slate-600 dark:border-slate-600">
+              <div className="flex justify-between items-center bg-slate-100 dark:bg-slate-900 p-3 rounded border-l-2 border-slate-600/30 dark:border-slate-600">
                 <span className="font-bold">Total (first time)</span>
                 <span className="font-bold">~2 hours</span>
               </div>

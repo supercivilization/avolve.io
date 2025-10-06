@@ -71,7 +71,7 @@ export default function ShadcnUIPage() {
           </p>
 
           {/* Core Identity Section */}
-          <section id="overview" className="mb-12 bg-slate-50 border-l-4 border-slate-600 p-6 rounded-lg">
+          <section id="overview" className="mb-12 border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
               <strong>shadcn/ui 3.3</strong> is a component distribution platform that copies accessible, customizable components into your project—not an npm package. Built on <strong>Radix UI primitives</strong> and <strong>Tailwind CSS</strong>, used by <strong>OpenAI, Adobe, and 8,000+ companies</strong>.
@@ -101,7 +101,7 @@ export default function ShadcnUIPage() {
               </div>
             </div>
 
-            <div className="mt-4 bg-slate-100 p-4 rounded border-l-4 border-slate-600">
+            <div className="mt-4 bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
               <h3 className="font-bold mb-2">Official Documentation</h3>
               <p className="text-sm text-gray-700 mb-2">
                 For complete component reference and guides, visit:
@@ -119,7 +119,7 @@ export default function ShadcnUIPage() {
             <h2 className="text-3xl font-bold mb-6">Why It Matters</h2>
 
             <div className="space-y-6">
-              <div className="border-l-4 border-slate-600 pl-4">
+              <div className="border-l-2 border-slate-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-slate-800">Copy-Paste Philosophy: Code Ownership Without Vendor Lock-In</h3>
                 <p className="text-gray-700 mb-3">
                   Unlike traditional component libraries (Material-UI, Ant Design) distributed via npm, shadcn/ui copies source code directly into your project. This architectural decision gives you complete ownership, customization control, and eliminates dependency hell—while still providing pre-built, accessible components.
@@ -172,7 +172,7 @@ npx shadcn@latest add button
                 </div>
               </div>
 
-              <div className="border-l-4 border-stone-600 pl-4">
+              <div className="border-l-2 border-stone-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-stone-700">Universal Registry Platform (v3.3)</h3>
                 <p className="text-gray-700 mb-3">
                   shadcn/ui 3.3 introduces a universal component registry that works across frameworks and allows community contributions through namespaced components. This transforms shadcn/ui from a Next.js-only solution into a platform for the entire JavaScript ecosystem.
@@ -211,7 +211,7 @@ npx shadcn@latest add button
                 </div>
               </div>
 
-              <div className="border-l-4 border-zinc-600 pl-4">
+              <div className="border-l-2 border-zinc-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-zinc-700">Radix UI Foundation: Production-Grade Accessibility</h3>
                 <p className="text-gray-700 mb-3">
                   Every shadcn/ui component is built on Radix UI primitives, providing WCAG 2.1 Level AA accessibility by default. This includes keyboard navigation, screen reader support, and ARIA attributes—solving the hardest parts of building accessible components.
@@ -295,7 +295,7 @@ app/
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Dark Mode Integration</h3>
-                <div className="bg-slate-100 p-4 rounded border-l-4 border-slate-600">
+                <div className="bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
                   <h4 className="font-bold mb-2">next-themes Setup:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`// app/layout.tsx
 import { ThemeProvider } from "@/components/theme-provider"
@@ -343,7 +343,7 @@ export function ThemeToggle() {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Form Validation with Zod</h3>
-                <div className="bg-gray-100 p-4 rounded border-l-4 border-gray-600">
+                <div className="bg-gray-100 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
                   <h4 className="font-bold mb-2">Type-Safe Forms:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`"use client"
 
@@ -407,7 +407,7 @@ export function ProfileForm() {
             <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
 
             <div className="space-y-6">
-              <div className="bg-slate-50 p-4 rounded-lg border-l-4 border-slate-600">
+              <div className="bg-slate-50 p-4 rounded-lg border-l-2 border-slate-600/30">
                 <h3 className="text-lg font-bold mb-3">Server Components + Dialogs</h3>
                 <div className="space-y-3">
                   <div>
@@ -450,7 +450,7 @@ export async function UserCard({ user }) {
                 </div>
               </div>
 
-              <div className="bg-neutral-100 p-4 rounded-lg border-l-4 border-neutral-600">
+              <div className="bg-neutral-100 p-4 rounded-lg border-l-2 border-neutral-600/30">
                 <h3 className="text-lg font-bold mb-3">Production Issues and Fixes</h3>
                 <div className="space-y-4">
                   <div>

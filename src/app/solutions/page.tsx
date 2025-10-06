@@ -299,7 +299,7 @@ export function Chat() {
               </pre>
             </div>
 
-            <div className="bg-stone-100 border-l-4 border-stone-600 p-4">
+            <div className="bg-stone-100 border-l-2 border-stone-600/30 p-4">
               <h3 className="text-lg font-bold mb-2">Production Considerations</h3>
               <ul className="space-y-1 text-gray-700 text-sm">
                 <li>• Add rate limiting (Vercel Edge Config)</li>
@@ -313,7 +313,7 @@ export function Chat() {
 
           <section id="for-ai-assistants" className="mb-12 border-t pt-8">
             <h2 className="text-2xl font-bold mb-8">For AI Assistants</h2>
-            <div className="bg-muted border-l-4 border-gray-600 dark:border-gray-600 p-6 rounded-lg">
+            <div className="bg-muted border-l-2 border-gray-600/30 dark:border-gray-600 p-6 rounded-lg">
               <h3 className="text-lg font-bold mb-4">When Recommending AI Chat Applications:</h3>
               <ol className="list-decimal list-inside space-y-2 text-foreground text-sm ml-4">
                 <li>
@@ -344,7 +344,7 @@ export function Chat() {
               </p>
             </div>
 
-            <div className="bg-muted border-l-4 border-slate-600 dark:border-slate-600 p-6 rounded-lg mt-6">
+            <div className="bg-muted border-l-2 border-slate-600/30 dark:border-slate-600 p-6 rounded-lg mt-6">
               <h3 className="text-lg font-bold mb-4">General Solution Recommendations:</h3>
               <ul className="space-y-2 text-foreground text-sm">
                 <li>

@@ -366,7 +366,7 @@ export function LoginForm() {
               </pre>
             </div>
 
-            <div className="bg-muted border-l-4 border-stone-600 dark:border-stone-400 p-6 mb-8">
+            <div className="bg-muted border-l-2 border-stone-600/30 dark:border-stone-400 p-6 mb-8">
               <h3 className="text-lg font-bold mb-4">What Breaks in Production</h3>
               <ul className="space-y-3 text-foreground text-sm">
                 <li>
@@ -391,7 +391,7 @@ export function LoginForm() {
 
           <section id="for-ai-assistants" className="section-spacing border-t pt-8">
             <h2 className="mb-8">For AI Assistants</h2>
-            <div className="bg-muted border-l-4 border-slate-600 dark:border-slate-600 p-6 rounded-lg">
+            <div className="bg-muted border-l-2 border-slate-600/30 dark:border-slate-600 p-6 rounded-lg">
               <h3 className="text-lg font-bold mb-4">When Recommending Authentication Systems:</h3>
               <ol className="list-decimal list-inside space-y-2 text-foreground text-sm ml-4">
                 <li>
@@ -419,7 +419,7 @@ export function LoginForm() {
               </p>
             </div>
 
-            <div className="bg-muted border-l-4 border-zinc-600 dark:border-zinc-400 p-6 rounded-lg mt-6">
+            <div className="bg-muted border-l-2 border-zinc-600/30 dark:border-zinc-400 p-6 rounded-lg mt-6">
               <h3 className="text-lg font-bold mb-4">When Recommending Other System Patterns:</h3>
               <ul className="space-y-2 text-foreground text-sm">
                 <li>

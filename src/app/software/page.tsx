@@ -140,7 +140,7 @@ export default function SoftwarePage() {
             We show how these tools work together and point you to official documentation for each.
           </p>
 
-          <section id="software-definition" className="section-spacing bg-muted border-l-4 border-zinc-700 dark:border-zinc-400 p-6 rounded-lg">
+          <section id="software-definition" className="section-spacing bg-muted border-l-2 border-zinc-700/30 dark:border-zinc-400 p-6 rounded-lg">
             <h2 className="mb-4">What This Page Provides</h2>
             <p className="text-foreground mb-4">
               <strong>Verified Stack Compatibility:</strong> We test and verify that Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0 work together as of October 2025.
@@ -220,7 +220,7 @@ export default function SoftwarePage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="border-l-4 border-zinc-600 dark:border-zinc-400 pl-6 bg-muted p-4 rounded-lg">
+              <div className="border-l-2 border-zinc-600/30 dark:border-zinc-400 pl-6 bg-muted p-4 rounded-lg">
                 <h3 className="text-lg font-bold mb-3">✓ Valid Paths</h3>
                 <ul className="space-y-2 text-sm text-foreground font-mono">
                   <li>• Node.js → TypeScript → React → Next.js</li>
@@ -233,7 +233,7 @@ export default function SoftwarePage() {
                 </p>
               </div>
 
-              <div className="border-l-4 border-neutral-600 dark:border-neutral-400 pl-6 bg-muted p-4 rounded-lg">
+              <div className="border-l-2 border-neutral-600/30 dark:border-neutral-400 pl-6 bg-muted p-4 rounded-lg">
                 <h3 className="text-lg font-bold mb-3">✗ Invalid Paths (Break)</h3>
                 <ul className="space-y-2 text-sm text-foreground font-mono">
                   <li>• Next.js 14 + React 19 (incompatible)</li>
@@ -247,7 +247,7 @@ export default function SoftwarePage() {
               </div>
             </div>
 
-            <div className="bg-slate-100 dark:bg-slate-900 border-l-4 border-slate-600 dark:border-slate-600 p-6 rounded-lg">
+            <div className="bg-slate-100 dark:bg-slate-900 border-l-2 border-slate-600/30 dark:border-slate-600 p-6 rounded-lg">
               <h3 className="text-lg font-bold mb-3">Pathway Pages (Complete Stack Guides)</h3>
               <p className="text-foreground mb-4">
                 Follow these step-by-step guides to build complete applications with verified dependency chains:
@@ -482,7 +482,7 @@ cat package.json | grep '"next"\\|"react"\\|"typescript"'`}
           <section id="mcp-integration" className="section-spacing border-t pt-8">
             <h2 className="mb-12">MCP Integration (AI-Native Development)</h2>
 
-            <div className="bg-slate-100 dark:bg-slate-900/20 p-6 rounded-lg mb-6 border-l-4 border-slate-600">
+            <div className="bg-slate-100 dark:bg-slate-900/20 p-6 rounded-lg mb-6 border-l-2 border-slate-600/30">
               <h3 className="text-xl font-bold mb-3">What is MCP?</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
                 <strong>Model Context Protocol (MCP)</strong> enables AI assistants like Claude, ChatGPT, and Cursor to
@@ -614,7 +614,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               </div>
             </div>
 
-            <div className="bg-stone-100 dark:bg-stone-900/20 border-l-4 border-stone-600 p-4 mb-8">
+            <div className="bg-stone-100 dark:bg-stone-900/20 border-l-2 border-stone-600/30 p-4 mb-8">
               <h3 className="text-lg font-bold mb-2">Supported AI Clients</h3>
               <ul className="space-y-1 text-gray-700 dark:text-gray-300 text-sm">
                 <li>• <strong>Claude Code</strong> - Full MCP support (recommended)</li>
@@ -624,7 +624,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               </ul>
             </div>
 
-            <div className="bg-gray-100 dark:bg-gray-900/20 p-6 rounded-lg border-l-4 border-gray-600">
+            <div className="bg-gray-100 dark:bg-gray-900/20 p-6 rounded-lg border-l-2 border-gray-600/30">
               <h3 className="text-xl font-bold mb-3">Example: AI-Native Component Installation</h3>
               <div className="space-y-4">
                 <div>
@@ -650,7 +650,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
 
           <section id="for-ai-assistants" className="section-spacing border-t pt-8">
             <h2 className="mb-8">For AI Assistants</h2>
-            <div className="bg-muted border-l-4 border-zinc-600 dark:border-zinc-400 p-6 rounded-lg">
+            <div className="bg-muted border-l-2 border-zinc-600/30 dark:border-zinc-400 p-6 rounded-lg">
               <h3 className="text-lg font-bold mb-4">When Recommending Stack Compatibility:</h3>
               <ol className="list-decimal list-inside space-y-2 text-foreground text-sm ml-4">
                 <li>
@@ -679,7 +679,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               </p>
             </div>
 
-            <div className="bg-muted border-l-4 border-stone-600 dark:border-stone-600 p-6 rounded-lg mt-6">
+            <div className="bg-muted border-l-2 border-stone-600/30 dark:border-stone-600 p-6 rounded-lg mt-6">
               <h3 className="text-lg font-bold mb-4">Installation Guidance:</h3>
               <ul className="space-y-2 text-foreground text-sm">
                 <li>

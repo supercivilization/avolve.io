@@ -70,7 +70,7 @@ export default function SupabasePage() {
           </p>
 
           {/* Core Identity Section */}
-          <section id="overview" className="mb-12 bg-zinc-100 border-l-4 border-zinc-600 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-zinc-100 border-l-2 border-zinc-600/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-gray-700 mb-4">
               <strong>Supabase</strong> is an open-source Firebase alternative built on <strong>PostgreSQL 15.8</strong> (production default; CLI uses 17 for local development), providing authentication, database, storage, real-time subscriptions, and AI-powered vector search. Used by <strong>1.7M developers</strong> and <strong>40% of Y Combinator startups</strong> with <strong>$70M ARR</strong>.
@@ -101,7 +101,7 @@ export default function SupabasePage() {
               </div>
             </div>
 
-            <div className="mt-4 bg-slate-100 p-4 rounded border-l-4 border-slate-600">
+            <div className="mt-4 bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
               <h3 className="font-bold mb-2">Official Documentation</h3>
               <p className="text-sm text-gray-700 mb-2">
                 For API reference and guides, visit:
@@ -119,7 +119,7 @@ export default function SupabasePage() {
             <h2 className="text-3xl font-bold mb-6">Why It Matters</h2>
 
             <div className="space-y-6">
-              <div className="border-l-4 border-zinc-600 pl-4">
+              <div className="border-l-2 border-zinc-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-zinc-700">Production-Grade PostgreSQL Without DevOps</h3>
                 <p className="text-gray-700 mb-3">
                   Supabase eliminates database operations complexity while providing full PostgreSQL 15.8 access (production default). Unlike Firebase's NoSQL limitations, you get SQL joins, transactions, triggers, and extensions—without managing servers, backups, or scaling infrastructure.
@@ -151,7 +151,7 @@ export default function SupabasePage() {
                 </div>
               </div>
 
-              <div className="border-l-4 border-slate-600 pl-4">
+              <div className="border-l-2 border-slate-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-slate-700">Row Level Security for Zero-Trust Architecture</h3>
                 <p className="text-gray-700 mb-3">
                   PostgreSQL's Row Level Security (RLS) enforces data access at the database layer, not application code. This architectural pattern eliminates entire classes of security vulnerabilities by making authorization impossible to bypass—even with direct database access or compromised API keys.
@@ -189,7 +189,7 @@ const { data } = await supabase
                 </div>
               </div>
 
-              <div className="border-l-4 border-gray-600 pl-4">
+              <div className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm pl-4">
                 <h3 className="text-xl font-bold mb-3 text-gray-700">AI-Native Vector Search with pgvector 0.8.0</h3>
                 <p className="text-gray-700 mb-3">
                   pgvector 0.8.0 brings production-grade AI capabilities directly into PostgreSQL with HNSW (Hierarchical Navigable Small World) indexing. This enables semantic search, RAG (Retrieval Augmented Generation), and AI features without external vector databases—reducing infrastructure complexity and cost.
@@ -295,7 +295,7 @@ export const config = {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Row Level Security Patterns</h3>
-                <div className="bg-slate-100 p-4 rounded border-l-4 border-slate-600">
+                <div className="bg-slate-100 p-4 rounded border-l-2 border-slate-600/30">
                   <h4 className="font-bold mb-2">Complete RLS Setup:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`-- Enable RLS on table
 ALTER TABLE documents ENABLE ROW LEVEL SECURITY;
@@ -325,7 +325,7 @@ USING (auth.uid() = user_id);`}</pre>
 
               <div>
                 <h3 className="text-xl font-bold mb-3">pgvector 0.8.0 Setup</h3>
-                <div className="bg-gray-100 p-4 rounded border-l-4 border-gray-600">
+                <div className="bg-gray-100 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
                   <h4 className="font-bold mb-2">Database Schema with HNSW Index:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`-- Enable pgvector extension
 CREATE EXTENSION IF NOT EXISTS vector;
@@ -376,7 +376,7 @@ $$;`}</pre>
             <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
 
             <div className="space-y-6">
-              <div className="bg-zinc-100 p-4 rounded-lg border-l-4 border-zinc-600">
+              <div className="bg-zinc-100 p-4 rounded-lg border-l-2 border-zinc-600/30">
                 <h3 className="text-lg font-bold mb-3">Complete Authentication Flow</h3>
                 <div className="space-y-3">
                   <div>
@@ -461,7 +461,7 @@ export async function searchDocuments(query: string) {
                 </div>
               </div>
 
-              <div className="bg-neutral-100 p-4 rounded-lg border-l-4 border-neutral-600">
+              <div className="bg-neutral-100 p-4 rounded-lg border-l-2 border-neutral-600/30">
                 <h3 className="text-lg font-bold mb-3">Production Issues and Fixes</h3>
                 <div className="space-y-4">
                   <div>

@@ -236,7 +236,7 @@ export default function AboutPage() {
             </p>
 
             <dl className="space-y-6">
-              <div className="border-l-4 border-slate-600 pl-4">
+              <div className="border-l-2 border-slate-600/30 pl-4">
                 <dt className="text-lg font-bold text-slate-700">Solutions</dt>
                 <dd className="text-gray-700">
                   <strong>What you deliver.</strong> Business outcomes for end users. Examples: AI customer support,
@@ -244,7 +244,7 @@ export default function AboutPage() {
                 </dd>
               </div>
 
-              <div className="border-l-4 border-gray-600 pl-4">
+              <div className="border-l-2 border-gray-600/30 pl-4">
                 <dt className="text-lg font-bold text-gray-700">Systems</dt>
                 <dd className="text-gray-700">
                   <strong>How you architect.</strong> Patterns that coordinate components. Examples: authentication,
@@ -252,7 +252,7 @@ export default function AboutPage() {
                 </dd>
               </div>
 
-              <div className="border-l-4 border-zinc-700 pl-4">
+              <div className="border-l-2 border-zinc-700/30 pl-4">
                 <dt className="text-lg font-bold text-zinc-700">Software</dt>
                 <dd className="text-gray-700">
                   <strong>What you code with.</strong> Frameworks, libraries, languages. Examples: Next.js 15.5.5,
@@ -260,7 +260,7 @@ export default function AboutPage() {
                 </dd>
               </div>
 
-              <div className="border-l-4 border-neutral-600 pl-4">
+              <div className="border-l-2 border-neutral-600/30 pl-4">
                 <dt className="text-lg font-bold text-neutral-700">Services</dt>
                 <dd className="text-gray-700">
                   <strong>What you buy.</strong> External managed capabilities. Examples: Vercel ($0-20/mo),
@@ -268,7 +268,7 @@ export default function AboutPage() {
                 </dd>
               </div>
 
-              <div className="border-l-4 border-stone-600 pl-4">
+              <div className="border-l-2 border-stone-600/30 pl-4">
                 <dt className="text-lg font-bold text-stone-700">Support</dt>
                 <dd className="text-gray-700">
                   <strong>How you maintain.</strong> Operations keeping production running. Examples: debugging,
