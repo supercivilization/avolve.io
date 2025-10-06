@@ -22,7 +22,7 @@ export function SiteFooter() {
                   <span className="inline-block h-2 w-2 rounded-full bg-zinc-400 animate-pulse" />
                   <span className="font-semibold text-foreground">All Systems Operational</span>
                   <span className="text-muted-foreground/60">·</span>
-                  <span className="text-muted-foreground">Updated Oct 5, 2025</span>
+                  <span className="text-muted-foreground">Updated Oct 6, 2025</span>
                 </div>
                 <Button
                   variant="ghost"
@@ -35,175 +35,265 @@ export function SiteFooter() {
                 </Button>
               </div>
 
-              {/* Main Content Grid */}
-              <div className="grid gap-12 md:grid-cols-4 mb-12">
-                {/* Navigate Column */}
+              {/* 5S Framework Navigation - 5 Equal Columns */}
+              <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-5 mb-12">
+                {/* Solutions Column - Slate */}
                 <div>
-                  <h4 className="mb-4 text-sm font-semibold text-foreground">Navigate</h4>
+                  <h4 className="mb-4 text-sm font-semibold text-slate-600 dark:text-slate-400">Solutions</h4>
                   <nav className="flex flex-col gap-3 text-sm">
-                    <Link
-                      href="/about"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      About
-                    </Link>
                     <Link
                       href="/solutions"
+                      className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                    >
+                      Overview
+                    </Link>
+                    <Link
+                      href="/solutions#ai-customer-support"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      Solutions
+                      AI Customer Support
                     </Link>
+                    <Link
+                      href="/solutions#ai-chat-app"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      AI Chat Application
+                    </Link>
+                    <span className="text-muted-foreground/40 text-xs italic">
+                      Complete examples
+                    </span>
+                  </nav>
+                </div>
+
+                {/* Systems Column - Gray */}
+                <div>
+                  <h4 className="mb-4 text-sm font-semibold text-gray-600 dark:text-gray-400">Systems</h4>
+                  <nav className="flex flex-col gap-3 text-sm">
                     <Link
                       href="/systems"
+                      className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                    >
+                      Overview
+                    </Link>
+                    <Link
+                      href="/systems#auth-system"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      Systems
+                      Authentication
                     </Link>
+                    <Link
+                      href="/systems/search"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Search (pgvector)
+                    </Link>
+                    <Link
+                      href="/systems/email"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Email (Resend)
+                    </Link>
+                    <Link
+                      href="/systems/mobile"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Mobile (PWA)
+                    </Link>
+                    <Link
+                      href="/systems/social"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Social Login
+                    </Link>
+                  </nav>
+                </div>
+
+                {/* Software Column - Zinc */}
+                <div>
+                  <h4 className="mb-4 text-sm font-semibold text-zinc-600 dark:text-zinc-400">Software</h4>
+                  <nav className="flex flex-col gap-3 text-sm">
                     <Link
                       href="/software"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-muted-foreground hover:text-foreground transition-colors font-medium"
                     >
-                      Software
+                      Overview
                     </Link>
                     <Link
-                      href="/services"
+                      href="/software/nodejs"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      Services
+                      Node.js 22/24
                     </Link>
                     <Link
-                      href="/support"
+                      href="/software/typescript"
                       className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Support
-                    </Link>
-                  </nav>
-                </div>
-
-                {/* Tech Stack Column */}
-                <div>
-                  <h4 className="mb-4 text-sm font-semibold text-foreground">Tech Stack</h4>
-                  <div className="flex flex-col gap-3 text-sm text-muted-foreground">
-                    <a
-                      href="https://nextjs.org"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors"
-                    >
-                      Next.js 15.5
-                    </a>
-                    <a
-                      href="https://react.dev"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors"
-                    >
-                      React 19.2
-                    </a>
-                    <a
-                      href="https://www.typescriptlang.org"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors"
                     >
                       TypeScript 5.9
-                    </a>
-                    <a
-                      href="https://supabase.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors"
-                    >
-                      Supabase
-                    </a>
-                    <a
-                      href="https://ui.shadcn.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors"
-                    >
-                      shadcn/ui
-                    </a>
-                    <a
-                      href="https://tailwindcss.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-foreground transition-colors"
-                    >
-                      Tailwind CSS
-                    </a>
-                  </div>
-                </div>
-
-                {/* Resources Column */}
-                <div>
-                  <h4 className="mb-4 text-sm font-semibold text-foreground">Resources</h4>
-                  <nav className="flex flex-col gap-3 text-sm">
-                    <a
-                      href="https://nextjs.org/docs"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    </Link>
+                    <Link
+                      href="/software/react"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      Documentation
-                    </a>
-                    <a
-                      href="https://github.com/supercivilization"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      React 19.2
+                    </Link>
+                    <Link
+                      href="/software/nextjs"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      GitHub
-                    </a>
-                    <a
-                      href="https://vercel.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      Next.js 15.5
+                    </Link>
+                    <Link
+                      href="/software/tailwind"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      Vercel
-                    </a>
+                      Tailwind 4.1
+                    </Link>
+                    <Link
+                      href="/software/shadcn-ui"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      shadcn/ui 3.4
+                    </Link>
+                    <Link
+                      href="/software/vercel-ai-sdk"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Vercel AI SDK 5.0
+                    </Link>
+                    <Link
+                      href="/software/supabase"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Supabase (PG 15.8)
+                    </Link>
                   </nav>
                 </div>
 
-                {/* Connect Column */}
+                {/* Services Column - Neutral */}
                 <div>
-                  <h4 className="mb-4 text-sm font-semibold text-foreground">Connect</h4>
+                  <h4 className="mb-4 text-sm font-semibold text-neutral-600 dark:text-neutral-400">Services</h4>
                   <nav className="flex flex-col gap-3 text-sm">
-                    <a
-                      href="https://www.joshuaseymour.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/services"
+                      className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                    >
+                      Overview
+                    </Link>
+                    <Link
+                      href="/services#vercel"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      Joshua Seymour
-                    </a>
-                    <a
-                      href="https://github.com/supercivilization"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      Vercel (Hosting)
+                    </Link>
+                    <Link
+                      href="/services#supabase"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      GitHub
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/jseymour/"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      Supabase (Database)
+                    </Link>
+                    <Link
+                      href="/services#claude-api"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      LinkedIn
-                    </a>
-                    <a
-                      href="https://www.supercivilization.xyz"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      Claude API (AI)
+                    </Link>
+                    <Link
+                      href="/services#resend"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      Supercivilization
-                    </a>
+                      Resend (Email)
+                    </Link>
+                    <Link
+                      href="/services#stripe"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Stripe (Payments)
+                    </Link>
+                    <Link
+                      href="/services/dataforseo"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      DataForSEO (SEO API)
+                    </Link>
                   </nav>
                 </div>
+
+                {/* Support Column - Stone */}
+                <div>
+                  <h4 className="mb-4 text-sm font-semibold text-stone-600 dark:text-stone-400">Support</h4>
+                  <nav className="flex flex-col gap-3 text-sm">
+                    <Link
+                      href="/support"
+                      className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                    >
+                      Overview
+                    </Link>
+                    <Link
+                      href="/support#auth-loops"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Auth Loop Fixes
+                    </Link>
+                    <Link
+                      href="/support#slow-queries"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Slow Database Queries
+                    </Link>
+                    <Link
+                      href="/support#build-failures"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Build Failures
+                    </Link>
+                    <Link
+                      href="/support#rate-limits"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      API Rate Limits
+                    </Link>
+                    <Link
+                      href="/support#ai-coding-tools"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      AI Coding Tools
+                    </Link>
+                    <span className="text-muted-foreground/40 text-xs italic">
+                      Production debugging
+                    </span>
+                  </nav>
+                </div>
+              </div>
+
+              {/* Pathway Quick Links Row */}
+              <div className="mb-12 pb-8 border-b border-border/30">
+                <h4 className="mb-4 text-sm font-semibold text-foreground">Integration Pathways</h4>
+                <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                  <Link
+                    href="/software/react-to-production"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    React → Production
+                  </Link>
+                  <Link
+                    href="/software/type-safe-stack"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Type-Safe Stack
+                  </Link>
+                  <Link
+                    href="/software/ai-enabled-stack"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    AI-Enabled Stack
+                  </Link>
+                  <Link
+                    href="/about"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    About
+                  </Link>
+                </nav>
               </div>
 
               {/* Bottom Copyright */}
@@ -219,8 +309,35 @@ export function SiteFooter() {
                     >
                       Supercivilization
                     </a>
+                    {" "}· Built with{" "}
+                    <a
+                      href="https://github.com/anthropics/claude-code"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-foreground transition-colors"
+                    >
+                      Claude Code
+                    </a>
                   </p>
                   <div className="flex items-center gap-4 text-xs">
+                    <a
+                      href="https://www.joshuaseymour.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-foreground transition-colors"
+                    >
+                      Joshua Seymour
+                    </a>
+                    <span>·</span>
+                    <a
+                      href="https://github.com/supercivilization"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-foreground transition-colors"
+                    >
+                      GitHub
+                    </a>
+                    <span>·</span>
                     <Link href="/privacy" className="hover:text-foreground transition-colors">
                       Privacy
                     </Link>
