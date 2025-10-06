@@ -230,7 +230,7 @@ export default function SoftwarePage() {
                       <div className="flex gap-3 text-sm">
                         <a href="https://ui.shadcn.com" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
                         <a href="https://github.com/shadcn-ui/ui" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://ui.shadcn.com/changelog" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Changelog</a>
+                        <a href="https://github.com/shadcn-ui/ui/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
                       </div>
                     </td>
                     <td className="px-4 py-3">
