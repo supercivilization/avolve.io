@@ -127,17 +127,263 @@ export default function SoftwarePage() {
       />
 
       <main className="page-container">
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
+          Last updated: October 6, 2025
         </time>
 
         <article>
-          <h1 className="mb-4">Software - Modern Stack Integration</h1>
+          <h1 className="mb-4">Software - Modern Stack Reference</h1>
           <p className="lead mb-4">
-            Verified compatibility matrix and integration patterns for the modern development stack
+            Fast lookup: current versions, official docs, verified compatibility
           </p>
+
+          {/* QUICK REFERENCE TABLE - Primary utility for fast lookup */}
+          <section id="quick-reference" className="mb-12 border border-border/50 rounded-lg overflow-hidden shadow-sm">
+            <div className="bg-muted/30 px-6 py-3 border-b border-border/40">
+              <h2 className="text-xl font-bold">Current Stack (Verified October 6, 2025)</h2>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-muted/20">
+                  <tr className="border-b border-border/40">
+                    <th className="px-4 py-3 text-left font-semibold">Software</th>
+                    <th className="px-4 py-3 text-left font-semibold">Version</th>
+                    <th className="px-4 py-3 text-left font-semibold">Official Links</th>
+                    <th className="px-4 py-3 text-left font-semibold">Our Guides</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border/40">
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono font-semibold">Node.js</td>
+                    <td className="px-4 py-3 font-mono">22.20.0 LTS</td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://nodejs.org/docs/latest-v22.x/api/" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://github.com/nodejs/node" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
+                        <a href="https://github.com/nodejs/node/blob/main/CHANGELOG.md" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Changelog</a>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/software/nodejs" className="text-sm text-blue-600 hover:underline">Node.js Guide →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono font-semibold">TypeScript</td>
+                    <td className="px-4 py-3 font-mono">5.9.3</td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://www.typescriptlang.org/docs/" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://github.com/microsoft/TypeScript" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
+                        <a href="https://github.com/microsoft/TypeScript/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/software/typescript" className="text-sm text-blue-600 hover:underline">TypeScript Guide →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono font-semibold">React</td>
+                    <td className="px-4 py-3 font-mono">19.2.0</td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://react.dev" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://github.com/facebook/react" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
+                        <a href="https://github.com/facebook/react/blob/main/CHANGELOG.md" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Changelog</a>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/software/react" className="text-sm text-blue-600 hover:underline">React Guide →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono font-semibold">Next.js</td>
+                    <td className="px-4 py-3 font-mono">15.5.4</td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://nextjs.org/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://github.com/vercel/next.js" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
+                        <a href="https://github.com/vercel/next.js/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/software/nextjs" className="text-sm text-blue-600 hover:underline">Next.js Guide →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono font-semibold">Tailwind CSS</td>
+                    <td className="px-4 py-3 font-mono">4.1.14</td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://tailwindcss.com/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://github.com/tailwindlabs/tailwindcss" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
+                        <a href="https://github.com/tailwindlabs/tailwindcss/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/software/tailwind" className="text-sm text-blue-600 hover:underline">Tailwind Guide →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono font-semibold">shadcn/ui</td>
+                    <td className="px-4 py-3 font-mono">3.4.0</td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://ui.shadcn.com" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://github.com/shadcn-ui/ui" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
+                        <a href="https://ui.shadcn.com/changelog" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Changelog</a>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/software/shadcn-ui" className="text-sm text-blue-600 hover:underline">shadcn/ui Guide →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono font-semibold">Vercel AI SDK</td>
+                    <td className="px-4 py-3 font-mono">5.0.60</td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://sdk.vercel.ai/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://github.com/vercel/ai" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
+                        <a href="https://github.com/vercel/ai/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/software/vercel-ai-sdk" className="text-sm text-blue-600 hover:underline">AI SDK Guide →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono font-semibold">Supabase</td>
+                    <td className="px-4 py-3 font-mono">2.58.0</td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://supabase.com/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://github.com/supabase/supabase" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
+                        <a href="https://github.com/supabase/supabase-js/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/software/supabase" className="text-sm text-blue-600 hover:underline">Supabase Guide →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono font-semibold">lucide-react</td>
+                    <td className="px-4 py-3 font-mono">0.460.0</td>
+                    <td className="px-4 py-3">
+                      <div className="flex gap-3 text-sm">
+                        <a href="https://lucide.dev" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
+                        <a href="https://github.com/lucide-icons/lucide" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
+                        <a href="https://github.com/lucide-icons/lucide/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <span className="text-sm text-muted-foreground">1,500+ icons</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
+              <p className="text-sm text-muted-foreground">
+                <strong>All versions verified working together</strong> • Tested on Node.js 22.20.0, macOS Sonoma 14.6.1 • Last verified: October 6, 2025
+              </p>
+            </div>
+          </section>
+
+          {/* COMPATIBILITY MATRIX - Shows what works with what */}
+          <section id="compatibility-matrix" className="mb-12 border border-border/50 rounded-lg overflow-hidden shadow-sm">
+            <div className="bg-muted/30 px-6 py-3 border-b border-border/40">
+              <h2 className="text-xl font-bold">Compatibility Matrix</h2>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-muted/20">
+                  <tr className="border-b border-border/40">
+                    <th className="px-4 py-3 text-left font-semibold">Combination</th>
+                    <th className="px-4 py-3 text-left font-semibold">Status</th>
+                    <th className="px-4 py-3 text-left font-semibold">Notes</th>
+                    <th className="px-4 py-3 text-left font-semibold">Verified</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border/40">
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono text-sm">Next.js 15.5.4 + React 19.2.0</td>
+                    <td className="px-4 py-3">
+                      <span className="inline-flex items-center gap-1 text-green-600 font-semibold">
+                        <span>✓</span> Compatible
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-sm">Server Components stable</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono text-sm">Next.js 15.5.4 + Supabase 2.58.0</td>
+                    <td className="px-4 py-3">
+                      <span className="inline-flex items-center gap-1 text-green-600 font-semibold">
+                        <span>✓</span> Compatible
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      <Link href="/systems" className="text-blue-600 hover:underline">Auth pattern →</Link>
+                    </td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono text-sm">Tailwind 4.1.14 + shadcn/ui 3.4.0</td>
+                    <td className="px-4 py-3">
+                      <span className="inline-flex items-center gap-1 text-green-600 font-semibold">
+                        <span>✓</span> Compatible
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-sm">Requires Tailwind 4+</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono text-sm">Vercel AI SDK 5.0 + Next.js 15.5</td>
+                    <td className="px-4 py-3">
+                      <span className="inline-flex items-center gap-1 text-green-600 font-semibold">
+                        <span>✓</span> Compatible
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-sm">Edge runtime streaming works</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-mono text-sm">Node.js 22.20 + TypeScript 5.9</td>
+                    <td className="px-4 py-3">
+                      <span className="inline-flex items-center gap-1 text-green-600 font-semibold">
+                        <span>✓</span> Compatible
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-sm">Native TS execution (no transpilation)</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                  </tr>
+                  <tr className="hover:bg-muted/20 bg-red-50/50 dark:bg-red-900/10">
+                    <td className="px-4 py-3 font-mono text-sm">Next.js 14.x + React 19.x</td>
+                    <td className="px-4 py-3">
+                      <span className="inline-flex items-center gap-1 text-red-600 font-semibold">
+                        <span>✗</span> Incompatible
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-sm text-red-600">Requires Next.js 15+</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                  </tr>
+                  <tr className="hover:bg-muted/20 bg-red-50/50 dark:bg-red-900/10">
+                    <td className="px-4 py-3 font-mono text-sm">shadcn/ui 3.x + Tailwind 3.x</td>
+                    <td className="px-4 py-3">
+                      <span className="inline-flex items-center gap-1 text-red-600 font-semibold">
+                        <span>✗</span> Incompatible
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-sm text-red-600">Must upgrade to Tailwind 4</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
           <p className="text-muted-foreground section-spacing">
-            We show how these tools work together and point you to official documentation for each.
+            Below: Detailed integration guides, dependency chains, and installation instructions.
           </p>
 
           <section id="software-definition" className="section-spacing bg-muted border-l-2 border-zinc-700/30 dark:border-zinc-400 p-6 rounded-lg">
