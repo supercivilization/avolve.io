@@ -135,15 +135,7 @@ export default function SoftwarePage() {
           {/* QUICK REFERENCE TABLE - Primary utility for fast lookup */}
           <section id="quick-reference" className="mb-12 border border-border/50 rounded-lg overflow-hidden shadow-sm">
             <div className="bg-muted/30 px-6 py-3 border-b border-border/40">
-              <h2 className="text-xl font-bold">
-                Current Stack
-                <time
-                  dateTime="2025-10-06"
-                  className="hidden sm:inline text-muted-foreground font-normal text-base ml-2"
-                >
-                  Oct 2025
-                </time>
-              </h2>
+              <h2 className="text-xl font-bold">Current Stack</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
