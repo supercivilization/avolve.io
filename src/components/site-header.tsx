@@ -16,34 +16,34 @@ export function SiteHeader() {
         {/* Navigation */}
         <nav className="hidden md:block">
           <ButtonGroup>
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/solutions" className="flex items-center gap-2">
-                <Rocket className="text-slate-600 dark:text-slate-400" size={16} strokeWidth={2} />
-                <span>Solutions</span>
+            <Button variant="ghost" asChild>
+              <Link href="/solutions" className="flex items-center gap-2 hover:bg-accent transition-colors">
+                <Rocket className="text-slate-600 dark:text-slate-400" size={18} strokeWidth={2} />
+                <span className="font-medium">Solutions</span>
               </Link>
             </Button>
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/systems" className="flex items-center gap-2">
-                <Network className="text-gray-600 dark:text-gray-400" size={16} strokeWidth={2} />
-                <span>Systems</span>
+            <Button variant="ghost" asChild>
+              <Link href="/systems" className="flex items-center gap-2 hover:bg-accent transition-colors">
+                <Network className="text-gray-600 dark:text-gray-400" size={18} strokeWidth={2} />
+                <span className="font-medium">Systems</span>
               </Link>
             </Button>
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/software" className="flex items-center gap-2">
-                <Code className="text-zinc-700 dark:text-zinc-400" size={16} strokeWidth={2} />
-                <span>Software</span>
+            <Button variant="ghost" asChild>
+              <Link href="/software" className="flex items-center gap-2 hover:bg-accent transition-colors">
+                <Code className="text-zinc-700 dark:text-zinc-400" size={18} strokeWidth={2} />
+                <span className="font-medium">Software</span>
               </Link>
             </Button>
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/services" className="flex items-center gap-2">
-                <Cloud className="text-neutral-600 dark:text-neutral-400" size={16} strokeWidth={2} />
-                <span>Services</span>
+            <Button variant="ghost" asChild>
+              <Link href="/services" className="flex items-center gap-2 hover:bg-accent transition-colors">
+                <Cloud className="text-neutral-600 dark:text-neutral-400" size={18} strokeWidth={2} />
+                <span className="font-medium">Services</span>
               </Link>
             </Button>
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/support" className="flex items-center gap-2">
-                <LifeBuoy className="text-stone-600 dark:text-stone-400" size={16} strokeWidth={2} />
-                <span>Support</span>
+            <Button variant="ghost" asChild>
+              <Link href="/support" className="flex items-center gap-2 hover:bg-accent transition-colors">
+                <LifeBuoy className="text-stone-600 dark:text-stone-400" size={18} strokeWidth={2} />
+                <span className="font-medium">Support</span>
               </Link>
             </Button>
           </ButtonGroup>
