@@ -168,7 +168,15 @@ export default function SupportPage() {
           {/* QUICK REFERENCE TABLE - Primary utility for fast troubleshooting */}
           <section id="quick-reference" className="mb-12 border border-border/50 rounded-lg overflow-hidden shadow-sm">
             <div className="bg-muted/30 px-6 py-3 border-b border-border/40">
-              <h2 className="text-xl font-bold">Common Issues (Verified October 6, 2025)</h2>
+              <h2 className="text-xl font-bold">
+                Common Issues
+                <time
+                  dateTime="2025-10-06"
+                  className="hidden sm:inline text-muted-foreground font-normal text-base ml-2"
+                >
+                  Oct 2025
+                </time>
+              </h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -244,7 +252,15 @@ export default function SupportPage() {
           {/* AI TOOLS QUICK REFERENCE */}
           <section id="ai-tools-quick-ref" className="mb-12 border border-border/50 rounded-lg overflow-hidden shadow-sm">
             <div className="bg-muted/30 px-6 py-3 border-b border-border/40">
-              <h2 className="text-xl font-bold">AI Coding Tools (Late 2025)</h2>
+              <h2 className="text-xl font-bold">
+                AI Coding Tools
+                <time
+                  dateTime="2025-10-06"
+                  className="hidden sm:inline text-muted-foreground font-normal text-base ml-2"
+                >
+                  Oct 2025
+                </time>
+              </h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
