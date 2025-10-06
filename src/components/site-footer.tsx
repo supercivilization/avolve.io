@@ -39,14 +39,12 @@ export function SiteFooter() {
               <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-5 mb-12">
                 {/* Solutions Column - Slate */}
                 <div>
-                  <h4 className="mb-4 text-sm font-semibold text-slate-600 dark:text-slate-400">Solutions</h4>
+                  <Link href="/solutions">
+                    <h4 className="mb-4 text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-500 dark:hover:text-slate-300 transition-colors cursor-pointer">
+                      Solutions
+                    </h4>
+                  </Link>
                   <nav className="flex flex-col gap-3 text-sm">
-                    <Link
-                      href="/solutions"
-                      className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-                    >
-                      Overview
-                    </Link>
                     <Link
                       href="/solutions#ai-customer-support"
                       className="text-muted-foreground hover:text-foreground transition-colors"
@@ -67,14 +65,12 @@ export function SiteFooter() {
 
                 {/* Systems Column - Gray */}
                 <div>
-                  <h4 className="mb-4 text-sm font-semibold text-gray-600 dark:text-gray-400">Systems</h4>
+                  <Link href="/systems">
+                    <h4 className="mb-4 text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors cursor-pointer">
+                      Systems
+                    </h4>
+                  </Link>
                   <nav className="flex flex-col gap-3 text-sm">
-                    <Link
-                      href="/systems"
-                      className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-                    >
-                      Overview
-                    </Link>
                     <Link
                       href="/systems#auth-system"
                       className="text-muted-foreground hover:text-foreground transition-colors"
@@ -110,14 +106,12 @@ export function SiteFooter() {
 
                 {/* Software Column - Zinc */}
                 <div>
-                  <h4 className="mb-4 text-sm font-semibold text-zinc-600 dark:text-zinc-400">Software</h4>
+                  <Link href="/software">
+                    <h4 className="mb-4 text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-500 dark:hover:text-zinc-300 transition-colors cursor-pointer">
+                      Software
+                    </h4>
+                  </Link>
                   <nav className="flex flex-col gap-3 text-sm">
-                    <Link
-                      href="/software"
-                      className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-                    >
-                      Overview
-                    </Link>
                     <Link
                       href="/software/nodejs"
                       className="text-muted-foreground hover:text-foreground transition-colors"
@@ -171,14 +165,12 @@ export function SiteFooter() {
 
                 {/* Services Column - Neutral */}
                 <div>
-                  <h4 className="mb-4 text-sm font-semibold text-neutral-600 dark:text-neutral-400">Services</h4>
+                  <Link href="/services">
+                    <h4 className="mb-4 text-sm font-semibold text-neutral-600 dark:text-neutral-400 hover:text-neutral-500 dark:hover:text-neutral-300 transition-colors cursor-pointer">
+                      Services
+                    </h4>
+                  </Link>
                   <nav className="flex flex-col gap-3 text-sm">
-                    <Link
-                      href="/services"
-                      className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-                    >
-                      Overview
-                    </Link>
                     <Link
                       href="/services#vercel"
                       className="text-muted-foreground hover:text-foreground transition-colors"
@@ -220,14 +212,12 @@ export function SiteFooter() {
 
                 {/* Support Column - Stone */}
                 <div>
-                  <h4 className="mb-4 text-sm font-semibold text-stone-600 dark:text-stone-400">Support</h4>
+                  <Link href="/support">
+                    <h4 className="mb-4 text-sm font-semibold text-stone-600 dark:text-stone-400 hover:text-stone-500 dark:hover:text-stone-300 transition-colors cursor-pointer">
+                      Support
+                    </h4>
+                  </Link>
                   <nav className="flex flex-col gap-3 text-sm">
-                    <Link
-                      href="/support"
-                      className="text-muted-foreground hover:text-foreground transition-colors font-medium"
-                    >
-                      Overview
-                    </Link>
                     <Link
                       href="/support#auth-loops"
                       className="text-muted-foreground hover:text-foreground transition-colors"
