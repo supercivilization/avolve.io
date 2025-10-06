@@ -252,7 +252,7 @@ export default function Home() {
         </section>
 
         {/* Quick Navigation */}
-        <Card className="section-spacing bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-900/20 dark:to-gray-900/10">
+        <Card className="section-spacing border border-border/50 bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-900/20 dark:to-gray-900/10 shadow-sm">
           <CardHeader>
             <CardTitle className="text-2xl">What do you want to do?</CardTitle>
           </CardHeader>
@@ -392,7 +392,7 @@ export default function Home() {
         </section>
 
         {/* Current Stack Versions */}
-        <section id="current-stack" className="section-spacing border-t pt-8">
+        <section id="current-stack" className="section-spacing border-t border-border/40 pt-8">
           <h2 className="mb-12">Current Stack Versions (Quick Reference)</h2>
           <div className="rounded-lg border border-border/50 shadow-sm">
             <Table>
