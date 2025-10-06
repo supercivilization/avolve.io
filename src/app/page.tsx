@@ -3,8 +3,9 @@ import Link from "next/link";
 import { Rocket, Network, Code, Cloud, LifeBuoy } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { getPageDates, formatDate, formatSchemaDate } from "@/lib/dates";
 
-// Dependencies (October 6, 2025):
+// Dependencies (verified October 6, 2025):
 // - Node.js: 22.20.0 LTS (24.9.0 becomes LTS Oct 28, 2025)
 // - TypeScript: 5.9.3
 // - React: 19.2.0
@@ -12,7 +13,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 // - Tailwind CSS: 4.1.14
 // - shadcn/ui: 3.4.0
 // - Vercel AI SDK: 5.0.60
-// Last verified: 2025-10-06
+
+const pageDates = getPageDates('home');
 
 export const metadata: Metadata = {
   title: "Next.js 15, React 19, Supabase & Vercel AI: Prod Patterns",
@@ -29,8 +31,8 @@ export default function Home() {
       {
         "@type": "TechArticle",
         "headline": "Modern Web Development Stack - October 2025",
-        "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "datePublished": formatSchemaDate(pageDates.published),
+        "dateModified": formatSchemaDate(pageDates.modified),
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         },
@@ -70,8 +72,8 @@ export default function Home() {
           {"@type": "SoftwareApplication", "name": "Supabase"},
           {"@type": "SoftwareApplication", "name": "@supabase/ssr", "version": "0.7.0"}
         ],
-        "datePublished": "2025-10-05",
-        "dateModified": "2025-10-06",
+        "datePublished": formatSchemaDate(pageDates.published),
+        "dateModified": formatSchemaDate(pageDates.modified),
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         }
@@ -132,8 +134,8 @@ export default function Home() {
       />
 
       <main className="page-container">
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+        <time className="text-sm text-muted-foreground block mb-6" dateTime={pageDates.modified}>
+          Last updated: {formatDate(pageDates.modified)}
         </time>
 
         {/* Hero */}
