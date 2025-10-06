@@ -55,9 +55,6 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
-  verification: {
-    google: 'gPl_9EkLro6JZGQv-9CYd3k3xX8i5AU67Nz_hLYGDeg',
-  },
   category: 'technology',
   classification: 'Technical Documentation'
 };

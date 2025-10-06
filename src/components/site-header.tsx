@@ -2,20 +2,14 @@ import Link from "next/link";
 import { ButtonGroup } from "@/components/ui/button-group";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
-import {
-  SolutionsIconSimple,
-  SystemsIconSimple,
-  SoftwareIconSimple,
-  ServicesIconSimple,
-  SupportIconSimple,
-} from "@/components/icons/sacred-geometry";
+import { Rocket, Network, Code, Cloud, LifeBuoy } from "lucide-react";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl">
+      <div className="container flex h-16 md:h-20 items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="font-bold text-xl hover:opacity-80 transition-opacity">
+        <Link href="/" className="font-bold text-2xl tracking-tight hover:opacity-80 transition-opacity">
           Avolve.io
         </Link>
 
@@ -24,31 +18,31 @@ export function SiteHeader() {
           <ButtonGroup>
             <Button variant="ghost" size="sm" asChild>
               <Link href="/solutions" className="flex items-center gap-2">
-                <SolutionsIconSimple className="text-slate-600 dark:text-slate-400" size={16} />
+                <Rocket className="text-slate-600 dark:text-slate-400" size={16} strokeWidth={2} />
                 <span>Solutions</span>
               </Link>
             </Button>
             <Button variant="ghost" size="sm" asChild>
               <Link href="/systems" className="flex items-center gap-2">
-                <SystemsIconSimple className="text-gray-600 dark:text-gray-400" size={16} />
+                <Network className="text-gray-600 dark:text-gray-400" size={16} strokeWidth={2} />
                 <span>Systems</span>
               </Link>
             </Button>
             <Button variant="ghost" size="sm" asChild>
               <Link href="/software" className="flex items-center gap-2">
-                <SoftwareIconSimple className="text-zinc-700 dark:text-zinc-400" size={16} />
+                <Code className="text-zinc-700 dark:text-zinc-400" size={16} strokeWidth={2} />
                 <span>Software</span>
               </Link>
             </Button>
             <Button variant="ghost" size="sm" asChild>
               <Link href="/services" className="flex items-center gap-2">
-                <ServicesIconSimple className="text-neutral-600 dark:text-neutral-400" size={16} />
+                <Cloud className="text-neutral-600 dark:text-neutral-400" size={16} strokeWidth={2} />
                 <span>Services</span>
               </Link>
             </Button>
             <Button variant="ghost" size="sm" asChild>
               <Link href="/support" className="flex items-center gap-2">
-                <SupportIconSimple className="text-stone-600 dark:text-stone-400" size={16} />
+                <LifeBuoy className="text-stone-600 dark:text-stone-400" size={16} strokeWidth={2} />
                 <span>Support</span>
               </Link>
             </Button>

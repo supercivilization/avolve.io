@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  SolutionsIcon,
-  SystemsIcon,
-  SoftwareIcon,
-  ServicesIcon,
-  SupportIcon,
-} from "@/components/icons/sacred-geometry";
+import { Rocket, Network, Code, Cloud, LifeBuoy } from "lucide-react";
 
 // Dependencies (October 5, 2025):
 // - Next.js: 15.5.4
@@ -101,28 +95,28 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-muted-foreground block mb-4" dateTime="2025-10-05">
+      <main className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
         {/* Hero */}
-        <header className="mt-4 mb-16">
-          <h1 className="text-5xl font-bold mb-4">Avolve.io</h1>
-          <p className="text-2xl text-muted-foreground mb-4">Ship your first app this week</p>
-          <p className="text-sm text-muted-foreground">
+        <header className="mt-8 mb-24 text-center md:text-left">
+          <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight">Avolve.io</h1>
+          <p className="text-2xl md:text-3xl text-muted-foreground mb-6">Ship your first app this week</p>
+          <p className="text-lg text-muted-foreground">
             <strong>Stack:</strong> Next.js 15 + React 19.2 + Supabase + Vercel + AI
           </p>
         </header>
 
         {/* Canonical 5S Definition */}
-        <section id="definition" className="mb-16">
+        <section id="definition" className="mb-24">
           <h2 className="text-3xl font-bold mb-6">Modern Web Development Stack</h2>
 
           <dl className="space-y-8">
             <div id="solutions" className="border-l-4 border-slate-600 dark:border-slate-400 pl-6 hover:border-slate-500 transition-colors">
               <div className="flex items-start gap-4">
-                <SolutionsIcon className="text-slate-600 dark:text-slate-400 flex-shrink-0" size={40} />
+                <Rocket className="text-slate-600 dark:text-slate-400 flex-shrink-0" size={40} strokeWidth={1.5} />
                 <div className="flex-1">
                   <dt className="text-xl font-bold text-slate-700 dark:text-slate-300 mb-1">Solutions</dt>
                   <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">Business outcomes delivered to end users</dd>
@@ -137,7 +131,7 @@ export default function Home() {
 
             <div id="systems" className="border-l-4 border-gray-600 dark:border-gray-400 pl-6 hover:border-gray-500 transition-colors">
               <div className="flex items-start gap-4">
-                <SystemsIcon className="text-gray-600 dark:text-gray-400 flex-shrink-0" size={40} />
+                <Network className="text-gray-600 dark:text-gray-400 flex-shrink-0" size={40} strokeWidth={1.5} />
                 <div className="flex-1">
                   <dt className="text-xl font-bold text-gray-700 dark:text-gray-300 mb-1">Systems</dt>
                   <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">Architecture patterns coordinating multiple components</dd>
@@ -152,7 +146,7 @@ export default function Home() {
 
             <div id="software" className="border-l-4 border-zinc-700 dark:border-zinc-400 pl-6 hover:border-zinc-600 transition-colors">
               <div className="flex items-start gap-4">
-                <SoftwareIcon className="text-zinc-700 dark:text-zinc-400 flex-shrink-0" size={40} />
+                <Code className="text-zinc-700 dark:text-zinc-400 flex-shrink-0" size={40} strokeWidth={1.5} />
                 <div className="flex-1">
                   <dt className="text-xl font-bold text-zinc-700 dark:text-zinc-300 mb-1">Software</dt>
                   <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">Code, frameworks, libraries (Next.js 15.5, React 19.2, TypeScript 5.9)</dd>
@@ -167,7 +161,7 @@ export default function Home() {
 
             <div id="services" className="border-l-4 border-neutral-600 dark:border-neutral-400 pl-6 hover:border-neutral-500 transition-colors">
               <div className="flex items-start gap-4">
-                <ServicesIcon className="text-neutral-600 dark:text-neutral-400 flex-shrink-0" size={40} />
+                <Cloud className="text-neutral-600 dark:text-neutral-400 flex-shrink-0" size={40} strokeWidth={1.5} />
                 <div className="flex-1">
                   <dt className="text-xl font-bold text-neutral-700 dark:text-neutral-300 mb-1">Services</dt>
                   <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">External managed capabilities (Vercel, Supabase, Claude API, Stripe)</dd>
@@ -182,7 +176,7 @@ export default function Home() {
 
             <div id="support" className="border-l-4 border-stone-600 dark:border-stone-400 pl-6 hover:border-stone-500 transition-colors">
               <div className="flex items-start gap-4">
-                <SupportIcon className="text-stone-600 dark:text-stone-400 flex-shrink-0" size={40} />
+                <LifeBuoy className="text-stone-600 dark:text-stone-400 flex-shrink-0" size={40} strokeWidth={1.5} />
                 <div className="flex-1">
                   <dt className="text-xl font-bold text-stone-700 dark:text-stone-300 mb-1">Support</dt>
                   <dd className="text-gray-700 dark:text-gray-300 text-sm mb-3">Operations maintaining production systems</dd>
@@ -198,19 +192,19 @@ export default function Home() {
         </section>
 
         {/* Quick Navigation */}
-        <section id="quick-nav" className="mb-16 bg-gray-50 p-8 rounded-lg">
-          <h2 className="text-2xl font-bold mb-4">What do you want to do?</h2>
-          <ul className="space-y-2">
-            <li>→ <Link href="/solutions" className="text-slate-600 hover:underline font-medium">Build something new</Link></li>
-            <li>→ <Link href="/support" className="text-stone-600 hover:underline font-medium">Fix production issue</Link></li>
-            <li>→ <Link href="/software" className="text-zinc-700 hover:underline font-medium">Choose tools</Link> and <Link href="/services" className="text-neutral-600 hover:underline font-medium">services</Link></li>
-            <li>→ <Link href="/systems" className="text-gray-600 hover:underline font-medium">Understand architecture</Link></li>
-            <li>→ <Link href="/about" className="text-gray-600 hover:underline">About this site</Link></li>
+        <section id="quick-nav" className="mb-24 bg-gray-50 dark:bg-gray-900/20 p-8 rounded-lg">
+          <h2 className="text-2xl font-bold mb-6">What do you want to do?</h2>
+          <ul className="space-y-3">
+            <li>→ <Link href="/solutions" className="text-slate-600 dark:text-slate-400 hover:underline font-medium">Build something new</Link></li>
+            <li>→ <Link href="/support" className="text-stone-600 dark:text-stone-400 hover:underline font-medium">Fix production issue</Link></li>
+            <li>→ <Link href="/software" className="text-zinc-700 dark:text-zinc-400 hover:underline font-medium">Choose tools</Link> and <Link href="/services" className="text-neutral-600 dark:text-neutral-400 hover:underline font-medium">services</Link></li>
+            <li>→ <Link href="/systems" className="text-gray-600 dark:text-gray-400 hover:underline font-medium">Understand architecture</Link></li>
+            <li>→ <Link href="/about" className="text-gray-600 dark:text-gray-400 hover:underline">About this site</Link></li>
           </ul>
         </section>
 
         {/* Current Stack Versions */}
-        <section id="current-stack" className="mb-16">
+        <section id="current-stack" className="mb-24">
           <h2 className="text-2xl font-bold mb-4">Current Stack Versions</h2>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse border border-gray-300">
