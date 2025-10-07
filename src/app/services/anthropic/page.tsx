@@ -88,7 +88,6 @@ export default function AnthropicServicePage() {
                 description: "Maximum tokens per request",
                 tiers: {
                   "Claude 3.7 Sonnet": "200K",
-                  "Claude 3.7 Sonnet": "200K",
                   "Claude 3 Opus": "200K",
                   "Claude 3 Haiku": "200K",
                 },
