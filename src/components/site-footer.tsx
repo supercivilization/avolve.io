@@ -107,19 +107,20 @@ export function SiteFooter() {
         <div className="py-12 md:py-20 lg:py-24">
           <div className="max-w-7xl mx-auto">
             <div className="relative rounded-xl border border-border/50 bg-gradient-to-b from-background to-muted/20 p-6 sm:p-8 md:p-12 lg:p-16 shadow-sm">
-              {/* Status Bar */}
+              {/* Stack Info Bar */}
               <div className="mb-8 md:mb-12 flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-border/30 pb-6 md:pb-8 gap-4">
-                <div className="flex items-center gap-2.5 text-sm">
-                  <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse" />
-                  <span className="font-semibold text-foreground">All Systems Operational</span>
-                  <span className="hidden sm:inline text-muted-foreground/60">·</span>
-                  <span className="hidden sm:inline text-muted-foreground">Updated Oct 6, 2025</span>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">📅 Verified Oct 6, 2025</span>
+                  <span className="hidden sm:inline">•</span>
+                  <span>Next.js 15.5 + React 19.2 + TypeScript 5.9 + Node.js 24 LTS</span>
+                  <span className="hidden sm:inline">•</span>
+                  <span className="font-medium text-foreground">Production-Tested</span>
                 </div>
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={scrollToTop}
-                  className="h-9 gap-2 text-muted-foreground hover:text-foreground"
+                  className="h-9 gap-2 text-muted-foreground hover:text-foreground shrink-0"
                 >
                   <ArrowUp className="h-4 w-4" />
                   <span className="text-sm">Back to top</span>
