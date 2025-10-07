@@ -21,9 +21,9 @@ export default function DynamicServerUsagePage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", item: "https://avolve.io" },
-          { name: "Support", item: "https://avolve.io/support" },
-          { name: "Dynamic Server Usage", item: "https://avolve.io/support/dynamic-server-usage" },
+          { name: "Home", url: "/" },
+          { name: "Support", url: "/support" },
+          { name: "Dynamic Server Usage", url: "/support/dynamic-server-usage" },
         ]}
       />
 

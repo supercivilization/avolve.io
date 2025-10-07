@@ -21,9 +21,9 @@ export default function ConnectionPoolExhaustionPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", item: "https://avolve.io" },
-          { name: "Support", item: "https://avolve.io/support" },
-          { name: "Connection Pool Exhaustion", item: "https://avolve.io/support/connection-pool-exhaustion" },
+          { name: "Home", url: "/" },
+          { name: "Support", url: "/support" },
+          { name: "Connection Pool Exhaustion", url: "/support/connection-pool-exhaustion" },
         ]}
       />
 

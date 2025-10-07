@@ -21,9 +21,9 @@ export default function StripeWebhookErrorsPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", item: "https://avolve.io" },
-          { name: "Support", item: "https://avolve.io/support" },
-          { name: "Stripe Webhook Errors", item: "https://avolve.io/support/stripe-webhook-errors" },
+          { name: "Home", url: "/" },
+          { name: "Support", url: "/support" },
+          { name: "Stripe Webhook Errors", url: "/support/stripe-webhook-errors" },
         ]}
       />
 

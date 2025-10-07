@@ -21,9 +21,9 @@ export default function HydrationMismatchPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", item: "https://avolve.io" },
-          { name: "Support", item: "https://avolve.io/support" },
-          { name: "Hydration Mismatch", item: "https://avolve.io/support/hydration-mismatch" },
+          { name: "Home", url: "/" },
+          { name: "Support", url: "/support" },
+          { name: "Hydration Mismatch", url: "/support/hydration-mismatch" },
         ]}
       />
 

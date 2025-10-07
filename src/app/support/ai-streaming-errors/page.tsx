@@ -21,9 +21,9 @@ export default function AIStreamingErrorsPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", item: "https://avolve.io" },
-          { name: "Support", item: "https://avolve.io/support" },
-          { name: "AI Streaming Errors", item: "https://avolve.io/support/ai-streaming-errors" },
+          { name: "Home", url: "/" },
+          { name: "Support", url: "/support" },
+          { name: "AI Streaming Errors", url: "/support/ai-streaming-errors" },
         ]}
       />
 
