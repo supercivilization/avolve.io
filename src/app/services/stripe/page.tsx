@@ -148,34 +148,59 @@ export default function StripeServicePage() {
 
         <div className="mb-12">
           <CostTriggers
+            serviceName="Stripe"
             triggers={[
               {
-                trigger: "Revenue Milestones",
-                threshold: "Any revenue",
-                impact: "2.9% + $0.30 per transaction",
-                mitigation:
-                  "Percentage-based pricing scales naturally. Higher volume may qualify for custom pricing.",
+                id: "revenue-milestones",
+                title: "Revenue Milestones",
+                currentTier: "Standard Pricing",
+                upgradeTo: "Custom Pricing (High Volume)",
+                scenario: "Your business is processing significant transaction volume that may qualify for custom pricing.",
+                metrics: [
+                  { name: "Transaction Volume", threshold: "High volume" },
+                  { name: "Base Rate", threshold: "2.9% + $0.30 per transaction" },
+                ],
+                costIncrease: "Percentage-based pricing scales naturally",
+                urgency: "low",
               },
               {
-                trigger: "International Payments",
-                threshold: "Non-US cards",
-                impact: "+1.5% additional fee",
-                mitigation:
-                  "Unavoidable for global customers. Consider region-specific pricing to offset.",
+                id: "international-payments",
+                title: "International Payments",
+                currentTier: "Domestic Pricing",
+                upgradeTo: "International Card Fees Apply",
+                scenario: "Your application is accepting payments from customers outside the US with non-US cards.",
+                metrics: [
+                  { name: "International Cards", threshold: "Non-US cards" },
+                  { name: "Additional Fee", threshold: "+1.5% on top of base rate" },
+                ],
+                costIncrease: "Unavoidable for global customers",
+                urgency: "medium",
               },
               {
-                trigger: "Complex Pricing Models",
-                threshold: "Usage-based billing",
-                impact: "+0.5% on recurring revenue",
-                mitigation:
-                  "Billing Engine required for metered usage, tiered pricing, or per-seat billing.",
+                id: "complex-billing",
+                title: "Complex Pricing Models",
+                currentTier: "Standard Integration",
+                upgradeTo: "Billing Engine (+0.5%)",
+                scenario: "Your pricing model requires usage-based billing, tiered pricing, or per-seat billing features.",
+                metrics: [
+                  { name: "Billing Complexity", threshold: "Usage-based billing" },
+                  { name: "Additional Fee", threshold: "+0.5% on recurring revenue" },
+                ],
+                costIncrease: "Billing Engine required",
+                urgency: "low",
               },
               {
-                trigger: "Chargebacks",
-                threshold: "Disputed transactions",
-                impact: "$15 per chargeback",
-                mitigation:
-                  "Enable Radar fraud detection, clear refund policy, good customer service.",
+                id: "chargebacks",
+                title: "Chargeback Risk",
+                currentTier: "Standard Processing",
+                upgradeTo: "Enhanced Fraud Protection",
+                scenario: "Disputed transactions are resulting in chargeback fees and potential account risk.",
+                metrics: [
+                  { name: "Chargeback Fee", threshold: "$15 per chargeback" },
+                  { name: "Risk Level", threshold: "High chargeback rate" },
+                ],
+                costIncrease: "Enable Radar fraud detection",
+                urgency: "high",
               },
             ]}
           />
@@ -183,42 +208,102 @@ export default function StripeServicePage() {
 
         <div className="mb-12">
           <LimitsAndQuotas
+            serviceName="Stripe"
             limits={[
               {
+                id: "test-mode",
                 name: "Test Mode Payments",
-                free: "100 payments",
-                paid: "Unlimited in live mode",
-                notes: "Test thoroughly before going live",
+                tier: "Test/Live",
+                value: "100 test payments / Unlimited live",
+                type: "soft",
+                blocksCapability: [
+                  "Extensive testing with >100 test transactions",
+                  "Load testing payment flows",
+                ],
+                workarounds: [
+                  "Move to live mode for production",
+                  "Reset test data periodically",
+                  "Use live mode with small amounts for testing",
+                ],
               },
               {
+                id: "webhooks",
                 name: "Webhook Deliveries",
-                free: "Unlimited",
-                paid: "Unlimited",
-                notes: "Must configure endpoint URL and handle retries",
+                tier: "All",
+                value: "Unlimited",
+                type: "soft",
+                blocksCapability: [
+                  "None - webhooks are unlimited",
+                ],
+                workarounds: [
+                  "Configure endpoint URL properly",
+                  "Implement retry logic for failed deliveries",
+                ],
               },
               {
+                id: "payout-schedule",
                 name: "Payout Schedule",
-                free: "Rolling (2-day default)",
-                paid: "Daily/weekly/monthly available",
-                notes: "Customize in dashboard after volume history",
+                tier: "All",
+                value: "Rolling 2-day (default) / Custom after history",
+                type: "soft",
+                blocksCapability: [
+                  "Immediate payouts for new accounts",
+                  "Custom schedules without transaction history",
+                ],
+                workarounds: [
+                  "Wait for volume history to customize schedule",
+                  "Contact support for faster payouts with good history",
+                ],
               },
               {
+                id: "api-rate-limit",
                 name: "API Rate Limit",
-                free: "100 req/sec in test",
-                paid: "100 req/sec (contact for higher)",
-                notes: "Enforced per API key",
+                tier: "All",
+                value: "100 requests/second",
+                type: "rate",
+                blocksCapability: [
+                  "Very high-throughput payment processing",
+                  "Bulk operations exceeding rate limit",
+                ],
+                workarounds: [
+                  "Implement request batching",
+                  "Contact Stripe for higher limits",
+                  "Use exponential backoff for retries",
+                ],
+                critical: true,
               },
               {
-                name: "Strong Customer Auth (SCA)",
-                free: "Required in EU",
-                paid: "Required in EU",
-                notes: "Payment Intents API handles SCA automatically",
+                id: "sca-requirement",
+                name: "Strong Customer Authentication (SCA)",
+                tier: "All (EU)",
+                value: "Required for EU customers",
+                type: "hard",
+                blocksCapability: [
+                  "Frictionless checkout for EU customers (regulation)",
+                  "Stored card payments without authentication",
+                ],
+                workarounds: [
+                  "Use Payment Intents API (handles SCA automatically)",
+                  "Implement 3D Secure authentication flow",
+                  "Request exemptions where applicable",
+                ],
+                critical: true,
               },
               {
+                id: "dispute-response",
                 name: "Dispute Response Time",
-                free: "7-21 days",
-                paid: "7-21 days",
-                notes: "Varies by card network and reason",
+                tier: "All",
+                value: "7-21 days (varies by network)",
+                type: "hard",
+                blocksCapability: [
+                  "Late responses result in automatic loss",
+                  "No extensions available",
+                ],
+                workarounds: [
+                  "Set up dispute alerts and notifications",
+                  "Respond immediately with evidence",
+                  "Use Radar to prevent disputes proactively",
+                ],
               },
             ]}
           />
@@ -226,27 +311,92 @@ export default function StripeServicePage() {
 
         <div className="mb-12">
           <CostCalculator
+            serviceName="Stripe"
             scenarios={[
               {
+                id: "startup",
                 name: "$1,000 MRR",
-                usage: "100 customers × $10/month, US cards only",
-                calculation: "$1,000 × 2.9% + (100 × $0.30) = $29 + $30 = $59",
-                monthlyCost: "$59",
-                notes: "~5.9% effective rate at low MRR",
+                description: "Small SaaS with domestic customers only",
+                usage: [
+                  { metric: "Customers", value: "100" },
+                  { metric: "Average Order", value: "$10/month" },
+                  { metric: "Total Revenue", value: "$1,000 MRR" },
+                  { metric: "Card Mix", value: "100% US cards" },
+                ],
+                breakdown: [
+                  {
+                    component: "Transaction Fees",
+                    cost: "$29/month",
+                    notes: "$1,000 × 2.9%",
+                  },
+                  {
+                    component: "Fixed Fees",
+                    cost: "$30/month",
+                    notes: "100 transactions × $0.30",
+                  },
+                ],
+                totalCost: "$59/month (~5.9% effective rate)",
+                type: "startup",
               },
               {
+                id: "growth",
                 name: "$10,000 MRR",
-                usage: "500 customers × $20/month, 80% US / 20% international",
-                calculation: "$10K × 2.9% + (500 × $0.30) + ($2K × 1.5%) = $290 + $150 + $30 = $470",
-                monthlyCost: "$470",
-                notes: "~4.7% effective rate",
+                description: "Growing SaaS with international customers",
+                usage: [
+                  { metric: "Customers", value: "500" },
+                  { metric: "Average Order", value: "$20/month" },
+                  { metric: "Total Revenue", value: "$10,000 MRR" },
+                  { metric: "Card Mix", value: "80% US / 20% international" },
+                ],
+                breakdown: [
+                  {
+                    component: "Base Transaction Fees",
+                    cost: "$290/month",
+                    notes: "$10,000 × 2.9%",
+                  },
+                  {
+                    component: "Fixed Fees",
+                    cost: "$150/month",
+                    notes: "500 transactions × $0.30",
+                  },
+                  {
+                    component: "International Fees",
+                    cost: "$30/month",
+                    notes: "$2,000 international × 1.5%",
+                  },
+                ],
+                totalCost: "$470/month (~4.7% effective rate)",
+                type: "growth",
               },
               {
+                id: "enterprise",
                 name: "$100,000 MRR",
-                usage: "2,000 customers × $50/month, global",
-                calculation: "$100K × 2.9% + (2K × $0.30) + ($30K × 1.5%) = $2,900 + $600 + $450 = $3,950",
-                monthlyCost: "$3,950",
-                notes: "~3.95% effective rate. Consider negotiating custom pricing.",
+                description: "Established SaaS with global customer base",
+                usage: [
+                  { metric: "Customers", value: "2,000" },
+                  { metric: "Average Order", value: "$50/month" },
+                  { metric: "Total Revenue", value: "$100,000 MRR" },
+                  { metric: "Card Mix", value: "70% US / 30% international" },
+                ],
+                breakdown: [
+                  {
+                    component: "Base Transaction Fees",
+                    cost: "$2,900/month",
+                    notes: "$100,000 × 2.9%",
+                  },
+                  {
+                    component: "Fixed Fees",
+                    cost: "$600/month",
+                    notes: "2,000 transactions × $0.30",
+                  },
+                  {
+                    component: "International Fees",
+                    cost: "$450/month",
+                    notes: "$30,000 international × 1.5%",
+                  },
+                ],
+                totalCost: "$3,950/month (~3.95% effective rate)",
+                type: "enterprise",
               },
             ]}
           />
@@ -254,50 +404,136 @@ export default function StripeServicePage() {
 
         <div className="mb-12">
           <IntegrationRequirements
-            requirements={[
+            serviceName="Stripe"
+            steps={[
               {
-                category: "Account Verification",
-                items: [
-                  "Create Stripe account at stripe.com",
-                  "Complete KYC verification (business info, bank account)",
-                  "Verify identity and tax info",
-                  "Approval typically takes 1-2 business days",
+                id: "account-verification",
+                title: "Account Verification",
+                description: "Create and verify Stripe account for production use",
+                required: true,
+                estimatedTime: "1-2 business days",
+                configExample: `// Steps:
+// 1. Create Stripe account at stripe.com
+// 2. Complete KYC verification
+//    - Business information
+//    - Bank account for payouts
+//    - Identity verification
+//    - Tax information
+// 3. Wait for approval (1-2 business days)
+// 4. Activate live mode`,
+                docs: [
+                  { text: "Account Setup", href: "https://stripe.com/docs/account" },
                 ],
               },
               {
-                category: "Webhook Endpoint Setup",
-                items: [
-                  "Create /api/webhooks/stripe route in Next.js",
-                  "Add endpoint URL in Stripe dashboard",
-                  "Get webhook signing secret",
-                  "Verify webhook signatures for security",
+                id: "api-keys",
+                title: "API Keys Configuration",
+                description: "Set up environment variables for Stripe integration",
+                required: true,
+                estimatedTime: "5 min",
+                configExample: `// .env.local
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
+STRIPE_SECRET_KEY=sk_test_... // Server-side only!
+STRIPE_WEBHOOK_SECRET=whsec_...
+
+// Use test keys during development
+// Switch to live keys (pk_live_..., sk_live_...) for production
+// Never expose secret key client-side`,
+                docs: [
+                  { text: "API Keys", href: "https://stripe.com/docs/keys" },
                 ],
               },
               {
-                category: "API Keys",
-                items: [
-                  "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY for client",
-                  "STRIPE_SECRET_KEY for server (never expose)",
-                  "STRIPE_WEBHOOK_SECRET for webhook verification",
-                  "Use test keys during development",
+                id: "webhook-setup",
+                title: "Webhook Endpoint Setup",
+                description: "Configure webhooks for payment event handling",
+                required: true,
+                estimatedTime: "15 min",
+                configExample: `// app/api/webhooks/stripe/route.ts
+import { stripe } from '@/lib/stripe'
+import { headers } from 'next/headers'
+
+export async function POST(req: Request) {
+  const body = await req.text()
+  const signature = headers().get('stripe-signature')!
+
+  const event = stripe.webhooks.constructEvent(
+    body,
+    signature,
+    process.env.STRIPE_WEBHOOK_SECRET!
+  )
+
+  // Handle events: checkout.session.completed, etc.
+  switch (event.type) {
+    case 'checkout.session.completed':
+      // Handle successful payment
+      break
+  }
+
+  return new Response(JSON.stringify({ received: true }))
+}`,
+                docs: [
+                  { text: "Webhooks", href: "https://stripe.com/docs/webhooks" },
                 ],
               },
               {
-                category: "Product & Price Creation",
-                items: [
-                  "Create products in Stripe dashboard or via API",
-                  "Set up pricing (one-time, recurring, usage-based)",
-                  "Configure billing intervals (monthly, annual)",
-                  "Test checkout flow with test cards",
+                id: "products-pricing",
+                title: "Product & Price Creation",
+                description: "Set up products and pricing in Stripe",
+                required: true,
+                estimatedTime: "20 min",
+                configExample: `// Create products and prices via Dashboard or API
+// Dashboard: Products → Add Product
+
+// Or via API:
+const product = await stripe.products.create({
+  name: 'Pro Plan',
+  description: 'Professional tier with advanced features',
+})
+
+const price = await stripe.prices.create({
+  product: product.id,
+  unit_amount: 2000, // $20.00
+  currency: 'usd',
+  recurring: { interval: 'month' },
+})
+
+// Test with test cards: 4242 4242 4242 4242`,
+                docs: [
+                  { text: "Products & Prices", href: "https://stripe.com/docs/products-prices/overview" },
                 ],
               },
               {
-                category: "Payment Flow",
-                items: [
-                  "Install @stripe/stripe-js and stripe packages",
-                  "Implement Stripe Elements for card collection",
-                  "Use Payment Intents API for SCA compliance",
-                  "Handle success/failure states and webhooks",
+                id: "payment-flow",
+                title: "Payment Flow Implementation",
+                description: "Implement checkout with Stripe Elements and Payment Intents",
+                required: true,
+                estimatedTime: "30 min",
+                configExample: `// Install packages
+npm install @stripe/stripe-js stripe
+
+// Client-side checkout
+import { loadStripe } from '@stripe/stripe-js'
+
+const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
+
+// Create checkout session
+const response = await fetch('/api/checkout', {
+  method: 'POST',
+  body: JSON.stringify({ priceId }),
+})
+
+const session = await response.json()
+
+// Redirect to checkout
+await stripe.redirectToCheckout({
+  sessionId: session.id,
+})
+
+// Handle success/failure via webhooks`,
+                docs: [
+                  { text: "Checkout", href: "https://stripe.com/docs/payments/checkout" },
+                  { text: "Payment Intents", href: "https://stripe.com/docs/payments/payment-intents" },
                 ],
               },
             ]}

@@ -149,33 +149,59 @@ export default function SupabaseServicePage() {
 
         <div className="mb-12">
           <CostTriggers
+            serviceName="Supabase"
             triggers={[
               {
-                trigger: "50K+ Active Users",
-                threshold: ">50,000 MAU",
-                impact: "$25/month + overage",
-                mitigation:
-                  "Free tier caps at 50K MAU. Pro tier needed immediately. Monitor auth.users table.",
+                id: "active-users",
+                title: "50K+ Active Users",
+                currentTier: "Free (50K MAU)",
+                upgradeTo: "Pro (100K MAU + overage)",
+                scenario: "Your application is approaching or exceeding 50,000 monthly active users.",
+                metrics: [
+                  { name: "Monthly Active Users", threshold: ">50,000 MAU" },
+                  { name: "Cost Impact", threshold: "$25/month + $0.00325/MAU overage" },
+                ],
+                costIncrease: "Free tier caps at 50K MAU",
+                urgency: "high",
               },
               {
-                trigger: "Connection Pool Exhaustion",
-                threshold: "High concurrent users",
-                impact: "App crashes without pooling",
-                mitigation: "Pro tier enables PgBouncer pooling. Critical for production scale.",
+                id: "connection-pooling",
+                title: "Connection Pool Exhaustion",
+                currentTier: "Free (15 connections)",
+                upgradeTo: "Pro (PgBouncer pooling)",
+                scenario: "High concurrent users are exhausting the 15 direct database connections, causing app crashes.",
+                metrics: [
+                  { name: "Concurrent Users", threshold: "High traffic" },
+                  { name: "Connection Limit", threshold: "15 direct connections" },
+                ],
+                costIncrease: "Pro tier enables PgBouncer pooling",
+                urgency: "high",
               },
               {
-                trigger: "Database Size Growth",
-                threshold: ">500MB database",
-                impact: "$25/month + $0.125/GB overage",
-                mitigation:
-                  "Monitor disk usage in dashboard. Archive old data or upgrade to Pro.",
+                id: "database-size",
+                title: "Database Size Growth",
+                currentTier: "Free (500MB)",
+                upgradeTo: "Pro (8GB + $0.125/GB overage)",
+                scenario: "Database storage is approaching or exceeding the 500MB free tier limit.",
+                metrics: [
+                  { name: "Database Size", threshold: ">500MB" },
+                  { name: "Cost Impact", threshold: "$25/month + $0.125/GB overage" },
+                ],
+                costIncrease: "Monitor disk usage in dashboard",
+                urgency: "medium",
               },
               {
-                trigger: "Enterprise SSO Requirement",
-                threshold: "SAML/OIDC needed",
-                impact: "$599+/month minimum",
-                mitigation:
-                  "Enterprise tier only. Social OAuth (Google/GitHub) available on all tiers.",
+                id: "enterprise-sso",
+                title: "Enterprise SSO Requirement",
+                currentTier: "Free/Pro",
+                upgradeTo: "Enterprise ($599+/month)",
+                scenario: "Your organization requires SAML or OIDC single sign-on integration.",
+                metrics: [
+                  { name: "SSO Requirement", threshold: "SAML/OIDC needed" },
+                  { name: "Cost Impact", threshold: "$599+/month minimum" },
+                ],
+                costIncrease: "Enterprise tier only",
+                urgency: "low",
               },
             ]}
           />
@@ -183,42 +209,108 @@ export default function SupabaseServicePage() {
 
         <div className="mb-12">
           <LimitsAndQuotas
+            serviceName="Supabase"
             limits={[
               {
+                id: "direct-connections",
                 name: "Direct Database Connections",
-                free: "15 connections",
-                paid: "15 (Free), 60 (Pro), Custom (Enterprise)",
-                notes: "Use connection pooling to scale beyond this",
+                tier: "Free/Pro/Enterprise",
+                value: "15 (Free) / 60 (Pro) / Custom (Enterprise)",
+                type: "hard",
+                blocksCapability: [
+                  "High concurrent user applications on Free tier",
+                  "Serverless function scaling",
+                  "Multiple service connections",
+                ],
+                workarounds: [
+                  "Upgrade to Pro tier for PgBouncer pooling",
+                  "Use connection pooler in transaction mode",
+                  "Implement connection pooling in application",
+                ],
+                critical: true,
               },
               {
-                name: "Connection Pooler",
-                free: "Not available",
-                paid: "PgBouncer on Pro/Enterprise only",
-                notes: "Session mode: 1,000+ connections, Transaction mode: 10,000+",
+                id: "connection-pooler",
+                name: "Connection Pooler (PgBouncer)",
+                tier: "Pro/Enterprise",
+                value: "1,000+ (Session) / 10,000+ (Transaction)",
+                type: "soft",
+                blocksCapability: [
+                  "Not available on Free tier",
+                  "Production-scale applications without upgrade",
+                ],
+                workarounds: [
+                  "Upgrade to Pro tier ($25/month)",
+                  "Use transaction mode for serverless",
+                  "Session mode for ORMs like Prisma",
+                ],
+                critical: true,
               },
               {
+                id: "edge-function-timeout",
                 name: "Edge Function Timeout",
-                free: "2 seconds",
-                paid: "10 seconds (Pro/Enterprise)",
-                notes: "Hard timeout enforced",
+                tier: "Free/Pro/Enterprise",
+                value: "2s (Free) / 10s (Pro/Enterprise)",
+                type: "hard",
+                blocksCapability: [
+                  "Long-running operations on Free tier",
+                  "Complex API processing",
+                  "External API calls with slow response",
+                ],
+                workarounds: [
+                  "Upgrade to Pro tier for 10s timeout",
+                  "Break operations into smaller chunks",
+                  "Use database functions for heavy processing",
+                ],
               },
               {
+                id: "realtime-connections",
                 name: "Realtime Connections",
-                free: "200 concurrent",
-                paid: "500 concurrent (Pro), Custom (Enterprise)",
-                notes: "WebSocket connections for live updates",
+                tier: "Free/Pro/Enterprise",
+                value: "200 (Free) / 500 (Pro) / Custom (Enterprise)",
+                type: "hard",
+                blocksCapability: [
+                  "Large-scale realtime applications on Free tier",
+                  "Chat applications with many concurrent users",
+                  "Live collaboration features",
+                ],
+                workarounds: [
+                  "Upgrade to Pro tier for 500 concurrent",
+                  "Implement connection pooling",
+                  "Use presence channels strategically",
+                ],
               },
               {
+                id: "storage-file-size",
                 name: "Storage File Size",
-                free: "50MB per file",
-                paid: "50MB (all tiers)",
-                notes: "Resumable uploads for large files",
+                tier: "All",
+                value: "50MB per file",
+                type: "hard",
+                blocksCapability: [
+                  "Large file uploads (videos, datasets)",
+                  "High-resolution media storage",
+                ],
+                workarounds: [
+                  "Use resumable uploads for large files",
+                  "Compress files before upload",
+                  "Use external storage for very large files",
+                ],
               },
               {
+                id: "api-rate-limit",
                 name: "API Rate Limit",
-                free: "Moderate",
-                paid: "Higher on Pro, Custom on Enterprise",
-                notes: "Contact support if hitting limits",
+                tier: "Free/Pro/Enterprise",
+                value: "Moderate (Free) / Higher (Pro) / Custom (Enterprise)",
+                type: "rate",
+                blocksCapability: [
+                  "High-traffic APIs on Free tier",
+                  "Bulk operations",
+                ],
+                workarounds: [
+                  "Upgrade to Pro tier for higher limits",
+                  "Implement caching",
+                  "Contact support for custom limits",
+                ],
               },
             ]}
           />
@@ -226,27 +318,77 @@ export default function SupabaseServicePage() {
 
         <div className="mb-12">
           <CostCalculator
+            serviceName="Supabase"
             scenarios={[
               {
+                id: "startup",
                 name: "MVP / Side Project",
-                usage: "<50K users, <500MB DB, basic auth",
-                calculation: "$0 (Free tier)",
-                monthlyCost: "$0",
-                notes: "Free tier perfect for MVPs and hobby projects",
+                description: "Small application with basic auth and moderate database usage",
+                usage: [
+                  { metric: "Monthly Active Users", value: "<50K" },
+                  { metric: "Database Size", value: "<500MB" },
+                  { metric: "File Storage", value: "<1GB" },
+                  { metric: "Edge Functions", value: "<500K invocations" },
+                ],
+                breakdown: [
+                  {
+                    component: "Free Tier Base",
+                    cost: "$0/month",
+                    notes: "500MB DB, 50K MAU, 1GB storage, 500K edge functions",
+                  },
+                ],
+                totalCost: "$0/month",
+                type: "startup",
               },
               {
+                id: "growth",
                 name: "Growing SaaS",
-                usage: "75K users, 2GB DB, connection pooling needed",
-                calculation: "$25 (Pro base) + $0.125×2GB overage = $25.25",
-                monthlyCost: "$25-50",
-                notes: "Pro tier recommended once you need connection pooling",
+                description: "Production application requiring connection pooling and increased limits",
+                usage: [
+                  { metric: "Monthly Active Users", value: "75K" },
+                  { metric: "Database Size", value: "2GB" },
+                  { metric: "File Storage", value: "10GB" },
+                  { metric: "Connection Pooling", value: "Required" },
+                ],
+                breakdown: [
+                  {
+                    component: "Pro Tier Base",
+                    cost: "$25/month",
+                    notes: "8GB DB, 100K MAU, 100GB storage, PgBouncer",
+                  },
+                  {
+                    component: "Database Overage",
+                    cost: "$0/month",
+                    notes: "2GB within 8GB included",
+                  },
+                ],
+                totalCost: "$25-50/month",
+                type: "growth",
               },
               {
+                id: "enterprise",
                 name: "Enterprise Application",
-                usage: "500K users, 50GB DB, SSO required",
-                calculation: "$599 base + custom pricing",
-                monthlyCost: "$599+",
-                notes: "Enterprise tier for SSO, compliance, SLA requirements",
+                description: "Large-scale application with SSO, compliance, and SLA requirements",
+                usage: [
+                  { metric: "Monthly Active Users", value: "500K" },
+                  { metric: "Database Size", value: "50GB" },
+                  { metric: "SSO", value: "SAML/OIDC required" },
+                  { metric: "SLA", value: "99.9% uptime guarantee" },
+                ],
+                breakdown: [
+                  {
+                    component: "Enterprise Base",
+                    cost: "$599/month",
+                    notes: "Custom limits, SSO, priority support",
+                  },
+                  {
+                    component: "Overages",
+                    cost: "Custom pricing",
+                    notes: "Based on usage and requirements",
+                  },
+                ],
+                totalCost: "$599+/month",
+                type: "enterprise",
               },
             ]}
           />
@@ -254,50 +396,110 @@ export default function SupabaseServicePage() {
 
         <div className="mb-12">
           <IntegrationRequirements
-            requirements={[
+            serviceName="Supabase"
+            steps={[
               {
-                category: "Project Creation",
-                items: [
-                  "Sign up at supabase.com",
-                  "Create new project (select region)",
-                  "Save project URL and anon key",
-                  "Note: Database password shown once",
+                id: "project-creation",
+                title: "Project Creation",
+                description: "Create new Supabase project and configure settings",
+                required: true,
+                estimatedTime: "5 min",
+                configExample: `// Sign up at supabase.com
+// 1. Create new project
+// 2. Select region (choose closest to users)
+// 3. Save project URL and anon key
+// 4. IMPORTANT: Database password shown only once`,
+                docs: [
+                  { text: "Project Setup", href: "https://supabase.com/docs/guides/getting-started" },
                 ],
               },
               {
-                category: "API Keys Setup",
-                items: [
-                  "NEXT_PUBLIC_SUPABASE_URL from project settings",
-                  "NEXT_PUBLIC_SUPABASE_ANON_KEY for client access",
-                  "SUPABASE_SERVICE_ROLE_KEY for admin operations (server only)",
-                  "Never expose service role key client-side",
+                id: "api-keys",
+                title: "API Keys Setup",
+                description: "Configure environment variables for Supabase access",
+                required: true,
+                estimatedTime: "5 min",
+                configExample: `// .env.local
+NEXT_PUBLIC_SUPABASE_URL=https://xxxxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbG...
+SUPABASE_SERVICE_ROLE_KEY=eyJhbG... // Server-side only!
+
+// Never expose service role key client-side
+// Anon key is safe for client use (RLS enforced)`,
+                docs: [
+                  { text: "API Keys", href: "https://supabase.com/docs/guides/api#api-url-and-keys" },
                 ],
               },
               {
-                category: "Row Level Security (RLS)",
-                items: [
-                  "Enable RLS on all tables in Table Editor",
-                  "Create policies for SELECT, INSERT, UPDATE, DELETE",
-                  "Use auth.uid() to restrict access to user's own data",
-                  "Test policies with different user roles",
+                id: "rls-setup",
+                title: "Row Level Security (RLS)",
+                description: "Enable and configure RLS policies for data security",
+                required: true,
+                estimatedTime: "20 min",
+                configExample: `-- Enable RLS on all tables
+ALTER TABLE public.posts ENABLE ROW LEVEL SECURITY;
+
+-- Policy: Users can read their own posts
+CREATE POLICY "Users can read own posts"
+ON public.posts
+FOR SELECT
+USING (auth.uid() = user_id);
+
+-- Policy: Users can insert their own posts
+CREATE POLICY "Users can insert own posts"
+ON public.posts
+FOR INSERT
+WITH CHECK (auth.uid() = user_id);
+
+-- Test policies with different user roles`,
+                docs: [
+                  { text: "Row Level Security", href: "https://supabase.com/docs/guides/auth/row-level-security" },
                 ],
               },
               {
-                category: "Database Migrations",
-                items: [
-                  "Use Supabase CLI or dashboard SQL editor",
-                  "Version control schema changes",
-                  "Test migrations on staging first",
-                  "Enable point-in-time recovery on Pro tier",
+                id: "migrations",
+                title: "Database Migrations",
+                description: "Version control and manage schema changes",
+                required: false,
+                estimatedTime: "30 min",
+                configExample: `# Install Supabase CLI
+npm install -g supabase
+
+# Initialize local development
+supabase init
+
+# Create migration
+supabase migration new create_posts_table
+
+# Apply migrations
+supabase db push
+
+# Enable point-in-time recovery (Pro tier)
+# Settings → Database → Point-in-time Recovery`,
+                docs: [
+                  { text: "Database Migrations", href: "https://supabase.com/docs/guides/cli/local-development" },
                 ],
               },
               {
-                category: "Connection Pooling (Pro)",
-                items: [
-                  "Enable PgBouncer in project settings",
-                  "Use pooler connection string for high concurrency",
-                  "Session mode for Prisma/ORMs",
-                  "Transaction mode for serverless functions",
+                id: "connection-pooling",
+                title: "Connection Pooling (Pro Tier)",
+                description: "Enable PgBouncer for production-scale connection management",
+                required: false,
+                estimatedTime: "10 min",
+                configExample: `// Pro tier only
+// Enable in: Settings → Database → Connection Pooling
+
+// Use pooler connection string for high concurrency:
+// Session mode (for Prisma/ORMs):
+DATABASE_URL=postgres://postgres.xxxxx:6543/postgres
+
+// Transaction mode (for serverless):
+DATABASE_URL=postgres://postgres.xxxxx:6543/postgres?pgbouncer=true
+
+// Direct connection (low concurrency):
+DATABASE_URL=postgres://postgres.xxxxx:5432/postgres`,
+                docs: [
+                  { text: "Connection Pooling", href: "https://supabase.com/docs/guides/database/connecting-to-postgres#connection-pooler" },
                 ],
               },
             ]}

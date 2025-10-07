@@ -149,33 +149,59 @@ export default function VercelServicePage() {
 
         <div className="mb-12">
           <CostTriggers
+            serviceName="Vercel"
             triggers={[
               {
-                trigger: "Team Collaboration Needed",
-                threshold: ">1 developer",
-                impact: "$20/month minimum",
-                mitigation:
-                  "Hobby tier is single user only. Upgrade to Pro immediately for teams.",
+                id: "team-collaboration",
+                title: "Team Collaboration Needed",
+                currentTier: "Hobby (Free)",
+                upgradeTo: "Pro ($20/user/month)",
+                scenario: "Your team has more than one developer needing access to the project.",
+                metrics: [
+                  { name: "Team Size", threshold: ">1 developer" },
+                  { name: "Cost Impact", threshold: "$20/month minimum" },
+                ],
+                costIncrease: "Hobby tier is single user only",
+                urgency: "high",
               },
               {
-                trigger: "High Traffic Application",
-                threshold: ">100GB bandwidth/month",
-                impact: "$20/month + overage",
-                mitigation: "Monitor analytics, implement caching, optimize assets with Next.js Image",
+                id: "high-traffic",
+                title: "High Traffic Application",
+                currentTier: "Hobby (100GB bandwidth)",
+                upgradeTo: "Pro (1TB bandwidth)",
+                scenario: "Your application is exceeding the 100GB monthly bandwidth limit on the free tier.",
+                metrics: [
+                  { name: "Bandwidth Usage", threshold: ">100GB/month" },
+                  { name: "Overage Cost", threshold: "$20/month + bandwidth fees" },
+                ],
+                costIncrease: "Monitor analytics, implement caching",
+                urgency: "high",
               },
               {
-                trigger: "Long Build Times",
-                threshold: ">10 minute builds",
-                impact: "4x faster on Pro tier",
-                mitigation:
-                  "Pro tier has 4x build concurrency. Consider code splitting and incremental builds.",
+                id: "build-performance",
+                title: "Long Build Times",
+                currentTier: "Hobby (1 concurrent build)",
+                upgradeTo: "Pro (4 concurrent builds)",
+                scenario: "Build times exceed 10 minutes and deployments are queued, slowing down development velocity.",
+                metrics: [
+                  { name: "Build Duration", threshold: ">10 minutes" },
+                  { name: "Performance Gain", threshold: "4x faster on Pro" },
+                ],
+                costIncrease: "Pro tier has 4x build concurrency",
+                urgency: "medium",
               },
               {
-                trigger: "Heavy Serverless Usage",
-                threshold: ">100GB-hrs/month",
-                impact: "$40 per 100GB-hrs overage",
-                mitigation:
-                  "Optimize function cold starts, reduce memory usage, cache responses",
+                id: "serverless-usage",
+                title: "Heavy Serverless Usage",
+                currentTier: "Hobby (100GB-hrs)",
+                upgradeTo: "Pro (1,000GB-hrs)",
+                scenario: "Serverless function execution is exceeding free tier limits with heavy API usage.",
+                metrics: [
+                  { name: "Serverless Usage", threshold: ">100GB-hrs/month" },
+                  { name: "Overage Cost", threshold: "$40 per 100GB-hrs" },
+                ],
+                costIncrease: "Optimize function cold starts",
+                urgency: "medium",
               },
             ]}
           />
@@ -183,42 +209,104 @@ export default function VercelServicePage() {
 
         <div className="mb-12">
           <LimitsAndQuotas
+            serviceName="Vercel"
             limits={[
               {
+                id: "serverless-timeout",
                 name: "Serverless Function Timeout",
-                free: "10 seconds",
-                paid: "60 seconds (Pro), 900 seconds (Enterprise)",
-                notes: "Hard limit enforced at runtime",
+                tier: "Hobby/Pro/Enterprise",
+                value: "10s (Hobby) / 60s (Pro) / 900s (Enterprise)",
+                type: "hard",
+                blocksCapability: [
+                  "Long-running API operations on Hobby tier",
+                  "Background jobs and data processing",
+                  "Complex AI inference or batch operations",
+                ],
+                workarounds: [
+                  "Upgrade to Pro tier for 60s timeout",
+                  "Use background jobs with queues",
+                  "Break operations into smaller chunks",
+                ],
+                critical: true,
               },
               {
+                id: "edge-timeout",
                 name: "Edge Function Timeout",
-                free: "30 seconds",
-                paid: "30 seconds (all tiers)",
-                notes: "Edge runtime has same timeout across all plans",
+                tier: "All",
+                value: "30 seconds",
+                type: "hard",
+                blocksCapability: [
+                  "Long-running edge computations",
+                  "Heavy data transformations at edge",
+                ],
+                workarounds: [
+                  "Keep edge functions lightweight",
+                  "Offload heavy work to serverless functions",
+                ],
               },
               {
+                id: "serverless-memory",
                 name: "Serverless Function Memory",
-                free: "1,024MB",
-                paid: "3,008MB (Pro), Custom (Enterprise)",
-                notes: "Configurable per function",
+                tier: "Hobby/Pro/Enterprise",
+                value: "1,024MB (Hobby) / 3,008MB (Pro) / Custom (Enterprise)",
+                type: "hard",
+                blocksCapability: [
+                  "Memory-intensive operations on Hobby tier",
+                  "Large file processing",
+                  "In-memory data aggregations",
+                ],
+                workarounds: [
+                  "Upgrade to Pro tier for 3GB memory",
+                  "Use streaming for large files",
+                  "Optimize memory usage",
+                ],
+                critical: true,
               },
               {
+                id: "deployment-size",
                 name: "Deployment Size",
-                free: "50MB uncompressed",
-                paid: "50MB uncompressed (all tiers)",
-                notes: "Functions bundle size limit",
+                tier: "All",
+                value: "50MB uncompressed",
+                type: "hard",
+                blocksCapability: [
+                  "Large dependency bundles",
+                  "Multiple heavy libraries",
+                ],
+                workarounds: [
+                  "Code splitting and dynamic imports",
+                  "Remove unused dependencies",
+                  "Use external CDNs for large assets",
+                ],
               },
               {
+                id: "build-concurrency",
                 name: "Build Concurrency",
-                free: "1 concurrent build",
-                paid: "4 concurrent (Pro), Custom (Enterprise)",
-                notes: "Parallel deployments",
+                tier: "Hobby/Pro/Enterprise",
+                value: "1 (Hobby) / 4 (Pro) / Custom (Enterprise)",
+                type: "soft",
+                blocksCapability: [
+                  "Parallel deployments on Hobby tier",
+                  "Fast development iteration",
+                ],
+                workarounds: [
+                  "Upgrade to Pro tier for 4 concurrent builds",
+                  "Queue deployments sequentially",
+                ],
               },
               {
+                id: "env-vars",
                 name: "Environment Variables",
-                free: "4KB per variable",
-                paid: "4KB per variable (all tiers)",
-                notes: "Total size limit applies",
+                tier: "All",
+                value: "4KB per variable",
+                type: "hard",
+                blocksCapability: [
+                  "Storing large configuration data",
+                  "Embedding large secrets",
+                ],
+                workarounds: [
+                  "Use external configuration services",
+                  "Store large data in databases",
+                ],
               },
             ]}
           />
@@ -226,27 +314,77 @@ export default function VercelServicePage() {
 
         <div className="mb-12">
           <CostCalculator
+            serviceName="Vercel"
             scenarios={[
               {
+                id: "startup",
                 name: "MVP / Prototype",
-                usage: "1-2 developers, <50K monthly visitors, minimal serverless",
-                calculation: "0 users × $20 = $0/month",
-                monthlyCost: "$0",
-                notes: "Hobby tier covers most MVPs perfectly",
+                description: "Single developer building and testing, low traffic",
+                usage: [
+                  { metric: "Developers", value: "1-2" },
+                  { metric: "Monthly Visitors", value: "<50K" },
+                  { metric: "Bandwidth", value: "<100GB" },
+                  { metric: "Serverless Usage", value: "Minimal" },
+                ],
+                breakdown: [
+                  {
+                    component: "Hobby Tier Base",
+                    cost: "$0/month",
+                    notes: "100GB bandwidth, 6K build minutes, 100GB-hrs serverless",
+                  },
+                ],
+                totalCost: "$0/month",
+                type: "startup",
               },
               {
+                id: "growth",
                 name: "Growing SaaS",
-                usage: "3-5 developers, 100K+ visitors, moderate serverless",
-                calculation: "3 users × $20 = $60/month + bandwidth overage ~$10",
-                monthlyCost: "$60-80",
-                notes: "Pro tier needed for team collaboration",
+                description: "Team collaboration with moderate traffic and serverless usage",
+                usage: [
+                  { metric: "Developers", value: "3-5" },
+                  { metric: "Monthly Visitors", value: "100K+" },
+                  { metric: "Bandwidth", value: "200GB" },
+                  { metric: "Serverless Usage", value: "Moderate" },
+                ],
+                breakdown: [
+                  {
+                    component: "Pro Tier Base",
+                    cost: "$60/month",
+                    notes: "3 users × $20/user",
+                  },
+                  {
+                    component: "Bandwidth Overage",
+                    cost: "$10-20/month",
+                    notes: "100GB overage above 1TB included",
+                  },
+                ],
+                totalCost: "$60-80/month",
+                type: "growth",
               },
               {
+                id: "enterprise",
                 name: "High-Traffic Production",
-                usage: "10+ developers, 1M+ visitors, heavy serverless + edge",
-                calculation: "Pro tier + overages or Enterprise pricing",
-                monthlyCost: "$200+",
-                notes: "Contact sales for Enterprise at this scale",
+                description: "Large team with high traffic, heavy serverless and edge usage",
+                usage: [
+                  { metric: "Developers", value: "10+" },
+                  { metric: "Monthly Visitors", value: "1M+" },
+                  { metric: "Bandwidth", value: "5TB+" },
+                  { metric: "Serverless Usage", value: "Heavy" },
+                ],
+                breakdown: [
+                  {
+                    component: "Pro Tier or Enterprise",
+                    cost: "$200+/month",
+                    notes: "10 users × $20 or custom Enterprise pricing",
+                  },
+                  {
+                    component: "Overages",
+                    cost: "Varies",
+                    notes: "Bandwidth, serverless, and edge function overages",
+                  },
+                ],
+                totalCost: "$200-1K+/month",
+                type: "enterprise",
               },
             ]}
           />
@@ -254,49 +392,94 @@ export default function VercelServicePage() {
 
         <div className="mb-12">
           <IntegrationRequirements
-            requirements={[
+            serviceName="Vercel"
+            steps={[
               {
-                category: "Account Setup",
-                items: [
-                  "Create Vercel account (GitHub/GitLab/Bitbucket OAuth)",
-                  "Install Vercel CLI: npm i -g vercel",
-                  "Link project: vercel link",
+                id: "account-setup",
+                title: "Account Setup",
+                description: "Create Vercel account and install CLI",
+                required: true,
+                estimatedTime: "5 min",
+                configExample: `# Install Vercel CLI
+npm i -g vercel
+
+# Login to Vercel
+vercel login
+
+# Link project
+vercel link`,
+                docs: [
+                  { text: "Vercel CLI Docs", href: "https://vercel.com/docs/cli" },
                 ],
               },
               {
-                category: "Repository Connection",
-                items: [
-                  "Connect GitHub/GitLab repository",
-                  "Configure auto-deploy on push",
-                  "Set production branch (usually main)",
-                  "Enable preview deployments for PRs",
+                id: "repo-connection",
+                title: "Repository Connection",
+                description: "Connect GitHub/GitLab/Bitbucket repository for automatic deployments",
+                required: true,
+                estimatedTime: "5 min",
+                configExample: `// In Vercel Dashboard:
+// 1. Import Git Repository
+// 2. Select repository
+// 3. Configure framework (Next.js auto-detected)
+// 4. Set production branch (main)
+// 5. Enable preview deployments for PRs`,
+                docs: [
+                  { text: "Git Integration", href: "https://vercel.com/docs/deployments/git" },
                 ],
               },
               {
-                category: "Environment Variables",
-                items: [
-                  "Add env vars in Vercel dashboard or vercel env",
-                  "Separate production/preview/development values",
-                  "Use NEXT_PUBLIC_ prefix for client-side vars",
-                  "Never commit secrets to repository",
+                id: "env-vars",
+                title: "Environment Variables",
+                description: "Configure environment variables for different environments",
+                required: true,
+                estimatedTime: "10 min",
+                configExample: `# Add via CLI
+vercel env add NEXT_PUBLIC_API_URL production
+vercel env add DATABASE_URL production
+
+# Or in dashboard: Settings → Environment Variables
+# Separate values for: Production, Preview, Development
+# Use NEXT_PUBLIC_ prefix for client-side vars
+# Never commit secrets to repository`,
+                docs: [
+                  { text: "Environment Variables", href: "https://vercel.com/docs/environment-variables" },
                 ],
               },
               {
-                category: "Custom Domain",
-                items: [
-                  "Add domain in Vercel dashboard",
-                  "Update DNS records (A/CNAME)",
-                  "SSL automatically provisioned",
-                  "Verify domain ownership",
+                id: "custom-domain",
+                title: "Custom Domain Setup",
+                description: "Add custom domain with automatic SSL",
+                required: false,
+                estimatedTime: "10 min",
+                configExample: `// In Vercel Dashboard:
+// 1. Settings → Domains
+// 2. Add domain (e.g., example.com)
+// 3. Update DNS records:
+//    - A record: 76.76.21.21
+//    - Or CNAME: cname.vercel-dns.com
+// 4. Verify domain ownership
+// 5. SSL automatically provisioned`,
+                docs: [
+                  { text: "Custom Domains", href: "https://vercel.com/docs/custom-domains" },
                 ],
               },
               {
-                category: "Team Setup (Pro)",
-                items: [
-                  "Invite team members via email",
-                  "Configure role-based access",
-                  "Set up deployment permissions",
-                  "Enable production protection",
+                id: "team-setup",
+                title: "Team Setup (Pro Tier)",
+                description: "Invite team members and configure permissions",
+                required: false,
+                estimatedTime: "10 min",
+                configExample: `// In Vercel Dashboard:
+// 1. Settings → Team
+// 2. Invite members via email
+// 3. Configure role-based access:
+//    - Member: Can deploy and view
+//    - Owner: Full access
+// 4. Enable production protection
+// 5. Set up deployment permissions`,
+                docs: [
+                  { text: "Team Management", href: "https://vercel.com/docs/teams-and-accounts" },
                 ],
               },
             ]}
