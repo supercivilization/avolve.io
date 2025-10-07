@@ -294,119 +294,105 @@ export default function AIPageChatSaaSPage() {
                 name: "Next.js 15 + Supabase Auth",
                 href: "/systems/nextjs-15-supabase-auth",
                 description: "User authentication with social login and email/password",
-                complexity: "medium",
               },
               {
                 name: "AI Streaming Chat",
                 href: "/systems/ai-streaming-chat",
                 description: "Real-time streaming AI responses with state management",
-                complexity: "medium",
               },
               {
                 name: "API Usage Tracking",
                 href: "/systems/api-usage-tracking",
                 description: "Token counting, quota enforcement, and rate limiting",
-                complexity: "medium",
               },
               {
                 name: "Stripe Subscriptions",
                 href: "/systems/stripe-subscriptions",
                 description: "Multi-tier billing with webhook handling",
-                complexity: "high",
               },
             ]}
             software={[
               {
-                name: "Next.js",
+                name: "Next.js 15.5",
                 href: "/software/nextjs",
-                version: "15.5+",
-                purpose: "React framework with App Router and Server Components",
+                description: "React framework with App Router and Server Components",
               },
               {
-                name: "Vercel AI SDK",
+                name: "Vercel AI SDK 5.0",
                 href: "/software/vercel-ai-sdk",
-                version: "5.0+",
-                purpose: "Streaming AI responses and chat state management",
+                description: "Streaming AI responses and chat state management",
               },
               {
-                name: "Supabase JS",
+                name: "Supabase JS 2.57",
                 href: "/software/supabase",
-                version: "2.57+",
-                purpose: "Database client and authentication",
+                description: "Database client and authentication",
               },
               {
-                name: "Stripe JS",
+                name: "Stripe JS 4.7",
                 href: "/software/stripe-js",
-                version: "4.7+",
-                purpose: "Payment processing and subscription management",
+                description: "Payment processing and subscription management",
               },
               {
-                name: "React",
+                name: "React 19.1",
                 href: "/software/react",
-                version: "19.1+",
-                purpose: "UI library with hooks and suspense",
+                description: "UI library with hooks and suspense",
               },
               {
-                name: "TypeScript",
+                name: "TypeScript 5.9",
                 href: "/software/typescript",
-                version: "5.9+",
-                purpose: "Type safety across the stack",
+                description: "Type safety across the stack",
               },
             ]}
             services={[
               {
                 name: "Vercel",
                 href: "/services/vercel",
-                purpose: "Hosting, edge functions, and deployments",
-                cost: "$0-60/mo",
+                description: "Hosting, edge functions, and deployments ($0-60/mo)",
               },
               {
                 name: "Supabase",
                 href: "/services/supabase",
-                purpose: "PostgreSQL database, auth, and storage",
-                cost: "$0-25/mo",
+                description: "PostgreSQL database, auth, and storage ($0-25/mo)",
               },
               {
                 name: "Anthropic",
                 href: "/services/anthropic",
-                purpose: "Claude AI API for chat completions",
-                cost: "$50-200/mo",
+                description: "Claude AI API for chat completions ($50-200/mo)",
               },
               {
                 name: "Stripe",
                 href: "/services/stripe",
-                purpose: "Payment processing and subscription billing",
-                cost: "2.9% + $0.30",
+                description: "Payment processing and subscription billing (2.9% + $0.30)",
               },
             ]}
-            supportLinks={[
+            support={[
               {
-                title: "Dynamic Server Usage Error",
+                name: "Dynamic Server Usage Error",
                 href: "/support/dynamic-server-usage",
                 description: "Fix Next.js 15 async cookie/header errors",
               },
               {
-                title: "AI Streaming Errors",
+                name: "AI Streaming Errors",
                 href: "/support/ai-streaming-errors",
                 description: "Handle stream interruption and timeouts",
               },
               {
-                title: "Connection Pool Exhaustion",
+                name: "Connection Pool Exhaustion",
                 href: "/support/connection-pool-exhaustion",
                 description: "Enable Supabase connection pooling",
               },
               {
-                title: "Stripe Webhook Errors",
+                name: "Stripe Webhook Errors",
                 href: "/support/stripe-webhook-errors",
                 description: "Fix webhook signature verification",
               },
               {
-                title: "PKCE Flow Failed",
+                name: "PKCE Flow Failed",
                 href: "/support/pkce-flow-failed",
                 description: "Fix Supabase auth cookie timing",
               },
               {
-                title: "Hydration Mismatch",
+                name: "Hydration Mismatch",
                 href: "/support/hydration-mismatch",
                 description: "Resolve server/client HTML differences",
               },
@@ -420,105 +406,93 @@ export default function AIPageChatSaaSPage() {
           <CostModel
             phases={[
               {
-                name: "MVP (0-100 users)",
-                totalCost: "$100-250/mo",
+                phase: "MVP (0-100 users)",
+                totalCost: "$100-250",
                 breakdown: [
                   {
-                    service: "Vercel",
-                    tier: "Hobby (Free)",
+                    category: "Vercel (Hobby)",
                     cost: "$0",
                     notes: "Sufficient for MVP with <100GB bandwidth",
                   },
                   {
-                    service: "Supabase",
-                    tier: "Free",
+                    category: "Supabase (Free)",
                     cost: "$0",
                     notes: "500MB DB, 50K MAU, 2GB storage",
                   },
                   {
-                    service: "Anthropic",
-                    tier: "Pay-as-you-go",
+                    category: "Anthropic API",
                     cost: "$50-200",
                     notes: "~10K-40K messages/mo with Claude 3.7 Sonnet",
                   },
                   {
-                    service: "Stripe",
-                    tier: "Standard",
+                    category: "Stripe (Standard)",
                     cost: "$50-250",
                     notes: "2.9% + $0.30 on $1.7K-8.6K monthly revenue",
                   },
                 ],
-                triggerPoints: [
+                assumptions: [
                   "Upgrade Vercel when bandwidth >100GB/mo",
                   "Upgrade Supabase when DB >500MB or users >50K",
                   "Scale Anthropic costs with message volume",
                 ],
               },
               {
-                name: "Growth (100-1K users)",
-                totalCost: "$550-2K/mo",
+                phase: "Growth (100-1K users)",
+                totalCost: "$550-2K",
                 breakdown: [
                   {
-                    service: "Vercel",
-                    tier: "Pro",
+                    category: "Vercel (Pro)",
                     cost: "$20",
                     notes: "Team features + 1TB bandwidth",
                   },
                   {
-                    service: "Supabase",
-                    tier: "Pro",
+                    category: "Supabase (Pro)",
                     cost: "$25",
                     notes: "8GB DB + connection pooler",
                   },
                   {
-                    service: "Anthropic",
-                    tier: "Pay-as-you-go",
+                    category: "Anthropic API",
                     cost: "$500-2K",
                     notes: "100K-400K messages/mo",
                   },
                   {
-                    service: "Stripe",
-                    tier: "Standard",
+                    category: "Stripe (Standard)",
                     cost: "$145-580",
                     notes: "2.9% + $0.30 on $5K-20K MRR",
                   },
                 ],
-                triggerPoints: [
+                assumptions: [
                   "Consider Anthropic volume discounts",
                   "Monitor connection pool usage",
                   "Optimize token usage with caching",
                 ],
               },
               {
-                name: "Scale (1K+ users)",
-                totalCost: "$5K-50K+/mo",
+                phase: "Scale (1K+ users)",
+                totalCost: "$5K-50K+",
                 breakdown: [
                   {
-                    service: "Vercel",
-                    tier: "Enterprise",
+                    category: "Vercel (Enterprise)",
                     cost: "$500+",
                     notes: "Custom limits + SLA",
                   },
                   {
-                    service: "Supabase",
-                    tier: "Pro + Compute",
+                    category: "Supabase (Pro + Compute)",
                     cost: "$599+",
                     notes: "Dedicated compute + point-in-time recovery",
                   },
                   {
-                    service: "Anthropic",
-                    tier: "Enterprise",
+                    category: "Anthropic (Enterprise)",
                     cost: "$5K-40K+",
                     notes: "Volume discounts + dedicated support",
                   },
                   {
-                    service: "Stripe",
-                    tier: "Negotiated",
+                    category: "Stripe (Negotiated)",
                     cost: "2.7% + $0.30",
                     notes: "Lower rates on $100K+ MRR",
                   },
                 ],
-                triggerPoints: [
+                assumptions: [
                   "Negotiate enterprise contracts",
                   "Consider multi-region deployment",
                   "Implement aggressive caching",
@@ -532,90 +506,231 @@ export default function AIPageChatSaaSPage() {
         <div className="mb-12">
           <h2 className="mb-6 text-3xl font-bold text-slate-900 dark:text-slate-100">Development Timeline</h2>
           <TimeEstimate
-            phases={[
+            tasks={[
               {
-                name: "Project Setup",
-                duration: "1 hour",
-                tasks: [
-                  "Initialize Next.js 15 project with TypeScript",
-                  "Set up Tailwind CSS and shadcn/ui",
-                  "Configure ESLint and Prettier",
-                  "Initialize Git repository",
-                ],
+                id: "setup-1",
+                name: "Initialize Next.js 15 project with TypeScript",
+                estimate: "15 min",
+                category: "Project Setup",
               },
               {
-                name: "Authentication",
-                duration: "4 hours",
-                tasks: [
-                  "Set up Supabase project and auth",
-                  "Implement auth middleware for protected routes",
-                  "Build login/signup UI components",
-                  "Test social login flows (Google, GitHub)",
-                ],
+                id: "setup-2",
+                name: "Set up Tailwind CSS and shadcn/ui",
+                estimate: "15 min",
+                category: "Project Setup",
+                dependencies: ["setup-1"],
               },
               {
-                name: "Chat UI",
-                duration: "6 hours",
-                tasks: [
-                  "Build chat interface with message bubbles",
-                  "Implement streaming UI with loading states",
-                  "Add conversation sidebar with history",
-                  "Create new conversation and delete flows",
-                ],
+                id: "setup-3",
+                name: "Configure ESLint and Prettier",
+                estimate: "15 min",
+                category: "Project Setup",
+                dependencies: ["setup-1"],
               },
               {
-                name: "AI Integration",
-                duration: "4 hours",
-                tasks: [
-                  "Set up Anthropic API and Vercel AI SDK",
-                  "Implement streaming chat completion",
-                  "Add error handling and retry logic",
-                  "Test token counting and limits",
-                ],
+                id: "setup-4",
+                name: "Initialize Git repository",
+                estimate: "15 min",
+                category: "Project Setup",
               },
               {
-                name: "Database Schema",
-                duration: "2 hours",
-                tasks: [
-                  "Design tables (users, conversations, messages, usage)",
-                  "Implement Row Level Security policies",
-                  "Create database indexes for performance",
-                  "Write migrations and test data",
-                ],
+                id: "auth-1",
+                name: "Set up Supabase project and auth",
+                estimate: "1 hour",
+                category: "Authentication",
+                dependencies: ["setup-1"],
               },
               {
-                name: "Usage Tracking",
-                duration: "6 hours",
-                tasks: [
-                  "Implement token counting middleware",
-                  "Create usage dashboard for users",
-                  "Add quota enforcement and rate limiting",
-                  "Build admin usage analytics",
-                ],
+                id: "auth-2",
+                name: "Implement auth middleware for protected routes",
+                estimate: "1 hour",
+                category: "Authentication",
+                dependencies: ["auth-1"],
               },
               {
-                name: "Stripe Integration",
-                duration: "8 hours",
-                tasks: [
-                  "Set up Stripe account and products",
-                  "Implement checkout flow and customer portal",
-                  "Build webhook handlers for subscription events",
-                  "Test subscription lifecycle (create, upgrade, cancel)",
-                ],
+                id: "auth-3",
+                name: "Build login/signup UI components",
+                estimate: "1.5 hours",
+                category: "Authentication",
+                dependencies: ["auth-1", "setup-2"],
               },
               {
-                name: "Testing & Polish",
-                duration: "8 hours",
-                tasks: [
-                  "Write unit tests for critical paths",
-                  "E2E testing with Playwright",
-                  "Fix edge cases and error states",
-                  "Performance optimization and caching",
-                ],
+                id: "auth-4",
+                name: "Test social login flows (Google, GitHub)",
+                estimate: "30 min",
+                category: "Authentication",
+                dependencies: ["auth-3"],
+              },
+              {
+                id: "chat-1",
+                name: "Build chat interface with message bubbles",
+                estimate: "2 hours",
+                category: "Chat UI",
+                dependencies: ["setup-2"],
+              },
+              {
+                id: "chat-2",
+                name: "Implement streaming UI with loading states",
+                estimate: "2 hours",
+                category: "Chat UI",
+                dependencies: ["chat-1"],
+              },
+              {
+                id: "chat-3",
+                name: "Add conversation sidebar with history",
+                estimate: "1.5 hours",
+                category: "Chat UI",
+                dependencies: ["chat-1"],
+              },
+              {
+                id: "chat-4",
+                name: "Create new conversation and delete flows",
+                estimate: "30 min",
+                category: "Chat UI",
+                dependencies: ["chat-3"],
+              },
+              {
+                id: "ai-1",
+                name: "Set up Anthropic API and Vercel AI SDK",
+                estimate: "1 hour",
+                category: "AI Integration",
+                dependencies: ["setup-1"],
+              },
+              {
+                id: "ai-2",
+                name: "Implement streaming chat completion",
+                estimate: "2 hours",
+                category: "AI Integration",
+                dependencies: ["ai-1", "chat-2"],
+              },
+              {
+                id: "ai-3",
+                name: "Add error handling and retry logic",
+                estimate: "30 min",
+                category: "AI Integration",
+                dependencies: ["ai-2"],
+              },
+              {
+                id: "ai-4",
+                name: "Test token counting and limits",
+                estimate: "30 min",
+                category: "AI Integration",
+                dependencies: ["ai-2"],
+              },
+              {
+                id: "db-1",
+                name: "Design tables (users, conversations, messages, usage)",
+                estimate: "45 min",
+                category: "Database Schema",
+                dependencies: ["auth-1"],
+              },
+              {
+                id: "db-2",
+                name: "Implement Row Level Security policies",
+                estimate: "45 min",
+                category: "Database Schema",
+                dependencies: ["db-1"],
+              },
+              {
+                id: "db-3",
+                name: "Create database indexes for performance",
+                estimate: "15 min",
+                category: "Database Schema",
+                dependencies: ["db-1"],
+              },
+              {
+                id: "db-4",
+                name: "Write migrations and test data",
+                estimate: "15 min",
+                category: "Database Schema",
+                dependencies: ["db-1"],
+              },
+              {
+                id: "usage-1",
+                name: "Implement token counting middleware",
+                estimate: "2 hours",
+                category: "Usage Tracking",
+                dependencies: ["ai-2", "db-1"],
+              },
+              {
+                id: "usage-2",
+                name: "Create usage dashboard for users",
+                estimate: "2 hours",
+                category: "Usage Tracking",
+                dependencies: ["usage-1"],
+              },
+              {
+                id: "usage-3",
+                name: "Add quota enforcement and rate limiting",
+                estimate: "1.5 hours",
+                category: "Usage Tracking",
+                dependencies: ["usage-1"],
+              },
+              {
+                id: "usage-4",
+                name: "Build admin usage analytics",
+                estimate: "30 min",
+                category: "Usage Tracking",
+                dependencies: ["usage-1"],
+              },
+              {
+                id: "stripe-1",
+                name: "Set up Stripe account and products",
+                estimate: "1 hour",
+                category: "Stripe Integration",
+              },
+              {
+                id: "stripe-2",
+                name: "Implement checkout flow and customer portal",
+                estimate: "3 hours",
+                category: "Stripe Integration",
+                dependencies: ["stripe-1", "auth-2"],
+              },
+              {
+                id: "stripe-3",
+                name: "Build webhook handlers for subscription events",
+                estimate: "3 hours",
+                category: "Stripe Integration",
+                dependencies: ["stripe-1", "db-1"],
+              },
+              {
+                id: "stripe-4",
+                name: "Test subscription lifecycle (create, upgrade, cancel)",
+                estimate: "1 hour",
+                category: "Stripe Integration",
+                dependencies: ["stripe-2", "stripe-3"],
+              },
+              {
+                id: "test-1",
+                name: "Write unit tests for critical paths",
+                estimate: "3 hours",
+                category: "Testing & Polish",
+                dependencies: ["ai-2", "auth-2", "stripe-3"],
+              },
+              {
+                id: "test-2",
+                name: "E2E testing with Playwright",
+                estimate: "3 hours",
+                category: "Testing & Polish",
+                dependencies: ["test-1"],
+              },
+              {
+                id: "test-3",
+                name: "Fix edge cases and error states",
+                estimate: "1.5 hours",
+                category: "Testing & Polish",
+                dependencies: ["test-2"],
+              },
+              {
+                id: "test-4",
+                name: "Performance optimization and caching",
+                estimate: "30 min",
+                category: "Testing & Polish",
+                dependencies: ["test-2"],
               },
             ]}
             totalEstimate="2-3 weeks"
-            notes="Timeline assumes 20 hours/week. Can be accelerated with full-time focus or slowed by learning curve for new technologies."
+            description="Timeline assumes 20 hours/week. Can be accelerated with full-time focus or slowed by learning curve for new technologies."
           />
         </div>
 
@@ -625,77 +740,74 @@ export default function AIPageChatSaaSPage() {
           <CommonPitfalls
             pitfalls={[
               {
+                id: "ai-cost-spikes",
                 title: "AI Cost Spikes",
                 severity: "high",
-                description:
+                symptom: "Sudden increase in Anthropic API costs or user complaints about rate limits",
+                cause:
                   "Uncontrolled token usage can lead to massive unexpected bills. A single power user or bot can consume thousands of dollars in API credits.",
-                prevention: [
-                  "Implement per-user rate limiting from day one",
-                  "Set up usage alerts in Anthropic dashboard",
-                  "Add circuit breakers to stop requests at thresholds",
-                  "Monitor token usage in real-time",
-                ],
-                detection: "Sudden increase in Anthropic API costs or user complaints about rate limits",
-                mitigation:
-                  "Immediately implement stricter rate limits, investigate abuse patterns, and contact users with anomalous usage",
+                prevention:
+                  "Implement per-user rate limiting from day one. Set up usage alerts in Anthropic dashboard. Add circuit breakers to stop requests at thresholds. Monitor token usage in real-time.",
+                supportLink: {
+                  text: "Learn about API usage tracking",
+                  href: "/systems/api-usage-tracking",
+                },
               },
               {
+                id: "streaming-state",
                 title: "Streaming State Management",
                 severity: "medium",
-                description:
+                symptom: "Users report incomplete messages or blank chat after errors",
+                cause:
                   "Managing UI state during streaming is complex. Connections can drop mid-stream, causing incomplete messages and confused state.",
-                prevention: [
-                  "Use Vercel AI SDK's useChat hook for state management",
-                  "Implement error boundaries around streaming components",
-                  "Add timeout handling for long-running streams",
-                  "Store message state in database as it streams",
-                ],
-                detection: "Users report incomplete messages or blank chat after errors",
-                mitigation:
-                  "Add reconnection logic, show clear error states, and allow users to retry failed messages",
+                prevention:
+                  "Use Vercel AI SDK's useChat hook for state management. Implement error boundaries around streaming components. Add timeout handling for long-running streams. Store message state in database as it streams.",
+                supportLink: {
+                  text: "View AI streaming errors guide",
+                  href: "/support/ai-streaming-errors",
+                },
               },
               {
+                id: "connection-pool",
                 title: "Connection Pool Exhaustion",
                 severity: "high",
-                description:
+                symptom: "Error: 'remaining connection slots are reserved' or 'too many clients already'",
+                cause:
                   "Supabase free tier has connection limits. Each serverless function invocation creates a new connection, quickly exhausting the pool.",
-                prevention: [
-                  "Enable Supabase connection pooler from the start",
-                  "Use pgBouncer mode for transactional queries",
-                  "Set proper connection timeout values",
-                  "Monitor connection usage in Supabase dashboard",
-                ],
-                detection: "Error: 'remaining connection slots are reserved' or 'too many clients already'",
-                mitigation:
-                  "Enable connection pooler immediately, upgrade to Pro tier for higher limits, or implement connection retry logic",
+                prevention:
+                  "Enable Supabase connection pooler from the start. Use pgBouncer mode for transactional queries. Set proper connection timeout values. Monitor connection usage in Supabase dashboard.",
+                supportLink: {
+                  text: "Fix connection pool exhaustion",
+                  href: "/support/connection-pool-exhaustion",
+                },
               },
               {
+                id: "webhook-idempotency",
                 title: "Webhook Idempotency",
                 severity: "medium",
-                description:
+                symptom: "Users report duplicate charges or subscription state inconsistencies",
+                cause:
                   "Stripe sends duplicate webhooks. Without idempotency, you might grant subscriptions twice or charge users multiple times.",
-                prevention: [
-                  "Store webhook event IDs in database",
-                  "Check for duplicate events before processing",
-                  "Use database transactions for critical operations",
-                  "Implement Stripe's idempotency keys",
-                ],
-                detection: "Users report duplicate charges or subscription state inconsistencies",
-                mitigation: "Add idempotency checks retroactively and manually reconcile affected accounts",
+                prevention:
+                  "Store webhook event IDs in database. Check for duplicate events before processing. Use database transactions for critical operations. Implement Stripe's idempotency keys.",
+                supportLink: {
+                  text: "View Stripe webhook errors guide",
+                  href: "/support/stripe-webhook-errors",
+                },
               },
               {
+                id: "auth-cookies",
                 title: "Auth Cookie Timing",
                 severity: "medium",
-                description:
+                symptom: "PKCE flow failed error or users can't log in after social auth redirect",
+                cause:
                   "Supabase auth cookies must be set on both request AND response in Next.js 15 middleware, or PKCE flow fails silently.",
-                prevention: [
-                  "Follow Supabase Next.js SSR guide exactly",
-                  "Set cookies on both request and response",
-                  "Test auth flow in production-like environment",
-                  "Add comprehensive auth logging",
-                ],
-                detection: "PKCE flow failed error or users can't log in after social auth redirect",
-                mitigation: "Update middleware to set cookies properly (see support article for fix)",
+                prevention:
+                  "Follow Supabase Next.js SSR guide exactly. Set cookies on both request and response. Test auth flow in production-like environment. Add comprehensive auth logging.",
+                supportLink: {
+                  text: "Fix PKCE flow failed error",
+                  href: "/support/pkce-flow-failed",
+                },
               },
             ]}
           />
@@ -705,71 +817,81 @@ export default function AIPageChatSaaSPage() {
         <div className="mb-12">
           <h2 className="mb-6 text-3xl font-bold text-slate-900 dark:text-slate-100">When to Choose This Solution</h2>
           <SolutionDecision
-            chooseIf={{
-              title: "Choose This Solution If:",
-              criteria: [
-                {
-                  condition: "Building an AI-powered SaaS product",
-                  reasoning:
-                    "This architecture is specifically designed for AI SaaS with all necessary components: auth, billing, usage tracking, and streaming AI.",
-                },
-                {
-                  condition: "Need subscription billing and usage limits",
-                  reasoning:
-                    "Stripe integration handles multi-tier plans, and usage tracking enforces quotas per plan automatically.",
-                },
-                {
-                  condition: "Want fast, streaming AI responses",
-                  reasoning:
-                    "Vercel AI SDK provides best-in-class streaming with built-in state management and error handling.",
-                },
-                {
-                  condition: "Prefer PostgreSQL and Row Level Security",
-                  reasoning:
-                    "Supabase gives you full PostgreSQL with RLS, making multi-tenant data isolation straightforward and secure.",
-                },
-                {
-                  condition: "Value cost-effective infrastructure",
-                  reasoning:
-                    "Can start entirely on free tiers (except AI API) and scale costs gradually as you grow revenue.",
-                },
-              ],
-            }}
-            chooseAlternativeIf={{
-              title: "Consider Alternatives If:",
-              alternatives: [
-                {
-                  condition: "Building a simple chatbot widget",
-                  alternative: "Use Botpress, Voiceflow, or embedded chat libraries",
-                  reasoning:
-                    "These provide pre-built UI and require minimal backend setup. Better for non-SaaS use cases.",
-                },
-                {
-                  condition: "Internal tool with no billing needed",
-                  alternative: "Simplify to Next.js + AI SDK + basic auth",
-                  reasoning:
-                    "Skip Stripe entirely and use simple environment-based auth. Reduces complexity by 40%.",
-                },
-                {
-                  condition: "No usage tracking or limits required",
-                  alternative: "Next.js + Vercel AI SDK + Supabase (no usage tables)",
-                  reasoning:
-                    "Removes the complexity of metering and quota enforcement. Good for unlimited internal tools.",
-                },
-                {
-                  condition: "Mobile-first application",
-                  alternative: "React Native + Expo with similar backend",
-                  reasoning:
-                    "Web-based chat works on mobile but native apps provide better UX for mobile-first products.",
-                },
-                {
-                  condition: "Need multi-modal AI (voice, images, video)",
-                  alternative: "Consider OpenAI API with GPT-4 Vision or Whisper",
-                  reasoning:
-                    "Anthropic focuses on text. OpenAI has better multi-modal support for diverse content types.",
-                },
-              ],
-            }}
+            chooseThisIf={[
+              {
+                text: "Building an AI-powered SaaS product",
+                detail:
+                  "This architecture is specifically designed for AI SaaS with all necessary components: auth, billing, usage tracking, and streaming AI.",
+              },
+              {
+                text: "Need subscription billing and usage limits",
+                detail:
+                  "Stripe integration handles multi-tier plans, and usage tracking enforces quotas per plan automatically.",
+              },
+              {
+                text: "Want fast, streaming AI responses",
+                detail:
+                  "Vercel AI SDK provides best-in-class streaming with built-in state management and error handling.",
+              },
+              {
+                text: "Prefer PostgreSQL and Row Level Security",
+                detail:
+                  "Supabase gives you full PostgreSQL with RLS, making multi-tenant data isolation straightforward and secure.",
+              },
+              {
+                text: "Value cost-effective infrastructure",
+                detail:
+                  "Can start entirely on free tiers (except AI API) and scale costs gradually as you grow revenue.",
+              },
+            ]}
+            chooseAlternativeIf={[
+              {
+                text: "Building a simple chatbot widget",
+                detail: "Use Botpress, Voiceflow, or embedded chat libraries instead",
+              },
+              {
+                text: "Internal tool with no billing needed",
+                detail: "Simplify to Next.js + AI SDK + basic auth",
+              },
+              {
+                text: "No usage tracking or limits required",
+                detail: "Next.js + Vercel AI SDK + Supabase (no usage tables)",
+              },
+              {
+                text: "Mobile-first application",
+                detail: "React Native + Expo with similar backend",
+              },
+              {
+                text: "Need multi-modal AI (voice, images, video)",
+                detail: "Consider OpenAI API with GPT-4 Vision or Whisper",
+              },
+            ]}
+            alternatives={[
+              {
+                name: "Botpress / Voiceflow",
+                href: "/solutions",
+                whenToUse:
+                  "Pre-built chatbot widgets with minimal backend setup. Better for non-SaaS use cases.",
+              },
+              {
+                name: "Simplified Next.js + AI SDK",
+                href: "/solutions",
+                whenToUse:
+                  "Internal tools without billing. Reduces complexity by 40% by skipping Stripe.",
+              },
+              {
+                name: "React Native + Expo",
+                href: "/solutions",
+                whenToUse:
+                  "Mobile-first applications. Native apps provide better UX than web-based chat.",
+              },
+              {
+                name: "OpenAI Multi-Modal API",
+                href: "/solutions",
+                whenToUse:
+                  "Need voice, images, or video AI. OpenAI has better multi-modal support than Anthropic.",
+              },
+            ]}
           />
         </div>
 
