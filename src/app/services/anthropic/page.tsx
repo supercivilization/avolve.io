@@ -97,7 +97,6 @@ export default function AnthropicServicePage() {
                 description: "Maximum tokens in response",
                 tiers: {
                   "Claude 3.7 Sonnet": "8K",
-                  "Claude 3.7 Sonnet": "8K",
                   "Claude 3 Opus": "4K",
                   "Claude 3 Haiku": "4K",
                 },
@@ -107,7 +106,6 @@ export default function AnthropicServicePage() {
                 description: "Image understanding",
                 tiers: {
                   "Claude 3.7 Sonnet": true,
-                  "Claude 3.7 Sonnet": true,
                   "Claude 3 Opus": true,
                   "Claude 3 Haiku": true,
                 },
@@ -116,7 +114,6 @@ export default function AnthropicServicePage() {
                 name: "Function Calling",
                 description: "Tool use capabilities",
                 tiers: {
-                  "Claude 3.7 Sonnet": true,
                   "Claude 3.7 Sonnet": true,
                   "Claude 3 Opus": true,
                   "Claude 3 Haiku": true,
