@@ -92,11 +92,15 @@ export async function middleware(request) {
 
         <div className="mb-12">
           <ErrorDetails
+            errorName="PKCE Flow Failed"
             errorMessage="PKCE flow failed. Invalid code verifier or code challenge."
             frequency="common"
             timing="First auth attempt after social login"
-            affectedVersions={["Next.js 15+", "Supabase SSR latest"]}
-            symptoms={[
+            location="Supabase auth middleware, OAuth callback handling"
+            severity="high"
+            affects={[
+              "Next.js 15+",
+              "Supabase SSR latest",
               "Social login redirect returns to app but user not logged in",
               "No error shown to user, just silently fails",
               "Works in development but fails in production",
@@ -108,8 +112,8 @@ export async function middleware(request) {
         <div className="mb-12">
           <RootCause
             title="Cookie Timing Issue in Next.js 15"
-            description="Next.js 15 middleware requires cookies to be set on both the request AND response objects. Supabase's PKCE flow exchanges a code for a session and stores it in cookies. If cookies aren't set on both objects, the session is lost."
-            technicalDetails={[
+            explanation="Next.js 15 middleware requires cookies to be set on both the request AND response objects. Supabase's PKCE flow exchanges a code for a session and stores it in cookies. If cookies aren't set on both objects, the session is lost."
+            contributingFactors={[
               "PKCE (Proof Key for Code Exchange) is OAuth 2.0 security extension",
               "Code verifier stored in cookie before redirect to OAuth provider",
               "After redirect back, code verifier needed to exchange code for session",
@@ -122,6 +126,7 @@ export async function middleware(request) {
           <StepByStepFix
             steps={[
               {
+                step: 1,
                 title: "Update middleware.ts",
                 description: "Replace your middleware with the correct cookie handling pattern",
                 code: `// middleware.ts
@@ -168,6 +173,7 @@ export const config = {
 }`,
               },
               {
+                step: 2,
                 title: "Create OAuth callback route",
                 description: "Handle the redirect from OAuth provider",
                 code: `// app/auth/callback/route.ts
@@ -192,6 +198,7 @@ export async function GET(request: Request) {
 }`,
               },
               {
+                step: 3,
                 title: "Test social login flow",
                 description: "Verify the fix works end-to-end",
                 code: `// Test checklist:
@@ -208,9 +215,22 @@ export async function GET(request: Request) {
         <div className="mb-12">
           <ProductionImpact
             severity="high"
-            userExperience="Users click login, complete OAuth flow, but remain logged out. Very confusing."
-            businessImpact="Blocks user signups and revenue. High support burden."
-            monitoringQuery={`// Check auth error rates
+            estimatedFixTime="5-10 minutes"
+            impactDescription="Blocks user signups and revenue. High support burden from confused users."
+            userImpact={[
+              {
+                aspect: "Authentication Flow",
+                description: "Users click login, complete OAuth flow, but remain logged out. Very confusing experience.",
+              },
+              {
+                aspect: "User Registration",
+                description: "New users unable to create accounts via social login, forcing fallback to email/password.",
+              },
+            ]}
+            monitoring={[
+              {
+                metric: "Auth Error Rate",
+                recommendation: `// Check auth error rates
 SELECT
   DATE_TRUNC('hour', created_at) as hour,
   COUNT(*) as failed_attempts
@@ -218,8 +238,13 @@ FROM auth.audit_log_entries
 WHERE event_type = 'auth_error'
   AND payload->>'error' LIKE '%PKCE%'
 GROUP BY hour
-ORDER BY hour DESC;`}
-            estimatedFixTime="5-10 minutes"
+ORDER BY hour DESC;`,
+              },
+              {
+                metric: "OAuth Success Rate",
+                recommendation: "Monitor successful OAuth completions vs. failed PKCE exchanges in application logs",
+              },
+            ]}
           />
         </div>
 
@@ -227,16 +252,20 @@ ORDER BY hour DESC;`}
           <RelatedErrors
             errors={[
               {
-                name: "Dynamic Server Usage Error",
+                id: "dynamic-server-usage",
+                title: "Dynamic Server Usage Error",
                 href: "/support/dynamic-server-usage",
                 description: "Another Next.js 15 cookie-related error",
-                relationship: "Similar root cause with async cookies",
+                relationship: "similar-to",
+                frequency: "common",
               },
               {
-                name: "Session Expired",
+                id: "session-expired",
+                title: "Session Expired",
                 href: "/support/session-expired",
                 description: "Session not persisting across requests",
-                relationship: "May be caused by same cookie timing issue",
+                relationship: "caused-by",
+                frequency: "occasional",
               },
             ]}
           />
