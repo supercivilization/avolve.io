@@ -193,55 +193,93 @@ export default function AIPageChatSaaSPage() {
         <div className="mb-12">
           <h2 className="mb-6 text-3xl font-bold text-slate-900 dark:text-slate-100">Architecture</h2>
           <ArchitectureDiagram
-            layers={[
+            nodes={[
+              // System Patterns
               {
-                name: "Frontend",
-                items: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS"],
+                id: "nextjs-supabase-auth",
+                label: "Next.js 15 + Supabase Auth",
+                type: "system",
+                href: "/systems/nextjs-15-supabase-auth",
+                description: "Authentication with middleware cookie handling",
               },
               {
-                name: "System Patterns",
-                items: [
-                  "Next.js 15 + Supabase Auth",
-                  "AI Streaming Chat",
-                  "API Usage Tracking",
-                  "Stripe Subscriptions",
-                ],
+                id: "ai-streaming",
+                label: "AI Streaming Chat",
+                type: "system",
+                href: "/systems/ai-streaming-chat",
+                description: "Real-time AI response streaming with Vercel AI SDK",
               },
               {
-                name: "Services",
-                items: ["Vercel (Hosting)", "Supabase (DB + Auth)", "Anthropic (AI)", "Stripe (Billing)"],
-              },
-            ]}
-            dataFlow={[
-              {
-                from: "User Browser",
-                to: "Next.js Frontend",
-                description: "React components with streaming UI",
+                id: "usage-tracking",
+                label: "API Usage Tracking",
+                type: "system",
+                href: "/systems/api-usage-tracking",
+                description: "Metering and quota management",
               },
               {
-                from: "Next.js Frontend",
-                to: "Server Actions",
-                description: "Type-safe API calls with Zod validation",
+                id: "stripe-subs",
+                label: "Stripe Subscriptions",
+                type: "system",
+                href: "/systems/stripe-subscriptions",
+                description: "Payment integration and webhooks",
+              },
+              // Software Stack
+              {
+                id: "nextjs",
+                label: "Next.js 15",
+                type: "software",
+                href: "/software/nextjs",
+                description: "React framework with App Router",
               },
               {
-                from: "Server Actions",
-                to: "Supabase Auth",
-                description: "Session validation via middleware",
+                id: "react",
+                label: "React 19",
+                type: "software",
+                href: "/software/react",
+                description: "UI library with Server Components",
               },
               {
-                from: "Server Actions",
-                to: "Anthropic API",
-                description: "Streaming chat completions",
+                id: "typescript",
+                label: "TypeScript",
+                type: "software",
+                href: "/software/typescript",
+                description: "Type-safe development",
               },
               {
-                from: "Server Actions",
-                to: "Supabase DB",
-                description: "Store conversations + track usage",
+                id: "vercel-ai-sdk",
+                label: "Vercel AI SDK",
+                type: "software",
+                href: "/software/vercel-ai-sdk",
+                description: "AI streaming and tool calling",
+              },
+              // Services
+              {
+                id: "vercel",
+                label: "Vercel",
+                type: "service",
+                href: "/services/vercel",
+                description: "Hosting and deployment",
               },
               {
-                from: "Stripe Webhooks",
-                to: "Server Actions",
-                description: "Subscription lifecycle events",
+                id: "supabase",
+                label: "Supabase",
+                type: "service",
+                href: "/services/supabase",
+                description: "Database, auth, and real-time",
+              },
+              {
+                id: "anthropic",
+                label: "Anthropic Claude",
+                type: "service",
+                href: "/services/anthropic",
+                description: "AI inference",
+              },
+              {
+                id: "stripe",
+                label: "Stripe",
+                type: "service",
+                href: "/services/stripe",
+                description: "Payment processing",
               },
             ]}
           />
