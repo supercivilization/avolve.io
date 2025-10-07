@@ -20,9 +20,9 @@ export default function AnthropicServicePage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", item: "https://avolve.io" },
-          { name: "Services", item: "https://avolve.io/services" },
-          { name: "Anthropic", item: "https://avolve.io/services/anthropic" },
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" },
+          { name: "Anthropic", url: "/services/anthropic" },
         ]}
       />
 

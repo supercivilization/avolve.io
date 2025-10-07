@@ -75,7 +75,7 @@ export function IntegrationRequirements({
         )}
 
         <div className="space-y-4">
-          {steps.map((step, index) => (
+          {steps.map((step) => (
             <div
               key={step.id}
               className="space-y-3 rounded-lg border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-950"

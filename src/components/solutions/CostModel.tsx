@@ -59,7 +59,7 @@ export function CostModel({
               </tr>
             </thead>
             <tbody>
-              {phases.map((phase, phaseIndex) => (
+              {phases.map((phase) => (
                 <React.Fragment key={phase.phase}>
                   {phase.breakdown.map((item, itemIndex) => (
                     <tr

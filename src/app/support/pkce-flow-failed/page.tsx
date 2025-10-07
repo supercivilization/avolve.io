@@ -7,7 +7,6 @@ import { StepByStepFix } from "@/components/support/StepByStepFix"
 import { ProductionImpact } from "@/components/support/ProductionImpact"
 import { RelatedErrors } from "@/components/support/RelatedErrors"
 import { LastVerified } from "@/components/shared/LastVerified"
-import { InteractiveCodeBlock } from "@/components/shared/InteractiveCodeBlock"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
