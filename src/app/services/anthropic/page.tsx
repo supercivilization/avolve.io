@@ -125,31 +125,59 @@ export default function AnthropicServicePage() {
 
         <div className="mb-12">
           <CostTriggers
+            serviceName="Anthropic Claude"
             triggers={[
               {
-                trigger: "High Message Volume",
-                threshold: ">10K messages/day",
-                impact: "$500+/month",
-                mitigation:
-                  "Implement aggressive caching, use Haiku for simple queries, optimize prompt length",
+                id: "high-volume",
+                title: "High Message Volume",
+                currentTier: "Standard Usage",
+                upgradeTo: "Contact Sales for Volume Discount",
+                scenario: "Your application is processing over 10K messages per day with standard per-token pricing.",
+                metrics: [
+                  { name: "Daily Messages", threshold: ">10K messages/day" },
+                  { name: "Monthly Cost", threshold: "$500+/month" },
+                ],
+                costIncrease: "Volume discounts available",
+                urgency: "high",
               },
               {
-                trigger: "Long Context Usage",
-                threshold: "Avg >10K tokens input",
-                impact: "$30 per 1K messages",
-                mitigation: "Summarize old conversation history, use sliding window for context",
+                id: "long-context",
+                title: "Long Context Usage",
+                currentTier: "Claude 3.7 Sonnet",
+                upgradeTo: "Optimize with context management",
+                scenario: "Average input token count exceeds 10K tokens per message, driving up input costs significantly.",
+                metrics: [
+                  { name: "Avg Input Tokens", threshold: ">10K tokens" },
+                  { name: "Cost Impact", threshold: "$30 per 1K messages" },
+                ],
+                costIncrease: "Implement caching or summarization",
+                urgency: "medium",
               },
               {
-                trigger: "Function Calling",
-                threshold: "Multiple tool calls per message",
-                impact: "2-3x token usage",
-                mitigation: "Batch tool calls, cache function results, limit tools per request",
+                id: "function-calling",
+                title: "Heavy Function Calling",
+                currentTier: "Standard API",
+                upgradeTo: "Optimize tool usage",
+                scenario: "Multiple tool calls per message increase token usage by 2-3x due to function definitions and results.",
+                metrics: [
+                  { name: "Tools per Request", threshold: ">5 tools" },
+                  { name: "Token Overhead", threshold: "2-3x base usage" },
+                ],
+                costIncrease: "Batch calls or limit tools",
+                urgency: "medium",
               },
               {
-                trigger: "Vision Requests",
-                threshold: "Image analysis at scale",
-                impact: "$5-15 per 1K images",
-                mitigation: "Compress images, use lower detail mode, batch processing",
+                id: "vision",
+                title: "Vision at Scale",
+                currentTier: "Claude with Vision",
+                upgradeTo: "Optimize image processing",
+                scenario: "Processing images at scale with vision capabilities drives costs higher than text-only usage.",
+                metrics: [
+                  { name: "Images Processed", threshold: ">1K images/day" },
+                  { name: "Cost Impact", threshold: "$5-15 per 1K images" },
+                ],
+                costIncrease: "Compress images or batch",
+                urgency: "low",
               },
             ]}
           />
@@ -216,39 +244,97 @@ export default function AnthropicServicePage() {
 
         <div className="mb-12">
           <IntegrationRequirements
-            requirements={[
+            serviceName="Anthropic Claude"
+            steps={[
               {
-                category: "Authentication",
-                items: [
-                  "API key from Anthropic Console",
-                  "Set ANTHROPIC_API_KEY environment variable",
-                  "Never expose key in client-side code",
+                id: "auth",
+                title: "Authentication Setup",
+                description: "Configure API key for server-side usage only",
+                required: true,
+                estimatedTime: "5 min",
+                configExample: `// .env.local
+ANTHROPIC_API_KEY=sk-ant-...
+
+// Never expose in client-side code!
+// Always use API routes or server components`,
+                docs: [
+                  { text: "Get API Key", href: "https://console.anthropic.com/settings/keys" },
                 ],
               },
               {
-                category: "SDK Setup",
-                items: [
-                  "Install @ai-sdk/anthropic and ai packages",
-                  "Use Vercel AI SDK for streaming",
-                  "Or use @anthropic-ai/sdk for direct API access",
+                id: "sdk",
+                title: "Install SDK",
+                description: "Add Vercel AI SDK with Anthropic provider",
+                required: true,
+                estimatedTime: "2 min",
+                configExample: `npm install ai @ai-sdk/anthropic
+
+// app/api/chat/route.ts
+import { anthropic } from '@ai-sdk/anthropic'
+import { streamText } from 'ai'
+
+export async function POST(req: Request) {
+  const { messages } = await req.json()
+
+  const result = streamText({
+    model: anthropic('claude-3-7-sonnet-20250929'),
+    messages,
+  })
+
+  return result.toDataStreamResponse()
+}`,
+                docs: [
+                  { text: "Vercel AI SDK Docs", href: "https://sdk.vercel.ai/docs" },
                 ],
               },
               {
-                category: "Error Handling",
-                items: [
-                  "Handle rate limit errors (429) with exponential backoff",
-                  "Implement timeout handling (30-60 seconds)",
-                  "Log API errors for monitoring",
-                  "Add circuit breakers for cascading failures",
-                ],
+                id: "error-handling",
+                title: "Error Handling",
+                description: "Handle rate limits, timeouts, and API errors gracefully",
+                required: true,
+                estimatedTime: "15 min",
+                configExample: `async function callClaude(messages: Message[]) {
+  try {
+    const result = await streamText({
+      model: anthropic('claude-3-7-sonnet-20250929'),
+      messages,
+      maxRetries: 3, // Retry on rate limits
+      abortSignal: AbortSignal.timeout(60000), // 60s timeout
+    })
+    return result
+  } catch (error) {
+    if (error.status === 429) {
+      // Rate limit - implement exponential backoff
+      await sleep(Math.pow(2, retryCount) * 1000)
+      return retry()
+    }
+    // Log error and return user-friendly message
+    console.error('Claude API error:', error)
+    throw new Error('AI service temporarily unavailable')
+  }
+}`,
               },
               {
-                category: "Monitoring",
-                items: [
-                  "Track token usage per user/request",
-                  "Set up cost alerts in Console",
-                  "Monitor error rates and latency",
-                  "Implement usage quotas per user",
+                id: "monitoring",
+                title: "Usage Monitoring",
+                description: "Track token usage and costs for optimization",
+                required: false,
+                estimatedTime: "20 min",
+                configExample: `// Track usage in database
+await db.insert({
+  userId: user.id,
+  inputTokens: result.usage.promptTokens,
+  outputTokens: result.usage.completionTokens,
+  cost: calculateCost(result.usage),
+  timestamp: new Date(),
+})
+
+// Set up alerts in Anthropic Console for:
+// - Monthly spend threshold
+// - Rate limit approaching
+// - Error rate spike`,
+                docs: [
+                  { text: "Usage Dashboard", href: "https://console.anthropic.com/settings/usage" },
                 ],
               },
             ]}
