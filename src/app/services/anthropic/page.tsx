@@ -185,30 +185,86 @@ export default function AnthropicServicePage() {
 
         <div className="mb-12">
           <LimitsAndQuotas
+            serviceName="Anthropic Claude"
             limits={[
               {
-                name: "Rate Limits",
-                free: "5 requests/min",
-                paid: "1000 requests/min",
-                notes: "Contact sales for higher limits",
+                id: "rate-limit-free",
+                name: "Rate Limit (Free Tier)",
+                tier: "Free",
+                value: "5 requests/min",
+                type: "rate",
+                blocksCapability: [
+                  "Real-time chat applications",
+                  "High-traffic public APIs",
+                  "Concurrent user requests",
+                ],
+                workarounds: [
+                  "Upgrade to paid tier for 1000 req/min",
+                  "Implement request queuing",
+                  "Use response caching",
+                ],
+                critical: true,
               },
               {
-                name: "Burst Limit",
-                free: "20 requests",
-                paid: "5000 requests",
-                notes: "Short burst capacity before throttling",
+                id: "rate-limit-paid",
+                name: "Rate Limit (Paid Tier)",
+                tier: "Paid",
+                value: "1000 requests/min",
+                type: "rate",
+                blocksCapability: [
+                  "Enterprise-scale applications (contact sales for higher)",
+                ],
+                workarounds: [
+                  "Contact Anthropic sales for custom limits",
+                ],
               },
               {
-                name: "Max Tokens",
-                free: "200K input + 8K output",
-                paid: "200K input + 8K output",
-                notes: "Per request limit",
+                id: "burst-limit",
+                name: "Burst Capacity",
+                tier: "All",
+                value: "20 requests (free) / 5000 requests (paid)",
+                type: "soft",
+                blocksCapability: [
+                  "Sudden traffic spikes",
+                  "Batch processing without throttling",
+                ],
+                workarounds: [
+                  "Upgrade to paid tier",
+                  "Implement exponential backoff",
+                ],
               },
               {
+                id: "token-limit",
+                name: "Max Tokens Per Request",
+                tier: "All",
+                value: "200K input + 8K output",
+                type: "hard",
+                blocksCapability: [
+                  "Processing entire books or large codebases in single request",
+                  "Very long conversation histories without summarization",
+                ],
+                workarounds: [
+                  "Implement conversation summarization",
+                  "Use sliding window for context",
+                  "Break large documents into chunks",
+                ],
+                critical: true,
+              },
+              {
+                id: "concurrency",
                 name: "Concurrent Requests",
-                free: "5",
-                paid: "100+",
-                notes: "Contact support for higher concurrency",
+                tier: "Free/Paid",
+                value: "5 (free) / 100+ (paid)",
+                type: "hard",
+                blocksCapability: [
+                  "Multi-user applications on free tier",
+                  "Parallel batch processing",
+                ],
+                workarounds: [
+                  "Upgrade to paid tier",
+                  "Implement request queuing",
+                  "Contact support for custom limits",
+                ],
               },
             ]}
           />
