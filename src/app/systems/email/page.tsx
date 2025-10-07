@@ -123,23 +123,23 @@ export default function EmailSystemPage() {
       />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
+        <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-gray-700">Email System</h1>
-          <p className="text-xl text-gray-700 mb-12">
+          <h1 className="text-4xl font-bold mb-4 text-foreground">Email System</h1>
+          <p className="text-xl text-foreground mb-12">
             Production email with Resend + React Email - type-safe templates, enterprise deliverability
           </p>
 
           {/* Quick Answer */}
-          <section id="overview" className="mb-12 bg-gray-50 p-6 rounded-lg border-l-4 border-gray-600">
+          <section id="overview" className="mb-12 bg-muted p-6 rounded-lg border-l-4 border-border">
             <h2 className="text-2xl font-bold mb-4">Overview</h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-foreground mb-4">
               The combination of <strong>Resend API</strong> and <strong>React Email components</strong> creates the most developer-friendly email platform in 2025, with 422K+ weekly npm downloads and processing millions of daily emails.
             </p>
-            <ul className="list-disc list-inside space-y-1 text-gray-700">
+            <ul className="list-disc list-inside space-y-1 text-foreground">
               <li><strong>Sub-7-second setup</strong> with zero configuration</li>
               <li><strong>3,000 free emails/month</strong> (30x more than SendGrid)</li>
               <li><strong>Type-safe React components</strong> instead of HTML strings</li>
@@ -152,9 +152,9 @@ export default function EmailSystemPage() {
           <section id="components" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">System Components</h2>
 
-            <div className="bg-gray-50 p-6 rounded-lg mb-6">
+            <div className="bg-muted p-6 rounded-lg mb-6">
               <h3 className="text-xl font-bold mb-3">Architecture</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-foreground">
                 <li><strong>Resend API:</strong> Email delivery service with multi-region infrastructure, SPF/DKIM/DMARC built-in</li>
                 <li><strong>React Email:</strong> Component framework for building type-safe, testable email templates</li>
                 <li><strong>@react-email/components:</strong> 16+ pre-built components (Button, Text, Container, Image)</li>
@@ -354,14 +354,14 @@ npm run email:dev
 
             <div className="bg-stone-100 border-l-4 border-stone-600 p-4 rounded-lg">
               <h3 className="text-lg font-bold mb-2">True Infrastructure Cost</h3>
-              <p className="text-gray-700 mb-2">Beyond API pricing, budget for:</p>
-              <ul className="space-y-1 text-sm text-gray-700">
+              <p className="text-foreground mb-2">Beyond API pricing, budget for:</p>
+              <ul className="space-y-1 text-sm text-foreground">
                 <li>• Email testing tools (Litmus/Email on Acid): <strong>$99-399/month</strong></li>
                 <li>• Dedicated IPs for scale: <strong>$30/month each</strong></li>
                 <li>• Email validation services: <strong>$0.004-0.008 per validation</strong></li>
                 <li>• Deliverability monitoring: <strong>$50-200/month</strong></li>
               </ul>
-              <p className="text-sm text-gray-600 mt-2">
+              <p className="text-sm text-muted-foreground mt-2">
                 <strong>Realistic total:</strong> 3-4x base API pricing for production infrastructure
               </p>
             </div>
@@ -374,7 +374,7 @@ npm run email:dev
             <div className="bg-stone-50 border-l-4 border-stone-400 p-4 rounded-lg space-y-4">
               <div>
                 <h3 className="font-bold mb-1">Outlook 2016 rendering issues</h3>
-                <p className="text-sm text-gray-700 mb-1">
+                <p className="text-sm text-foreground mb-1">
                   React Email cannot render MSO conditional comments needed for Outlook optimization. Flexbox doesn't work, padding only on table cells.
                 </p>
                 <p className="text-stone-700 text-sm"><strong>Fix:</strong> Use table-based layouts, post-process to inject MSO conditionals, or maintain separate templates for enterprise clients.</p>
@@ -382,7 +382,7 @@ npm run email:dev
 
               <div>
                 <h3 className="font-bold mb-1">Gmail 102KB message clipping</h3>
-                <p className="text-sm text-gray-700 mb-1">
+                <p className="text-sm text-foreground mb-1">
                   React component overhead adds 15-30% size vs hand-coded HTML. Simple emails can unexpectedly exceed Gmail's limit.
                 </p>
                 <p className="text-stone-700 text-sm"><strong>Fix:</strong> Track component "byte cost" during development, use React Email 4.0 size linter, minimize wrapper divs, compress images.</p>
@@ -390,7 +390,7 @@ npm run email:dev
 
               <div>
                 <h3 className="font-bold mb-1">Multi-region latency for dynamic emails</h3>
-                <p className="text-sm text-gray-700 mb-1">
+                <p className="text-sm text-foreground mb-1">
                   Email rendering happens in single region before distribution. Real-time data fetching adds latency for global audiences.
                 </p>
                 <p className="text-stone-700 text-sm"><strong>Fix:</strong> Pre-render email variations, cache at edge, use React Server Components (coming in next version) for 50-70% latency reduction.</p>
@@ -398,7 +398,7 @@ npm run email:dev
 
               <div>
                 <h3 className="font-bold mb-1">Testing complexity and cost</h3>
-                <p className="text-sm text-gray-700 mb-1">
+                <p className="text-sm text-foreground mb-1">
                   Comprehensive testing across 50+ email clients requires expensive tools. Edge cases only appear in production.
                 </p>
                 <p className="text-stone-700 text-sm"><strong>Fix:</strong> Budget for Litmus ($99-399/month), build extensive test suite, maintain compatibility matrix, test on real devices.</p>
@@ -411,30 +411,30 @@ npm run email:dev
             <h2 className="text-3xl font-bold mb-6">Production Best Practices</h2>
 
             <div className="space-y-6">
-              <div className="bg-muted/30 border-l-4 border-slate-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-border p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Component Reusability</h3>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-foreground">
                   Build button, header, footer components once. Compose across multiple templates. Track byte cost per component. Use TypeScript interfaces for self-documenting props.
                 </p>
               </div>
 
-              <div className="bg-muted/30 border-l-4 border-zinc-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-border p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Deliverability Optimization</h3>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-foreground">
                   Configure SPF, DKIM, DMARC records. Use Resend's suppression list. Warm up dedicated IPs gradually. Monitor bounce rates. A/B test subject lines. Avoid spam trigger words.
                 </p>
               </div>
 
-              <div className="bg-muted/30 border-l-4 border-gray-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-border p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Batch Processing Optimization</h3>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-foreground">
                   Group recipients by template variation (not arbitrary batching) for 2-3x throughput. Use idempotency keys to prevent duplicates. Batch API supports 100 emails per request.
                 </p>
               </div>
 
               <div className="bg-stone-100 border-l-4 border-stone-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Error Handling and Monitoring</h3>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-foreground">
                   Implement webhook listeners for delivery events. Log failures with context. Set up alerts for bounce rate spikes. Use Resend's retry mechanisms. Track email metrics in analytics.
                 </p>
               </div>
@@ -444,16 +444,16 @@ npm run email:dev
           {/* Relationships */}
           <section id="relationships" className="mb-12 border-t pt-8">
             <h2 className="text-2xl font-bold mb-4">How Email System Relates to Other Layers</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li>• <strong>Built with <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>:</strong> Next.js API Routes, React components, TypeScript validation</li>
-              <li>• <strong>Uses <Link href="/services" className="text-neutral-600 hover:underline">Services</Link>:</strong> Resend ($0-650/mo), Litmus testing ($99-399/mo)</li>
-              <li>• <strong>Delivers <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link>:</strong> Transactional emails, marketing campaigns, notifications</li>
-              <li>• <strong>Requires <Link href="/support" className="text-stone-600 hover:underline">Support</Link>:</strong> Deliverability monitoring, spam score tracking, client testing</li>
+            <ul className="space-y-2 text-foreground">
+              <li>• <strong>Built with <Link href="/software" className="text-primary hover:underline">Software</Link>:</strong> Next.js API Routes, React components, TypeScript validation</li>
+              <li>• <strong>Uses <Link href="/services" className="text-primary hover:underline">Services</Link>:</strong> Resend ($0-650/mo), Litmus testing ($99-399/mo)</li>
+              <li>• <strong>Delivers <Link href="/solutions" className="text-primary hover:underline">Solutions</Link>:</strong> Transactional emails, marketing campaigns, notifications</li>
+              <li>• <strong>Requires <Link href="/support" className="text-primary hover:underline">Support</Link>:</strong> Deliverability monitoring, spam score tracking, client testing</li>
             </ul>
           </section>
 
-          <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/systems" className="text-gray-600 hover:underline">
+          <nav className="mt-12 pt-8 border-t border-border">
+            <Link href="/systems" className="text-muted-foreground hover:underline">
               ← Back to Systems
             </Link>
           </nav>

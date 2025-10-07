@@ -124,23 +124,23 @@ export default function MobileSystemPage() {
       />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
+        <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-gray-700">Mobile System</h1>
-          <p className="text-xl text-gray-700 mb-12">
+          <h1 className="text-4xl font-bold mb-4 text-foreground">Mobile System</h1>
+          <p className="text-xl text-foreground mb-12">
             React Native 0.81 + Expo SDK 54 + Next.js code sharing - production mobile architecture
           </p>
 
           {/* Quick Answer */}
-          <section id="overview" className="mb-12 bg-gray-50 p-6 rounded-lg border-l-4 border-gray-600">
+          <section id="overview" className="mb-12 bg-muted p-6 rounded-lg border-l-4 border-border">
             <h2 className="text-2xl font-bold mb-4">Overview</h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-foreground mb-4">
               The 2025 <strong>React Native/Expo ecosystem</strong> represents a mature, production-ready platform for extending Next.js applications to mobile with <strong>40-50% code sharing</strong> between web and native.
             </p>
-            <ul className="list-disc list-inside space-y-1 text-gray-700">
+            <ul className="list-disc list-inside space-y-1 text-foreground">
               <li><strong>React Native 0.81.3</strong> with New Architecture enabled by default (5.3x faster flows)</li>
               <li><strong>Expo SDK 54</strong> with iOS 26 support, 92% faster builds (120s → 10s)</li>
               <li><strong>3.57M+ weekly downloads</strong> powering Meta, Microsoft, Shopify, Tesla</li>
@@ -153,9 +153,9 @@ export default function MobileSystemPage() {
           <section id="components" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">System Components</h2>
 
-            <div className="bg-gray-50 p-6 rounded-lg mb-6">
+            <div className="bg-muted p-6 rounded-lg mb-6">
               <h3 className="text-xl font-bold mb-3">Architecture Stack</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-foreground">
                 <li><strong>React Native 0.81:</strong> New Architecture (Fabric + TurboModules), Hermes engine, React 19.1 support</li>
                 <li><strong>Expo SDK 54:</strong> Managed workflow, Expo Router 6.0 with API routes, precompiled frameworks</li>
                 <li><strong>Next.js 15.5:</strong> Web app sharing code via monorepo (apps/web + apps/mobile)</li>
@@ -360,9 +360,9 @@ eas update --branch production --message "Fix critical bug"
               </table>
             </div>
 
-            <div className="bg-muted/30 border-l-4 border-slate-600 p-4 rounded-lg">
-              <p className="text-sm text-gray-700 mb-2"><strong>Additional Costs:</strong></p>
-              <ul className="space-y-1 text-sm text-gray-700">
+            <div className="bg-muted/30 border-l-4 border-border p-4 rounded-lg">
+              <p className="text-sm text-foreground mb-2"><strong>Additional Costs:</strong></p>
+              <ul className="space-y-1 text-sm text-foreground">
                 <li>• Apple Developer Program: <strong>$99/year</strong></li>
                 <li>• Google Play Developer: <strong>$25 one-time</strong></li>
                 <li>• Alternative CI/CD (GitHub Actions): <strong>$0.28 per Android build</strong> vs EAS $1.00</li>
@@ -377,7 +377,7 @@ eas update --branch production --message "Fix critical bug"
             <div className="bg-stone-50 border-l-4 border-stone-400 p-4 rounded-lg space-y-4">
               <div>
                 <h3 className="font-bold mb-1">Third-party library New Architecture incompatibility</h3>
-                <p className="text-sm text-gray-700 mb-1">
+                <p className="text-sm text-foreground mb-1">
                   Firebase core libraries, some navigation libraries, and legacy native modules don't support New Architecture.
                 </p>
                 <p className="text-stone-700 text-sm"><strong>Fix:</strong> Check library compatibility before upgrade. Use interop layer for legacy modules. Consider alternatives (Supabase instead of Firebase). Test thoroughly in development.</p>
@@ -385,7 +385,7 @@ eas update --branch production --message "Fix critical bug"
 
               <div>
                 <h3 className="font-bold mb-1">Offline support requires third-party solutions</h3>
-                <p className="text-sm text-gray-700 mb-1">
+                <p className="text-sm text-foreground mb-1">
                   Supabase React Native has no native offline support. Network drops lose real-time connections without recovery.
                 </p>
                 <p className="text-stone-700 text-sm"><strong>Fix:</strong> Integrate WatermelonDB for offline-first architecture. Use PowerSync for enterprise WAL-based sync. Implement connection recovery logic. Cache critical data locally.</p>
@@ -393,7 +393,7 @@ eas update --branch production --message "Fix critical bug"
 
               <div>
                 <h3 className="font-bold mb-1">Monorepo Metro bundler path resolution issues</h3>
-                <p className="text-sm text-gray-700 mb-1">
+                <p className="text-sm text-foreground mb-1">
                   Metro doesn't resolve workspace packages correctly in monorepo by default. Symlinks cause module not found errors.
                 </p>
                 <p className="text-stone-700 text-sm"><strong>Fix:</strong> Configure Metro watchFolders to include packages directory. Use metro.config.js with nodeModulesPaths. Set up proper package.json exports. Test imports thoroughly.</p>
@@ -401,7 +401,7 @@ eas update --branch production --message "Fix critical bug"
 
               <div>
                 <h3 className="font-bold mb-1">EAS Build timeout on large projects</h3>
-                <p className="text-sm text-gray-700 mb-1">
+                <p className="text-sm text-foreground mb-1">
                   Complex monorepos with many dependencies can exceed build time limits. iOS builds timeout after 30 minutes.
                 </p>
                 <p className="text-stone-700 text-sm"><strong>Fix:</strong> Use build caching with eas.json. Reduce dependency size. Optimize native modules. Consider self-hosted CI/CD for large projects. Use GitHub Actions alternative.</p>
@@ -414,9 +414,9 @@ eas update --branch production --message "Fix critical bug"
             <h2 className="text-3xl font-bold mb-6">Best Practices</h2>
 
             <div className="space-y-4">
-              <div className="bg-muted/30 border-l-4 border-zinc-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-border p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Code Sharing Strategy</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Share business logic:</strong> API clients, data transformations, validation, utilities</li>
                   <li>• <strong>Share types:</strong> TypeScript interfaces, GraphQL types, API schemas</li>
                   <li>• <strong>Don't share UI:</strong> Keep platform-specific components separate (web vs mobile UX differs)</li>
@@ -425,9 +425,9 @@ eas update --branch production --message "Fix critical bug"
                 </ul>
               </div>
 
-              <div className="bg-muted/30 border-l-4 border-slate-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-border p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Performance Optimization</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Enable Hermes engine:</strong> 2-3x startup improvement, 15-25% memory reduction</li>
                   <li>• <strong>Use FlashList v2:</strong> 50% better scrolling performance vs FlatList</li>
                   <li>• <strong>Lazy load screens:</strong> Use React.lazy for route-based code splitting</li>
@@ -436,9 +436,9 @@ eas update --branch production --message "Fix critical bug"
                 </ul>
               </div>
 
-              <div className="bg-muted/30 border-l-4 border-gray-600 p-4 rounded-lg">
+              <div className="bg-muted/30 border-l-4 border-border p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Development Workflow</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Expo Dev Client:</strong> Custom development builds with any native modules</li>
                   <li>• <strong>React Native DevTools:</strong> Browser-aligned debugging with breakpoints</li>
                   <li>• <strong>EAS Update for testing:</strong> Deploy preview builds to testers instantly</li>
@@ -457,18 +457,18 @@ eas update --branch production --message "Fix critical bug"
               <div>
                 <h3 className="text-xl font-bold mb-3">Monorepo Tool</h3>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="bg-muted p-4 rounded-lg">
                     <p className="font-bold mb-2">Turborepo (Simple)</p>
-                    <ul className="space-y-1 text-sm text-gray-700">
+                    <ul className="space-y-1 text-sm text-foreground">
                       <li>✅ Official React Native + Next.js templates</li>
                       <li>✅ Rust-based performance (40-85% faster)</li>
                       <li>✅ Simpler setup for small/medium projects</li>
                       <li>✅ Watch mode for development</li>
                     </ul>
                   </div>
-                  <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="bg-muted p-4 rounded-lg">
                     <p className="font-bold mb-2">Nx (Complex)</p>
-                    <ul className="space-y-1 text-sm text-gray-700">
+                    <ul className="space-y-1 text-sm text-foreground">
                       <li>✅ Superior React Native/Next.js integration</li>
                       <li>✅ Distributed task execution (50+ machines)</li>
                       <li>✅ Proven scalability (26k+ components)</li>
@@ -481,18 +481,18 @@ eas update --branch production --message "Fix critical bug"
               <div>
                 <h3 className="text-xl font-bold mb-3">Styling Solution</h3>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="bg-muted p-4 rounded-lg">
                     <p className="font-bold mb-2">NativeWind v4 (Tailwind)</p>
-                    <ul className="space-y-1 text-sm text-gray-700">
+                    <ul className="space-y-1 text-sm text-foreground">
                       <li>✅ Full Tailwind CSS v4 support</li>
                       <li>✅ 40% faster refresh than v2</li>
                       <li>✅ Familiar if using Tailwind on web</li>
                       <li>✅ CSS variables + container queries</li>
                     </ul>
                   </div>
-                  <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="bg-muted p-4 rounded-lg">
                     <p className="font-bold mb-2">Tamagui (Performance)</p>
-                    <ul className="space-y-1 text-sm text-gray-700">
+                    <ul className="space-y-1 text-sm text-foreground">
                       <li>✅ Within 10% of vanilla RN performance</li>
                       <li>✅ Optimizing compiler</li>
                       <li>✅ Best for animation-heavy apps</li>
@@ -505,18 +505,18 @@ eas update --branch production --message "Fix critical bug"
               <div>
                 <h3 className="text-xl font-bold mb-3">State Management</h3>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="bg-muted p-4 rounded-lg">
                     <p className="font-bold mb-2">Zustand 4.5 (Versatile)</p>
-                    <ul className="space-y-1 text-sm text-gray-700">
+                    <ul className="space-y-1 text-sm text-foreground">
                       <li>✅ 46.7% usage rate, proven choice</li>
                       <li>✅ 4KB bundle size, minimal overhead</li>
                       <li>✅ Excellent TypeScript support</li>
                       <li>✅ 160ms initial render times</li>
                     </ul>
                   </div>
-                  <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="bg-muted p-4 rounded-lg">
                     <p className="font-bold mb-2">Legend State 3.0 (Performance)</p>
-                    <ul className="space-y-1 text-sm text-gray-700">
+                    <ul className="space-y-1 text-sm text-foreground">
                       <li>✅ Proxy-based reactivity</li>
                       <li>✅ 140ms initial renders, 20ms updates</li>
                       <li>✅ Best performance benchmarks</li>
@@ -531,16 +531,16 @@ eas update --branch production --message "Fix critical bug"
           {/* Relationships */}
           <section id="relationships" className="mb-12 border-t pt-8">
             <h2 className="text-2xl font-bold mb-4">How Mobile System Relates to Other Layers</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li>• <strong>Built with <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>:</strong> React Native, Expo, Next.js, TypeScript in monorepo</li>
-              <li>• <strong>Extends <Link href="/solutions" className="text-slate-600 hover:underline">Solutions</Link>:</strong> Brings web solutions to iOS/Android with native performance</li>
-              <li>• <strong>Uses <Link href="/services" className="text-neutral-600 hover:underline">Services</Link>:</strong> EAS Build ($0-1,999/mo), Supabase mobile SDKs, Apple/Google app stores</li>
-              <li>• <strong>Requires <Link href="/support" className="text-stone-600 hover:underline">Support</Link>:</strong> Monitor crash rates, track performance, manage app store releases</li>
+            <ul className="space-y-2 text-foreground">
+              <li>• <strong>Built with <Link href="/software" className="text-primary hover:underline">Software</Link>:</strong> React Native, Expo, Next.js, TypeScript in monorepo</li>
+              <li>• <strong>Extends <Link href="/solutions" className="text-primary hover:underline">Solutions</Link>:</strong> Brings web solutions to iOS/Android with native performance</li>
+              <li>• <strong>Uses <Link href="/services" className="text-primary hover:underline">Services</Link>:</strong> EAS Build ($0-1,999/mo), Supabase mobile SDKs, Apple/Google app stores</li>
+              <li>• <strong>Requires <Link href="/support" className="text-primary hover:underline">Support</Link>:</strong> Monitor crash rates, track performance, manage app store releases</li>
             </ul>
           </section>
 
-          <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/systems" className="text-gray-600 hover:underline">
+          <nav className="mt-12 pt-8 border-t border-border">
+            <Link href="/systems" className="text-muted-foreground hover:underline">
               ← Back to Systems
             </Link>
           </nav>

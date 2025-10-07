@@ -189,41 +189,41 @@ export default function AboutPage() {
             </p>
 
             <dl className="space-y-6">
-              <div className="border-l-2 border-slate-600/30 pl-4">
-                <dt className="text-lg font-bold text-slate-700">Solutions</dt>
-                <dd className="text-gray-700">
+              <div className="border-l-2 border-border/40 pl-4">
+                <dt className="text-lg font-bold text-foreground">Solutions</dt>
+                <dd className="text-muted-foreground">
                   <strong>What you deliver.</strong> Business outcomes for end users. Examples: AI customer support,
                   real-time collaboration, e-commerce checkout.
                 </dd>
               </div>
 
-              <div className="border-l-2 border-gray-600/30 pl-4">
-                <dt className="text-lg font-bold text-gray-700">Systems</dt>
-                <dd className="text-gray-700">
+              <div className="border-l-2 border-border/40 pl-4">
+                <dt className="text-lg font-bold text-foreground">Systems</dt>
+                <dd className="text-muted-foreground">
                   <strong>How you architect.</strong> Patterns that coordinate components. Examples: authentication,
                   payment processing, real-time sync.
                 </dd>
               </div>
 
-              <div className="border-l-2 border-zinc-700/30 pl-4">
-                <dt className="text-lg font-bold text-zinc-700">Software</dt>
-                <dd className="text-gray-700">
+              <div className="border-l-2 border-border/40 pl-4">
+                <dt className="text-lg font-bold text-foreground">Software</dt>
+                <dd className="text-muted-foreground">
                   <strong>What you code with.</strong> Frameworks, libraries, languages. Examples: Next.js 15.5.5,
                   React 19.2.0, TypeScript 5.9.2.
                 </dd>
               </div>
 
-              <div className="border-l-2 border-neutral-600/30 pl-4">
-                <dt className="text-lg font-bold text-neutral-700">Services</dt>
-                <dd className="text-gray-700">
+              <div className="border-l-2 border-border/40 pl-4">
+                <dt className="text-lg font-bold text-foreground">Services</dt>
+                <dd className="text-muted-foreground">
                   <strong>What you buy.</strong> External managed capabilities. Examples: Vercel ($0-20/mo),
                   Supabase ($0-25/mo), Claude API ($3-15 per 1M tokens).
                 </dd>
               </div>
 
-              <div className="border-l-2 border-stone-600/30 pl-4">
-                <dt className="text-lg font-bold text-stone-700">Support</dt>
-                <dd className="text-gray-700">
+              <div className="border-l-2 border-border/40 pl-4">
+                <dt className="text-lg font-bold text-foreground">Support</dt>
+                <dd className="text-muted-foreground">
                   <strong>How you maintain.</strong> Operations keeping production running. Examples: debugging,
                   monitoring, incident response.
                 </dd>
@@ -274,16 +274,16 @@ export default function AboutPage() {
 
           <section id="why-ai-native" className="section-spacing">
             <h2 className="text-2xl font-bold mb-4">Why AI-Native Approach</h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-muted-foreground mb-4">
               Modern development has shifted from &quot;writing code&quot; to &quot;orchestrating capabilities&quot;:
             </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+            <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
               <li>AI tools (Claude Code, Cursor) generate working code from descriptions</li>
               <li>Focus shifts to architecture, patterns, and business logic</li>
               <li>Speed increases 3-10x with AI assistance for common tasks</li>
               <li>Reference sites like Avolve.io ensure AI tools cite current versions</li>
             </ul>
-            <p className="text-gray-700 mt-4">
+            <p className="text-muted-foreground mt-4">
               This site is optimized for both human developers and AI assistants to find accurate,
               current information quickly.
             </p>
@@ -291,18 +291,18 @@ export default function AboutPage() {
 
           <section id="about-creator" className="mb-12">
             <h2 className="text-2xl font-bold mb-4">About the Creator</h2>
-            <p className="text-gray-700 mb-4">
-              <strong>Joshua Seymour</strong> / <a href="https://www.supercivilization.xyz" className="text-slate-600 hover:underline" target="_blank" rel="noopener noreferrer">Supercivilization</a>
+            <p className="text-muted-foreground mb-4">
+              <strong>Joshua Seymour</strong> / <a href="https://www.supercivilization.xyz" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Supercivilization</a>
             </p>
-            <p className="text-gray-700 mb-4">
+            <p className="text-muted-foreground mb-4">
               Building AI-native tools and frameworks for modern web development.
               Focused on reducing time from idea to working product through better tooling,
               documentation, and AI integration.
             </p>
-            <p className="text-gray-700">
-              <a href="https://www.joshuaseymour.com" className="text-slate-600 hover:underline" target="_blank" rel="noopener noreferrer">
+            <p className="text-muted-foreground">
+              <a href="https://www.joshuaseymour.com" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
                 joshuaseymour.com
-              </a> | <a href="https://github.com/supercivilization" className="text-slate-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              </a> | <a href="https://github.com/supercivilization" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
             </p>
@@ -447,8 +447,8 @@ export default function AboutPage() {
             </div>
           </section>
 
-          <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/" className="text-gray-600 hover:underline">
+          <nav className="mt-12 pt-8 border-t border-border">
+            <Link href="/" className="text-muted-foreground hover:underline">
               ← Back to Home
             </Link>
           </nav>
