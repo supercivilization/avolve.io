@@ -21,9 +21,9 @@ export default function PKCEFlowFailedPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", item: "https://avolve.io" },
-          { name: "Support", item: "https://avolve.io/support" },
-          { name: "PKCE Flow Failed", item: "https://avolve.io/support/pkce-flow-failed" },
+          { name: "Home", url: "/" },
+          { name: "Support", url: "/support" },
+          { name: "PKCE Flow Failed", url: "/support/pkce-flow-failed" },
         ]}
       />
 
