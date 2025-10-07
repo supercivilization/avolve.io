@@ -30,11 +30,11 @@ export default function AIPageChatSaaSPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", item: "https://avolve.io" },
-          { name: "Solutions", item: "https://avolve.io/solutions" },
+          { name: "Home", url: "/" },
+          { name: "Solutions", url: "/solutions" },
           {
             name: "AI Chat SaaS Application",
-            item: "https://avolve.io/solutions/ai-chat-saas",
+            url: "/solutions/ai-chat-saas",
           },
         ]}
       />
