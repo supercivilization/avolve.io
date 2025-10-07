@@ -153,13 +153,13 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 font-mono">22.20.0 LTS</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://nodejs.org/docs/latest-v22.x/api/" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://github.com/nodejs/node" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://github.com/nodejs/node/blob/main/CHANGELOG.md" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Changelog</a>
+                        <a href="https://nodejs.org/docs/latest-v22.x/api/" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
+                        <a href="https://github.com/nodejs/node" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">GitHub</a>
+                        <a href="https://github.com/nodejs/node/blob/main/CHANGELOG.md" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Changelog</a>
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <Link href="/software/nodejs" className="text-sm text-blue-600 hover:underline">Node.js Guide →</Link>
+                      <Link href="/software/nodejs" className="text-sm text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Node.js Guide →</Link>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -167,13 +167,13 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 font-mono">5.9.3</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://www.typescriptlang.org/docs/" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://github.com/microsoft/TypeScript" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://github.com/microsoft/TypeScript/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                        <a href="https://www.typescriptlang.org/docs/" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
+                        <a href="https://github.com/microsoft/TypeScript" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">GitHub</a>
+                        <a href="https://github.com/microsoft/TypeScript/releases" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Releases</a>
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <Link href="/software/typescript" className="text-sm text-blue-600 hover:underline">TypeScript Guide →</Link>
+                      <Link href="/software/typescript" className="text-sm text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">TypeScript Guide →</Link>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -181,13 +181,13 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 font-mono">19.2.0</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://react.dev" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://github.com/facebook/react" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://github.com/facebook/react/blob/main/CHANGELOG.md" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Changelog</a>
+                        <a href="https://react.dev" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
+                        <a href="https://github.com/facebook/react" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">GitHub</a>
+                        <a href="https://github.com/facebook/react/blob/main/CHANGELOG.md" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Changelog</a>
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <Link href="/software/react" className="text-sm text-blue-600 hover:underline">React Guide →</Link>
+                      <Link href="/software/react" className="text-sm text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">React Guide →</Link>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -195,13 +195,13 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 font-mono">15.5.4</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://nextjs.org/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://github.com/vercel/next.js" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://github.com/vercel/next.js/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                        <a href="https://nextjs.org/docs" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
+                        <a href="https://github.com/vercel/next.js" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">GitHub</a>
+                        <a href="https://github.com/vercel/next.js/releases" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Releases</a>
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <Link href="/software/nextjs" className="text-sm text-blue-600 hover:underline">Next.js Guide →</Link>
+                      <Link href="/software/nextjs" className="text-sm text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Next.js Guide →</Link>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -209,13 +209,13 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 font-mono">4.1.14</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://tailwindcss.com/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://github.com/tailwindlabs/tailwindcss" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://github.com/tailwindlabs/tailwindcss/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                        <a href="https://tailwindcss.com/docs" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
+                        <a href="https://github.com/tailwindlabs/tailwindcss" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">GitHub</a>
+                        <a href="https://github.com/tailwindlabs/tailwindcss/releases" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Releases</a>
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <Link href="/software/tailwind" className="text-sm text-blue-600 hover:underline">Tailwind Guide →</Link>
+                      <Link href="/software/tailwind" className="text-sm text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Tailwind Guide →</Link>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -223,13 +223,13 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 font-mono">3.4.0</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://ui.shadcn.com" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://github.com/shadcn-ui/ui" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://github.com/shadcn-ui/ui/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                        <a href="https://ui.shadcn.com" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
+                        <a href="https://github.com/shadcn-ui/ui" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">GitHub</a>
+                        <a href="https://github.com/shadcn-ui/ui/releases" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Releases</a>
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <Link href="/software/shadcn-ui" className="text-sm text-blue-600 hover:underline">shadcn/ui Guide →</Link>
+                      <Link href="/software/shadcn-ui" className="text-sm text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">shadcn/ui Guide →</Link>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -237,13 +237,13 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 font-mono">5.0.60</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://sdk.vercel.ai/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://github.com/vercel/ai" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://github.com/vercel/ai/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                        <a href="https://sdk.vercel.ai/docs" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
+                        <a href="https://github.com/vercel/ai" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">GitHub</a>
+                        <a href="https://github.com/vercel/ai/releases" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Releases</a>
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <Link href="/software/vercel-ai-sdk" className="text-sm text-blue-600 hover:underline">AI SDK Guide →</Link>
+                      <Link href="/software/vercel-ai-sdk" className="text-sm text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">AI SDK Guide →</Link>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -251,13 +251,13 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 font-mono">2.58.0</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://supabase.com/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://github.com/supabase/supabase" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://github.com/supabase/supabase-js/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                        <a href="https://supabase.com/docs" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
+                        <a href="https://github.com/supabase/supabase" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">GitHub</a>
+                        <a href="https://github.com/supabase/supabase-js/releases" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Releases</a>
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <Link href="/software/supabase" className="text-sm text-blue-600 hover:underline">Supabase Guide →</Link>
+                      <Link href="/software/supabase" className="text-sm text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Supabase Guide →</Link>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -265,9 +265,9 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 font-mono">0.460.0</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://lucide.dev" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://github.com/lucide-icons/lucide" target="_blank" rel="noopener" className="text-blue-600 hover:underline">GitHub</a>
-                        <a href="https://github.com/lucide-icons/lucide/releases" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Releases</a>
+                        <a href="https://lucide.dev" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
+                        <a href="https://github.com/lucide-icons/lucide" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">GitHub</a>
+                        <a href="https://github.com/lucide-icons/lucide/releases" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Releases</a>
                       </div>
                     </td>
                     <td className="px-4 py-3">
@@ -303,7 +303,7 @@ export default function SoftwarePage() {
                   <tr className="hover:bg-muted/20">
                     <td className="px-4 py-3 font-mono text-sm">Next.js 15.5.4 + React 19.2.0</td>
                     <td className="px-4 py-3">
-                      <span className="inline-flex items-center gap-1 text-green-600 font-semibold">
+                      <span className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-400 font-semibold">
                         <span>✓</span> Compatible
                       </span>
                     </td>
@@ -313,19 +313,19 @@ export default function SoftwarePage() {
                   <tr className="hover:bg-muted/20">
                     <td className="px-4 py-3 font-mono text-sm">Next.js 15.5.4 + Supabase 2.58.0</td>
                     <td className="px-4 py-3">
-                      <span className="inline-flex items-center gap-1 text-green-600 font-semibold">
+                      <span className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-400 font-semibold">
                         <span>✓</span> Compatible
                       </span>
                     </td>
                     <td className="px-4 py-3 text-sm">
-                      <Link href="/systems" className="text-blue-600 hover:underline">Auth pattern →</Link>
+                      <Link href="/systems" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Auth pattern →</Link>
                     </td>
                     <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
                   </tr>
                   <tr className="hover:bg-muted/20">
                     <td className="px-4 py-3 font-mono text-sm">Tailwind 4.1.14 + shadcn/ui 3.4.0</td>
                     <td className="px-4 py-3">
-                      <span className="inline-flex items-center gap-1 text-green-600 font-semibold">
+                      <span className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-400 font-semibold">
                         <span>✓</span> Compatible
                       </span>
                     </td>
@@ -335,7 +335,7 @@ export default function SoftwarePage() {
                   <tr className="hover:bg-muted/20">
                     <td className="px-4 py-3 font-mono text-sm">Vercel AI SDK 5.0 + Next.js 15.5</td>
                     <td className="px-4 py-3">
-                      <span className="inline-flex items-center gap-1 text-green-600 font-semibold">
+                      <span className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-400 font-semibold">
                         <span>✓</span> Compatible
                       </span>
                     </td>
@@ -345,31 +345,31 @@ export default function SoftwarePage() {
                   <tr className="hover:bg-muted/20">
                     <td className="px-4 py-3 font-mono text-sm">Node.js 22.20 + TypeScript 5.9</td>
                     <td className="px-4 py-3">
-                      <span className="inline-flex items-center gap-1 text-green-600 font-semibold">
+                      <span className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-400 font-semibold">
                         <span>✓</span> Compatible
                       </span>
                     </td>
                     <td className="px-4 py-3 text-sm">Native TS execution (no transpilation)</td>
                     <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
                   </tr>
-                  <tr className="hover:bg-muted/20 bg-red-50/50 dark:bg-red-900/10">
+                  <tr className="hover:bg-muted/20 bg-stone-50/50 dark:bg-stone-900/10">
                     <td className="px-4 py-3 font-mono text-sm">Next.js 14.x + React 19.x</td>
                     <td className="px-4 py-3">
-                      <span className="inline-flex items-center gap-1 text-red-600 font-semibold">
+                      <span className="inline-flex items-center gap-1 text-stone-700 dark:text-stone-400 font-semibold">
                         <span>✗</span> Incompatible
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-sm text-red-600">Requires Next.js 15+</td>
+                    <td className="px-4 py-3 text-sm text-stone-700 dark:text-stone-400">Requires Next.js 15+</td>
                     <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
                   </tr>
-                  <tr className="hover:bg-muted/20 bg-red-50/50 dark:bg-red-900/10">
+                  <tr className="hover:bg-muted/20 bg-stone-50/50 dark:bg-stone-900/10">
                     <td className="px-4 py-3 font-mono text-sm">shadcn/ui 3.x + Tailwind 3.x</td>
                     <td className="px-4 py-3">
-                      <span className="inline-flex items-center gap-1 text-red-600 font-semibold">
+                      <span className="inline-flex items-center gap-1 text-stone-700 dark:text-stone-400 font-semibold">
                         <span>✗</span> Incompatible
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-sm text-red-600">Must upgrade to Tailwind 4</td>
+                    <td className="px-4 py-3 text-sm text-stone-700 dark:text-stone-400">Must upgrade to Tailwind 4</td>
                     <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
                   </tr>
                 </tbody>
@@ -411,49 +411,49 @@ export default function SoftwarePage() {
               <div className="space-y-3 font-mono text-sm">
                 <div className="pl-0">
                   <div className="flex items-start gap-3">
-                    <span className="text-slate-600 dark:text-slate-600 font-bold min-w-[120px]">Node.js 24.8.0</span>
+                    <span className="text-slate-600 dark:text-slate-400 font-bold min-w-[120px]">Node.js 24.8.0</span>
                     <span className="text-muted-foreground">→ Runtime foundation, native TypeScript execution</span>
                   </div>
                 </div>
                 <div className="pl-4 border-l-2 border-slate-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-gray-600 dark:text-gray-600 font-bold min-w-[120px]">TypeScript 5.9.2</span>
+                    <span className="text-gray-600 dark:text-gray-400 font-bold min-w-[120px]">TypeScript 5.9.2</span>
                     <span className="text-muted-foreground">→ Type safety layer, requires Node.js 18+</span>
                   </div>
                 </div>
                 <div className="pl-8 border-l-2 border-gray-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-zinc-600 dark:text-zinc-600 font-bold min-w-[120px]">React 19.2.0</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">React 19.2.0</span>
                     <span className="text-muted-foreground">→ UI library, needs Node.js 18.18+</span>
                   </div>
                 </div>
                 <div className="pl-12 border-l-2 border-zinc-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-zinc-600 dark:text-zinc-600 font-bold min-w-[120px]">Next.js 15.5.5</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">Next.js 15.5.5</span>
                     <span className="text-muted-foreground">→ Framework, requires React 19.x</span>
                   </div>
                 </div>
                 <div className="pl-16 border-l-2 border-zinc-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-neutral-600 dark:text-neutral-600 font-bold min-w-[120px]">Tailwind 4.1.13</span>
+                    <span className="text-neutral-600 dark:text-neutral-400 font-bold min-w-[120px]">Tailwind 4.1.13</span>
                     <span className="text-muted-foreground">→ Styling, integrates with Next.js pipeline</span>
                   </div>
                 </div>
                 <div className="pl-20 border-l-2 border-neutral-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-neutral-600 dark:text-neutral-600 font-bold min-w-[120px]">shadcn/ui 3.3.1</span>
+                    <span className="text-neutral-600 dark:text-neutral-400 font-bold min-w-[120px]">shadcn/ui 3.3.1</span>
                     <span className="text-muted-foreground">→ Components, requires React 19+ & Tailwind 4+</span>
                   </div>
                 </div>
                 <div className="pl-16 border-l-2 border-zinc-600 mt-4">
                   <div className="flex items-start gap-3">
-                    <span className="text-stone-600 dark:text-stone-600 font-bold min-w-[120px]">AI SDK 5.0.48</span>
+                    <span className="text-stone-600 dark:text-stone-400 font-bold min-w-[120px]">AI SDK 5.0.48</span>
                     <span className="text-muted-foreground">→ AI integration, requires Next.js 15+ for streaming</span>
                   </div>
                 </div>
                 <div className="pl-16 border-l-2 border-zinc-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-stone-600 dark:text-stone-600 font-bold min-w-[120px]">Supabase</span>
+                    <span className="text-stone-600 dark:text-stone-400 font-bold min-w-[120px]">Supabase</span>
                     <span className="text-muted-foreground">→ Backend, @supabase/ssr 0.7+ for Next.js 15</span>
                   </div>
                 </div>
@@ -551,7 +551,7 @@ export default function SoftwarePage() {
                   <tr>
                     <td className="border border-border/40 px-4 py-2">Framework</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">
-                      <Link href="/software/nextjs" className="text-zinc-700 hover:underline">
+                      <Link href="/software/nextjs" className="text-zinc-700 dark:text-zinc-300 hover:underline">
                         Next.js
                       </Link>
                     </td>
@@ -561,7 +561,7 @@ export default function SoftwarePage() {
                   <tr>
                     <td className="border border-border/40 px-4 py-2">UI Library</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">
-                      <Link href="/software/react" className="text-gray-700 hover:underline">
+                      <Link href="/software/react" className="text-gray-700 dark:text-gray-300 hover:underline">
                         React
                       </Link>
                     </td>
@@ -571,7 +571,7 @@ export default function SoftwarePage() {
                   <tr>
                     <td className="border border-border/40 px-4 py-2">Styling</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">
-                      <Link href="/software/tailwind" className="text-gray-700 hover:underline">
+                      <Link href="/software/tailwind" className="text-gray-700 dark:text-gray-300 hover:underline">
                         Tailwind CSS
                       </Link>
                     </td>
@@ -581,7 +581,7 @@ export default function SoftwarePage() {
                   <tr>
                     <td className="border border-border/40 px-4 py-2">Components</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">
-                      <Link href="/software/shadcn-ui" className="text-gray-700 hover:underline">
+                      <Link href="/software/shadcn-ui" className="text-gray-700 dark:text-gray-300 hover:underline">
                         shadcn/ui
                       </Link>
                     </td>
@@ -597,7 +597,7 @@ export default function SoftwarePage() {
                   <tr>
                     <td className="border border-border/40 px-4 py-2">AI SDK</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">
-                      <Link href="/software/vercel-ai-sdk" className="text-gray-700 hover:underline">
+                      <Link href="/software/vercel-ai-sdk" className="text-gray-700 dark:text-gray-300 hover:underline">
                         Vercel AI SDK
                       </Link>
                     </td>
@@ -607,7 +607,7 @@ export default function SoftwarePage() {
                   <tr>
                     <td className="border border-border/40 px-4 py-2">Backend</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">
-                      <Link href="/software/supabase" className="text-gray-700 hover:underline">
+                      <Link href="/software/supabase" className="text-gray-700 dark:text-gray-300 hover:underline">
                         Supabase
                       </Link>
                     </td>
@@ -618,7 +618,7 @@ export default function SoftwarePage() {
                     <td className="border border-border/40 px-4 py-2">AI Coding</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">Claude Code</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">2025</td>
-                    <td className="border border-border/40 px-4 py-2">Terminal agent (72.5% SWE-bench), see <Link href="/support#ai-coding" className="text-stone-600 hover:underline">Support</Link></td>
+                    <td className="border border-border/40 px-4 py-2">Terminal agent (72.5% SWE-bench), see <Link href="/support#ai-coding" className="text-stone-600 dark:text-stone-400 hover:underline">Support</Link></td>
                   </tr>
                 </tbody>
               </table>
@@ -772,7 +772,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               <h3 className="text-xl font-bold mb-4">AI-Native Workflow Comparison</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="border rounded-lg p-4 bg-neutral-100 dark:bg-neutral-900/10 border-neutral-300 dark:border-neutral-700">
-                  <h4 className="font-bold mb-3 text-neutral-600 dark:text-neutral-600 flex items-center gap-2">
+                  <h4 className="font-bold mb-3 text-neutral-600 dark:text-neutral-400 flex items-center gap-2">
                     <span>❌</span>
                     <span>Old Way (Manual)</span>
                   </h4>
@@ -786,7 +786,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
                   </ol>
                 </div>
                 <div className="border rounded-lg p-4 bg-muted/30 dark:bg-zinc-900/10 border-zinc-300 dark:border-zinc-700">
-                  <h4 className="font-bold mb-3 text-zinc-600 dark:text-zinc-600 flex items-center gap-2">
+                  <h4 className="font-bold mb-3 text-zinc-600 dark:text-zinc-400 flex items-center gap-2">
                     <span>✅</span>
                     <span>New Way (MCP)</span>
                   </h4>
@@ -877,9 +877,9 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
                 <div>
                   <p className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">AI (via MCP):</p>
                   <div className="bg-gray-900 p-3 rounded text-gray-100 text-sm font-mono">
-                    <p className="text-zinc-600">✓ Installing button-group component...</p>
-                    <p className="text-slate-600">✓ Generating SiteHeader component...</p>
-                    <p className="text-zinc-600">✓ Done! Navigation added.</p>
+                    <p className="text-zinc-600 dark:text-zinc-400">✓ Installing button-group component...</p>
+                    <p className="text-slate-600 dark:text-slate-400">✓ Generating SiteHeader component...</p>
+                    <p className="text-zinc-600 dark:text-zinc-400">✓ Done! Navigation added.</p>
                   </div>
                 </div>
               </div>

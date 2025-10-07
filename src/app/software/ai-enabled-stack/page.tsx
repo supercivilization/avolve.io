@@ -104,7 +104,7 @@ export default function AIEnabledStackPage() {
 
 
           {/* Official Documentation Links */}
-          <section id="official-docs" className="section-spacing border-l-2 border-blue-600/30 dark:border-blue-400 p-6 rounded-lg bg-blue-50 dark:bg-blue-950">
+          <section id="official-docs" className="section-spacing border-l-2 border-zinc-600/30 dark:border-zinc-400 p-6 rounded-lg bg-zinc-50 dark:bg-zinc-950">
             <h2 className="text-lg font-bold mb-4">Official Documentation</h2>
             <p className="text-sm text-muted-foreground mb-4">
               For complete API references, detailed guides, and authoritative sources, refer to official documentation:
@@ -112,35 +112,35 @@ export default function AIEnabledStackPage() {
             <ul className="space-y-3 text-sm">
               <li>
                 <strong>Next.js:</strong>{" "}
-                <a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   nextjs.org/docs
                 </a>
                 {" "}— Framework documentation, App Router, API routes, deployment
               </li>
               <li>
                 <strong>Vercel AI SDK:</strong>{" "}
-                <a href="https://sdk.vercel.ai/docs" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://sdk.vercel.ai/docs" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   sdk.vercel.ai/docs
                 </a>
                 {" "}— AI SDK reference, streaming, tool calling, model providers
               </li>
               <li>
                 <strong>Claude API:</strong>{" "}
-                <a href="https://docs.anthropic.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://docs.anthropic.com" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   docs.anthropic.com
                 </a>
                 {" "}— Anthropic API documentation, model capabilities, pricing
               </li>
               <li>
                 <strong>Supabase:</strong>{" "}
-                <a href="https://supabase.com/docs" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://supabase.com/docs" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   supabase.com/docs
                 </a>
                 {" "}— Database, authentication, storage, realtime subscriptions
               </li>
               <li>
                 <strong>Upstash Redis:</strong>{" "}
-                <a href="https://upstash.com/docs/redis" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://upstash.com/docs/redis" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   upstash.com/docs/redis
                 </a>
                 {" "}— Redis rate limiting, caching, serverless Redis
@@ -263,7 +263,7 @@ export default function ChatPage() {
             key={message.id}
             className={\`p-4 rounded-lg \${
               message.role === "user"
-                ? "bg-blue-100 dark:bg-blue-900 ml-12"
+                ? "bg-zinc-100 dark:bg-zinc-800 ml-12"
                 : "bg-muted/30 dark:bg-gray-800 mr-12"
             }\`}
           >
@@ -291,7 +291,7 @@ export default function ChatPage() {
         <button
           type="submit"
           disabled={isLoading}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg disabled:opacity-50"
+          className="px-6 py-3 bg-zinc-600 dark:bg-zinc-700 text-white hover:bg-zinc-700 dark:hover:bg-zinc-600 rounded-lg disabled:opacity-50"
         >
           Send
         </button>
@@ -609,7 +609,7 @@ export async function POST(request: Request) {
                 <p className="text-sm text-muted-foreground mb-4">
                   Protect your AI API with Supabase Auth
                 </p>
-                <Link href="/systems#auth-system" className="text-slate-600 dark:text-slate-600 hover:underline text-sm font-medium">
+                <Link href="/systems#auth-system" className="text-slate-600 dark:text-slate-400 hover:underline text-sm font-medium">
                   Authentication System Guide →
                 </Link>
               </div>
@@ -619,7 +619,7 @@ export async function POST(request: Request) {
                 <p className="text-sm text-muted-foreground mb-4">
                   See complete AI application examples
                 </p>
-                <Link href="/solutions#ai-customer-support" className="text-slate-600 dark:text-slate-600 hover:underline text-sm font-medium">
+                <Link href="/solutions#ai-customer-support" className="text-slate-600 dark:text-slate-400 hover:underline text-sm font-medium">
                   AI Solutions Examples →
                 </Link>
               </div>

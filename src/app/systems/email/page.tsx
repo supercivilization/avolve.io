@@ -352,7 +352,7 @@ npm run email:dev
               </table>
             </div>
 
-            <div className="bg-stone-100 border-l-4 border-stone-600 p-4 rounded-lg">
+            <div className="bg-stone-100 dark:bg-stone-950/20 border-l-4 border-stone-600 dark:border-stone-400 p-4 rounded-lg">
               <h3 className="text-lg font-bold mb-2">True Infrastructure Cost</h3>
               <p className="text-foreground mb-2">Beyond API pricing, budget for:</p>
               <ul className="space-y-1 text-sm text-foreground">
@@ -371,13 +371,13 @@ npm run email:dev
           <section id="limitations" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">What Breaks in Production</h2>
 
-            <div className="bg-stone-50 border-l-4 border-stone-400 p-4 rounded-lg space-y-4">
+            <div className="bg-stone-50 dark:bg-stone-950/20 border-l-4 border-stone-400 dark:border-stone-600 p-4 rounded-lg space-y-4">
               <div>
                 <h3 className="font-bold mb-1">Outlook 2016 rendering issues</h3>
                 <p className="text-sm text-foreground mb-1">
                   React Email cannot render MSO conditional comments needed for Outlook optimization. Flexbox doesn't work, padding only on table cells.
                 </p>
-                <p className="text-stone-700 text-sm"><strong>Fix:</strong> Use table-based layouts, post-process to inject MSO conditionals, or maintain separate templates for enterprise clients.</p>
+                <p className="text-stone-700 dark:text-stone-300 text-sm"><strong>Fix:</strong> Use table-based layouts, post-process to inject MSO conditionals, or maintain separate templates for enterprise clients.</p>
               </div>
 
               <div>
@@ -385,7 +385,7 @@ npm run email:dev
                 <p className="text-sm text-foreground mb-1">
                   React component overhead adds 15-30% size vs hand-coded HTML. Simple emails can unexpectedly exceed Gmail's limit.
                 </p>
-                <p className="text-stone-700 text-sm"><strong>Fix:</strong> Track component "byte cost" during development, use React Email 4.0 size linter, minimize wrapper divs, compress images.</p>
+                <p className="text-stone-700 dark:text-stone-300 text-sm"><strong>Fix:</strong> Track component "byte cost" during development, use React Email 4.0 size linter, minimize wrapper divs, compress images.</p>
               </div>
 
               <div>
@@ -393,7 +393,7 @@ npm run email:dev
                 <p className="text-sm text-foreground mb-1">
                   Email rendering happens in single region before distribution. Real-time data fetching adds latency for global audiences.
                 </p>
-                <p className="text-stone-700 text-sm"><strong>Fix:</strong> Pre-render email variations, cache at edge, use React Server Components (coming in next version) for 50-70% latency reduction.</p>
+                <p className="text-stone-700 dark:text-stone-300 text-sm"><strong>Fix:</strong> Pre-render email variations, cache at edge, use React Server Components (coming in next version) for 50-70% latency reduction.</p>
               </div>
 
               <div>
@@ -401,7 +401,7 @@ npm run email:dev
                 <p className="text-sm text-foreground mb-1">
                   Comprehensive testing across 50+ email clients requires expensive tools. Edge cases only appear in production.
                 </p>
-                <p className="text-stone-700 text-sm"><strong>Fix:</strong> Budget for Litmus ($99-399/month), build extensive test suite, maintain compatibility matrix, test on real devices.</p>
+                <p className="text-stone-700 dark:text-stone-300 text-sm"><strong>Fix:</strong> Budget for Litmus ($99-399/month), build extensive test suite, maintain compatibility matrix, test on real devices.</p>
               </div>
             </div>
           </section>
@@ -432,7 +432,7 @@ npm run email:dev
                 </p>
               </div>
 
-              <div className="bg-stone-100 border-l-4 border-stone-600 p-4 rounded-lg">
+              <div className="bg-stone-100 dark:bg-stone-950/20 border-l-4 border-stone-600 dark:border-stone-400 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Error Handling and Monitoring</h3>
                 <p className="text-sm text-foreground">
                   Implement webhook listeners for delivery events. Log failures with context. Set up alerts for bounce rate spikes. Use Resend's retry mechanisms. Track email metrics in analytics.

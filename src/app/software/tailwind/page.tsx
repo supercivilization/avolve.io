@@ -59,27 +59,27 @@ export default function TailwindPage() {
       />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
+        <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-zinc-600">Tailwind CSS v4.1.14</h1>
-          <p className="text-xl text-gray-700 mb-12">
+          <h1 className="text-4xl font-bold mb-4 text-foreground">Tailwind CSS v4.1.14</h1>
+          <p className="text-xl text-foreground mb-12">
             Utility-first CSS framework rebuilt from the ground up with Rust-powered Oxide engine delivering 100x faster builds and CSS-first configuration
           </p>
 
           {/* Core Identity Section */}
-          <section id="overview" className="mb-12 bg-muted/30 border-l-2 border-zinc-600/30 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-muted/30 border-l-2 border-border/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-foreground mb-4">
               <strong>Tailwind CSS v4.1.14</strong> is a utility-first CSS framework completely rewritten in Rust with the Oxide engine, delivering <strong>100x faster incremental builds</strong> and eliminating JavaScript configuration entirely through CSS-first design tokens.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mt-4">
               <div>
-                <h3 className="font-bold text-gray-800 mb-2">Market Position</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <h3 className="font-bold text-foreground mb-2">Market Position</h3>
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>22.47M weekly downloads</strong> (3x growth from v3)</li>
                   <li>• <strong>51% market share</strong> (State of CSS 2025)</li>
                   <li>• <strong>182x faster no-change rebuilds</strong> (35ms → 192µs)</li>
@@ -88,8 +88,8 @@ export default function TailwindPage() {
               </div>
 
               <div>
-                <h3 className="font-bold text-gray-800 mb-2">Core Capabilities</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <h3 className="font-bold text-foreground mb-2">Core Capabilities</h3>
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• Oxide engine (Rust + TypeScript)</li>
                   <li>• Native container queries (no plugin)</li>
                   <li>• 3D transform system</li>
@@ -106,9 +106,9 @@ export default function TailwindPage() {
             <h2 className="text-3xl font-bold mb-6">Why It Matters</h2>
 
             <div className="space-y-6">
-              <div className="border-l-2 border-zinc-600/30 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-zinc-700">Architectural Revolution</h3>
-                <p className="text-gray-700 mb-3">
+              <div className="border-l-2 border-border/30 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Architectural Revolution</h3>
+                <p className="text-foreground mb-3">
                   v4.1.14 represents a complete ground-up rewrite that eliminates the performance bottlenecks of JavaScript-based CSS processing. The Oxide engine delivers microsecond-level rebuilds that fundamentally change the development experience.
                 </p>
                 <div className="bg-muted/30 p-4 rounded-lg">
@@ -148,14 +148,14 @@ export default function TailwindPage() {
                 </div>
               </div>
 
-              <div className="border-l-2 border-slate-600/30 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-slate-700">CSS-First Configuration</h3>
-                <p className="text-gray-700 mb-3">
+              <div className="border-l-2 border-border/30 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-foreground">CSS-First Configuration</h3>
+                <p className="text-foreground mb-3">
                   The elimination of JavaScript configuration files represents a philosophical shift toward web-native design systems. All customization lives in CSS custom properties, enabling runtime theming and better integration with CSS ecosystem tools.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-neutral-100 p-4 rounded-lg">
-                    <h4 className="font-bold text-neutral-700 mb-2">❌ v3.x (JavaScript Config)</h4>
+                  <div className="bg-muted p-4 rounded-lg">
+                    <h4 className="font-bold text-foreground mb-2">❌ v3.x (JavaScript Config)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// tailwind.config.js
 module.exports = {
   content: ['./src/**/*.tsx'],
@@ -171,7 +171,7 @@ module.exports = {
 }`}</pre>
                   </div>
                   <div className="bg-muted/30 p-4 rounded-lg">
-                    <h4 className="font-bold text-zinc-700 mb-2">✅ v4.1.14 (CSS-First)</h4>
+                    <h4 className="font-bold text-foreground mb-2">✅ v4.1.14 (CSS-First)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`/* styles.css */
 @import "tailwindcss";
 
@@ -186,8 +186,8 @@ module.exports = {
               </div>
 
               <div className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm pl-4">
-                <h3 className="text-xl font-bold mb-3 text-gray-700">Modern CSS Integration</h3>
-                <p className="text-gray-700 mb-3">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Modern CSS Integration</h3>
+                <p className="text-foreground mb-3">
                   Native support for container queries, 3D transforms, and OKLCH colors eliminates the need for plugins and provides a unified development experience for modern CSS features.
                 </p>
                 <div className="space-y-3">
@@ -207,7 +207,7 @@ module.exports = {
   </div>
 </div>`}</pre>
                   </div>
-                  <div className="bg-neutral-100 p-3 rounded">
+                  <div className="bg-muted p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">OKLCH Color Space (P3 Gamut):</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`@theme {
   --color-red-500: oklch(62.8% 0.257 27.85);
@@ -220,15 +220,15 @@ module.exports = {
           </section>
 
           {/* Technical Architecture Section */}
-          <section id="architecture" className="mb-12 border-t pt-8 bg-gray-50 p-6 rounded-lg">
+          <section id="architecture" className="mb-12 border-t pt-8 bg-muted p-6 rounded-lg">
             <h2 className="text-3xl font-bold mb-6">Technical Architecture</h2>
 
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-bold mb-3">Oxide Engine Design</h3>
-                <div className="bg-white p-4 rounded border border-gray-200">
+                <div className="bg-white p-4 rounded border border-border">
                   <h4 className="font-bold mb-2">Core Components:</h4>
-                  <ul className="space-y-2 text-sm text-gray-700">
+                  <ul className="space-y-2 text-sm text-foreground">
                     <li>• <strong>Custom CSS Parser:</strong> 2x faster than PostCSS, written in Rust</li>
                     <li>• <strong>Lightning CSS Integration:</strong> Replaces autoprefixer + cssnano + postcss-nested</li>
                     <li>• <strong>Persistent Caching:</strong> Intelligent invalidation with file watching</li>
@@ -240,7 +240,7 @@ module.exports = {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Migration Path from v3.x</h3>
-                <div className="bg-muted/30 p-4 rounded border-l-2 border-slate-600/30">
+                <div className="bg-muted/30 p-4 rounded border-l-2 border-border/30">
                   <h4 className="font-bold mb-2">Upgrade Process:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`# Install v4
 npm install tailwindcss@next
@@ -264,7 +264,7 @@ npx @tailwindcss/upgrade@next`}</pre>
               <div>
                 <h3 className="text-xl font-bold mb-3">Framework Integration</h3>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-white p-4 rounded border border-gray-200">
+                  <div className="bg-white p-4 rounded border border-border">
                     <h4 className="font-bold mb-2">Next.js 15.5 Setup:</h4>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// app/globals.css
 @import "tailwindcss";
@@ -275,9 +275,9 @@ npx @tailwindcss/upgrade@next`}</pre>
 // - components/**/*.tsx
 // - Dynamic classes work automatically`}</pre>
                   </div>
-                  <div className="bg-white p-4 rounded border border-gray-200">
+                  <div className="bg-white p-4 rounded border border-border">
                     <h4 className="font-bold mb-2">Performance with Turbopack:</h4>
-                    <ul className="space-y-1 text-xs text-gray-700">
+                    <ul className="space-y-1 text-xs text-foreground">
                       <li>• Combined with Turbopack: &lt;1ms CSS updates</li>
                       <li>• HMR preserves state during style changes</li>
                       <li>• Production builds leverage Oxide optimization</li>
@@ -294,7 +294,7 @@ npx @tailwindcss/upgrade@next`}</pre>
             <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
 
             <div className="space-y-6">
-              <div className="bg-muted/30 p-4 rounded-lg border-l-2 border-zinc-600/30">
+              <div className="bg-muted/30 p-4 rounded-lg border-l-2 border-border/30">
                 <h3 className="text-lg font-bold mb-3">Complete Next.js 15.5 Integration</h3>
                 <div className="space-y-3">
                   <div>
@@ -358,7 +358,7 @@ export function Card({ children }: { children: React.ReactNode }) {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <h4 className="font-bold text-sm mb-2">Development:</h4>
-                    <ul className="space-y-1 text-xs text-gray-700">
+                    <ul className="space-y-1 text-xs text-foreground">
                       <li>• 182x faster no-change rebuilds (192µs)</li>
                       <li>• Automatic content detection</li>
                       <li>• Persistent caching across restarts</li>
@@ -367,7 +367,7 @@ export function Card({ children }: { children: React.ReactNode }) {
                   </div>
                   <div>
                     <h4 className="font-bold text-sm mb-2">Production:</h4>
-                    <ul className="space-y-1 text-xs text-gray-700">
+                    <ul className="space-y-1 text-xs text-foreground">
                       <li>• Automatic CSS purging (zero config)</li>
                       <li>• Lightning CSS minification</li>
                       <li>• Critical CSS extraction</li>
@@ -380,13 +380,13 @@ export function Card({ children }: { children: React.ReactNode }) {
           </section>
 
           {/* Decision Framework Section */}
-          <section id="decisions" className="mb-12 border-t pt-8 bg-stone-100 p-6 rounded-lg">
+          <section id="decisions" className="mb-12 border-t pt-8 bg-muted p-6 rounded-lg">
             <h2 className="text-3xl font-bold mb-6">Decision Framework</h2>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold mb-3 text-zinc-600">✅ Choose Tailwind CSS v4 When:</h3>
-                <ul className="space-y-2 text-gray-700">
+                <h3 className="text-xl font-bold mb-3 text-foreground">✅ Choose Tailwind CSS v4 When:</h3>
+                <ul className="space-y-2 text-foreground">
                   <li>• <strong>Rapid prototyping:</strong> Utility-first for fast iteration without context switching</li>
                   <li>• <strong>Design system consistency:</strong> Constrained design tokens prevent one-off styles</li>
                   <li>• <strong>Component libraries:</strong> Works seamlessly with shadcn/ui, Radix UI primitives</li>
@@ -397,8 +397,8 @@ export function Card({ children }: { children: React.ReactNode }) {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold mb-3 text-neutral-600">❌ Consider Alternatives When:</h3>
-                <ul className="space-y-2 text-gray-700">
+                <h3 className="text-xl font-bold mb-3 text-foreground">❌ Consider Alternatives When:</h3>
+                <ul className="space-y-2 text-foreground">
                   <li>• <strong>Existing CSS architecture:</strong> Heavy investment in CSS Modules, styled-components</li>
                   <li>• <strong>Team unfamiliarity:</strong> Learning curve for utility-first paradigm</li>
                   <li>• <strong>Highly custom designs:</strong> Every element requires unique one-off styling</li>
@@ -409,9 +409,9 @@ export function Card({ children }: { children: React.ReactNode }) {
 
               <div className="border-t pt-4">
                 <h3 className="text-xl font-bold mb-3">Migration Strategy</h3>
-                <div className="bg-white p-4 rounded border border-gray-200">
+                <div className="bg-white p-4 rounded border border-border">
                   <h4 className="font-bold mb-2">Incremental Adoption Path:</h4>
-                  <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700">
+                  <ol className="list-decimal list-inside space-y-2 text-sm text-foreground">
                     <li>Install v4 alongside existing CSS solution</li>
                     <li>Use Tailwind for new components only</li>
                     <li>Migrate high-change components to Tailwind gradually</li>
@@ -429,7 +429,7 @@ export function Card({ children }: { children: React.ReactNode }) {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h3 className="font-bold mb-2">Core Facts:</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Version:</strong> v4.1.14 (September 2025)</li>
                   <li>• <strong>Engine:</strong> Oxide (Rust + TypeScript)</li>
                   <li>• <strong>Performance:</strong> 100x faster incremental, 182x no-change</li>
@@ -439,7 +439,7 @@ export function Card({ children }: { children: React.ReactNode }) {
               </div>
               <div>
                 <h3 className="font-bold mb-2">Code Generation:</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• Use utility classes: <code className="bg-gray-200 px-1 rounded">flex items-center gap-4</code></li>
                   <li>• Responsive: <code className="bg-gray-200 px-1 rounded">sm:grid md:grid-cols-2 lg:grid-cols-3</code></li>
                   <li>• Container queries: <code className="bg-gray-200 px-1 rounded">@container @md:flex</code></li>
@@ -470,32 +470,32 @@ export function Component() {
             <h2 className="text-2xl font-bold mb-4">Stack Relationships</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-bold mb-2 text-gray-800">Depends On:</h3>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• <Link href="/software/nodejs" className="text-slate-600 hover:underline">Node.js 24.8.0</Link> - Runtime for Oxide engine</li>
+                <h3 className="font-bold mb-2 text-foreground">Depends On:</h3>
+                <ul className="space-y-2 text-sm text-foreground">
+                  <li>• <Link href="/software/nodejs" className="text-primary hover:underline">Node.js 24.8.0</Link> - Runtime for Oxide engine</li>
                   <li>• CSS parsing: Lightning CSS (replaces PostCSS)</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold mb-2 text-gray-800">Enables:</h3>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• <Link href="/software/shadcn-ui" className="text-slate-600 hover:underline">shadcn/ui</Link> - Component styling foundation</li>
-                  <li>• <Link href="/software/nextjs" className="text-slate-600 hover:underline">Next.js 15.5</Link> - Works with Turbopack for &lt;1ms CSS updates</li>
-                  <li>• <Link href="/software/react" className="text-slate-600 hover:underline">React 19</Link> - Server Component styling without runtime overhead</li>
+                <h3 className="font-bold mb-2 text-foreground">Enables:</h3>
+                <ul className="space-y-2 text-sm text-foreground">
+                  <li>• <Link href="/software/shadcn-ui" className="text-primary hover:underline">shadcn/ui</Link> - Component styling foundation</li>
+                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 15.5</Link> - Works with Turbopack for &lt;1ms CSS updates</li>
+                  <li>• <Link href="/software/react" className="text-primary hover:underline">React 19</Link> - Server Component styling without runtime overhead</li>
                 </ul>
               </div>
             </div>
 
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <p className="text-sm text-gray-600">
-                Part of <Link href="/software" className="text-slate-600 hover:underline">Avolve Software Stack</Link> -
+            <div className="mt-4 pt-4 border-t border-border">
+              <p className="text-sm text-muted-foreground">
+                Part of <Link href="/software" className="text-primary hover:underline">Avolve Software Stack</Link> -
                 CSS styling layer for Next.js + React + TypeScript applications
               </p>
             </div>
           </section>
 
-          <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/software" className="text-slate-600 hover:underline">
+          <nav className="mt-12 pt-8 border-t border-border">
+            <Link href="/software" className="text-primary hover:underline">
               ← Back to Software
             </Link>
           </nav>

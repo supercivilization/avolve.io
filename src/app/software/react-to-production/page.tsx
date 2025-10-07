@@ -74,7 +74,7 @@ export default function ReactToProductionPage() {
 
 
           {/* Official Documentation Links */}
-          <section id="official-docs" className="section-spacing border-l-2 border-blue-600/30 dark:border-blue-400 p-6 rounded-lg bg-blue-50 dark:bg-blue-950">
+          <section id="official-docs" className="section-spacing border-l-2 border-zinc-600/30 dark:border-zinc-400 p-6 rounded-lg bg-zinc-50 dark:bg-zinc-950">
             <h2 className="text-lg font-bold mb-4">Official Documentation</h2>
             <p className="text-sm text-muted-foreground mb-4">
               For complete API references, detailed guides, and authoritative sources, refer to official documentation:
@@ -82,49 +82,49 @@ export default function ReactToProductionPage() {
             <ul className="space-y-3 text-sm">
               <li>
                 <strong>Node.js:</strong>{" "}
-                <a href="https://nodejs.org/docs" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://nodejs.org/docs" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   nodejs.org/docs
                 </a>
                 {" "}— Runtime documentation, API reference, guides
               </li>
               <li>
                 <strong>TypeScript:</strong>{" "}
-                <a href="https://www.typescriptlang.org/docs" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://www.typescriptlang.org/docs" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   typescriptlang.org/docs
                 </a>
                 {" "}— TypeScript handbook, compiler options, type system
               </li>
               <li>
                 <strong>React:</strong>{" "}
-                <a href="https://react.dev" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://react.dev" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   react.dev
                 </a>
                 {" "}— React documentation, hooks, Server Components, best practices
               </li>
               <li>
                 <strong>Next.js:</strong>{" "}
-                <a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   nextjs.org/docs
                 </a>
                 {" "}— Framework documentation, App Router, routing, data fetching
               </li>
               <li>
                 <strong>Tailwind CSS:</strong>{" "}
-                <a href="https://tailwindcss.com/docs" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://tailwindcss.com/docs" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   tailwindcss.com/docs
                 </a>
                 {" "}— Utility classes, customization, configuration
               </li>
               <li>
                 <strong>shadcn/ui:</strong>{" "}
-                <a href="https://ui.shadcn.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://ui.shadcn.com" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   ui.shadcn.com
                 </a>
                 {" "}— Component documentation, installation, customization
               </li>
               <li>
                 <strong>Vercel:</strong>{" "}
-                <a href="https://vercel.com/docs" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://vercel.com/docs" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   vercel.com/docs
                 </a>
                 {" "}— Platform documentation, deployment, edge functions, analytics
@@ -243,7 +243,7 @@ npm install react@19.2.0 react-dom@19.2.0
   onClick?: () => void
 }) {
   return (
-    <button onClick={onClick} className="px-4 py-2 bg-blue-600 text-white rounded">
+    <button onClick={onClick} className="px-4 py-2 bg-zinc-600 text-white rounded">
       {children}
     </button>
   )
@@ -291,7 +291,7 @@ npm run dev  # Starts dev server on http://localhost:3000`}
               </div>
 
               {/* Step 5 */}
-              <div className="border-l-2 border-neutral-600/30 dark:border-orange-400 pl-6">
+              <div className="border-l-2 border-neutral-600/30 dark:border-neutral-500 pl-6">
                 <h3 className="text-xl font-bold mb-2">Step 5: Tailwind CSS Styling</h3>
                 <p className="text-sm text-muted-foreground mb-3">Styling layer • Integrates with Next.js build pipeline</p>
 
@@ -311,7 +311,7 @@ cat package.json | grep tailwindcss
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">
 {`export function Button({ children }: { children: React.ReactNode }) {
   return (
-    <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+    <button className="px-4 py-2 bg-zinc-600 hover:bg-zinc-700 text-white rounded-lg transition-colors">
       {children}
     </button>
   )
@@ -505,7 +505,7 @@ vercel --prod`}
                 <p className="text-sm text-muted-foreground mb-4">
                   Extend type safety to APIs and databases
                 </p>
-                <Link href="/software/type-safe-stack" className="text-slate-600 dark:text-slate-600 hover:underline text-sm font-medium">
+                <Link href="/software/type-safe-stack" className="text-slate-600 dark:text-slate-400 hover:underline text-sm font-medium">
                   Type-Safe Full Stack Pathway →
                 </Link>
               </div>
@@ -515,7 +515,7 @@ vercel --prod`}
                 <p className="text-sm text-muted-foreground mb-4">
                   Integrate Claude, GPT, or other AI models
                 </p>
-                <Link href="/software/ai-enabled-stack" className="text-slate-600 dark:text-slate-600 hover:underline text-sm font-medium">
+                <Link href="/software/ai-enabled-stack" className="text-slate-600 dark:text-slate-400 hover:underline text-sm font-medium">
                   AI-Enabled Stack Pathway →
                 </Link>
               </div>
@@ -525,7 +525,7 @@ vercel --prod`}
                 <p className="text-sm text-muted-foreground mb-4">
                   Secure your app with Supabase Auth
                 </p>
-                <Link href="/systems#auth-system" className="text-slate-600 dark:text-slate-600 hover:underline text-sm font-medium">
+                <Link href="/systems#auth-system" className="text-slate-600 dark:text-slate-400 hover:underline text-sm font-medium">
                   Authentication System Guide →
                 </Link>
               </div>
@@ -535,7 +535,7 @@ vercel --prod`}
                 <p className="text-sm text-muted-foreground mb-4">
                   Understand Vercel hosting and optimization
                 </p>
-                <Link href="/services#vercel" className="text-slate-600 dark:text-slate-600 hover:underline text-sm font-medium">
+                <Link href="/services#vercel" className="text-slate-600 dark:text-slate-400 hover:underline text-sm font-medium">
                   Vercel Service Guide →
                 </Link>
               </div>

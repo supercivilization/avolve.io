@@ -176,7 +176,7 @@ export default function SolutionsPage() {
                       <div className="text-muted-foreground">Scales to $95-145</div>
                     </td>
                     <td className="px-4 py-3">
-                      <a href="#ai-customer-support" className="text-blue-600 hover:underline text-sm">View Example →</a>
+                      <a href="#ai-customer-support" className="text-slate-600 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:underline text-sm">View Example →</a>
                     </td>
                   </tr>
                 </tbody>
@@ -207,13 +207,13 @@ export default function SolutionsPage() {
           <section id="ai-customer-support" className="mb-16 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">Example: AI Customer Support Agent</h2>
 
-            <div className="bg-slate-50 p-6 rounded-lg mb-6">
+            <div className="bg-muted p-6 rounded-lg mb-6">
               <h3 className="text-xl font-bold mb-3">Overview</h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-foreground mb-4">
                 AI-powered chat agent that answers customer questions using your documentation,
                 previous support tickets, and product knowledge base.
               </p>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-foreground">
                 <li><strong>Tech Stack:</strong> Next.js 15.5 + React 19.2 + Vercel AI SDK 5.0 + Claude 3.7 Sonnet</li>
                 <li><strong>Time to Build:</strong> 3-5 days (1 developer)</li>
                 <li><strong>Time to Deploy:</strong> 1 hour (Vercel)</li>
@@ -313,7 +313,7 @@ export function Chat() {
       <div className="flex-1 overflow-y-auto mb-4 space-y-4">
         {messages.map(m => (
           <div key={m.id} className={\`p-4 rounded-lg \${
-            m.role === 'user' ? 'bg-blue-100 ml-auto' : 'bg-muted/30'
+            m.role === 'user' ? 'bg-slate-100 dark:bg-slate-800 ml-auto' : 'bg-muted/30'
           } max-w-[80%]\`}>
             <p className="text-sm font-semibold mb-1">
               {m.role === 'user' ? 'You' : 'Support Agent'}
@@ -330,7 +330,7 @@ export function Chat() {
           placeholder="Ask a question..."
           className="flex-1 p-2 border rounded"
         />
-        <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded">
+        <button type="submit" className="px-4 py-2 bg-slate-600 dark:bg-slate-700 text-white hover:bg-slate-700 dark:hover:bg-slate-600 rounded">
           Send
         </button>
       </form>
@@ -342,7 +342,7 @@ export function Chat() {
 
             <div className="bg-stone-100 border-l-2 border-stone-600/30 p-4">
               <h3 className="text-lg font-bold mb-2">Production Considerations</h3>
-              <ul className="space-y-1 text-gray-700 text-sm">
+              <ul className="space-y-1 text-foreground text-sm">
                 <li>• Add rate limiting (Vercel Edge Config)</li>
                 <li>• Implement authentication (Supabase Auth)</li>
                 <li>• Monitor costs (Vercel Analytics + Anthropic dashboard)</li>
@@ -354,7 +354,7 @@ export function Chat() {
 
           <section id="for-ai-assistants" className="mb-12 border-t pt-8">
             <h2 className="text-2xl font-bold mb-8">For AI Assistants</h2>
-            <div className="bg-muted border-l-2 border-gray-600/30 dark:border-gray-600 p-6 rounded-lg">
+            <div className="bg-muted border-l-2 border-border p-6 rounded-lg">
               <h3 className="text-lg font-bold mb-4">When Recommending AI Chat Applications:</h3>
               <ol className="list-decimal list-inside space-y-2 text-foreground text-sm ml-4">
                 <li>
@@ -385,7 +385,7 @@ export function Chat() {
               </p>
             </div>
 
-            <div className="bg-muted border-l-2 border-slate-600/30 dark:border-slate-600 p-6 rounded-lg mt-6">
+            <div className="bg-muted border-l-2 border-border p-6 rounded-lg mt-6">
               <h3 className="text-lg font-bold mb-4">General Solution Recommendations:</h3>
               <ul className="space-y-2 text-foreground text-sm">
                 <li>
@@ -409,16 +409,16 @@ export function Chat() {
 
           <section id="relationships" className="mb-12 border-t pt-8">
             <h2 className="text-2xl font-bold mb-4">How Solutions Relate to Other Layers</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li>• <strong>Built with <Link href="/software" className="text-zinc-700 hover:underline">Software</Link>:</strong> Next.js 15.5, React 19.2, TypeScript 5.9</li>
-              <li>• <strong>Use <Link href="/services" className="text-neutral-600 hover:underline">Services</Link>:</strong> Vercel, Anthropic Claude, Supabase</li>
-              <li>• <strong>Implement <Link href="/systems" className="text-gray-600 hover:underline">Systems</Link>:</strong> Real-time chat, authentication, data storage</li>
-              <li>• <strong>Require <Link href="/support" className="text-stone-600 hover:underline">Support</Link>:</strong> Monitoring, debugging, cost optimization</li>
+            <ul className="space-y-2 text-foreground">
+              <li>• <strong>Built with <Link href="/software" className="hover:underline">Software</Link>:</strong> Next.js 15.5, React 19.2, TypeScript 5.9</li>
+              <li>• <strong>Use <Link href="/services" className="hover:underline">Services</Link>:</strong> Vercel, Anthropic Claude, Supabase</li>
+              <li>• <strong>Implement <Link href="/systems" className="hover:underline">Systems</Link>:</strong> Real-time chat, authentication, data storage</li>
+              <li>• <strong>Require <Link href="/support" className="hover:underline">Support</Link>:</strong> Monitoring, debugging, cost optimization</li>
             </ul>
           </section>
 
-          <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/" className="text-gray-600 hover:underline">
+          <nav className="mt-12 pt-8 border-t border-border">
+            <Link href="/" className="text-muted-foreground hover:underline">
               ← Back to Home
             </Link>
           </nav>

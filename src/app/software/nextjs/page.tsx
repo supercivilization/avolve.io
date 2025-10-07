@@ -109,7 +109,7 @@ export default function NextJsPage() {
             <div className="flex items-center gap-3">
               <h1 className="text-4xl font-bold">Next.js 15</h1>
               <Badge variant="default">v15.5.4</Badge>
-              <Badge variant="outline" className="bg-muted/30 text-zinc-600 border-zinc-300">Production Ready</Badge>
+              <Badge variant="outline" className="bg-muted/30 text-zinc-600 dark:text-zinc-400 border-zinc-300">Production Ready</Badge>
             </div>
             <p className="text-xl text-muted-foreground">
               React framework for building full-stack web applications with built-in server-side rendering, routing, and performance optimization.
@@ -159,22 +159,22 @@ export default function NextJsPage() {
                   <TableRow>
                     <TableCell className="font-medium">React</TableCell>
                     <TableCell className="font-mono">19.2.0</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">TypeScript</TableCell>
                     <TableCell className="font-mono">5.9.2</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Node.js</TableCell>
                     <TableCell className="font-mono">24.8.0</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Vercel AI SDK</TableCell>
                     <TableCell className="font-mono">5.0.48</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -362,7 +362,7 @@ export function ClientTime() {
                 </ul>
               </div>
 
-              <div className="border-l-4 border-blue-600 pl-6 bg-blue-50 dark:bg-blue-950/20 p-4 rounded-r-lg">
+              <div className="border-l-4 border-zinc-600 pl-6 bg-zinc-50 dark:bg-zinc-950/20 p-4 rounded-r-lg">
                 <h3 className="text-lg font-bold mb-2">August 2025: Next.js 15.4 - Enhanced Developer Experience</h3>
                 <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Improved error messages</strong> with better stack traces and context</li>
@@ -382,7 +382,7 @@ export function ClientTime() {
                 </ul>
               </div>
 
-              <div className="bg-red-50 dark:bg-red-950/20 border-l-4 border-red-600 p-4 rounded-r-lg">
+              <div className="bg-stone-50 dark:bg-stone-950/20 border-l-4 border-stone-600 p-4 rounded-r-lg">
                 <h3 className="text-lg font-bold mb-2">⚠️ Breaking Changes (Jan → Oct 2025)</h3>
                 <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Fetch caching</strong>: No longer cached by default (must opt-in with cache: 'force-cache')</li>
@@ -397,7 +397,7 @@ export function ClientTime() {
           {/* For AI Assistants */}
           <section id="for-ai-assistants" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">For AI Assistants</h2>
-            <div className="bg-muted border-l-4 border-blue-600 p-6 rounded-lg">
+            <div className="bg-muted border-l-4 border-zinc-600 dark:border-zinc-400 p-6 rounded-lg">
               <h3 className="text-lg font-bold mb-4">When Recommending Next.js</h3>
 
               <div className="space-y-4">

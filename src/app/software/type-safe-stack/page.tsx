@@ -78,7 +78,7 @@ export default function TypeSafeStackPage() {
 
 
           {/* Official Documentation Links */}
-          <section id="official-docs" className="section-spacing border-l-2 border-blue-600/30 dark:border-blue-400 p-6 rounded-lg bg-blue-50 dark:border-blue-950">
+          <section id="official-docs" className="section-spacing border-l-2 border-zinc-600/30 dark:border-zinc-400 p-6 rounded-lg bg-zinc-50 dark:bg-zinc-950">
             <h2 className="text-lg font-bold mb-4">Official Documentation</h2>
             <p className="text-sm text-muted-foreground mb-4">
               For complete API references, detailed guides, and authoritative sources, refer to official documentation:
@@ -86,42 +86,42 @@ export default function TypeSafeStackPage() {
             <ul className="space-y-3 text-sm">
               <li>
                 <strong>TypeScript:</strong>{" "}
-                <a href="https://www.typescriptlang.org/docs" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://www.typescriptlang.org/docs" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   typescriptlang.org/docs
                 </a>
                 {" "}— Type system, compiler options, advanced types
               </li>
               <li>
                 <strong>Zod:</strong>{" "}
-                <a href="https://zod.dev" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://zod.dev" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   zod.dev
                 </a>
                 {" "}— Schema validation, type inference, error handling
               </li>
               <li>
                 <strong>React Hook Form:</strong>{" "}
-                <a href="https://react-hook-form.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://react-hook-form.com" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   react-hook-form.com
                 </a>
                 {" "}— Form state management, validation, performance
               </li>
               <li>
                 <strong>Next.js:</strong>{" "}
-                <a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   nextjs.org/docs
                 </a>
                 {" "}— API routes, server actions, data fetching
               </li>
               <li>
                 <strong>Supabase:</strong>{" "}
-                <a href="https://supabase.com/docs" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://supabase.com/docs" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   supabase.com/docs
                 </a>
                 {" "}— Database, type generation, PostgreSQL, client libraries
               </li>
               <li>
                 <strong>Supabase CLI:</strong>{" "}
-                <a href="https://supabase.com/docs/guides/cli" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href="https://supabase.com/docs/guides/cli" target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">
                   supabase.com/docs/guides/cli
                 </a>
                 {" "}— Type generation, migrations, local development
@@ -317,7 +317,7 @@ export type Database = {
               </div>
 
               {/* Layer 4: Type-Safe Database Queries */}
-              <div className="border-l-2 border-neutral-600/30 dark:border-orange-400 pl-6">
+              <div className="border-l-2 border-neutral-600/30 dark:border-neutral-500 pl-6">
                 <h3 className="text-xl font-bold mb-2">Layer 4: Type-Safe Database Queries</h3>
                 <p className="text-sm text-muted-foreground mb-3">Supabase client with generated types</p>
 
@@ -598,7 +598,7 @@ const _typeCheck: z.infer<typeof userSchema> extends Omit<UserInsert, "id" | "cr
                 <p className="text-sm text-muted-foreground mb-4">
                   Type-safe AI integrations with Vercel AI SDK
                 </p>
-                <Link href="/software/ai-enabled-stack" className="text-slate-600 dark:text-slate-600 hover:underline text-sm font-medium">
+                <Link href="/software/ai-enabled-stack" className="text-slate-600 dark:text-slate-400 hover:underline text-sm font-medium">
                   AI-Enabled Stack Pathway →
                 </Link>
               </div>
@@ -608,7 +608,7 @@ const _typeCheck: z.infer<typeof userSchema> extends Omit<UserInsert, "id" | "cr
                 <p className="text-sm text-muted-foreground mb-4">
                   Get your type-safe stack in production
                 </p>
-                <Link href="/software/react-to-production" className="text-slate-600 dark:text-slate-600 hover:underline text-sm font-medium">
+                <Link href="/software/react-to-production" className="text-slate-600 dark:text-slate-400 hover:underline text-sm font-medium">
                   React to Production Pathway →
                 </Link>
               </div>

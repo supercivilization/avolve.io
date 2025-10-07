@@ -112,7 +112,7 @@ export default function VercelAISDKPage() {
             <div className="flex items-center gap-3">
               <h1 className="text-4xl font-bold">Vercel AI SDK 5.0</h1>
               <Badge variant="default">v5.0.60</Badge>
-              <Badge variant="outline" className="bg-muted/30 text-zinc-600 border-zinc-300">Stable</Badge>
+              <Badge variant="outline" className="bg-muted/30 text-zinc-600 dark:text-zinc-400 border-zinc-300">Stable</Badge>
             </div>
             <p className="text-xl text-muted-foreground">
               TypeScript toolkit for building AI applications with streaming, tool calling, and agentic control. 2M+ weekly downloads, 100+ models unified.
@@ -162,27 +162,27 @@ export default function VercelAISDKPage() {
                   <TableRow>
                     <TableCell className="font-medium">Next.js</TableCell>
                     <TableCell className="font-mono">15.5.5</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">React</TableCell>
                     <TableCell className="font-mono">19.2.0</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">TypeScript</TableCell>
                     <TableCell className="font-mono">5.9.2</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Node.js</TableCell>
                     <TableCell className="font-mono">24.8.0</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Compatible</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Claude Sonnet 4.5</TableCell>
                     <TableCell className="font-mono">77.2% SWE-bench</TableCell>
-                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 inline" /> Best Coding Model</TableCell>
+                    <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Best Coding Model</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -484,7 +484,7 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
             </p>
 
             <div className="space-y-4">
-              <div className="border-l-4 border-purple-600 pl-6 bg-purple-50 dark:bg-purple-950/20 p-4 rounded-r-lg">
+              <div className="border-l-4 border-zinc-600 pl-6 bg-zinc-50 dark:bg-zinc-950/20 p-4 rounded-r-lg">
                 <h3 className="text-lg font-bold mb-2">September 2025: AI SDK 5.0 - Complete Architecture Redesign</h3>
                 <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Breaking changes from v4</strong>: Complete API redesign, migration guide required</li>
@@ -496,7 +496,7 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
                 </ul>
               </div>
 
-              <div className="border-l-4 border-blue-600 pl-6 bg-blue-50 dark:bg-blue-950/20 p-4 rounded-r-lg">
+              <div className="border-l-4 border-gray-600 pl-6 bg-gray-50 dark:bg-gray-950/20 p-4 rounded-r-lg">
                 <h3 className="text-lg font-bold mb-2">July 2025: Multi-Modal Expansion</h3>
                 <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Multi-modal streaming</strong>: Text, images, audio, video, PDFs in unified API</li>
@@ -506,7 +506,7 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
                 </ul>
               </div>
 
-              <div className="border-l-4 border-green-600 pl-6 bg-green-50 dark:bg-green-950/20 p-4 rounded-r-lg">
+              <div className="border-l-4 border-slate-600 pl-6 bg-slate-50 dark:bg-slate-950/20 p-4 rounded-r-lg">
                 <h3 className="text-lg font-bold mb-2">May 2025: Tool Calling Standardization</h3>
                 <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Unified tool calling</strong>: Consistent API across 100+ models from 25+ providers</li>
@@ -516,7 +516,7 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
                 </ul>
               </div>
 
-              <div className="border-l-4 border-orange-600 pl-6 bg-orange-50 dark:bg-orange-950/20 p-4 rounded-r-lg">
+              <div className="border-l-4 border-neutral-600 pl-6 bg-neutral-50 dark:bg-neutral-950/20 p-4 rounded-r-lg">
                 <h3 className="text-lg font-bold mb-2">March 2025: Agent Abstractions Launch</h3>
                 <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Agent class introduced</strong>: High-level abstraction for multi-step workflows</li>
@@ -526,7 +526,7 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
                 </ul>
               </div>
 
-              <div className="bg-red-50 dark:bg-red-950/20 border-l-4 border-red-600 p-4 rounded-r-lg">
+              <div className="bg-stone-50 dark:bg-stone-950/20 border-l-4 border-stone-600 p-4 rounded-r-lg">
                 <h3 className="text-lg font-bold mb-2">⚠️ Breaking Changes (AI SDK v4 → v5)</h3>
                 <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>API redesign</strong>: streamText/generateText replace old createStreamingTextResponse</li>
@@ -542,7 +542,7 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
           {/* For AI Assistants */}
           <section id="for-ai-assistants" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">For AI Assistants</h2>
-            <div className="bg-muted border-l-4 border-purple-600 p-6 rounded-lg">
+            <div className="bg-muted border-l-4 border-zinc-600 dark:border-zinc-400 p-6 rounded-lg">
               <h3 className="text-lg font-bold mb-4">When Recommending Vercel AI SDK</h3>
 
               <div className="space-y-4">

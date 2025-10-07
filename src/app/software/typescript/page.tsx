@@ -59,27 +59,27 @@ export default function TypeScriptPage() {
       />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-05">
+        <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
           Last updated: October 5, 2025
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-slate-600">TypeScript 5.9</h1>
-          <p className="text-xl text-gray-700 mb-12">
+          <h1 className="text-4xl font-bold mb-4 text-primary">TypeScript 5.9</h1>
+          <p className="text-xl text-foreground mb-12">
             Strongly typed programming language that builds on JavaScript, with 83.5M weekly downloads, 85% enterprise adoption, and native Node.js 24 execution
           </p>
 
           {/* Core Identity Section */}
-          <section id="overview" className="mb-12 bg-muted/30 border-l-2 border-slate-600/30 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-muted/30 border-l-2 border-border/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-foreground mb-4">
               <strong>TypeScript 5.9.3</strong> is a strongly typed superset of JavaScript developed by Microsoft, adding static type checking, interfaces, and modern language features. Used by <strong>Microsoft, Google, Airbnb, and Shopify</strong> with <strong>100K+ GitHub stars</strong>.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mt-4">
               <div>
-                <h3 className="font-bold text-gray-800 mb-2">Market Dominance</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <h3 className="font-bold text-foreground mb-2">Market Dominance</h3>
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>83.5M weekly downloads</strong> (npm)</li>
                   <li>• <strong>85% enterprise adoption</strong> (State of JS 2025)</li>
                   <li>• <strong>100K+ GitHub stars</strong></li>
@@ -89,8 +89,8 @@ export default function TypeScriptPage() {
               </div>
 
               <div>
-                <h3 className="font-bold text-gray-800 mb-2">Revolutionary Features (5.9)</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <h3 className="font-bold text-foreground mb-2">Revolutionary Features (5.9)</h3>
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• Native Node.js 24 execution (<code className="bg-gray-200 px-1 rounded text-xs">node app.ts</code>)</li>
                   <li>• Project Corsa: 10x compiler (preview)</li>
                   <li>• Decorators (stage 3 proposal)</li>
@@ -103,13 +103,13 @@ export default function TypeScriptPage() {
 
             <div className="mt-4 bg-muted/30 p-4 rounded border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
               <h3 className="font-bold mb-2">Official Documentation</h3>
-              <p className="text-sm text-gray-700 mb-2">
+              <p className="text-sm text-foreground mb-2">
                 For complete type system reference and language features, visit:
               </p>
               <ul className="space-y-1 text-sm">
-                <li>→ <a href="https://www.typescriptlang.org" className="text-slate-600 hover:underline">typescriptlang.org</a> - Official documentation</li>
-                <li>→ <a href="https://github.com/microsoft/TypeScript" className="text-slate-600 hover:underline">GitHub Repository</a> - Source code and issues</li>
-                <li>→ <a href="https://devblogs.microsoft.com/typescript/" className="text-slate-600 hover:underline">TypeScript DevBlog</a> - Release announcements</li>
+                <li>→ <a href="https://www.typescriptlang.org" className="text-primary hover:underline">typescriptlang.org</a> - Official documentation</li>
+                <li>→ <a href="https://github.com/microsoft/TypeScript" className="text-primary hover:underline">GitHub Repository</a> - Source code and issues</li>
+                <li>→ <a href="https://devblogs.microsoft.com/typescript/" className="text-primary hover:underline">TypeScript DevBlog</a> - Release announcements</li>
               </ul>
             </div>
           </section>
@@ -119,14 +119,14 @@ export default function TypeScriptPage() {
             <h2 className="text-3xl font-bold mb-6">Why It Matters</h2>
 
             <div className="space-y-6">
-              <div className="border-l-2 border-slate-600/30 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-slate-700">Native Execution Eliminates Build Pipeline</h3>
-                <p className="text-gray-700 mb-3">
+              <div className="border-l-2 border-border/30 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Native Execution Eliminates Build Pipeline</h3>
+                <p className="text-foreground mb-3">
                   Node.js 24.8.0's native TypeScript support fundamentally changes the development workflow. Direct <code className="bg-gray-200 px-1 rounded">node app.ts</code> execution eliminates tsc, webpack, and babel from the build chain—reducing complexity, startup time, and infrastructure requirements.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-neutral-100 p-4 rounded-lg">
-                    <h4 className="font-bold text-neutral-700 mb-2">❌ Traditional Workflow (Pre-Node.js 24)</h4>
+                  <div className="bg-muted p-4 rounded-lg">
+                    <h4 className="font-bold text-foreground mb-2">❌ Traditional Workflow (Pre-Node.js 24)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// package.json
 {
   "scripts": {
@@ -149,7 +149,7 @@ export default function TypeScriptPage() {
 // 4. Repeat for every change`}</pre>
                   </div>
                   <div className="bg-muted/30 p-4 rounded-lg">
-                    <h4 className="font-bold text-zinc-700 mb-2">✅ Native Execution (Node.js 24+)</h4>
+                    <h4 className="font-bold text-foreground mb-2">✅ Native Execution (Node.js 24+)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// package.json
 {
   "scripts": {
@@ -170,17 +170,17 @@ export default function TypeScriptPage() {
 // Instant startup`}</pre>
                   </div>
                 </div>
-                <div className="mt-3 bg-stone-100 p-3 rounded">
+                <div className="mt-3 bg-muted p-3 rounded">
                   <h5 className="font-bold text-sm mb-2">⚠️ Important Caveat:</h5>
-                  <p className="text-xs text-gray-700">
+                  <p className="text-xs text-foreground">
                     Native execution strips types at runtime but doesn't perform type checking. Use <code className="bg-gray-200 px-1 rounded">tsc --noEmit</code> in CI/CD for validation, but dev/prod execution requires zero build step.
                   </p>
                 </div>
               </div>
 
-              <div className="border-l-2 border-zinc-600/30 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-zinc-700">Project Corsa: 10x Compiler Performance</h3>
-                <p className="text-gray-700 mb-3">
+              <div className="border-l-2 border-border/30 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Project Corsa: 10x Compiler Performance</h3>
+                <p className="text-foreground mb-3">
                   Microsoft's Project Corsa rewrites the TypeScript compiler in Go, delivering 8-10x faster performance with 50% less memory usage. Expected as TypeScript 7.0 by end of 2025, this represents the biggest compiler improvement since TypeScript's creation.
                 </p>
                 <div className="bg-muted/30 p-4 rounded-lg">
@@ -226,13 +226,13 @@ export default function TypeScriptPage() {
                 </div>
               </div>
 
-              <div className="border-l-2 border-stone-600/30 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-stone-700">Type Safety Prevents Entire Bug Classes</h3>
-                <p className="text-gray-700 mb-3">
+              <div className="border-l-2 border-border/30 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Type Safety Prevents Entire Bug Classes</h3>
+                <p className="text-foreground mb-3">
                   TypeScript's static type system catches errors at compile time that would otherwise crash in production. Industry research shows TypeScript prevents 15% of bugs in JavaScript codebases—directly translating to reduced support costs, faster development, and higher reliability.
                 </p>
                 <div className="space-y-3">
-                  <div className="bg-stone-100 p-3 rounded">
+                  <div className="bg-muted p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Bug Prevention Examples:</h5>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// JavaScript - Runtime crash
 function getUser(id) {
@@ -260,7 +260,7 @@ console.log(user.name.toUpperCase()); // Error: user might be undefined
                   </div>
                   <div className="bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Enterprise Impact (Airbnb Case Study):</h5>
-                    <ul className="space-y-1 text-xs text-gray-700">
+                    <ul className="space-y-1 text-xs text-foreground">
                       <li>• <strong>38% reduction</strong> in production bugs after TypeScript migration</li>
                       <li>• <strong>15% faster</strong> feature development (better IDE autocomplete)</li>
                       <li>• <strong>50% reduction</strong> in runtime errors from type mismatches</li>
@@ -273,13 +273,13 @@ console.log(user.name.toUpperCase()); // Error: user might be undefined
           </section>
 
           {/* Technical Architecture Section */}
-          <section id="architecture" className="mb-12 border-t pt-8 bg-gray-50 p-6 rounded-lg">
+          <section id="architecture" className="mb-12 border-t pt-8 bg-muted p-6 rounded-lg">
             <h2 className="text-3xl font-bold mb-6">Technical Architecture</h2>
 
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-bold mb-3">Next.js 15 Integration</h3>
-                <div className="bg-white p-4 rounded border border-gray-200">
+                <div className="bg-white p-4 rounded border border-border">
                   <h4 className="font-bold mb-2">Automatic TypeScript Support:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`// tsconfig.json (auto-generated by Next.js)
 {
@@ -341,7 +341,7 @@ export default async function Page() {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Vercel AI SDK Type Safety</h3>
-                <div className="bg-muted/30 p-4 rounded border-l-2 border-slate-600/30">
+                <div className="bg-muted/30 p-4 rounded border-l-2 border-border/30">
                   <h4 className="font-bold mb-2">Fully Typed AI Workflows:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`import { openai } from '@ai-sdk/openai'
 import { streamText, tool } from 'ai'
@@ -416,7 +416,7 @@ const bad: Request = 'INVALID /api/users' // ❌ Type error`}</pre>
             <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
 
             <div className="space-y-6">
-              <div className="bg-muted/30 p-4 rounded-lg border-l-2 border-slate-600/30">
+              <div className="bg-muted/30 p-4 rounded-lg border-l-2 border-border/30">
                 <h3 className="text-lg font-bold mb-3">Production Type-Safe API</h3>
                 <div className="space-y-3">
                   <div>
@@ -452,15 +452,15 @@ export default async function Page() {
                 </div>
               </div>
 
-              <div className="bg-neutral-100 p-4 rounded-lg border-l-2 border-neutral-600/30">
+              <div className="bg-muted p-4 rounded-lg border-l-2 border-border/30">
                 <h3 className="text-lg font-bold mb-3">Production Issues and Fixes</h3>
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-bold text-sm mb-2">Issue #1: "any" Type Escape Hatch Abuse</h4>
-                    <p className="text-xs text-gray-700 mb-2">
+                    <p className="text-xs text-foreground mb-2">
                       <strong>Symptom:</strong> Runtime errors despite TypeScript claiming type safety
                     </p>
-                    <p className="text-xs text-gray-700 mb-2">
+                    <p className="text-xs text-foreground mb-2">
                       <strong>Cause:</strong> Using "any" type defeats type checking
                     </p>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// ❌ Wrong - "any" disables type safety
@@ -488,7 +488,7 @@ function processUser(user: User) {
 
                   <div>
                     <h4 className="font-bold text-sm mb-2">Issue #2: Type Assertions Hide Bugs</h4>
-                    <p className="text-xs text-gray-700 mb-2">
+                    <p className="text-xs text-foreground mb-2">
                       <strong>Symptom:</strong> Type assertion "as" used to force types, causing runtime errors
                     </p>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// ❌ Wrong - Forcing type with "as"
@@ -509,7 +509,7 @@ const data = UserSchema.parse(JSON.parse(response))
 
                   <div>
                     <h4 className="font-bold text-sm mb-2">Issue #3: Optional Chaining Ignored</h4>
-                    <p className="text-xs text-gray-700 mb-2">
+                    <p className="text-xs text-foreground mb-2">
                       <strong>Symptom:</strong> "Cannot read property of undefined" in production
                     </p>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// ❌ Wrong - Assuming value exists
@@ -528,13 +528,13 @@ function getUserEmail(user: User | undefined): string {
           </section>
 
           {/* Decision Framework Section */}
-          <section id="decisions" className="mb-12 border-t pt-8 bg-stone-100 p-6 rounded-lg">
+          <section id="decisions" className="mb-12 border-t pt-8 bg-muted p-6 rounded-lg">
             <h2 className="text-3xl font-bold mb-6">Decision Framework</h2>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold mb-3 text-zinc-600">✅ Choose TypeScript When:</h3>
-                <ul className="space-y-2 text-gray-700">
+                <h3 className="text-xl font-bold mb-3 text-foreground">✅ Choose TypeScript When:</h3>
+                <ul className="space-y-2 text-foreground">
                   <li>• <strong>Team size &gt;2:</strong> Type safety prevents integration bugs</li>
                   <li>• <strong>Long-term project:</strong> Refactoring confidence and maintainability</li>
                   <li>• <strong>Complex data models:</strong> Interfaces define clear contracts</li>
@@ -545,8 +545,8 @@ function getUserEmail(user: User | undefined): string {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold mb-3 text-neutral-600">❌ Consider Alternatives When:</h3>
-                <ul className="space-y-2 text-gray-700">
+                <h3 className="text-xl font-bold mb-3 text-foreground">❌ Consider Alternatives When:</h3>
+                <ul className="space-y-2 text-foreground">
                   <li>• <strong>Prototype/hackathon:</strong> JavaScript faster for throwaway code</li>
                   <li>• <strong>Solo project &lt;1K LOC:</strong> Type overhead not worth it</li>
                   <li>• <strong>Learning JavaScript:</strong> Master JS fundamentals first</li>
@@ -557,9 +557,9 @@ function getUserEmail(user: User | undefined): string {
 
               <div className="border-t pt-4">
                 <h3 className="text-xl font-bold mb-3">Migration Strategy</h3>
-                <div className="bg-white p-4 rounded border border-gray-200">
+                <div className="bg-white p-4 rounded border border-border">
                   <h4 className="font-bold mb-2">Incremental Adoption Path:</h4>
-                  <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700">
+                  <ol className="list-decimal list-inside space-y-2 text-sm text-foreground">
                     <li><strong>Enable TypeScript:</strong> Rename .js → .ts, add tsconfig.json</li>
                     <li><strong>Start strict: false:</strong> Migrate gradually without breaking build</li>
                     <li><strong>Add types incrementally:</strong> Start with function signatures, then interfaces</li>
@@ -588,7 +588,7 @@ async function getUser(id) {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h3 className="font-bold mb-2">Core Facts:</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Version:</strong> 5.9.3 (August 2025)</li>
                   <li>• <strong>Native execution:</strong> Node.js 24+ runs .ts directly</li>
                   <li>• <strong>Project Corsa:</strong> 10x compiler in preview (TS 7.0)</li>
@@ -598,7 +598,7 @@ async function getUser(id) {
               </div>
               <div>
                 <h3 className="font-bold mb-2">Code Generation:</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• Always use <code className="bg-gray-200 px-1 rounded">strict: true</code> in tsconfig.json</li>
                   <li>• Define interfaces for all data structures</li>
                   <li>• Use <code className="bg-gray-200 px-1 rounded">z.infer&lt;typeof schema&gt;</code> for Zod types</li>
@@ -638,34 +638,34 @@ export async function getUser(id: number): Promise<User> {
             <h2 className="text-2xl font-bold mb-4">Stack Relationships</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-bold mb-2 text-gray-800">Foundation For:</h3>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• <Link href="/software/nextjs" className="text-slate-600 hover:underline">Next.js 15.5</Link> - Type-safe React framework</li>
-                  <li>• <Link href="/software/react" className="text-slate-600 hover:underline">React 19</Link> - Type-safe components</li>
-                  <li>• <Link href="/software/vercel-ai-sdk" className="text-slate-600 hover:underline">Vercel AI SDK</Link> - Type-safe AI workflows</li>
+                <h3 className="font-bold mb-2 text-foreground">Foundation For:</h3>
+                <ul className="space-y-2 text-sm text-foreground">
+                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 15.5</Link> - Type-safe React framework</li>
+                  <li>• <Link href="/software/react" className="text-primary hover:underline">React 19</Link> - Type-safe components</li>
+                  <li>• <Link href="/software/vercel-ai-sdk" className="text-primary hover:underline">Vercel AI SDK</Link> - Type-safe AI workflows</li>
                   <li>• All modern JavaScript libraries</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold mb-2 text-gray-800">Runs On:</h3>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• <Link href="/software/nodejs" className="text-slate-600 hover:underline">Node.js 24.8.0</Link> - Native .ts execution</li>
+                <h3 className="font-bold mb-2 text-foreground">Runs On:</h3>
+                <ul className="space-y-2 text-sm text-foreground">
+                  <li>• <Link href="/software/nodejs" className="text-primary hover:underline">Node.js 24.8.0</Link> - Native .ts execution</li>
                   <li>• Any JavaScript runtime (Deno, Bun)</li>
                   <li>• Browsers (after compilation)</li>
                 </ul>
               </div>
             </div>
 
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <p className="text-sm text-gray-600">
-                Part of <Link href="/software" className="text-slate-600 hover:underline">Avolve Software Stack</Link> -
+            <div className="mt-4 pt-4 border-t border-border">
+              <p className="text-sm text-muted-foreground">
+                Part of <Link href="/software" className="text-primary hover:underline">Avolve Software Stack</Link> -
                 Type system for Next.js + React + Node.js applications
               </p>
             </div>
           </section>
 
-          <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/software" className="text-slate-600 hover:underline">
+          <nav className="mt-12 pt-8 border-t border-border">
+            <Link href="/software" className="text-primary hover:underline">
               ← Back to Software
             </Link>
           </nav>

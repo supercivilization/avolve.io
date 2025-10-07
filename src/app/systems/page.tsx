@@ -78,7 +78,7 @@ export default function SystemsPage() {
             "text": "Build a Client Component with a form that uses the Supabase Browser Client to handle user login and session creation.",
             "code": {
               "@type": "Code",
-              "text": "'use client';\nimport { createBrowserClient } from '@supabase/ssr';\nimport { useState } from 'react';\n\nexport function LoginForm() {\n  const [email, setEmail] = useState('');\n  const [password, setPassword] = useState('');\n\n  const supabase = createBrowserClient(\n    process.env.NEXT_PUBLIC_SUPABASE_URL!,\n    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!\n  );\n\n  async function handleLogin(e: React.FormEvent) {\n    e.preventDefault();\n    const { error } = await supabase.auth.signInWithPassword({\n      email,\n      password,\n    });\n    if (!error) window.location.href = '/dashboard';\n  }\n\n  return (\n    <form onSubmit={handleLogin} className=\"space-y-4 max-w-md\">\n      <input\n        type=\"email\"\n        value={email}\n        onChange={(e) => setEmail(e.target.value)}\n        placeholder=\"Email\"\n        className=\"w-full p-2 border rounded\"\n      />\n      <input\n        type=\"password\"\n        value={password}\n        onChange={(e) => setPassword(e.target.value)}\n        placeholder=\"Password\"\n        className=\"w-full p-2 border rounded\"\n      />\n      <button\n        type=\"submit\"\n        className=\"w-full p-2 bg-blue-600 text-white rounded\"\n      >\n        Login\n      </button>\n    </form>\n  );\n}"
+              "text": "'use client';\nimport { createBrowserClient } from '@supabase/ssr';\nimport { useState } from 'react';\n\nexport function LoginForm() {\n  const [email, setEmail] = useState('');\n  const [password, setPassword] = useState('');\n\n  const supabase = createBrowserClient(\n    process.env.NEXT_PUBLIC_SUPABASE_URL!,\n    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!\n  );\n\n  async function handleLogin(e: React.FormEvent) {\n    e.preventDefault();\n    const { error } = await supabase.auth.signInWithPassword({\n      email,\n      password,\n    });\n    if (!error) window.location.href = '/dashboard';\n  }\n\n  return (\n    <form onSubmit={handleLogin} className=\"space-y-4 max-w-md\">\n      <input\n        type=\"email\"\n        value={email}\n        onChange={(e) => setEmail(e.target.value)}\n        placeholder=\"Email\"\n        className=\"w-full p-2 border rounded\"\n      />\n      <input\n        type=\"password\"\n        value={password}\n        onChange={(e) => setPassword(e.target.value)}\n        placeholder=\"Password\"\n        className=\"w-full p-2 border rounded\"\n      />\n      <button\n        type=\"submit\"\n        className=\"w-full p-2 bg-gray-600 dark:bg-gray-700 text-white hover:bg-gray-700 dark:hover:bg-gray-600 rounded\"\n      >\n        Login\n      </button>\n    </form>\n  );\n}"
             }
           }
         ],
@@ -170,7 +170,7 @@ export default function SystemsPage() {
                       Edge-protected routes, secure sessions, user management
                     </td>
                     <td className="px-4 py-3">
-                      <a href="#auth-system" className="text-blue-600 hover:underline text-sm">View Pattern →</a>
+                      <a href="#auth-system" className="text-gray-700 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 hover:underline text-sm">View Pattern →</a>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -186,7 +186,7 @@ export default function SystemsPage() {
                       SEO optimization, AI citations, rich search results
                     </td>
                     <td className="px-4 py-3">
-                      <Link href="/systems/search" className="text-blue-600 hover:underline text-sm">View Pattern →</Link>
+                      <Link href="/systems/search" className="text-gray-700 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 hover:underline text-sm">View Pattern →</Link>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -202,7 +202,7 @@ export default function SystemsPage() {
                       Transactional emails, type-safe templates, deliverability
                     </td>
                     <td className="px-4 py-3">
-                      <Link href="/systems/email" className="text-blue-600 hover:underline text-sm">View Pattern →</Link>
+                      <Link href="/systems/email" className="text-gray-700 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 hover:underline text-sm">View Pattern →</Link>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -218,7 +218,7 @@ export default function SystemsPage() {
                       Rich social previews, 2-3x higher engagement
                     </td>
                     <td className="px-4 py-3">
-                      <Link href="/systems/social" className="text-blue-600 hover:underline text-sm">View Pattern →</Link>
+                      <Link href="/systems/social" className="text-gray-700 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 hover:underline text-sm">View Pattern →</Link>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -234,7 +234,7 @@ export default function SystemsPage() {
                       Cross-platform mobile, 40-50% code reduction
                     </td>
                     <td className="px-4 py-3">
-                      <Link href="/systems/mobile" className="text-blue-600 hover:underline text-sm">View Pattern →</Link>
+                      <Link href="/systems/mobile" className="text-gray-700 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 hover:underline text-sm">View Pattern →</Link>
                     </td>
                   </tr>
                 </tbody>
@@ -462,7 +462,7 @@ export function LoginForm() {
       />
       <button
         type="submit"
-        className="w-full p-2 bg-blue-600 text-white rounded"
+        className="w-full p-2 bg-gray-600 dark:bg-gray-700 text-white hover:bg-gray-700 dark:hover:bg-gray-600 rounded"
       >
         Login
       </button>
@@ -477,19 +477,19 @@ export function LoginForm() {
               <ul className="space-y-3 text-foreground text-sm">
                 <li>
                   <strong>Cookie domain mismatch:</strong> localhost works, production fails.<br />
-                  <span className="text-stone-700">Fix:</span> Set <code className="bg-red-100 px-1">cookieOptions.domain</code> correctly for your deployment.
+                  <span className="text-stone-700 dark:text-stone-300">Fix:</span> Set <code className="bg-stone-100 dark:bg-stone-800 px-1">cookieOptions.domain</code> correctly for your deployment.
                 </li>
                 <li>
                   <strong>Session refresh timing:</strong> Users logged out randomly.<br />
-                  <span className="text-stone-700">Fix:</span> Call <code className="bg-red-100 px-1">supabase.auth.refreshSession()</code> in client layout.
+                  <span className="text-stone-700 dark:text-stone-300">Fix:</span> Call <code className="bg-stone-100 dark:bg-stone-800 px-1">supabase.auth.refreshSession()</code> in client layout.
                 </li>
                 <li>
                   <strong>Middleware infinite redirects:</strong> /login redirects to /login.<br />
-                  <span className="text-stone-700">Fix:</span> Exclude /login from matcher config.
+                  <span className="text-stone-700 dark:text-stone-300">Fix:</span> Exclude /login from matcher config.
                 </li>
                 <li>
                   <strong>Server/client data mismatch:</strong> Hydration errors.<br />
-                  <span className="text-stone-700">Fix:</span> Use server components for initial user data, sync with client.
+                  <span className="text-stone-700 dark:text-stone-300">Fix:</span> Use server components for initial user data, sync with client.
                 </li>
               </ul>
             </div>
@@ -531,22 +531,22 @@ export function LoginForm() {
                 <li>
                   <strong>Search/SEO System</strong>: Next.js Metadata API + Schema.org markup + Server Components
                   <br />
-                  <span className="text-muted-foreground ml-6">→ Available at: <Link href="/systems/search" className="hover:underline text-slate-600">https://avolve.io/systems/search</Link></span>
+                  <span className="text-muted-foreground ml-6">→ Available at: <Link href="/systems/search" className="hover:underline text-slate-600 dark:text-slate-400">https://avolve.io/systems/search</Link></span>
                 </li>
                 <li>
                   <strong>Email System</strong>: Resend API + React Email components + Next.js API Routes
                   <br />
-                  <span className="text-muted-foreground ml-6">→ Available at: <Link href="/systems/email" className="hover:underline text-slate-600">https://avolve.io/systems/email</Link></span>
+                  <span className="text-muted-foreground ml-6">→ Available at: <Link href="/systems/email" className="hover:underline text-slate-600 dark:text-slate-400">https://avolve.io/systems/email</Link></span>
                 </li>
                 <li>
                   <strong>Social Sharing System</strong>: OpenGraph + Twitter Cards via Next.js Metadata API
                   <br />
-                  <span className="text-muted-foreground ml-6">→ Available at: <Link href="/systems/social" className="hover:underline text-slate-600">https://avolve.io/systems/social</Link></span>
+                  <span className="text-muted-foreground ml-6">→ Available at: <Link href="/systems/social" className="hover:underline text-slate-600 dark:text-slate-400">https://avolve.io/systems/social</Link></span>
                 </li>
                 <li>
                   <strong>Mobile System</strong>: React Native 0.81 + Expo SDK 54 + code sharing with Next.js
                   <br />
-                  <span className="text-muted-foreground ml-6">→ Available at: <Link href="/systems/mobile" className="hover:underline text-slate-600">https://avolve.io/systems/mobile</Link></span>
+                  <span className="text-muted-foreground ml-6">→ Available at: <Link href="/systems/mobile" className="hover:underline text-slate-600 dark:text-slate-400">https://avolve.io/systems/mobile</Link></span>
                 </li>
               </ul>
               <p className="text-sm text-muted-foreground mt-4">

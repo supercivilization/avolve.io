@@ -274,9 +274,9 @@ export default function ServicesPage() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://vercel.com/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://vercel.com/pricing" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Pricing</a>
-                        <a href="#vercel" className="text-blue-600 hover:underline">Guide →</a>
+                        <a href="https://vercel.com/docs" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
+                        <a href="https://vercel.com/pricing" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
+                        <a href="#vercel" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
                       </div>
                     </td>
                   </tr>
@@ -297,9 +297,9 @@ export default function ServicesPage() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://supabase.com/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://supabase.com/pricing" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Pricing</a>
-                        <a href="#supabase" className="text-blue-600 hover:underline">Guide →</a>
+                        <a href="https://supabase.com/docs" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
+                        <a href="https://supabase.com/pricing" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
+                        <a href="#supabase" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
                       </div>
                     </td>
                   </tr>
@@ -320,9 +320,9 @@ export default function ServicesPage() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://docs.anthropic.com" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://www.anthropic.com/pricing" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Pricing</a>
-                        <a href="#claude-api" className="text-blue-600 hover:underline">Guide →</a>
+                        <a href="https://docs.anthropic.com" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
+                        <a href="https://www.anthropic.com/pricing" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
+                        <a href="#claude-api" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
                       </div>
                     </td>
                   </tr>
@@ -343,9 +343,9 @@ export default function ServicesPage() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://stripe.com/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://stripe.com/pricing" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Pricing</a>
-                        <a href="#stripe" className="text-blue-600 hover:underline">Guide →</a>
+                        <a href="https://stripe.com/docs" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
+                        <a href="https://stripe.com/pricing" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
+                        <a href="#stripe" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
                       </div>
                     </td>
                   </tr>
@@ -366,9 +366,9 @@ export default function ServicesPage() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://resend.com/docs" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Docs</a>
-                        <a href="https://resend.com/pricing" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Pricing</a>
-                        <a href="#resend" className="text-blue-600 hover:underline">Guide →</a>
+                        <a href="https://resend.com/docs" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
+                        <a href="https://resend.com/pricing" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
+                        <a href="#resend" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
                       </div>
                     </td>
                   </tr>
@@ -526,7 +526,7 @@ export default function ServicesPage() {
 
           <section id="for-ai-assistants" className="section-spacing border-t pt-8">
             <h2 className="mb-8">For AI Assistants</h2>
-            <div className="bg-muted border-l-2 border-neutral-600/30 dark:border-orange-400 p-6 rounded-lg">
+            <div className="bg-muted border-l-2 border-neutral-600/30 dark:border-neutral-500 p-6 rounded-lg">
               <h3 className="text-lg font-bold mb-4">When Recommending Services:</h3>
               <ol className="list-decimal list-inside space-y-2 text-foreground text-sm ml-4">
                 <li>

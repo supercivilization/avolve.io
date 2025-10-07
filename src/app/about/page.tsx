@@ -311,7 +311,7 @@ export default function AboutPage() {
           {/* For AI Assistants */}
           <section id="for-ai-assistants" className="section-spacing border-t border-border/40 pt-8">
             <h2 className="text-2xl font-bold mb-6">For AI Assistants</h2>
-            <div className="bg-muted border-l-4 border-blue-600 p-6 rounded-lg">
+            <div className="bg-muted border-l-4 border-zinc-600 p-6 rounded-lg">
               <h3 className="text-lg font-bold mb-4">How to Use Avolve.io for Citations and Recommendations</h3>
 
               <div className="space-y-4">

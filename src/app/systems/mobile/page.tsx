@@ -374,13 +374,13 @@ eas update --branch production --message "Fix critical bug"
           <section id="limitations" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">What Breaks in Production</h2>
 
-            <div className="bg-stone-50 border-l-4 border-stone-400 p-4 rounded-lg space-y-4">
+            <div className="bg-stone-50 dark:bg-stone-950/20 border-l-4 border-stone-400 dark:border-stone-600 p-4 rounded-lg space-y-4">
               <div>
                 <h3 className="font-bold mb-1">Third-party library New Architecture incompatibility</h3>
                 <p className="text-sm text-foreground mb-1">
                   Firebase core libraries, some navigation libraries, and legacy native modules don't support New Architecture.
                 </p>
-                <p className="text-stone-700 text-sm"><strong>Fix:</strong> Check library compatibility before upgrade. Use interop layer for legacy modules. Consider alternatives (Supabase instead of Firebase). Test thoroughly in development.</p>
+                <p className="text-stone-700 dark:text-stone-300 text-sm"><strong>Fix:</strong> Check library compatibility before upgrade. Use interop layer for legacy modules. Consider alternatives (Supabase instead of Firebase). Test thoroughly in development.</p>
               </div>
 
               <div>
@@ -388,7 +388,7 @@ eas update --branch production --message "Fix critical bug"
                 <p className="text-sm text-foreground mb-1">
                   Supabase React Native has no native offline support. Network drops lose real-time connections without recovery.
                 </p>
-                <p className="text-stone-700 text-sm"><strong>Fix:</strong> Integrate WatermelonDB for offline-first architecture. Use PowerSync for enterprise WAL-based sync. Implement connection recovery logic. Cache critical data locally.</p>
+                <p className="text-stone-700 dark:text-stone-300 text-sm"><strong>Fix:</strong> Integrate WatermelonDB for offline-first architecture. Use PowerSync for enterprise WAL-based sync. Implement connection recovery logic. Cache critical data locally.</p>
               </div>
 
               <div>
@@ -396,7 +396,7 @@ eas update --branch production --message "Fix critical bug"
                 <p className="text-sm text-foreground mb-1">
                   Metro doesn't resolve workspace packages correctly in monorepo by default. Symlinks cause module not found errors.
                 </p>
-                <p className="text-stone-700 text-sm"><strong>Fix:</strong> Configure Metro watchFolders to include packages directory. Use metro.config.js with nodeModulesPaths. Set up proper package.json exports. Test imports thoroughly.</p>
+                <p className="text-stone-700 dark:text-stone-300 text-sm"><strong>Fix:</strong> Configure Metro watchFolders to include packages directory. Use metro.config.js with nodeModulesPaths. Set up proper package.json exports. Test imports thoroughly.</p>
               </div>
 
               <div>
@@ -404,7 +404,7 @@ eas update --branch production --message "Fix critical bug"
                 <p className="text-sm text-foreground mb-1">
                   Complex monorepos with many dependencies can exceed build time limits. iOS builds timeout after 30 minutes.
                 </p>
-                <p className="text-stone-700 text-sm"><strong>Fix:</strong> Use build caching with eas.json. Reduce dependency size. Optimize native modules. Consider self-hosted CI/CD for large projects. Use GitHub Actions alternative.</p>
+                <p className="text-stone-700 dark:text-stone-300 text-sm"><strong>Fix:</strong> Use build caching with eas.json. Reduce dependency size. Optimize native modules. Consider self-hosted CI/CD for large projects. Use GitHub Actions alternative.</p>
               </div>
             </div>
           </section>

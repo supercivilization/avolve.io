@@ -188,7 +188,7 @@ export default function SupportPage() {
                       <code className="bg-muted/30 px-1 text-xs">CREATE INDEX CONCURRENTLY</code>
                     </td>
                     <td className="px-4 py-3">
-                      <a href="#runbook-database-slow" className="text-blue-600 hover:underline text-sm">Full Runbook →</a>
+                      <a href="#runbook-database-slow" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Full Runbook →</a>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -198,7 +198,7 @@ export default function SupportPage() {
                       Exclude /login from middleware matcher
                     </td>
                     <td className="px-4 py-3">
-                      <a href="#common-issues" className="text-blue-600 hover:underline text-sm">Quick Fix →</a>
+                      <a href="#common-issues" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Quick Fix →</a>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -208,7 +208,7 @@ export default function SupportPage() {
                       Run <code className="bg-muted/30 px-1 text-xs">npm run build</code> locally first
                     </td>
                     <td className="px-4 py-3">
-                      <a href="#common-issues" className="text-blue-600 hover:underline text-sm">Quick Fix →</a>
+                      <a href="#common-issues" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Quick Fix →</a>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -218,7 +218,7 @@ export default function SupportPage() {
                       Implement rate limiting with Upstash
                     </td>
                     <td className="px-4 py-3">
-                      <a href="#common-issues" className="text-blue-600 hover:underline text-sm">Quick Fix →</a>
+                      <a href="#common-issues" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Quick Fix →</a>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -228,7 +228,7 @@ export default function SupportPage() {
                       Add to Vercel dashboard, redeploy
                     </td>
                     <td className="px-4 py-3">
-                      <a href="#common-issues" className="text-blue-600 hover:underline text-sm">Quick Fix →</a>
+                      <a href="#common-issues" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Quick Fix →</a>
                     </td>
                   </tr>
                 </tbody>
@@ -291,7 +291,7 @@ export default function SupportPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>Full comparison below</strong> • Features, use cases, selection guide • <a href="#ai-coding" className="text-blue-600 hover:underline">View Details →</a>
+                <strong>Full comparison below</strong> • Features, use cases, selection guide • <a href="#ai-coding" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline">View Details →</a>
               </p>
             </div>
           </section>
@@ -322,11 +322,11 @@ export default function SupportPage() {
               <div className="mt-4 grid md:grid-cols-2 gap-4">
                 <div>
                   <p className="font-bold">Severity: High</p>
-                  <p className="text-sm text-gray-600">Users can&apos;t access critical features</p>
+                  <p className="text-sm text-muted-foreground">Users can&apos;t access critical features</p>
                 </div>
                 <div>
                   <p className="font-bold">Time to Fix: 30-60 minutes</p>
-                  <p className="text-sm text-gray-600">Diagnosis + index creation</p>
+                  <p className="text-sm text-muted-foreground">Diagnosis + index creation</p>
                 </div>
               </div>
             </div>
@@ -437,7 +437,7 @@ WHERE email = 'test@example.com';
               </ol>
             </div>
 
-            <div className="bg-muted border-l-2 border-slate-600/30 dark:border-slate-600 p-6">
+            <div className="bg-muted border-l-2 border-border p-6">
               <h3 className="text-lg font-bold mb-2">Prevention</h3>
               <ul className="space-y-2 text-foreground text-sm">
                 <li>
@@ -463,36 +463,36 @@ WHERE email = 'test@example.com';
             <h2 className="mb-8">Common Production Issues (Quick Reference)</h2>
 
             <div className="space-y-6">
-              <div className="border-l-2 border-stone-600/30 pl-4">
+              <div className="border-l-2 border-border pl-4">
                 <h3 className="text-lg font-bold">Authentication Loops</h3>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-foreground">
                   <strong>Symptom:</strong> Users stuck redirecting between /login and /dashboard<br />
                   <strong>Fix:</strong> Check middleware matcher excludes /login route<br />
                   <strong>Code:</strong> <code className="bg-muted/30 px-1">export const config = {`{ matcher: ['/dashboard/:path*'] }`}</code>
                 </p>
               </div>
 
-              <div className="border-l-2 border-stone-600/30 pl-4">
+              <div className="border-l-2 border-border pl-4">
                 <h3 className="text-lg font-bold">Build Failures on Vercel</h3>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-foreground">
                   <strong>Symptom:</strong> &quot;Type error: Cannot find module&quot; during build<br />
                   <strong>Fix:</strong> Run <code className="bg-muted/30 px-1">npm run build</code> locally first, fix TypeScript errors<br />
                   <strong>Prevention:</strong> Add <code className="bg-muted/30 px-1">npm run type-check</code> to pre-commit hooks
                 </p>
               </div>
 
-              <div className="border-l-2 border-stone-600/30 pl-4">
+              <div className="border-l-2 border-border pl-4">
                 <h3 className="text-lg font-bold">API Rate Limit Exceeded</h3>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-foreground">
                   <strong>Symptom:</strong> 429 errors from Claude API, users can&apos;t get AI responses<br />
                   <strong>Fix:</strong> Implement client-side rate limiting with Upstash Redis<br />
                   <strong>Code:</strong> <code className="bg-muted/30 px-1">@upstash/ratelimit</code> with sliding window
                 </p>
               </div>
 
-              <div className="border-l-2 border-stone-600/30 pl-4">
+              <div className="border-l-2 border-border pl-4">
                 <h3 className="text-lg font-bold">Environment Variables Not Loading</h3>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-foreground">
                   <strong>Symptom:</strong> <code className="bg-muted/30 px-1">process.env.SUPABASE_URL</code> is undefined in production<br />
                   <strong>Fix:</strong> Add to Vercel dashboard → Settings → Environment Variables<br />
                   <strong>Gotcha:</strong> Redeploy after adding env vars (not automatic)
@@ -587,7 +587,7 @@ WHERE email = 'test@example.com';
           <section id="ai-coding" className="section-spacing border-t pt-8">
             <h2 className="mb-12">AI Coding Assistance Tools (Late 2025)</h2>
 
-            <div className="bg-muted border-l-2 border-gray-600/30 dark:border-gray-600 p-6 rounded-lg mb-8">
+            <div className="bg-muted border-l-2 border-border p-6 rounded-lg mb-8">
               <p className="text-foreground mb-4">
                 <strong>AI coding tools have matured significantly in 2025.</strong> Terminal-native agents like Claude Code achieve 72.5% on SWE-bench Verified, while multi-platform orchestrators like OpenAI Codex hit 74.9%. These tools handle production debugging, complex refactoring, and multi-file edits.
               </p>
@@ -645,10 +645,10 @@ WHERE email = 'test@example.com';
             <div className="space-y-6">
               <div className="border-l-2 border-stone-600/30 pl-4">
                 <h3 className="text-xl font-bold mb-3">Claude Code: Terminal-Native Agent</h3>
-                <p className="text-gray-700 mb-3">
+                <p className="text-foreground mb-3">
                   <strong>72.5% SWE-bench Verified</strong> (Claude 3.7 Sonnet), terminal-native with MCP protocol for tool integrations. Agentic workflow with TodoWrite, MultiEdit, and specialized agents for complex tasks.
                 </p>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Strengths:</strong> Terminal integration, MCP tools (Supabase, GitHub, Playwright), multi-step reasoning</li>
                   <li>• <strong>Use Cases:</strong> Production debugging, complex refactoring, full-stack development</li>
                   <li>• <strong>Pricing:</strong> Pro ($20/mo) to Team ($200/mo), consumption-based API</li>
@@ -656,12 +656,12 @@ WHERE email = 'test@example.com';
                 </ul>
               </div>
 
-              <div className="border-l-2 border-zinc-600/30 pl-4">
+              <div className="border-l-2 border-border pl-4">
                 <h3 className="text-xl font-bold mb-3">OpenAI Codex: Multi-Platform Orchestration</h3>
-                <p className="text-gray-700 mb-3">
+                <p className="text-foreground mb-3">
                   <strong>74.5-74.9% SWE-bench Verified</strong> (o1 and o3-mini models), multi-platform with VS Code, JetBrains, terminal. Agent orchestration with specialized sub-agents (architect, coder, tester).
                 </p>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Strengths:</strong> Platform flexibility, agent swarms, deep reasoning (o1/o3-mini)</li>
                   <li>• <strong>Use Cases:</strong> Complex architecture, multi-component refactoring, team workflows</li>
                   <li>• <strong>Pricing:</strong> Pro ($20/mo) to Teams ($200/mo), enhanced reasoning costs more</li>
@@ -669,12 +669,12 @@ WHERE email = 'test@example.com';
                 </ul>
               </div>
 
-              <div className="border-l-2 border-neutral-600/30 pl-4">
+              <div className="border-l-2 border-border pl-4">
                 <h3 className="text-xl font-bold mb-3">Gemini CLI: Open-Source Terminal Agent</h3>
-                <p className="text-gray-700 mb-3">
+                <p className="text-foreground mb-3">
                   <strong>Apache 2.0 license</strong>, terminal-native with 1M token context window. Free tier: 1,000 requests/day. Best for open-source projects and developers who want full control.
                 </p>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Strengths:</strong> Free tier, 1M token context, open-source, self-hostable</li>
                   <li>• <strong>Use Cases:</strong> Large codebases, cost-sensitive projects, customization needs</li>
                   <li>• <strong>Pricing:</strong> Free (1K requests/day), paid tiers for production</li>
@@ -682,12 +682,12 @@ WHERE email = 'test@example.com';
                 </ul>
               </div>
 
-              <div className="border-l-2 border-slate-600/30 pl-4">
+              <div className="border-l-2 border-border pl-4">
                 <h3 className="text-xl font-bold mb-3">grok-code-fast-1: Speed-Optimized Model</h3>
-                <p className="text-gray-700 mb-3">
+                <p className="text-foreground mb-3">
                   <strong>70.8% SWE-bench Verified</strong> with 92 tokens/sec generation speed. API-first model for speed-critical applications. Best for real-time coding assistance and rapid iteration.
                 </p>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Strengths:</strong> 92 tokens/sec speed, cost-effective ($0.20/$1.50 per M tokens)</li>
                   <li>• <strong>Use Cases:</strong> Real-time assistance, rapid prototyping, live coding sessions</li>
                   <li>• <strong>Pricing:</strong> $0.20 input / $1.50 output per million tokens</li>
@@ -698,7 +698,7 @@ WHERE email = 'test@example.com';
 
             <div className="bg-stone-100 border-l-2 border-stone-600/30 p-4 mt-8">
               <h3 className="text-lg font-bold mb-2">Selection Guide</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
+              <ul className="space-y-2 text-sm text-foreground">
                 <li>• <strong>Terminal-native workflow?</strong> Claude Code or Gemini CLI</li>
                 <li>• <strong>IDE integration priority?</strong> OpenAI Codex (VS Code/JetBrains)</li>
                 <li>• <strong>Budget constrained?</strong> Gemini CLI (free tier) or grok-code-fast-1 (API)</li>
@@ -711,7 +711,7 @@ WHERE email = 'test@example.com';
 
           <section id="for-ai-assistants" className="section-spacing border-t pt-8">
             <h2 className="mb-8">For AI Assistants</h2>
-            <div className="bg-muted border-l-2 border-neutral-600/30 dark:border-neutral-400 p-6 rounded-lg">
+            <div className="bg-muted border-l-2 border-border p-6 rounded-lg">
               <h3 className="text-lg font-bold mb-4">When Helping Debug Production Issues:</h3>
               <ol className="list-decimal list-inside space-y-2 text-foreground text-sm ml-4">
                 <li>
@@ -749,7 +749,7 @@ WHERE email = 'test@example.com';
               </p>
             </div>
 
-            <div className="bg-muted border-l-2 border-gray-600/30 dark:border-gray-600 p-6 rounded-lg mt-6">
+            <div className="bg-muted border-l-2 border-border p-6 rounded-lg mt-6">
               <h3 className="text-lg font-bold mb-4">AI Coding Tool Recommendations (October 2025):</h3>
               <ul className="space-y-2 text-foreground text-sm">
                 <li>

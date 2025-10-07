@@ -59,27 +59,27 @@ export default function SupabasePage() {
       />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-gray-600" dateTime="2025-10-06">
+        <time className="text-sm text-muted-foreground" dateTime="2025-10-06">
           Last updated: October 6, 2025
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-zinc-600">Supabase</h1>
-          <p className="text-xl text-gray-700 mb-12">
+          <h1 className="text-4xl font-bold mb-4 text-foreground">Supabase</h1>
+          <p className="text-xl text-foreground mb-12">
             Open-source Backend-as-a-Service built on PostgreSQL 15.8 (production default, CLI uses 17 for development) with authentication, Row Level Security, real-time subscriptions, and pgvector 0.8.0 AI search
           </p>
 
           {/* Core Identity Section */}
-          <section id="overview" className="mb-12 bg-muted/30 border-l-2 border-zinc-600/30 p-6 rounded-lg">
+          <section id="overview" className="mb-12 bg-muted/30 border-l-2 border-border/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-foreground mb-4">
               <strong>Supabase</strong> is an open-source Firebase alternative built on <strong>PostgreSQL 15.8</strong> (production default; CLI uses 17 for local development), providing authentication, database, storage, real-time subscriptions, and AI-powered vector search. Used by <strong>1.7M developers</strong> and <strong>40% of Y Combinator startups</strong> with <strong>$70M ARR</strong>.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mt-4">
               <div>
-                <h3 className="font-bold text-gray-800 mb-2">Market Position</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <h3 className="font-bold text-foreground mb-2">Market Position</h3>
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>1.7M developers</strong> on platform</li>
                   <li>• <strong>40% of YC startups</strong> use Supabase</li>
                   <li>• <strong>$70M ARR</strong> (annual recurring revenue)</li>
@@ -89,8 +89,8 @@ export default function SupabasePage() {
               </div>
 
               <div>
-                <h3 className="font-bold text-gray-800 mb-2">Core Capabilities</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <h3 className="font-bold text-foreground mb-2">Core Capabilities</h3>
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• PostgreSQL 15.8 (production) with pgvector 0.8.0</li>
                   <li>• Authentication (email, OAuth, magic links)</li>
                   <li>• Row Level Security (RLS)</li>
@@ -101,15 +101,15 @@ export default function SupabasePage() {
               </div>
             </div>
 
-            <div className="mt-4 bg-muted/30 p-4 rounded border-l-2 border-slate-600/30">
+            <div className="mt-4 bg-muted/30 p-4 rounded border-l-2 border-border/30">
               <h3 className="font-bold mb-2">Official Documentation</h3>
-              <p className="text-sm text-gray-700 mb-2">
+              <p className="text-sm text-foreground mb-2">
                 For API reference and guides, visit:
               </p>
               <ul className="space-y-1 text-sm">
-                <li>→ <a href="https://supabase.com/docs" className="text-slate-600 hover:underline">supabase.com/docs</a> - Complete documentation</li>
-                <li>→ <a href="https://github.com/supabase/supabase" className="text-slate-600 hover:underline">GitHub Repository</a> - Source code and issues</li>
-                <li>→ <a href="https://supabase.com/docs/guides/getting-started/quickstarts/nextjs" className="text-slate-600 hover:underline">Next.js Integration Guide</a> - Official Next.js setup</li>
+                <li>→ <a href="https://supabase.com/docs" className="text-primary hover:underline">supabase.com/docs</a> - Complete documentation</li>
+                <li>→ <a href="https://github.com/supabase/supabase" className="text-primary hover:underline">GitHub Repository</a> - Source code and issues</li>
+                <li>→ <a href="https://supabase.com/docs/guides/getting-started/quickstarts/nextjs" className="text-primary hover:underline">Next.js Integration Guide</a> - Official Next.js setup</li>
               </ul>
             </div>
           </section>
@@ -119,17 +119,17 @@ export default function SupabasePage() {
             <h2 className="text-3xl font-bold mb-6">Why It Matters</h2>
 
             <div className="space-y-6">
-              <div className="border-l-2 border-zinc-600/30 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-zinc-700">Production-Grade PostgreSQL Without DevOps</h3>
-                <p className="text-gray-700 mb-3">
+              <div className="border-l-2 border-border/30 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Production-Grade PostgreSQL Without DevOps</h3>
+                <p className="text-foreground mb-3">
                   Supabase eliminates database operations complexity while providing full PostgreSQL 15.8 access (production default). Unlike Firebase's NoSQL limitations, you get SQL joins, transactions, triggers, and extensions—without managing servers, backups, or scaling infrastructure.
                 </p>
-                <div className="bg-gray-50 p-4 rounded-lg">
+                <div className="bg-muted p-4 rounded-lg">
                   <h4 className="font-bold mb-2">What Supabase Manages For You:</h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <h5 className="font-bold text-sm mb-2">Infrastructure:</h5>
-                      <ul className="space-y-1 text-xs text-gray-700">
+                      <ul className="space-y-1 text-xs text-foreground">
                         <li>• Automatic backups (point-in-time recovery)</li>
                         <li>• Connection pooling (PgBouncer)</li>
                         <li>• Read replicas for scaling</li>
@@ -139,7 +139,7 @@ export default function SupabasePage() {
                     </div>
                     <div>
                       <h5 className="font-bold text-sm mb-2">Developer Experience:</h5>
-                      <ul className="space-y-1 text-xs text-gray-700">
+                      <ul className="space-y-1 text-xs text-foreground">
                         <li>• Auto-generated REST APIs</li>
                         <li>• Type-safe client libraries</li>
                         <li>• Real-time webhooks</li>
@@ -151,14 +151,14 @@ export default function SupabasePage() {
                 </div>
               </div>
 
-              <div className="border-l-2 border-slate-600/30 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-slate-700">Row Level Security for Zero-Trust Architecture</h3>
-                <p className="text-gray-700 mb-3">
+              <div className="border-l-2 border-border/30 pl-4">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Row Level Security for Zero-Trust Architecture</h3>
+                <p className="text-foreground mb-3">
                   PostgreSQL's Row Level Security (RLS) enforces data access at the database layer, not application code. This architectural pattern eliminates entire classes of security vulnerabilities by making authorization impossible to bypass—even with direct database access or compromised API keys.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-neutral-100 p-4 rounded-lg">
-                    <h4 className="font-bold text-neutral-700 mb-2">❌ Without RLS (Application-Layer Auth)</h4>
+                  <div className="bg-muted p-4 rounded-lg">
+                    <h4 className="font-bold text-foreground mb-2">❌ Without RLS (Application-Layer Auth)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`// Security bug: Anyone can access any user's data
 app.get('/documents', async (req, res) => {
   // Forgot to filter by user ID!
@@ -172,7 +172,7 @@ const allDocs = await supabase
   .select('*'); // Returns ALL documents!`}</pre>
                   </div>
                   <div className="bg-muted/30 p-4 rounded-lg">
-                    <h4 className="font-bold text-zinc-700 mb-2">✅ With RLS (Database-Layer Auth)</h4>
+                    <h4 className="font-bold text-foreground mb-2">✅ With RLS (Database-Layer Auth)</h4>
                     <pre className="bg-gray-900 text-gray-100 p-3 rounded text-xs overflow-x-auto">{`-- RLS policy enforced at database level
 CREATE POLICY "Users see only their documents"
 ON documents FOR SELECT
@@ -190,14 +190,14 @@ const { data } = await supabase
               </div>
 
               <div className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm pl-4">
-                <h3 className="text-xl font-bold mb-3 text-gray-700">AI-Native Vector Search with pgvector 0.8.0</h3>
-                <p className="text-gray-700 mb-3">
+                <h3 className="text-xl font-bold mb-3 text-foreground">AI-Native Vector Search with pgvector 0.8.0</h3>
+                <p className="text-foreground mb-3">
                   pgvector 0.8.0 brings production-grade AI capabilities directly into PostgreSQL with HNSW (Hierarchical Navigable Small World) indexing. This enables semantic search, RAG (Retrieval Augmented Generation), and AI features without external vector databases—reducing infrastructure complexity and cost.
                 </p>
                 <div className="space-y-3">
                   <div className="bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Performance Characteristics:</h5>
-                    <ul className="space-y-1 text-xs text-gray-700">
+                    <ul className="space-y-1 text-xs text-foreground">
                       <li>• <strong>HNSW indexing:</strong> Sub-10ms queries on millions of vectors</li>
                       <li>• <strong>Cosine similarity:</strong> Optimized for OpenAI/Anthropic embeddings</li>
                       <li>• <strong>1536 dimensions:</strong> Native support for text-embedding-3-small</li>
@@ -233,13 +233,13 @@ const { data } = await supabase.rpc('match_documents', {
           </section>
 
           {/* Technical Architecture Section */}
-          <section id="architecture" className="mb-12 border-t pt-8 bg-gray-50 p-6 rounded-lg">
+          <section id="architecture" className="mb-12 border-t pt-8 bg-muted p-6 rounded-lg">
             <h2 className="text-3xl font-bold mb-6">Technical Architecture</h2>
 
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-bold mb-3">Authentication System</h3>
-                <div className="bg-white p-4 rounded border border-gray-200">
+                <div className="bg-white p-4 rounded border border-border">
                   <h4 className="font-bold mb-2">@supabase/ssr for Next.js 15:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`// lib/supabase/server.ts
 import { createServerClient } from '@supabase/ssr'
@@ -295,7 +295,7 @@ export const config = {
 
               <div>
                 <h3 className="text-xl font-bold mb-3">Row Level Security Patterns</h3>
-                <div className="bg-muted/30 p-4 rounded border-l-2 border-slate-600/30">
+                <div className="bg-muted/30 p-4 rounded border-l-2 border-border/30">
                   <h4 className="font-bold mb-2">Complete RLS Setup:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`-- Enable RLS on table
 ALTER TABLE documents ENABLE ROW LEVEL SECURITY;
@@ -376,7 +376,7 @@ $$;`}</pre>
             <h2 className="text-3xl font-bold mb-6">Real-World Implementation</h2>
 
             <div className="space-y-6">
-              <div className="bg-muted/30 p-4 rounded-lg border-l-2 border-zinc-600/30">
+              <div className="bg-muted/30 p-4 rounded-lg border-l-2 border-border/30">
                 <h3 className="text-lg font-bold mb-3">Complete Authentication Flow</h3>
                 <div className="space-y-3">
                   <div>
@@ -461,15 +461,15 @@ export async function searchDocuments(query: string) {
                 </div>
               </div>
 
-              <div className="bg-neutral-100 p-4 rounded-lg border-l-2 border-neutral-600/30">
+              <div className="bg-muted p-4 rounded-lg border-l-2 border-border/30">
                 <h3 className="text-lg font-bold mb-3">Production Issues and Fixes</h3>
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-bold text-sm mb-2">Issue #1: Auth Session Not Refreshing</h4>
-                    <p className="text-xs text-gray-700 mb-2">
+                    <p className="text-xs text-foreground mb-2">
                       <strong>Symptom:</strong> Users randomly logged out, auth.getUser() returns null
                     </p>
-                    <p className="text-xs text-gray-700 mb-2">
+                    <p className="text-xs text-foreground mb-2">
                       <strong>Cause:</strong> Not using @supabase/ssr or missing session refresh in middleware
                     </p>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// ❌ Wrong - old package
@@ -488,10 +488,10 @@ export async function middleware(request: NextRequest) {
 
                   <div>
                     <h4 className="font-bold text-sm mb-2">Issue #2: RLS Policy Blocks Own Queries</h4>
-                    <p className="text-xs text-gray-700 mb-2">
+                    <p className="text-xs text-foreground mb-2">
                       <strong>Symptom:</strong> Queries return empty even though data exists
                     </p>
-                    <p className="text-xs text-gray-700 mb-2">
+                    <p className="text-xs text-foreground mb-2">
                       <strong>Cause:</strong> RLS enabled but no SELECT policy, or auth.uid() is null
                     </p>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`-- ❌ Wrong - RLS enabled but no policies
@@ -511,10 +511,10 @@ SELECT auth.uid(); -- Should return UUID, not NULL`}</pre>
 
                   <div>
                     <h4 className="font-bold text-sm mb-2">Issue #3: Vector Search Extremely Slow</h4>
-                    <p className="text-xs text-gray-700 mb-2">
+                    <p className="text-xs text-foreground mb-2">
                       <strong>Symptom:</strong> Queries take 5-10 seconds with only 10K rows
                     </p>
-                    <p className="text-xs text-gray-700 mb-2">
+                    <p className="text-xs text-foreground mb-2">
                       <strong>Cause:</strong> Missing HNSW index or using wrong distance operator
                     </p>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`-- ❌ Wrong - No index
@@ -542,13 +542,13 @@ LIMIT 5;
           </section>
 
           {/* Decision Framework Section */}
-          <section id="decisions" className="mb-12 border-t pt-8 bg-stone-100 p-6 rounded-lg">
+          <section id="decisions" className="mb-12 border-t pt-8 bg-muted p-6 rounded-lg">
             <h2 className="text-3xl font-bold mb-6">Decision Framework</h2>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold mb-3 text-zinc-600">✅ Choose Supabase When:</h3>
-                <ul className="space-y-2 text-gray-700">
+                <h3 className="text-xl font-bold mb-3 text-foreground">✅ Choose Supabase When:</h3>
+                <ul className="space-y-2 text-foreground">
                   <li>• <strong>PostgreSQL + Auth needed:</strong> Get both in one platform without DevOps</li>
                   <li>• <strong>Row Level Security required:</strong> Database-enforced access control for compliance</li>
                   <li>• <strong>AI/RAG applications:</strong> Native pgvector 0.8.0 with HNSW indexing</li>
@@ -559,8 +559,8 @@ LIMIT 5;
               </div>
 
               <div>
-                <h3 className="text-xl font-bold mb-3 text-neutral-600">❌ Consider Alternatives When:</h3>
-                <ul className="space-y-2 text-gray-700">
+                <h3 className="text-xl font-bold mb-3 text-foreground">❌ Consider Alternatives When:</h3>
+                <ul className="space-y-2 text-foreground">
                   <li>• <strong>Multi-cloud requirement:</strong> Supabase primarily AWS-based (GCP/Azure limited)</li>
                   <li>• <strong>NoSQL preference:</strong> Firebase Firestore may be simpler for document-heavy apps</li>
                   <li>• <strong>Extreme scale (1B+ rows):</strong> Custom PostgreSQL setup offers more control</li>
@@ -571,9 +571,9 @@ LIMIT 5;
 
               <div className="border-t pt-4">
                 <h3 className="text-xl font-bold mb-3">Migration Strategy</h3>
-                <div className="bg-white p-4 rounded border border-gray-200">
+                <div className="bg-white p-4 rounded border border-border">
                   <h4 className="font-bold mb-2">Incremental Adoption Path:</h4>
-                  <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700">
+                  <ol className="list-decimal list-inside space-y-2 text-sm text-foreground">
                     <li><strong>Start with database:</strong> Create Supabase project, migrate schema</li>
                     <li><strong>Add authentication:</strong> Implement @supabase/ssr with Next.js middleware</li>
                     <li><strong>Enable RLS:</strong> Add Row Level Security policies progressively per table</li>
@@ -582,7 +582,7 @@ LIMIT 5;
                   </ol>
                   <div className="mt-3 bg-muted/30 p-3 rounded">
                     <h5 className="font-bold text-sm mb-2">Pricing Tiers (October 2025):</h5>
-                    <ul className="space-y-1 text-xs text-gray-700">
+                    <ul className="space-y-1 text-xs text-foreground">
                       <li>• <strong>Free:</strong> 500MB database, 50K monthly active users, 2GB bandwidth</li>
                       <li>• <strong>Pro ($25/mo):</strong> 8GB database, 100K MAU, 50GB bandwidth, daily backups</li>
                       <li>• <strong>Team ($599/mo):</strong> 100GB database, 500K MAU, 250GB bandwidth, SOC2</li>
@@ -599,7 +599,7 @@ LIMIT 5;
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h3 className="font-bold mb-2">Core Facts:</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Database:</strong> PostgreSQL 15.8 (production), pgvector 0.8.0</li>
                   <li>• <strong>Auth Package:</strong> @supabase/ssr (for Next.js)</li>
                   <li>• <strong>RLS:</strong> Database-enforced access control</li>
@@ -609,7 +609,7 @@ LIMIT 5;
               </div>
               <div>
                 <h3 className="font-bold mb-2">Code Generation:</h3>
-                <ul className="space-y-1 text-sm text-gray-700">
+                <ul className="space-y-1 text-sm text-foreground">
                   <li>• Use <code className="bg-gray-200 px-1 rounded">@supabase/ssr</code> not auth-helpers</li>
                   <li>• Always enable RLS: <code className="bg-gray-200 px-1 rounded">ALTER TABLE ... ENABLE ROW LEVEL SECURITY</code></li>
                   <li>• Vector search: <code className="bg-gray-200 px-1 rounded">embedding {'<=>'}  query_embedding</code></li>
@@ -650,16 +650,16 @@ export async function searchAction(query: string) {
             <h2 className="text-2xl font-bold mb-4">Stack Relationships</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-bold mb-2 text-gray-800">Integrates With:</h3>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• <Link href="/software/nextjs" className="text-slate-600 hover:underline">Next.js 15.5</Link> - Server-side auth with @supabase/ssr</li>
-                  <li>• <Link href="/software/vercel-ai-sdk" className="text-slate-600 hover:underline">Vercel AI SDK</Link> - Vector embeddings for RAG</li>
-                  <li>• <Link href="/software/react" className="text-slate-600 hover:underline">React 19</Link> - Real-time subscriptions in components</li>
+                <h3 className="font-bold mb-2 text-foreground">Integrates With:</h3>
+                <ul className="space-y-2 text-sm text-foreground">
+                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 15.5</Link> - Server-side auth with @supabase/ssr</li>
+                  <li>• <Link href="/software/vercel-ai-sdk" className="text-primary hover:underline">Vercel AI SDK</Link> - Vector embeddings for RAG</li>
+                  <li>• <Link href="/software/react" className="text-primary hover:underline">React 19</Link> - Real-time subscriptions in components</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold mb-2 text-gray-800">Built On:</h3>
-                <ul className="space-y-2 text-sm text-gray-700">
+                <h3 className="font-bold mb-2 text-foreground">Built On:</h3>
+                <ul className="space-y-2 text-sm text-foreground">
                   <li>• PostgreSQL 15.8 (production default)</li>
                   <li>• pgvector 0.8.0 (vector extension)</li>
                   <li>• GoTrue (auth service)</li>
@@ -668,16 +668,16 @@ export async function searchAction(query: string) {
               </div>
             </div>
 
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <p className="text-sm text-gray-600">
-                Part of <Link href="/software" className="text-slate-600 hover:underline">Avolve Software Stack</Link> -
+            <div className="mt-4 pt-4 border-t border-border">
+              <p className="text-sm text-muted-foreground">
+                Part of <Link href="/software" className="text-primary hover:underline">Avolve Software Stack</Link> -
                 Backend-as-a-Service for Next.js + React + AI applications
               </p>
             </div>
           </section>
 
-          <nav className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/software" className="text-slate-600 hover:underline">
+          <nav className="mt-12 pt-8 border-t border-border">
+            <Link href="/software" className="text-primary hover:underline">
               ← Back to Software
             </Link>
           </nav>
