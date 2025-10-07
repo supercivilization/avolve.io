@@ -110,7 +110,7 @@ export function SiteFooter() {
               {/* Status Bar */}
               <div className="mb-8 md:mb-12 flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-border/30 pb-6 md:pb-8 gap-4">
                 <div className="flex items-center gap-2.5 text-sm">
-                  <span className="inline-block h-2 w-2 rounded-full bg-zinc-400 animate-pulse" />
+                  <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse" />
                   <span className="font-semibold text-foreground">All Systems Operational</span>
                   <span className="hidden sm:inline text-muted-foreground/60">·</span>
                   <span className="hidden sm:inline text-muted-foreground">Updated Oct 6, 2025</span>
