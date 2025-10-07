@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { authorRef, publisherRef, LAST_VERIFIED_DATE } from "@/lib/schema";
 
 // Dependencies (October 6, 2025):
 // - Next.js: 15.5.5
@@ -30,14 +31,10 @@ export default function SolutionsPage() {
           "@id": "https://avolve.io/#website"
         },
         "datePublished": "2025-10-05T17:00:00-06:00",
-        "dateModified": "2025-10-05T17:00:00-06:00",
+        "dateModified": LAST_VERIFIED_DATE,
         "description": "A collection of complete, working applications that solve real business problems, built with Next.js, React, Supabase, and AI.",
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        },
-        "publisher": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        },
+        "author": authorRef,
+        "publisher": publisherRef,
         "hasPart": [
           {
             "@id": "https://avolve.io/solutions#ai-customer-support-agent"
@@ -103,12 +100,8 @@ export default function SolutionsPage() {
             }
           }
         ],
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        },
-        "publisher": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        }
+        "author": authorRef,
+        "publisher": publisherRef
       },
       {
         "@type": "BreadcrumbList",

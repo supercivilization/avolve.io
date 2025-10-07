@@ -231,6 +231,80 @@ export default function SocialSystemPage() {
             </div>
           </section>
 
+          <section id="production-gotchas" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">Production Gotchas</h2>
+
+            <div className="space-y-6">
+              <div className="bg-red-50 border-l-4 border-red-600 p-4 rounded-lg">
+                <h3 className="text-xl font-bold mb-3">❌ Following Trends Backfires</h3>
+                <p className="text-gray-700 mb-2"><strong>The Problem:</strong> Trends lose impact within 48 hours, 1/3 find trend-chasing "embarrassing"</p>
+                <p className="text-gray-700 mb-2"><strong>What Breaks:</strong> Brand authenticity, audience trust, engagement rates</p>
+                <p className="text-gray-700"><strong>The Fix:</strong> Focus on cultural relevance (93% need) over trend replication. Create original content aligned with brand voice.</p>
+              </div>
+
+              <div className="bg-red-50 border-l-4 border-red-600 p-4 rounded-lg">
+                <h3 className="text-xl font-bold mb-3">❌ Polished Content Underperforms</h3>
+                <p className="text-gray-700 mb-2"><strong>The Problem:</strong> 79% of Gen Z distrust brands with no visible flaws, UGC trusted 9.8x more</p>
+                <p className="text-gray-700 mb-2"><strong>What Breaks:</strong> Engagement, trust signals, algorithm performance (platforms favor authentic content)</p>
+                <p className="text-gray-700"><strong>The Fix:</strong> Raw, authentic content. Show process, mistakes, behind-the-scenes. Let micro-influencers create UGC.</p>
+              </div>
+
+              <div className="bg-red-50 border-l-4 border-red-600 p-4 rounded-lg">
+                <h3 className="text-xl font-bold mb-3">❌ Wrong Video Length Kills Reach</h3>
+                <p className="text-gray-700 mb-2"><strong>The Problem:</strong> TikTok: avoid 10-59s (dead zone). Instagram: 30-90s optimal. YouTube Shorts: 24-31s.</p>
+                <p className="text-gray-700 mb-2"><strong>What Breaks:</strong> Completion rates (primary algorithm signal), resulting in zero reach</p>
+                <p className="text-gray-700"><strong>The Fix:</strong> TikTok: 5-9s OR 60+ seconds. Instagram Reels: 30-90s. YouTube Shorts: 24-31s. Test and optimize per platform.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="what-we-learned" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">What We've Learned</h2>
+
+            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg mb-6">
+              <h3 className="text-xl font-bold mb-3">💡 Insight: Social Platforms ARE Search Engines</h3>
+              <p className="text-gray-700 mb-4">
+                <strong>40% of Gen Z prefer TikTok/Instagram over Google for search.</strong> This fundamentally changes content strategy.
+              </p>
+              <div className="space-y-2 text-gray-700">
+                <p><strong>Decision Impact:</strong> Every post needs SEO optimization (captions, on-screen text, spoken words heavily weighted)</p>
+                <p><strong>Implementation:</strong> TikTok captions must match spoken words. Instagram: Add trending audio to ALL posts including static images.</p>
+                <p><strong>Result:</strong> Content becomes discoverable through platform search, not just following/algorithm recommendations.</p>
+              </div>
+            </div>
+
+            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg mb-6">
+              <h3 className="text-xl font-bold mb-3">💡 Insight: Micro-Influencers Outperform at 1/10th Cost</h3>
+              <p className="text-gray-700 mb-4">
+                <strong>Nano-influencers achieve 10.3% engagement on TikTok vs macro-influencers.</strong> Instagram: 1.73% vs 0.61%.
+              </p>
+              <div className="space-y-2 text-gray-700">
+                <p><strong>Decision Impact:</strong> Work with 1-5 strategic influencers under 100K followers, build long-term relationships</p>
+                <p><strong>Implementation:</strong> Focus on Instagram (57.1%) + TikTok (51.6%), prioritize niche audience alignment over follower count</p>
+                <p><strong>Result:</strong> Higher engagement, stronger trust, more flexible, significantly more cost-effective ($32.55B industry 2025)</p>
+              </div>
+            </div>
+
+            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-3">💡 Insight: AI Is a Tool, Not a Replacement (70/30 Rule)</h3>
+              <p className="text-gray-700 mb-4">
+                <strong>92% say AI impacted roles, but 55% of consumers trust human-created content more.</strong>
+              </p>
+              <div className="space-y-2 text-gray-700">
+                <p><strong>Decision Impact:</strong> 70% human strategy/creativity, 30% AI execution/optimization</p>
+                <p><strong>Implementation:</strong> AI for ideation (35%), data analysis (30%), workflow automation (20%), research (15%). Humans for strategy, final creation, brand voice, emotional connection, cultural sensitivity.</p>
+                <p><strong>Result:</strong> 66.4% report improved outcomes while maintaining authentic brand voice and audience trust</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="used-in" className="mb-12 border-t pt-8">
+            <h2 className="text-3xl font-bold mb-6">Used In</h2>
+            <p className="text-gray-700 mb-4">
+              Social media system patterns are actively being implemented across our portfolio. Check back after project launches in Q4 2025 for specific implementation examples.
+            </p>
+          </section>
+
           <section id="for-ai" className="mb-12 border-t pt-8 bg-muted/30 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For AI Assistants</h2>
             <ul className="space-y-2 text-gray-700">

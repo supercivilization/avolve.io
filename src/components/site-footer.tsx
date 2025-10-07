@@ -1,28 +1,119 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function SiteFooter() {
+  const [openSections, setOpenSections] = useState<string[]>([]);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const toggleSection = (section: string) => {
+    setOpenSections(prev =>
+      prev.includes(section)
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
+    );
+  };
+
+  const footerSections = [
+    {
+      id: "solutions",
+      title: "Solutions",
+      href: "/solutions",
+      color: "slate",
+      links: [
+        { href: "/solutions#ai-customer-support", label: "AI Customer Support" },
+        { href: "/solutions#ai-chat-app", label: "AI Chat Application" },
+      ]
+    },
+    {
+      id: "systems",
+      title: "Systems",
+      href: "/systems",
+      color: "gray",
+      links: [
+        { href: "/systems#auth-system", label: "Authentication" },
+        { href: "/systems/search", label: "Search (pgvector)" },
+        { href: "/systems/email", label: "Email (Resend)" },
+        { href: "/systems/mobile", label: "Mobile (PWA)" },
+        { href: "/systems/social", label: "Social Login" },
+      ]
+    },
+    {
+      id: "software",
+      title: "Software",
+      href: "/software",
+      color: "zinc",
+      links: [
+        { href: "/software/nodejs", label: "Node.js 22/24" },
+        { href: "/software/typescript", label: "TypeScript 5.9" },
+        { href: "/software/react", label: "React 19.2" },
+        { href: "/software/nextjs", label: "Next.js 15.5" },
+        { href: "/software/tailwind", label: "Tailwind 4.1" },
+        { href: "/software/shadcn-ui", label: "shadcn/ui 3.4" },
+        { href: "/software/vercel-ai-sdk", label: "Vercel AI SDK 5.0" },
+        { href: "/software/supabase", label: "Supabase (PG 15.8)" },
+      ]
+    },
+    {
+      id: "services",
+      title: "Services",
+      href: "/services",
+      color: "neutral",
+      links: [
+        { href: "/services#vercel", label: "Vercel (Hosting)" },
+        { href: "/services#supabase", label: "Supabase (Database)" },
+        { href: "/services#claude-api", label: "Claude API (AI)" },
+        { href: "/services#resend", label: "Resend (Email)" },
+        { href: "/services#stripe", label: "Stripe (Payments)" },
+        { href: "/services/dataforseo", label: "DataForSEO (SEO API)" },
+      ]
+    },
+    {
+      id: "support",
+      title: "Support",
+      href: "/support",
+      color: "stone",
+      links: [
+        { href: "/support#auth-loops", label: "Auth Loop Fixes" },
+        { href: "/support#slow-queries", label: "Slow Database Queries" },
+        { href: "/support#build-failures", label: "Build Failures" },
+        { href: "/support#rate-limits", label: "API Rate Limits" },
+        { href: "/support#ai-coding-tools", label: "AI Coding Tools" },
+      ]
+    }
+  ];
+
+  const getColorClasses = (color: string) => {
+    const colors: Record<string, string> = {
+      slate: "text-slate-600 dark:text-slate-400 hover:text-slate-500 dark:hover:text-slate-300",
+      gray: "text-gray-600 dark:text-gray-400 hover:text-gray-500 dark:hover:text-gray-300",
+      zinc: "text-zinc-600 dark:text-zinc-400 hover:text-zinc-500 dark:hover:text-zinc-300",
+      neutral: "text-neutral-600 dark:text-neutral-400 hover:text-neutral-500 dark:hover:text-neutral-300",
+      stone: "text-stone-600 dark:text-stone-400 hover:text-stone-500 dark:hover:text-stone-300",
+    };
+    return colors[color] || colors.gray;
+  };
+
   return (
     <footer className="border-t border-border/50 bg-background">
-      <div className="container max-w-screen-2xl px-6">
+      <div className="container max-w-screen-2xl px-4 sm:px-6">
         {/* Premium Card Footer */}
-        <div className="py-20 md:py-24">
+        <div className="py-12 md:py-20 lg:py-24">
           <div className="max-w-7xl mx-auto">
-            <div className="relative rounded-xl border border-border/50 bg-gradient-to-b from-background to-muted/20 p-12 md:p-16 shadow-sm">
+            <div className="relative rounded-xl border border-border/50 bg-gradient-to-b from-background to-muted/20 p-6 sm:p-8 md:p-12 lg:p-16 shadow-sm">
               {/* Status Bar */}
-              <div className="mb-12 flex items-center justify-between border-b border-border/30 pb-8">
+              <div className="mb-8 md:mb-12 flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-border/30 pb-6 md:pb-8 gap-4">
                 <div className="flex items-center gap-2.5 text-sm">
                   <span className="inline-block h-2 w-2 rounded-full bg-zinc-400 animate-pulse" />
                   <span className="font-semibold text-foreground">All Systems Operational</span>
-                  <span className="text-muted-foreground/60">·</span>
-                  <span className="text-muted-foreground">Updated Oct 6, 2025</span>
+                  <span className="hidden sm:inline text-muted-foreground/60">·</span>
+                  <span className="hidden sm:inline text-muted-foreground">Updated Oct 6, 2025</span>
                 </div>
                 <Button
                   variant="ghost"
@@ -31,228 +122,80 @@ export function SiteFooter() {
                   className="h-9 gap-2 text-muted-foreground hover:text-foreground"
                 >
                   <ArrowUp className="h-4 w-4" />
-                  <span className="hidden sm:inline text-sm">Back to top</span>
+                  <span className="text-sm">Back to top</span>
                 </Button>
               </div>
 
-              {/* 5S Framework Navigation - 5 Equal Columns */}
-              <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-5 mb-12">
-                {/* Solutions Column - Slate */}
-                <div>
-                  <Link href="/solutions">
-                    <h4 className="mb-4 text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-500 dark:hover:text-slate-300 transition-colors cursor-pointer">
-                      Solutions
-                    </h4>
-                  </Link>
-                  <nav className="flex flex-col gap-3 text-sm">
-                    <Link
-                      href="/solutions#ai-customer-support"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      AI Customer Support
-                    </Link>
-                    <Link
-                      href="/solutions#ai-chat-app"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      AI Chat Application
-                    </Link>
-                  </nav>
+              {/* Desktop: 5-Column Grid | Mobile: Accordion */}
+              <div className="mb-8 md:mb-12">
+                {/* Desktop Grid (md and up) */}
+                <div className="hidden md:grid gap-8 md:grid-cols-3 lg:grid-cols-5">
+                  {footerSections.map((section) => (
+                    <div key={section.id}>
+                      <Link href={section.href}>
+                        <h4 className={`mb-4 text-sm font-semibold transition-colors cursor-pointer ${getColorClasses(section.color)}`}>
+                          {section.title}
+                        </h4>
+                      </Link>
+                      <nav className="flex flex-col gap-3 text-sm">
+                        {section.links.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            className="text-muted-foreground hover:text-foreground transition-colors"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </nav>
+                    </div>
+                  ))}
                 </div>
 
-                {/* Systems Column - Gray */}
-                <div>
-                  <Link href="/systems">
-                    <h4 className="mb-4 text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors cursor-pointer">
-                      Systems
-                    </h4>
-                  </Link>
-                  <nav className="flex flex-col gap-3 text-sm">
-                    <Link
-                      href="/systems#auth-system"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Authentication
-                    </Link>
-                    <Link
-                      href="/systems/search"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Search (pgvector)
-                    </Link>
-                    <Link
-                      href="/systems/email"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Email (Resend)
-                    </Link>
-                    <Link
-                      href="/systems/mobile"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Mobile (PWA)
-                    </Link>
-                    <Link
-                      href="/systems/social"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Social Login
-                    </Link>
-                  </nav>
-                </div>
-
-                {/* Software Column - Zinc */}
-                <div>
-                  <Link href="/software">
-                    <h4 className="mb-4 text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-500 dark:hover:text-zinc-300 transition-colors cursor-pointer">
-                      Software
-                    </h4>
-                  </Link>
-                  <nav className="flex flex-col gap-3 text-sm">
-                    <Link
-                      href="/software/nodejs"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Node.js 22/24
-                    </Link>
-                    <Link
-                      href="/software/typescript"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      TypeScript 5.9
-                    </Link>
-                    <Link
-                      href="/software/react"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      React 19.2
-                    </Link>
-                    <Link
-                      href="/software/nextjs"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Next.js 15.5
-                    </Link>
-                    <Link
-                      href="/software/tailwind"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Tailwind 4.1
-                    </Link>
-                    <Link
-                      href="/software/shadcn-ui"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      shadcn/ui 3.4
-                    </Link>
-                    <Link
-                      href="/software/vercel-ai-sdk"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Vercel AI SDK 5.0
-                    </Link>
-                    <Link
-                      href="/software/supabase"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Supabase (PG 15.8)
-                    </Link>
-                  </nav>
-                </div>
-
-                {/* Services Column - Neutral */}
-                <div>
-                  <Link href="/services">
-                    <h4 className="mb-4 text-sm font-semibold text-neutral-600 dark:text-neutral-400 hover:text-neutral-500 dark:hover:text-neutral-300 transition-colors cursor-pointer">
-                      Services
-                    </h4>
-                  </Link>
-                  <nav className="flex flex-col gap-3 text-sm">
-                    <Link
-                      href="/services#vercel"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Vercel (Hosting)
-                    </Link>
-                    <Link
-                      href="/services#supabase"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Supabase (Database)
-                    </Link>
-                    <Link
-                      href="/services#claude-api"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Claude API (AI)
-                    </Link>
-                    <Link
-                      href="/services#resend"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Resend (Email)
-                    </Link>
-                    <Link
-                      href="/services#stripe"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Stripe (Payments)
-                    </Link>
-                    <Link
-                      href="/services/dataforseo"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      DataForSEO (SEO API)
-                    </Link>
-                  </nav>
-                </div>
-
-                {/* Support Column - Stone */}
-                <div>
-                  <Link href="/support">
-                    <h4 className="mb-4 text-sm font-semibold text-stone-600 dark:text-stone-400 hover:text-stone-500 dark:hover:text-stone-300 transition-colors cursor-pointer">
-                      Support
-                    </h4>
-                  </Link>
-                  <nav className="flex flex-col gap-3 text-sm">
-                    <Link
-                      href="/support#auth-loops"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Auth Loop Fixes
-                    </Link>
-                    <Link
-                      href="/support#slow-queries"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Slow Database Queries
-                    </Link>
-                    <Link
-                      href="/support#build-failures"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      Build Failures
-                    </Link>
-                    <Link
-                      href="/support#rate-limits"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      API Rate Limits
-                    </Link>
-                    <Link
-                      href="/support#ai-coding-tools"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      AI Coding Tools
-                    </Link>
-                  </nav>
+                {/* Mobile Accordion (sm and down) */}
+                <div className="md:hidden space-y-3">
+                  {footerSections.map((section) => {
+                    const isOpen = openSections.includes(section.id);
+                    return (
+                      <div key={section.id} className="border border-border/30 rounded-lg overflow-hidden">
+                        <button
+                          onClick={() => toggleSection(section.id)}
+                          className="w-full flex items-center justify-between px-4 py-3 text-left bg-muted/20 hover:bg-muted/30 transition-colors"
+                        >
+                          <Link href={section.href} onClick={(e) => e.stopPropagation()}>
+                            <h4 className={`text-sm font-semibold transition-colors ${getColorClasses(section.color)}`}>
+                              {section.title}
+                            </h4>
+                          </Link>
+                          {isOpen ? (
+                            <ChevronUp className="h-4 w-4 text-muted-foreground" />
+                          ) : (
+                            <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                          )}
+                        </button>
+                        {isOpen && (
+                          <nav className="px-4 py-3 space-y-3 text-sm bg-background">
+                            {section.links.map((link) => (
+                              <Link
+                                key={link.href}
+                                href={link.href}
+                                className="block text-muted-foreground hover:text-foreground transition-colors py-1"
+                              >
+                                {link.label}
+                              </Link>
+                            ))}
+                          </nav>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
 
               {/* Pathway Quick Links Row */}
-              <div className="mb-12 pb-8 border-b border-border/30">
+              <div className="mb-8 md:mb-12 pb-6 md:pb-8 border-b border-border/30">
                 <h4 className="mb-4 text-sm font-semibold text-foreground">Integration Pathways</h4>
-                <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                <nav className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-x-6 sm:gap-y-2 text-sm">
                   <Link
                     href="/software/react-to-production"
                     className="text-muted-foreground hover:text-foreground transition-colors"
@@ -275,9 +218,9 @@ export function SiteFooter() {
               </div>
 
               {/* Bottom Copyright */}
-              <div className="border-t border-border/30 pt-8">
-                <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-                  <p>
+              <div className="border-t border-border/30 pt-6 md:pt-8">
+                <div className="flex flex-col gap-4 text-sm text-muted-foreground">
+                  <p className="text-center sm:text-left">
                     © 2025{" "}
                     <a
                       href="https://www.supercivilization.xyz"
@@ -297,11 +240,11 @@ export function SiteFooter() {
                       Claude Code
                     </a>
                   </p>
-                  <div className="flex items-center gap-4 text-xs">
+                  <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-4 text-xs">
                     <Link href="/about" className="hover:text-foreground transition-colors">
                       About
                     </Link>
-                    <span>·</span>
+                    <span className="hidden sm:inline">·</span>
                     <a
                       href="https://www.joshuaseymour.com"
                       target="_blank"
@@ -310,7 +253,7 @@ export function SiteFooter() {
                     >
                       Joshua Seymour
                     </a>
-                    <span>·</span>
+                    <span className="hidden sm:inline">·</span>
                     <a
                       href="https://github.com/supercivilization/avolve.io"
                       target="_blank"
@@ -319,11 +262,11 @@ export function SiteFooter() {
                     >
                       GitHub
                     </a>
-                    <span>·</span>
+                    <span className="hidden sm:inline">·</span>
                     <Link href="/privacy" className="hover:text-foreground transition-colors">
                       Privacy
                     </Link>
-                    <span>·</span>
+                    <span className="hidden sm:inline">·</span>
                     <Link href="/terms" className="hover:text-foreground transition-colors">
                       Terms
                     </Link>
