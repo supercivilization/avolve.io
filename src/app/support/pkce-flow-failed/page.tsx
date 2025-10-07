@@ -52,13 +52,9 @@ export default function PKCEFlowFailedPage() {
         <div className="mb-12">
           <QuickFix
             title="Fix Cookie Timing in Middleware"
-            steps={[
-              "Set cookies on BOTH request.cookies AND response.cookies",
-              "Return the response object from middleware",
-              "Use createServerClient, not createClient",
-            ]}
-            estimatedTime="5 minutes"
-            code={`import { createServerClient } from '@supabase/ssr'
+            problem="PKCE flow fails silently after social login redirect because cookies aren't set on both request and response objects"
+            solution="Set cookies on BOTH request.cookies AND response.cookies in middleware, then return the response object"
+            newCode={`import { createServerClient } from '@supabase/ssr'
 import { NextResponse } from 'next/server'
 
 export async function middleware(request) {
@@ -73,6 +69,7 @@ export async function middleware(request) {
           return request.cookies.get(name)?.value
         },
         set(name, value, options) {
+          // CRITICAL: Set on BOTH request and response
           request.cookies.set({ name, value, ...options })
           response = NextResponse.next({ request })
           response.cookies.set({ name, value, ...options })
@@ -89,6 +86,7 @@ export async function middleware(request) {
   await supabase.auth.getUser()
   return response
 }`}
+            estimatedTime="5 minutes"
           />
         </div>
 
