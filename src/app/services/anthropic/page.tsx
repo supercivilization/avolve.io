@@ -272,27 +272,81 @@ export default function AnthropicServicePage() {
 
         <div className="mb-12">
           <CostCalculator
+            serviceName="Anthropic Claude"
             scenarios={[
               {
+                id: "startup",
                 name: "100 Daily Active Users",
-                usage: "10 messages/user/day, 500 tokens avg input, 1000 tokens output",
-                calculation: "100 users × 10 msgs × (0.5K × $3 + 1K × $15) / 1M = $18/day",
-                monthlyCost: "$50-200",
-                notes: "Varies by actual message length and complexity",
+                description: "Small AI chat application with moderate usage",
+                usage: [
+                  { metric: "Daily Active Users", value: "100" },
+                  { metric: "Messages per User", value: "10/day" },
+                  { metric: "Avg Input Tokens", value: "500" },
+                  { metric: "Avg Output Tokens", value: "1000" },
+                ],
+                breakdown: [
+                  {
+                    component: "Input Tokens",
+                    cost: "$1.50/day",
+                    notes: "100 users × 10 msgs × 500 tokens × $3/MTok",
+                  },
+                  {
+                    component: "Output Tokens",
+                    cost: "$15/day",
+                    notes: "100 users × 10 msgs × 1000 tokens × $15/MTok",
+                  },
+                ],
+                totalCost: "$50-200/month",
+                type: "startup",
               },
               {
+                id: "growth",
                 name: "1K Daily Active Users",
-                usage: "15 messages/user/day, optimized prompts",
-                calculation: "1K users × 15 msgs × (0.3K × $3 + 0.8K × $15) / 1M = $191/day",
-                monthlyCost: "$500-2K",
-                notes: "Assumes prompt optimization and caching",
+                description: "Growing application with optimized prompts and caching",
+                usage: [
+                  { metric: "Daily Active Users", value: "1,000" },
+                  { metric: "Messages per User", value: "15/day" },
+                  { metric: "Avg Input Tokens", value: "300 (optimized)" },
+                  { metric: "Avg Output Tokens", value: "800 (optimized)" },
+                ],
+                breakdown: [
+                  {
+                    component: "Input Tokens",
+                    cost: "$13.50/day",
+                    notes: "1K users × 15 msgs × 300 tokens × $3/MTok",
+                  },
+                  {
+                    component: "Output Tokens",
+                    cost: "$180/day",
+                    notes: "1K users × 15 msgs × 800 tokens × $15/MTok",
+                  },
+                ],
+                totalCost: "$500-2K/month",
+                type: "growth",
               },
               {
+                id: "enterprise",
                 name: "10K Daily Active Users",
-                usage: "20 messages/user/day, enterprise volume",
-                calculation: "10K users × 20 msgs × costs with 20% discount",
-                monthlyCost: "$5K-20K",
-                notes: "Contact sales for volume discounts at this scale",
+                description: "Enterprise scale with volume discounts",
+                usage: [
+                  { metric: "Daily Active Users", value: "10,000" },
+                  { metric: "Messages per User", value: "20/day" },
+                  { metric: "Volume Discount", value: "20% (contact sales)" },
+                ],
+                breakdown: [
+                  {
+                    component: "Base Cost",
+                    cost: "$6K-25K/month",
+                    notes: "Before volume discount",
+                  },
+                  {
+                    component: "With Discount",
+                    cost: "$5K-20K/month",
+                    notes: "After 20% enterprise discount",
+                  },
+                ],
+                totalCost: "$5K-20K/month",
+                type: "enterprise",
               },
             ]}
           />
