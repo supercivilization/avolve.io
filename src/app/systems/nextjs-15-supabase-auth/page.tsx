@@ -23,11 +23,11 @@ export default function NextJS15SupabaseAuthPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", item: "https://avolve.io" },
-          { name: "Systems", item: "https://avolve.io/systems" },
+          { name: "Home", url: "/" },
+          { name: "Systems", url: "/systems" },
           {
             name: "Next.js 15 + Supabase Auth",
-            item: "https://avolve.io/systems/nextjs-15-supabase-auth",
+            url: "/systems/nextjs-15-supabase-auth",
           },
         ]}
       />
@@ -97,14 +97,14 @@ export default function NextJS15SupabaseAuthPage() {
         {/* Quick Decision */}
         <div className="mb-12">
           <QuickDecision
-            useWhen={[
+            chooseThisIf={[
               "Building on Next.js 15 App Router",
               "Need social login (Google, GitHub, etc.)",
               "Want integrated database with auth",
               "Budget-conscious (free tier is generous)",
               "Need Row Level Security for multi-tenant apps",
             ]}
-            avoidWhen={[
+            chooseAlternativeIf={[
               "Need enterprise SSO (Auth0 is better)",
               "Want pre-built auth UI components (try Clerk)",
               "Building serverless-only (NextAuth might be simpler)",
@@ -116,47 +116,51 @@ export default function NextJS15SupabaseAuthPage() {
         {/* Pattern Structure */}
         <div className="mb-12">
           <PatternStructure
-            flow={[
+            steps={[
               {
-                step: "Request",
+                number: 1,
+                title: "Request",
                 description: "User navigates to protected route",
                 details: "Browser sends request with cookies to Next.js server",
               },
               {
-                step: "Middleware",
+                number: 2,
+                title: "Middleware",
                 description: "Validate session and refresh if needed",
                 details: "Check Supabase auth token, refresh if expired, set cookies on request AND response",
               },
               {
-                step: "Server Component",
+                number: 3,
+                title: "Server Component",
                 description: "Create Supabase client for SSR",
                 details: "Use createServerClient with cookie handlers for server-side rendering",
               },
               {
-                step: "Database Query",
+                number: 4,
+                title: "Database Query",
                 description: "Fetch user-specific data",
                 details: "PostgreSQL uses Row Level Security to filter data based on auth.uid()",
               },
             ]}
-            keyComponents={[
+            components={[
               {
                 name: "Middleware",
-                purpose: "Session validation and refresh",
+                role: "Session validation and refresh",
                 technology: "Next.js Edge Runtime",
               },
               {
                 name: "Server Client",
-                purpose: "SSR authentication",
+                role: "SSR authentication",
                 technology: "@supabase/ssr",
               },
               {
                 name: "Browser Client",
-                purpose: "Client-side auth actions",
+                role: "Client-side auth actions",
                 technology: "@supabase/supabase-js",
               },
               {
                 name: "RLS Policies",
-                purpose: "Database access control",
+                role: "Database access control",
                 technology: "PostgreSQL Row Level Security",
               },
             ]}
@@ -166,60 +170,60 @@ export default function NextJS15SupabaseAuthPage() {
         {/* Tradeoff Matrix */}
         <div className="mb-12">
           <TradeoffMatrix
-            options={[
+            approaches={[
               {
                 name: "Supabase Auth",
-                pros: [
+                advantages: [
                   "Integrated with PostgreSQL and RLS",
                   "Generous free tier (50K MAU)",
                   "Social login providers included",
                   "Good TypeScript support",
                   "Built-in email templates",
                 ],
-                cons: [
+                disadvantages: [
                   "Cookie timing can be tricky in Next.js",
                   "Limited MFA options (only TOTP)",
                   "Less mature than Auth0",
                   "Fewer enterprise features",
                   "Must understand RLS for security",
                 ],
-                bestFor: "Budget-conscious startups needing social login and database integration",
+                recommendation: "Budget-conscious startups needing social login and database integration",
               },
               {
                 name: "Auth0",
-                pros: [
+                advantages: [
                   "Enterprise-grade features",
                   "Advanced MFA (SMS, WebAuthn)",
                   "Extensive integrations",
                   "Better compliance tools",
                   "Mature and battle-tested",
                 ],
-                cons: [
+                disadvantages: [
                   "Expensive ($240+/mo for production)",
                   "More complex setup",
                   "Requires separate database",
                   "Overkill for simple apps",
                   "Learning curve is steeper",
                 ],
-                bestFor: "Enterprise apps with complex auth requirements and compliance needs",
+                recommendation: "Enterprise apps with complex auth requirements and compliance needs",
               },
               {
                 name: "Clerk",
-                pros: [
+                advantages: [
                   "Pre-built UI components",
                   "Excellent developer experience",
                   "Modern design patterns",
                   "Great documentation",
                   "Easy Next.js integration",
                 ],
-                cons: [
+                disadvantages: [
                   "Expensive ($25/mo minimum, scales quickly)",
                   "Less control over UI",
                   "Requires separate database",
                   "Younger ecosystem",
                   "Vendor lock-in concerns",
                 ],
-                bestFor: "Fast-moving teams who value DX and don't want to build auth UI",
+                recommendation: "Fast-moving teams who value DX and don't want to build auth UI",
               },
             ]}
           />
@@ -232,15 +236,10 @@ export default function NextJS15SupabaseAuthPage() {
               {
                 issue: "Cookie Timing in Middleware",
                 severity: "high",
-                frequency: "very-common",
+                frequency: "common",
                 description:
                   "Cookies must be set on BOTH request and response in Next.js 15 middleware, or PKCE flow fails silently. This is the #1 cause of auth issues.",
-                solution: [
-                  "Use Supabase's createServerClient with proper cookie handlers",
-                  "Set cookies on request.cookies AND response.cookies",
-                  "Always return response from middleware",
-                  "See /support/pkce-flow-failed for detailed fix",
-                ],
+                solution: "Use Supabase's createServerClient with proper cookie handlers. Set cookies on request.cookies AND response.cookies. Always return response from middleware. See /support/pkce-flow-failed for detailed fix.",
                 codeExample: `import { createServerClient } from '@supabase/ssr'
 import { NextResponse } from 'next/server'
 
@@ -279,12 +278,7 @@ export async function middleware(request) {
                 frequency: "common",
                 description:
                   "Using createClient in Server Components causes hydration errors. Must use createServerClient for SSR.",
-                solution: [
-                  "Use createServerClient in Server Components and Server Actions",
-                  "Use createBrowserClient in Client Components",
-                  "Never import client methods in server code",
-                  "Create separate utility files for server/client",
-                ],
+                solution: "Use createServerClient in Server Components and Server Actions. Use createBrowserClient in Client Components. Never import client methods in server code. Create separate utility files for server/client.",
                 codeExample: `// lib/supabase/server.ts (Server Components)
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
@@ -320,12 +314,7 @@ export const createClient = () =>
                 frequency: "common",
                 description:
                   "Forgetting RLS policies or testing with service role key bypasses security, creating data leaks in production.",
-                solution: [
-                  "Enable RLS on ALL tables with user data",
-                  "Test with anon key, not service role key",
-                  "Use auth.uid() in policies, never trust client input",
-                  "Add logging to detect policy violations",
-                ],
+                solution: "Enable RLS on ALL tables with user data. Test with anon key, not service role key. Use auth.uid() in policies, never trust client input. Add logging to detect policy violations.",
                 codeExample: `-- Enable RLS on table
 ALTER TABLE messages ENABLE ROW LEVEL SECURITY;
 
@@ -361,29 +350,29 @@ CREATE POLICY "Users can update own messages"
             variations={[
               {
                 name: "With Magic Links",
+                scenario: "Better UX for infrequent users, no password management",
                 description: "Passwordless authentication via email",
-                useCase: "Better UX for infrequent users, no password management",
                 implementation: "Use signInWithOtp instead of signInWithPassword",
                 tradeoffs: "More secure but requires email delivery, slower than password login",
               },
               {
                 name: "With JWT Validation",
+                scenario: "Fine-grained control over token validation",
                 description: "Manually validate JWTs for API routes",
-                useCase: "Fine-grained control over token validation",
                 implementation: "Use jose library to verify Supabase JWT signatures",
                 tradeoffs: "More control but more code, easy to get wrong",
               },
               {
                 name: "Multi-Tenant with RLS",
+                scenario: "SaaS apps with multiple teams per user",
                 description: "Workspace/organization isolation via RLS",
-                useCase: "SaaS apps with multiple teams per user",
                 implementation: "Add organization_id to auth.jwt() claims and filter in RLS policies",
                 tradeoffs: "Powerful but complex, requires understanding JWT claims",
               },
               {
                 name: "With MFA (TOTP)",
+                scenario: "High-security applications requiring 2FA",
                 description: "Two-factor authentication with authenticator apps",
-                useCase: "High-security applications requiring 2FA",
                 implementation: "Enable MFA in Supabase dashboard, use enroll and challenge APIs",
                 tradeoffs: "Better security but adds friction to login flow",
               },

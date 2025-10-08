@@ -21,11 +21,11 @@ export default function AIStreamingChatPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", item: "https://avolve.io" },
-          { name: "Systems", item: "https://avolve.io/systems" },
+          { name: "Home", url: "/" },
+          { name: "Systems", url: "/systems" },
           {
             name: "AI Streaming Chat",
-            item: "https://avolve.io/systems/ai-streaming-chat",
+            url: "/systems/ai-streaming-chat",
           },
         ]}
       />
@@ -73,14 +73,14 @@ export default function AIStreamingChatPage() {
 
         <div className="mb-12">
           <QuickDecision
-            useWhen={[
+            chooseThisIf={[
               "Building chat interfaces with AI",
               "Need streaming responses for better UX",
               "Want built-in state management",
               "Using Anthropic, OpenAI, or compatible providers",
               "Need error recovery and retry logic",
             ]}
-            avoidWhen={[
+            chooseAlternativeIf={[
               "Simple one-off AI requests (use basic fetch)",
               "Streaming not needed (batch processing)",
               "Need WebSocket bidirectional communication",
@@ -91,42 +91,46 @@ export default function AIStreamingChatPage() {
 
         <div className="mb-12">
           <PatternStructure
-            flow={[
+            steps={[
               {
-                step: "Client Component",
+                number: 1,
+                title: "Client Component",
                 description: "User types message and submits",
                 details: "useChat hook manages messages array and input state",
               },
               {
-                step: "Server Action",
+                number: 2,
+                title: "Server Action",
                 description: "Receive messages and start streaming",
                 details: "streamText() initializes connection to AI provider",
               },
               {
-                step: "AI SDK",
+                number: 3,
+                title: "AI SDK",
                 description: "Process and stream response chunks",
                 details: "Tokens stream from AI provider through SDK",
               },
               {
-                step: "Stream to Client",
+                number: 4,
+                title: "Stream to Client",
                 description: "Send chunks via Server-Sent Events",
                 details: "Client receives chunks and updates UI in real-time",
               },
             ]}
-            keyComponents={[
+            components={[
               {
                 name: "useChat Hook",
-                purpose: "Client-side state management",
+                role: "Client-side state management",
                 technology: "ai/react",
               },
               {
                 name: "streamText",
-                purpose: "Server-side streaming",
+                role: "Server-side streaming",
                 technology: "ai",
               },
               {
                 name: "AI Provider",
-                purpose: "Language model inference",
+                role: "Language model inference",
                 technology: "@ai-sdk/anthropic",
               },
             ]}
@@ -142,12 +146,7 @@ export default function AIStreamingChatPage() {
                 frequency: "common",
                 description:
                   "When stream fails mid-response, client shows partial message. User doesn't know if response is complete or failed.",
-                solution: [
-                  "Use error boundaries around chat components",
-                  "Add status indicator showing stream progress",
-                  "Store message state in database as it streams",
-                  "Implement retry button for failed messages",
-                ],
+                solution: "Use error boundaries around chat components. Add status indicator showing stream progress. Store message state in database as it streams. Implement retry button for failed messages.",
                 codeExample: `'use client'
 import { useChat } from 'ai/react'
 
@@ -180,12 +179,7 @@ export function Chat() {
                 severity: "medium",
                 frequency: "common",
                 description: "Network interruption or timeout causes stream to hang. No automatic retry.",
-                solution: [
-                  "Add timeout to fetch requests (default is no timeout)",
-                  "Implement exponential backoff for retries",
-                  "Show network status indicator",
-                  "Save draft messages locally",
-                ],
+                solution: "Add timeout to fetch requests (default is no timeout). Implement exponential backoff for retries. Show network status indicator. Save draft messages locally.",
                 codeExample: `export async function POST(req: Request) {
   const { messages } = await req.json()
 
@@ -215,12 +209,7 @@ export function Chat() {
                 severity: "medium",
                 frequency: "common",
                 description: "Client-side token estimates don't match actual API usage. Leads to billing surprises.",
-                solution: [
-                  "Use provider's tokenizer library for accuracy",
-                  "Track actual usage from API response headers",
-                  "Add buffer (10%) to client estimates",
-                  "Log token usage to database for analytics",
-                ],
+                solution: "Use provider's tokenizer library for accuracy. Track actual usage from API response headers. Add buffer (10%) to client estimates. Log token usage to database for analytics.",
                 codeExample: `import Anthropic from '@anthropic-ai/sdk'
 
 const anthropic = new Anthropic()
@@ -248,22 +237,22 @@ await supabase.from('usage').insert({
             variations={[
               {
                 name: "With Function Calling",
+                scenario: "Chatbots that need to query databases or call APIs",
                 description: "AI can execute actions during conversation",
-                useCase: "Chatbots that need to query databases or call APIs",
                 implementation: "Add tools parameter to streamText() with Zod schemas",
                 tradeoffs: "More powerful but adds complexity and latency",
               },
               {
                 name: "With Multi-Modal",
+                scenario: "AI assistants processing multiple content types",
                 description: "Support images, audio, and video in chat",
-                useCase: "AI assistants processing multiple content types",
                 implementation: "Use experimental_useChat with file attachments",
                 tradeoffs: "Richer UX but higher token costs and complexity",
               },
               {
                 name: "With Conversation Memory",
+                scenario: "Long-running conversations that span days/weeks",
                 description: "Persistent chat history across sessions",
-                useCase: "Long-running conversations that span days/weeks",
                 implementation: "Load previous messages from DB, summarize old context",
                 tradeoffs: "Better context but more tokens and DB queries",
               },
