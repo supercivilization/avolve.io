@@ -1,0 +1,158 @@
+---
+title: "TypeScript 5.9.3 Production Patterns"
+description: "Type-safe JavaScript with verified compatibility for Next.js 15.5.4 and React 19.2.0"
+datePublished: "2025-10-05"
+dateModified: "2025-10-07"
+category: "software"
+slug: "typescript"
+softwareVersion: "5.9.3"
+verifiedWith:
+  - "Next.js 15.5.4"
+  - "React 19.2.0"
+  - "Node.js 24.8.0"
+author:
+  name: "Joshua Seymour"
+  url: "https://www.joshuaseymour.com"
+organization: "Supercivilization"
+tags: ["typescript", "type-safety", "javascript"]
+---
+
+## TypeScript 5.9.3 Overview
+
+TypeScript provides static typing for JavaScript, catching errors before runtime and improving developer experience.
+
+### Key Features
+- **Static Type Checking** - Catch errors at compile time
+- **IntelliSense** - Enhanced autocomplete and documentation
+- **Type Inference** - Smart type detection
+- **Modern JavaScript** - Latest ECMAScript features
+
+## Installation
+
+```bash
+npm install typescript@5.9.3 @types/node@24 @types/react@19 @types/react-dom@19
+```
+
+## Configuration
+
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "jsx": "preserve",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "strict": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "plugins": [{ "name": "next" }],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+```
+
+## Type-Safe Patterns
+
+### React Component Types
+
+```typescript
+import type { ReactNode } from 'react'
+
+interface ButtonProps {
+  children: ReactNode
+  onClick?: () => void
+  variant?: 'primary' | 'secondary'
+  disabled?: boolean
+}
+
+export function Button({ children, onClick, variant = 'primary', disabled }: ButtonProps) {
+  return (
+    <button onClick={onClick} disabled={disabled} className={variant}>
+      {children}
+    </button>
+  )
+}
+```
+
+### Async Function Types
+
+```typescript
+async function fetchUser(id: string): Promise<User> {
+  const response = await fetch(`/api/users/${id}`)
+  if (!response.ok) {
+    throw new Error('User not found')
+  }
+  return response.json()
+}
+```
+
+### Generic Types
+
+```typescript
+function createArray<T>(length: number, value: T): T[] {
+  return Array(length).fill(value)
+}
+
+const numbers = createArray<number>(5, 0)
+const strings = createArray<string>(3, 'hello')
+```
+
+## What Breaks in Production
+
+### Issue: Type Imports Breaking Build
+
+**Symptom:** `Cannot find type definition file` errors during build
+
+**Fix:** Use `type` keyword for type-only imports
+```typescript
+// ❌ Wrong
+import { User } from './types'
+
+// ✅ Correct
+import type { User } from './types'
+```
+
+### Issue: Path Aliases Not Resolving
+
+**Symptom:** Import paths with `@/*` not found
+
+**Fix:** Ensure paths in tsconfig.json match
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+```
+
+### Issue: React 19 Type Errors
+
+**Symptom:** Type errors with Server Components
+
+**Fix:** Install latest React types
+```bash
+npm install @types/react@19 @types/react-dom@19
+```
+
+## Deployment
+
+TypeScript is compiled at build time:
+```bash
+npm run build  # TypeScript → JavaScript
+```
+
+Vercel automatically handles TypeScript compilation.

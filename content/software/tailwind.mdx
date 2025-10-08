@@ -1,0 +1,155 @@
+---
+title: "Tailwind CSS 4.1.13 with Oxide Engine"
+description: "Utility-first CSS framework with 5-100x faster compilation via Oxide engine"
+datePublished: "2025-10-05"
+dateModified: "2025-10-07"
+category: "software"
+slug: "tailwind"
+softwareVersion: "4.1.13"
+verifiedWith:
+  - "Next.js 15.5.4"
+  - "PostCSS 8+"
+  - "Vite 6+"
+author:
+  name: "Joshua Seymour"
+  url: "https://www.joshuaseymour.com"
+organization: "Supercivilization"
+tags: ["tailwind", "css", "styling", "oxide"]
+---
+
+## Tailwind CSS 4.1.13
+
+Tailwind CSS v4 introduces the Oxide engine - a complete rewrite in Rust providing 5-100x faster compilation.
+
+### Key Features
+- **Oxide Engine** - Rust-powered, dramatically faster compilation
+- **CSS-First Configuration** - No more JavaScript config
+- **Native CSS Features** - `color-mix()`, `@layer`, container queries
+- **Smaller Bundle** - Optimized CSS output
+
+## Installation
+
+```bash
+npm install tailwindcss@4.1.13 @tailwindcss/postcss
+```
+
+## Configuration
+
+### globals.css (CSS-First Config)
+
+```css
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: oklch(0.55 0.18 260);
+  --color-secondary: oklch(0.70 0.15 190);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --breakpoint-3xl: 1920px;
+}
+```
+
+### postcss.config.mjs
+
+```javascript
+export default {
+  plugins: {
+    '@tailwindcss/postcss': {},
+  },
+}
+```
+
+## Usage Patterns
+
+### Utility Classes
+
+```tsx
+<button className="rounded-lg bg-primary px-4 py-2 text-white hover:bg-primary/90">
+  Click me
+</button>
+```
+
+### Responsive Design
+
+```tsx
+<div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+  {items.map(item => (
+    <Card key={item.id}>{item.content}</Card>
+  ))}
+</div>
+```
+
+### Dark Mode
+
+```tsx
+<div className="bg-white text-black dark:bg-black dark:text-white">
+  Content
+</div>
+```
+
+### Custom Colors with OKLCH
+
+```css
+@theme {
+  /* OKLCH provides perceptually uniform colors */
+  --color-brand: oklch(0.65 0.22 260);
+  --color-accent: oklch(0.75 0.18 140);
+}
+```
+
+## What Breaks in Production
+
+### Issue: Oxide Engine Compatibility
+
+**Symptom:** Build fails with `@tailwindcss/postcss` errors
+
+**Fix:** Ensure PostCSS 8+ is installed
+```bash
+npm install postcss@latest
+```
+
+### Issue: CSS Import Order
+
+**Symptom:** Styles not applying correctly
+
+**Fix:** Import order matters in CSS-first config
+```css
+/* ✅ Correct order */
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@theme { ... }
+
+/* ❌ Wrong order */
+@theme { ... }
+@import "tailwindcss";
+```
+
+### Issue: Migration from v3
+
+**Symptom:** Config file not recognized
+
+**Fix:** Migrate to CSS-first config
+```bash
+# Remove tailwind.config.js
+rm tailwind.config.js
+
+# Add config to globals.css
+@import "tailwindcss";
+@theme { ... }
+```
+
+## Performance
+
+Tailwind v4 Oxide engine benchmarks:
+- **Development**: 5-10x faster hot reload
+- **Production build**: 100x faster on large projects
+- **CSS output**: ~30% smaller bundle size
+
+## Deployment
+
+Build automatically optimized:
+```bash
+npm run build  # PurgeCSS + minification automatic
+```
+
+Vercel automatically detects and optimizes Tailwind.
