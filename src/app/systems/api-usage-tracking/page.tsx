@@ -69,121 +69,107 @@ export default function APIUsageTrackingPage() {
 
         <div className="mb-12">
           <QuickDecision
-            chooseThisIf={[
-              "Need to track consumption per user",
-              "Implementing usage-based pricing",
-              "Want to prevent abuse with quotas",
-              "Need to bill by usage (tokens, API calls, etc.)",
-              "Building AI SaaS with tiered limits",
+            useThisWhen={[
+              { text: "Need to track consumption per user" },
+              { text: "Implementing usage-based pricing" },
+              { text: "Want to prevent abuse with quotas" },
+              { text: "Need to bill by usage (tokens, API calls, etc.)" },
+              { text: "Building AI SaaS with tiered limits" },
             ]}
-            chooseAlternativeIf={[
-              "Simple unlimited access (no metering needed)",
-              "Pure time-based subscriptions (no usage component)",
-              "Internal tools with no cost constraints",
+            useAlternativeWhen={[
+              { text: "Simple unlimited access (no metering needed)" },
+              { text: "Pure time-based subscriptions (no usage component)" },
+              { text: "Internal tools with no cost constraints" },
             ]}
           />
         </div>
 
         <div className="mb-12">
           <PatternStructure
-            steps={[
+            patternName="API Usage Tracking"
+            description="How usage metering and quota enforcement flow through the system"
+            integrationPoints={[
               {
-                number: 1,
-                title: "Request",
-                description: "User initiates API call",
-                details: "Check current usage against quota before processing",
+                id: "api-request",
+                name: "API Request",
+                type: "input",
+                description: "User initiates API call, check current usage against quota before processing",
               },
               {
-                number: 2,
-                title: "Counter",
-                description: "Atomic increment in database",
-                details: "Use UPDATE ... SET tokens_used = tokens_used + X",
+                id: "quota-check",
+                name: "Quota Middleware",
+                type: "bidirectional",
+                description: "Check if user has available quota, reject requests that exceed plan limits",
               },
               {
-                number: 3,
-                title: "Database",
-                description: "Store usage record",
-                details: "Track per-user, per-period usage with timestamps",
+                id: "atomic-counter",
+                name: "Atomic Counter (PostgreSQL)",
+                type: "bidirectional",
+                description: "Atomic increment in database using UPDATE ... SET tokens_used = tokens_used + X",
               },
               {
-                number: 4,
-                title: "Limit Check",
-                description: "Enforce quota",
-                details: "Reject requests that exceed plan limits",
+                id: "usage-table",
+                name: "Usage Table",
+                type: "output",
+                description: "Store per-user, per-period usage records with timestamps for billing and analytics",
               },
             ]}
-            components={[
-              {
-                name: "Usage Table",
-                role: "Store consumption records",
-                technology: "PostgreSQL",
-              },
-              {
-                name: "Atomic Counters",
-                role: "Prevent race conditions",
-                technology: "SQL UPDATE",
-              },
-              {
-                name: "Quota Middleware",
-                role: "Enforce limits",
-                technology: "Server Actions",
-              },
+            notes={[
+              "Always use atomic operations to prevent race conditions",
+              "Never SELECT then UPDATE - use atomic UPDATE with += operator",
+              "Store detailed usage events for audit trail and reconciliation",
+              "Use UTC for all period calculations to avoid timezone issues",
             ]}
           />
         </div>
 
         <div className="mb-12">
           <TradeoffMatrix
-            approaches={[
+            title="Usage Tracking Approaches"
+            description="Compare different methods for tracking API usage"
+            criteria={[
+              { key: "speed", label: "Speed", format: "rating" },
+              { key: "accuracy", label: "Accuracy", format: "rating" },
+              { key: "cost", label: "Monthly Cost", format: "text" },
+              { key: "complexity", label: "Complexity", format: "rating" },
+              { key: "scale", label: "Max Requests/Sec", format: "text" },
+            ]}
+            patterns={[
               {
                 name: "Database Counter",
-                advantages: [
-                  "Accurate and persistent",
-                  "Works with existing DB",
-                  "Atomic operations prevent drift",
-                  "Simple to implement",
-                  "No additional services",
-                ],
-                disadvantages: [
-                  "Slower than in-memory (adds ~10ms)",
-                  "More DB load at scale",
-                  "Requires good indexing",
-                  "Connection pool sensitive",
-                ],
-                recommendation: "Most applications with <1K requests/sec",
+                href: "#database-counter",
+                ratings: {
+                  speed: 3,
+                  accuracy: 5,
+                  cost: "$0",
+                  complexity: 2,
+                  scale: "~1K/sec",
+                },
               },
               {
                 name: "Redis Counter",
-                advantages: [
-                  "Very fast (<1ms)",
-                  "Built-in TTL for time windows",
-                  "Scales to millions of ops/sec",
-                  "Atomic INCR command",
-                ],
-                disadvantages: [
-                  "Additional service to manage",
-                  "Data can be lost (volatile)",
-                  "Must sync to DB eventually",
-                  "Higher cost ($10-50/mo minimum)",
-                ],
-                recommendation: "High-traffic apps needing sub-millisecond latency",
+                href: "#redis-counter",
+                ratings: {
+                  speed: 5,
+                  accuracy: 4,
+                  cost: "$10-50",
+                  complexity: 3,
+                  scale: "~1M/sec",
+                },
               },
               {
                 name: "In-Memory Counter",
-                advantages: [
-                  "Fastest possible (<0.1ms)",
-                  "No external dependencies",
-                  "Trivial to implement",
-                ],
-                disadvantages: [
-                  "Lost on restart",
-                  "Doesn't work in serverless",
-                  "No cross-instance sync",
-                  "Inaccurate for billing",
-                ],
-                recommendation: "Development/testing only, not production",
+                href: "#in-memory-counter",
+                ratings: {
+                  speed: 5,
+                  accuracy: 1,
+                  cost: "$0",
+                  complexity: 1,
+                  scale: "Unlimited",
+                },
               },
             ]}
+            notes="Database Counter is recommended for most applications. Use Redis for high-traffic apps (>1K req/sec). Avoid in-memory for production billing."
           />
         </div>
 
@@ -191,91 +177,41 @@ export default function APIUsageTrackingPage() {
           <IntegrationGotchas
             gotchas={[
               {
-                issue: "Race Conditions on Counter Updates",
-                severity: "high",
+                id: "race-conditions",
+                title: "Race Conditions on Counter Updates",
                 frequency: "common",
                 description:
-                  "Concurrent requests can read the same value, both increment, and write back - causing undercounting.",
-                solution: "Use atomic UPDATE with += operator, never SELECT then UPDATE. Add database-level constraints (CHECK tokens_used >= 0). Use transactions only when updating multiple counters. Add unique constraint on (user_id, period_start).",
-                codeExample: `-- ❌ WRONG: Race condition
-const { data } = await supabase
-  .from('usage')
-  .select('tokens_used')
-  .eq('user_id', userId)
-  .single()
-
-await supabase
-  .from('usage')
-  .update({ tokens_used: data.tokens_used + tokens })
-  .eq('user_id', userId)
-
--- ✅ CORRECT: Atomic increment
-await supabase.rpc('increment_usage', {
-  p_user_id: userId,
-  p_tokens: tokens,
-})
-
--- RPC function
-CREATE OR REPLACE FUNCTION increment_usage(
-  p_user_id UUID,
-  p_tokens INTEGER
-)
-RETURNS void AS $$
-BEGIN
-  UPDATE usage
-  SET tokens_used = tokens_used + p_tokens,
-      updated_at = NOW()
-  WHERE user_id = p_user_id
-    AND period_start = date_trunc('month', NOW());
-END;
-$$ LANGUAGE plpgsql;`,
+                  "Concurrent requests can read the same value, both increment, and write back - causing undercounting and billing losses.",
+                symptoms: [
+                  "Usage counts lower than expected",
+                  "Billing discrepancies",
+                  "Users exceeding quotas without being blocked",
+                ],
+                solution: "Use atomic UPDATE with += operator, never SELECT then UPDATE. Add database-level constraints (CHECK tokens_used >= 0). Use transactions only when updating multiple counters. Add unique constraint on (user_id, period_start). Use PostgreSQL RPC functions for atomic operations.",
               },
               {
-                issue: "Counter Drift Over Time",
-                severity: "medium",
+                id: "counter-drift",
+                title: "Counter Drift Over Time",
                 frequency: "common",
-                description: "Small rounding errors or failed updates accumulate, causing billing discrepancies.",
-                solution: "Periodically reconcile counters with actual usage logs. Store detailed usage events, not just aggregates. Add audit logging for all counter changes. Set up alerts for unusual usage spikes.",
-                codeExample: `-- Store detailed events
-CREATE TABLE usage_events (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID NOT NULL REFERENCES auth.users(id),
-  event_type TEXT NOT NULL,
-  tokens INTEGER NOT NULL,
-  created_at TIMESTAMPTZ DEFAULT NOW()
-);
-
--- Reconciliation query
-SELECT
-  user_id,
-  SUM(tokens) as actual_tokens,
-  (SELECT tokens_used FROM usage WHERE user_id = ue.user_id) as recorded_tokens,
-  SUM(tokens) - (SELECT tokens_used FROM usage WHERE user_id = ue.user_id) as drift
-FROM usage_events ue
-WHERE created_at >= date_trunc('month', NOW())
-GROUP BY user_id
-HAVING ABS(drift) > 100;`,
+                description: "Small rounding errors or failed updates accumulate over time, causing billing discrepancies and user confusion.",
+                symptoms: [
+                  "Aggregate counts don't match detailed logs",
+                  "Increasing drift over time",
+                  "Customer complaints about billing accuracy",
+                ],
+                solution: "Periodically reconcile counters with actual usage logs. Store detailed usage events, not just aggregates. Add audit logging for all counter changes. Set up alerts for unusual usage spikes. Run monthly reconciliation jobs.",
               },
               {
-                issue: "Timezone Issues in Period Calculation",
-                severity: "medium",
+                id: "timezone-issues",
+                title: "Timezone Issues in Period Calculation",
                 frequency: "common",
-                description: "Usage periods don't align with billing periods due to timezone differences.",
-                solution: "Always use UTC for period calculations. Store period_start as DATE or TIMESTAMPTZ, not TEXT. Use date_trunc('month', NOW() AT TIME ZONE 'UTC'). Document timezone handling in billing terms.",
-                codeExample: `-- ❌ WRONG: Local timezone
-SELECT date_trunc('month', NOW())
-
--- ✅ CORRECT: Explicit UTC
-SELECT date_trunc('month', NOW() AT TIME ZONE 'UTC')
-
--- Table schema
-CREATE TABLE usage (
-  user_id UUID NOT NULL,
-  period_start DATE NOT NULL, -- Use DATE for month/day boundaries
-  tokens_used INTEGER DEFAULT 0,
-  tokens_limit INTEGER NOT NULL,
-  PRIMARY KEY (user_id, period_start)
-);`,
+                description: "Usage periods don't align with billing periods due to timezone differences, causing confusion and billing errors.",
+                symptoms: [
+                  "Billing periods don't match calendar months",
+                  "Different timestamps for same billing period",
+                  "Customer reports seeing wrong billing period",
+                ],
+                solution: "Always use UTC for period calculations. Store period_start as DATE or TIMESTAMPTZ, not TEXT. Use date_trunc('month', NOW() AT TIME ZONE 'UTC'). Document timezone handling clearly in billing terms and UI.",
               },
             ]}
           />

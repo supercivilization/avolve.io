@@ -73,66 +73,57 @@ export default function AIStreamingChatPage() {
 
         <div className="mb-12">
           <QuickDecision
-            chooseThisIf={[
-              "Building chat interfaces with AI",
-              "Need streaming responses for better UX",
-              "Want built-in state management",
-              "Using Anthropic, OpenAI, or compatible providers",
-              "Need error recovery and retry logic",
+            useThisWhen={[
+              { text: "Building chat interfaces with AI" },
+              { text: "Need streaming responses for better UX" },
+              { text: "Want built-in state management" },
+              { text: "Using Anthropic, OpenAI, or compatible providers" },
+              { text: "Need error recovery and retry logic" },
             ]}
-            chooseAlternativeIf={[
-              "Simple one-off AI requests (use basic fetch)",
-              "Streaming not needed (batch processing)",
-              "Need WebSocket bidirectional communication",
-              "Custom protocol requirements",
+            useAlternativeWhen={[
+              { text: "Simple one-off AI requests (use basic fetch)" },
+              { text: "Streaming not needed (batch processing)" },
+              { text: "Need WebSocket bidirectional communication" },
+              { text: "Custom protocol requirements" },
             ]}
           />
         </div>
 
         <div className="mb-12">
           <PatternStructure
-            steps={[
+            patternName="AI Streaming Chat"
+            description="How streaming chat flows through the system"
+            integrationPoints={[
               {
-                number: 1,
-                title: "Client Component",
-                description: "User types message and submits",
-                details: "useChat hook manages messages array and input state",
+                id: "client-component",
+                name: "Client Component (useChat)",
+                type: "input",
+                description: "User submits message via useChat hook, which manages messages array and input state",
               },
               {
-                number: 2,
-                title: "Server Action",
-                description: "Receive messages and start streaming",
-                details: "streamText() initializes connection to AI provider",
+                id: "api-route",
+                name: "API Route Handler",
+                type: "bidirectional",
+                description: "Receives messages and starts streaming via streamText(), initializes connection to AI provider",
               },
               {
-                number: 3,
-                title: "AI SDK",
-                description: "Process and stream response chunks",
-                details: "Tokens stream from AI provider through SDK",
+                id: "ai-sdk",
+                name: "AI SDK",
+                type: "bidirectional",
+                description: "Processes streaming response chunks from AI provider (Anthropic/OpenAI)",
               },
               {
-                number: 4,
-                title: "Stream to Client",
-                description: "Send chunks via Server-Sent Events",
-                details: "Client receives chunks and updates UI in real-time",
+                id: "sse-stream",
+                name: "Server-Sent Events",
+                type: "output",
+                description: "Streams chunks to client via SSE, client receives and updates UI in real-time",
               },
             ]}
-            components={[
-              {
-                name: "useChat Hook",
-                role: "Client-side state management",
-                technology: "ai/react",
-              },
-              {
-                name: "streamText",
-                role: "Server-side streaming",
-                technology: "ai",
-              },
-              {
-                name: "AI Provider",
-                role: "Language model inference",
-                technology: "@ai-sdk/anthropic",
-              },
+            notes={[
+              "useChat hook from ai/react manages state automatically",
+              "streamText() from ai handles connection to AI providers",
+              "Real-time updates via Server-Sent Events (SSE)",
+              "Error boundaries recommended for stream failures",
             ]}
           />
         </div>
@@ -141,92 +132,41 @@ export default function AIStreamingChatPage() {
           <IntegrationGotchas
             gotchas={[
               {
-                issue: "State Synchronization During Errors",
-                severity: "high",
+                id: "state-sync-errors",
+                title: "State Synchronization During Errors",
                 frequency: "common",
                 description:
                   "When stream fails mid-response, client shows partial message. User doesn't know if response is complete or failed.",
-                solution: "Use error boundaries around chat components. Add status indicator showing stream progress. Store message state in database as it streams. Implement retry button for failed messages.",
-                codeExample: `'use client'
-import { useChat } from 'ai/react'
-
-export function Chat() {
-  const { messages, input, handleInputChange, handleSubmit, error, isLoading } = useChat()
-
-  return (
-    <div>
-      {messages.map((m) => (
-        <div key={m.id} className={m.role === 'user' ? 'user' : 'assistant'}>
-          {m.content}
-          {error && m.id === messages[messages.length - 1].id && (
-            <div className="error">
-              Stream failed: {error.message}
-              <button onClick={() => handleSubmit()}>Retry</button>
-            </div>
-          )}
-        </div>
-      ))}
-      {isLoading && <div>AI is typing...</div>}
-      <form onSubmit={handleSubmit}>
-        <input value={input} onChange={handleInputChange} />
-      </form>
-    </div>
-  )
-}`,
+                symptoms: [
+                  "Partial message displayed without error indication",
+                  "No visual feedback when stream fails",
+                  "User unsure if response is complete or broken",
+                ],
+                solution: "Use error boundaries around chat components. Add status indicator showing stream progress. Store message state in database as it streams. Implement retry button for failed messages. Display error state clearly when stream fails.",
               },
               {
-                issue: "Reconnection Logic",
-                severity: "medium",
+                id: "reconnection-logic",
+                title: "Network Reconnection Logic",
                 frequency: "common",
-                description: "Network interruption or timeout causes stream to hang. No automatic retry.",
-                solution: "Add timeout to fetch requests (default is no timeout). Implement exponential backoff for retries. Show network status indicator. Save draft messages locally.",
-                codeExample: `export async function POST(req: Request) {
-  const { messages } = await req.json()
-
-  const controller = new AbortController()
-  const timeoutId = setTimeout(() => controller.abort(), 30000) // 30s timeout
-
-  try {
-    const result = streamText({
-      model: anthropic('claude-3-7-sonnet-20250219'),
-      messages,
-      abortSignal: controller.signal,
-    })
-
-    clearTimeout(timeoutId)
-    return result.toDataStreamResponse()
-  } catch (error) {
-    clearTimeout(timeoutId)
-    if (error.name === 'AbortError') {
-      return new Response('Request timeout', { status: 408 })
-    }
-    throw error
-  }
-}`,
+                description: "Network interruption or timeout causes stream to hang with no automatic retry mechanism.",
+                symptoms: [
+                  "Stream hangs indefinitely on network issues",
+                  "No timeout on fetch requests",
+                  "User stuck waiting with no feedback",
+                ],
+                solution: "Add timeout to fetch requests (default is no timeout). Implement exponential backoff for retries. Show network status indicator. Save draft messages locally using localStorage or IndexedDB.",
               },
               {
-                issue: "Token Counting Accuracy",
-                severity: "medium",
+                id: "token-counting",
+                title: "Token Counting Accuracy",
                 frequency: "common",
-                description: "Client-side token estimates don't match actual API usage. Leads to billing surprises.",
-                solution: "Use provider's tokenizer library for accuracy. Track actual usage from API response headers. Add buffer (10%) to client estimates. Log token usage to database for analytics.",
-                codeExample: `import Anthropic from '@anthropic-ai/sdk'
-
-const anthropic = new Anthropic()
-
-// Get accurate token count
-const tokenCount = await anthropic.messages.countTokens({
-  model: 'claude-3-7-sonnet-20250219',
-  messages: messages,
-})
-
-// Track in database
-await supabase.from('usage').insert({
-  user_id: user.id,
-  input_tokens: tokenCount.input_tokens,
-  output_tokens: response.usage.output_tokens,
-  total_tokens: tokenCount.input_tokens + response.usage.output_tokens,
-})`,
+                description: "Client-side token estimates don't match actual API usage, leading to billing surprises and quota issues.",
+                symptoms: [
+                  "Billing discrepancies between estimate and actual",
+                  "Users hit quota limits unexpectedly",
+                  "Client estimates consistently wrong",
+                ],
+                solution: "Use provider's tokenizer library for accuracy (e.g., @anthropic-ai/tokenizer). Track actual usage from API response headers. Add 10% buffer to client estimates. Log token usage to database for analytics and reconciliation.",
               },
             ]}
           />
@@ -236,25 +176,43 @@ await supabase.from('usage').insert({
           <PatternVariations
             variations={[
               {
-                name: "With Function Calling",
-                scenario: "Chatbots that need to query databases or call APIs",
-                description: "AI can execute actions during conversation",
-                implementation: "Add tools parameter to streamText() with Zod schemas",
-                tradeoffs: "More powerful but adds complexity and latency",
+                id: "with-function-calling",
+                name: "AI Chat with Function Calling",
+                href: "/systems/ai-function-calling",
+                relationship: "extension",
+                description: "Chatbots that can query databases or call APIs during conversation",
+                keyDifferences: [
+                  "AI can execute actions, not just respond",
+                  "Adds tools parameter to streamText() with Zod schemas",
+                  "More powerful but adds complexity and latency",
+                ],
+                tags: ["Function Calling", "Tool Use", "AI Actions"],
               },
               {
-                name: "With Multi-Modal",
-                scenario: "AI assistants processing multiple content types",
-                description: "Support images, audio, and video in chat",
-                implementation: "Use experimental_useChat with file attachments",
-                tradeoffs: "Richer UX but higher token costs and complexity",
+                id: "with-multimodal",
+                name: "Multi-Modal AI Chat",
+                href: "/systems/ai-multimodal-chat",
+                relationship: "extension",
+                description: "AI assistants that process images, audio, and video in addition to text",
+                keyDifferences: [
+                  "Support for images, audio, and video inputs",
+                  "Use experimental_useChat with file attachments",
+                  "Richer UX but higher token costs and complexity",
+                ],
+                tags: ["Multi-Modal", "Vision", "Audio", "Video"],
               },
               {
-                name: "With Conversation Memory",
-                scenario: "Long-running conversations that span days/weeks",
-                description: "Persistent chat history across sessions",
-                implementation: "Load previous messages from DB, summarize old context",
-                tradeoffs: "Better context but more tokens and DB queries",
+                id: "with-conversation-memory",
+                name: "Persistent Conversation Memory",
+                href: "/systems/ai-conversation-memory",
+                relationship: "complement",
+                description: "Long-running conversations that span days or weeks with persistent history",
+                keyDifferences: [
+                  "Load previous messages from database",
+                  "Summarize old context to reduce token usage",
+                  "Better context but more tokens and DB queries",
+                ],
+                tags: ["Memory", "Persistence", "Long Context"],
               },
             ]}
           />

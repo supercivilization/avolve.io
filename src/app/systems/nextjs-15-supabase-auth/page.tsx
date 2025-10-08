@@ -97,18 +97,18 @@ export default function NextJS15SupabaseAuthPage() {
         {/* Quick Decision */}
         <div className="mb-12">
           <QuickDecision
-            chooseThisIf={[
-              "Building on Next.js 15 App Router",
-              "Need social login (Google, GitHub, etc.)",
-              "Want integrated database with auth",
-              "Budget-conscious (free tier is generous)",
-              "Need Row Level Security for multi-tenant apps",
+            useThisWhen={[
+              { text: "Building on Next.js 15 App Router" },
+              { text: "Need social login (Google, GitHub, etc.)" },
+              { text: "Want integrated database with auth" },
+              { text: "Budget-conscious (free tier is generous)" },
+              { text: "Need Row Level Security for multi-tenant apps" },
             ]}
-            chooseAlternativeIf={[
-              "Need enterprise SSO (Auth0 is better)",
-              "Want pre-built auth UI components (try Clerk)",
-              "Building serverless-only (NextAuth might be simpler)",
-              "Need advanced auth features (MFA, passkeys) immediately",
+            useAlternativeWhen={[
+              { text: "Need enterprise SSO (Auth0 is better)" },
+              { text: "Want pre-built auth UI components (try Clerk)" },
+              { text: "Building serverless-only (NextAuth might be simpler)" },
+              { text: "Need advanced auth features (MFA, passkeys) immediately" },
             ]}
           />
         </div>
@@ -116,53 +116,40 @@ export default function NextJS15SupabaseAuthPage() {
         {/* Pattern Structure */}
         <div className="mb-12">
           <PatternStructure
-            steps={[
+            patternName="Next.js 15 + Supabase Auth"
+            description="How authentication flows through Next.js App Router with SSR and RLS"
+            integrationPoints={[
               {
-                number: 1,
-                title: "Request",
-                description: "User navigates to protected route",
-                details: "Browser sends request with cookies to Next.js server",
+                id: "browser-request",
+                name: "Browser Request",
+                type: "input",
+                description: "User navigates to protected route, browser sends request with auth cookies to Next.js server",
               },
               {
-                number: 2,
-                title: "Middleware",
-                description: "Validate session and refresh if needed",
-                details: "Check Supabase auth token, refresh if expired, set cookies on request AND response",
+                id: "middleware",
+                name: "Middleware (Edge Runtime)",
+                type: "bidirectional",
+                description: "Validate session, refresh if expired, set cookies on BOTH request AND response",
+                href: "/support/pkce-flow-failed",
               },
               {
-                number: 3,
-                title: "Server Component",
-                description: "Create Supabase client for SSR",
-                details: "Use createServerClient with cookie handlers for server-side rendering",
+                id: "server-component",
+                name: "Server Component",
+                type: "bidirectional",
+                description: "Create Supabase client with createServerClient and cookie handlers for SSR",
               },
               {
-                number: 4,
-                title: "Database Query",
-                description: "Fetch user-specific data",
-                details: "PostgreSQL uses Row Level Security to filter data based on auth.uid()",
+                id: "database-rls",
+                name: "Database + RLS",
+                type: "output",
+                description: "PostgreSQL uses Row Level Security to filter data based on auth.uid()",
               },
             ]}
-            components={[
-              {
-                name: "Middleware",
-                role: "Session validation and refresh",
-                technology: "Next.js Edge Runtime",
-              },
-              {
-                name: "Server Client",
-                role: "SSR authentication",
-                technology: "@supabase/ssr",
-              },
-              {
-                name: "Browser Client",
-                role: "Client-side auth actions",
-                technology: "@supabase/supabase-js",
-              },
-              {
-                name: "RLS Policies",
-                role: "Database access control",
-                technology: "PostgreSQL Row Level Security",
-              },
+            notes={[
+              "Cookies MUST be set on both request and response in middleware",
+              "Use createServerClient for Server Components, createBrowserClient for Client Components",
+              "RLS policies must use auth.uid() for security",
+              "Always test with anon key, not service role key",
             ]}
           />
         </div>
@@ -170,62 +157,51 @@ export default function NextJS15SupabaseAuthPage() {
         {/* Tradeoff Matrix */}
         <div className="mb-12">
           <TradeoffMatrix
-            approaches={[
+            title="Authentication Provider Comparison"
+            description="Compare different auth solutions for Next.js applications"
+            criteria={[
+              { key: "cost", label: "Monthly Cost", format: "text" },
+              { key: "setup", label: "Setup Complexity", format: "rating" },
+              { key: "features", label: "Features", format: "rating" },
+              { key: "dx", label: "Developer Experience", format: "rating" },
+              { key: "integration", label: "DB Integration", format: "text" },
+            ]}
+            patterns={[
               {
                 name: "Supabase Auth",
-                advantages: [
-                  "Integrated with PostgreSQL and RLS",
-                  "Generous free tier (50K MAU)",
-                  "Social login providers included",
-                  "Good TypeScript support",
-                  "Built-in email templates",
-                ],
-                disadvantages: [
-                  "Cookie timing can be tricky in Next.js",
-                  "Limited MFA options (only TOTP)",
-                  "Less mature than Auth0",
-                  "Fewer enterprise features",
-                  "Must understand RLS for security",
-                ],
-                recommendation: "Budget-conscious startups needing social login and database integration",
+                href: "/systems/nextjs-15-supabase-auth",
+                ratings: {
+                  cost: "Free (50K MAU)",
+                  setup: 3,
+                  features: 3,
+                  dx: 4,
+                  integration: "Built-in (PostgreSQL + RLS)",
+                },
               },
               {
                 name: "Auth0",
-                advantages: [
-                  "Enterprise-grade features",
-                  "Advanced MFA (SMS, WebAuthn)",
-                  "Extensive integrations",
-                  "Better compliance tools",
-                  "Mature and battle-tested",
-                ],
-                disadvantages: [
-                  "Expensive ($240+/mo for production)",
-                  "More complex setup",
-                  "Requires separate database",
-                  "Overkill for simple apps",
-                  "Learning curve is steeper",
-                ],
-                recommendation: "Enterprise apps with complex auth requirements and compliance needs",
+                href: "/systems/nextjs-auth0",
+                ratings: {
+                  cost: "$240+/mo",
+                  setup: 4,
+                  features: 5,
+                  dx: 3,
+                  integration: "Separate DB required",
+                },
               },
               {
                 name: "Clerk",
-                advantages: [
-                  "Pre-built UI components",
-                  "Excellent developer experience",
-                  "Modern design patterns",
-                  "Great documentation",
-                  "Easy Next.js integration",
-                ],
-                disadvantages: [
-                  "Expensive ($25/mo minimum, scales quickly)",
-                  "Less control over UI",
-                  "Requires separate database",
-                  "Younger ecosystem",
-                  "Vendor lock-in concerns",
-                ],
-                recommendation: "Fast-moving teams who value DX and don't want to build auth UI",
+                href: "/systems/nextjs-clerk",
+                ratings: {
+                  cost: "$25+/mo",
+                  setup: 2,
+                  features: 4,
+                  dx: 5,
+                  integration: "Separate DB required",
+                },
               },
             ]}
+            notes="Supabase Auth is recommended for budget-conscious startups. Auth0 for enterprise. Clerk for teams prioritizing DX."
           />
         </div>
 
@@ -234,111 +210,50 @@ export default function NextJS15SupabaseAuthPage() {
           <IntegrationGotchas
             gotchas={[
               {
-                issue: "Cookie Timing in Middleware",
-                severity: "high",
+                id: "cookie-timing-middleware",
+                title: "Cookie Timing in Middleware",
                 frequency: "common",
                 description:
                   "Cookies must be set on BOTH request and response in Next.js 15 middleware, or PKCE flow fails silently. This is the #1 cause of auth issues.",
-                solution: "Use Supabase's createServerClient with proper cookie handlers. Set cookies on request.cookies AND response.cookies. Always return response from middleware. See /support/pkce-flow-failed for detailed fix.",
-                codeExample: `import { createServerClient } from '@supabase/ssr'
-import { NextResponse } from 'next/server'
-
-export async function middleware(request) {
-  let response = NextResponse.next({ request })
-
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        get(name) {
-          return request.cookies.get(name)?.value
-        },
-        set(name, value, options) {
-          request.cookies.set({ name, value, ...options })
-          response = NextResponse.next({ request })
-          response.cookies.set({ name, value, ...options })
-        },
-        remove(name, options) {
-          request.cookies.set({ name, value: '', ...options })
-          response = NextResponse.next({ request })
-          response.cookies.set({ name, value: '', ...options })
-        },
-      },
-    }
-  )
-
-  await supabase.auth.getUser()
-  return response
-}`,
+                symptoms: [
+                  "PKCE flow failed error on auth callback",
+                  "Users can't complete social login",
+                  "Auth works locally but fails in production",
+                  "Session not persisting after login",
+                ],
+                solution: "Use Supabase's createServerClient with proper cookie handlers. Set cookies on request.cookies AND response.cookies. Always return response from middleware. See detailed fix at /support/pkce-flow-failed.",
+                supportLink: {
+                  text: "PKCE Flow Failed Guide",
+                  href: "/support/pkce-flow-failed",
+                },
               },
               {
-                issue: "Server vs Client Initialization",
-                severity: "medium",
+                id: "server-vs-client-init",
+                title: "Server vs Client Initialization",
                 frequency: "common",
                 description:
                   "Using createClient in Server Components causes hydration errors. Must use createServerClient for SSR.",
-                solution: "Use createServerClient in Server Components and Server Actions. Use createBrowserClient in Client Components. Never import client methods in server code. Create separate utility files for server/client.",
-                codeExample: `// lib/supabase/server.ts (Server Components)
-import { createServerClient } from '@supabase/ssr'
-import { cookies } from 'next/headers'
-
-export const createClient = () => {
-  const cookieStore = await cookies()
-
-  return createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        get(name) { return cookieStore.get(name)?.value },
-        set(name, value, options) { cookieStore.set({ name, value, ...options }) },
-        remove(name, options) { cookieStore.delete(name) },
-      },
-    }
-  )
-}
-
-// lib/supabase/client.ts (Client Components)
-import { createBrowserClient } from '@supabase/ssr'
-
-export const createClient = () =>
-  createBrowserClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  )`,
+                symptoms: [
+                  "Hydration mismatch errors in console",
+                  "Auth state differs between server and client",
+                  "User appears logged out on refresh",
+                  "React hydration warnings",
+                ],
+                solution: "Use createServerClient in Server Components and Server Actions. Use createBrowserClient in Client Components. Never import client methods in server code. Create separate utility files: lib/supabase/server.ts and lib/supabase/client.ts.",
               },
               {
-                issue: "RLS Policy Gaps",
-                severity: "high",
+                id: "rls-policy-gaps",
+                title: "RLS Policy Gaps",
                 frequency: "common",
                 description:
                   "Forgetting RLS policies or testing with service role key bypasses security, creating data leaks in production.",
-                solution: "Enable RLS on ALL tables with user data. Test with anon key, not service role key. Use auth.uid() in policies, never trust client input. Add logging to detect policy violations.",
-                codeExample: `-- Enable RLS on table
-ALTER TABLE messages ENABLE ROW LEVEL SECURITY;
-
--- Policy: Users can only see their own messages
-CREATE POLICY "Users can view own messages"
-  ON messages
-  FOR SELECT
-  TO authenticated
-  USING (auth.uid() = user_id);
-
--- Policy: Users can insert their own messages
-CREATE POLICY "Users can insert own messages"
-  ON messages
-  FOR INSERT
-  TO authenticated
-  WITH CHECK (auth.uid() = user_id);
-
--- Policy: Users can update their own messages
-CREATE POLICY "Users can update own messages"
-  ON messages
-  FOR UPDATE
-  TO authenticated
-  USING (auth.uid() = user_id)
-  WITH CHECK (auth.uid() = user_id);`,
+                symptoms: [
+                  "Users can see other users' data",
+                  "Data leaks in production",
+                  "Queries return empty results unexpectedly",
+                  "Auth works but data access fails",
+                ],
+                solution: "Enable RLS on ALL tables with user data. Test with anon key, not service role key. Use auth.uid() in policies, never trust client input. Add logging to detect policy violations. Create policies for SELECT, INSERT, UPDATE, and DELETE.",
               },
             ]}
           />
@@ -349,32 +264,57 @@ CREATE POLICY "Users can update own messages"
           <PatternVariations
             variations={[
               {
-                name: "With Magic Links",
-                scenario: "Better UX for infrequent users, no password management",
-                description: "Passwordless authentication via email",
-                implementation: "Use signInWithOtp instead of signInWithPassword",
-                tradeoffs: "More secure but requires email delivery, slower than password login",
+                id: "magic-links",
+                name: "Magic Link Authentication",
+                href: "/systems/supabase-magic-links",
+                relationship: "alternative",
+                description: "Passwordless authentication via email links - better UX for infrequent users",
+                keyDifferences: [
+                  "No password management required",
+                  "Use signInWithOtp instead of signInWithPassword",
+                  "More secure but requires email delivery",
+                  "Slightly slower than password login",
+                ],
+                tags: ["Passwordless", "Magic Links", "Email"],
               },
               {
-                name: "With JWT Validation",
-                scenario: "Fine-grained control over token validation",
-                description: "Manually validate JWTs for API routes",
-                implementation: "Use jose library to verify Supabase JWT signatures",
-                tradeoffs: "More control but more code, easy to get wrong",
+                id: "jwt-validation",
+                name: "Manual JWT Validation",
+                href: "/systems/supabase-jwt-validation",
+                relationship: "extension",
+                description: "Fine-grained control over token validation for API routes",
+                keyDifferences: [
+                  "Use jose library to verify Supabase JWT signatures",
+                  "More control over token validation logic",
+                  "More code to maintain, easier to get wrong",
+                ],
+                tags: ["JWT", "API Routes", "Security"],
               },
               {
+                id: "multi-tenant-rls",
                 name: "Multi-Tenant with RLS",
-                scenario: "SaaS apps with multiple teams per user",
-                description: "Workspace/organization isolation via RLS",
-                implementation: "Add organization_id to auth.jwt() claims and filter in RLS policies",
-                tradeoffs: "Powerful but complex, requires understanding JWT claims",
+                href: "/systems/multi-tenant-rls",
+                relationship: "extension",
+                description: "SaaS apps with multiple teams/workspaces per user",
+                keyDifferences: [
+                  "Add organization_id to auth.jwt() claims",
+                  "Filter in RLS policies based on organization",
+                  "Powerful but complex, requires understanding JWT claims",
+                ],
+                tags: ["Multi-Tenant", "RLS", "Organizations"],
               },
               {
-                name: "With MFA (TOTP)",
-                scenario: "High-security applications requiring 2FA",
-                description: "Two-factor authentication with authenticator apps",
-                implementation: "Enable MFA in Supabase dashboard, use enroll and challenge APIs",
-                tradeoffs: "Better security but adds friction to login flow",
+                id: "mfa-totp",
+                name: "Two-Factor Authentication (TOTP)",
+                href: "/systems/supabase-mfa",
+                relationship: "complement",
+                description: "Two-factor authentication with authenticator apps for high-security applications",
+                keyDifferences: [
+                  "Enable MFA in Supabase dashboard",
+                  "Use enroll and challenge APIs",
+                  "Better security but adds friction to login flow",
+                ],
+                tags: ["MFA", "2FA", "Security", "TOTP"],
               },
             ]}
           />

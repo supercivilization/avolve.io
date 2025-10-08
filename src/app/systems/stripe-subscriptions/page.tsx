@@ -79,123 +79,108 @@ export default function StripeSubscriptionsPage() {
 
         <div className="mb-12">
           <QuickDecision
-            chooseThisIf={[
-              "Need recurring billing for SaaS",
-              "Multiple subscription tiers",
-              "Want detailed revenue analytics",
-              "Need payment method management",
-              "Building in US/EU/UK primarily",
+            useThisWhen={[
+              { text: "Need recurring billing for SaaS" },
+              { text: "Multiple subscription tiers" },
+              { text: "Want detailed revenue analytics" },
+              { text: "Need payment method management" },
+              { text: "Building in US/EU/UK primarily" },
             ]}
-            chooseAlternativeIf={[
-              "Primarily selling to China (Alipay/WeChat better)",
-              "Want to avoid handling taxes (use Paddle/LemonSqueezy)",
-              "One-time payments only (use Stripe Checkout)",
-              "Very small side project (complexity overhead)",
+            useAlternativeWhen={[
+              { text: "Primarily selling to China (Alipay/WeChat better)" },
+              { text: "Want to avoid handling taxes (use Paddle/LemonSqueezy)" },
+              { text: "One-time payments only (use Stripe Checkout)" },
+              { text: "Very small side project (complexity overhead)" },
             ]}
           />
         </div>
 
         <div className="mb-12">
           <PatternStructure
-            steps={[
+            patternName="Stripe Subscriptions"
+            description="How subscription billing flows through Stripe and your application"
+            integrationPoints={[
               {
-                number: 1,
-                title: "Client",
-                description: "User clicks subscribe button",
-                details: "Redirect to Stripe Checkout with price ID",
+                id: "subscribe-button",
+                name: "Client Subscribe Button",
+                type: "input",
+                description: "User clicks subscribe button, redirect to Stripe Checkout with price ID",
               },
               {
-                number: 2,
-                title: "Stripe Checkout",
-                description: "User enters payment details",
-                details: "Stripe handles payment collection and validation",
+                id: "stripe-checkout",
+                name: "Stripe Checkout",
+                type: "bidirectional",
+                description: "User enters payment details, Stripe handles payment collection and validation",
               },
               {
-                number: 3,
-                title: "Webhook",
-                description: "Stripe sends subscription events",
-                details: "checkout.session.completed, customer.subscription.updated, etc.",
+                id: "webhook-events",
+                name: "Webhook Handler",
+                type: "bidirectional",
+                description: "Stripe sends subscription events (checkout.session.completed, customer.subscription.updated, etc.)",
               },
               {
-                number: 4,
-                title: "Database",
-                description: "Update subscription status",
-                details: "Store subscription_id, status, current_period_end",
+                id: "database-sync",
+                name: "Database Sync",
+                type: "output",
+                description: "Store subscription_id, status, current_period_end in your database",
               },
             ]}
-            components={[
-              {
-                name: "Stripe Checkout",
-                role: "Payment collection UI",
-                technology: "@stripe/stripe-js",
-              },
-              {
-                name: "Webhook Handler",
-                role: "Process subscription events",
-                technology: "stripe (Node SDK)",
-              },
-              {
-                name: "Customer Portal",
-                role: "Self-service management",
-                technology: "Stripe Billing Portal",
-              },
+            notes={[
+              "ALWAYS verify webhook signatures to prevent fake events",
+              "Implement idempotency - Stripe sends duplicate webhooks",
+              "Handle failed payments with grace period",
+              "Use Customer Portal for self-service subscription management",
             ]}
           />
         </div>
 
         <div className="mb-12">
           <TradeoffMatrix
-            approaches={[
+            title="Payment Provider Comparison"
+            description="Compare different payment processors for subscription billing"
+            criteria={[
+              { key: "fees", label: "Transaction Fees", format: "text" },
+              { key: "control", label: "Control/Flexibility", format: "rating" },
+              { key: "complexity", label: "Implementation Complexity", format: "rating" },
+              { key: "taxes", label: "Tax Handling", format: "text" },
+              { key: "analytics", label: "Revenue Analytics", format: "rating" },
+            ]}
+            patterns={[
               {
                 name: "Stripe",
-                advantages: [
-                  "Comprehensive API and SDKs",
-                  "Excellent documentation",
-                  "Powerful revenue analytics",
-                  "Flexible pricing models",
-                  "Large ecosystem",
-                ],
-                disadvantages: [
-                  "2.9% + $0.30 per transaction",
-                  "Must handle taxes yourself",
-                  "Complex webhook implementation",
-                  "Requires PCI compliance awareness",
-                ],
-                recommendation: "US/EU SaaS companies wanting full control",
+                href: "/systems/stripe-subscriptions",
+                ratings: {
+                  fees: "2.9% + $0.30",
+                  control: 5,
+                  complexity: 4,
+                  taxes: "Manual",
+                  analytics: 5,
+                },
               },
               {
                 name: "Paddle",
-                advantages: [
-                  "Merchant of record (handles taxes)",
-                  "One global price",
-                  "No VAT/sales tax complexity",
-                  "Simpler integration",
-                ],
-                disadvantages: [
-                  "5% + $0.50 per transaction (higher)",
-                  "Less flexible than Stripe",
-                  "Slower payouts",
-                  "Fewer features",
-                ],
-                recommendation: "Global B2C SaaS avoiding tax compliance",
+                href: "/systems/paddle-billing",
+                ratings: {
+                  fees: "5% + $0.50",
+                  control: 3,
+                  complexity: 2,
+                  taxes: "Automatic (MoR)",
+                  analytics: 3,
+                },
               },
               {
                 name: "LemonSqueezy",
-                advantages: [
-                  "Merchant of record",
-                  "5% flat fee (no per-transaction)",
-                  "Great for digital products",
-                  "Modern developer experience",
-                ],
-                disadvantages: [
-                  "Newer/less proven",
-                  "Smaller feature set",
-                  "Limited to certain countries",
-                  "Less mature ecosystem",
-                ],
-                recommendation: "Digital product creators and small SaaS",
+                href: "/systems/lemonsqueezy",
+                ratings: {
+                  fees: "5% flat",
+                  control: 3,
+                  complexity: 2,
+                  taxes: "Automatic (MoR)",
+                  analytics: 3,
+                },
               },
             ]}
+            notes="Stripe is recommended for US/EU SaaS with full control needs. Paddle for global B2C avoiding tax complexity. LemonSqueezy for digital products."
           />
         </div>
 
@@ -203,125 +188,43 @@ export default function StripeSubscriptionsPage() {
           <IntegrationGotchas
             gotchas={[
               {
-                issue: "Webhook Signature Verification",
-                severity: "high",
+                id: "webhook-signature-verification",
+                title: "Webhook Signature Verification",
                 frequency: "common",
                 description:
                   "Skipping signature verification allows attackers to fake subscription events and grant free access.",
+                symptoms: [
+                  "Security vulnerability - attackers can fake events",
+                  "No verification that webhook came from Stripe",
+                  "Potential for unauthorized subscription access",
+                ],
                 solution: "ALWAYS verify webhook signatures with stripe.webhooks.constructEvent. Never trust webhook payloads without verification. Use separate webhook secrets for test/production. Return 400 on invalid signatures, not 200.",
-                codeExample: `import Stripe from 'stripe'
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
-
-export async function POST(req: Request) {
-  const body = await req.text()
-  const signature = req.headers.get('stripe-signature')
-
-  if (!signature) {
-    return new Response('No signature', { status: 400 })
-  }
-
-  let event: Stripe.Event
-
-  try {
-    // ✅ MUST verify signature
-    event = stripe.webhooks.constructEvent(
-      body,
-      signature,
-      process.env.STRIPE_WEBHOOK_SECRET!
-    )
-  } catch (err) {
-    console.error('Webhook signature verification failed:', err.message)
-    return new Response('Invalid signature', { status: 400 })
-  }
-
-  // Now safe to process event
-  await handleEvent(event)
-  return new Response('Success', { status: 200 })
-}`,
               },
               {
-                issue: "Webhook Idempotency",
-                severity: "high",
+                id: "webhook-idempotency",
+                title: "Webhook Idempotency",
                 frequency: "common",
                 description:
                   "Stripe sends duplicate webhooks. Without idempotency, you grant subscriptions twice or double-charge users.",
-                solution: "Store webhook event IDs in database. Check for duplicates before processing. Use database transactions for critical updates. Return 200 even for duplicates (already processed).",
-                codeExample: `async function handleEvent(event: Stripe.Event) {
-  const supabase = await createClient()
-
-  // Check if we've processed this event already
-  const { data: existing } = await supabase
-    .from('webhook_events')
-    .select('id')
-    .eq('stripe_event_id', event.id)
-    .single()
-
-  if (existing) {
-    console.log('Duplicate webhook event, skipping:', event.id)
-    return // Already processed
-  }
-
-  // Process the event in a transaction
-  const { error } = await supabase.rpc('process_subscription_webhook', {
-    p_stripe_event_id: event.id,
-    p_event_type: event.type,
-    p_customer_id: (event.data.object as any).customer,
-    p_subscription_id: (event.data.object as any).id,
-  })
-
-  if (error) throw error
-
-  // Store that we've processed this event
-  await supabase.from('webhook_events').insert({
-    stripe_event_id: event.id,
-    event_type: event.type,
-    processed_at: new Date().toISOString(),
-  })
-}`,
+                symptoms: [
+                  "Users charged multiple times for same subscription",
+                  "Duplicate database records",
+                  "Multiple notification emails sent",
+                ],
+                solution: "Store webhook event IDs in database. Check for duplicates before processing. Use database transactions for critical updates. Return 200 even for duplicates (already processed). Create unique constraint on stripe_event_id.",
               },
               {
-                issue: "Failed Payment Handling",
-                severity: "high",
+                id: "failed-payment-handling",
+                title: "Failed Payment Handling",
                 frequency: "common",
                 description:
                   "Credit cards expire or fail. Without handling invoice.payment_failed, users keep access without paying.",
-                solution: "Listen to invoice.payment_failed webhook. Implement grace period (7 days) before disabling. Send email notifications to user. Update subscription status to 'past_due'.",
-                codeExample: `async function handleInvoicePaymentFailed(invoice: Stripe.Invoice) {
-  const supabase = await createClient()
-
-  // Get subscription
-  const { data: subscription } = await supabase
-    .from('subscriptions')
-    .select('*')
-    .eq('stripe_subscription_id', invoice.subscription)
-    .single()
-
-  if (!subscription) return
-
-  // Update status to past_due
-  await supabase
-    .from('subscriptions')
-    .update({
-      status: 'past_due',
-      payment_failed_at: new Date().toISOString(),
-    })
-    .eq('id', subscription.id)
-
-  // Send notification email
-  await sendEmail({
-    to: subscription.user_email,
-    subject: 'Payment Failed - Action Required',
-    template: 'payment-failed',
-    data: {
-      amount: invoice.amount_due / 100,
-      update_url: \`\${process.env.NEXT_PUBLIC_APP_URL}/billing\`,
-    },
-  })
-
-  // Schedule disabling access after 7 days grace period
-  // (implement with cron job or scheduled function)
-}`,
+                symptoms: [
+                  "Users retain access despite failed payments",
+                  "Revenue loss from expired cards",
+                  "No notification to users about payment issues",
+                ],
+                solution: "Listen to invoice.payment_failed webhook. Implement grace period (7 days) before disabling access. Send email notifications to user. Update subscription status to 'past_due'. Schedule job to disable access after grace period.",
               },
             ]}
           />
@@ -331,25 +234,43 @@ export async function POST(req: Request) {
           <PatternVariations
             variations={[
               {
-                name: "With Usage-Based Pricing",
-                scenario: "AI APIs, SMS services, cloud infrastructure",
-                description: "Charge based on consumption + base subscription",
-                implementation: "Use metered billing with usage records API",
-                tradeoffs: "More accurate but complex to implement and explain",
+                id: "usage-based-pricing",
+                name: "Subscriptions with Usage-Based Pricing",
+                href: "/systems/stripe-metered-billing",
+                relationship: "extension",
+                description: "Charge based on consumption plus base subscription (AI APIs, SMS services, cloud infrastructure)",
+                keyDifferences: [
+                  "Use metered billing with usage records API",
+                  "Track usage and report to Stripe",
+                  "More accurate pricing but complex to implement and explain",
+                ],
+                tags: ["Usage-Based", "Metered Billing", "Pay-as-you-go"],
               },
               {
-                name: "With Add-ons",
-                scenario: "Extra seats, storage, features",
-                description: "Optional extras users can purchase",
-                implementation: "Create separate line items or additional subscriptions",
-                tradeoffs: "Flexible but invoice gets more complex",
+                id: "with-add-ons",
+                name: "Subscriptions with Add-ons",
+                href: "/systems/stripe-add-ons",
+                relationship: "extension",
+                description: "Optional extras users can purchase (extra seats, storage, features)",
+                keyDifferences: [
+                  "Create separate line items or additional subscriptions",
+                  "Allow users to customize their plan",
+                  "Flexible but invoice gets more complex",
+                ],
+                tags: ["Add-ons", "Upsells", "Customization"],
               },
               {
-                name: "With Trials",
-                scenario: "Let users test product before committing",
-                description: "Free trial before first payment",
-                implementation: "Use trial_period_days on subscription creation",
-                tradeoffs: "Higher conversion but more support for trial users",
+                id: "with-trials",
+                name: "Free Trial Subscriptions",
+                href: "/systems/stripe-trials",
+                relationship: "complement",
+                description: "Let users test product before committing with free trial period",
+                keyDifferences: [
+                  "Use trial_period_days on subscription creation",
+                  "No payment collected until trial ends",
+                  "Higher conversion but more support for trial users",
+                ],
+                tags: ["Free Trial", "Conversion", "Onboarding"],
               },
             ]}
           />
