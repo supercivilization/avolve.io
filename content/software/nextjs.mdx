@@ -1,0 +1,151 @@
+---
+title: "Next.js 15.5.4 Production Patterns"
+description: "Verified compatibility with React 19.2.0, TypeScript 5.9.3, and Node.js 24.8.0"
+datePublished: "2025-10-05"
+dateModified: "2025-10-07"
+category: "software"
+slug: "nextjs"
+softwareVersion: "15.5.4"
+verifiedWith:
+  - "React 19.2.0"
+  - "TypeScript 5.9.3"
+  - "Node.js 24.8.0"
+  - "Tailwind CSS 4.1.13"
+author:
+  name: "Joshua Seymour"
+  url: "https://www.joshuaseymour.com"
+organization: "Supercivilization"
+tags: ["nextjs", "react", "typescript", "compatibility"]
+---
+
+## Verified Stack
+
+Production-tested as of October 2025:
+
+### Core Dependencies
+- **Next.js 15.5.4** - React framework with App Router
+- **React 19.2.0** - UI library with Server Components
+- **TypeScript 5.9.3** - Type-safe JavaScript
+- **Node.js 24.8.0** - Runtime environment
+- **Tailwind CSS 4.1.13** - Utility-first CSS with Oxide engine
+
+## Installation
+
+```bash
+npm install next@15.5.4 react@19.2.0 react-dom@19.2.0
+npm install typescript@5.9.3
+npm install tailwindcss@4.1.13
+```
+
+## Production Patterns
+
+### App Router Structure
+
+```typescript
+// app/layout.tsx
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'My App',
+  description: 'Built with Next.js 15.5.4',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  )
+}
+```
+
+### Server Components (Default)
+
+```typescript
+// app/page.tsx
+export default async function HomePage() {
+  // Fetch data directly in component
+  const data = await fetch('https://api.example.com/data')
+  const json = await data.json()
+
+  return <div>{json.title}</div>
+}
+```
+
+### Client Components
+
+```typescript
+'use client'
+
+import { useState } from 'react'
+
+export default function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
+}
+```
+
+## What Breaks in Production
+
+### Issue: Async Metadata Functions Timeout
+
+**Symptom:** Build hangs when generating metadata with external API calls
+
+**Fix:**
+```typescript
+// next.config.ts
+const nextConfig = {
+  experimental: {
+    serverMinification: false, // Prevents timeout issues
+  },
+}
+```
+
+### Issue: Server Component Using Client-Only APIs
+
+**Symptom:** `localStorage is not defined`, `window is not defined`
+
+**Fix:** Mark component with `'use client'` directive
+```typescript
+'use client'
+
+export default function ClientComponent() {
+  const data = localStorage.getItem('key')
+  return <div>{data}</div>
+}
+```
+
+### Issue: Middleware Not Executing on Edge
+
+**Symptom:** Middleware runs locally but not in production
+
+**Fix:** Ensure middleware.ts exports config
+```typescript
+export const config = {
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+}
+```
+
+## Deployment
+
+### Vercel Configuration
+- Node.js version: 24.x (set in project settings)
+- Build command: `npm run build`
+- Output directory: `.next`
+- Edge Runtime supported for middleware and route handlers
+
+### Build Optimization
+```typescript
+// next.config.ts
+const nextConfig = {
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+}
+```

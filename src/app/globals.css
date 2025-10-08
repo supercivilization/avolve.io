@@ -23,6 +23,7 @@
  */
 
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   /* shadcn/ui v3.0 - Neutral Base (OKLCH Format)

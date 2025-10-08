@@ -1,0 +1,110 @@
+---
+title: "React 19.2.0 Server Components"
+description: "Production patterns for React 19 with Server Components and new hooks"
+datePublished: "2025-10-05"
+dateModified: "2025-10-07"
+category: "software"
+slug: "react"
+softwareVersion: "19.2.0"
+verifiedWith:
+  - "Next.js 15.5.4"
+  - "TypeScript 5.9.3"
+author:
+  name: "Joshua Seymour"
+  url: "https://www.joshuaseymour.com"
+organization: "Supercivilization"
+tags: ["react", "server components", "hooks"]
+---
+
+## React 19.2.0 Overview
+
+React 19 introduces stable Server Components, new hooks, and improved performance.
+
+### Key Features
+- **Server Components** - Render on server, reduce client bundle
+- **useActionState** - Manage form state with actions
+- **useOptimistic** - Optimistic UI updates
+- **React Compiler** - Automatic memoization
+
+## Installation
+
+```bash
+npm install react@19.2.0 react-dom@19.2.0
+```
+
+## Server Components
+
+```typescript
+// Server Component (default in Next.js 15)
+export default async function ProductList() {
+  const products = await fetch('https://api.example.com/products')
+  const data = await products.json()
+
+  return (
+    <ul>
+      {data.map(product => (
+        <li key={product.id}>{product.name}</li>
+      ))}
+    </ul>
+  )
+}
+```
+
+## Client Components
+
+```typescript
+'use client'
+
+import { useState } from 'react'
+
+export default function AddToCart({ productId }: { productId: string }) {
+  const [count, setCount] = useState(0)
+
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      Add to Cart ({count})
+    </button>
+  )
+}
+```
+
+## What Breaks in Production
+
+### Issue: Hooks in Server Components
+
+**Symptom:** `useState` or `useEffect` in server component causes error
+
+**Fix:** Add `'use client'` directive
+```typescript
+'use client'
+
+import { useState } from 'react'
+
+export default function MyComponent() {
+  const [state, setState] = useState(0)
+  return <div>{state}</div>
+}
+```
+
+### Issue: Async Client Components
+
+**Symptom:** Cannot use `async` keyword with `'use client'`
+
+**Fix:** Use `useEffect` for async operations
+```typescript
+'use client'
+
+import { useEffect, useState } from 'react'
+
+export default function DataComponent() {
+  const [data, setData] = useState(null)
+
+  useEffect(() => {
+    fetch('/api/data')
+      .then(res => res.json())
+      .then(setData)
+  }, [])
+
+  return <div>{data?.title}</div>
+}
+```
