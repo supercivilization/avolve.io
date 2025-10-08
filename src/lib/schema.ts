@@ -4,7 +4,7 @@ export function generateArticleSchema(
   frontmatter: ArticleFrontmatter,
   url: string
 ) {
-  const schemas: any[] = [
+  const schemas: Record<string, unknown>[] = [
     {
       '@type': 'WebPage',
       '@id': url,
