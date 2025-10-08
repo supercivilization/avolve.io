@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,17 +6,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/'],
-        crawlDelay: 2,
-      },
-      {
-        // AI crawlers - allow more frequent access
-        userAgent: ['GPTBot', 'ChatGPT-User', 'Claude-Web', 'anthropic-ai', 'PerplexityBot', 'Amazonbot'],
-        allow: '/',
-        disallow: ['/api/', '/admin/'],
-        crawlDelay: 1,
+        disallow: ['/api/'],
       },
     ],
     sitemap: 'https://avolve.io/sitemap.xml',
-  };
+    host: 'https://avolve.io',
+  }
 }
