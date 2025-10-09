@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { UNIVERSAL_PROPERTIES, authorRef, publisherRef } from "@/lib/schema"
 
 export const metadata: Metadata = {
   title: "Refund Policy | Avolve.io",
@@ -7,15 +8,59 @@ export const metadata: Metadata = {
 }
 
 export default function RefundsPage() {
-  return (
-    <div className="container mx-auto max-w-4xl px-4 py-12">
-      <div className="mb-8">
-        <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
-          ← Back to Home
-        </Link>
-      </div>
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://avolve.io/refunds#webpage",
+        "url": "https://avolve.io/refunds",
+        "name": "Refund Policy - Avolve.io",
+        "description": "Refund policy for Avolve.io subscription services. 14-day money-back guarantee for first-time subscribers.",
+        "datePublished": "2025-10-09",
+        "dateModified": "2025-10-09",
+        ...UNIVERSAL_PROPERTIES,
+        "author": authorRef,
+        "publisher": publisherRef,
+        "isPartOf": {
+          "@id": "https://avolve.io/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://avolve.io"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Refund Policy",
+            "item": "https://avolve.io/refunds"
+          }
+        ]
+      }
+    ]
+  }
 
-      <h1 className="mb-8 text-4xl font-bold">Refund Policy</h1>
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+
+      <div className="container mx-auto max-w-4xl px-4 py-12">
+        <div className="mb-8">
+          <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
+            ← Back to Home
+          </Link>
+        </div>
+
+        <h1 className="mb-8 text-4xl font-bold">Refund Policy</h1>
 
       <div className="prose prose-gray dark:prose-invert max-w-none">
         <p className="text-muted-foreground">
@@ -275,5 +320,6 @@ export default function RefundsPage() {
         </section>
       </div>
     </div>
+    </>
   )
 }

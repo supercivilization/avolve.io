@@ -4,7 +4,7 @@ import { Rocket, Network, Code, Cloud, LifeBuoy } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { getPageDates, formatSchemaDate } from "@/lib/dates";
-import { authorRef, publisherRef, LAST_VERIFIED_DATE } from "@/lib/schema";
+import { authorRef, publisherRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES, createIsBasedOn, createCitations } from "@/lib/schema";
 
 // Dependencies (verified October 6, 2025):
 // - Node.js: 22.20.0 LTS (24.9.0 becomes LTS Oct 28, 2025)
@@ -32,10 +32,30 @@ export default function Home() {
       {
         "@type": "TechArticle",
         "headline": "Modern Web Development Stack - October 2025",
+        "description": "Integration knowledge graph for Next.js 15, React 19, TypeScript, Vercel AI SDK, and Supabase. Version-specific compatibility patterns verified in production as of October 2025.",
         "datePublished": formatSchemaDate(pageDates.published),
         "dateModified": LAST_VERIFIED_DATE,
         "author": authorRef,
         "publisher": publisherRef,
+        ...UNIVERSAL_PROPERTIES,
+        "about": {
+          "@type": "Thing",
+          "name": "Integration Knowledge Graph",
+          "description": "How modern web development tools work together in production - the integration layer that sits between official documentation"
+        },
+        "isBasedOn": createIsBasedOn([
+          { name: "Next.js Documentation", url: "https://nextjs.org/docs", publisher: "Vercel" },
+          { name: "React Documentation", url: "https://react.dev", publisher: "Meta" },
+          { name: "TypeScript Documentation", url: "https://www.typescriptlang.org/docs", publisher: "Microsoft" },
+          { name: "Vercel AI SDK Documentation", url: "https://sdk.vercel.ai/docs", publisher: "Vercel" },
+          { name: "Supabase Documentation", url: "https://supabase.com/docs", publisher: "Supabase" }
+        ]),
+        "citation": createCitations([
+          "https://nextjs.org/docs/app/building-your-application",
+          "https://react.dev/reference/react",
+          "https://supabase.com/docs/guides/auth/server-side/nextjs",
+          "https://sdk.vercel.ai/docs/introduction"
+        ]),
         "dependencies": {
           "Node.js": "22.20.0 LTS",
           "TypeScript": "5.9.3",

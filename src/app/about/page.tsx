@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { authorRef, publisherRef, personSchema, organizationSchema, websiteRef, LAST_VERIFIED_DATE } from "@/lib/schema";
+import { authorRef, publisherRef, personSchema, organizationSchema, websiteRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
 // Dependencies (October 6, 2025):
 // - Next.js: 15.5.4
@@ -23,14 +23,22 @@ export default function AboutPage() {
       {
         "@type": "AboutPage",
         "@id": "https://avolve.io/about#aboutpage",
-        "name": "About Avolve.io",
+        "name": "About Avolve.io - Integration Knowledge Graph",
         "url": "https://avolve.io/about",
+        "description": "Avolve is an integration knowledge graph documenting how modern web tools work together in production. Version-specific compatibility patterns, production failure modes, and integration insights not found in official documentation.",
         "datePublished": "2025-10-05",
         "dateModified": LAST_VERIFIED_DATE,
+        ...UNIVERSAL_PROPERTIES,
         "author": authorRef,
         "publisher": publisherRef,
         "isPartOf": websiteRef,
-        "about": publisherRef
+        "about": {
+          "@type": "WebSite",
+          "@id": "https://avolve.io/#website",
+          "name": "Avolve - Integration Knowledge Graph",
+          "description": "Integration knowledge graph for Next.js 15, React 19, Vercel AI SDK, and Supabase. Provides the integration layer between official documentation - version-specific compatibility patterns, production gotchas, and cross-tool insights.",
+          "disclaimer": "This is third-party integration documentation based on official sources. For official API references, see vendor documentation at nextjs.org/docs, react.dev, supabase.com/docs, etc."
+        }
       },
       {
         "@type": "BreadcrumbList",

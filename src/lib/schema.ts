@@ -1,5 +1,50 @@
 import type { ArticleFrontmatter } from './articles'
 
+// Universal properties for all schema markup
+export const UNIVERSAL_PROPERTIES = {
+  inLanguage: 'en',
+  isAccessibleForFree: true,
+} as const
+
+// Helper to create isBasedOn relationships to official documentation
+export function createIsBasedOn(sources: Array<{ name: string; url: string; publisher?: string }>) {
+  return sources.map(source => ({
+    '@type': 'WebPage' as const,
+    name: source.name,
+    url: source.url,
+    ...(source.publisher && {
+      publisher: {
+        '@type': 'Organization' as const,
+        name: source.publisher
+      }
+    })
+  }))
+}
+
+// Helper to create citation array from doc URLs
+export function createCitations(urls: string[]) {
+  return urls
+}
+
+// Helper to create integration pattern metadata
+export function createIntegrationPattern(description: string, novelInsight?: string) {
+  const pattern: Record<string, unknown> = {
+    '@type': 'Thing',
+    name: 'Integration Pattern',
+    description
+  }
+
+  if (novelInsight) {
+    pattern.additionalProperty = {
+      '@type': 'PropertyValue',
+      name: 'Novel Insight',
+      value: novelInsight
+    }
+  }
+
+  return pattern
+}
+
 export function generateArticleSchema(
   frontmatter: ArticleFrontmatter,
   url: string
@@ -12,6 +57,7 @@ export function generateArticleSchema(
       name: frontmatter.title,
       dateModified: frontmatter.dateModified,
       description: frontmatter.description,
+      ...UNIVERSAL_PROPERTIES,
     },
     {
       '@type': 'TechArticle',
@@ -32,6 +78,7 @@ export function generateArticleSchema(
         : undefined,
       datePublished: frontmatter.datePublished,
       dateModified: frontmatter.dateModified,
+      ...UNIVERSAL_PROPERTIES,
     },
   ]
 
