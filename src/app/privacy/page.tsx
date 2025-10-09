@@ -119,7 +119,7 @@ export default function PrivacyPage() {
             <li><strong>Withdrawal:</strong> Withdraw consent at any time</li>
           </ul>
           <p className="mt-4">
-            To exercise these rights, please use our <Link href="/contact" className="text-blue-600 hover:underline">Contact Form</Link>.
+            To exercise these rights, please use our <Link href="/contact" className="text-foreground hover:underline">Contact Form</Link>.
           </p>
         </section>
 
@@ -163,7 +163,7 @@ export default function PrivacyPage() {
             If you have questions about this Privacy Policy, please contact us:
           </p>
           <ul className="list-none space-y-2 mt-4">
-            <li><strong>Contact Form:</strong> <Link href="/contact" className="text-blue-600 hover:underline">Submit Privacy Inquiry</Link></li>
+            <li><strong>Contact Form:</strong> <Link href="/contact" className="text-foreground hover:underline">Submit Privacy Inquiry</Link></li>
             <li><strong>Legal Entity:</strong> Avolve LLC</li>
           </ul>
         </section>

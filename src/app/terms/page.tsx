@@ -97,7 +97,7 @@ export default function TermsPage() {
 
           <h3 className="text-xl font-semibold mb-3 mt-6">5.2 Refunds</h3>
           <p>
-            See our <Link href="/refunds" className="text-blue-600 hover:underline">Refund Policy</Link> for
+            See our <Link href="/refunds" className="text-foreground hover:underline">Refund Policy</Link> for
             detailed information about refund eligibility and process.
           </p>
 
@@ -180,7 +180,7 @@ export default function TermsPage() {
         <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">10. Data and Privacy</h2>
           <p>
-            Your use of the Service is subject to our <Link href="/privacy" className="text-blue-600 hover:underline">Privacy Policy</Link>,
+            Your use of the Service is subject to our <Link href="/privacy" className="text-foreground hover:underline">Privacy Policy</Link>,
             which is incorporated into these Terms by reference.
           </p>
         </section>
@@ -244,7 +244,7 @@ export default function TermsPage() {
 
           <h3 className="text-xl font-semibold mb-3 mt-6">15.1 Informal Resolution</h3>
           <p>
-            Before filing a claim, you agree to <Link href="/contact" className="text-blue-600 hover:underline">contact us</Link> to
+            Before filing a claim, you agree to <Link href="/contact" className="text-foreground hover:underline">contact us</Link> to
             attempt to resolve the dispute informally.
           </p>
 
@@ -294,7 +294,7 @@ export default function TermsPage() {
             For questions about these Terms, contact us:
           </p>
           <ul className="list-none space-y-2 mt-4">
-            <li><strong>Contact Form:</strong> <Link href="/contact" className="text-blue-600 hover:underline">Submit Legal Inquiry</Link></li>
+            <li><strong>Contact Form:</strong> <Link href="/contact" className="text-foreground hover:underline">Submit Legal Inquiry</Link></li>
             <li><strong>Legal Entity:</strong> Avolve LLC</li>
           </ul>
         </section>
