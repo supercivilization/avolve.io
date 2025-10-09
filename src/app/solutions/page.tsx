@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { authorRef, publisherRef, LAST_VERIFIED_DATE } from "@/lib/schema";
+import { authorRef, publisherRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
 // Dependencies (October 6, 2025):
 // - Next.js: 15.5.5
@@ -33,6 +33,7 @@ export default function SolutionsPage() {
         "datePublished": "2025-10-05T17:00:00-06:00",
         "dateModified": LAST_VERIFIED_DATE,
         "description": "A collection of complete, working applications that solve real business problems, built with Next.js, React, Supabase, and AI.",
+        ...UNIVERSAL_PROPERTIES,
         "author": authorRef,
         "publisher": publisherRef,
         "hasPart": [

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { authorRef, publisherRef, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
 // Dependencies (October 6, 2025):
 // - Next.js: 15.5.5
@@ -30,12 +31,9 @@ export default function SupportPage() {
         "datePublished": "2025-10-05T17:00:00-06:00",
         "dateModified": "2025-10-05T17:00:00-06:00",
         "description": "A collection of production runbooks, quick fixes for common issues, incident response guides, and reviews of AI coding tools for the modern web stack.",
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        },
-        "publisher": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        },
+        ...UNIVERSAL_PROPERTIES,
+        "author": authorRef,
+        "publisher": publisherRef,
         "hasPart": [
           {"@id": "https://avolve.io/support#slow-db-runbook"},
           {"@id": "https://avolve.io/support#common-issues-faq"},

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { authorRef, publisherRef, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
 // Dependencies (October 6, 2025):
 // - Next.js: 15.5.5
@@ -30,12 +31,9 @@ export default function SystemsPage() {
         "datePublished": "2025-10-05T17:00:00-06:00",
         "dateModified": "2025-10-05T17:00:00-06:00",
         "description": "A collection of architecture patterns for coordinating multiple components in Next.js 15 applications, including systems for authentication, search, email, and more.",
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        },
-        "publisher": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        },
+        ...UNIVERSAL_PROPERTIES,
+        "author": authorRef,
+        "publisher": publisherRef,
         "hasPart": [
           {
             "@id": "https://avolve.io/systems#auth-system"
@@ -53,6 +51,7 @@ export default function SystemsPage() {
           {"@type": "SoftwareApplication", "name": "React Server Components"},
           {"@type": "SoftwareApplication", "name": "React Client Components"}
         ],
+        ...UNIVERSAL_PROPERTIES,
         "step": [
           {
             "@type": "HowToStep",
@@ -96,12 +95,8 @@ export default function SystemsPage() {
             "text": "Production Failure: Middleware causes infinite redirect loops. Fix: Exclude your login page (e.g., '/login') from the middleware's matcher config."
           }
         ],
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        },
-        "publisher": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        }
+        "author": authorRef,
+        "publisher": publisherRef
       },
       {
         "@type": "BreadcrumbList",

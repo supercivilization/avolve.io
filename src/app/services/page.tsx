@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { authorRef, publisherRef, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
 // Dependencies (October 6, 2025):
 // Pricing verified: 2025-10-06
@@ -105,12 +106,9 @@ export default function ServicesPage() {
         "datePublished": "2025-10-05T17:00:00-06:00",
         "dateModified": "2025-10-05T17:00:00-06:00",
         "description": "Compare pricing, features, and use cases for essential services like Vercel, Supabase, Claude API, Stripe, and Resend.",
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        },
-        "publisher": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        },
+        ...UNIVERSAL_PROPERTIES,
+        "author": authorRef,
+        "publisher": publisherRef,
         "hasPart": [
           {"@id": "https://avolve.io/services#vercel"},
           {"@id": "https://avolve.io/services#supabase"},
