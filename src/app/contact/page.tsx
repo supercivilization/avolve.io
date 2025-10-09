@@ -55,8 +55,8 @@ export default function ContactPage() {
         <div className="md:col-span-2">
           <div className="rounded-lg border border-border bg-card p-6 shadow-sm">
             <div className="mb-6 flex items-center gap-3">
-              <div className="rounded-full bg-blue-100 p-2 dark:bg-blue-950">
-                <MessageSquare className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+              <div className="rounded-full bg-zinc-100 p-2 dark:bg-zinc-800">
+                <MessageSquare className="h-5 w-5 text-zinc-600 dark:text-zinc-400" />
               </div>
               <h2 className="text-2xl font-semibold">Send us a Message</h2>
             </div>
@@ -71,7 +71,7 @@ export default function ContactPage() {
                 </p>
                 <button
                   onClick={() => setStatus("idle")}
-                  className="text-blue-600 hover:underline dark:text-blue-400"
+                  className="text-foreground hover:underline"
                 >
                   Send another message
                 </button>
@@ -88,7 +88,7 @@ export default function ContactPage() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full rounded-lg border border-border bg-background px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                    className="w-full rounded-lg border border-border bg-background px-4 py-2 focus:border-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-500/20"
                     placeholder="Your full name"
                   />
                 </div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full rounded-lg border border-border bg-background px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                    className="w-full rounded-lg border border-border bg-background px-4 py-2 focus:border-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-500/20"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -117,7 +117,7 @@ export default function ContactPage() {
                     required
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full rounded-lg border border-border bg-background px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                    className="w-full rounded-lg border border-border bg-background px-4 py-2 focus:border-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-500/20"
                   >
                     <option value="">Select a subject</option>
                     <option value="general">General Inquiry</option>
@@ -141,7 +141,7 @@ export default function ContactPage() {
                     rows={6}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full rounded-lg border border-border bg-background px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                    className="w-full rounded-lg border border-border bg-background px-4 py-2 focus:border-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-500/20"
                     placeholder="Tell us how we can help..."
                   />
                 </div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                 <div className="rounded-lg bg-muted p-4 text-sm text-muted-foreground">
                   <p>
                     By submitting this form, you agree that we'll use your email address to respond to your inquiry.
-                    See our <Link href="/privacy" className="text-blue-600 hover:underline dark:text-blue-400">Privacy Policy</Link> for details.
+                    See our <Link href="/privacy" className="text-foreground hover:underline">Privacy Policy</Link> for details.
                   </p>
                 </div>
 
@@ -162,7 +162,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="w-full rounded-lg bg-blue-600 px-6 py-3 font-medium text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="w-full rounded-lg bg-zinc-900 px-6 py-3 font-medium text-zinc-50 hover:bg-zinc-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
                 >
                   {status === "submitting" ? "Sending..." : "Send Message"}
                 </button>
@@ -195,7 +195,7 @@ export default function ContactPage() {
               href="https://github.com/supercivilization/avolve.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-blue-600 hover:underline dark:text-blue-400"
+              className="text-sm text-foreground hover:underline"
             >
               View on GitHub →
             </a>
@@ -208,7 +208,7 @@ export default function ContactPage() {
                 href="https://www.joshuaseymour.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline dark:text-blue-400"
+                className="text-foreground hover:underline"
               >
                 Joshua Seymour
               </a>, founder of{" "}
@@ -216,7 +216,7 @@ export default function ContactPage() {
                 href="https://www.supercivilization.xyz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline dark:text-blue-400"
+                className="text-foreground hover:underline"
               >
                 Supercivilization
               </a>.
