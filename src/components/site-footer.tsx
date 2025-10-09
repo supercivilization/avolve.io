@@ -246,6 +246,10 @@ export function SiteFooter() {
                       About
                     </Link>
                     <span className="hidden sm:inline">·</span>
+                    <Link href="/contact" className="hover:text-foreground transition-colors">
+                      Contact
+                    </Link>
+                    <span className="hidden sm:inline">·</span>
                     <a
                       href="https://www.joshuaseymour.com"
                       target="_blank"
@@ -270,6 +274,10 @@ export function SiteFooter() {
                     <span className="hidden sm:inline">·</span>
                     <Link href="/terms" className="hover:text-foreground transition-colors">
                       Terms
+                    </Link>
+                    <span className="hidden sm:inline">·</span>
+                    <Link href="/refunds" className="hover:text-foreground transition-colors">
+                      Refunds
                     </Link>
                   </div>
                 </div>
