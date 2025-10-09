@@ -26,7 +26,7 @@ export default function PrivacyPage() {
         <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
           <p>
-            Avolve.io ("we," "us," or "our") operates the website avolve.io (the "Service").
+            Avolve LLC ("we," "us," or "our") operates the website avolve.io (the "Service").
             This Privacy Policy explains how we collect, use, disclose, and safeguard your information
             when you visit our website or use our services.
           </p>
@@ -119,7 +119,7 @@ export default function PrivacyPage() {
             <li><strong>Withdrawal:</strong> Withdraw consent at any time</li>
           </ul>
           <p className="mt-4">
-            To exercise these rights, contact us at <a href="mailto:privacy@avolve.io" className="text-blue-600 hover:underline">privacy@avolve.io</a>
+            To exercise these rights, please use our <Link href="/contact" className="text-blue-600 hover:underline">Contact Form</Link>.
           </p>
         </section>
 
@@ -163,8 +163,8 @@ export default function PrivacyPage() {
             If you have questions about this Privacy Policy, please contact us:
           </p>
           <ul className="list-none space-y-2 mt-4">
-            <li><strong>Email:</strong> <a href="mailto:privacy@avolve.io" className="text-blue-600 hover:underline">privacy@avolve.io</a></li>
-            <li><strong>Website:</strong> <Link href="/contact" className="text-blue-600 hover:underline">Contact Form</Link></li>
+            <li><strong>Contact Form:</strong> <Link href="/contact" className="text-blue-600 hover:underline">Submit Privacy Inquiry</Link></li>
+            <li><strong>Legal Entity:</strong> Avolve LLC</li>
           </ul>
         </section>
 

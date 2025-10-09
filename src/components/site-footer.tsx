@@ -275,10 +275,6 @@ export function SiteFooter() {
                     <Link href="/terms" className="hover:text-foreground transition-colors">
                       Terms
                     </Link>
-                    <span className="hidden sm:inline">·</span>
-                    <Link href="/refunds" className="hover:text-foreground transition-colors">
-                      Refunds
-                    </Link>
                   </div>
                 </div>
               </div>

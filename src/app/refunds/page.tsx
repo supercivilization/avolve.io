@@ -114,7 +114,7 @@ export default function RefundsPage() {
           <h3 className="text-xl font-semibold mb-3 mt-6">5.1 Process</h3>
           <p>To request a refund:</p>
           <ol className="list-decimal pl-6 space-y-2">
-            <li>Email us at <a href="mailto:refunds@avolve.io" className="text-blue-600 hover:underline">refunds@avolve.io</a></li>
+            <li>Submit a refund request via our <Link href="/contact" className="text-blue-600 hover:underline">Contact Form</Link> (select "Refund Request")</li>
             <li>Include your account email and reason for refund</li>
             <li>We will respond within 1 business day</li>
             <li>Approved refunds are processed within 5-7 business days</li>
@@ -188,7 +188,7 @@ export default function RefundsPage() {
 
           <h3 className="text-xl font-semibold mb-3 mt-6">8.2 Legitimate Disputes</h3>
           <p>
-            If you have a legitimate billing dispute, contact us first at <a href="mailto:billing@avolve.io" className="text-blue-600 hover:underline">billing@avolve.io</a>.
+            If you have a legitimate billing dispute, <Link href="/contact" className="text-blue-600 hover:underline">contact us first</Link> (select "Billing & Payments").
             We will work to resolve the issue quickly.
           </p>
         </section>
@@ -251,10 +251,8 @@ export default function RefundsPage() {
             For refund requests or questions:
           </p>
           <ul className="list-none space-y-2 mt-4">
-            <li><strong>Refunds:</strong> <a href="mailto:refunds@avolve.io" className="text-blue-600 hover:underline">refunds@avolve.io</a></li>
-            <li><strong>Billing:</strong> <a href="mailto:billing@avolve.io" className="text-blue-600 hover:underline">billing@avolve.io</a></li>
-            <li><strong>Support:</strong> <a href="mailto:support@avolve.io" className="text-blue-600 hover:underline">support@avolve.io</a></li>
-            <li><strong>Contact Form:</strong> <Link href="/contact" className="text-blue-600 hover:underline">Contact Us</Link></li>
+            <li><strong>Contact Form:</strong> <Link href="/contact" className="text-blue-600 hover:underline">Submit Refund Request</Link></li>
+            <li><strong>Legal Entity:</strong> Avolve LLC</li>
           </ul>
         </section>
 

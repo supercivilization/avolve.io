@@ -1,13 +1,42 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Mail, MessageSquare, Github } from "lucide-react"
+"use client"
 
-export const metadata: Metadata = {
-  title: "Contact Us | Avolve.io",
-  description: "Get in touch with the Avolve.io team - Support, questions, feedback, and partnerships.",
-}
+import Link from "next/link"
+import { Mail, MessageSquare } from "lucide-react"
+import { useState } from "react"
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  })
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setStatus("submitting")
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      setStatus("success")
+      setFormData({ name: "", email: "", subject: "", message: "" })
+    } catch {
+      setStatus("error")
+    }
+  }
+
   return (
     <div className="container mx-auto max-w-4xl px-4 py-12">
       <div className="mb-8">
@@ -18,213 +47,185 @@ export default function ContactPage() {
 
       <h1 className="mb-4 text-4xl font-bold">Contact Us</h1>
       <p className="mb-12 text-xl text-muted-foreground">
-        We're here to help. Choose the best way to reach us based on your needs.
+        Have a question, feedback, or need support? We're here to help.
       </p>
 
-      <div className="grid gap-6 md:grid-cols-2 mb-12">
-        {/* General Inquiries */}
-        <div className="rounded-lg border border-border bg-card p-6 shadow-sm">
-          <div className="mb-4 flex items-center gap-3">
-            <div className="rounded-full bg-blue-100 p-2 dark:bg-blue-950">
-              <Mail className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+      <div className="grid gap-8 md:grid-cols-3">
+        {/* Contact Form - Takes 2 columns */}
+        <div className="md:col-span-2">
+          <div className="rounded-lg border border-border bg-card p-6 shadow-sm">
+            <div className="mb-6 flex items-center gap-3">
+              <div className="rounded-full bg-blue-100 p-2 dark:bg-blue-950">
+                <MessageSquare className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h2 className="text-2xl font-semibold">Send us a Message</h2>
             </div>
-            <h2 className="text-xl font-semibold">General Inquiries</h2>
+
+            {status === "success" ? (
+              <div className="rounded-lg bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-900 p-6 text-center">
+                <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-2">
+                  Message Sent Successfully!
+                </h3>
+                <p className="text-green-800 dark:text-green-200 mb-4">
+                  Thank you for contacting us. We'll respond within 1-2 business days.
+                </p>
+                <button
+                  onClick={() => setStatus("idle")}
+                  className="text-blue-600 hover:underline dark:text-blue-400"
+                >
+                  Send another message
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    Name <span className="text-red-600">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full rounded-lg border border-border bg-background px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                    placeholder="Your full name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Email <span className="text-red-600">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full rounded-lg border border-border bg-background px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                    placeholder="your@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                    Subject <span className="text-red-600">*</span>
+                  </label>
+                  <select
+                    id="subject"
+                    required
+                    value={formData.subject}
+                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                    className="w-full rounded-lg border border-border bg-background px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="billing">Billing & Payments</option>
+                    <option value="refund">Refund Request</option>
+                    <option value="privacy">Privacy & Data</option>
+                    <option value="legal">Legal</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    Message <span className="text-red-600">*</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    required
+                    rows={6}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="w-full rounded-lg border border-border bg-background px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                    placeholder="Tell us how we can help..."
+                  />
+                </div>
+
+                <div className="rounded-lg bg-muted p-4 text-sm text-muted-foreground">
+                  <p>
+                    By submitting this form, you agree that we'll use your email address to respond to your inquiry.
+                    See our <Link href="/privacy" className="text-blue-600 hover:underline dark:text-blue-400">Privacy Policy</Link> for details.
+                  </p>
+                </div>
+
+                {status === "error" && (
+                  <div className="rounded-lg bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900 p-4 text-red-800 dark:text-red-200">
+                    Failed to send message. Please try again or contact us through GitHub.
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={status === "submitting"}
+                  className="w-full rounded-lg bg-blue-600 px-6 py-3 font-medium text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  {status === "submitting" ? "Sending..." : "Send Message"}
+                </button>
+              </form>
+            )}
           </div>
-          <p className="mb-4 text-muted-foreground">
-            Questions about our services, documentation, or general feedback.
-          </p>
-          <a
-            href="mailto:hello@avolve.io"
-            className="inline-flex items-center gap-2 text-blue-600 hover:underline dark:text-blue-400"
-          >
-            hello@avolve.io
-            <Mail className="h-4 w-4" />
-          </a>
         </div>
 
-        {/* Technical Support */}
-        <div className="rounded-lg border border-border bg-card p-6 shadow-sm">
-          <div className="mb-4 flex items-center gap-3">
-            <div className="rounded-full bg-green-100 p-2 dark:bg-green-950">
-              <MessageSquare className="h-5 w-5 text-green-600 dark:text-green-400" />
-            </div>
-            <h2 className="text-xl font-semibold">Technical Support</h2>
+        {/* Info Sidebar - Takes 1 column */}
+        <div className="space-y-6">
+          <div className="rounded-lg border border-border bg-card p-6 shadow-sm">
+            <h3 className="font-semibold mb-3 flex items-center gap-2">
+              <Mail className="h-4 w-4" />
+              Response Time
+            </h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>• General: 1-2 business days</li>
+              <li>• Support: Within 24 hours</li>
+              <li>• Billing: Within 1 business day</li>
+              <li>• Critical: Within 4 hours</li>
+            </ul>
           </div>
-          <p className="mb-4 text-muted-foreground">
-            Account issues, billing questions, or technical problems.
-          </p>
-          <a
-            href="mailto:support@avolve.io"
-            className="inline-flex items-center gap-2 text-green-600 hover:underline dark:text-green-400"
-          >
-            support@avolve.io
-            <Mail className="h-4 w-4" />
-          </a>
-        </div>
 
-        {/* Privacy & Data */}
-        <div className="rounded-lg border border-border bg-card p-6 shadow-sm">
-          <div className="mb-4 flex items-center gap-3">
-            <div className="rounded-full bg-purple-100 p-2 dark:bg-purple-950">
-              <Mail className="h-5 w-5 text-purple-600 dark:text-purple-400" />
-            </div>
-            <h2 className="text-xl font-semibold">Privacy & Data</h2>
-          </div>
-          <p className="mb-4 text-muted-foreground">
-            Data requests, privacy concerns, GDPR/CCPA inquiries.
-          </p>
-          <a
-            href="mailto:privacy@avolve.io"
-            className="inline-flex items-center gap-2 text-purple-600 hover:underline dark:text-purple-400"
-          >
-            privacy@avolve.io
-            <Mail className="h-4 w-4" />
-          </a>
-        </div>
-
-        {/* Legal & Compliance */}
-        <div className="rounded-lg border border-border bg-card p-6 shadow-sm">
-          <div className="mb-4 flex items-center gap-3">
-            <div className="rounded-full bg-orange-100 p-2 dark:bg-orange-950">
-              <Mail className="h-5 w-5 text-orange-600 dark:text-orange-400" />
-            </div>
-            <h2 className="text-xl font-semibold">Legal & Compliance</h2>
-          </div>
-          <p className="mb-4 text-muted-foreground">
-            Terms of service, legal questions, compliance matters.
-          </p>
-          <a
-            href="mailto:legal@avolve.io"
-            className="inline-flex items-center gap-2 text-orange-600 hover:underline dark:text-orange-400"
-          >
-            legal@avolve.io
-            <Mail className="h-4 w-4" />
-          </a>
-        </div>
-
-        {/* Billing & Refunds */}
-        <div className="rounded-lg border border-border bg-card p-6 shadow-sm">
-          <div className="mb-4 flex items-center gap-3">
-            <div className="rounded-full bg-amber-100 p-2 dark:bg-amber-950">
-              <Mail className="h-5 w-5 text-amber-600 dark:text-amber-400" />
-            </div>
-            <h2 className="text-xl font-semibold">Billing & Refunds</h2>
-          </div>
-          <p className="mb-4 text-muted-foreground">
-            Payment issues, refund requests, invoice questions.
-          </p>
-          <div className="space-y-2">
+          <div className="rounded-lg border border-border bg-card p-6 shadow-sm">
+            <h3 className="font-semibold mb-3">GitHub</h3>
+            <p className="text-sm text-muted-foreground mb-3">
+              Report issues or contribute to our open-source project.
+            </p>
             <a
-              href="mailto:billing@avolve.io"
-              className="block text-amber-600 hover:underline dark:text-amber-400"
+              href="https://github.com/supercivilization/avolve.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-blue-600 hover:underline dark:text-blue-400"
             >
-              billing@avolve.io
-            </a>
-            <a
-              href="mailto:refunds@avolve.io"
-              className="block text-amber-600 hover:underline dark:text-amber-400"
-            >
-              refunds@avolve.io
+              View on GitHub →
             </a>
           </div>
-        </div>
 
-        {/* Partnerships */}
-        <div className="rounded-lg border border-border bg-card p-6 shadow-sm">
-          <div className="mb-4 flex items-center gap-3">
-            <div className="rounded-full bg-pink-100 p-2 dark:bg-pink-950">
-              <Mail className="h-5 w-5 text-pink-600 dark:text-pink-400" />
-            </div>
-            <h2 className="text-xl font-semibold">Partnerships</h2>
-          </div>
-          <p className="mb-4 text-muted-foreground">
-            Business partnerships, integrations, collaborations.
-          </p>
-          <a
-            href="mailto:partnerships@avolve.io"
-            className="inline-flex items-center gap-2 text-pink-600 hover:underline dark:text-pink-400"
-          >
-            partnerships@avolve.io
-            <Mail className="h-4 w-4" />
-          </a>
-        </div>
-      </div>
-
-      {/* Additional Contact Methods */}
-      <div className="mb-12 rounded-lg border border-border bg-muted/50 p-8">
-        <h2 className="mb-6 text-2xl font-semibold">Other Ways to Connect</h2>
-
-        <div className="space-y-4">
-          <div className="flex items-start gap-4">
-            <Github className="mt-1 h-6 w-6 text-muted-foreground" />
-            <div>
-              <h3 className="font-semibold mb-1">GitHub</h3>
-              <p className="text-muted-foreground mb-2">
-                Report issues, contribute, or view the source code.
-              </p>
-              <a
-                href="https://github.com/supercivilization/avolve.io"
+          <div className="rounded-lg border border-border bg-card p-6 shadow-sm">
+            <h3 className="font-semibold mb-3">About Avolve</h3>
+            <p className="text-sm text-muted-foreground mb-3">
+              Built by <a
+                href="https://www.joshuaseymour.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline dark:text-blue-400"
               >
-                github.com/supercivilization/avolve.io
-              </a>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-4">
-            <MessageSquare className="mt-1 h-6 w-6 text-muted-foreground" />
-            <div>
-              <h3 className="font-semibold mb-1">Community</h3>
-              <p className="text-muted-foreground">
-                Join our community discussions and get help from other users.
-              </p>
-              <p className="text-sm text-muted-foreground mt-2">Coming soon</p>
-            </div>
+                Joshua Seymour
+              </a>, founder of{" "}
+              <a
+                href="https://www.supercivilization.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline dark:text-blue-400"
+              >
+                Supercivilization
+              </a>.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Legal Entity: Avolve LLC
+            </p>
           </div>
         </div>
-      </div>
-
-      {/* Response Time */}
-      <div className="rounded-lg border border-blue-200 bg-blue-50 dark:border-blue-900 dark:bg-blue-950/20 p-6">
-        <h3 className="mb-2 font-semibold text-blue-900 dark:text-blue-100">Response Times</h3>
-        <ul className="space-y-1 text-sm text-blue-800 dark:text-blue-200">
-          <li>• <strong>Support requests:</strong> Within 24 hours (business days)</li>
-          <li>• <strong>General inquiries:</strong> Within 2-3 business days</li>
-          <li>• <strong>Billing/Refunds:</strong> Within 1 business day</li>
-          <li>• <strong>Critical issues:</strong> Priority response within 4 hours</li>
-        </ul>
-      </div>
-
-      {/* Founder Information */}
-      <div className="mt-12 border-t border-border pt-12">
-        <h2 className="mb-4 text-2xl font-semibold">About Avolve.io</h2>
-        <p className="text-muted-foreground mb-4">
-          Avolve.io is built by <a
-            href="https://www.joshuaseymour.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline dark:text-blue-400"
-          >
-            Joshua Seymour
-          </a>, founder of{" "}
-          <a
-            href="https://www.supercivilization.xyz"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline dark:text-blue-400"
-          >
-            Supercivilization
-          </a>. We're committed to providing high-quality documentation and
-          resources for modern web development.
-        </p>
-        <p className="text-sm text-muted-foreground">
-          For press inquiries or speaking engagements, contact{" "}
-          <a href="mailto:admin@joshuaseymour.com" className="text-blue-600 hover:underline dark:text-blue-400">
-            admin@joshuaseymour.com
-          </a>
-        </p>
       </div>
     </div>
   )

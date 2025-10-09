@@ -26,7 +26,7 @@ export default function TermsPage() {
         <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
           <p>
-            By accessing or using Avolve.io (the "Service"), you agree to be bound by these Terms of Service
+            By accessing or using avolve.io (the "Service"), operated by Avolve LLC, you agree to be bound by these Terms of Service
             ("Terms"). If you do not agree to these Terms, do not use the Service.
           </p>
         </section>
@@ -244,7 +244,7 @@ export default function TermsPage() {
 
           <h3 className="text-xl font-semibold mb-3 mt-6">15.1 Informal Resolution</h3>
           <p>
-            Before filing a claim, you agree to contact us at <a href="mailto:legal@avolve.io" className="text-blue-600 hover:underline">legal@avolve.io</a> to
+            Before filing a claim, you agree to <Link href="/contact" className="text-blue-600 hover:underline">contact us</Link> to
             attempt to resolve the dispute informally.
           </p>
 
@@ -294,9 +294,8 @@ export default function TermsPage() {
             For questions about these Terms, contact us:
           </p>
           <ul className="list-none space-y-2 mt-4">
-            <li><strong>Email:</strong> <a href="mailto:legal@avolve.io" className="text-blue-600 hover:underline">legal@avolve.io</a></li>
-            <li><strong>Support:</strong> <a href="mailto:support@avolve.io" className="text-blue-600 hover:underline">support@avolve.io</a></li>
-            <li><strong>Website:</strong> <Link href="/contact" className="text-blue-600 hover:underline">Contact Form</Link></li>
+            <li><strong>Contact Form:</strong> <Link href="/contact" className="text-blue-600 hover:underline">Submit Legal Inquiry</Link></li>
+            <li><strong>Legal Entity:</strong> Avolve LLC</li>
           </ul>
         </section>
 
