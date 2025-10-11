@@ -3,6 +3,9 @@
 import Link from "next/link"
 import { Mail, MessageSquare } from "lucide-react"
 import { useState } from "react"
+import Script from "next/script"
+
+const LAST_VERIFIED_DATE = "2025-10-06"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -37,15 +40,81 @@ export default function ContactPage() {
     }
   }
 
-  return (
-    <div className="container mx-auto max-w-4xl px-4 py-12">
-      <div className="mb-8">
-        <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
-          ← Back to Home
-        </Link>
-      </div>
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://avolve.io/contact#contactpage",
+        "name": "Contact Avolve.io",
+        "description": "Contact us for questions, feedback, or support about Avolve.io - your modern web development stack integration reference.",
+        "url": "https://avolve.io/contact",
+        "isPartOf": {
+          "@id": "https://avolve.io/#website"
+        },
+        "author": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "inLanguage": "en-US",
+        "datePublished": "2025-10-05",
+        "dateModified": LAST_VERIFIED_DATE
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.supercivilization.xyz/#organization",
+        "name": "Supercivilization",
+        "url": "https://www.supercivilization.xyz",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Customer Support",
+          "availableLanguage": "English",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+          },
+          "areaServed": "Worldwide"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://avolve.io"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://avolve.io/contact"
+          }
+        ]
+      }
+    ]
+  }
 
-      <h1 className="mb-4 text-4xl font-bold">Contact Us</h1>
+  return (
+    <>
+      <Script
+        id="contact-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <div className="container mx-auto max-w-4xl px-4 py-12">
+        <div className="mb-8">
+          <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
+            ← Back to Home
+          </Link>
+        </div>
+
+        <h1 className="mb-4 text-4xl font-bold">Contact Us</h1>
       <p className="mb-12 text-xl text-muted-foreground">
         Have a question, feedback, or need support? We're here to help.
       </p>
@@ -228,5 +297,6 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

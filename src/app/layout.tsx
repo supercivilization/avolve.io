@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { LAST_VERIFIED_DATE } from "@/lib/schema";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://avolve.io'),
@@ -86,7 +87,7 @@ export default function RootLayout({
         "url": "https://avolve.io",
         "inLanguage": "en-US",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-06",
+        "dateModified": LAST_VERIFIED_DATE,
         "creator": {
           "@id": "https://www.joshuaseymour.com/#person"
         },
@@ -137,6 +138,17 @@ export default function RootLayout({
           }
         ],
         "keywords": "Next.js 15, React 19, TypeScript, modern web stack, stack integration, verified compatibility, Server Components, App Router, Tailwind CSS, shadcn/ui, Vercel, Supabase, AI-native development",
+        "hasPart": [
+          {
+            "@id": "https://avolve.io/blog#blog"
+          },
+          {
+            "@id": "https://avolve.io/about#aboutpage"
+          },
+          {
+            "@id": "https://avolve.io/contact#contactpage"
+          }
+        ],
         "potentialAction": {
           "@type": "SearchAction",
           "target": {
@@ -145,6 +157,31 @@ export default function RootLayout({
           },
           "query-input": "required name=search_term_string"
         }
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://avolve.io/blog#blog",
+        "name": "Avolve.io Technical Documentation",
+        "alternateName": "Modern Web Stack Knowledge Graph",
+        "description": "Production-tested integration patterns for Next.js 15, React 19, TypeScript 5.9, and the modern web development stack. Curated technical documentation optimized for developers and AI assistants.",
+        "url": "https://avolve.io",
+        "inLanguage": "en-US",
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "author": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
+        "isPartOf": {
+          "@id": "https://avolve.io/#website"
+        },
+        "datePublished": "2025-10-05",
+        "dateModified": LAST_VERIFIED_DATE,
+        "blogPost": [
+          {
+            "@id": "https://avolve.io/#article"
+          }
+        ]
       },
       {
         "@type": "Organization",
@@ -227,51 +264,6 @@ export default function RootLayout({
           "https://x.com/joshuaseymour",
           "https://t.me/joshuaseymour",
           "https://www.instagram.com/joshuajseymour/"
-        ]
-      },
-      {
-        "@type": "TechArticle",
-        "@id": "https://avolve.io/#article",
-        "headline": "Modern Web Development Stack Integration Reference",
-        "description": "Comprehensive guide to Next.js 15 + React 19.2 + TypeScript 5.9 stack integration with verified compatibility and official resources",
-        "datePublished": "2025-10-05",
-        "dateModified": "2025-10-06",
-        "author": {
-          "@id": "https://www.joshuaseymour.com/#person"
-        },
-        "publisher": {
-          "@id": "https://www.supercivilization.xyz/#organization"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://avolve.io/#website"
-        },
-        "isPartOf": {
-          "@id": "https://avolve.io/#website"
-        },
-        "articleSection": "Stack Integration",
-        "keywords": "Next.js 15, React 19, TypeScript, Vercel, Supabase, modern web stack",
-        "about": [
-          {
-            "@id": "https://avolve.io/software/nextjs#software"
-          },
-          {
-            "@id": "https://avolve.io/software/react#software"
-          },
-          {
-            "@id": "https://avolve.io/software/typescript#software"
-          },
-          {
-            "@type": "Thing",
-            "@id": "https://avolve.io/#web-development",
-            "name": "Web Development",
-            "sameAs": "https://en.wikipedia.org/wiki/Web_development"
-          },
-          {
-            "@type": "Thing",
-            "@id": "https://avolve.io/#software-framework",
-            "name": "Software Framework",
-            "sameAs": "https://en.wikipedia.org/wiki/Software_framework"
-          }
         ]
       }
     ]

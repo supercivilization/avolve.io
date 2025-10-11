@@ -31,12 +31,16 @@ export default function Home() {
     "@graph": [
       {
         "@type": "TechArticle",
+        "@id": "https://avolve.io/#article",
         "headline": "Modern Web Development Stack - October 2025",
         "description": "Integration knowledge graph for Next.js 15, React 19, TypeScript, Vercel AI SDK, and Supabase. Version-specific compatibility patterns verified in production as of October 2025.",
         "datePublished": formatSchemaDate(pageDates.published),
         "dateModified": LAST_VERIFIED_DATE,
         "author": authorRef,
         "publisher": publisherRef,
+        "isPartOf": {
+          "@id": "https://avolve.io/blog#blog"
+        },
         ...UNIVERSAL_PROPERTIES,
         "about": {
           "@type": "Thing",
@@ -135,6 +139,17 @@ export default function Home() {
               "@type": "Answer",
               "text": "Support covers operations maintaining production systems, including debugging, monitoring, incident response, and performance optimization."
             }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://avolve.io"
           }
         ]
       }
