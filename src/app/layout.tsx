@@ -97,6 +97,9 @@ export default function RootLayout({
         "codeRepository": "https://github.com/supercivilization/avolve.io",
         "about": [
           {
+            "@id": "https://avolve.io/#softwareapplication"
+          },
+          {
             "@type": "SoftwareApplication",
             "@id": "https://avolve.io/software/nextjs#software",
             "name": "Next.js",
@@ -182,6 +185,45 @@ export default function RootLayout({
             "@id": "https://avolve.io/#article"
           }
         ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://avolve.io/#softwareapplication",
+        "name": "Avolve.io",
+        "alternateName": "Avolve - Modern Web Development Stack Reference",
+        "description": "AI-native knowledge graph for modern web stack compatibility. Production-tested integration patterns for Next.js 15, React 19, TypeScript 5.9, Vercel AI SDK, and Supabase.",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Web Browser",
+        "url": "https://avolve.io",
+        "softwareVersion": "1.0",
+        "datePublished": "2025-10-05",
+        "dateModified": LAST_VERIFIED_DATE,
+        "creator": {
+          "@id": "https://www.joshuaseymour.com/#person"
+        },
+        "publisher": {
+          "@id": "https://www.supercivilization.xyz/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://avolve.io/#website"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Modern web stack compatibility verification",
+          "AI-optimized technical documentation",
+          "Integration pattern knowledge graph",
+          "Production-tested version matrices"
+        ],
+        "screenshot": {
+          "@type": "ImageObject",
+          "url": "https://avolve.io/og-image.png",
+          "width": 1200,
+          "height": 630
+        }
       },
       {
         "@type": "Organization",
