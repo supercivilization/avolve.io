@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 5, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.5
 // - REST API authentication
 // Last verified: 2025-10-05
@@ -70,7 +70,7 @@ export default function DataForSEOPage() {
 
       <main className="max-w-6xl mx-auto px-4 py-12">
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article className="mt-4">
@@ -215,7 +215,7 @@ export default function DataForSEOPage() {
           </section>
 
           <section id="nextjs-integration" className="mb-12 border-t pt-8">
-            <h2 className="text-3xl font-bold mb-6">Next.js 15 Integration Patterns</h2>
+            <h2 className="text-3xl font-bold mb-6">Next.js 16 Integration Patterns</h2>
 
             <div className="space-y-6">
               <div>
@@ -460,7 +460,7 @@ export async function POST(request: Request) {
               <div className="bg-muted/30 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Rank Tracking Dashboard</h3>
                 <p className="text-sm text-foreground mb-2">
-                  Track "Next.js 15", "React 19.2", "TypeScript 5.9" rankings daily using SERP API task-based endpoints.
+                  Track "Next.js 16", "React 19.2", "TypeScript 5.9" rankings daily using SERP API task-based endpoints.
                 </p>
                 <p className="text-xs text-muted-foreground">
                   <strong>Cost:</strong> 50 keywords × 30 days = $0.45/month

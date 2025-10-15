@@ -10,7 +10,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { AlertCircle, CheckCircle2 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
-// Dependencies (October 5, 2025):
+// Dependencies (October 15, 2025):
 // - React: 19.2.0 (released October 1, 2025)
 // - Next.js: 15.5.5
 // - TypeScript: 5.9.2
@@ -18,8 +18,8 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: "React 19.2 + Modern Stack Integration (Oct 2025) | Avolve.io",
-  description: "React 19.2 with Next.js 15, Server Components, and AI SDK. Stack integration patterns, verified compatibility, and official resources. Updated Oct 2025.",
-  keywords: ["React 19.2", "React 19", "React Next.js 15", "React Server Components", "React AI SDK", "React stack integration", "useActionState", "React Compiler"],
+  description: "React 19.2 with Next.js 16, Server Components, and AI SDK. Stack integration patterns, verified compatibility, and official resources. Updated Oct 2025.",
+  keywords: ["React 19.2", "React 19", "React Next.js 16", "React Server Components", "React AI SDK", "React stack integration", "useActionState", "React Compiler"],
   alternates: {
     canonical: "https://avolve.io/software/react",
   },
@@ -40,7 +40,7 @@ export default function ReactPage() {
         "publisher": {
           "@id": "https://www.supercivilization.xyz/#organization"
         },
-        "description": "React 19.2 integration with Next.js 15, Server Components, and modern stack. Verified compatibility patterns.",
+        "description": "React 19.2 integration with Next.js 16, Server Components, and modern stack. Verified compatibility patterns.",
         "articleSection": "Stack Integration"
       },
       {
@@ -104,7 +104,7 @@ export default function ReactPage() {
         </div>
 
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article className="mt-4 space-y-8">
@@ -188,7 +188,7 @@ export default function ReactPage() {
           <section id="getting-started" className="space-y-4">
             <h2 className="text-3xl font-bold">Getting Started</h2>
             <p className="text-muted-foreground">
-              React 19.2 comes automatically with Next.js 15.5. No additional configuration needed.
+              React 19.2 comes automatically with Next.js 16 Beta. No additional configuration needed.
             </p>
 
             <CodeBlock
@@ -205,7 +205,7 @@ npm list react react-dom`}
               <AlertCircle className="h-4 w-4" />
               <AlertTitle>React 19.2 Auto-Installed</AlertTitle>
               <AlertDescription>
-                Next.js 15.5 automatically installs React 19.2. No migration steps required for new projects.
+                Next.js 16 Beta automatically installs React 19.2. No migration steps required for new projects.
               </AlertDescription>
             </Alert>
           </section>
@@ -437,7 +437,7 @@ module.exports = {
               <div className="bg-stone-50 dark:bg-stone-950/20 border-l-4 border-stone-600 p-4 rounded-r-lg">
                 <h3 className="text-lg font-bold mb-2">⚠️ Breaking Changes (React 18 → 19)</h3>
                 <ul className="space-y-1 text-sm text-foreground">
-                  <li>• <strong>Next.js compatibility</strong>: React 19 requires Next.js 15+ (incompatible with Next.js 14)</li>
+                  <li>• <strong>Next.js compatibility</strong>: React 19 requires Next.js 16+ (incompatible with Next.js 14)</li>
                   <li>• <strong>Removed APIs</strong>: React.FC type removed, defaultProps deprecated for function components</li>
                   <li>• <strong>StrictMode changes</strong>: Double rendering behavior updated</li>
                   <li>• <strong>ref as prop</strong>: No longer needs forwardRef in most cases (automatic)</li>
@@ -456,7 +456,7 @@ module.exports = {
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Current Version:</h4>
-                  <p className="text-sm text-foreground">React 19.2.0 (verified October 6, 2025)</p>
+                  <p className="text-sm text-foreground">React 19.2.0 (verified October 15, 2025)</p>
                 </div>
 
                 <div>
@@ -483,7 +483,7 @@ module.exports = {
                 <div>
                   <h4 className="font-semibold mb-2">Critical Requirements:</h4>
                   <ul className="space-y-1 text-sm text-foreground">
-                    <li>• Next.js 15+ for full React 19 support (incompatible with Next.js 14)</li>
+                    <li>• Next.js 16+ for full React 19 support (incompatible with Next.js 14)</li>
                     <li>• Node.js 18.18+ for build tools</li>
                     <li>• Modern browser support (ES2020+)</li>
                   </ul>
@@ -524,7 +524,7 @@ module.exports = {
                 <div>
                   <h4 className="font-semibold mb-2">Integration Points:</h4>
                   <ul className="space-y-1 text-sm text-foreground">
-                    <li>• <strong>Next.js 15.5</strong>: Required for React 19 Server Components</li>
+                    <li>• <strong>Next.js 16 Beta</strong>: Required for React 19 Server Components</li>
                     <li>• <strong>TypeScript 5.9</strong>: Best type inference for React 19 features</li>
                     <li>• <strong>Tailwind CSS</strong>: className prop for styling</li>
                     <li>• <strong>Vercel AI SDK</strong>: useChat hook integrates with React streaming</li>

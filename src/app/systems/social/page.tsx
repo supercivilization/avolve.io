@@ -4,7 +4,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Social Media System - Modern Platform Strategies for Late 2025",
-  description: "Complete social media system: algorithm changes, authenticity-first content, short-form video dominance, micro-influencer strategies, AI-enhanced workflows. Production-tested with Next.js 15 + React 19.2. Updated October 2025.",
+  description: "Complete social media system: algorithm changes, authenticity-first content, short-form video dominance, micro-influencer strategies, AI-enhanced workflows. Production-tested with Next.js 16 + React 19.2. Updated October 2025.",
   keywords: ["social media 2025", "TikTok algorithm", "Instagram Reels", "YouTube Shorts", "authenticity marketing", "micro-influencers", "short-form video", "AI content"],
 };
 
@@ -18,7 +18,7 @@ export default function SocialSystemPage() {
       ]} />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-muted-foreground" dateTime="2025-10-05">Last updated: October 5, 2025</time>
+        <time className="text-sm text-muted-foreground" dateTime="2025-10-05">Last updated: October 15, 2025</time>
 
         <article className="mt-4">
           <h1 className="text-4xl font-bold mb-4 text-foreground">Social Media System</h1>

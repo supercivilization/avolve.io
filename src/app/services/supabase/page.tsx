@@ -523,8 +523,8 @@ DATABASE_URL=postgres://postgres.xxxxx:5432/postgres`,
               <h4 className="mb-2 font-medium text-neutral-900 dark:text-neutral-100">System Patterns</h4>
               <ul className="space-y-1 text-sm">
                 <li>
-                  <Link href="/systems/nextjs-15-supabase-auth" className="text-blue-600 hover:underline">
-                    Next.js 15 + Supabase Auth
+                  <Link href="/systems/nextjs-supabase-auth" className="text-blue-600 hover:underline">
+                    Next.js 16 + Supabase Auth
                   </Link>
                 </li>
                 <li>

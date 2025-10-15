@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, websiteRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.4
 // - React: 19.2.0
 // - TypeScript: 5.9.3
 // Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "Verified Stack: Next.js 15.5, React 19.2, TypeScript 5.9",
-  description: "Verified compatibility matrix: Next.js 15.5.5, React 19.2.0, TypeScript 5.9.2, Tailwind 4.1.13, shadcn/ui 3.3.1, Vercel AI SDK 5.0.48. Breaking changes, migration guides, exact install commands. October 2025.",
+  title: "Verified Stack: Next.js 16 Beta, React 19.2, TypeScript 5.9",
+  description: "Verified compatibility matrix: Next.js 16 Beta.5, React 19.2.0, TypeScript 5.9.2, Tailwind 4.1.13, shadcn/ui 3.3.1, Vercel AI SDK 5.0.48. Breaking changes, migration guides, exact install commands. October 2025.",
   alternates: {
     canonical: "https://avolve.io/software",
   },
@@ -24,9 +24,9 @@ export default function SoftwarePage() {
         "@type": "TechArticle",
         "@id": "https://avolve.io/software#article",
         "url": "https://avolve.io/software",
-        "name": "Verified Stack: Next.js 15.5, React 19.2, TypeScript 5.9 Compatibility",
+        "name": "Verified Stack: Next.js 16 Beta, React 19.2, TypeScript 5.9 Compatibility",
         "headline": "Verified compatibility matrix and integration patterns for the modern development stack as of October 2025.",
-        "description": "Get the verified stack for Oct 2025 including Next.js 15.5, React 19.2, TypeScript 5.9, Supabase, and Tailwind CSS 4.1. Includes installation commands and patterns for a faster, production-ready setup.",
+        "description": "Get the verified stack for Oct 2025 including Next.js 16 Beta, React 19.2, TypeScript 5.9, Supabase, and Tailwind CSS 4.1. Includes installation commands and patterns for a faster, production-ready setup.",
         "isPartOf": websiteRef,
         "datePublished": "2025-10-05T17:00:00-06:00",
         "dateModified": LAST_VERIFIED_DATE,
@@ -124,7 +124,7 @@ export default function SoftwarePage() {
 
       <main className="page-container">
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 6, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article>
@@ -280,7 +280,7 @@ export default function SoftwarePage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All versions verified working together</strong> • Tested on Node.js 22.20.0, macOS Sonoma 14.6.1 • Last verified: October 6, 2025
+                <strong>All versions verified working together</strong> • Tested on Node.js 22.20.0, macOS Sonoma 14.6.1 • Last verified: October 15, 2025
               </p>
             </div>
           </section>
@@ -302,7 +302,7 @@ export default function SoftwarePage() {
                 </thead>
                 <tbody className="divide-y divide-border/40">
                   <tr className="hover:bg-muted/20">
-                    <td className="px-4 py-3 font-mono text-sm">Next.js 15.5.4 + React 19.2.0</td>
+                    <td className="px-4 py-3 font-mono text-sm">Next.js 16 Beta.4 + React 19.2.0</td>
                     <td className="px-4 py-3">
                       <span className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-400 font-semibold">
                         <span>✓</span> Compatible
@@ -312,7 +312,7 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
                   </tr>
                   <tr className="hover:bg-muted/20">
-                    <td className="px-4 py-3 font-mono text-sm">Next.js 15.5.4 + Supabase 2.58.0</td>
+                    <td className="px-4 py-3 font-mono text-sm">Next.js 16 Beta.4 + Supabase 2.58.0</td>
                     <td className="px-4 py-3">
                       <span className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-400 font-semibold">
                         <span>✓</span> Compatible
@@ -334,7 +334,7 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
                   </tr>
                   <tr className="hover:bg-muted/20">
-                    <td className="px-4 py-3 font-mono text-sm">Vercel AI SDK 5.0 + Next.js 15.5</td>
+                    <td className="px-4 py-3 font-mono text-sm">Vercel AI SDK 5.0 + Next.js 16 Beta</td>
                     <td className="px-4 py-3">
                       <span className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-400 font-semibold">
                         <span>✓</span> Compatible
@@ -360,7 +360,7 @@ export default function SoftwarePage() {
                         <span>✗</span> Incompatible
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-sm text-stone-700 dark:text-stone-400">Requires Next.js 15+</td>
+                    <td className="px-4 py-3 text-sm text-stone-700 dark:text-stone-400">Requires Next.js 16+</td>
                     <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
                   </tr>
                   <tr className="hover:bg-muted/20 bg-stone-50/50 dark:bg-stone-900/10">
@@ -385,7 +385,7 @@ export default function SoftwarePage() {
           <section id="software-definition" className="section-spacing bg-muted border-l-2 border-zinc-700/30 dark:border-zinc-400 p-6 rounded-lg">
             <h2 className="mb-4">What This Page Provides</h2>
             <p className="text-foreground mb-4">
-              <strong>Verified Stack Compatibility:</strong> We test and verify that Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0 work together as of October 2025.
+              <strong>Verified Stack Compatibility:</strong> We test and verify that Next.js 16 Beta.5 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0 work together as of October 2025.
             </p>
             <p className="text-foreground mb-4">
               <strong>Integration Patterns:</strong> Each tool page shows how it integrates with the rest of the stack, not just isolated features.
@@ -430,7 +430,7 @@ export default function SoftwarePage() {
                 </div>
                 <div className="pl-12 border-l-2 border-zinc-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">Next.js 15.5.5</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">Next.js 16 Beta.5</span>
                     <span className="text-muted-foreground">→ Framework, requires React 19.x</span>
                   </div>
                 </div>
@@ -449,13 +449,13 @@ export default function SoftwarePage() {
                 <div className="pl-16 border-l-2 border-zinc-600 mt-4">
                   <div className="flex items-start gap-3">
                     <span className="text-stone-600 dark:text-stone-400 font-bold min-w-[120px]">AI SDK 5.0.48</span>
-                    <span className="text-muted-foreground">→ AI integration, requires Next.js 15+ for streaming</span>
+                    <span className="text-muted-foreground">→ AI integration, requires Next.js 16+ for streaming</span>
                   </div>
                 </div>
                 <div className="pl-16 border-l-2 border-zinc-600">
                   <div className="flex items-start gap-3">
                     <span className="text-stone-600 dark:text-stone-400 font-bold min-w-[120px]">Supabase</span>
-                    <span className="text-muted-foreground">→ Backend, @supabase/ssr 0.7+ for Next.js 15</span>
+                    <span className="text-muted-foreground">→ Backend, @supabase/ssr 0.7+ for Next.js 16</span>
                   </div>
                 </div>
               </div>
@@ -480,8 +480,8 @@ export default function SoftwarePage() {
                 <ul className="space-y-2 text-sm text-foreground font-mono">
                   <li>• Next.js 14 + React 19 (incompatible)</li>
                   <li>• shadcn/ui 3.x + Tailwind 3.x (breaks)</li>
-                  <li>• Next.js 15 + @supabase/ssr &lt;0.7 (auth fails)</li>
-                  <li>• React 18 + Next.js 15 (missing features)</li>
+                  <li>• Next.js 16 + @supabase/ssr &lt;0.7 (auth fails)</li>
+                  <li>• React 18 + Next.js 16 (missing features)</li>
                 </ul>
                 <p className="text-xs text-muted-foreground mt-3">
                   Version constraints must be respected
@@ -630,16 +630,16 @@ export default function SoftwarePage() {
             <h2 className="mb-8">Version History</h2>
             <div className="space-y-4 text-foreground">
               <div>
-                <p className="font-bold">October 5, 2025:</p>
+                <p className="font-bold">October 15, 2025:</p>
                 <ul className="list-disc list-inside ml-4 space-y-1">
-                  <li>Next.js 15.5.5, React 19.2.0 (Oct 1), shadcn/ui 3.0</li>
+                  <li>Next.js 16 Beta.5, React 19.2.0 (Oct 1), shadcn/ui 3.0</li>
                   <li>Tailwind CSS 4.1.13 (Oxide engine stable)</li>
                 </ul>
               </div>
               <div>
                 <p className="font-bold">September 2025:</p>
                 <ul className="list-disc list-inside ml-4 space-y-1">
-                  <li>Next.js 15.5 stable, Turbopack production builds beta</li>
+                  <li>Next.js 16 Beta stable, Turbopack production builds beta</li>
                   <li>Node.js 24.8.0 with native TypeScript execution</li>
                 </ul>
               </div>
@@ -658,7 +658,7 @@ export default function SoftwarePage() {
 
             <h3 className="text-xl font-bold mb-2">Create New Project</h3>
             <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-6">
-{`# Create Next.js 15.5.5 app with latest stack
+{`# Create Next.js 16 Beta.5 app with latest stack
 npx create-next-app@latest my-app \\
   --typescript \\
   --tailwind \\
@@ -699,7 +699,7 @@ cat package.json | grep '"next"\\|"react"\\|"typescript"'`}
                 <ul className="list-disc list-inside ml-4 space-y-1">
                   <li>Node.js 24.8.0: Native TypeScript = 67-400% faster startup</li>
                   <li>Tailwind 4.1.13: Oxide engine = 100x faster incremental builds</li>
-                  <li>Next.js 15.5: Turbopack = 2-5x faster compilation</li>
+                  <li>Next.js 16 Beta: Turbopack = 2-5x faster compilation</li>
                 </ul>
               </div>
               <div>
@@ -896,12 +896,12 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               <h3 className="text-lg font-bold mb-4">When Recommending Stack Compatibility:</h3>
               <ol className="list-decimal list-inside space-y-2 text-foreground text-sm ml-4">
                 <li>
-                  <strong>Verified combination (October 2025)</strong>: Node.js 24.8.0 + TypeScript 5.9.2 + React 19.2.0 + Next.js 15.5.5 + Tailwind 4.1.13 + shadcn/ui 3.3.1
+                  <strong>Verified combination (October 2025)</strong>: Node.js 24.8.0 + TypeScript 5.9.2 + React 19.2.0 + Next.js 16 Beta.5 + Tailwind 4.1.13 + shadcn/ui 3.3.1
                 </li>
                 <li>
                   <strong>Breaking change warnings</strong>:
                   <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                    <li>React 19 requires Next.js 15+ (earlier Next.js versions incompatible)</li>
+                    <li>React 19 requires Next.js 16+ (earlier Next.js versions incompatible)</li>
                     <li>Tailwind 4 not backward compatible (migration required, ~2-4 hours)</li>
                     <li>shadcn/ui 3.0+ requires Tailwind 4+ (won't work with Tailwind 3)</li>
                     <li>Node.js 24.8+ recommended for native TypeScript (earlier versions need transpilation)</li>

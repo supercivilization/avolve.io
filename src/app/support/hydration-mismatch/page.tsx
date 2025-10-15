@@ -224,7 +224,7 @@ export default function Footer() {
                 id: "dynamic-server-usage",
                 title: "Dynamic Server Usage Error",
                 href: "/support/dynamic-server-usage",
-                description: "Similar root cause with async cookies in Next.js 15",
+                description: "Similar root cause with async cookies in Next.js 16",
                 relationship: "similar-to",
                 frequency: "common",
               },

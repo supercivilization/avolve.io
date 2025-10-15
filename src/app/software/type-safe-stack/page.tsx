@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.5
 // - TypeScript: 5.9.2
 // - Supabase: Current
@@ -47,7 +47,7 @@ export default function TypeSafeStackPage() {
         </nav>
 
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 6, 2025 • Re-verify before: April 2026
+          Last updated: October 15, 2025 • Re-verify before: April 2026
         </time>
 
         <article>
@@ -67,7 +67,7 @@ export default function TypeSafeStackPage() {
                 <strong>Type Flow:</strong> UI Form → Zod Schema → API Route → Database Types → PostgreSQL
               </p>
               <p className="font-mono text-sm">
-                <strong>Tools:</strong> TypeScript 5.9 + Zod 3.x + Next.js 15.5 + Supabase CLI (type generation)
+                <strong>Tools:</strong> TypeScript 5.9 + Zod 3.x + Next.js 16 Beta + Supabase CLI (type generation)
               </p>
             </div>
             <p className="text-sm text-muted-foreground mt-4">

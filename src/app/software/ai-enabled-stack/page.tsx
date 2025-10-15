@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.5
 // - Vercel AI SDK: 5.0.48
 // - Claude Sonnet 4.5: claude-sonnet-4-5-20250929
@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "AI-Enabled Stack: Production AI Applications | Avolve.io",
-  description: "Complete AI application pathway: Next.js 15.5 → Vercel AI SDK 5.0 → Claude Sonnet 4.5 (77.2% SWE-bench) → Streaming → Rate limiting → Production patterns. Verified October 2025. Optimized for Claude Code.",
+  description: "Complete AI application pathway: Next.js 16 Beta → Vercel AI SDK 5.0 → Claude Sonnet 4.5 (77.2% SWE-bench) → Streaming → Rate limiting → Production patterns. Verified October 2025. Optimized for Claude Code.",
   alternates: {
     canonical: "https://avolve.io/software/ai-enabled-stack",
   },
@@ -46,7 +46,7 @@ export default function AIEnabledStackPage() {
         </nav>
 
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 6, 2025 • Re-verify before: April 2026
+          Last updated: October 15, 2025 • Re-verify before: April 2026
         </time>
 
         <article>
@@ -66,7 +66,7 @@ export default function AIEnabledStackPage() {
               <div>
                 <p className="font-bold mb-1">Stack (October 2025):</p>
                 <p className="font-mono text-sm">
-                  Next.js 15.5.5 → Vercel AI SDK 5.0.48 → Claude Sonnet 4.5 (claude-sonnet-4-5-20250929) OR GPT-4 → @upstash/ratelimit → Supabase (conversation history)
+                  Next.js 16 Beta.5 → Vercel AI SDK 5.0.48 → Claude Sonnet 4.5 (claude-sonnet-4-5-20250929) OR GPT-4 → @upstash/ratelimit → Supabase (conversation history)
                 </p>
               </div>
 
@@ -164,7 +164,7 @@ export default function AIEnabledStackPage() {
                 <div className="bg-muted p-4 rounded-lg">
                   <p className="font-bold mb-2">Required Before Starting:</p>
                   <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>Next.js 15.5+ project with App Router (see <Link href="/software/react-to-production" className="hover:underline">React to Production</Link>)</li>
+                    <li>Next.js 16 Beta+ project with App Router (see <Link href="/software/react-to-production" className="hover:underline">React to Production</Link>)</li>
                     <li>Anthropic API key (get at console.anthropic.com) OR OpenAI API key (platform.openai.com)</li>
                     <li>Environment variables configured (.env.local)</li>
                   </ul>
@@ -174,7 +174,7 @@ export default function AIEnabledStackPage() {
               {/* Layer 1: AI SDK Setup */}
               <div className="border-l-2 border-slate-600/30 dark:border-slate-600 pl-6">
                 <h3 className="text-xl font-bold mb-2">Layer 1: Vercel AI SDK Setup</h3>
-                <p className="text-sm text-muted-foreground mb-3">AI integration layer • Requires: Next.js 15+</p>
+                <p className="text-sm text-muted-foreground mb-3">AI integration layer • Requires: Next.js 16+</p>
 
                 <div className="bg-muted p-4 rounded-lg mb-4">
                   <p className="font-bold mb-2">Install AI SDK + Provider</p>

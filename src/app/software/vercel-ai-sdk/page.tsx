@@ -10,7 +10,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { AlertCircle, CheckCircle2 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Vercel AI SDK: 5.0.60
 // - Next.js: 15.5.4
 // - React: 19.2.0
@@ -18,7 +18,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: "Vercel AI SDK 5.0.60 + Modern Stack Integration (Oct 2025) | Avolve.io",
-  description: "Vercel AI SDK 5.0.60 with Next.js 15, React 19, streaming, tool calling. Stack integration patterns, verified compatibility, and official resources. Updated Oct 2025.",
+  description: "Vercel AI SDK 5.0.60 with Next.js 16, React 19, streaming, tool calling. Stack integration patterns, verified compatibility, and official resources. Updated Oct 2025.",
   keywords: ["Vercel AI SDK", "AI SDK 5.0", "Next.js AI", "streaming AI", "tool calling", "Claude Sonnet 4.5", "GPT-5", "AI Gateway"],
   alternates: {
     canonical: "https://avolve.io/software/vercel-ai-sdk",
@@ -40,7 +40,7 @@ export default function VercelAISDKPage() {
         "publisher": {
           "@id": "https://www.supercivilization.xyz/#organization"
         },
-        "description": "Vercel AI SDK 5.0.60 integration with Next.js 15, React 19, and modern stack. Verified compatibility patterns.",
+        "description": "Vercel AI SDK 5.0.60 integration with Next.js 16, React 19, and modern stack. Verified compatibility patterns.",
         "articleSection": "Stack Integration"
       },
       {
@@ -104,7 +104,7 @@ export default function VercelAISDKPage() {
         </div>
 
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article className="mt-4 space-y-8">
@@ -222,7 +222,7 @@ npm install ai @ai-sdk/google`}
           <section id="integration-patterns" className="space-y-4">
             <h2 className="text-3xl font-bold">Integration Patterns</h2>
 
-            <h3 className="text-2xl font-bold">Streaming Chat with Next.js 15</h3>
+            <h3 className="text-2xl font-bold">Streaming Chat with Next.js 16</h3>
             <p className="text-muted-foreground">
               Server Actions + React 19 streaming for real-time AI responses.
             </p>
@@ -548,7 +548,7 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Current Version:</h4>
-                  <p className="text-sm text-foreground">Vercel AI SDK 5.0.60 (verified October 6, 2025)</p>
+                  <p className="text-sm text-foreground">Vercel AI SDK 5.0.60 (verified October 15, 2025)</p>
                 </div>
 
                 <div>
@@ -578,7 +578,7 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
                   <ul className="space-y-1 text-sm text-foreground">
                     <li>• <strong>Node.js 18.18+</strong> required (native fetch support)</li>
                     <li>• <strong>TypeScript 5.0+</strong> recommended (Zod schemas for tool parameters)</li>
-                    <li>• <strong>Next.js 15+</strong> for streaming with React Server Components</li>
+                    <li>• <strong>Next.js 16+</strong> for streaming with React Server Components</li>
                     <li>• <strong>React 19+</strong> for optimal streaming UX (Suspense, useOptimistic)</li>
                   </ul>
                 </div>
@@ -636,7 +636,7 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
                   <h4 className="font-semibold mb-2">Integration Points:</h4>
                   <ul className="space-y-1 text-sm text-foreground">
                     <li>• <strong>Requires</strong>: Node.js 18.18+, TypeScript 5.0+</li>
-                    <li>• <strong>Works with</strong>: Next.js 15+, React 19+, Zod 4+</li>
+                    <li>• <strong>Works with</strong>: Next.js 16+, React 19+, Zod 4+</li>
                     <li>• <strong>Integrates with</strong>: OpenAI, Anthropic, Google, 25+ providers</li>
                     <li>• <strong>Used in</strong>: Chat interfaces, agents, tool calling workflows</li>
                   </ul>

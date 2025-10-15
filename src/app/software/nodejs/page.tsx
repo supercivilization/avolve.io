@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Node.js: 22.20.0 LTS (production), 24.9.0 (becomes LTS Oct 28, 2025)
 // - V8 Engine: 13.6
 // - npm: 11.6.0
@@ -60,7 +60,7 @@ export default function NodeJSPage() {
 
       <main className="max-w-6xl mx-auto px-4 py-12">
         <time className="text-sm text-muted-foreground" dateTime="2025-10-06">
-          Last updated: October 6, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article className="mt-4">
@@ -325,7 +325,7 @@ const sharedArray = new Int32Array(sharedBuffer);`}</pre>
 
             <div className="space-y-6">
               <div className="bg-muted p-4 rounded-lg border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
-                <h3 className="text-lg font-bold mb-3">Node.js 24.9.0 / 22.20.0 LTS + Next.js 15.5 Integration</h3>
+                <h3 className="text-lg font-bold mb-3">Node.js 24.9.0 / 22.20.0 LTS + Next.js 16 Beta Integration</h3>
                 <div className="space-y-3">
                   <div>
                     <h4 className="font-bold text-sm mb-2">1. Project Setup:</h4>
@@ -535,7 +535,7 @@ server.listen(3000);
               <div>
                 <h3 className="font-bold mb-2 text-foreground">Foundation For:</h3>
                 <ul className="space-y-2 text-sm text-foreground">
-                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 15.5</Link> - React framework runtime</li>
+                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 16 Beta</Link> - React framework runtime</li>
                   <li>• <Link href="/software/react" className="text-primary hover:underline">React 19</Link> - Server Components execution</li>
                   <li>• <Link href="/software/typescript" className="text-primary hover:underline">TypeScript 5.9</Link> - Native .ts file execution</li>
                   <li>• <Link href="/software/vercel-ai-sdk" className="text-primary hover:underline">Vercel AI SDK</Link> - AI application runtime</li>

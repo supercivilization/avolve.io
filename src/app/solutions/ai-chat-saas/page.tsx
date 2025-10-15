@@ -14,9 +14,9 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 export const metadata: Metadata = {
   title: "AI Chat SaaS Application | Complete Full-Stack Solution | Avolve.io",
   description:
-    "Production-ready AI Chat SaaS with Next.js 15, Supabase, Anthropic Claude, and Stripe. Complete architecture, cost models, and implementation guide for streaming chat with usage tracking and subscriptions.",
+    "Production-ready AI Chat SaaS with Next.js 16, Supabase, Anthropic Claude, and Stripe. Complete architecture, cost models, and implementation guide for streaming chat with usage tracking and subscriptions.",
   keywords:
-    "AI chat SaaS, Next.js 15 AI app, Supabase chat, Anthropic integration, Stripe subscriptions, AI streaming, usage tracking, production AI architecture",
+    "AI chat SaaS, Next.js 16 AI app, Supabase chat, Anthropic integration, Stripe subscriptions, AI streaming, usage tracking, production AI architecture",
   openGraph: {
     title: "AI Chat SaaS Application - Complete Full-Stack Solution",
     description:
@@ -105,7 +105,7 @@ export default function AIPageChatSaaSPage() {
 
           <h3>Technical Features</h3>
           <ul>
-            <li>Next.js 15 App Router with React Server Components</li>
+            <li>Next.js 16 App Router with React Server Components</li>
             <li>Supabase PostgreSQL with Row Level Security (RLS)</li>
             <li>Vercel AI SDK for streaming AI responses</li>
             <li>Stripe webhooks for subscription lifecycle management</li>
@@ -197,9 +197,9 @@ export default function AIPageChatSaaSPage() {
               // System Patterns
               {
                 id: "nextjs-supabase-auth",
-                label: "Next.js 15 + Supabase Auth",
+                label: "Next.js 16 + Supabase Auth",
                 type: "system",
-                href: "/systems/nextjs-15-supabase-auth",
+                href: "/systems/nextjs-supabase-auth",
                 description: "Authentication with middleware cookie handling",
               },
               {
@@ -226,7 +226,7 @@ export default function AIPageChatSaaSPage() {
               // Software Stack
               {
                 id: "nextjs",
-                label: "Next.js 15",
+                label: "Next.js 16",
                 type: "software",
                 href: "/software/nextjs",
                 description: "React framework with App Router",
@@ -291,8 +291,8 @@ export default function AIPageChatSaaSPage() {
           <FullStackBreakdown
             systems={[
               {
-                name: "Next.js 15 + Supabase Auth",
-                href: "/systems/nextjs-15-supabase-auth",
+                name: "Next.js 16 + Supabase Auth",
+                href: "/systems/nextjs-supabase-auth",
                 description: "User authentication with social login and email/password",
               },
               {
@@ -313,7 +313,7 @@ export default function AIPageChatSaaSPage() {
             ]}
             software={[
               {
-                name: "Next.js 15.5",
+                name: "Next.js 16 Beta",
                 href: "/software/nextjs",
                 description: "React framework with App Router and Server Components",
               },
@@ -369,7 +369,7 @@ export default function AIPageChatSaaSPage() {
               {
                 name: "Dynamic Server Usage Error",
                 href: "/support/dynamic-server-usage",
-                description: "Fix Next.js 15 async cookie/header errors",
+                description: "Fix Next.js 16 async cookie/header errors",
               },
               {
                 name: "AI Streaming Errors",
@@ -509,7 +509,7 @@ export default function AIPageChatSaaSPage() {
             tasks={[
               {
                 id: "setup-1",
-                name: "Initialize Next.js 15 project with TypeScript",
+                name: "Initialize Next.js 16 project with TypeScript",
                 estimate: "15 min",
                 category: "Project Setup",
               },
@@ -801,7 +801,7 @@ export default function AIPageChatSaaSPage() {
                 severity: "medium",
                 symptom: "PKCE flow failed error or users can't log in after social auth redirect",
                 cause:
-                  "Supabase auth cookies must be set on both request AND response in Next.js 15 middleware, or PKCE flow fails silently.",
+                  "Supabase auth cookies must be set on both request AND response in Next.js 16 middleware, or PKCE flow fails silently.",
                 prevention:
                   "Follow Supabase Next.js SSR guide exactly. Set cookies on both request and response. Test auth flow in production-like environment. Add comprehensive auth logging.",
                 supportLink: {
@@ -903,7 +903,7 @@ export default function AIPageChatSaaSPage() {
             <div>
               <h3 className="mb-3 text-xl font-semibold text-slate-900 dark:text-slate-100">1. Initialize Project</h3>
               <InteractiveCodeBlock
-                code={`# Create Next.js 15 project
+                code={`# Create Next.js 16 project
 npx create-next-app@latest ai-chat-saas --typescript --tailwind --app
 
 # Install dependencies
@@ -994,7 +994,7 @@ export default function ChatPage() {
           <ol>
             <li>
               <strong>
-                <Link href="/systems/nextjs-15-supabase-auth">Set up authentication</Link>
+                <Link href="/systems/nextjs-supabase-auth">Set up authentication</Link>
               </strong>{" "}
               - Follow the complete guide for Supabase auth integration
             </li>
@@ -1031,8 +1031,8 @@ export default function ChatPage() {
               <h4 className="mb-2 font-medium text-slate-900 dark:text-slate-100">System Patterns</h4>
               <ul className="space-y-1 text-sm">
                 <li>
-                  <Link href="/systems/nextjs-15-supabase-auth" className="text-blue-600 hover:underline">
-                    Next.js 15 + Supabase Auth
+                  <Link href="/systems/nextjs-supabase-auth" className="text-blue-600 hover:underline">
+                    Next.js 16 + Supabase Auth
                   </Link>
                 </li>
                 <li>

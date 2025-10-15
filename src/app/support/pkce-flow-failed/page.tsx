@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "PKCE Flow Failed Error | Support | Avolve.io",
   description:
     "Fix Supabase PKCE flow failed error in Next.js 15. Cookie timing issue in middleware causes silent auth failures.",
-  keywords: "PKCE flow failed, Supabase auth error, Next.js 15 cookies, middleware auth, social login error",
+  keywords: "PKCE flow failed, Supabase auth error, Next.js 16 cookies, middleware auth, social login error",
 }
 
 export default function PKCEFlowFailedPage() {
@@ -99,7 +99,7 @@ export async function middleware(request) {
             location="Supabase auth middleware, OAuth callback handling"
             severity="high"
             affects={[
-              "Next.js 15+",
+              "Next.js 16+",
               "Supabase SSR latest",
               "Social login redirect returns to app but user not logged in",
               "No error shown to user, just silently fails",
@@ -111,8 +111,8 @@ export async function middleware(request) {
 
         <div className="mb-12">
           <RootCause
-            title="Cookie Timing Issue in Next.js 15"
-            explanation="Next.js 15 middleware requires cookies to be set on both the request AND response objects. Supabase's PKCE flow exchanges a code for a session and stores it in cookies. If cookies aren't set on both objects, the session is lost."
+            title="Cookie Timing Issue in Next.js 16"
+            explanation="Next.js 16 middleware requires cookies to be set on both the request AND response objects. Supabase's PKCE flow exchanges a code for a session and stores it in cookies. If cookies aren't set on both objects, the session is lost."
             contributingFactors={[
               "PKCE (Proof Key for Code Exchange) is OAuth 2.0 security extension",
               "Code verifier stored in cookie before redirect to OAuth provider",
@@ -255,7 +255,7 @@ ORDER BY hour DESC;`,
                 id: "dynamic-server-usage",
                 title: "Dynamic Server Usage Error",
                 href: "/support/dynamic-server-usage",
-                description: "Another Next.js 15 cookie-related error",
+                description: "Another Next.js 16 cookie-related error",
                 relationship: "similar-to",
                 frequency: "common",
               },
@@ -278,8 +278,8 @@ ORDER BY hour DESC;`,
               <h4 className="mb-2 font-medium text-amber-900 dark:text-amber-100">System Patterns</h4>
               <ul className="space-y-1 text-sm">
                 <li>
-                  <Link href="/systems/nextjs-15-supabase-auth" className="text-blue-600 hover:underline">
-                    Next.js 15 + Supabase Auth
+                  <Link href="/systems/nextjs-supabase-auth" className="text-blue-600 hover:underline">
+                    Next.js 16 + Supabase Auth
                   </Link>
                 </li>
               </ul>

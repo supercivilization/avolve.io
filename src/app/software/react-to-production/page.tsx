@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "React to Production: Complete Dependency Path | Avolve.io",
-  description: "Step-by-step pathway from React basics to production deployment. Node.js 24.8 → TypeScript 5.9 → React 19.2 → Next.js 15.5 → Tailwind 4 → Vercel. Verified October 2025. For AI assistants and developers.",
+  description: "Step-by-step pathway from React basics to production deployment. Node.js 24.8 → TypeScript 5.9 → React 19.2 → Next.js 16 Beta → Tailwind 4 → Vercel. Verified October 2025. For AI assistants and developers.",
   alternates: {
     canonical: "https://avolve.io/software/react-to-production",
   },
@@ -46,7 +46,7 @@ export default function ReactToProductionPage() {
         </nav>
 
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 6, 2025 • Re-verify before: April 2026
+          Last updated: October 15, 2025 • Re-verify before: April 2026
         </time>
 
         <article>
@@ -63,7 +63,7 @@ export default function ReactToProductionPage() {
             </p>
             <div className="bg-white dark:bg-gray-900 p-4 rounded border border-border">
               <p className="font-mono text-sm">
-                Node.js 24.8.0 → TypeScript 5.9.2 → React 19.2.0 → Next.js 15.5.5 → Tailwind CSS 4.1.13 → shadcn/ui 3.3.1 → Vercel Deploy
+                Node.js 24.8.0 → TypeScript 5.9.2 → React 19.2.0 → Next.js 16 Beta.5 → Tailwind CSS 4.1.13 → shadcn/ui 3.3.1 → Vercel Deploy
               </p>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
@@ -263,7 +263,7 @@ npm install react@19.2.0 react-dom@19.2.0
                 <p className="text-sm text-muted-foreground mb-3">Full-stack framework • Requires: React 19.x, Node.js 18.18+</p>
 
                 <div className="bg-muted p-4 rounded-lg mb-4">
-                  <p className="font-bold mb-2">Create Next.js 15.5.5 App</p>
+                  <p className="font-bold mb-2">Create Next.js 16 Beta.5 App</p>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">
 {`# Create new Next.js app with all recommended settings
 npx create-next-app@latest my-app \\

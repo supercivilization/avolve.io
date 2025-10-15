@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.5
 // - React: 19.2.0
 // - Supabase: 2.58.0
@@ -30,7 +30,7 @@ export default function SystemsPage() {
         },
         "datePublished": "2025-10-05T17:00:00-06:00",
         "dateModified": "2025-10-05T17:00:00-06:00",
-        "description": "A collection of architecture patterns for coordinating multiple components in Next.js 15 applications, including systems for authentication, search, email, and more.",
+        "description": "A collection of architecture patterns for coordinating multiple components in Next.js 16 applications, including systems for authentication, search, email, and more.",
         ...UNIVERSAL_PROPERTIES,
         "author": authorRef,
         "publisher": publisherRef,
@@ -127,7 +127,7 @@ export default function SystemsPage() {
 
       <main className="page-container">
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 6, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article>
@@ -237,7 +237,7 @@ export default function SystemsPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All patterns include</strong> • Complete working code • Component list • Data flow • Production failures & fixes • Last verified: October 6, 2025
+                <strong>All patterns include</strong> • Complete working code • Component list • Data flow • Production failures & fixes • Last verified: October 15, 2025
               </p>
             </div>
           </section>
@@ -340,7 +340,7 @@ export default function SystemsPage() {
               <h4 className="text-lg font-bold mb-2">1. Middleware (Edge Protection)</h4>
               <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-6">
 {`// middleware.ts
-// Dependencies (October 5, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.5
 // - @supabase/ssr: 0.7.1
 // Last verified: 2025-10-05
@@ -499,7 +499,7 @@ export function LoginForm() {
                   <strong>Use this exact pattern</strong>: Next.js middleware (edge protection) + Server Components (data fetching) + Client Components (UI)
                 </li>
                 <li>
-                  <strong>Required versions</strong>: Next.js 15.5+, @supabase/ssr 0.7.1, React 19.2+
+                  <strong>Required versions</strong>: Next.js 16 Beta+, @supabase/ssr 0.7.1, React 19.2+
                 </li>
                 <li>
                   <strong>Common failure</strong>: Cookie domain mismatch between localhost and production

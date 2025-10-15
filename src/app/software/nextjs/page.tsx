@@ -11,16 +11,16 @@ import { AlertCircle, CheckCircle2 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { authorRef, publisherRef, LAST_VERIFIED_DATE } from "@/lib/schema";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.4
 // - React: 19.2.0
 // - Node.js: 22.20.0 LTS
 // Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "Next.js 15 + Modern Stack Integration (Oct 2025) | Avolve.io",
-  description: "Next.js 15.5 with React 19.2, TypeScript 5.9, and AI SDK 5.0. Stack integration patterns, version compatibility, and official resources. Verified Oct 2025.",
-  keywords: ["Next.js 15", "Next.js React 19", "Next.js AI SDK", "Next.js stack", "Next.js integration", "Next.js 2025"],
+  title: "Next.js 16 + Modern Stack Integration (Oct 2025) | Avolve.io",
+  description: "Next.js 16 Beta with React 19.2, TypeScript 5.9, and AI SDK 5.0. Stack integration patterns, version compatibility, and official resources. Verified Oct 2025.",
+  keywords: ["Next.js 16", "Next.js React 19", "Next.js AI SDK", "Next.js stack", "Next.js integration", "Next.js 2025"],
   alternates: {
     canonical: "https://avolve.io/software/nextjs",
   },
@@ -32,12 +32,12 @@ export default function NextJsPage() {
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "Next.js 15 + Modern Stack Integration (October 2025)",
+        "headline": "Next.js 16 + Modern Stack Integration (October 2025)",
         "datePublished": "2025-10-05",
         "dateModified": LAST_VERIFIED_DATE,
         "author": authorRef,
         "publisher": publisherRef,
-        "description": "Next.js 15.5 integration with React 19.2, AI SDK 5.0, and modern stack. Verified compatibility patterns.",
+        "description": "Next.js 16 Beta integration with React 19.2, AI SDK 5.0, and modern stack. Verified compatibility patterns.",
         "articleSection": "Stack Integration"
       },
       {
@@ -101,13 +101,13 @@ export default function NextJsPage() {
         </div>
 
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article className="mt-4 space-y-8">
           <header className="space-y-4">
             <div className="flex items-center gap-3">
-              <h1 className="text-4xl font-bold">Next.js 15</h1>
+              <h1 className="text-4xl font-bold">Next.js 16</h1>
               <Badge variant="default">v15.5.4</Badge>
               <Badge variant="outline" className="bg-muted/30 text-zinc-600 dark:text-zinc-400 border-zinc-300">Production Ready</Badge>
             </div>
@@ -205,7 +205,7 @@ npm run dev`}
               <AlertCircle className="h-4 w-4" />
               <AlertTitle>Using React 19.2.0</AlertTitle>
               <AlertDescription>
-                Next.js 15.5.4 fully supports React 19.2. No additional configuration needed.
+                Next.js 16 Beta.4 fully supports React 19.2. No additional configuration needed.
               </AlertDescription>
             </Alert>
           </section>
@@ -353,7 +353,7 @@ export function ClientTime() {
 
             <div className="space-y-4">
               <div className="border-l-4 border-slate-600 pl-6 bg-slate-50 dark:bg-slate-950/20 p-4 rounded-r-lg">
-                <h3 className="text-lg font-bold mb-2">September 2025: Next.js 15.5 - Production Readiness</h3>
+                <h3 className="text-lg font-bold mb-2">September 2025: Next.js 16 Beta - Production Readiness</h3>
                 <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Turbopack production builds</strong> graduated from beta to stable (2-5x faster than Webpack)</li>
                   <li>• <strong>Partial Prerendering (PPR)</strong> moved from experimental to stable</li>
@@ -403,7 +403,7 @@ export function ClientTime() {
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Current Version:</h4>
-                  <p className="text-sm text-foreground">Next.js 15.5.4 (verified October 6, 2025)</p>
+                  <p className="text-sm text-foreground">Next.js 16 Beta.4 (verified October 15, 2025)</p>
                 </div>
 
                 <div>
@@ -430,7 +430,7 @@ export function ClientTime() {
                 <div>
                   <h4 className="font-semibold mb-2">Critical Requirements:</h4>
                   <ul className="space-y-1 text-sm text-foreground">
-                    <li>• React 19.x (Next.js 15 incompatible with React 18)</li>
+                    <li>• React 19.x (Next.js 16 incompatible with React 18)</li>
                     <li>• Node.js 18.18+ (20.x or 22.20.0 LTS recommended)</li>
                     <li>• TypeScript 5.x for best developer experience</li>
                   </ul>

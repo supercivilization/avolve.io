@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Supabase: PostgreSQL 15.8 (production), 17 (development), pgvector 0.8.0
 // - Next.js: 15.5.4
 // - React: 19.2.0
@@ -10,7 +10,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Supabase - PostgreSQL 15.8 Backend-as-a-Service with AI Vector Search | Avolve.io",
-  description: "Supabase with PostgreSQL 15.8 (production default), pgvector 0.8.0, and Next.js 15 integration. Complete auth, RLS, real-time, and AI-powered vector search. October 2025.",
+  description: "Supabase with PostgreSQL 15.8 (production default), pgvector 0.8.0, and Next.js 16 integration. Complete auth, RLS, real-time, and AI-powered vector search. October 2025.",
   keywords: ["Supabase", "PostgreSQL 15", "pgvector", "Row Level Security", "Next.js auth", "vector database", "BaaS", "Supabase 2025"],
   alternates: {
     canonical: "https://avolve.io/software/supabase",
@@ -60,7 +60,7 @@ export default function SupabasePage() {
 
       <main className="max-w-6xl mx-auto px-4 py-12">
         <time className="text-sm text-muted-foreground" dateTime="2025-10-06">
-          Last updated: October 6, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article className="mt-4">
@@ -240,7 +240,7 @@ const { data } = await supabase.rpc('match_documents', {
               <div>
                 <h3 className="text-xl font-bold mb-3">Authentication System</h3>
                 <div className="bg-white p-4 rounded border border-border">
-                  <h4 className="font-bold mb-2">@supabase/ssr for Next.js 15:</h4>
+                  <h4 className="font-bold mb-2">@supabase/ssr for Next.js 16:</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`// lib/supabase/server.ts
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
@@ -621,7 +621,7 @@ LIMIT 5;
 
             <div className="mt-4 bg-white p-3 rounded border border-border/40">
               <h4 className="font-bold text-sm mb-2">Quick Reference Template:</h4>
-              <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// Supabase + Next.js 15 + pgvector pattern
+              <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// Supabase + Next.js 16 + pgvector pattern
 import { createClient } from '@/lib/supabase/server'
 import { embed } from 'ai'
 import { openai } from '@ai-sdk/openai'
@@ -652,7 +652,7 @@ export async function searchAction(query: string) {
               <div>
                 <h3 className="font-bold mb-2 text-foreground">Integrates With:</h3>
                 <ul className="space-y-2 text-sm text-foreground">
-                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 15.5</Link> - Server-side auth with @supabase/ssr</li>
+                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 16 Beta</Link> - Server-side auth with @supabase/ssr</li>
                   <li>• <Link href="/software/vercel-ai-sdk" className="text-primary hover:underline">Vercel AI SDK</Link> - Vector embeddings for RAG</li>
                   <li>• <Link href="/software/react" className="text-primary hover:underline">React 19</Link> - Real-time subscriptions in components</li>
                 </ul>

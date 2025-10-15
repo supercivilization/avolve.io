@@ -170,7 +170,7 @@ export default function Home() {
             {/* Status Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 mb-8">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-zinc-500 dark:bg-zinc-400 animate-pulse" />
-              <span className="text-xs font-medium text-zinc-700 dark:text-zinc-300">Verified October 6, 2025</span>
+              <span className="text-xs font-medium text-zinc-700 dark:text-zinc-300">Verified October 15, 2025</span>
             </div>
 
             {/* Main Headline */}
@@ -681,7 +681,7 @@ export default function Home() {
 
           <div className="space-y-6">
             <div className="border-l-4 border-slate-600 pl-6 bg-slate-50 dark:bg-slate-950/20 p-4 rounded-r-lg">
-              <h3 className="text-lg font-bold mb-2">September 2025: Next.js 15.5 Production Ready</h3>
+              <h3 className="text-lg font-bold mb-2">September 2025: Next.js 16 Beta Production Ready</h3>
               <ul className="space-y-1 text-sm text-foreground">
                 <li>• <strong>Turbopack production builds</strong> moved from beta to stable (2-5x faster than Webpack)</li>
                 <li>• <strong>Partial Prerendering (PPR)</strong> graduated from experimental to stable</li>

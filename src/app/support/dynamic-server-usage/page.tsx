@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Dynamic Server Usage Error | Support | Avolve.io",
   description:
     "Fix 'Dynamic server usage: cookies' error in Next.js 15. Async cookies require await and Suspense boundaries.",
-  keywords: "dynamic server usage, Next.js 15 cookies, async cookies error, Suspense boundaries, middleware cookies",
+  keywords: "dynamic server usage, Next.js 16 cookies, async cookies error, Suspense boundaries, middleware cookies",
 }
 
 export default function DynamicServerUsagePage() {
@@ -42,7 +42,7 @@ export default function DynamicServerUsagePage() {
           </h1>
 
           <p className="text-xl text-amber-700 dark:text-amber-300">
-            Next.js 15 made cookies() async. Components using cookies must be wrapped in Suspense boundaries and use await.
+            Next.js 16 made cookies() async. Components using cookies must be wrapped in Suspense boundaries and use await.
           </p>
 
           <LastVerified date="2025-01-15" />
@@ -51,7 +51,7 @@ export default function DynamicServerUsagePage() {
         <div className="mb-12">
           <QuickFix
             title="Add await to cookies()"
-            problem="cookies() is now async in Next.js 15, causing 'Dynamic server usage' error"
+            problem="cookies() is now async in Next.js 16, causing 'Dynamic server usage' error"
             solution="Wrap component in Suspense and add await to all cookies() calls"
             oldCode={`// ❌ Before (causes error)
 export default function Page() {
@@ -81,20 +81,20 @@ export default async function Page() {
             errorName="Dynamic Server Usage: cookies"
             errorMessage="Error: Route /your-page couldn't be rendered statically because it used cookies. Learn more: https://nextjs.org/docs/messages/dynamic-server-error"
             frequency="common"
-            timing="Immediately after upgrading to Next.js 15"
+            timing="Immediately after upgrading to Next.js 16"
             location="Any Server Component or Route Handler using cookies()"
             severity="critical"
-            affects={["Next.js 15+", "Server Components", "Route Handlers"]}
+            affects={["Next.js 16+", "Server Components", "Route Handlers"]}
           />
         </div>
 
         <div className="mb-12">
           <RootCause
             title="Why This Happens"
-            explanation="Next.js 15 changed cookies() and headers() from synchronous to asynchronous functions to enable better streaming and static analysis. This breaking change requires updating all cookie access patterns."
+            explanation="Next.js 16 changed cookies() and headers() from synchronous to asynchronous functions to enable better streaming and static analysis. This breaking change requires updating all cookie access patterns."
             technicalDetails="The async change enables Next.js to detect dynamic data access earlier in the render tree and optimize static generation accordingly. Components using dynamic APIs must now be wrapped in Suspense to handle the async boundary properly."
             contributingFactors={[
-              "cookies() changed from sync to async in Next.js 15",
+              "cookies() changed from sync to async in Next.js 16",
               "Missing Suspense boundary around component",
               "Forgot to add await before cookies() call",
               "headers() and params() also changed to async",
@@ -195,7 +195,7 @@ export default function Layout({ children }) {
                 id: "pkce-flow-failed",
                 title: "PKCE Flow Failed Error",
                 href: "/support/pkce-flow-failed",
-                description: "Cookie-related auth error in Next.js 15 middleware",
+                description: "Cookie-related auth error in Next.js 16 middleware",
                 relationship: "similar-to",
                 frequency: "common",
               },
@@ -218,8 +218,8 @@ export default function Layout({ children }) {
               <h4 className="mb-2 font-medium text-amber-900 dark:text-amber-100">System Patterns</h4>
               <ul className="space-y-1 text-sm">
                 <li>
-                  <Link href="/systems/nextjs-15-supabase-auth" className="text-blue-600 hover:underline">
-                    Next.js 15 + Supabase Auth
+                  <Link href="/systems/nextjs-supabase-auth" className="text-blue-600 hover:underline">
+                    Next.js 16 + Supabase Auth
                   </Link>
                 </li>
               </ul>

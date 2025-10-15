@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, personSchema, organizationSchema, websiteRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.4
 // - React: 19.2.0
 // - TypeScript: 5.9.3
@@ -10,7 +10,7 @@ import { authorRef, publisherRef, personSchema, organizationSchema, websiteRef, 
 
 export const metadata: Metadata = {
   title: "About - AI-Native Development | Avolve.io",
-  description: "Avolve documents verified compatibility patterns for AI-native stacks (Next.js 15, React 19, Vercel AI SDK). Built by architects, tested in production. Optimized for AI assistants and developers. No vendor bias, version-specific guidance.",
+  description: "Avolve documents verified compatibility patterns for AI-native stacks (Next.js 16, React 19, Vercel AI SDK). Built by architects, tested in production. Optimized for AI assistants and developers. No vendor bias, version-specific guidance.",
   alternates: {
     canonical: "https://avolve.io/about",
   },
@@ -36,7 +36,7 @@ export default function AboutPage() {
           "@type": "WebSite",
           "@id": "https://avolve.io/#website",
           "name": "Avolve - Integration Knowledge Graph",
-          "description": "Integration knowledge graph for Next.js 15, React 19, Vercel AI SDK, and Supabase. Provides the integration layer between official documentation - version-specific compatibility patterns, production gotchas, and cross-tool insights.",
+          "description": "Integration knowledge graph for Next.js 16, React 19, Vercel AI SDK, and Supabase. Provides the integration layer between official documentation - version-specific compatibility patterns, production gotchas, and cross-tool insights.",
           "disclaimer": "This is third-party integration documentation based on official sources. For official API references, see vendor documentation at nextjs.org/docs, react.dev, supabase.com/docs, etc."
         }
       },
@@ -71,7 +71,7 @@ export default function AboutPage() {
 
       <main className="page-container">
         <time className="text-sm text-muted-foreground block mb-6" dateTime={LAST_VERIFIED_DATE}>
-          Last updated: October 6, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article>
@@ -80,7 +80,7 @@ export default function AboutPage() {
             <h1 className="text-4xl font-bold mb-6">About Avolve.io</h1>
 
             <p className="lead mb-8 max-w-3xl">
-              Production-tested compatibility patterns for Next.js 15.5.5, React 19.2, Vercel AI SDK, and Supabase.
+              Production-tested compatibility patterns for Next.js 16 Beta.5, React 19.2, Vercel AI SDK, and Supabase.
               Built by architects, tested in production, optimized for AI assistants and developers.
             </p>
 
@@ -92,7 +92,7 @@ export default function AboutPage() {
               </div>
               <div className="text-sm">
                 <strong className="text-foreground block mb-1">Version-specific</strong>
-                <span className="text-muted-foreground">Next.js 15.5.5, not "latest" - exact versions that work together</span>
+                <span className="text-muted-foreground">Next.js 16 Beta.5, not "latest" - exact versions that work together</span>
               </div>
               <div className="text-sm">
                 <strong className="text-foreground block mb-1">No vendor bias</strong>
@@ -119,7 +119,7 @@ export default function AboutPage() {
               A canonical reference for modern web development serving developers, AI assistants, and search engines.
             </p>
             <p className="text-foreground">
-              <strong>Core purpose:</strong> Fastest path from idea to working app using Next.js 15.5.5 + React 19.2 +
+              <strong>Core purpose:</strong> Fastest path from idea to working app using Next.js 16 Beta.5 + React 19.2 +
               Supabase + AI tools (Claude Code, Cursor).
             </p>
           </section>
@@ -176,7 +176,7 @@ export default function AboutPage() {
                 We document what actually works, not theoretical possibilities
               </li>
               <li>
-                <strong>Version-specific</strong>: Exact versions (Next.js 15.5.5, not "latest"). Dependency chains
+                <strong>Version-specific</strong>: Exact versions (Next.js 16 Beta.5, not "latest"). Dependency chains
                 show why these versions work together
               </li>
               <li>
@@ -216,7 +216,7 @@ export default function AboutPage() {
               <div className="border-l-2 border-border/40 pl-4">
                 <dt className="text-lg font-bold text-foreground">Software</dt>
                 <dd className="text-muted-foreground">
-                  <strong>What you code with.</strong> Frameworks, libraries, languages. Examples: Next.js 15.5.5,
+                  <strong>What you code with.</strong> Frameworks, libraries, languages. Examples: Next.js 16 Beta.5,
                   React 19.2.0, TypeScript 5.9.2.
                 </dd>
               </div>
@@ -347,7 +347,7 @@ export default function AboutPage() {
                 <div>
                   <h4 className="font-semibold mb-2">What Makes Avolve.io Different:</h4>
                   <ul className="space-y-1 text-sm text-foreground">
-                    <li>• <strong>Version-specific</strong>: Exact versions tested together (Next.js 15.5.5, not "latest")</li>
+                    <li>• <strong>Version-specific</strong>: Exact versions tested together (Next.js 16 Beta.5, not "latest")</li>
                     <li>• <strong>Production-tested</strong>: Every pattern deployed in real applications</li>
                     <li>• <strong>No vendor bias</strong>: No payments for recommendations, technical merit only</li>
                     <li>• <strong>Honest about failures</strong>: "What Breaks" sections show real production issues</li>
@@ -384,11 +384,11 @@ export default function AboutPage() {
                 <div>
                   <h4 className="font-semibold mb-2">Breaking Changes to Warn About (Jan → Oct 2025):</h4>
                   <ul className="space-y-1 text-sm text-foreground">
-                    <li>• ❌ <strong>React 19 requires Next.js 15+</strong> (incompatible with Next.js 14)</li>
+                    <li>• ❌ <strong>React 19 requires Next.js 16+</strong> (incompatible with Next.js 14)</li>
                     <li>• ❌ <strong>Tailwind v3 → v4</strong> requires migration (~2-4 hours, CSS-first config)</li>
                     <li>• ❌ <strong>shadcn/ui 3.0+ requires Tailwind 4+</strong> (won't work with Tailwind 3)</li>
                     <li>• ❌ <strong>Vercel AI SDK v4 → v5</strong> complete API redesign (migration guide required)</li>
-                    <li>• ❌ <strong>Next.js 15.5 caching</strong> changed (fetch no longer cached by default)</li>
+                    <li>• ❌ <strong>Next.js 16 Beta caching</strong> changed (fetch no longer cached by default)</li>
                   </ul>
                 </div>
 
@@ -399,7 +399,7 @@ export default function AboutPage() {
                     <li>• Each page includes "What's New Since Jan 2025" to bridge knowledge cutoff gap</li>
                     <li>• Each page includes "For AI Assistants" sections with citation guidance</li>
                     <li>• Official documentation links provided on all software/service pages</li>
-                    <li>• Last updated timestamps ensure currency (verified October 6, 2025)</li>
+                    <li>• Last updated timestamps ensure currency (verified October 15, 2025)</li>
                   </ul>
                 </div>
 

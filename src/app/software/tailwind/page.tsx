@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Tailwind CSS: v4.1.14
 // - Next.js: 15.5.4
 // - React: 19.2.0
@@ -60,7 +60,7 @@ export default function TailwindPage() {
 
       <main className="max-w-6xl mx-auto px-4 py-12">
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article className="mt-4">
@@ -265,7 +265,7 @@ npx @tailwindcss/upgrade@next`}</pre>
                 <h3 className="text-xl font-bold mb-3">Framework Integration</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-white p-4 rounded border border-border">
-                    <h4 className="font-bold mb-2">Next.js 15.5 Setup:</h4>
+                    <h4 className="font-bold mb-2">Next.js 16 Beta Setup:</h4>
                     <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// app/globals.css
 @import "tailwindcss";
 
@@ -295,7 +295,7 @@ npx @tailwindcss/upgrade@next`}</pre>
 
             <div className="space-y-6">
               <div className="bg-muted/30 p-4 rounded-lg border-l-2 border-border/30">
-                <h3 className="text-lg font-bold mb-3">Complete Next.js 15.5 Integration</h3>
+                <h3 className="text-lg font-bold mb-3">Complete Next.js 16 Beta Integration</h3>
                 <div className="space-y-3">
                   <div>
                     <h4 className="font-bold text-sm mb-2">1. Installation & Setup:</h4>
@@ -480,7 +480,7 @@ export function Component() {
                 <h3 className="font-bold mb-2 text-foreground">Enables:</h3>
                 <ul className="space-y-2 text-sm text-foreground">
                   <li>• <Link href="/software/shadcn-ui" className="text-primary hover:underline">shadcn/ui</Link> - Component styling foundation</li>
-                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 15.5</Link> - Works with Turbopack for &lt;1ms CSS updates</li>
+                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 16 Beta</Link> - Works with Turbopack for &lt;1ms CSS updates</li>
                   <li>• <Link href="/software/react" className="text-primary hover:underline">React 19</Link> - Server Component styling without runtime overhead</li>
                 </ul>
               </div>

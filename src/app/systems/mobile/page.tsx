@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 5, 2025):
+// Dependencies (October 15, 2025):
 // - React Native: 0.81.3 (September 2025)
 // - Expo SDK: 54 (September 10, 2025)
 // - Next.js: 15.5.5 (for web sharing)
@@ -11,7 +11,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Mobile System - React Native/Expo + Next.js Monorepo | Avolve.io",
-  description: "Production mobile architecture with React Native 0.81 New Architecture, Expo SDK 54, and Next.js 15 code sharing. Monorepo patterns for maximum efficiency.",
+  description: "Production mobile architecture with React Native 0.81 New Architecture, Expo SDK 54, and Next.js 16 code sharing. Monorepo patterns for maximum efficiency.",
   keywords: ["React Native", "Expo", "Next.js monorepo", "mobile development", "cross-platform", "New Architecture", "Expo SDK 54", "React Native 0.81", "code sharing"]
 };
 
@@ -125,7 +125,7 @@ export default function MobileSystemPage() {
 
       <main className="max-w-6xl mx-auto px-4 py-12">
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article className="mt-4">
@@ -158,7 +158,7 @@ export default function MobileSystemPage() {
               <ul className="space-y-2 text-foreground">
                 <li><strong>React Native 0.81:</strong> New Architecture (Fabric + TurboModules), Hermes engine, React 19.1 support</li>
                 <li><strong>Expo SDK 54:</strong> Managed workflow, Expo Router 6.0 with API routes, precompiled frameworks</li>
-                <li><strong>Next.js 15.5:</strong> Web app sharing code via monorepo (apps/web + apps/mobile)</li>
+                <li><strong>Next.js 16 Beta:</strong> Web app sharing code via monorepo (apps/web + apps/mobile)</li>
                 <li><strong>Monorepo Tool:</strong> Nx (complex) or Turborepo (simple) for shared packages</li>
                 <li><strong>State Management:</strong> Zustand (versatile) or Legend State (performance)</li>
                 <li><strong>Styling:</strong> NativeWind v4 (Tailwind) or Tamagui (performance)</li>
@@ -179,7 +179,7 @@ npx create-turbo@latest my-app
 # Structure:
 my-app/
 ├── apps/
-│   ├── web/          # Next.js 15.5.5
+│   ├── web/          # Next.js 16 Beta.5
 │   └── mobile/       # Expo SDK 54
 ├── packages/
 │   ├── ui/           # Shared React components

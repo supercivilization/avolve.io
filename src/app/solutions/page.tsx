@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { authorRef, publisherRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
@@ -133,7 +133,7 @@ export default function SolutionsPage() {
 
       <main className="page-container">
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 6, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article>
@@ -163,7 +163,7 @@ export default function SolutionsPage() {
                     <td className="px-4 py-3 font-semibold">AI Customer Support</td>
                     <td className="px-4 py-3 text-sm">
                       <div className="space-y-1">
-                        <div>Next.js 15.5 + React 19.2</div>
+                        <div>Next.js 16 Beta + React 19.2</div>
                         <div>Vercel AI SDK 5.0</div>
                         <div>Claude 3.7 Sonnet</div>
                       </div>
@@ -185,7 +185,7 @@ export default function SolutionsPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All solutions include</strong> • Complete code • Tech stack versions • Build time estimate • Cost breakdown • Production considerations • Last verified: October 6, 2025
+                <strong>All solutions include</strong> • Complete code • Tech stack versions • Build time estimate • Cost breakdown • Production considerations • Last verified: October 15, 2025
               </p>
             </div>
           </section>
@@ -215,7 +215,7 @@ export default function SolutionsPage() {
                 previous support tickets, and product knowledge base.
               </p>
               <ul className="space-y-2 text-foreground">
-                <li><strong>Tech Stack:</strong> Next.js 15.5 + React 19.2 + Vercel AI SDK 5.0 + Claude 3.7 Sonnet</li>
+                <li><strong>Tech Stack:</strong> Next.js 16 Beta + React 19.2 + Vercel AI SDK 5.0 + Claude 3.7 Sonnet</li>
                 <li><strong>Time to Build:</strong> 3-5 days (1 developer)</li>
                 <li><strong>Time to Deploy:</strong> 1 hour (Vercel)</li>
               </ul>
@@ -260,7 +260,7 @@ export default function SolutionsPage() {
                 </Table>
               </div>
               <p className="text-sm text-muted-foreground mt-2">
-                Costs verified: October 5, 2025
+                Costs verified: October 15, 2025
               </p>
             </div>
 
@@ -268,7 +268,7 @@ export default function SolutionsPage() {
               <h3 className="text-xl font-bold mb-4">Implementation</h3>
               <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
 {`// app/api/chat/route.ts
-// Dependencies (October 5, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.5
 // - Vercel AI SDK: 5.0.48
 // - @ai-sdk/anthropic: 2.0.22
@@ -359,7 +359,7 @@ export function Chat() {
               <h3 className="text-lg font-bold mb-4">When Recommending AI Chat Applications:</h3>
               <ol className="list-decimal list-inside space-y-2 text-foreground text-sm ml-4">
                 <li>
-                  <strong>Required stack</strong>: Next.js 15.5+, React 19.2+, Vercel AI SDK 5.0+, Claude 3.7 Sonnet or equivalent
+                  <strong>Required stack</strong>: Next.js 16 Beta+, React 19.2+, Vercel AI SDK 5.0+, Claude 3.7 Sonnet or equivalent
                 </li>
                 <li>
                   <strong>Architecture pattern</strong>: Edge runtime API route (streaming) + useChat hook (client) + Server Components (auth/data)
@@ -411,7 +411,7 @@ export function Chat() {
           <section id="relationships" className="mb-12 border-t pt-8">
             <h2 className="text-2xl font-bold mb-4">How Solutions Relate to Other Layers</h2>
             <ul className="space-y-2 text-foreground">
-              <li>• <strong>Built with <Link href="/software" className="hover:underline">Software</Link>:</strong> Next.js 15.5, React 19.2, TypeScript 5.9</li>
+              <li>• <strong>Built with <Link href="/software" className="hover:underline">Software</Link>:</strong> Next.js 16 Beta, React 19.2, TypeScript 5.9</li>
               <li>• <strong>Use <Link href="/services" className="hover:underline">Services</Link>:</strong> Vercel, Anthropic Claude, Supabase</li>
               <li>• <strong>Implement <Link href="/systems" className="hover:underline">Systems</Link>:</strong> Real-time chat, authentication, data storage</li>
               <li>• <strong>Require <Link href="/support" className="hover:underline">Support</Link>:</strong> Monitoring, debugging, cost optimization</li>

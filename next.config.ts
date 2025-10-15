@@ -1,11 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Note: outputFileTracingRoot removed - was causing Turbopack build errors in Vercel
-  // (Local workspace inference warning is harmless)
-
   // MDX support
   pageExtensions: ['ts', 'tsx', 'mdx'],
+
   experimental: {
     mdxRs: true,
     // Turbopack filesystem caching for faster compile times (Next.js 16 beta)

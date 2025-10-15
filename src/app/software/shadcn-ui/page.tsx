@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - shadcn CLI: 3.4.0
 // - Next.js: 15.5.4
 // - React: 19.2.0
@@ -61,7 +61,7 @@ export default function ShadcnUIPage() {
 
       <main className="max-w-6xl mx-auto px-4 py-12">
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article className="mt-4">
@@ -263,7 +263,7 @@ npx shadcn@latest add button
               <div>
                 <h3 className="text-xl font-bold mb-3">Project Setup</h3>
                 <div className="bg-white p-4 rounded border border-border">
-                  <h4 className="font-bold mb-2">Initialize shadcn/ui (Next.js 15):</h4>
+                  <h4 className="font-bold mb-2">Initialize shadcn/ui (Next.js 16):</h4>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">{`# Initialize (auto-detects Next.js, Tailwind, TypeScript)
 npx shadcn@latest init
 
@@ -622,7 +622,7 @@ export function UserFormDialog({ user }) {
 
             <div className="mt-4 bg-white p-3 rounded border border-border/40">
               <h4 className="font-bold text-sm mb-2">Quick Reference Template:</h4>
-              <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// shadcn/ui + Next.js 15 pattern
+              <pre className="bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto">{`// shadcn/ui + Next.js 16 pattern
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -661,7 +661,7 @@ export function Example() {
               <div>
                 <h3 className="font-bold mb-2 text-foreground">Used By:</h3>
                 <ul className="space-y-2 text-sm text-foreground">
-                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 15</Link> - Primary framework</li>
+                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 16</Link> - Primary framework</li>
                   <li>• Remix - React framework</li>
                   <li>• Vite + React - Build tool setup</li>
                   <li>• 8,000+ companies (OpenAI, Adobe, Netflix)</li>

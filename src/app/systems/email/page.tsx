@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 5, 2025):
+// Dependencies (October 15, 2025):
 // - Resend: 4.0+ (422K+ weekly npm downloads)
 // - React Email: 4.0+ (March 2025)
 // - @react-email/components: Latest
@@ -51,7 +51,7 @@ export default function EmailSystemPage() {
       {
         "@type": "HowTo",
         "@id": "https://avolve.io/systems/email#howto-setup",
-        "name": "How to Set Up Resend + React Email in Next.js 15",
+        "name": "How to Set Up Resend + React Email in Next.js 16",
         "description": "Complete setup guide for production email system with React components",
         "totalTime": "PT15M",
         "step": [
@@ -124,7 +124,7 @@ export default function EmailSystemPage() {
 
       <main className="max-w-6xl mx-auto px-4 py-12">
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article className="mt-4">

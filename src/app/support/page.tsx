@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 6, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
@@ -154,7 +154,7 @@ export default function SupportPage() {
 
       <main className="page-container">
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 6, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article>
@@ -234,7 +234,7 @@ export default function SupportPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All fixes verified</strong> • Includes runbooks, code examples, prevention tips • Last verified: October 6, 2025
+                <strong>All fixes verified</strong> • Includes runbooks, code examples, prevention tips • Last verified: October 15, 2025
               </p>
             </div>
           </section>

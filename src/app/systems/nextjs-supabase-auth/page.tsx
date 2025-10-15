@@ -11,11 +11,11 @@ import { InteractiveCodeBlock } from "@/components/shared/InteractiveCodeBlock"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
-  title: "Next.js 15 + Supabase Auth Pattern | System Integration | Avolve.io",
+  title: "Next.js 16 + Supabase Auth Pattern | System Integration | Avolve.io",
   description:
-    "Production-ready authentication pattern for Next.js 15 App Router with Supabase Auth. Complete guide with SSR, middleware, RLS, and common pitfalls.",
+    "Production-ready authentication pattern for Next.js 16 App Router with Supabase Auth. Complete guide with SSR, middleware, RLS, and common pitfalls.",
   keywords:
-    "Next.js 15 auth, Supabase authentication, SSR auth, Next.js middleware, Row Level Security, PKCE flow, cookie management",
+    "Next.js 16 auth, Supabase authentication, SSR auth, Next.js middleware, Row Level Security, PKCE flow, cookie management",
 }
 
 export default function NextJS15SupabaseAuthPage() {
@@ -26,8 +26,8 @@ export default function NextJS15SupabaseAuthPage() {
           { name: "Home", url: "/" },
           { name: "Systems", url: "/systems" },
           {
-            name: "Next.js 15 + Supabase Auth",
-            url: "/systems/nextjs-15-supabase-auth",
+            name: "Next.js 16 + Supabase Auth",
+            url: "/systems/nextjs-supabase-auth",
           },
         ]}
       />
@@ -40,16 +40,16 @@ export default function NextJS15SupabaseAuthPage() {
               Systems
             </Link>
             <span>/</span>
-            <span>Next.js 15 + Supabase Auth</span>
+            <span>Next.js 16 + Supabase Auth</span>
           </div>
 
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
-            Next.js 15 + Supabase Auth
+            Next.js 16 + Supabase Auth
           </h1>
 
           <p className="text-xl text-gray-600 dark:text-gray-400">
             Complete authentication system with SSR, middleware protection, social login, and Row Level Security for
-            Next.js 15 App Router applications.
+            Next.js 16 App Router applications.
           </p>
 
           <LastVerified date="2025-01-15" />
@@ -98,7 +98,7 @@ export default function NextJS15SupabaseAuthPage() {
         <div className="mb-12">
           <QuickDecision
             useThisWhen={[
-              { text: "Building on Next.js 15 App Router" },
+              { text: "Building on Next.js 16 App Router" },
               { text: "Need social login (Google, GitHub, etc.)" },
               { text: "Want integrated database with auth" },
               { text: "Budget-conscious (free tier is generous)" },
@@ -116,7 +116,7 @@ export default function NextJS15SupabaseAuthPage() {
         {/* Pattern Structure */}
         <div className="mb-12">
           <PatternStructure
-            patternName="Next.js 15 + Supabase Auth"
+            patternName="Next.js 16 + Supabase Auth"
             description="How authentication flows through Next.js App Router with SSR and RLS"
             integrationPoints={[
               {
@@ -169,7 +169,7 @@ export default function NextJS15SupabaseAuthPage() {
             patterns={[
               {
                 name: "Supabase Auth",
-                href: "/systems/nextjs-15-supabase-auth",
+                href: "/systems/nextjs-supabase-auth",
                 ratings: {
                   cost: "Free (50K MAU)",
                   setup: 3,
@@ -214,7 +214,7 @@ export default function NextJS15SupabaseAuthPage() {
                 title: "Cookie Timing in Middleware",
                 frequency: "common",
                 description:
-                  "Cookies must be set on BOTH request and response in Next.js 15 middleware, or PKCE flow fails silently. This is the #1 cause of auth issues.",
+                  "Cookies must be set on BOTH request and response in Next.js 16 middleware, or PKCE flow fails silently. This is the #1 cause of auth issues.",
                 symptoms: [
                   "PKCE flow failed error on auth callback",
                   "Users can't complete social login",

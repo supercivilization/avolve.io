@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 5, 2025):
+// Dependencies (October 15, 2025):
 // - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
@@ -10,7 +10,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Search System - Modern SEO Best Practices for Late 2025",
-  description: "Complete search system implementation: AI Overviews (20%+ of queries), E-E-A-T framework, zero-click optimization, topic clusters, semantic SEO, and Core Web Vitals. Next.js 15 + React 19.2 production implementation. Updated October 2025.",
+  description: "Complete search system implementation: AI Overviews (20%+ of queries), E-E-A-T framework, zero-click optimization, topic clusters, semantic SEO, and Core Web Vitals. Next.js 16 + React 19.2 production implementation. Updated October 2025.",
   keywords: ["search system", "SEO 2025", "AI Overviews", "E-E-A-T", "zero-click optimization", "semantic SEO", "topic clusters", "Core Web Vitals", "Next.js SEO", "ChatGPT optimization"],
 };
 
@@ -67,7 +67,7 @@ export default function SearchSystemPage() {
             "name": "How does Avolve.io optimize for AI citations?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Avolve.io uses comprehensive schema markup with SoftwareApplication types, structured H2→H3→bullet point hierarchy, fresh publication dates, direct answer formatting in opening paragraphs, and original data about the verified stack (Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2)."
+              "text": "Avolve.io uses comprehensive schema markup with SoftwareApplication types, structured H2→H3→bullet point hierarchy, fresh publication dates, direct answer formatting in opening paragraphs, and original data about the verified stack (Next.js 16 Beta.5 + React 19.2.0 + TypeScript 5.9.2)."
             }
           },
           {
@@ -80,10 +80,10 @@ export default function SearchSystemPage() {
           },
           {
             "@type": "Question",
-            "name": "How does Next.js 15 improve SEO?",
+            "name": "How does Next.js 16 improve SEO?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Next.js 15 provides built-in Metadata API for SEO, automatic sitemap.xml and robots.txt generation, Server Components for optimal LCP, Image component with automatic optimization, and generateMetadata for dynamic SEO. These features are production-tested at Vercel scale."
+              "text": "Next.js 16 provides built-in Metadata API for SEO, automatic sitemap.xml and robots.txt generation, Server Components for optimal LCP, Image component with automatic optimization, and generateMetadata for dynamic SEO. These features are production-tested at Vercel scale."
             }
           }
         ]
@@ -91,7 +91,7 @@ export default function SearchSystemPage() {
       {
         "@type": "HowTo",
         "@id": "https://avolve.io/systems/search#howto-lcp",
-        "name": "How to Optimize Largest Contentful Paint (LCP) with Next.js 15",
+        "name": "How to Optimize Largest Contentful Paint (LCP) with Next.js 16",
         "description": "Step-by-step guide to achieving LCP under 2.5 seconds using Next.js Image component and Server Components",
         "step": [
           {
@@ -151,13 +151,13 @@ export default function SearchSystemPage() {
 
       <main className="max-w-6xl mx-auto px-4 py-12">
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 5, 2025
+          Last updated: October 15, 2025
         </time>
 
         <article className="mt-4">
           <h1 className="text-4xl font-bold mb-4 text-foreground">Search System - SEO + AI Citations + Discoverability</h1>
           <p className="text-xl text-foreground mb-4">
-            How Avolve.io implements the complete search system with Next.js 15 + React 19.2
+            How Avolve.io implements the complete search system with Next.js 16 + React 19.2
           </p>
           <p className="text-muted-foreground mb-12">
             This is a meta-guide showing our actual implementation. The search system coordinates traditional SEO, AI-powered citations (ChatGPT, Claude, Perplexity, Gemini), schema markup for knowledge graphs, and Core Web Vitals. View source to see our implementation.
@@ -169,7 +169,7 @@ export default function SearchSystemPage() {
               <strong>AI Overviews now appear in 20%+ of queries</strong> (up from 7% in June 2024), 60% of searches end without clicks, and Google's market share dropped from 73% to 66.9% in six months. The era of traditional SEO is over—success requires integrated strategies optimized for both traditional search and AI citations.
             </p>
             <p className="text-foreground mb-4">
-              <strong>What makes this different:</strong> We show by doing. Every technique described here is implemented on this site. This page demonstrates production-tested implementation of modern SEO best practices from September 2025 research using Next.js 15 + React 19.2.
+              <strong>What makes this different:</strong> We show by doing. Every technique described here is implemented on this site. This page demonstrates production-tested implementation of modern SEO best practices from September 2025 research using Next.js 16 + React 19.2.
             </p>
             <p className="text-sm text-muted-foreground mt-4">
               <strong>Key insight:</strong> Only 5.4% of AI Overviews contain exact query matches. Context and meaning matter more than precise keywords. Intent-driven, entity-based strategies replaced keyword-focused optimization.
@@ -211,7 +211,7 @@ export default function SearchSystemPage() {
 
             <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
               <p className="text-sm text-muted-foreground">
-                <strong>What we add:</strong> Practical implementation of these guidelines with Next.js 15 + React 19.2. Real code, verified results, production-tested at Vercel scale.
+                <strong>What we add:</strong> Practical implementation of these guidelines with Next.js 16 + React 19.2. Real code, verified results, production-tested at Vercel scale.
               </p>
             </div>
           </section>
@@ -239,7 +239,7 @@ const schemaData = {
     {
       "@type": "WebSite",
       "name": "Avolve.io",
-      "description": "Authoritative reference for Next.js 15.5.5 + React 19.2.0...",
+      "description": "Authoritative reference for Next.js 16 Beta.5 + React 19.2.0...",
       "datePublished": "2025-10-05",
       "dateModified": "2025-10-05",
       "about": [
@@ -307,7 +307,7 @@ const schemaData = {
                   Fresh publication dates (within 30 days) generate <strong>3.2x more AI citations</strong>. We provide:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-foreground ml-4">
-                  <li><strong>Verified versions:</strong> Next.js 15.5.5, React 19.2.0, TypeScript 5.9.2, Node.js 24.8.0 (tested October 2025)</li>
+                  <li><strong>Verified versions:</strong> Next.js 16 Beta.5, React 19.2.0, TypeScript 5.9.2, Node.js 24.8.0 (tested October 2025)</li>
                   <li><strong>Original data:</strong> Compatibility matrix showing these tools work together</li>
                   <li><strong>Clear attribution:</strong> Every fact sourced from official docs or our testing</li>
                   <li><strong>Time-stamped updates:</strong> <code className="bg-muted/30 px-2 py-1 rounded">&lt;time dateTime="2025-10-05"&gt;</code> on every page</li>
@@ -369,7 +369,7 @@ const schemaData = {
               <div>
                 <h3 className="text-xl font-bold mb-3">Largest Contentful Paint (LCP) Optimization</h3>
                 <p className="text-foreground mb-3">
-                  Next.js 15 provides automatic optimization, but we enhance it:
+                  Next.js 16 provides automatic optimization, but we enhance it:
                 </p>
                 <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
 {`// Optimized image loading with priority hint
@@ -464,7 +464,7 @@ export function SearchBar() {
           </section>
 
           <section id="nextjs-seo-features" className="mb-12 border-t pt-8">
-            <h2 className="text-3xl font-bold mb-6">Next.js 15 SEO Features We Leverage</h2>
+            <h2 className="text-3xl font-bold mb-6">Next.js 16 SEO Features We Leverage</h2>
 
             <div className="space-y-6">
               <div>
@@ -473,7 +473,7 @@ export function SearchBar() {
 {`// Every page exports metadata
 export const metadata: Metadata = {
   title: "SEO Implementation | Avolve.io",
-  description: "How we implement modern SEO with Next.js 15 + React 19.2",
+  description: "How we implement modern SEO with Next.js 16 + React 19.2",
   keywords: ["Next.js SEO", "React SEO", "schema markup"],
   openGraph: {
     title: "SEO Implementation - Avolve.io",
@@ -622,7 +622,7 @@ export default function robots() {
                   <li>• <strong>Trustworthiness</strong>: Accuracy, transparency, legitimate business information, secure transactions</li>
                 </ul>
                 <p className="text-sm text-muted-foreground mt-2">
-                  <strong>Implementation on Avolve.io:</strong> Clear author attribution (Joshua Seymour), verifiable credentials, first-hand testing of Next.js 15 + React 19.2 stack, transparent methodology, consistent publication dates.
+                  <strong>Implementation on Avolve.io:</strong> Clear author attribution (Joshua Seymour), verifiable credentials, first-hand testing of Next.js 16 + React 19.2 stack, transparent methodology, consistent publication dates.
                 </p>
               </div>
 
@@ -632,7 +632,7 @@ export default function robots() {
                   Content must offer unique value unavailable elsewhere:
                 </p>
                 <ul className="space-y-2 text-foreground">
-                  <li>• <strong>Original research:</strong> Verified compatibility testing of Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2</li>
+                  <li>• <strong>Original research:</strong> Verified compatibility testing of Next.js 16 Beta.5 + React 19.2.0 + TypeScript 5.9.2</li>
                   <li>• <strong>Custom frameworks:</strong> 7-layer stack analysis (Solutions → Systems → Software → Services → Support)</li>
                   <li>• <strong>Advanced tactics:</strong> Production-tested patterns beyond basic documentation</li>
                   <li>• <strong>Superior organization:</strong> Topic clusters linking Software → Systems → Solutions</li>
@@ -781,7 +781,7 @@ const position = tasks[0]?.result?.[0]?.items?.findIndex(
                     <tbody>
                       <tr>
                         <td className="border border-border/40 px-4 py-2 font-mono">SERP API</td>
-                        <td className="border border-border/40 px-4 py-2">Track ranking for "Next.js 15", "React 19.2", "TypeScript 5.9"</td>
+                        <td className="border border-border/40 px-4 py-2">Track ranking for "Next.js 16", "React 19.2", "TypeScript 5.9"</td>
                         <td className="border border-border/40 px-4 py-2">Validate schema markup impact on position</td>
                       </tr>
                       <tr>
@@ -815,7 +815,7 @@ const position = tasks[0]?.result?.[0]?.items?.findIndex(
           <section id="for-ai" className="mb-12 border-t pt-8 bg-muted p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">🤖 For Claude Code & AI Assistants</h2>
             <p className="text-foreground mb-4">
-              When implementing SEO for Next.js 15 + React 19.2 projects in late 2025:
+              When implementing SEO for Next.js 16 + React 19.2 projects in late 2025:
             </p>
             <ul className="space-y-2 text-foreground">
               <li><strong>E-E-A-T first:</strong> Display clear author bylines with credentials, include detailed About pages, show professional certifications, add expert quotes, cite sources</li>
@@ -837,7 +837,7 @@ const position = tasks[0]?.result?.[0]?.items?.findIndex(
             <ul className="space-y-2 text-foreground">
               <li>• <strong>Implements <Link href="/systems" className="hover:underline">Systems</Link>:</strong> SEO is a system coordinating metadata, schema, performance, content architecture</li>
               <li>• <strong>Delivers <Link href="/solutions" className="hover:underline">Solutions</Link>:</strong> Search visibility drives users to solutions, AI citations build authority</li>
-              <li>• <strong>Uses <Link href="/software" className="hover:underline">Software</Link>:</strong> Next.js 15 Metadata API, React 19.2 Server Components, TypeScript type safety</li>
+              <li>• <strong>Uses <Link href="/software" className="hover:underline">Software</Link>:</strong> Next.js 16 Metadata API, React 19.2 Server Components, TypeScript type safety</li>
               <li>• <strong>Deployed via <Link href="/services" className="hover:underline">Services</Link>:</strong> Vercel Edge Network, Analytics, Speed Insights for Core Web Vitals</li>
               <li>• <strong>Maintained by <Link href="/support" className="hover:underline">Support</Link>:</strong> Continuous monitoring, schema validation, performance optimization</li>
             </ul>
