@@ -1,13 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Search, Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const firstMenuLinkRef = useRef<HTMLAnchorElement>(null);
 
   const navLinks = [
     { href: "/about", label: "About" },
@@ -17,6 +24,25 @@ export function SiteHeader() {
     { href: "/services", label: "Services" },
     { href: "/support", label: "Support" },
   ];
+
+  // Focus management for mobile menu
+  useEffect(() => {
+    if (mobileMenuOpen && firstMenuLinkRef.current) {
+      firstMenuLinkRef.current.focus();
+    }
+  }, [mobileMenuOpen]);
+
+  // Keyboard navigation: close menu on Escape
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [mobileMenuOpen]);
 
   return (
     <header className="w-full border-b border-border/50 bg-background">
@@ -54,15 +80,24 @@ export function SiteHeader() {
         {/* Right Actions */}
         <div className="flex items-center gap-2">
           {/* Search */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="h-9 w-9 rounded-md hover:bg-accent/50 transition-colors"
-            aria-label="Search"
-            disabled
-          >
-            <Search className="h-4 w-4 text-muted-foreground" />
-          </Button>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-9 w-9 rounded-md hover:bg-accent/50 transition-colors"
+                  aria-label="Search (coming soon)"
+                  disabled
+                >
+                  <Search className="h-4 w-4 text-muted-foreground" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Search coming soon</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
 
           {/* Theme Toggle */}
           <ThemeToggle />
@@ -87,13 +122,14 @@ export function SiteHeader() {
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-border/50 bg-background">
-          <nav className="container max-w-screen-2xl px-4 py-4">
+          <nav className="container max-w-screen-2xl px-4 py-4" aria-label="Mobile navigation">
             <div className="flex flex-col gap-1">
-              {navLinks.map((link) => (
+              {navLinks.map((link, index) => (
                 <Link
                   key={link.href}
+                  ref={index === 0 ? firstMenuLinkRef : null}
                   href={link.href}
-                  className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors"
+                  className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}

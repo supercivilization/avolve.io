@@ -162,20 +162,32 @@ export function SiteFooter() {
                         <button
                           onClick={() => toggleSection(section.id)}
                           className="w-full flex items-center justify-between px-4 py-3 text-left bg-muted/20 hover:bg-muted/30 transition-colors"
+                          aria-expanded={isOpen}
+                          aria-controls={`${section.id}-links`}
+                          aria-label={`${isOpen ? 'Collapse' : 'Expand'} ${section.title} section`}
                         >
-                          <Link href={section.href} onClick={(e) => e.stopPropagation()}>
+                          <Link
+                            href={section.href}
+                            onClick={(e) => e.stopPropagation()}
+                            tabIndex={0}
+                          >
                             <h4 className={`text-sm font-semibold transition-colors ${getColorClasses(section.color)}`}>
                               {section.title}
                             </h4>
                           </Link>
                           {isOpen ? (
-                            <ChevronUp className="h-4 w-4 text-muted-foreground" />
+                            <ChevronUp className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
                           ) : (
-                            <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                            <ChevronDown className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
                           )}
                         </button>
                         {isOpen && (
-                          <nav className="px-4 py-3 space-y-3 text-sm bg-background">
+                          <nav
+                            className="px-4 py-3 space-y-3 text-sm bg-background"
+                            id={`${section.id}-links`}
+                            role="region"
+                            aria-label={`${section.title} links`}
+                          >
                             {section.links.map((link) => (
                               <Link
                                 key={link.href}
