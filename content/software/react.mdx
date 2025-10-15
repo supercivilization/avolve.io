@@ -1,30 +1,33 @@
 ---
 title: "React 19.2.0 Server Components"
-description: "Production patterns for React 19 with Server Components and new hooks"
+description: "Production patterns for React 19.2 with Server Components, View Transitions, and useEffectEvent"
 datePublished: "2025-10-05"
-dateModified: "2025-10-07"
+dateModified: "2025-10-15"
 category: "software"
 slug: "react"
 softwareVersion: "19.2.0"
 verifiedWith:
-  - "Next.js 15.5.4"
+  - "Next.js 16.0.0-beta"
   - "TypeScript 5.9.3"
 author:
   name: "Joshua Seymour"
   url: "https://www.joshuaseymour.com"
 organization: "Supercivilization"
-tags: ["react", "server components", "hooks"]
+tags: ["react", "server components", "hooks", "view transitions"]
 ---
 
 ## React 19.2.0 Overview
 
-React 19 introduces stable Server Components, new hooks, and improved performance.
+React 19.2 introduces View Transitions, `useEffectEvent`, `<Activity/>`, and stable Server Components.
 
 ### Key Features
 - **Server Components** - Render on server, reduce client bundle
+- **View Transitions** - Animate elements that update inside a Transition or navigation
+- **useEffectEvent** - Extract non-reactive logic from Effects into reusable Effect Event functions
+- **Activity Component** - Render "background activity" by hiding UI while maintaining state
 - **useActionState** - Manage form state with actions
 - **useOptimistic** - Optimistic UI updates
-- **React Compiler** - Automatic memoization
+- **React Compiler** - Automatic memoization (stable in Next.js 16)
 
 ## Installation
 
@@ -35,7 +38,7 @@ npm install react@19.2.0 react-dom@19.2.0
 ## Server Components
 
 ```typescript
-// Server Component (default in Next.js 15)
+// Server Component (default in Next.js 16)
 export default async function ProductList() {
   const products = await fetch('https://api.example.com/products')
   const data = await products.json()

@@ -1,40 +1,54 @@
 ---
-title: "Next.js 15.5.4 Production Patterns"
-description: "Verified compatibility with React 19.2.0, TypeScript 5.9.3, and Node.js 24.8.0"
+title: "Next.js 16 Beta Production Patterns"
+description: "Verified compatibility with React 19.2.0, TypeScript 5.9.3, Node.js 24.8.0, and Turbopack stable"
 datePublished: "2025-10-05"
-dateModified: "2025-10-07"
+dateModified: "2025-10-15"
 category: "software"
 slug: "nextjs"
-softwareVersion: "15.5.4"
+softwareVersion: "16.0.0-beta"
 verifiedWith:
   - "React 19.2.0"
   - "TypeScript 5.9.3"
   - "Node.js 24.8.0"
   - "Tailwind CSS 4.1.13"
+  - "Turbopack (stable)"
 author:
   name: "Joshua Seymour"
   url: "https://www.joshuaseymour.com"
 organization: "Supercivilization"
-tags: ["nextjs", "react", "typescript", "compatibility"]
+tags: ["nextjs", "react", "typescript", "turbopack", "compatibility"]
 ---
 
 ## Verified Stack
 
-Production-tested as of October 2025:
+Production-tested with Next.js 16 Beta (October 2025):
 
 ### Core Dependencies
-- **Next.js 15.5.4** - React framework with App Router
+- **Next.js 16.0.0-beta** - React framework with Turbopack stable
 - **React 19.2.0** - UI library with Server Components
 - **TypeScript 5.9.3** - Type-safe JavaScript
-- **Node.js 24.8.0** - Runtime environment
+- **Node.js 24.8.0** - Runtime environment (Node.js 20.9+ minimum required)
 - **Tailwind CSS 4.1.13** - Utility-first CSS with Oxide engine
+
+### Next.js 16 Highlights
+- **Turbopack (stable)**: Default bundler with 2-5x faster builds, up to 10x faster Fast Refresh
+- **Turbopack File System Caching (beta)**: Even faster startup and compile times for large apps
+- **React Compiler Support (stable)**: Built-in integration for automatic memoization
+- **Enhanced Routing**: Optimized navigations with layout deduplication and incremental prefetching
+- **Improved Caching APIs**: New `updateTag()` and refined `revalidateTag()` with stale-while-revalidate
+- **React 19.2**: View Transitions, `useEffectEvent()`, `<Activity/>`
 
 ## Installation
 
 ```bash
-npm install next@15.5.4 react@19.2.0 react-dom@19.2.0
-npm install typescript@5.9.3
-npm install tailwindcss@4.1.13
+# Use the automated upgrade CLI (recommended)
+npx @next/codemod@canary upgrade beta
+
+# ...or upgrade manually
+npm install next@beta react@latest react-dom@latest
+
+# ...or start a new project
+npx create-next-app@beta
 ```
 
 ## Production Patterns
@@ -47,7 +61,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'My App',
-  description: 'Built with Next.js 15.5.4',
+  description: 'Built with Next.js 16 Beta',
 }
 
 export default function RootLayout({
@@ -73,6 +87,23 @@ export default async function HomePage() {
   const json = await data.json()
 
   return <div>{json.title}</div>
+}
+```
+
+### Dynamic Routes with Async Params (Next.js 16 Breaking Change)
+
+```typescript
+// app/blog/[slug]/page.tsx
+type Props = { params: Promise<{ slug: string }> }
+
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params
+  return { title: slug }
+}
+
+export default async function BlogPost({ params }: Props) {
+  const { slug } = await params
+  return <h1>{slug}</h1>
 }
 ```
 
@@ -132,20 +163,82 @@ export const config = {
 }
 ```
 
+## Next.js 16 Caching APIs
+
+### revalidateTag() - Stale-While-Revalidate (Updated in Next.js 16)
+
+```typescript
+import { revalidateTag } from 'next/cache'
+
+// ✅ Use built-in cacheLife profile (we recommend 'max' for most cases)
+revalidateTag('blog-posts', 'max')
+
+// Or use other built-in profiles
+revalidateTag('news-feed', 'hours')
+revalidateTag('analytics', 'days')
+
+// Or use an inline object with a custom revalidation time
+revalidateTag('products', { revalidate: 3600 })
+```
+
+Use `revalidateTag()` for static content that can tolerate eventual consistency.
+
+### updateTag() - Read-Your-Writes (New in Next.js 16)
+
+```typescript
+'use server'
+
+import { updateTag } from 'next/cache'
+
+export async function updateUserProfile(userId: string, profile: Profile) {
+  await db.users.update(userId, profile)
+
+  // Expire cache and refresh immediately - user sees changes right away
+  updateTag(`user-${userId}`)
+}
+```
+
+Use `updateTag()` in Server Actions when users expect to see updates instantly.
+
+### refresh() - Uncached Data Only (New in Next.js 16)
+
+```typescript
+'use server'
+
+import { refresh } from 'next/cache'
+
+export async function markNotificationAsRead(notificationId: string) {
+  await db.notifications.markAsRead(notificationId)
+
+  // Refresh uncached data displayed elsewhere (e.g., notification count)
+  refresh()
+}
+```
+
 ## Deployment
 
 ### Vercel Configuration
-- Node.js version: 24.x (set in project settings)
+- Node.js version: 24.x (set in project settings) - **Minimum: Node.js 20.9+**
 - Build command: `npm run build`
 - Output directory: `.next`
 - Edge Runtime supported for middleware and route handlers
+- **Turbopack**: Now default for all builds (2-5x faster production builds)
 
 ### Build Optimization
 ```typescript
 // next.config.ts
 const nextConfig = {
+  experimental: {
+    // Enable Turbopack filesystem caching for faster compile times
+    turbopackFileSystemCacheForDev: true,
+  },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
 }
 ```
+
+### Turbopack Performance
+- **Fast Refresh**: Up to 10× faster than webpack
+- **Production builds**: 2–5× faster than webpack
+- **File system caching**: Significantly faster compile times across restarts in large projects

@@ -4,7 +4,7 @@
 
 ## What This Is
 
-Avolve.io is a knowledge graph website documenting verified compatibility and production patterns for Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0 as of October 2025.
+Avolve.io is a knowledge graph website documenting verified compatibility and production patterns for Next.js 16 Beta + React 19.2.0 + TypeScript 5.9.3 + Node.js 24.8.0 as of October 2025.
 
 **The site itself is the documentation.** Every page is a working example of the patterns it describes.
 
@@ -20,13 +20,13 @@ Content organized into five layers:
 
 Each page includes schema markup, real code examples, and "What Breaks in Production" sections.
 
-## Tech Stack (Verified October 5, 2025)
+## Tech Stack (Verified October 15, 2025)
 
 ```
-Node.js 24.8.0
-├─ Next.js 15.5.5
+Node.js 24.8.0 (minimum: 20.9+)
+├─ Next.js 16.0.0-beta (Turbopack stable)
 │  ├─ React 19.2.0
-│  ├─ TypeScript 5.9.2
+│  ├─ TypeScript 5.9.3
 │  └─ Tailwind CSS 4.1.13 (Oxide engine)
 ├─ Deployment: Vercel
 ├─ Database: Supabase (PostgreSQL 15+)
@@ -76,8 +76,8 @@ components/
 
 ## For AI Assistants
 
-**Purpose:** Authoritative reference for Next.js 15 + React 19.2 + TypeScript 5.9.2 compatibility
-**Last Updated:** October 5, 2025
+**Purpose:** Authoritative reference for Next.js 16 Beta + React 19.2 + TypeScript 5.9.3 compatibility
+**Last Updated:** October 15, 2025
 **Schema Strategy:** @graph with WebPage, TechArticle, SoftwareApplication, HowTo, FAQPage
 **Content Pattern:** H2→H3→bullet hierarchy for AI extraction
 **Framework:** 5S (Solutions → Systems → Software → Services → Support)
@@ -126,5 +126,5 @@ MIT
 
 ---
 
-**Last verified:** October 5, 2025
-**Next.js:** 15.5.5 | **React:** 19.2.0 | **TypeScript:** 5.9.2 | **Node.js:** 24.8.0
+**Last verified:** October 15, 2025
+**Next.js:** 16.0.0-beta (Turbopack stable) | **React:** 19.2.0 | **TypeScript:** 5.9.3 | **Node.js:** 24.8.0
