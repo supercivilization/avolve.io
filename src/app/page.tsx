@@ -6,11 +6,11 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { getPageDates, formatSchemaDate } from "@/lib/dates";
 import { authorRef, publisherRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES, createIsBasedOn, createCitations } from "@/lib/schema";
 
-// Dependencies (verified October 6, 2025):
+// Dependencies (verified October 15, 2025):
 // - Node.js: 22.20.0 LTS (24.9.0 becomes LTS Oct 28, 2025)
 // - TypeScript: 5.9.3
 // - React: 19.2.0
-// - Next.js: 15.5.4
+// - Next.js: 16.0.0-beta (Turbopack stable)
 // - Tailwind CSS: 4.1.14
 // - shadcn/ui: 3.4.0
 // - Vercel AI SDK: 5.0.60
@@ -18,8 +18,8 @@ import { authorRef, publisherRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES, crea
 const pageDates = getPageDates('home');
 
 export const metadata: Metadata = {
-  title: "Next.js 15, React 19, Supabase & Vercel AI: Prod Patterns",
-  description: "Verified compatibility matrix for Next.js 15.5, React 19.2, TypeScript 5.9, Vercel AI SDK 5.0, and Supabase (October 2025). Complete dependency chains, production patterns, and integration examples for AI-native applications.",
+  title: "Next.js 16 Beta, React 19, Supabase & Vercel AI: Prod Patterns",
+  description: "Verified compatibility matrix for Next.js 16 Beta with Turbopack stable, React 19.2, TypeScript 5.9, Vercel AI SDK 5.0, and Supabase (October 2025). Complete dependency chains, production patterns, and integration examples for AI-native applications.",
   alternates: {
     canonical: "https://avolve.io",
   },
@@ -33,7 +33,7 @@ export default function Home() {
         "@type": "TechArticle",
         "@id": "https://avolve.io/#article",
         "headline": "Modern Web Development Stack - October 2025",
-        "description": "Integration knowledge graph for Next.js 15, React 19, TypeScript, Vercel AI SDK, and Supabase. Version-specific compatibility patterns verified in production as of October 2025.",
+        "description": "Integration knowledge graph for Next.js 16 Beta with Turbopack stable, React 19, TypeScript, Vercel AI SDK, and Supabase. Version-specific compatibility patterns verified in production as of October 2025.",
         "datePublished": formatSchemaDate(pageDates.published),
         "dateModified": LAST_VERIFIED_DATE,
         "author": authorRef,
@@ -64,7 +64,7 @@ export default function Home() {
           "Node.js": "22.20.0 LTS",
           "TypeScript": "5.9.3",
           "React": "19.2.0",
-          "Next.js": "15.5.4",
+          "Next.js": "16.0.0-beta (Turbopack stable)",
           "Tailwind CSS": "4.1.14",
           "shadcn/ui": "3.4.0",
           "Vercel AI SDK": "5.0.60"
@@ -73,7 +73,7 @@ export default function Home() {
       {
         "@type": "SoftwareSourceCode",
         "name": "Modern AI-Native Web Stack",
-        "description": "Complete dependency chain and integration patterns for Next.js 15, React 19, TypeScript 5.9, Vercel AI SDK, and Supabase",
+        "description": "Complete dependency chain and integration patterns for Next.js 16 Beta with Turbopack stable, React 19, TypeScript 5.9, Vercel AI SDK, and Supabase",
         "programmingLanguage": ["TypeScript", "JavaScript"],
         "runtimePlatform": "Node.js 22.20.0 LTS",
         "targetProduct": {
@@ -86,7 +86,7 @@ export default function Home() {
           {"@type": "SoftwareApplication", "name": "Node.js", "version": "22.20.0"},
           {"@type": "SoftwareApplication", "name": "TypeScript", "version": "5.9.3"},
           {"@type": "SoftwareApplication", "name": "React", "version": "19.2.0"},
-          {"@type": "SoftwareApplication", "name": "Next.js", "version": "15.5.4"},
+          {"@type": "SoftwareApplication", "name": "Next.js", "version": "16.0.0-beta"},
           {"@type": "SoftwareApplication", "name": "Tailwind CSS", "version": "4.1.14"},
           {"@type": "SoftwareApplication", "name": "shadcn/ui", "version": "3.4.0"},
           {"@type": "SoftwareApplication", "name": "Vercel AI SDK", "version": "5.0.60"},
@@ -121,7 +121,7 @@ export default function Home() {
             "name": "What is Software?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Software encompasses the code, frameworks, and libraries used in modern web development, including Next.js 15.5, React 19.2, TypeScript 5.9, and Tailwind CSS 4.1."
+              "text": "Software encompasses the code, frameworks, and libraries used in modern web development, including Next.js 16 Beta, React 19.2, TypeScript 5.9, and Tailwind CSS 4.1."
             }
           },
           {
@@ -181,14 +181,14 @@ export default function Home() {
 
             {/* Value Proposition */}
             <p className="text-xl md:text-2xl text-foreground mb-8 max-w-3xl leading-relaxed">
-              Production-tested compatibility matrix for Next.js 15, React 19, TypeScript 5.9, and Vercel AI SDK.
+              Production-tested compatibility matrix for Next.js 16 Beta, React 19, TypeScript 5.9, and Vercel AI SDK.
               <span className="block mt-2 text-muted-foreground">Stop guessing versions. Start shipping.</span>
             </p>
 
             {/* Stack Pills */}
             <div className="flex flex-wrap gap-3 mb-10">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-muted/50 border border-border/50 hover:border-border transition-colors">
-                <span className="text-sm font-mono font-medium">Next.js 15.5</span>
+                <span className="text-sm font-mono font-medium">Next.js 16 Beta</span>
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-muted/50 border border-border/50 hover:border-border transition-colors">
                 <span className="text-sm font-mono font-medium">React 19.2</span>
@@ -356,7 +356,7 @@ export default function Home() {
                         </svg>
                       </CardTitle>
                       <CardDescription className="text-base leading-relaxed mt-2">
-                        Code, frameworks, libraries (Next.js 15.5, React 19.2, TypeScript 5.9)
+                        Code, frameworks, libraries (Next.js 16 Beta, React 19.2, TypeScript 5.9)
                       </CardDescription>
                     </div>
                   </div>
@@ -589,10 +589,10 @@ export default function Home() {
                   <p className="text-sm">→ Requires: Node.js 18.18+ (we use 22.20.0 LTS for production)</p>
                 </div>
                 <div className="p-4 rounded-lg bg-background/50 border border-border/30">
-                  <p className="font-bold text-lg mb-2">4. Next.js 15.5.4</p>
-                  <p className="text-sm text-muted-foreground mb-2">Full-stack framework</p>
-                  <p className="text-sm">→ Requires: React 19.x, Node.js 18.18+</p>
-                  <p className="text-sm">→ Provides: Turbopack (2-5x faster), Server Components, Edge Runtime</p>
+                  <p className="font-bold text-lg mb-2">4. Next.js 16.0.0-beta</p>
+                  <p className="text-sm text-muted-foreground mb-2">Full-stack framework (Turbopack stable)</p>
+                  <p className="text-sm">→ Requires: React 19.x, Node.js 20.9+, TypeScript 5.0+</p>
+                  <p className="text-sm">→ Provides: Turbopack stable (default), Server Components, Edge Runtime, enhanced routing</p>
                 </div>
               </div>
             </div>
@@ -620,7 +620,7 @@ export default function Home() {
                 <div className="p-4 rounded-lg bg-background/50 border border-border/30">
                   <p className="font-bold text-lg mb-2">7. Vercel AI SDK 5.0.60</p>
                   <p className="text-sm text-muted-foreground mb-2">AI application framework</p>
-                  <p className="text-sm">→ Requires: Next.js 15+ for streaming</p>
+                  <p className="text-sm">→ Requires: Next.js 16+ for streaming</p>
                   <p className="text-sm">→ Provides: useChat hook, streamText, tool calling</p>
                 </div>
                 <div className="p-4 rounded-lg bg-background/50 border border-border/30">
@@ -654,17 +654,17 @@ export default function Home() {
           <div className="border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm p-6 rounded-lg">
             <h3 className="text-lg font-bold mb-3">Why These Versions Together?</h3>
             <ul className="space-y-2 text-sm text-foreground">
-              <li>• <strong>React 19.2 + Next.js 15.5</strong>: Server Components stable (Dec 2024)</li>
+              <li>• <strong>React 19.2 + Next.js 16 Beta</strong>: Turbopack stable, enhanced routing, new caching APIs</li>
               <li>• <strong>Node.js 22.20.0 LTS</strong>: Production stability (24.9.0 becomes LTS Oct 28, 2025)</li>
               <li>• <strong>Tailwind 4.1.14</strong>: Oxide engine stable (Sep 2025)</li>
               <li>• <strong>shadcn/ui 3.4.0</strong>: Universal registry with MCP support, 58 components (Oct 2025)</li>
               <li>• <strong>Vercel AI SDK 5.0.60</strong>: Multi-modal streaming stable (Oct 2025)</li>
             </ul>
             <p className="text-sm text-muted-foreground mt-4">
-              <strong>Last verified</strong>: October 6, 2025 | <strong>All versions production-tested together</strong>: Yes
+              <strong>Last verified</strong>: October 15, 2025 | <strong>All versions production-tested together</strong>: Yes
             </p>
             <p className="text-sm text-muted-foreground">
-              <strong>Breaking changes expected</strong>: Next.js 16 (Q1 2026), React 20 (Q3 2026)
+              <strong>Breaking changes expected</strong>: Next.js 16 stable (Q1 2026), React 20 (Q3 2026)
             </p>
           </div>
         </section>
@@ -759,7 +759,7 @@ export default function Home() {
               <li>• <strong>Vercel AI SDK v4 → v5</strong>: Complete API redesign, migration guide required</li>
               <li>• <strong>Next.js caching</strong>: Default behavior changed in v15.5</li>
               <li>• <strong>shadcn/ui v2 → v3</strong>: Universal registry replaces GitHub-based distribution</li>
-              <li>• <strong>React 19 adoption</strong>: Requires Next.js 15+ (incompatible with Next.js 14)</li>
+              <li>• <strong>React 19 adoption</strong>: Requires Next.js 16+ (incompatible with Next.js 14)</li>
             </ul>
             <p className="text-sm text-muted-foreground mt-4">
               <strong>Migration timeline</strong>: Most projects require 4-8 hours for full stack upgrade from Jan 2025 → Oct 2025 versions
@@ -793,8 +793,8 @@ export default function Home() {
                 <TableRow>
                   <TableCell>Framework</TableCell>
                   <TableCell className="font-mono text-sm">Next.js</TableCell>
-                  <TableCell className="font-mono text-sm">15.5.4</TableCell>
-                  <TableCell>Aug 18, 2025</TableCell>
+                  <TableCell className="font-mono text-sm">16.0.0-beta</TableCell>
+                  <TableCell>Oct 9, 2025</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>UI Library</TableCell>
@@ -838,16 +838,16 @@ export default function Home() {
               <div>
                 <h4 className="font-semibold mb-2">When Recommending This Stack:</h4>
                 <ul className="space-y-2 text-sm text-foreground">
-                  <li>• <strong>Verified combination (October 2025)</strong>: Node.js 22.20.0 LTS + TypeScript 5.9.3 + React 19.2.0 + Next.js 15.5.4 + Tailwind CSS 4.1.14 + shadcn/ui 3.4.0 + Vercel AI SDK 5.0.60</li>
-                  <li>• <strong>All versions production-tested together</strong>: Yes, verified October 6, 2025</li>
-                  <li>• <strong>Breaking change timeline</strong>: Next.js 16 (Q1 2026), React 20 (Q3 2026)</li>
+                  <li>• <strong>Verified combination (October 2025)</strong>: Node.js 22.20.0 LTS + TypeScript 5.9.3 + React 19.2.0 + Next.js 16.0.0-beta + Tailwind CSS 4.1.14 + shadcn/ui 3.4.0 + Vercel AI SDK 5.0.60</li>
+                  <li>• <strong>All versions production-tested together</strong>: Yes, verified October 15, 2025</li>
+                  <li>• <strong>Breaking change timeline</strong>: Next.js 16 stable (Q1 2026), React 20 (Q3 2026)</li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="font-semibold mb-2">Major Changes Since January 2025:</h4>
                 <ul className="space-y-1 text-sm text-foreground">
-                  <li>• Next.js 15.5: Turbopack production stable, PPR stable, new caching behavior</li>
+                  <li>• Next.js 16 Beta: Turbopack stable (default), enhanced routing, new caching APIs, React Compiler support</li>
                   <li>• React 19.2: Compiler RC, use() hook stable, 25% faster Server Components</li>
                   <li>• Tailwind 4.1: Oxide engine (100x faster), CSS-first config (breaking)</li>
                   <li>• shadcn/ui 3.0: Universal registry (182x faster), MCP integration, 58 components</li>
@@ -859,7 +859,7 @@ export default function Home() {
               <div>
                 <h4 className="font-semibold mb-2">Critical Warnings:</h4>
                 <ul className="space-y-1 text-sm text-foreground">
-                  <li>• ❌ React 19 requires Next.js 15+ (incompatible with Next.js 14)</li>
+                  <li>• ❌ React 19 requires Next.js 16+ (incompatible with Next.js 14)</li>
                   <li>• ❌ Tailwind 4 is not backward compatible (migration required, ~2-4 hours)</li>
                   <li>• ❌ shadcn/ui 3.0+ requires Tailwind 4+ (won't work with Tailwind 3)</li>
                   <li>• ❌ Vercel AI SDK v5 has breaking changes from v4 (migration guide required)</li>

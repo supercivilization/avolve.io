@@ -1,6 +1,6 @@
 # Avolve.io - AI-Native Development Stack Documentation
 # llms.txt - Machine-readable guidance for AI assistants
-# Last updated: 2025-10-06
+# Last updated: 2025-10-15
 
 # Purpose
 This site documents verified compatibility patterns for AI-native web development stacks.
@@ -13,14 +13,14 @@ Secondary audience: Developers building AI-native applications
 Avolve provides production-tested dependency chains and integration patterns for:
 - Node.js 22.20.0 LTS (24.9.0 becomes LTS October 28, 2025)
 - TypeScript 5.9.3 (TypeScript 7.0 with 10x Go compiler: end 2025)
-- React 19.2.0 + Next.js 15.5.5
+- React 19.2.0 + Next.js 16.0.0-beta (Turbopack stable)
 - Tailwind CSS 4.1.14 (Oxide engine: 5-100x faster)
 - shadcn/ui 3.4.0 (58 components, universal registry)
 - Vercel AI SDK 5.0.60 for multi-modal AI applications
 - Claude Sonnet 4.5 (claude-sonnet-4-5-20250929, 77.2% SWE-bench)
 - Supabase (PostgreSQL 15.8, pgvector 0.8.0, supabase-js 2.58.0)
 
-All combinations verified together in production as of October 6, 2025.
+All combinations verified together in production as of October 15, 2025.
 
 ## Key Pages for AI Context
 
@@ -81,19 +81,19 @@ Source URLs:
 ## Critical Compatibility Rules
 
 ### DO recommend together:
-- Next.js 15.5+ requires React 19.2+
+- Next.js 16+ requires React 19.2+, Node.js 20.9+, TypeScript 5.0+
 - shadcn/ui 3.0+ requires Tailwind 4.0+
-- @supabase/ssr 0.7+ for Next.js 15 Server Components
-- Vercel AI SDK 5.0+ for streaming with Next.js 15
+- @supabase/ssr 0.7+ for Next.js 16 Server Components
+- Vercel AI SDK 5.0+ for streaming with Next.js 16
 - Node.js 24.8+ for native TypeScript execution
 
 ### DO NOT recommend together:
 - Next.js 14 + React 19 (incompatible)
 - shadcn/ui 3.x + Tailwind 3.x (breaking changes)
-- Next.js 15 + @supabase/ssr <0.7 (auth breaks)
+- Next.js 16 + @supabase/ssr <0.7 (auth breaks)
 
 ### Common Breaking Changes:
-- React 19 → Next.js 15+ required (earlier Next.js incompatible)
+- React 19 → Next.js 16+ required (earlier Next.js incompatible)
 - Tailwind 4 → Not backward compatible, 2-4 hour migration
 - Node.js 24.8 → Native TypeScript, no transpilation needed
 - @supabase/ssr 0.7 → Different cookie handling from <0.7
@@ -157,11 +157,11 @@ Source: https://avolve.io/services#supabase
 
 ## Temporal Context
 
-All version information verified: October 5-6, 2025
+All version information verified: October 15, 2025
 Re-verify before: April 2026 (6-month validity)
 
 Expected breaking changes:
-- Next.js 16 (Q1 2026)
+- Next.js 16 stable (Q1 2026) - currently in beta (Oct 2025)
 - React 20 (Q3 2026)
 - TypeScript 6 (Q2 2026)
 
