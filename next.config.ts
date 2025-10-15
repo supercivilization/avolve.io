@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Explicitly set project root to silence workspace inference warning
-  // (parent directory has unrelated lockfile)
-  outputFileTracingRoot: "/Users/avolve/dev/active/avolve",
+  // Note: outputFileTracingRoot removed - was causing Turbopack build errors in Vercel
+  // (Local workspace inference warning is harmless)
 
   // MDX support
   pageExtensions: ['ts', 'tsx', 'mdx'],
