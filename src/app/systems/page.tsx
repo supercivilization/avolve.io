@@ -9,8 +9,8 @@ import { authorRef, publisherRef, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 // Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "Systems - Modern Stack Integration Patterns",
-  description: "Fast lookup: Auth, Search, Email, Social, Mobile system patterns. Complete code, production failures, component lists. Verified October 2025.",
+  title: "Systems - Modern Stack & AI Orchestration Patterns",
+  description: "Fast lookup: Auth, Search, Email, Social, Mobile, and AI Orchestration system patterns. Complete code, production failures, component lists. Verified October 2025.",
   alternates: {
     canonical: "https://avolve.io/systems",
   },
@@ -232,6 +232,75 @@ export default function SystemsPage() {
                       <Link href="/systems/mobile" className="text-gray-700 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 hover:underline text-sm">View Pattern →</Link>
                     </td>
                   </tr>
+                  <tr className="bg-purple-50/50 dark:bg-purple-900/10">
+                    <td colSpan={4} className="px-4 py-2 text-sm font-semibold text-purple-900 dark:text-purple-300">
+                      AI Orchestration Systems
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Agent Coordination</td>
+                    <td className="px-4 py-3 text-sm">
+                      <div className="space-y-1">
+                        <div>Vercel AI SDK 5.0</div>
+                        <div>Sequential/Parallel workflows</div>
+                        <div>Hierarchical agent patterns</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      Multi-agent workflows, token economics, error handling patterns
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/systems/agent-coordination" className="text-gray-700 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 hover:underline text-sm">View Pattern →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Model Routing</td>
+                    <td className="px-4 py-3 text-sm">
+                      <div className="space-y-1">
+                        <div>Cost-based routing</div>
+                        <div>Capability matching</div>
+                        <div>Latency optimization</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      Intelligent model selection, 10-50x cost savings, production routing
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/systems/model-routing" className="text-gray-700 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 hover:underline text-sm">View Pattern →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">State Management</td>
+                    <td className="px-4 py-3 text-sm">
+                      <div className="space-y-1">
+                        <div>Shared/Isolated patterns</div>
+                        <div>Persistent state (Supabase)</div>
+                        <div>Vector memory (pgvector)</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      Multi-agent memory, temporal continuity, state architectures
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/systems/state-management" className="text-gray-700 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 hover:underline text-sm">View Pattern →</Link>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-muted/20">
+                    <td className="px-4 py-3 font-semibold">Tool Orchestration</td>
+                    <td className="px-4 py-3 text-sm">
+                      <div className="space-y-1">
+                        <div>Model Context Protocol (MCP)</div>
+                        <div>Tool generation from APIs</div>
+                        <div>Multi-tool workflows</div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-sm">
+                      AI agent capabilities, MCP server integration, production tooling
+                    </td>
+                    <td className="px-4 py-3">
+                      <Link href="/systems/tool-orchestration" className="text-gray-700 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 hover:underline text-sm">View Pattern →</Link>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -304,6 +373,59 @@ export default function SystemsPage() {
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Components: Supabase Auth, Next.js Middleware, Server Components, Client Components
+                </p>
+              </Link>
+            </div>
+          </section>
+
+          <section id="ai-orchestration-systems" className="section-spacing border-t pt-8">
+            <div className="mb-8 rounded-lg bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border-2 border-purple-200 dark:border-purple-800 p-6">
+              <h2 className="text-2xl font-bold mb-4">AI Orchestration Systems</h2>
+              <p className="text-foreground mb-3">
+                Production patterns for building AI-native applications with multi-agent workflows, intelligent model routing, and tool orchestration.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                <strong>Strategic foundation:</strong> <Link href="/about/philosophy" className="underline hover:text-purple-900 dark:hover:text-purple-200">The Industrialization of Intelligence</Link> - understanding the "why" behind these patterns.
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              <Link href="/systems/agent-coordination" className="block p-6 bg-gradient-to-br from-purple-50 to-white dark:from-purple-900/20 dark:to-gray-900 hover:shadow-md rounded-lg border-2 border-purple-200 dark:border-purple-800 transition-all">
+                <h3 className="text-xl font-bold mb-2">Agent Coordination Patterns</h3>
+                <p className="text-muted-foreground mb-3">
+                  Sequential, parallel, and hierarchical multi-agent workflows. Token economics, error handling, and production orchestration strategies.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Components: Vercel AI SDK 5.0, LangChain integration, CrewAI patterns, 5-layer error handling
+                </p>
+              </Link>
+
+              <Link href="/systems/model-routing" className="block p-6 bg-gradient-to-br from-blue-50 to-white dark:from-blue-900/20 dark:to-gray-900 hover:shadow-md rounded-lg border-2 border-blue-200 dark:border-blue-800 transition-all">
+                <h3 className="text-xl font-bold mb-2">Model Routing Strategies</h3>
+                <p className="text-muted-foreground mb-3">
+                  Intelligent model selection and routing: cost-based, capability-based, latency-based patterns. 10-50x cost savings through smart routing.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Components: Cost optimization, capability matching, waterfall routing, hybrid production patterns
+                </p>
+              </Link>
+
+              <Link href="/systems/state-management" className="block p-6 bg-gradient-to-br from-indigo-50 to-white dark:from-indigo-900/20 dark:to-gray-900 hover:shadow-md rounded-lg border-2 border-indigo-200 dark:border-indigo-800 transition-all">
+                <h3 className="text-xl font-bold mb-2">State Management for Multi-Agent Systems</h3>
+                <p className="text-muted-foreground mb-3">
+                  Managing state, memory, and context across multi-agent workflows. Shared context, isolated state, persistent state, and vector memory patterns.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Components: Supabase persistence, pgvector memory, layered state architecture, event sourcing
+                </p>
+              </Link>
+
+              <Link href="/systems/tool-orchestration" className="block p-6 bg-gradient-to-br from-violet-50 to-white dark:from-violet-900/20 dark:to-gray-900 hover:shadow-md rounded-lg border-2 border-violet-200 dark:border-violet-800 transition-all">
+                <h3 className="text-xl font-bold mb-2">Tool Orchestration with MCP</h3>
+                <p className="text-muted-foreground mb-3">
+                  Model Context Protocol integration, tool generation from APIs, multi-tool workflows, and production MCP server patterns.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Components: MCP servers (Supabase, GitHub, Filesystem), auto-generated tools, tool chaining, error handling
                 </p>
               </Link>
             </div>

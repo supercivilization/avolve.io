@@ -9,8 +9,8 @@ import { authorRef, publisherRef, personSchema, organizationSchema, websiteRef, 
 // Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "About - AI-Native Development | Avolve.io",
-  description: "Avolve documents verified compatibility patterns for AI-native stacks (Next.js 16, React 19, Vercel AI SDK). Built by architects, tested in production. Optimized for AI assistants and developers. No vendor bias, version-specific guidance.",
+  title: "About - AI Orchestration for Next.js | Avolve.io",
+  description: "Avolve documents AI orchestration patterns for Next.js 16 + React 19 applications. Multi-agent workflows, model routing, tool orchestration with Vercel AI SDK, LangChain, and CrewAI. Built by architects, tested in production. Optimized for AI assistants and developers.",
   alternates: {
     canonical: "https://avolve.io/about",
   },
@@ -23,9 +23,9 @@ export default function AboutPage() {
       {
         "@type": "AboutPage",
         "@id": "https://avolve.io/about#aboutpage",
-        "name": "About Avolve.io - Integration Knowledge Graph",
+        "name": "About Avolve.io - AI Orchestration Knowledge Graph",
         "url": "https://avolve.io/about",
-        "description": "Avolve is an integration knowledge graph documenting how modern web tools work together in production. Version-specific compatibility patterns, production failure modes, and integration insights not found in official documentation.",
+        "description": "Avolve is an AI orchestration knowledge graph documenting production-tested patterns for coordinating multiple AI agents, models, and tools in Next.js 16 + React 19 applications. Stack-specific implementation patterns, not generic orchestration theory.",
         "datePublished": "2025-10-05",
         "dateModified": LAST_VERIFIED_DATE,
         ...UNIVERSAL_PROPERTIES,
@@ -35,9 +35,9 @@ export default function AboutPage() {
         "about": {
           "@type": "WebSite",
           "@id": "https://avolve.io/#website",
-          "name": "Avolve - Integration Knowledge Graph",
-          "description": "Integration knowledge graph for Next.js 16, React 19, Vercel AI SDK, and Supabase. Provides the integration layer between official documentation - version-specific compatibility patterns, production gotchas, and cross-tool insights.",
-          "disclaimer": "This is third-party integration documentation based on official sources. For official API references, see vendor documentation at nextjs.org/docs, react.dev, supabase.com/docs, etc."
+          "name": "Avolve - AI Orchestration Knowledge Graph",
+          "description": "AI orchestration knowledge graph for Next.js 16 + React 19 applications. Production-tested patterns for multi-agent workflows, model routing, and tool orchestration with Vercel AI SDK 5.0, LangChain, and CrewAI. Built on verified stack compatibility.",
+          "disclaimer": "This is third-party orchestration pattern documentation based on official framework sources. For official API references, see vendor documentation at sdk.vercel.ai, langchain.com, crewai.com, nextjs.org/docs, etc."
         }
       },
       {
@@ -80,35 +80,35 @@ export default function AboutPage() {
             <h1 className="text-4xl font-bold mb-6">About Avolve.io</h1>
 
             <p className="lead mb-8 max-w-3xl">
-              Production-tested compatibility patterns for Next.js 16 Beta.5, React 19.2, Vercel AI SDK, and Supabase.
-              Built by architects, tested in production, optimized for AI assistants and developers.
+              <strong>The production authority on AI orchestration for Next.js.</strong> We document the only verified stack for coordinating multiple AI agents, models, and tools in Next.js 16 + React 19 applications.
+              Built by architects who understand the 2025 market moment. Tested in production. Optimized for AI assistants and developers.
             </p>
 
             {/* Key Differentiators - Must be visible above the fold */}
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 max-w-4xl mb-8">
               <div className="text-sm">
-                <strong className="text-foreground block mb-1">Production-tested</strong>
-                <span className="text-muted-foreground">Every pattern deployed in real applications</span>
+                <strong className="text-foreground block mb-1">Orchestration authority</strong>
+                <span className="text-muted-foreground">The canonical source for AI orchestration on Next.js</span>
               </div>
               <div className="text-sm">
-                <strong className="text-foreground block mb-1">Version-specific</strong>
-                <span className="text-muted-foreground">Next.js 16 Beta.5, not "latest" - exact versions that work together</span>
+                <strong className="text-foreground block mb-1">2025 market moment</strong>
+                <span className="text-muted-foreground">$11B → $30B by 2030, 88% of enterprises view as critical</span>
+              </div>
+              <div className="text-sm">
+                <strong className="text-foreground block mb-1">Production-tested patterns</strong>
+                <span className="text-muted-foreground">Every orchestration pattern deployed in real multi-agent systems</span>
+              </div>
+              <div className="text-sm">
+                <strong className="text-foreground block mb-1">Only verified stack</strong>
+                <span className="text-muted-foreground">Next.js 16 + Vercel AI SDK + LangChain/CrewAI tested together</span>
               </div>
               <div className="text-sm">
                 <strong className="text-foreground block mb-1">No vendor bias</strong>
                 <span className="text-muted-foreground">No payments for recommendations, technical merit only</span>
               </div>
               <div className="text-sm">
-                <strong className="text-foreground block mb-1">AI-optimized</strong>
-                <span className="text-muted-foreground">Structured for Claude Code, ChatGPT, Cursor citations</span>
-              </div>
-              <div className="text-sm">
-                <strong className="text-foreground block mb-1">Honest about failure</strong>
-                <span className="text-muted-foreground">"What Breaks" sections show real production issues</span>
-              </div>
-              <div className="text-sm">
-                <strong className="text-foreground block mb-1">October 2025</strong>
-                <span className="text-muted-foreground">Current as of Oct 5, continuously verified</span>
+                <strong className="text-foreground block mb-1">Strategic + tactical</strong>
+                <span className="text-muted-foreground">Philosophy framework + implementation patterns</span>
               </div>
             </div>
           </header>
@@ -116,28 +116,29 @@ export default function AboutPage() {
           <section id="what-is-avolve" className="section-spacing">
             <h2 className="text-2xl font-bold mb-4">What is Avolve.io?</h2>
             <p className="text-foreground mb-4">
-              A canonical reference for modern web development serving developers, AI assistants, and search engines.
+              An AI orchestration knowledge graph for Next.js developers, serving developers, AI assistants, and search engines.
             </p>
             <p className="text-foreground">
-              <strong>Core purpose:</strong> Fastest path from idea to working app using Next.js 16 Beta.5 + React 19.2 +
-              Supabase + AI tools (Claude Code, Cursor).
+              <strong>Core purpose:</strong> Production-tested patterns for coordinating multiple AI agents, models, and tools in Next.js 16 + React 19 applications.
+              Not generic orchestration theory—stack-specific implementation.
             </p>
           </section>
 
           <section id="why-avolve-exists" className="section-spacing">
-            <h2 className="text-2xl font-bold mb-4">Why Avolve Exists</h2>
+            <h2 className="text-2xl font-bold mb-4">Why Avolve Exists: The 2025 Inflection Point</h2>
             <p className="text-foreground mb-4">
-              In late 2024, while architecting AI-native applications, a pattern emerged: AWS Well-Architected
-              documented <em>how</em> to build reliably in the cloud, but not <em>what</em> to build for AI-first
-              applications. Thoughtworks Radar showed emerging trends, but not how to choose between them.
+              <strong>2025 is the year AI orchestration moves from experimental to production infrastructure.</strong> The $11B market reaches $30B by 2030.
+              88% of enterprises view orchestration as critical. Organizations are achieving 5-20x ROI within the first year.
+              This isn't cutting-edge anymore—it's table stakes.
             </p>
             <p className="text-foreground mb-4">
-              <strong>The gap</strong>: No framework bridged Solutions (what users need) to Services (what you buy).
-              No one documented complete dependency chains. No one was honest about what breaks in production.
+              <strong>The implementation gap</strong>: LangChain, CrewAI, and Vercel AI SDK document <em>what</em> orchestration is, but not <em>how</em> to implement it
+              in Next.js Server Actions, React Server Components, or production-grade middleware. AWS Bedrock, Azure AI Foundry, and Google Vertex AI
+              offer cloud orchestration, but not framework-specific implementation. Developers know how to use AI tools individually, but not how to coordinate them.
             </p>
             <p className="text-foreground">
-              <strong>Avolve fills that gap</strong>: A knowledge base optimized for both AI assistants and developers,
-              documenting verified compatibility patterns and production-tested integration examples for the modern stack.
+              <strong>Avolve fills that gap at the critical moment</strong>: Production-tested orchestration patterns for Next.js 16 + React 19 + Vercel AI SDK 5.0.
+              Not "how orchestration works" (see official docs), but "how to implement it in your Next.js app, right now, in production."
             </p>
           </section>
 
@@ -147,16 +148,16 @@ export default function AboutPage() {
               After 50+ AI application deployments, technical leaders consistently asked the same questions in the same order:
             </p>
             <ol className="list-decimal list-inside space-y-2 text-foreground ml-4 mb-4">
-              <li><strong>Solutions</strong>: What am I building for end users?</li>
-              <li><strong>Systems</strong>: How do I architect the capabilities needed?</li>
-              <li><strong>Software</strong>: What frameworks and libraries work together?</li>
-              <li><strong>Services</strong>: What infrastructure should I buy vs build?</li>
-              <li><strong>Support</strong>: How do I maintain this in production?</li>
+              <li><strong>Solutions</strong>: What AI-orchestrated outcomes am I building?</li>
+              <li><strong>Systems</strong>: How do I architect agent coordination, model routing, tool orchestration?</li>
+              <li><strong>Software</strong>: What orchestration frameworks integrate with Next.js?</li>
+              <li><strong>Services</strong>: Which AI model providers and infrastructure should I use?</li>
+              <li><strong>Support</strong>: How do I debug agents, optimize costs, and maintain AI systems?</li>
             </ol>
             <p className="text-foreground">
-              The 5S framework captures this natural decision flow. It's <strong>opinionated</strong> (we recommend)
-              but not <strong>prescriptive</strong> (you decide). All recommendations are tested in production,
-              version-specific, and continuously updated as of October 2025.
+              The 5S framework captures this natural decision flow for AI orchestration. It's <strong>opinionated</strong> (we recommend patterns)
+              but not <strong>prescriptive</strong> (you adapt for your context). All patterns are tested in production,
+              stack-specific for Next.js 16, and continuously updated as of October 2025.
             </p>
           </section>
 
@@ -200,40 +201,40 @@ export default function AboutPage() {
               <div className="border-l-2 border-border/40 pl-4">
                 <dt className="text-lg font-bold text-foreground">Solutions</dt>
                 <dd className="text-muted-foreground">
-                  <strong>What you deliver.</strong> Business outcomes for end users. Examples: AI customer support,
-                  real-time collaboration, e-commerce checkout.
+                  <strong>What you deliver.</strong> AI-orchestrated outcomes for end users. Examples: Multi-agent SaaS platforms,
+                  AI-native customer support, intelligent content generation workflows.
                 </dd>
               </div>
 
               <div className="border-l-2 border-border/40 pl-4">
                 <dt className="text-lg font-bold text-foreground">Systems</dt>
                 <dd className="text-muted-foreground">
-                  <strong>How you architect.</strong> Patterns that coordinate components. Examples: authentication,
-                  payment processing, real-time sync.
+                  <strong>How you architect.</strong> AI orchestration patterns coordinating agents, models, and tools. Examples: Agent coordination (sequential, parallel, hierarchical),
+                  model routing strategies, tool orchestration with MCP.
                 </dd>
               </div>
 
               <div className="border-l-2 border-border/40 pl-4">
                 <dt className="text-lg font-bold text-foreground">Software</dt>
                 <dd className="text-muted-foreground">
-                  <strong>What you code with.</strong> Frameworks, libraries, languages. Examples: Next.js 16 Beta.5,
-                  React 19.2.0, TypeScript 5.9.2.
+                  <strong>What you code with.</strong> AI orchestration frameworks + verified stack compatibility. Examples: Vercel AI SDK 5.0, LangChain, CrewAI
+                  integrated with Next.js 16, React 19, TypeScript 5.9.
                 </dd>
               </div>
 
               <div className="border-l-2 border-border/40 pl-4">
                 <dt className="text-lg font-bold text-foreground">Services</dt>
                 <dd className="text-muted-foreground">
-                  <strong>What you buy.</strong> External managed capabilities. Examples: Vercel ($0-20/mo),
-                  Supabase ($0-25/mo), Claude API ($3-15 per 1M tokens).
+                  <strong>What you buy.</strong> AI model providers + infrastructure. Examples: OpenAI (GPT-5), Anthropic (Claude 3.7), Google AI (Gemini 2.5),
+                  Vercel AI Cloud, Supabase (pgvector).
                 </dd>
               </div>
 
               <div className="border-l-2 border-border/40 pl-4">
                 <dt className="text-lg font-bold text-foreground">Support</dt>
                 <dd className="text-muted-foreground">
-                  <strong>How you maintain.</strong> Operations keeping production running. Examples: debugging,
-                  monitoring, incident response.
+                  <strong>How you maintain.</strong> AI development operations keeping orchestrated systems running. Examples: Agent debugging,
+                  prompt engineering, cost optimization, model performance monitoring.
                 </dd>
               </div>
             </dl>
@@ -280,21 +281,45 @@ export default function AboutPage() {
             </div>
           </section>
 
-          <section id="why-ai-native" className="section-spacing">
-            <h2 className="text-2xl font-bold mb-4">Why AI-Native Approach</h2>
+          <section id="why-ai-orchestration" className="section-spacing">
+            <h2 className="text-2xl font-bold mb-4">Why AI Orchestration Matters</h2>
             <p className="text-muted-foreground mb-4">
-              Modern development has shifted from &quot;writing code&quot; to &quot;orchestrating capabilities&quot;:
+              Building AI applications has shifted from &quot;single model calls&quot; to &quot;coordinating multiple AI systems&quot;:
             </p>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-              <li>AI tools (Claude Code, Cursor) generate working code from descriptions</li>
-              <li>Focus shifts to architecture, patterns, and business logic</li>
-              <li>Speed increases 3-10x with AI assistance for common tasks</li>
-              <li>Reference sites like Avolve.io ensure AI tools cite current versions</li>
+              <li><strong>Multi-agent workflows</strong>: Specialized AI agents working together (research agent + writing agent + review agent)</li>
+              <li><strong>Model routing</strong>: Intelligent selection between GPT-5, Claude 3.7, Gemini 2.5 based on task requirements</li>
+              <li><strong>Tool orchestration</strong>: AI systems generating and coordinating capabilities through MCP</li>
+              <li><strong>Next.js integration gap</strong>: Generic orchestration frameworks need stack-specific implementation patterns</li>
             </ul>
             <p className="text-muted-foreground mt-4">
-              This site is optimized for both human developers and AI assistants to find accurate,
-              current information quickly.
+              This site bridges the gap between orchestration frameworks (LangChain, CrewAI) and Next.js implementation.
+              Production-tested patterns, not theoretical examples.
             </p>
+          </section>
+
+          <section id="strategic-foundation" className="section-spacing bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border-2 border-purple-200 dark:border-purple-800 rounded-lg p-8">
+            <h2 className="text-2xl font-bold mb-4">Strategic Foundation</h2>
+            <p className="text-foreground mb-4">
+              The tactical patterns documented on Avolve.io rest on a deeper strategic framework: <strong>The Industrialization of Intelligence</strong>.
+            </p>
+            <p className="text-muted-foreground mb-4">
+              Understand the "why" behind the "how": Why does orchestration work? What are we really building?
+              How does coordination create emergent intelligence? What are the fundamental principles?
+            </p>
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 border border-purple-300 dark:border-purple-700">
+              <h3 className="font-semibold mb-3 text-lg">Explore the Strategic Framework:</h3>
+              <Link
+                href="/about/philosophy"
+                className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
+              >
+                Read Philosophy: The Industrialization of Intelligence →
+              </Link>
+              <p className="text-sm text-muted-foreground mt-4">
+                From craft to system. Coordination primacy. State as identity. The control paradox. The emergence question.
+                Economics of industrialized intelligence.
+              </p>
+            </div>
           </section>
 
           <section id="about-creator" className="mb-12">

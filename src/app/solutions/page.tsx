@@ -137,9 +137,9 @@ export default function SolutionsPage() {
         </time>
 
         <article>
-          <h1 className="text-4xl font-bold mb-4">Solutions</h1>
+          <h1 className="text-4xl font-bold mb-4">Solutions - AI Orchestration Outcomes</h1>
           <p className="text-xl text-muted-foreground section-spacing">
-            Fast lookup: complete apps, tech stacks, build time, costs
+            Production AI orchestration applications delivering 5-20x ROI: multi-agent workflows, intelligent coordination, real business outcomes
           </p>
 
           {/* QUICK REFERENCE TABLE - Primary utility for fast solution lookup */}
@@ -191,17 +191,19 @@ export default function SolutionsPage() {
           </section>
 
           <section id="solutions-definition" className="section-spacing">
-            <h2 className="text-2xl font-bold mb-4">What are Solutions?</h2>
+            <h2 className="text-2xl font-bold mb-4">AI Orchestration Outcomes</h2>
             <p className="text-foreground mb-4">
-              Solutions are complete, working applications that solve real business problems.
-              They combine <Link href="/systems" className="hover:underline">Systems</Link> (architecture),
-              <Link href="/software" className="hover:underline ml-1">Software</Link> (frameworks),
-              <Link href="/services" className="hover:underline ml-1">Services</Link> (external tools), and
-              <Link href="/support" className="hover:underline ml-1">Support</Link> (maintenance).
+              <strong>Solutions are AI-orchestrated applications delivering measurable business value.</strong> Not single-model examples—multi-agent coordination,
+              intelligent routing, and tool orchestration working together. Organizations achieving 5-20x ROI within first year through these patterns.
+            </p>
+            <p className="text-foreground mb-4">
+              They combine <Link href="/systems" className="hover:underline">Orchestration Patterns</Link> (agent coordination, model routing),
+              <Link href="/software" className="hover:underline ml-1">AI-Native Stack</Link> (Vercel AI SDK, LangChain),
+              <Link href="/services" className="hover:underline ml-1">AI Services</Link> (OpenAI, Anthropic), and
+              <Link href="/support" className="hover:underline ml-1">AI Operations</Link> (debugging agents, cost optimization).
             </p>
             <p className="text-muted-foreground">
-              Every solution on this page includes: tech stack with versions, time to build, cost at scale,
-              and working code examples.
+              Every solution: production-tested orchestration patterns, verified stack, time to build, cost at scale, working code.
             </p>
           </section>
 

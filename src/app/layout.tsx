@@ -10,15 +10,16 @@ import { LAST_VERIFIED_DATE } from "@/lib/schema";
 export const metadata: Metadata = {
   metadataBase: new URL('https://avolve.io'),
   title: {
-    default: "Avolve.io - Modern Web Development Stack (October 2025)",
+    default: "Avolve.io - AI Orchestration for Next.js (October 2025)",
     template: "%s | Avolve.io"
   },
-  description: "Authoritative reference for Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2 modern stack. Verified compatibility, integration patterns, official resources. Optimized for human developers and AI assistants. Updated October 2025.",
+  description: "AI orchestration patterns for Next.js 16 + React 19 applications. Multi-agent workflows, model routing, tool orchestration with Vercel AI SDK 5.0, LangChain, and CrewAI. Production-tested, stack-specific implementation. Optimized for developers and AI assistants. Updated October 2025.",
   keywords: [
-    "Next.js 15", "React 19", "TypeScript 5.9", "Tailwind CSS 4", "shadcn/ui 3.0",
-    "Vercel", "Supabase", "modern web stack", "web development 2025",
-    "stack integration", "AI-optimized documentation", "verified compatibility",
-    "Next.js React integration", "Server Components", "App Router"
+    "AI orchestration", "Next.js 16", "React 19", "multi-agent workflows", "model routing",
+    "Vercel AI SDK", "LangChain", "CrewAI", "tool orchestration", "AI agents",
+    "TypeScript 5.9", "Tailwind CSS 4", "shadcn/ui 3.0",
+    "Vercel", "Supabase", "AI-native development", "production AI patterns",
+    "Server Components", "App Router", "AI development operations"
   ],
   authors: [{ name: "Joshua Seymour", url: "https://www.joshuaseymour.com" }],
   creator: "Joshua Seymour",
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: "Avolve.io - Modern Web Development Stack (October 2025)",
-    description: "Verified Next.js 15 + React 19.2 + TypeScript 5.9 stack integration. Official resources + integration patterns for developers and AI assistants.",
+    title: "Avolve.io - AI Orchestration for Next.js (October 2025)",
+    description: "Production-tested AI orchestration patterns for Next.js 16 + React 19. Multi-agent workflows, model routing, tool orchestration with Vercel AI SDK, LangChain, and CrewAI.",
     url: "https://avolve.io",
     siteName: "Avolve.io",
     locale: "en_US",
@@ -44,14 +45,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Avolve.io - Modern Web Development Stack Reference"
+        alt: "Avolve.io - AI Orchestration Knowledge Graph for Next.js"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Avolve.io - Modern Stack Reference (Oct 2025)",
-    description: "Next.js 15 + React 19.2 + TypeScript 5.9 verified integration patterns + official resources",
+    title: "Avolve.io - AI Orchestration for Next.js (Oct 2025)",
+    description: "Multi-agent workflows, model routing, tool orchestration. Production-tested patterns for Next.js 16 + React 19 + Vercel AI SDK 5.0.",
     images: ["/og-image.png"]
   },
   robots: {
@@ -83,7 +84,7 @@ export default function RootLayout({
         "@id": "https://avolve.io/#website",
         "name": "Avolve.io",
         "alternateName": "Avolve - Modern Web Development Stack Reference",
-        "description": "A knowledge graph for the modern web stack. Get verified compatibility patterns for Next.js 15, React 19, Vercel AI, Supabase auth, shadcn/ui, and more. Optimized for AI assistants and developers.",
+        "description": "AI orchestration knowledge graph for Next.js 16 + React 19 applications. Production-tested patterns for multi-agent workflows, model routing, and tool orchestration with Vercel AI SDK 5.0, LangChain, and CrewAI. Stack-specific implementation, not generic orchestration theory.",
         "url": "https://avolve.io",
         "inLanguage": "en-US",
         "datePublished": "2025-10-05",
@@ -140,7 +141,7 @@ export default function RootLayout({
             ]
           }
         ],
-        "keywords": "Next.js 15, React 19, TypeScript, modern web stack, stack integration, verified compatibility, Server Components, App Router, Tailwind CSS, shadcn/ui, Vercel, Supabase, AI-native development",
+        "keywords": "AI orchestration, Next.js 16, React 19, multi-agent workflows, model routing, tool orchestration, Vercel AI SDK, LangChain, CrewAI, TypeScript, AI agents, AI-native development, production AI patterns, Server Components, App Router, Tailwind CSS, shadcn/ui, Vercel, Supabase",
         "hasPart": [
           {
             "@id": "https://avolve.io/blog#blog"
@@ -166,7 +167,7 @@ export default function RootLayout({
         "@id": "https://avolve.io/blog#blog",
         "name": "Avolve.io Technical Documentation",
         "alternateName": "Modern Web Stack Knowledge Graph",
-        "description": "Production-tested integration patterns for Next.js 15, React 19, TypeScript 5.9, and the modern web development stack. Curated technical documentation optimized for developers and AI assistants.",
+        "description": "Production-tested AI orchestration patterns for Next.js 16 + React 19 applications. Multi-agent workflows, model routing, and tool orchestration with Vercel AI SDK 5.0, LangChain, and CrewAI. Stack-specific implementation documentation optimized for developers and AI assistants.",
         "url": "https://avolve.io",
         "inLanguage": "en-US",
         "publisher": {
@@ -207,8 +208,8 @@ export default function RootLayout({
         "@type": "SoftwareApplication",
         "@id": "https://avolve.io/#softwareapplication",
         "name": "Avolve.io",
-        "alternateName": "Avolve - Modern Web Development Stack Reference",
-        "description": "Integration knowledge graph providing production-tested compatibility verification for modern web development stacks. Bridges the gap between official documentation with version-specific integration patterns, honest failure mode documentation, and AI-optimized technical guidance for Next.js 16, React 19, TypeScript 5.9, Vercel AI SDK, and Supabase.",
+        "alternateName": "Avolve - AI Orchestration Knowledge Graph for Next.js",
+        "description": "AI orchestration knowledge graph providing production-tested patterns for coordinating multiple AI agents, models, and tools in Next.js 16 + React 19 applications. Stack-specific implementation patterns for multi-agent workflows, model routing, and tool orchestration with Vercel AI SDK 5.0, LangChain, and CrewAI. Not generic orchestration theory—practical Next.js integration.",
         "applicationCategory": "DeveloperApplication",
         "applicationSubCategory": "Developer Tools",
         "operatingSystem": "Web Browser",
@@ -231,20 +232,22 @@ export default function RootLayout({
           "priceCurrency": "USD"
         },
         "featureList": [
-          "Production-tested compatibility verification for modern web stacks (Next.js, React, TypeScript)",
-          "AI-optimized technical documentation with schema.org structured data for accurate citations",
-          "Version-specific integration patterns (exact versions that work together, not 'latest' guessing)",
-          "Knowledge graph linking Solutions→Systems→Software→Services→Support layers",
-          "Honest production failure mode documentation ('What Breaks' sections)",
+          "Production-tested AI orchestration patterns for Next.js 16 + React 19 applications",
+          "Multi-agent workflow patterns (sequential, parallel, hierarchical coordination)",
+          "Model routing strategies for GPT-5, Claude 3.7, Gemini 2.5 coordination",
+          "Tool orchestration with MCP (Model Context Protocol) for capability coordination",
+          "Stack-specific implementation (Vercel AI SDK 5.0, LangChain, CrewAI on Next.js)",
+          "AI-optimized documentation with schema.org structured data for accurate citations",
+          "Honest AI orchestration failure documentation ('What Breaks in Production' sections)",
           "Zero vendor bias technical recommendations (no paid placements)",
-          "Continuous verification and updates (weekly validation as of October 2025)"
+          "Continuous pattern validation (weekly verification as of October 2025)"
         ],
         "screenshot": {
           "@type": "ImageObject",
           "url": "https://avolve.io/og-image.png",
           "width": 1200,
           "height": 630,
-          "caption": "Avolve.io - Modern Web Development Stack Compatibility Matrix"
+          "caption": "Avolve.io - AI Orchestration Knowledge Graph for Next.js Applications"
         },
         "sameAs": [
           "https://github.com/supercivilization/avolve.io"
@@ -286,7 +289,7 @@ export default function RootLayout({
           "height": "1200",
           "caption": "Joshua Seymour - Founder of Supercivilization, Creator of Avolve.io"
         },
-        "description": "Founder of Supercivilization. Creator of Avolve.io — AI-native knowledge graph for modern web development stack compatibility",
+        "description": "Founder of Supercivilization. Creator of Avolve.io — AI orchestration knowledge graph for Next.js applications",
         "jobTitle": "Founder",
         "email": "admin@joshuaseymour.com",
         "foundedOrganization": {
@@ -308,6 +311,8 @@ export default function RootLayout({
           }
         ],
         "knowsAbout": [
+          "AI orchestration",
+          "Multi-agent workflows",
           "AI-native applications",
           "Supercivilization",
           "Avolve.io",
@@ -315,6 +320,8 @@ export default function RootLayout({
           "React",
           "TypeScript",
           "Vercel AI SDK",
+          "LangChain",
+          "CrewAI",
           "Supabase",
           "shadcn/ui",
           "Web Development",

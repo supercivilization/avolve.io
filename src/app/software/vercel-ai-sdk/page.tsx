@@ -17,9 +17,9 @@ import { ThemeToggle } from "@/components/theme-toggle";
 // Last verified: 2025-10-06
 
 export const metadata: Metadata = {
-  title: "Vercel AI SDK 5.0.60 + Modern Stack Integration (Oct 2025) | Avolve.io",
-  description: "Vercel AI SDK 5.0.60 with Next.js 16, React 19, streaming, tool calling. Stack integration patterns, verified compatibility, and official resources. Updated Oct 2025.",
-  keywords: ["Vercel AI SDK", "AI SDK 5.0", "Next.js AI", "streaming AI", "tool calling", "Claude Sonnet 4.5", "GPT-5", "AI Gateway"],
+  title: "Vercel AI SDK 5.0 for AI Orchestration + Next.js 16 (Oct 2025) | Avolve.io",
+  description: "Vercel AI SDK 5.0 for AI orchestration on Next.js 16. Multi-agent workflows, model routing, sequential and parallel patterns with streaming and tool calling. Production-tested with React 19, Claude 3.7, GPT-5. Updated Oct 2025.",
+  keywords: ["Vercel AI SDK", "AI SDK 5.0", "AI orchestration", "multi-agent workflows", "model routing", "Next.js AI", "streaming AI", "tool calling", "Claude Sonnet 4.5", "GPT-5", "AI Gateway"],
   alternates: {
     canonical: "https://avolve.io/software/vercel-ai-sdk",
   },
@@ -218,9 +218,151 @@ npm install ai @ai-sdk/google`}
             </Alert>
           </section>
 
+          {/* AI Orchestration Patterns */}
+          <section id="ai-orchestration" className="space-y-4">
+            <h2 className="text-3xl font-bold">AI Orchestration Patterns</h2>
+            <p className="text-muted-foreground">
+              Coordinating multiple AI agents and models for complex workflows with Vercel AI SDK 5.0.
+            </p>
+
+            <Alert>
+              <AlertCircle className="h-4 w-4" />
+              <AlertTitle>Multi-Agent Workflows with AI SDK 5.0</AlertTitle>
+              <AlertDescription>
+                AI SDK 5.0's agentic control primitives (stopWhen, prepareStep) enable production-grade multi-agent coordination. See <Link href="/systems/agent-coordination" className="underline">Agent Coordination Patterns</Link> for complete implementation guides.
+              </AlertDescription>
+            </Alert>
+
+            <h3 className="text-2xl font-bold mt-6">Sequential Agent Workflow</h3>
+            <p className="text-muted-foreground">
+              Chain multiple specialized agents where each agent's output feeds into the next. Best for workflows with clear dependencies (e.g., Research → Write → Review).
+            </p>
+
+            <CodeBlock
+              code={`import { anthropic } from '@ai-sdk/anthropic';
+import { openai } from '@ai-sdk/openai';
+import { generateText } from 'ai';
+
+// Step 1: Research agent (Claude for reasoning)
+const researchResult = await generateText({
+  model: anthropic('claude-3-7-sonnet-20250219'),
+  prompt: \`Research this topic: \${topic}\`,
+  maxTokens: 500,
+});
+
+// Step 2: Writer agent (GPT-5 for creativity)
+const draftResult = await generateText({
+  model: openai('gpt-4o'),
+  prompt: \`Write article based on research:\\n\${researchResult.text}\`,
+  maxTokens: 800,
+});
+
+// Step 3: Review agent (Gemini for fast validation)
+const finalResult = await generateText({
+  model: google('gemini-2.0-flash-exp'),
+  prompt: \`Review and improve:\\n\${draftResult.text}\`,
+  maxTokens: 1000,
+});
+
+console.log('Sequential workflow cost:',
+  researchResult.usage.totalTokens +
+  draftResult.usage.totalTokens +
+  finalResult.usage.totalTokens
+);`}
+              language="typescript"
+              filename="app/actions/sequential-workflow.ts"
+              showLineNumbers
+            />
+
+            <h3 className="text-2xl font-bold mt-6">Parallel Agent Workflow</h3>
+            <p className="text-muted-foreground">
+              Execute multiple agents simultaneously when tasks are independent. 3x faster than sequential execution.
+            </p>
+
+            <CodeBlock
+              code={`import { anthropic } from '@ai-sdk/anthropic';
+import { openai } from '@ai-sdk/openai';
+import { google } from '@ai-sdk/google';
+import { generateText } from 'ai';
+
+// Execute 3 agents in parallel
+const [technical, creative, practical] = await Promise.all([
+  generateText({
+    model: anthropic('claude-3-7-sonnet-20250219'),
+    prompt: \`Technical analysis of: \${query}\`,
+    maxTokens: 300,
+  }),
+  generateText({
+    model: openai('gpt-4o'),
+    prompt: \`Creative analysis of: \${query}\`,
+    maxTokens: 300,
+  }),
+  generateText({
+    model: google('gemini-2.0-flash-exp'),
+    prompt: \`Practical analysis of: \${query}\`,
+    maxTokens: 300,
+  }),
+]);
+
+// Synthesize results with cheap model
+const synthesis = await generateText({
+  model: openai('gpt-4o-mini'),
+  prompt: \`Synthesize these analyses:\\n\${technical.text}\\n\${creative.text}\\n\${practical.text}\`,
+  maxTokens: 500,
+});
+
+console.log('Parallel execution complete');
+console.log('Time savings: 66% (3x parallelization)');`}
+              language="typescript"
+              filename="app/actions/parallel-workflow.ts"
+              showLineNumbers
+            />
+
+            <h3 className="text-2xl font-bold mt-6">Model Routing for Cost Optimization</h3>
+            <p className="text-muted-foreground">
+              Use cheap models for routing decisions, powerful models for complex reasoning. Typical savings: 40-60% cost reduction.
+            </p>
+
+            <CodeBlock
+              code={`import { anthropic } from '@ai-sdk/anthropic';
+import { openai } from '@ai-sdk/openai';
+import { generateObject, generateText } from 'ai';
+import { z } from 'zod';
+
+// Step 1: Routing with cheap model (GPT-5 mini @ $0.15/1M tokens)
+const routing = await generateObject({
+  model: openai('gpt-4o-mini'),
+  schema: z.object({
+    complexity: z.enum(['simple', 'medium', 'complex']),
+    requiresReasoning: z.boolean(),
+  }),
+  prompt: \`Analyze complexity: \${userQuery}\`,
+});
+
+// Step 2: Route to appropriate model based on complexity
+const selectedModel =
+  routing.object.complexity === 'complex'
+    ? anthropic('claude-3-7-sonnet-20250219')  // $3/1M input
+    : routing.object.complexity === 'medium'
+    ? openai('gpt-4o')                          // $2.50/1M input
+    : openai('gpt-4o-mini');                   // $0.15/1M input
+
+const result = await generateText({
+  model: selectedModel,
+  prompt: userQuery,
+});
+
+console.log(\`Routing cost: $0.0001, Execution cost: varies by model\`);
+console.log(\`Total savings vs always using Claude: 40-60%\`);`}
+              language="typescript"
+              filename="app/actions/model-routing.ts"
+              showLineNumbers
+            />
+          </section>
+
           {/* Integration Patterns */}
           <section id="integration-patterns" className="space-y-4">
-            <h2 className="text-3xl font-bold">Integration Patterns</h2>
+            <h2 className="text-3xl font-bold">Next.js Integration Patterns</h2>
 
             <h3 className="text-2xl font-bold">Streaming Chat with Next.js 16</h3>
             <p className="text-muted-foreground">
