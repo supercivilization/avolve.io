@@ -186,13 +186,31 @@ export default function RootLayout({
           }
         ]
       },
+      /**
+       * Avolve.io Schema - SoftwareApplication Entity
+       *
+       * ENTITY STRATEGY:
+       * - Primary type: SoftwareApplication (this is a developer tool/platform, not an Organization)
+       * - Publisher: Supercivilization (the organization that created it)
+       * - Creator: Joshua Seymour (the person who built it)
+       *
+       * VALIDATION WITHOUT WIKIPEDIA:
+       * - GitHub repository as primary external validation
+       * - Cross-references to canonical Person and Organization entities
+       * - Feature-rich description optimized for AI recommendation engines
+       * - Structured data enables discovery across ChatGPT, Perplexity, Google AI Overviews
+       *
+       * This schema optimizes for developer tool discovery, AI citations, and
+       * integration knowledge graph positioning in search results.
+       */
       {
         "@type": "SoftwareApplication",
         "@id": "https://avolve.io/#softwareapplication",
         "name": "Avolve.io",
         "alternateName": "Avolve - Modern Web Development Stack Reference",
-        "description": "AI-native knowledge graph for modern web stack compatibility. Production-tested integration patterns for Next.js 15, React 19, TypeScript 5.9, Vercel AI SDK, and Supabase.",
-        "applicationCategory": "WebApplication",
+        "description": "Integration knowledge graph providing production-tested compatibility verification for modern web development stacks. Bridges the gap between official documentation with version-specific integration patterns, honest failure mode documentation, and AI-optimized technical guidance for Next.js 16, React 19, TypeScript 5.9, Vercel AI SDK, and Supabase.",
+        "applicationCategory": "DeveloperApplication",
+        "applicationSubCategory": "Developer Tools",
         "operatingSystem": "Web Browser",
         "url": "https://avolve.io",
         "softwareVersion": "1.0",
@@ -213,17 +231,24 @@ export default function RootLayout({
           "priceCurrency": "USD"
         },
         "featureList": [
-          "Modern web stack compatibility verification",
-          "AI-optimized technical documentation",
-          "Integration pattern knowledge graph",
-          "Production-tested version matrices"
+          "Production-tested compatibility verification for modern web stacks (Next.js, React, TypeScript)",
+          "AI-optimized technical documentation with schema.org structured data for accurate citations",
+          "Version-specific integration patterns (exact versions that work together, not 'latest' guessing)",
+          "Knowledge graph linking Solutions→Systems→Software→Services→Support layers",
+          "Honest production failure mode documentation ('What Breaks' sections)",
+          "Zero vendor bias technical recommendations (no paid placements)",
+          "Continuous verification and updates (weekly validation as of October 2025)"
         ],
         "screenshot": {
           "@type": "ImageObject",
           "url": "https://avolve.io/og-image.png",
           "width": 1200,
-          "height": 630
-        }
+          "height": 630,
+          "caption": "Avolve.io - Modern Web Development Stack Compatibility Matrix"
+        },
+        "sameAs": [
+          "https://github.com/supercivilization/avolve.io"
+        ]
       },
       {
         "@type": "Organization",
