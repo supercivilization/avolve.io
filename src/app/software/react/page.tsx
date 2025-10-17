@@ -12,9 +12,9 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 // Dependencies (October 17, 2025):
 // - React: 19.2.0 (released October 1, 2025)
-// - Next.js: 15.5.5
+// - Next.js: 16.0.0-beta.0
 // - TypeScript: 5.9.2
-// Last verified: 2025-10-05
+// Last verified: 2025-10-17
 
 export const metadata: Metadata = {
   title: "React 19.2 + Modern Stack Integration (Oct 2025) | Avolve.io",
@@ -161,7 +161,7 @@ export default function ReactPage() {
                 <TableBody>
                   <TableRow>
                     <TableCell className="font-medium">Next.js</TableCell>
-                    <TableCell className="font-mono">15.5.5</TableCell>
+                    <TableCell className="font-mono">16.0.0-beta.0</TableCell>
                     <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>

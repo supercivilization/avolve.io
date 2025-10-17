@@ -4,11 +4,11 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { authorRef, publisherRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
 // Dependencies (October 17, 2025):
-// - Next.js: 15.5.5
+// - Next.js: 16.0.0-beta.0
 // - React: 19.2.0
 // - TypeScript: 5.9.2
 // - Vercel AI SDK: 5.0.48
-// Last verified: 2025-10-06
+// Last verified: 2025-10-17
 
 export const metadata: Metadata = {
   title: "Solutions - Complete Application Examples",
@@ -58,7 +58,7 @@ export default function SolutionsPage() {
           {
             "@type": "SoftwareApplication",
             "name": "Next.js",
-            "version": "15.5.5"
+            "version": "16.0.0-beta.0"
           },
           {
             "@type": "SoftwareApplication",
@@ -271,10 +271,10 @@ export default function SolutionsPage() {
               <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
 {`// app/api/chat/route.ts
 // Dependencies (October 17, 2025):
-// - Next.js: 15.5.5
+// - Next.js: 16.0.0-beta.0
 // - Vercel AI SDK: 5.0.48
 // - @ai-sdk/anthropic: 2.0.22
-// Last verified: 2025-10-05
+// Last verified: 2025-10-17
 
 import { createAnthropic } from '@ai-sdk/anthropic';
 import { streamText } from 'ai';

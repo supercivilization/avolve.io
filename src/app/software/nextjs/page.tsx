@@ -43,7 +43,7 @@ export default function NextJsPage() {
       {
         "@type": "SoftwareApplication",
         "name": "Next.js",
-        "softwareVersion": "15.5.4",
+        "softwareVersion": "16.0.0-beta.0",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Node.js 24.8.0",
         "offers": {
@@ -108,7 +108,7 @@ export default function NextJsPage() {
           <header className="space-y-4">
             <div className="flex items-center gap-3">
               <h1 className="text-4xl font-bold">Next.js 16</h1>
-              <Badge variant="default">v15.5.4</Badge>
+              <Badge variant="default">v16.0.0-beta.0</Badge>
               <Badge variant="outline" className="bg-muted/30 text-zinc-600 dark:text-zinc-400 border-zinc-300">Production Ready</Badge>
             </div>
             <p className="text-xl text-muted-foreground">
