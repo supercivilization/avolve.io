@@ -346,6 +346,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
+        {/* Theme color for browser UI (matches background in both modes) */}
+        <meta name="theme-color" content="oklch(1 0 0)" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="oklch(0.145 0 0)" media="(prefers-color-scheme: dark)" />
+
         {/* Google Analytics - Disabled (replace G-XXXXXXXXXX with real ID to enable) */}
         {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> */}
         {/* <script
