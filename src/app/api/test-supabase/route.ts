@@ -6,12 +6,12 @@
  * Tests Supabase connection and returns status
  */
 
-import { createServerClient } from '@/lib/supabase/server'
+import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
 
 export async function GET() {
   try {
-    const supabase = await createServerClient()
+    const supabase = await createClient()
 
     // Test basic connection
     const { data, error } = await supabase
