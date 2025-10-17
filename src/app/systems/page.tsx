@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // - Next.js: 15.5.5
 // - React: 19.2.0
 // - Supabase: 2.58.0
@@ -127,7 +127,7 @@ export default function SystemsPage() {
 
       <main className="page-container">
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 15, 2025
+          Last updated: October 17, 2025
         </time>
 
         <article>
@@ -306,7 +306,7 @@ export default function SystemsPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All patterns include</strong> • Complete working code • Component list • Data flow • Production failures & fixes • Last verified: October 15, 2025
+                <strong>All patterns include</strong> • Complete working code • Component list • Data flow • Production failures & fixes • Last verified: October 17, 2025
               </p>
             </div>
           </section>
@@ -462,7 +462,7 @@ export default function SystemsPage() {
               <h4 className="text-lg font-bold mb-2">1. Middleware (Edge Protection)</h4>
               <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-6">
 {`// middleware.ts
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // - Next.js: 15.5.5
 // - @supabase/ssr: 0.7.1
 // Last verified: 2025-10-05
@@ -589,7 +589,7 @@ export function LoginForm() {
               </pre>
             </div>
 
-            <div className="bg-muted border-l-2 border-stone-600/30 dark:border-stone-400 p-6 mb-8">
+            <div className="bg-muted border-l-2 border-slate-600/40 dark:border-stone-400 p-6 mb-8">
               <h3 className="text-lg font-bold mb-4">What Breaks in Production</h3>
               <ul className="space-y-3 text-foreground text-sm">
                 <li>

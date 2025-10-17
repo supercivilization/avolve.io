@@ -10,7 +10,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { AlertCircle, CheckCircle2 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // - React: 19.2.0 (released October 1, 2025)
 // - Next.js: 15.5.5
 // - TypeScript: 5.9.2
@@ -104,7 +104,7 @@ export default function ReactPage() {
         </div>
 
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 15, 2025
+          Last updated: October 17, 2025
         </time>
 
         <article className="mt-4 space-y-8">
@@ -456,7 +456,7 @@ module.exports = {
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Current Version:</h4>
-                  <p className="text-sm text-foreground">React 19.2.0 (verified October 15, 2025)</p>
+                  <p className="text-sm text-foreground">React 19.2.0 (verified October 17, 2025)</p>
                 </div>
 
                 <div>

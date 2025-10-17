@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { authorRef, publisherRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
@@ -133,7 +133,7 @@ export default function SolutionsPage() {
 
       <main className="page-container">
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 15, 2025
+          Last updated: October 17, 2025
         </time>
 
         <article>
@@ -185,7 +185,7 @@ export default function SolutionsPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All solutions include</strong> • Complete code • Tech stack versions • Build time estimate • Cost breakdown • Production considerations • Last verified: October 15, 2025
+                <strong>All solutions include</strong> • Complete code • Tech stack versions • Build time estimate • Cost breakdown • Production considerations • Last verified: October 17, 2025
               </p>
             </div>
           </section>
@@ -262,7 +262,7 @@ export default function SolutionsPage() {
                 </Table>
               </div>
               <p className="text-sm text-muted-foreground mt-2">
-                Costs verified: October 15, 2025
+                Costs verified: October 17, 2025
               </p>
             </div>
 
@@ -270,7 +270,7 @@ export default function SolutionsPage() {
               <h3 className="text-xl font-bold mb-4">Implementation</h3>
               <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
 {`// app/api/chat/route.ts
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // - Next.js: 15.5.5
 // - Vercel AI SDK: 5.0.48
 // - @ai-sdk/anthropic: 2.0.22
@@ -343,7 +343,7 @@ export function Chat() {
               </pre>
             </div>
 
-            <div className="bg-stone-100 border-l-2 border-stone-600/30 p-4">
+            <div className="bg-stone-100 border-l-2 border-slate-600/40 p-4">
               <h3 className="text-lg font-bold mb-2">Production Considerations</h3>
               <ul className="space-y-1 text-foreground text-sm">
                 <li>• Add rate limiting (Vercel Edge Config)</li>

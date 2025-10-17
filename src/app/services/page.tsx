@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // Pricing verified: 2025-10-06
 // Last verified: 2025-10-06
 
@@ -229,7 +229,7 @@ export default function ServicesPage() {
 
       <main className="page-container">
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 15, 2025
+          Last updated: October 17, 2025
         </time>
 
         <article>
@@ -272,9 +272,9 @@ export default function ServicesPage() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://vercel.com/docs" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
-                        <a href="https://vercel.com/pricing" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
-                        <a href="#vercel" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
+                        <a href="https://vercel.com/docs" target="_blank" rel="noopener" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
+                        <a href="https://vercel.com/pricing" target="_blank" rel="noopener" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
+                        <a href="#vercel" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
                       </div>
                     </td>
                   </tr>
@@ -295,9 +295,9 @@ export default function ServicesPage() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://supabase.com/docs" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
-                        <a href="https://supabase.com/pricing" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
-                        <a href="#supabase" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
+                        <a href="https://supabase.com/docs" target="_blank" rel="noopener" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
+                        <a href="https://supabase.com/pricing" target="_blank" rel="noopener" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
+                        <a href="#supabase" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
                       </div>
                     </td>
                   </tr>
@@ -318,9 +318,9 @@ export default function ServicesPage() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://docs.anthropic.com" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
-                        <a href="https://www.anthropic.com/pricing" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
-                        <a href="#claude-api" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
+                        <a href="https://docs.anthropic.com" target="_blank" rel="noopener" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
+                        <a href="https://www.anthropic.com/pricing" target="_blank" rel="noopener" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
+                        <a href="#claude-api" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
                       </div>
                     </td>
                   </tr>
@@ -341,9 +341,9 @@ export default function ServicesPage() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://stripe.com/docs" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
-                        <a href="https://stripe.com/pricing" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
-                        <a href="#stripe" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
+                        <a href="https://stripe.com/docs" target="_blank" rel="noopener" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
+                        <a href="https://stripe.com/pricing" target="_blank" rel="noopener" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
+                        <a href="#stripe" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
                       </div>
                     </td>
                   </tr>
@@ -364,9 +364,9 @@ export default function ServicesPage() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
-                        <a href="https://resend.com/docs" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
-                        <a href="https://resend.com/pricing" target="_blank" rel="noopener" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
-                        <a href="#resend" className="text-neutral-700 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
+                        <a href="https://resend.com/docs" target="_blank" rel="noopener" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Docs</a>
+                        <a href="https://resend.com/pricing" target="_blank" rel="noopener" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Pricing</a>
+                        <a href="#resend" className="text-zinc-800 dark:text-blue-400 hover:text-neutral-800 dark:hover:text-neutral-300 hover:underline">Guide →</a>
                       </div>
                     </td>
                   </tr>
@@ -375,7 +375,7 @@ export default function ServicesPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All pricing verified</strong> • Free tiers available for Vercel, Supabase, Resend • Last verified: October 15, 2025
+                <strong>All pricing verified</strong> • Free tiers available for Vercel, Supabase, Resend • Last verified: October 17, 2025
               </p>
             </div>
           </section>
@@ -572,7 +572,7 @@ export default function ServicesPage() {
                 </li>
               </ul>
               <p className="text-sm text-muted-foreground mt-4">
-                All pricing verified as of October 15, 2025. Check service pages for current rates.
+                All pricing verified as of October 17, 2025. Check service pages for current rates.
               </p>
             </div>
           </section>

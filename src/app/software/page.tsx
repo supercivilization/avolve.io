@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, websiteRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 15, 2025):
-// - Next.js: 15.5.4
+// Dependencies (October 17, 2025):
+// - Next.js: 16.0.0-beta.0
 // - React: 19.2.0
 // - TypeScript: 5.9.3
 // Last verified: 2025-10-06
@@ -124,7 +124,7 @@ export default function SoftwarePage() {
 
       <main className="page-container">
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 15, 2025
+          Last updated: October 17, 2025
         </time>
 
         <article>
@@ -280,7 +280,7 @@ export default function SoftwarePage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All versions verified working together</strong> • Tested on Node.js 22.20.0, macOS Sonoma 14.6.1 • Last verified: October 15, 2025
+                <strong>All versions verified working together</strong> • Tested on Node.js 22.20.0, macOS Sonoma 14.6.1 • Last verified: October 17, 2025
               </p>
             </div>
           </section>
@@ -448,13 +448,13 @@ export default function SoftwarePage() {
                 </div>
                 <div className="pl-16 border-l-2 border-zinc-600 mt-4">
                   <div className="flex items-start gap-3">
-                    <span className="text-stone-600 dark:text-stone-400 font-bold min-w-[120px]">AI SDK 5.0.48</span>
+                    <span className="text-zinc-700 dark:text-zinc-300 font-bold min-w-[120px]">AI SDK 5.0.48</span>
                     <span className="text-muted-foreground">→ AI integration, requires Next.js 16+ for streaming</span>
                   </div>
                 </div>
                 <div className="pl-16 border-l-2 border-zinc-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-stone-600 dark:text-stone-400 font-bold min-w-[120px]">Supabase</span>
+                    <span className="text-zinc-700 dark:text-zinc-300 font-bold min-w-[120px]">Supabase</span>
                     <span className="text-muted-foreground">→ Backend, @supabase/ssr 0.7+ for Next.js 16</span>
                   </div>
                 </div>
@@ -619,7 +619,7 @@ export default function SoftwarePage() {
                     <td className="border border-border/40 px-4 py-2">AI Coding</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">Claude Code</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">2025</td>
-                    <td className="border border-border/40 px-4 py-2">Terminal agent (72.5% SWE-bench), see <Link href="/support#ai-coding" className="text-stone-600 dark:text-stone-400 hover:underline">Support</Link></td>
+                    <td className="border border-border/40 px-4 py-2">Terminal agent (72.5% SWE-bench), see <Link href="/support#ai-coding" className="text-zinc-700 dark:text-zinc-300 hover:underline">Support</Link></td>
                   </tr>
                 </tbody>
               </table>
@@ -630,7 +630,7 @@ export default function SoftwarePage() {
             <h2 className="mb-8">Version History</h2>
             <div className="space-y-4 text-foreground">
               <div>
-                <p className="font-bold">October 15, 2025:</p>
+                <p className="font-bold">October 17, 2025:</p>
                 <ul className="list-disc list-inside ml-4 space-y-1">
                   <li>Next.js 16 Beta.5, React 19.2.0 (Oct 1), shadcn/ui 3.0</li>
                   <li>Tailwind CSS 4.1.13 (Oxide engine stable)</li>
@@ -856,7 +856,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               </div>
             </div>
 
-            <div className="bg-stone-100 dark:bg-stone-900/20 border-l-2 border-stone-600/30 p-4 mb-8">
+            <div className="bg-stone-100 dark:bg-stone-900/20 border-l-2 border-slate-600/40 p-4 mb-8">
               <h3 className="text-lg font-bold mb-2">Supported AI Clients</h3>
               <ul className="space-y-1 text-gray-700 dark:text-gray-300 text-sm">
                 <li>• <strong>Claude Code</strong> - Full MCP support (recommended)</li>
@@ -921,7 +921,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               </p>
             </div>
 
-            <div className="bg-muted border-l-2 border-stone-600/30 dark:border-stone-600 p-6 rounded-lg mt-6">
+            <div className="bg-muted border-l-2 border-slate-600/40 dark:border-stone-600 p-6 rounded-lg mt-6">
               <h3 className="text-lg font-bold mb-4">Installation Guidance:</h3>
               <ul className="space-y-2 text-foreground text-sm">
                 <li>

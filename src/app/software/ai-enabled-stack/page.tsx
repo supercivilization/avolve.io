@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // - Next.js: 15.5.5
 // - Vercel AI SDK: 5.0.48
 // - Claude Sonnet 4.5: claude-sonnet-4-5-20250929
@@ -46,7 +46,7 @@ export default function AIEnabledStackPage() {
         </nav>
 
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 15, 2025 • Re-verify before: April 2026
+          Last updated: October 17, 2025 • Re-verify before: April 2026
         </time>
 
         <article>
@@ -232,7 +232,7 @@ export async function POST(request: Request) {
                   </pre>
                 </div>
 
-                <div className="bg-stone-100 dark:bg-stone-900 border-l-2 border-stone-600/30 dark:border-stone-600 p-4 rounded-lg">
+                <div className="bg-stone-100 dark:bg-stone-900 border-l-2 border-slate-600/40 dark:border-stone-600 p-4 rounded-lg">
                   <p className="font-bold mb-2">⚠️ Critical: Edge Runtime</p>
                   <p className="text-sm">
                     <strong>Must include `export const runtime = "edge"`</strong> or streaming won't work properly.
@@ -455,7 +455,7 @@ export default function ChatPage() {
               </div>
 
               {/* Layer 6: Tool Calling */}
-              <div className="border-l-2 border-stone-600/30 dark:border-indigo-400 pl-6">
+              <div className="border-l-2 border-slate-600/40 dark:border-indigo-400 pl-6">
                 <h3 className="text-xl font-bold mb-2">Layer 6: Tool Calling (AI Functions)</h3>
                 <p className="text-sm text-muted-foreground mb-3">Advanced • AI can execute functions</p>
 

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // - shadcn CLI: 3.4.0
-// - Next.js: 15.5.4
+// - Next.js: 16.0.0-beta.0
 // - React: 19.2.0
 // - Tailwind CSS: v4.1.14
 // Last verified: 2025-10-06
@@ -61,7 +61,7 @@ export default function ShadcnUIPage() {
 
       <main className="max-w-6xl mx-auto px-4 py-12">
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 15, 2025
+          Last updated: October 17, 2025
         </time>
 
         <article className="mt-4">

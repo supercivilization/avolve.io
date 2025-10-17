@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // - React Native: 0.81.3 (September 2025)
 // - Expo SDK: 54 (September 10, 2025)
 // - Next.js: 15.5.5 (for web sharing)
@@ -125,7 +125,7 @@ export default function MobileSystemPage() {
 
       <main className="max-w-6xl mx-auto px-4 py-12">
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 15, 2025
+          Last updated: October 17, 2025
         </time>
 
         <article className="mt-4">

@@ -46,7 +46,7 @@ export default function AgentCoordinationPage() {
             Production-tested patterns for coordinating multiple AI agents in Next.js applications. Sequential, parallel, and hierarchical workflows with Vercel AI SDK 5.0, LangChain, and CrewAI.
           </p>
 
-          <LastVerified date="2025-10-15" />
+          <LastVerified date="2025-10-17" />
         </div>
 
         <div className="mb-12 rounded-lg border-l-4 border-yellow-500 bg-yellow-50 p-6 dark:bg-yellow-900/20">

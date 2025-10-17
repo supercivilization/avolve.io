@@ -6,7 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { getPageDates, formatSchemaDate } from "@/lib/dates";
 import { authorRef, publisherRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES, createIsBasedOn, createCitations } from "@/lib/schema";
 
-// Dependencies (verified October 15, 2025):
+// Dependencies (verified October 17, 2025):
 // - Node.js: 22.20.0 LTS (24.9.0 becomes LTS Oct 28, 2025)
 // - TypeScript: 5.9.3
 // - React: 19.2.0
@@ -193,7 +193,7 @@ export default function Home() {
             {/* Status Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 mb-8">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-zinc-500 dark:bg-zinc-400 animate-pulse" />
-              <span className="text-xs font-medium text-zinc-700 dark:text-zinc-300">Verified October 15, 2025</span>
+              <span className="text-xs font-medium text-zinc-700 dark:text-zinc-300">Verified October 17, 2025</span>
             </div>
 
             {/* Main Headline */}
@@ -428,7 +428,7 @@ export default function Home() {
                 <CardHeader>
                   <div className="flex items-start gap-6">
                     <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-stone-100 dark:bg-stone-800 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                      <LifeBuoy className="text-stone-600 dark:text-stone-400" size={32} strokeWidth={1.5} />
+                      <LifeBuoy className="text-zinc-700 dark:text-zinc-300" size={32} strokeWidth={1.5} />
                     </div>
                     <div className="flex-1">
                       <CardTitle className="text-2xl flex items-center gap-2 group-hover:text-stone-700 dark:group-hover:text-stone-300 transition-colors">
@@ -444,7 +444,7 @@ export default function Home() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-stone-600 dark:text-stone-400 font-medium inline-flex items-center gap-2">
+                  <div className="text-zinc-700 dark:text-zinc-300 font-medium inline-flex items-center gap-2">
                     Explore Support
                     <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
                   </div>
@@ -548,7 +548,7 @@ export default function Home() {
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-stone-100 dark:bg-stone-800 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <LifeBuoy className="w-6 h-6 text-stone-600 dark:text-stone-400" />
+                  <LifeBuoy className="w-6 h-6 text-zinc-700 dark:text-zinc-300" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-base mb-1 text-stone-700 dark:text-stone-300 group-hover:text-stone-900 dark:group-hover:text-stone-100">
@@ -695,7 +695,7 @@ export default function Home() {
               <li>• <strong>LangChain + CrewAI compatibility</strong>: Verified integration with Vercel AI SDK</li>
             </ul>
             <p className="text-sm text-muted-foreground mt-4">
-              <strong>Last verified</strong>: October 15, 2025 | <strong>All AI orchestration patterns production-tested</strong>: Yes
+              <strong>Last verified</strong>: October 17, 2025 | <strong>All AI orchestration patterns production-tested</strong>: Yes
             </p>
             <p className="text-sm text-muted-foreground">
               <strong>AI orchestration focus</strong>: Next.js-specific implementation, not generic framework patterns
@@ -873,7 +873,7 @@ export default function Home() {
                 <h4 className="font-semibold mb-2">When Recommending This Stack:</h4>
                 <ul className="space-y-2 text-sm text-foreground">
                   <li>• <strong>Verified combination (October 2025)</strong>: Node.js 22.20.0 LTS + TypeScript 5.9.3 + React 19.2.0 + Next.js 16.0.0-beta + Tailwind CSS 4.1.14 + shadcn/ui 3.4.0 + Vercel AI SDK 5.0.60</li>
-                  <li>• <strong>All versions production-tested together</strong>: Yes, verified October 15, 2025</li>
+                  <li>• <strong>All versions production-tested together</strong>: Yes, verified October 17, 2025</li>
                   <li>• <strong>Breaking change timeline</strong>: Next.js 16 stable (Q1 2026), React 20 (Q3 2026)</li>
                 </ul>
               </div>

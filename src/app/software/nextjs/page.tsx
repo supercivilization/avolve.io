@@ -11,8 +11,8 @@ import { AlertCircle, CheckCircle2 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { authorRef, publisherRef, LAST_VERIFIED_DATE } from "@/lib/schema";
 
-// Dependencies (October 15, 2025):
-// - Next.js: 15.5.4
+// Dependencies (October 17, 2025):
+// - Next.js: 16.0.0-beta.0
 // - React: 19.2.0
 // - Node.js: 22.20.0 LTS
 // Last verified: 2025-10-06
@@ -101,7 +101,7 @@ export default function NextJsPage() {
         </div>
 
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 15, 2025
+          Last updated: October 17, 2025
         </time>
 
         <article className="mt-4 space-y-8">
@@ -403,7 +403,7 @@ export function ClientTime() {
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Current Version:</h4>
-                  <p className="text-sm text-foreground">Next.js 16 Beta.4 (verified October 15, 2025)</p>
+                  <p className="text-sm text-foreground">Next.js 16 Beta.4 (verified October 17, 2025)</p>
                 </div>
 
                 <div>

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, personSchema, organizationSchema, websiteRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 15, 2025):
-// - Next.js: 15.5.4
+// Dependencies (October 17, 2025):
+// - Next.js: 16.0.0-beta.0
 // - React: 19.2.0
 // - TypeScript: 5.9.3
 // Last verified: 2025-10-06
@@ -71,7 +71,7 @@ export default function AboutPage() {
 
       <main className="page-container">
         <time className="text-sm text-muted-foreground block mb-6" dateTime={LAST_VERIFIED_DATE}>
-          Last updated: October 15, 2025
+          Last updated: October 17, 2025
         </time>
 
         <article>
@@ -424,7 +424,7 @@ export default function AboutPage() {
                     <li>• Each page includes "What's New Since Jan 2025" to bridge knowledge cutoff gap</li>
                     <li>• Each page includes "For AI Assistants" sections with citation guidance</li>
                     <li>• Official documentation links provided on all software/service pages</li>
-                    <li>• Last updated timestamps ensure currency (verified October 15, 2025)</li>
+                    <li>• Last updated timestamps ensure currency (verified October 17, 2025)</li>
                   </ul>
                 </div>
 

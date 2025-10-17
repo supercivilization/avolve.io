@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // - Next.js: 15.5.5
 // - TypeScript: 5.9.2
 // - Supabase: Current
@@ -47,7 +47,7 @@ export default function TypeSafeStackPage() {
         </nav>
 
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 15, 2025 • Re-verify before: April 2026
+          Last updated: October 17, 2025 • Re-verify before: April 2026
         </time>
 
         <article>
@@ -447,7 +447,7 @@ export async function POST(request: NextRequest) {
           <section id="schema-sync" className="section-spacing border-t pt-8">
             <h2 className="mb-8">Keeping Schemas in Sync</h2>
 
-            <div className="bg-stone-100 dark:bg-stone-900 border-l-2 border-stone-600/30 dark:border-stone-600 p-6 rounded-lg">
+            <div className="bg-stone-100 dark:bg-stone-900 border-l-2 border-slate-600/40 dark:border-stone-600 p-6 rounded-lg">
               <h3 className="font-bold mb-3">The Challenge</h3>
               <p className="text-foreground mb-4">
                 You have two sources of truth: Zod schemas (frontend/API validation) and PostgreSQL schema (database structure). They must stay synchronized.

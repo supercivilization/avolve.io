@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
@@ -154,7 +154,7 @@ export default function SupportPage() {
 
       <main className="page-container">
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 15, 2025
+          Last updated: October 17, 2025
         </time>
 
         <article>
@@ -186,7 +186,7 @@ export default function SupportPage() {
                       <code className="bg-muted/30 px-1 text-xs">CREATE INDEX CONCURRENTLY</code>
                     </td>
                     <td className="px-4 py-3">
-                      <a href="#runbook-database-slow" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Full Runbook →</a>
+                      <a href="#runbook-database-slow" className="text-zinc-700 dark:text-zinc-300 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Full Runbook →</a>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -196,7 +196,7 @@ export default function SupportPage() {
                       Exclude /login from middleware matcher
                     </td>
                     <td className="px-4 py-3">
-                      <a href="#common-issues" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Quick Fix →</a>
+                      <a href="#common-issues" className="text-zinc-700 dark:text-zinc-300 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Quick Fix →</a>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -206,7 +206,7 @@ export default function SupportPage() {
                       Run <code className="bg-muted/30 px-1 text-xs">npm run build</code> locally first
                     </td>
                     <td className="px-4 py-3">
-                      <a href="#common-issues" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Quick Fix →</a>
+                      <a href="#common-issues" className="text-zinc-700 dark:text-zinc-300 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Quick Fix →</a>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -216,7 +216,7 @@ export default function SupportPage() {
                       Implement rate limiting with Upstash
                     </td>
                     <td className="px-4 py-3">
-                      <a href="#common-issues" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Quick Fix →</a>
+                      <a href="#common-issues" className="text-zinc-700 dark:text-zinc-300 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Quick Fix →</a>
                     </td>
                   </tr>
                   <tr className="hover:bg-muted/20">
@@ -226,7 +226,7 @@ export default function SupportPage() {
                       Add to Vercel dashboard, redeploy
                     </td>
                     <td className="px-4 py-3">
-                      <a href="#common-issues" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Quick Fix →</a>
+                      <a href="#common-issues" className="text-zinc-700 dark:text-zinc-300 hover:text-stone-700 dark:hover:text-stone-300 hover:underline text-sm">Quick Fix →</a>
                     </td>
                   </tr>
                 </tbody>
@@ -234,7 +234,7 @@ export default function SupportPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All fixes verified</strong> • Includes runbooks, code examples, prevention tips • Last verified: October 15, 2025
+                <strong>All fixes verified</strong> • Includes runbooks, code examples, prevention tips • Last verified: October 17, 2025
               </p>
             </div>
           </section>
@@ -289,7 +289,7 @@ export default function SupportPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>Full comparison below</strong> • Features, use cases, selection guide • <a href="#ai-coding" className="text-stone-600 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-300 hover:underline">View Details →</a>
+                <strong>Full comparison below</strong> • Features, use cases, selection guide • <a href="#ai-coding" className="text-zinc-700 dark:text-zinc-300 hover:text-stone-700 dark:hover:text-stone-300 hover:underline">View Details →</a>
               </p>
             </div>
           </section>
@@ -641,7 +641,7 @@ WHERE email = 'test@example.com';
             </div>
 
             <div className="space-y-6">
-              <div className="border-l-2 border-stone-600/30 pl-4">
+              <div className="border-l-2 border-slate-600/40 pl-4">
                 <h3 className="text-xl font-bold mb-3">Claude Code: Terminal-Native Agent</h3>
                 <p className="text-foreground mb-3">
                   <strong>72.5% SWE-bench Verified</strong> (Claude 3.7 Sonnet), terminal-native with MCP protocol for tool integrations. Agentic workflow with TodoWrite, MultiEdit, and specialized agents for complex tasks.
@@ -694,7 +694,7 @@ WHERE email = 'test@example.com';
               </div>
             </div>
 
-            <div className="bg-stone-100 border-l-2 border-stone-600/30 p-4 mt-8">
+            <div className="bg-stone-100 border-l-2 border-slate-600/40 p-4 mt-8">
               <h3 className="text-lg font-bold mb-2">Selection Guide</h3>
               <ul className="space-y-2 text-sm text-foreground">
                 <li>• <strong>Terminal-native workflow?</strong> Claude Code or Gemini CLI</li>

@@ -10,9 +10,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { AlertCircle, CheckCircle2 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // - Vercel AI SDK: 5.0.60
-// - Next.js: 15.5.4
+// - Next.js: 16.0.0-beta.0
 // - React: 19.2.0
 // Last verified: 2025-10-06
 
@@ -104,7 +104,7 @@ export default function VercelAISDKPage() {
         </div>
 
         <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 15, 2025
+          Last updated: October 17, 2025
         </time>
 
         <article className="mt-4 space-y-8">
@@ -690,7 +690,7 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Current Version:</h4>
-                  <p className="text-sm text-foreground">Vercel AI SDK 5.0.60 (verified October 15, 2025)</p>
+                  <p className="text-sm text-foreground">Vercel AI SDK 5.0.60 (verified October 17, 2025)</p>
                 </div>
 
                 <div>

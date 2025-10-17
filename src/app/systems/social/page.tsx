@@ -18,7 +18,7 @@ export default function SocialSystemPage() {
       ]} />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-muted-foreground" dateTime="2025-10-05">Last updated: October 15, 2025</time>
+        <time className="text-sm text-muted-foreground" dateTime="2025-10-05">Last updated: October 17, 2025</time>
 
         <article className="mt-4">
           <h1 className="text-4xl font-bold mb-4 text-foreground">Social Media System</h1>

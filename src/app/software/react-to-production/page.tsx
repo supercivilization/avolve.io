@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Dependencies (October 15, 2025):
+// Dependencies (October 17, 2025):
 // - Next.js: 15.5.5
 // - React: 19.2.0
 // - TypeScript: 5.9.2
@@ -46,7 +46,7 @@ export default function ReactToProductionPage() {
         </nav>
 
         <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 15, 2025 • Re-verify before: April 2026
+          Last updated: October 17, 2025 • Re-verify before: April 2026
         </time>
 
         <article>
@@ -371,7 +371,7 @@ export default function Page() {
               </div>
 
               {/* Step 7 */}
-              <div className="border-l-2 border-stone-600/30 dark:border-indigo-400 pl-6">
+              <div className="border-l-2 border-slate-600/40 dark:border-indigo-400 pl-6">
                 <h3 className="text-xl font-bold mb-2">Step 7: Deploy to Production (Vercel)</h3>
                 <p className="text-sm text-muted-foreground mb-3">Deployment • Optimized for Next.js</p>
 
@@ -430,7 +430,7 @@ vercel --prod`}
                 </p>
               </div>
 
-              <div className="bg-stone-100 dark:bg-stone-900 border-l-2 border-stone-600/30 dark:border-stone-600 p-4 rounded-lg">
+              <div className="bg-stone-100 dark:bg-stone-900 border-l-2 border-slate-600/40 dark:border-stone-600 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Tailwind classes not applying</h3>
                 <p className="text-sm mb-2">
                   <strong>Cause:</strong> Missing @tailwind directives or wrong content config
