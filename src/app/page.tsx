@@ -199,13 +199,13 @@ export default function Home() {
             {/* Main Headline */}
             <h1 className="mb-6 text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               Build Production AI Orchestration
-              <span className="block text-muted-foreground mt-2">Intelligence as Infrastructure</span>
+              <span className="block text-foreground/60 dark:text-muted-foreground mt-2">Intelligence as Infrastructure</span>
             </h1>
 
             {/* Value Proposition */}
             <p className="text-xl md:text-2xl text-foreground mb-8 max-w-3xl leading-relaxed">
               Multi-agent coordination. Model routing. Tool orchestration. State management.
-              <span className="block mt-2 text-muted-foreground">Production patterns for Next.js 16 + React 19 + Vercel AI SDK 5.0.</span>
+              <span className="block mt-2 text-foreground/60 dark:text-muted-foreground">Production patterns for Next.js 16 + React 19 + Vercel AI SDK 5.0.</span>
             </p>
 
             {/* Stack Pills */}
