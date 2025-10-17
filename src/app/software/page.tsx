@@ -412,13 +412,13 @@ export default function SoftwarePage() {
               <div className="space-y-3 font-mono text-sm">
                 <div className="pl-0">
                   <div className="flex items-start gap-3">
-                    <span className="text-slate-600 dark:text-slate-400 font-bold min-w-[120px]">Node.js 24.8.0</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">Node.js 24.8.0</span>
                     <span className="text-muted-foreground">→ Runtime foundation, native TypeScript execution</span>
                   </div>
                 </div>
                 <div className="pl-4 border-l-2 border-slate-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-gray-600 dark:text-gray-400 font-bold min-w-[120px]">TypeScript 5.9.2</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">TypeScript 5.9.2</span>
                     <span className="text-muted-foreground">→ Type safety layer, requires Node.js 18+</span>
                   </div>
                 </div>
@@ -436,13 +436,13 @@ export default function SoftwarePage() {
                 </div>
                 <div className="pl-16 border-l-2 border-zinc-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-neutral-600 dark:text-neutral-400 font-bold min-w-[120px]">Tailwind 4.1.13</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">Tailwind 4.1.13</span>
                     <span className="text-muted-foreground">→ Styling, integrates with Next.js pipeline</span>
                   </div>
                 </div>
                 <div className="pl-20 border-l-2 border-neutral-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-neutral-600 dark:text-neutral-400 font-bold min-w-[120px]">shadcn/ui 3.3.1</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">shadcn/ui 3.3.1</span>
                     <span className="text-muted-foreground">→ Components, requires React 19+ & Tailwind 4+</span>
                   </div>
                 </div>
@@ -562,7 +562,7 @@ export default function SoftwarePage() {
                   <tr>
                     <td className="border border-border/40 px-4 py-2">UI Library</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">
-                      <Link href="/software/react" className="text-gray-700 dark:text-gray-300 hover:underline">
+                      <Link href="/software/react" className="text-zinc-700 dark:text-zinc-300 hover:underline">
                         React
                       </Link>
                     </td>
@@ -572,7 +572,7 @@ export default function SoftwarePage() {
                   <tr>
                     <td className="border border-border/40 px-4 py-2">Styling</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">
-                      <Link href="/software/tailwind" className="text-gray-700 dark:text-gray-300 hover:underline">
+                      <Link href="/software/tailwind" className="text-zinc-700 dark:text-zinc-300 hover:underline">
                         Tailwind CSS
                       </Link>
                     </td>
@@ -582,7 +582,7 @@ export default function SoftwarePage() {
                   <tr>
                     <td className="border border-border/40 px-4 py-2">Components</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">
-                      <Link href="/software/shadcn-ui" className="text-gray-700 dark:text-gray-300 hover:underline">
+                      <Link href="/software/shadcn-ui" className="text-zinc-700 dark:text-zinc-300 hover:underline">
                         shadcn/ui
                       </Link>
                     </td>
@@ -598,7 +598,7 @@ export default function SoftwarePage() {
                   <tr>
                     <td className="border border-border/40 px-4 py-2">AI SDK</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">
-                      <Link href="/software/vercel-ai-sdk" className="text-gray-700 dark:text-gray-300 hover:underline">
+                      <Link href="/software/vercel-ai-sdk" className="text-zinc-700 dark:text-zinc-300 hover:underline">
                         Vercel AI SDK
                       </Link>
                     </td>
@@ -608,7 +608,7 @@ export default function SoftwarePage() {
                   <tr>
                     <td className="border border-border/40 px-4 py-2">Backend</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">
-                      <Link href="/software/supabase" className="text-gray-700 dark:text-gray-300 hover:underline">
+                      <Link href="/software/supabase" className="text-zinc-700 dark:text-zinc-300 hover:underline">
                         Supabase
                       </Link>
                     </td>
@@ -726,11 +726,11 @@ cat package.json | grep '"next"\\|"react"\\|"typescript"'`}
 
             <div className="bg-muted/30 dark:bg-slate-900/20 p-6 rounded-lg mb-6 border-l-2 border-slate-600/30">
               <h3 className="text-xl font-bold mb-3">What is MCP?</h3>
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
+              <p className="text-zinc-700 dark:text-zinc-300 mb-4">
                 <strong>Model Context Protocol (MCP)</strong> enables AI assistants like Claude, ChatGPT, and Cursor to
                 install shadcn/ui components using natural language commands—no manual CLI needed.
               </p>
-              <p className="text-gray-700 dark:text-gray-300">
+              <p className="text-zinc-700 dark:text-zinc-300">
                 <strong>Example:</strong> Tell your AI assistant &quot;Add a search bar with icon&quot; → AI automatically
                 runs <code className="bg-muted/30 dark:bg-gray-800 px-2 py-1 rounded text-sm">npx shadcn@latest add input-group</code> and
                 generates the component code.
@@ -750,7 +750,7 @@ pnpm dlx shadcn@latest mcp init --client cursor
 pnpm dlx shadcn@latest mcp init --client vscode`}
               </pre>
 
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">
                 This creates a <code className="bg-muted/30 dark:bg-gray-800 px-2 py-1 rounded">.mcp.json</code> configuration file in your project root.
               </p>
 
@@ -773,11 +773,11 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               <h3 className="text-xl font-bold mb-4">AI-Native Workflow Comparison</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="border rounded-lg p-4 bg-neutral-100 dark:bg-neutral-900/10 border-neutral-300 dark:border-neutral-700">
-                  <h4 className="font-bold mb-3 text-neutral-600 dark:text-neutral-400 flex items-center gap-2">
+                  <h4 className="font-bold mb-3 text-zinc-600 dark:text-zinc-400 flex items-center gap-2">
                     <span>❌</span>
                     <span>Old Way (Manual)</span>
                   </h4>
-                  <ol className="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+                  <ol className="text-sm space-y-2 text-zinc-700 dark:text-zinc-300">
                     <li>1. Search shadcn/ui documentation</li>
                     <li>2. Copy CLI command</li>
                     <li>3. Run <code className="bg-white dark:bg-gray-800 px-1 rounded text-xs">npx shadcn@latest add ...</code></li>
@@ -791,7 +791,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
                     <span>✅</span>
                     <span>New Way (MCP)</span>
                   </h4>
-                  <ol className="text-sm space-y-2 text-gray-700 dark:text-gray-300">
+                  <ol className="text-sm space-y-2 text-zinc-700 dark:text-zinc-300">
                     <li>1. Tell AI: &quot;Add a search bar&quot;</li>
                     <li>2. AI installs via MCP</li>
                     <li>3. AI generates code</li>
@@ -801,14 +801,14 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
                   </ol>
                 </div>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-4 text-center">
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-4 text-center">
                 <strong>60-100x faster development</strong> with MCP-enabled AI assistants
               </p>
             </div>
 
             <div className="mb-8">
               <h3 className="text-xl font-bold mb-4">New shadcn/ui v3.0 Components</h3>
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
+              <p className="text-zinc-700 dark:text-zinc-300 mb-4">
                 These components were added in August-October 2025 and are available via MCP:
               </p>
               <div className="overflow-x-auto">
@@ -858,7 +858,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
 
             <div className="bg-stone-100 dark:bg-stone-900/20 border-l-2 border-slate-600/40 p-4 mb-8">
               <h3 className="text-lg font-bold mb-2">Supported AI Clients</h3>
-              <ul className="space-y-1 text-gray-700 dark:text-gray-300 text-sm">
+              <ul className="space-y-1 text-zinc-700 dark:text-zinc-300 text-sm">
                 <li>• <strong>Claude Code</strong> - Full MCP support (recommended)</li>
                 <li>• <strong>Cursor</strong> - Full MCP support</li>
                 <li>• <strong>VS Code</strong> - Requires MCP extension</li>
@@ -870,21 +870,21 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               <h3 className="text-xl font-bold mb-3">Example: AI-Native Component Installation</h3>
               <div className="space-y-4">
                 <div>
-                  <p className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">You:</p>
-                  <p className="bg-white dark:bg-gray-800 p-3 rounded text-gray-700 dark:text-gray-300 border">
+                  <p className="text-sm font-semibold text-zinc-600 dark:text-zinc-400 mb-2">You:</p>
+                  <p className="bg-white dark:bg-gray-800 p-3 rounded text-zinc-700 dark:text-zinc-300 border">
                     &quot;Add a navigation header with Button Group component&quot;
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">AI (via MCP):</p>
+                  <p className="text-sm font-semibold text-zinc-600 dark:text-zinc-400 mb-2">AI (via MCP):</p>
                   <div className="bg-gray-900 p-3 rounded text-gray-100 text-sm font-mono">
                     <p className="text-zinc-600 dark:text-zinc-400">✓ Installing button-group component...</p>
-                    <p className="text-slate-600 dark:text-slate-400">✓ Generating SiteHeader component...</p>
+                    <p className="text-zinc-600 dark:text-zinc-400">✓ Generating SiteHeader component...</p>
                     <p className="text-zinc-600 dark:text-zinc-400">✓ Done! Navigation added.</p>
                   </div>
                 </div>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-4">
                 The AI automatically installs the component, generates the code, and imports it—all from a single instruction.
               </p>
             </div>
