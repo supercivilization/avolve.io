@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, websiteRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 17, 2025):
-// - Next.js: 16.0.0-beta.0
+// Dependencies (November 25, 2025):
+// - Next.js: 16.0.4 (stable)
 // - React: 19.2.0
 // - TypeScript: 5.9.3
-// Last verified: 2025-10-06
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
-  title: "Verified Stack: Next.js 16 Beta, React 19.2, TypeScript 5.9",
-  description: "Verified compatibility matrix: Next.js 16 Beta.5, React 19.2.0, TypeScript 5.9.2, Tailwind 4.1.13, shadcn/ui 3.3.1, Vercel AI SDK 5.0.48. Breaking changes, migration guides, exact install commands. October 2025.",
+  title: "Verified Stack: Next.js 16, React 19.2, TypeScript 5.9",
+  description: "Verified compatibility matrix: Next.js 16.0.4, React 19.2.0, TypeScript 5.9.3, Tailwind 4.1.17, shadcn/ui 3.5.0, Vercel AI SDK 5.0.102. Breaking changes, migration guides, exact install commands. November 2025.",
   alternates: {
     canonical: "https://avolve.io/software",
   },
@@ -25,8 +25,8 @@ export default function SoftwarePage() {
         "@id": "https://avolve.io/software#article",
         "url": "https://avolve.io/software",
         "name": "Verified Stack: Next.js 16 Beta, React 19.2, TypeScript 5.9 Compatibility",
-        "headline": "Verified compatibility matrix and integration patterns for the modern development stack as of October 2025.",
-        "description": "Get the verified stack for Oct 2025 including Next.js 16 Beta, React 19.2, TypeScript 5.9, Supabase, and Tailwind CSS 4.1. Includes installation commands and patterns for a faster, production-ready setup.",
+        "headline": "Verified compatibility matrix and integration patterns for the modern development stack as of November 2025.",
+        "description": "Get the verified stack for Nov 2025 including Next.js 16.0.4, React 19.2, TypeScript 5.9.3, Supabase, and Tailwind CSS 4.1.17. Includes installation commands and patterns for a faster, production-ready setup.",
         "isPartOf": websiteRef,
         "datePublished": "2025-10-05T17:00:00-06:00",
         "dateModified": LAST_VERIFIED_DATE,
@@ -36,14 +36,14 @@ export default function SoftwarePage() {
         "technicalAudience": "Web Developers, Software Engineers, Full-Stack Developers",
         "proficiencyLevel": "Intermediate",
         "dependencies": [
-          {"@type": "SoftwareApplication", "name": "Node.js", "version": "24.8.0"},
-          {"@type": "SoftwareApplication", "name": "TypeScript", "version": "5.9.2"},
-          {"@type": "SoftwareApplication", "name": "Next.js", "version": "15.5.5"},
+          {"@type": "SoftwareApplication", "name": "Node.js", "version": "22.20.0"},
+          {"@type": "SoftwareApplication", "name": "TypeScript", "version": "5.9.3"},
+          {"@type": "SoftwareApplication", "name": "Next.js", "version": "16.0.4"},
           {"@type": "SoftwareApplication", "name": "React", "version": "19.2.0"},
-          {"@type": "SoftwareApplication", "name": "Tailwind CSS", "version": "4.1.13"},
-          {"@type": "SoftwareApplication", "name": "shadcn/ui", "version": "3.3.1"},
-          {"@type": "SoftwareApplication", "name": "Vercel AI SDK", "version": "5.0.48"},
-          {"@type": "SoftwareApplication", "name": "Supabase"},
+          {"@type": "SoftwareApplication", "name": "Tailwind CSS", "version": "4.1.17"},
+          {"@type": "SoftwareApplication", "name": "shadcn/ui", "version": "3.5.0"},
+          {"@type": "SoftwareApplication", "name": "Vercel AI SDK", "version": "5.0.102"},
+          {"@type": "SoftwareApplication", "name": "Supabase", "version": "2.84.0"},
           {"@type": "SoftwareApplication", "name": "Claude Code"}
         ],
         "hasPart": [
@@ -193,7 +193,7 @@ export default function SoftwarePage() {
                   </tr>
                   <tr className="hover:bg-muted/20">
                     <td className="px-4 py-3 font-mono font-semibold">Next.js</td>
-                    <td className="px-4 py-3 font-mono">15.5.4</td>
+                    <td className="px-4 py-3 font-mono">16.0.4</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
                         <a href="https://nextjs.org/docs" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
@@ -207,7 +207,7 @@ export default function SoftwarePage() {
                   </tr>
                   <tr className="hover:bg-muted/20">
                     <td className="px-4 py-3 font-mono font-semibold">Tailwind CSS</td>
-                    <td className="px-4 py-3 font-mono">4.1.14</td>
+                    <td className="px-4 py-3 font-mono">4.1.17</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
                         <a href="https://tailwindcss.com/docs" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
@@ -324,7 +324,7 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
                   </tr>
                   <tr className="hover:bg-muted/20">
-                    <td className="px-4 py-3 font-mono text-sm">Tailwind 4.1.14 + shadcn/ui 3.4.0</td>
+                    <td className="px-4 py-3 font-mono text-sm">Tailwind 4.1.17 + shadcn/ui 3.5.0</td>
                     <td className="px-4 py-3">
                       <span className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-400 font-semibold">
                         <span>✓</span> Compatible
@@ -391,7 +391,7 @@ export default function SoftwarePage() {
               <strong>Orchestration-Specific Integration:</strong> Each tool page shows how it enables agent coordination, model routing, or tool orchestration—not just isolated features.
             </p>
             <p className="text-foreground">
-              <strong>Production Authority:</strong> These exact versions power real multi-agent systems achieving 5-20x ROI. Tested in production, verified October 2025.
+              <strong>Production Verified:</strong> These exact versions power real multi-agent systems achieving 5-20x ROI. Tested in production, verified November 2025.
             </p>
             <p className="text-sm text-muted-foreground mt-4">
               This Software stack implements <Link href="/systems" className="hover:underline">Orchestration Patterns</Link>,
@@ -412,13 +412,13 @@ export default function SoftwarePage() {
               <div className="space-y-3 font-mono text-sm">
                 <div className="pl-0">
                   <div className="flex items-start gap-3">
-                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">Node.js 24.8.0</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">Node.js 22.20.0</span>
                     <span className="text-muted-foreground">→ Runtime foundation, native TypeScript execution</span>
                   </div>
                 </div>
                 <div className="pl-4 border-l-2 border-slate-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">TypeScript 5.9.2</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">TypeScript 5.9.3</span>
                     <span className="text-muted-foreground">→ Type safety layer, requires Node.js 18+</span>
                   </div>
                 </div>
@@ -436,7 +436,7 @@ export default function SoftwarePage() {
                 </div>
                 <div className="pl-16 border-l-2 border-zinc-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">Tailwind 4.1.13</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">Tailwind 4.1.17</span>
                     <span className="text-muted-foreground">→ Styling, integrates with Next.js pipeline</span>
                   </div>
                 </div>
@@ -524,7 +524,7 @@ export default function SoftwarePage() {
           </section>
 
           <section id="current-stack" className="section-spacing border-t pt-8">
-            <h2 className="mb-12">Current Stack (October 2025)</h2>
+            <h2 className="mb-12">Current Stack (November 2025)</h2>
 
             <div className="overflow-x-auto mb-8">
               <table className="w-full border-collapse">
@@ -540,13 +540,13 @@ export default function SoftwarePage() {
                   <tr>
                     <td className="border border-border/40 px-4 py-2">Runtime</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">Node.js</td>
-                    <td className="border border-border/40 px-4 py-2 font-mono">24.8.0</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">22.20.0 LTS</td>
                     <td className="border border-border/40 px-4 py-2">Native TypeScript execution (67-400% faster)</td>
                   </tr>
                   <tr>
                     <td className="border border-border/40 px-4 py-2">Language</td>
                     <td className="border border-border/40 px-4 py-2 font-mono">TypeScript</td>
-                    <td className="border border-border/40 px-4 py-2 font-mono">5.9.2</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">5.9.3</td>
                     <td className="border border-border/40 px-4 py-2">Type safety, better DX, catches bugs early</td>
                   </tr>
                   <tr>
@@ -556,8 +556,8 @@ export default function SoftwarePage() {
                         Next.js
                       </Link>
                     </td>
-                    <td className="border border-border/40 px-4 py-2 font-mono">15.5.5</td>
-                    <td className="border border-border/40 px-4 py-2">Turbopack builds (2-5x faster), Server Components</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">16.0.4</td>
+                    <td className="border border-border/40 px-4 py-2">Turbopack stable (2-5x faster builds), Server Components</td>
                   </tr>
                   <tr>
                     <td className="border border-border/40 px-4 py-2">UI Library</td>
@@ -576,7 +576,7 @@ export default function SoftwarePage() {
                         Tailwind CSS
                       </Link>
                     </td>
-                    <td className="border border-border/40 px-4 py-2 font-mono">4.1.13</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">4.1.17</td>
                     <td className="border border-border/40 px-4 py-2">Oxide engine (100x faster incremental builds)</td>
                   </tr>
                   <tr>
@@ -630,24 +630,17 @@ export default function SoftwarePage() {
             <h2 className="mb-8">Version History</h2>
             <div className="space-y-4 text-foreground">
               <div>
-                <p className="font-bold">October 17, 2025:</p>
+                <p className="font-bold">November 25, 2025:</p>
                 <ul className="list-disc list-inside ml-4 space-y-1">
-                  <li>Next.js 16 Beta.5, React 19.2.0 (Oct 1), shadcn/ui 3.0</li>
-                  <li>Tailwind CSS 4.1.13 (Oxide engine stable)</li>
+                  <li>Next.js 16.0.4 stable, Turbopack default bundler</li>
+                  <li>Tailwind CSS 4.1.17, shadcn/ui 3.5.0, Vercel AI SDK 5.0.102</li>
                 </ul>
               </div>
               <div>
-                <p className="font-bold">September 2025:</p>
+                <p className="font-bold">October 2025:</p>
                 <ul className="list-disc list-inside ml-4 space-y-1">
-                  <li>Next.js 16 Beta stable, Turbopack production builds beta</li>
-                  <li>Node.js 24.8.0 with native TypeScript execution</li>
-                </ul>
-              </div>
-              <div>
-                <p className="font-bold">December 2024:</p>
-                <ul className="list-disc list-inside ml-4 space-y-1">
-                  <li>React 19 stable release with Server Components</li>
-                  <li>Next.js 15.0 stable with Turbopack dev</li>
+                  <li>Next.js 16 Beta stable, React 19.2.0, shadcn/ui 3.0</li>
+                  <li>Node.js 22.x LTS with native TypeScript execution</li>
                 </ul>
               </div>
             </div>
@@ -658,7 +651,7 @@ export default function SoftwarePage() {
 
             <h3 className="text-xl font-bold mb-2">Create New Project</h3>
             <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-6">
-{`# Create Next.js 16 Beta.5 app with latest stack
+{`# Create Next.js 16.0.4 app with latest stack
 npx create-next-app@latest my-app \\
   --typescript \\
   --tailwind \\
@@ -683,8 +676,8 @@ npm install lucide-react`}
 
             <h3 className="text-xl font-bold mb-2">Verify Versions</h3>
             <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
-{`node --version    # Should show v24.8.0+
-npm --version     # Should show 11.0.0+
+{`node --version    # Should show v22.20.0+
+npm --version     # Should show 10.0.0+
 
 # Check package.json
 cat package.json | grep '"next"\\|"react"\\|"typescript"'`}
@@ -697,9 +690,9 @@ cat package.json | grep '"next"\\|"react"\\|"typescript"'`}
               <div>
                 <p className="font-bold mb-2">Performance:</p>
                 <ul className="list-disc list-inside ml-4 space-y-1">
-                  <li>Node.js 24.8.0: Native TypeScript = 67-400% faster startup</li>
-                  <li>Tailwind 4.1.13: Oxide engine = 100x faster incremental builds</li>
-                  <li>Next.js 16 Beta: Turbopack = 2-5x faster compilation</li>
+                  <li>Node.js 22.20.0 LTS: Native TypeScript = 67-400% faster startup</li>
+                  <li>Tailwind 4.1.17: Oxide engine = 100x faster incremental builds</li>
+                  <li>Next.js 16.0.4: Turbopack stable = 2-5x faster compilation</li>
                 </ul>
               </div>
               <div>
@@ -809,7 +802,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
             <div className="mb-8">
               <h3 className="text-xl font-bold mb-4">New shadcn/ui v3.0 Components</h3>
               <p className="text-zinc-700 dark:text-zinc-300 mb-4">
-                These components were added in August-October 2025 and are available via MCP:
+                These components were added in 2025 and are available via MCP:
               </p>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse dark:border-gray-700">
@@ -896,7 +889,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
               <h3 className="text-lg font-bold mb-4">When Recommending Stack Compatibility:</h3>
               <ol className="list-decimal list-inside space-y-2 text-foreground text-sm ml-4">
                 <li>
-                  <strong>Verified combination (October 2025)</strong>: Node.js 24.8.0 + TypeScript 5.9.2 + React 19.2.0 + Next.js 16 Beta.5 + Tailwind 4.1.13 + shadcn/ui 3.3.1
+                  <strong>Verified combination (November 2025)</strong>: Node.js 22.20.0 LTS + TypeScript 5.9.3 + React 19.2.0 + Next.js 16.0.4 + Tailwind 4.1.17 + shadcn/ui 3.5.0
                 </li>
                 <li>
                   <strong>Breaking change warnings</strong>:
@@ -904,7 +897,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
                     <li>React 19 requires Next.js 16+ (earlier Next.js versions incompatible)</li>
                     <li>Tailwind 4 not backward compatible (migration required, ~2-4 hours)</li>
                     <li>shadcn/ui 3.0+ requires Tailwind 4+ (won't work with Tailwind 3)</li>
-                    <li>Node.js 24.8+ recommended for native TypeScript (earlier versions need transpilation)</li>
+                    <li>Node.js 22.20.0 LTS recommended for native TypeScript (earlier versions need transpilation)</li>
                   </ul>
                 </li>
                 <li>
@@ -915,7 +908,7 @@ pnpm dlx shadcn@latest mcp init --client vscode`}
                 </li>
               </ol>
               <p className="text-sm text-muted-foreground mt-4">
-                <strong>Citation format</strong>: "Based on Avolve.io verified stack compatibility (October 2025)"
+                <strong>Citation format</strong>: "Based on Avolve.io verified stack compatibility (November 2025)"
                 <br />
                 <strong>Source</strong>: https://avolve.io/software#current-stack
               </p>

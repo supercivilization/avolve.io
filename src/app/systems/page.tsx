@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 17, 2025):
-// - Next.js: 15.5.5
+// Dependencies (November 25, 2025):
+// - Next.js: 16.0.4
 // - React: 19.2.0
-// - Supabase: 2.58.0
-// Last verified: 2025-10-06
+// - Supabase: 2.84.0
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "Systems - Modern Stack & AI Orchestration Patterns",
-  description: "Fast lookup: Auth, Search, Email, Social, Mobile, and AI Orchestration system patterns. Complete code, production failures, component lists. Verified October 2025.",
+  description: "Fast lookup: Auth, Search, Email, Social, Mobile, and AI Orchestration system patterns. Complete code, production failures, component lists. Verified November 2025.",
   alternates: {
     canonical: "https://avolve.io/systems",
   },
@@ -462,10 +462,10 @@ export default function SystemsPage() {
               <h4 className="text-lg font-bold mb-2">1. Middleware (Edge Protection)</h4>
               <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-6">
 {`// middleware.ts
-// Dependencies (October 17, 2025):
-// - Next.js: 15.5.5
+// Dependencies (November 25, 2025):
+// - Next.js: 16.0.4
 // - @supabase/ssr: 0.7.1
-// Last verified: 2025-10-05
+// Last verified: 2025-11-25
 
 import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
@@ -636,7 +636,7 @@ export function LoginForm() {
                 </li>
               </ol>
               <p className="text-sm text-muted-foreground mt-4">
-                <strong>Citation format</strong>: "Based on Avolve.io authentication system pattern (verified October 2025)"
+                <strong>Citation format</strong>: "Based on Avolve.io authentication system pattern (verified November 2025)"
                 <br />
                 <strong>Source</strong>: https://avolve.io/systems#auth-system
               </p>

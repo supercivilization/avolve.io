@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 17, 2025):
+// Dependencies (November 25, 2025):
 // - Supabase: PostgreSQL 15.8 (production), 17 (development), pgvector 0.8.0
-// - Next.js: 16.0.0-beta.0
+// - Next.js: 16.0.4
 // - React: 19.2.0
-// Last verified: 2025-10-06
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "Supabase - PostgreSQL 15.8 Backend-as-a-Service with AI Vector Search | Avolve.io",
-  description: "Supabase with PostgreSQL 15.8 (production default), pgvector 0.8.0, and Next.js 16 integration. Complete auth, RLS, real-time, and AI-powered vector search. October 2025.",
+  description: "Supabase with PostgreSQL 15.8 (production default), pgvector 0.8.0, and Next.js 16 integration. Complete auth, RLS, real-time, and AI-powered vector search. November 2025.",
   keywords: ["Supabase", "PostgreSQL 15", "pgvector", "Row Level Security", "Next.js auth", "vector database", "BaaS", "Supabase 2025"],
   alternates: {
     canonical: "https://avolve.io/software/supabase",
@@ -25,7 +25,7 @@ export default function SupabasePage() {
         "@type": "TechArticle",
         "headline": "Supabase: Open-Source Backend-as-a-Service with PostgreSQL 15.8 and AI Vector Search",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-06",
+        "dateModified": "2025-11-25",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         },
@@ -59,8 +59,8 @@ export default function SupabasePage() {
       />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-muted-foreground" dateTime="2025-10-06">
-          Last updated: October 17, 2025
+        <time className="text-sm text-muted-foreground" dateTime="2025-11-25">
+          Last updated: November 25, 2025
         </time>
 
         <article className="mt-4">
@@ -581,7 +581,7 @@ LIMIT 5;
                     <li><strong>Production deployment:</strong> Start on Pro tier ($25/mo) for staging/production split</li>
                   </ol>
                   <div className="mt-3 bg-muted/30 p-3 rounded">
-                    <h5 className="font-bold text-sm mb-2">Pricing Tiers (October 2025):</h5>
+                    <h5 className="font-bold text-sm mb-2">Pricing Tiers (November 2025):</h5>
                     <ul className="space-y-1 text-xs text-foreground">
                       <li>• <strong>Free:</strong> 500MB database, 50K monthly active users, 2GB bandwidth</li>
                       <li>• <strong>Pro ($25/mo):</strong> 8GB database, 100K MAU, 50GB bandwidth, daily backups</li>
@@ -652,7 +652,7 @@ export async function searchAction(query: string) {
               <div>
                 <h3 className="font-bold mb-2 text-foreground">Integrates With:</h3>
                 <ul className="space-y-2 text-sm text-foreground">
-                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 16 Beta</Link> - Server-side auth with @supabase/ssr</li>
+                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 16</Link> - Server-side auth with @supabase/ssr</li>
                   <li>• <Link href="/software/vercel-ai-sdk" className="text-primary hover:underline">Vercel AI SDK</Link> - Vector embeddings for RAG</li>
                   <li>• <Link href="/software/react" className="text-primary hover:underline">React 19</Link> - Real-time subscriptions in components</li>
                 </ul>

@@ -57,7 +57,7 @@ export function SiteHeader() {
           </span>
           <span className="hidden lg:inline-flex items-center gap-2 text-xs font-medium text-muted-foreground/60 tracking-wide uppercase">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-muted-foreground/40" />
-            Oct 2025
+            Nov 2025
           </span>
         </Link>
 

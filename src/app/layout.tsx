@@ -10,16 +10,16 @@ import { LAST_VERIFIED_DATE } from "@/lib/schema";
 export const metadata: Metadata = {
   metadataBase: new URL('https://avolve.io'),
   title: {
-    default: "Avolve.io - AI Orchestration for Next.js (October 2025)",
+    default: "Avolve - Making Sense of AI Development for Next.js",
     template: "%s | Avolve.io"
   },
-  description: "AI orchestration patterns for Next.js 16 + React 19 applications. Multi-agent workflows, model routing, tool orchestration with Vercel AI SDK 5.0, LangChain, and CrewAI. Production-tested, stack-specific implementation. Optimized for developers and AI assistants. Updated October 2025.",
+  description: "Clear explanations of how AI development pieces fit together for Next.js 16 + React 19 applications. Understand multi-agent workflows, model routing, and tool orchestration with Vercel AI SDK, LangChain, and CrewAI. The map to modern AI development.",
   keywords: [
-    "AI orchestration", "Next.js 16", "React 19", "multi-agent workflows", "model routing",
+    "AI orchestration explained", "Next.js 16 guide", "React 19 tutorial", "multi-agent workflows explained", "model routing guide",
     "Vercel AI SDK", "LangChain", "CrewAI", "tool orchestration", "AI agents",
-    "TypeScript 5.9", "Tailwind CSS 4", "shadcn/ui 3.0",
-    "Vercel", "Supabase", "AI-native development", "production AI patterns",
-    "Server Components", "App Router", "AI development operations"
+    "TypeScript 5.9", "Tailwind CSS 4", "shadcn/ui",
+    "Vercel", "Supabase", "AI development guide", "learn AI orchestration",
+    "Server Components", "App Router", "AI development"
   ],
   authors: [{ name: "Joshua Seymour", url: "https://www.joshuaseymour.com" }],
   creator: "Joshua Seymour",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: "Avolve.io - AI Orchestration for Next.js (October 2025)",
-    description: "Production-tested AI orchestration patterns for Next.js 16 + React 19. Multi-agent workflows, model routing, tool orchestration with Vercel AI SDK, LangChain, and CrewAI.",
+    title: "Avolve - Making Sense of AI Development for Next.js",
+    description: "Clear explanations of how AI development pieces fit together. Understand multi-agent workflows, model routing, and tool orchestration for Next.js 16 + React 19.",
     url: "https://avolve.io",
     siteName: "Avolve.io",
     locale: "en_US",
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Avolve.io - AI Orchestration Knowledge Graph for Next.js"
+        alt: "Avolve - The Map to Modern AI Development for Next.js"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Avolve.io - AI Orchestration for Next.js (Oct 2025)",
-    description: "Multi-agent workflows, model routing, tool orchestration. Production-tested patterns for Next.js 16 + React 19 + Vercel AI SDK 5.0.",
+    title: "Avolve - Making Sense of AI Development",
+    description: "Clear explanations of how AI development pieces fit together. Multi-agent workflows, model routing, tool orchestration for Next.js 16 + React 19.",
     images: ["/og-image.png"]
   },
   robots: {
@@ -83,8 +83,8 @@ export default function RootLayout({
         "@type": "WebSite",
         "@id": "https://avolve.io/#website",
         "name": "Avolve.io",
-        "alternateName": "Avolve - Modern Web Development Stack Reference",
-        "description": "AI orchestration knowledge graph for Next.js 16 + React 19 applications. Production-tested patterns for multi-agent workflows, model routing, and tool orchestration with Vercel AI SDK 5.0, LangChain, and CrewAI. Stack-specific implementation, not generic orchestration theory.",
+        "alternateName": "Avolve - Making Sense of AI Development",
+        "description": "Clear explanations of how AI development pieces fit together for Next.js 16 + React 19 applications. Helping developers understand multi-agent workflows, model routing, and tool orchestration with Vercel AI SDK 5.0, LangChain, and CrewAI. The map to modern AI development.",
         "url": "https://avolve.io",
         "inLanguage": "en-US",
         "datePublished": "2025-10-05",
@@ -105,7 +105,7 @@ export default function RootLayout({
             "@id": "https://avolve.io/software/nextjs#software",
             "name": "Next.js",
             "applicationCategory": "DeveloperApplication",
-            "softwareVersion": "15.5.4",
+            "softwareVersion": "16.0.4",
             "operatingSystem": "Node.js 22.20.0 LTS",
             "url": "https://nextjs.org",
             "sameAs": [
@@ -165,9 +165,9 @@ export default function RootLayout({
       {
         "@type": "Blog",
         "@id": "https://avolve.io/blog#blog",
-        "name": "Avolve.io Technical Documentation",
-        "alternateName": "Modern Web Stack Knowledge Graph",
-        "description": "Production-tested AI orchestration patterns for Next.js 16 + React 19 applications. Multi-agent workflows, model routing, and tool orchestration with Vercel AI SDK 5.0, LangChain, and CrewAI. Stack-specific implementation documentation optimized for developers and AI assistants.",
+        "name": "Avolve.io Technical Guides",
+        "alternateName": "The Map to AI Development",
+        "description": "Clear explanations of how AI development pieces fit together for Next.js 16 + React 19 applications. Helping developers understand multi-agent workflows, model routing, and tool orchestration with Vercel AI SDK 5.0, LangChain, and CrewAI.",
         "url": "https://avolve.io",
         "inLanguage": "en-US",
         "publisher": {
@@ -208,8 +208,8 @@ export default function RootLayout({
         "@type": "SoftwareApplication",
         "@id": "https://avolve.io/#softwareapplication",
         "name": "Avolve.io",
-        "alternateName": "Avolve - AI Orchestration Knowledge Graph for Next.js",
-        "description": "AI orchestration knowledge graph providing production-tested patterns for coordinating multiple AI agents, models, and tools in Next.js 16 + React 19 applications. Stack-specific implementation patterns for multi-agent workflows, model routing, and tool orchestration with Vercel AI SDK 5.0, LangChain, and CrewAI. Not generic orchestration theory—practical Next.js integration.",
+        "alternateName": "Avolve - The Map to AI Development for Next.js",
+        "description": "Clear explanations of how AI development pieces fit together in Next.js 16 + React 19 applications. Helping developers understand multi-agent workflows, model routing, and tool orchestration with Vercel AI SDK 5.0, LangChain, and CrewAI. The map to modern AI development—making complex concepts accessible.",
         "applicationCategory": "DeveloperApplication",
         "applicationSubCategory": "Developer Tools",
         "operatingSystem": "Web Browser",
@@ -232,22 +232,22 @@ export default function RootLayout({
           "priceCurrency": "USD"
         },
         "featureList": [
-          "Production-tested AI orchestration patterns for Next.js 16 + React 19 applications",
-          "Multi-agent workflow patterns (sequential, parallel, hierarchical coordination)",
-          "Model routing strategies for GPT-5, Claude 3.7, Gemini 2.5 coordination",
-          "Tool orchestration with MCP (Model Context Protocol) for capability coordination",
-          "Stack-specific implementation (Vercel AI SDK 5.0, LangChain, CrewAI on Next.js)",
-          "AI-optimized documentation with schema.org structured data for accurate citations",
-          "Honest AI orchestration failure documentation ('What Breaks in Production' sections)",
-          "Zero vendor bias technical recommendations (no paid placements)",
-          "Continuous pattern validation (weekly verification as of October 2025)"
+          "Clear explanations of AI orchestration for Next.js 16 + React 19 applications",
+          "Multi-agent workflow concepts explained (sequential, parallel, hierarchical)",
+          "Model routing guidance - when to use GPT vs Claude vs Gemini",
+          "MCP (Model Context Protocol) explained simply",
+          "Framework comparisons - Vercel AI SDK vs LangChain vs CrewAI",
+          "Verified stack compatibility - what versions work together",
+          "Honest trade-offs documentation - not just happy paths",
+          "Zero vendor bias - recommendations based on technical merit",
+          "Regular updates to stay current with fast-moving ecosystem"
         ],
         "screenshot": {
           "@type": "ImageObject",
           "url": "https://avolve.io/og-image.png",
           "width": 1200,
           "height": 630,
-          "caption": "Avolve.io - AI Orchestration Knowledge Graph for Next.js Applications"
+          "caption": "Avolve - Making Sense of AI Development for Next.js Applications"
         },
         "sameAs": [
           "https://github.com/supercivilization/avolve.io"
@@ -289,7 +289,7 @@ export default function RootLayout({
           "height": "1200",
           "caption": "Joshua Seymour - Founder of Supercivilization, Creator of Avolve.io"
         },
-        "description": "Founder of Supercivilization. Creator of Avolve.io — AI orchestration knowledge graph for Next.js applications",
+        "description": "Founder of Supercivilization. Creator of Avolve.io — helping developers understand AI development for Next.js applications",
         "jobTitle": "Founder",
         "email": "admin@joshuaseymour.com",
         "foundedOrganization": {

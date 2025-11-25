@@ -110,7 +110,7 @@ export function generateOrganizationSchema() {
 }
 
 // Backwards compatibility exports for existing pages
-export const LAST_VERIFIED_DATE = '2025-10-07'
+export const LAST_VERIFIED_DATE = '2025-11-25'
 
 export const authorRef = {
   '@id': 'https://www.joshuaseymour.com/#person'

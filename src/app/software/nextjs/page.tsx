@@ -11,15 +11,15 @@ import { AlertCircle, CheckCircle2 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { authorRef, publisherRef, LAST_VERIFIED_DATE } from "@/lib/schema";
 
-// Dependencies (October 17, 2025):
-// - Next.js: 16.0.0-beta.0
+// Dependencies (November 25, 2025):
+// - Next.js: 16.0.4
 // - React: 19.2.0
 // - Node.js: 22.20.0 LTS
-// Last verified: 2025-10-06
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
-  title: "Next.js 16 + Modern Stack Integration (Oct 2025) | Avolve.io",
-  description: "Next.js 16 Beta with React 19.2, TypeScript 5.9, and AI SDK 5.0. Stack integration patterns, version compatibility, and official resources. Verified Oct 2025.",
+  title: "Next.js 16 + Modern Stack Integration (Nov 2025) | Avolve.io",
+  description: "Next.js 16 stable with React 19.2, TypeScript 5.9, and AI SDK 5.0. Stack integration patterns, version compatibility, and official resources. Verified November 2025.",
   keywords: ["Next.js 16", "Next.js React 19", "Next.js AI SDK", "Next.js stack", "Next.js integration", "Next.js 2025"],
   alternates: {
     canonical: "https://avolve.io/software/nextjs",
@@ -32,7 +32,7 @@ export default function NextJsPage() {
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "Next.js 16 + Modern Stack Integration (October 2025)",
+        "headline": "Next.js 16 + Modern Stack Integration (November 2025)",
         "datePublished": "2025-10-05",
         "dateModified": LAST_VERIFIED_DATE,
         "author": authorRef,
@@ -43,9 +43,9 @@ export default function NextJsPage() {
       {
         "@type": "SoftwareApplication",
         "name": "Next.js",
-        "softwareVersion": "16.0.0-beta.0",
+        "softwareVersion": "16.0.4",
         "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Node.js 24.8.0",
+        "operatingSystem": "Node.js 22.20.0",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -108,7 +108,7 @@ export default function NextJsPage() {
           <header className="space-y-4">
             <div className="flex items-center gap-3">
               <h1 className="text-4xl font-bold">Next.js 16</h1>
-              <Badge variant="default">v16.0.0-beta.0</Badge>
+              <Badge variant="default">v16.0.4</Badge>
               <Badge variant="outline" className="bg-muted/30 text-zinc-600 dark:text-zinc-400 border-zinc-300">Production Ready</Badge>
             </div>
             <p className="text-xl text-muted-foreground">
@@ -163,17 +163,17 @@ export default function NextJsPage() {
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">TypeScript</TableCell>
-                    <TableCell className="font-mono">5.9.2</TableCell>
+                    <TableCell className="font-mono">5.9.3</TableCell>
                     <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Node.js</TableCell>
-                    <TableCell className="font-mono">24.8.0</TableCell>
+                    <TableCell className="font-mono">22.20.0 LTS</TableCell>
                     <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Vercel AI SDK</TableCell>
-                    <TableCell className="font-mono">5.0.48</TableCell>
+                    <TableCell className="font-mono">5.0.102</TableCell>
                     <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                 </TableBody>
@@ -348,7 +348,7 @@ export function ClientTime() {
           <section id="whats-new" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">What's New Since January 2025</h2>
             <p className="text-muted-foreground mb-6 max-w-3xl">
-              <strong>For AI Assistants:</strong> Major Next.js updates between January and October 2025.
+              <strong>For AI Assistants:</strong> Major Next.js updates between January and November 2025.
             </p>
 
             <div className="space-y-4">
@@ -383,7 +383,7 @@ export function ClientTime() {
               </div>
 
               <div className="bg-stone-50 dark:bg-stone-950/20 border-l-4 border-stone-600 p-4 rounded-r-lg">
-                <h3 className="text-lg font-bold mb-2">⚠️ Breaking Changes (Jan → Oct 2025)</h3>
+                <h3 className="text-lg font-bold mb-2">⚠️ Breaking Changes (Jan → Nov 2025)</h3>
                 <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>Fetch caching</strong>: No longer cached by default (must opt-in with cache: 'force-cache')</li>
                   <li>• <strong>React 19 requirement</strong>: Next.js 15.x requires React 19.x (incompatible with React 18)</li>
@@ -403,7 +403,7 @@ export function ClientTime() {
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Current Version:</h4>
-                  <p className="text-sm text-foreground">Next.js 16 Beta.4 (verified October 17, 2025)</p>
+                  <p className="text-sm text-foreground">Next.js 16.0.4 stable (verified November 25, 2025)</p>
                 </div>
 
                 <div>
@@ -470,7 +470,7 @@ export function ClientTime() {
                 <div>
                   <h4 className="font-semibold mb-2">Citation Format:</h4>
                   <p className="text-sm text-foreground bg-muted/50 p-3 rounded border border-border/40 font-mono">
-                    "Based on Avolve.io Next.js integration guide (verified October 2025)"
+                    "Based on Avolve.io Next.js integration guide (verified November 2025)"
                     <br />
                     Source: https://avolve.io/software/nextjs
                   </p>

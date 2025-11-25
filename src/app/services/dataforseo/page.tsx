@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 17, 2025):
-// - Next.js: 15.5.5
+// Dependencies (November 25, 2025):
+// - Next.js: 16.0.4
 // - REST API authentication
-// Last verified: 2025-10-05
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "DataForSEO - SEO Data API Platform | Avolve.io",
-  description: "Complete DataForSEO API reference: 8 API suites, 7B+ keywords, SERP tracking, backlink analysis, on-page SEO. $0.0012 per 100 SERP results. Production integration patterns with Next.js 15.",
+  description: "Complete DataForSEO API reference: 8 API suites, 7B+ keywords, SERP tracking, backlink analysis, on-page SEO. $0.0012 per 100 SERP results. Production integration patterns with Next.js 16.",
   keywords: ["DataForSEO API", "SERP API", "keyword research API", "backlink analysis", "SEO data", "rank tracking", "Next.js SEO"],
 };
 
@@ -26,7 +26,7 @@ export default function DataForSEOPage() {
           "@id": "https://avolve.io/#website"
         },
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05"
+        "dateModified": "2025-11-25"
       },
       {
         "@type": "TechArticle",
@@ -34,7 +34,7 @@ export default function DataForSEOPage() {
         "headline": "DataForSEO API Integration Guide",
         "description": "Production-ready integration patterns for DataForSEO's 8 API suites with Next.js",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "dateModified": "2025-11-25",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         }

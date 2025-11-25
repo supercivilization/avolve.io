@@ -86,7 +86,7 @@ export default function EmailSystemPage() {
             "name": "Why use Resend over SendGrid or Mailgun?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Resend provides 3,000 free emails/month (vs SendGrid's 100/day), React Email integration, 100K emails at $90/month (vs SendGrid $249), SOC 2 compliance, and developer-first experience with sub-7-second setup. Built specifically for modern frameworks like Next.js 15."
+              "text": "Resend provides 3,000 free emails/month (vs SendGrid's 100/day), React Email integration, 100K emails at $90/month (vs SendGrid $249), SOC 2 compliance, and developer-first experience with sub-7-second setup. Built specifically for modern frameworks like Next.js 16."
             }
           },
           {

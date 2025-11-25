@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 17, 2025):
-// - Node.js: 22.20.0 LTS (production), 24.9.0 (becomes LTS Oct 28, 2025)
+// Dependencies (November 25, 2025):
+// - Node.js: 22.20.0 LTS (production)
 // - V8 Engine: 13.6
 // - npm: 11.6.0
-// Last verified: 2025-10-06
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "Node.js 24.9.0 - Native TypeScript + LTS Coming Oct 28 | Avolve.io",
@@ -25,7 +25,7 @@ export default function NodeJSPage() {
         "@type": "TechArticle",
         "headline": "Node.js 24.9.0: JavaScript Runtime with Native TypeScript (LTS Oct 28, 2025)",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-06",
+        "dateModified": "2025-11-25",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         },
@@ -59,8 +59,8 @@ export default function NodeJSPage() {
       />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-muted-foreground" dateTime="2025-10-06">
-          Last updated: October 17, 2025
+        <time className="text-sm text-muted-foreground" dateTime="2025-11-25">
+          Last updated: November 25, 2025
         </time>
 
         <article className="mt-4">
@@ -325,7 +325,7 @@ const sharedArray = new Int32Array(sharedBuffer);`}</pre>
 
             <div className="space-y-6">
               <div className="bg-muted p-4 rounded-lg border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm">
-                <h3 className="text-lg font-bold mb-3">Node.js 24.9.0 / 22.20.0 LTS + Next.js 16 Beta Integration</h3>
+                <h3 className="text-lg font-bold mb-3">Node.js 22.20.0 LTS + Next.js 16 Integration</h3>
                 <div className="space-y-3">
                   <div>
                     <h4 className="font-bold text-sm mb-2">1. Project Setup:</h4>
@@ -466,7 +466,7 @@ server.listen(3000);
                   <li>• <strong>Production stability priority:</strong> Need LTS support (until April 2027)</li>
                   <li>• <strong>Enterprise constraints:</strong> Risk-averse organizations with change control</li>
                   <li>• <strong>Mature ecosystem:</strong> All dependencies thoroughly tested on 22.x</li>
-                  <li>• <strong>Conservative approach:</strong> Wait for Node.js 24 LTS (expected October 2025)</li>
+                  <li>• <strong>Conservative approach:</strong> Node.js 24 LTS is now available (released October 2025)</li>
                 </ul>
               </div>
 
@@ -535,7 +535,7 @@ server.listen(3000);
               <div>
                 <h3 className="font-bold mb-2 text-foreground">Foundation For:</h3>
                 <ul className="space-y-2 text-sm text-foreground">
-                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 16 Beta</Link> - React framework runtime</li>
+                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 16</Link> - React framework runtime</li>
                   <li>• <Link href="/software/react" className="text-primary hover:underline">React 19</Link> - Server Components execution</li>
                   <li>• <Link href="/software/typescript" className="text-primary hover:underline">TypeScript 5.9</Link> - Native .ts file execution</li>
                   <li>• <Link href="/software/vercel-ai-sdk" className="text-primary hover:underline">Vercel AI SDK</Link> - AI application runtime</li>

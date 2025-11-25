@@ -10,15 +10,15 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { AlertCircle, CheckCircle2 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
-// Dependencies (October 17, 2025):
-// - React: 19.2.0 (released October 1, 2025)
-// - Next.js: 16.0.0-beta.0
-// - TypeScript: 5.9.2
-// Last verified: 2025-10-17
+// Dependencies (November 25, 2025):
+// - React: 19.2.0
+// - Next.js: 16.0.4 (stable)
+// - TypeScript: 5.9.3
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
-  title: "React 19.2 + Modern Stack Integration (Oct 2025) | Avolve.io",
-  description: "React 19.2 with Next.js 16, Server Components, and AI SDK. Stack integration patterns, verified compatibility, and official resources. Updated Oct 2025.",
+  title: "React 19.2 + Modern Stack Integration (Nov 2025) | Avolve.io",
+  description: "React 19.2 with Next.js 16, Server Components, and AI SDK. Stack integration patterns, verified compatibility, and official resources. Updated Nov 2025.",
   keywords: ["React 19.2", "React 19", "React Next.js 16", "React Server Components", "React AI SDK", "React stack integration", "useActionState", "React Compiler"],
   alternates: {
     canonical: "https://avolve.io/software/react",
@@ -31,9 +31,9 @@ export default function ReactPage() {
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "React 19.2 + Modern Stack Integration (October 2025)",
+        "headline": "React 19.2 + Modern Stack Integration (November 2025)",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "dateModified": "2025-11-25",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         },
@@ -48,7 +48,7 @@ export default function ReactPage() {
         "name": "React",
         "softwareVersion": "19.2.0",
         "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Node.js 24.8.0",
+        "operatingSystem": "Node.js 22.20.0",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -63,7 +63,7 @@ export default function ReactPage() {
             "name": "What is React 19?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "React 19 is a major release introducing Server Components, Actions, improved async handling, and the React Compiler. Released stable in December 2024, with React 19.2 released October 1, 2025."
+              "text": "React 19 is a major release introducing Server Components, Actions, improved async handling, and the React Compiler. Released stable in December 2024, with React 19.2 as the current stable version."
             }
           },
           {
@@ -103,8 +103,8 @@ export default function ReactPage() {
           <ThemeToggle />
         </div>
 
-        <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 17, 2025
+        <time className="text-sm text-muted-foreground" dateTime="2025-11-25">
+          Last updated: November 25, 2025
         </time>
 
         <article className="mt-4 space-y-8">
@@ -161,22 +161,22 @@ export default function ReactPage() {
                 <TableBody>
                   <TableRow>
                     <TableCell className="font-medium">Next.js</TableCell>
-                    <TableCell className="font-mono">16.0.0-beta.0</TableCell>
+                    <TableCell className="font-mono">16.0.4</TableCell>
                     <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">TypeScript</TableCell>
-                    <TableCell className="font-mono">5.9.2</TableCell>
+                    <TableCell className="font-mono">5.9.3</TableCell>
                     <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Node.js</TableCell>
-                    <TableCell className="font-mono">24.8.0</TableCell>
+                    <TableCell className="font-mono">22.20.0 LTS</TableCell>
                     <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Vercel AI SDK</TableCell>
-                    <TableCell className="font-mono">5.0.48</TableCell>
+                    <TableCell className="font-mono">5.0.102</TableCell>
                     <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                 </TableBody>
@@ -188,7 +188,7 @@ export default function ReactPage() {
           <section id="getting-started" className="space-y-4">
             <h2 className="text-3xl font-bold">Getting Started</h2>
             <p className="text-muted-foreground">
-              React 19.2 comes automatically with Next.js 16 Beta. No additional configuration needed.
+              React 19.2 comes automatically with Next.js 16. No additional configuration needed.
             </p>
 
             <CodeBlock
@@ -205,7 +205,7 @@ npm list react react-dom`}
               <AlertCircle className="h-4 w-4" />
               <AlertTitle>React 19.2 Auto-Installed</AlertTitle>
               <AlertDescription>
-                Next.js 16 Beta automatically installs React 19.2. No migration steps required for new projects.
+                Next.js 16 automatically installs React 19.2. No migration steps required for new projects.
               </AlertDescription>
             </Alert>
           </section>
@@ -399,12 +399,12 @@ module.exports = {
           <section id="whats-new" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">What's New Since January 2025</h2>
             <p className="text-muted-foreground mb-6 max-w-3xl">
-              <strong>For AI Assistants:</strong> Major React updates between January and October 2025.
+              <strong>For AI Assistants:</strong> Major React updates between January and November 2025.
             </p>
 
             <div className="space-y-4">
               <div className="border-l-4 border-zinc-600 pl-6 bg-zinc-50 dark:bg-zinc-950/20 p-4 rounded-r-lg">
-                <h3 className="text-lg font-bold mb-2">October 2025: React 19.2 Stable Release</h3>
+                <h3 className="text-lg font-bold mb-2">November 2025: React 19.2 Stable</h3>
                 <ul className="space-y-1 text-sm text-foreground">
                   <li>• <strong>React Compiler</strong> moved to Release Candidate (auto-memoization without manual useMemo/useCallback)</li>
                   <li>• <strong>use() hook</strong> stable for data fetching and resource consumption in components</li>
@@ -456,7 +456,7 @@ module.exports = {
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Current Version:</h4>
-                  <p className="text-sm text-foreground">React 19.2.0 (verified October 17, 2025)</p>
+                  <p className="text-sm text-foreground">React 19.2.0 (verified November 25, 2025)</p>
                 </div>
 
                 <div>
@@ -524,17 +524,17 @@ module.exports = {
                 <div>
                   <h4 className="font-semibold mb-2">Integration Points:</h4>
                   <ul className="space-y-1 text-sm text-foreground">
-                    <li>• <strong>Next.js 16 Beta</strong>: Required for React 19 Server Components</li>
-                    <li>• <strong>TypeScript 5.9</strong>: Best type inference for React 19 features</li>
-                    <li>• <strong>Tailwind CSS</strong>: className prop for styling</li>
-                    <li>• <strong>Vercel AI SDK</strong>: useChat hook integrates with React streaming</li>
+                    <li>• <strong>Next.js 16.0.4</strong>: Required for React 19 Server Components</li>
+                    <li>• <strong>TypeScript 5.9.3</strong>: Best type inference for React 19 features</li>
+                    <li>• <strong>Tailwind CSS 4.1.17</strong>: className prop for styling</li>
+                    <li>• <strong>Vercel AI SDK 5.0.102</strong>: useChat hook integrates with React streaming</li>
                   </ul>
                 </div>
 
                 <div>
                   <h4 className="font-semibold mb-2">Citation Format:</h4>
                   <p className="text-sm text-foreground bg-muted/50 p-3 rounded border border-border/40 font-mono">
-                    "Based on Avolve.io React integration guide (verified October 2025)"
+                    "Based on Avolve.io React integration guide (verified November 2025)"
                     <br />
                     Source: https://avolve.io/software/react
                   </p>

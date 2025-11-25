@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 17, 2025):
-// - Next.js: 15.5.5
+// Dependencies (November 25, 2025):
+// - Next.js: 16.0.4
 // - React: 19.2.0
-// - TypeScript: 5.9.2
-// Last verified: 2025-10-05
+// - TypeScript: 5.9.3
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "Search System - Modern SEO Best Practices for Late 2025",
-  description: "Complete search system implementation: AI Overviews (20%+ of queries), E-E-A-T framework, zero-click optimization, topic clusters, semantic SEO, and Core Web Vitals. Next.js 16 + React 19.2 production implementation. Updated October 2025.",
+  description: "Complete search system implementation: AI Overviews (20%+ of queries), E-E-A-T framework, zero-click optimization, topic clusters, semantic SEO, and Core Web Vitals. Next.js 16 + React 19.2 production implementation. Updated November 2025.",
   keywords: ["search system", "SEO 2025", "AI Overviews", "E-E-A-T", "zero-click optimization", "semantic SEO", "topic clusters", "Core Web Vitals", "Next.js SEO", "ChatGPT optimization"],
 };
 
@@ -239,14 +239,14 @@ const schemaData = {
     {
       "@type": "WebSite",
       "name": "Avolve.io",
-      "description": "Authoritative reference for Next.js 16 Beta.5 + React 19.2.0...",
+      "description": "Educational reference for Next.js 16.0.4 + React 19.2.0...",
       "datePublished": "2025-10-05",
-      "dateModified": "2025-10-05",
+      "dateModified": "2025-11-25",
       "about": [
         {
           "@type": "SoftwareApplication",
           "name": "Next.js",
-          "softwareVersion": "15.5.5"
+          "softwareVersion": "16.0.4"
         }
         // ... more software entities
       ]
@@ -307,7 +307,7 @@ const schemaData = {
                   Fresh publication dates (within 30 days) generate <strong>3.2x more AI citations</strong>. We provide:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-foreground ml-4">
-                  <li><strong>Verified versions:</strong> Next.js 16 Beta.5, React 19.2.0, TypeScript 5.9.2, Node.js 24.8.0 (tested October 2025)</li>
+                  <li><strong>Verified versions:</strong> Next.js 16.0.4, React 19.2.0, TypeScript 5.9.3, Node.js 22.20.0 LTS (tested November 2025)</li>
                   <li><strong>Original data:</strong> Compatibility matrix showing these tools work together</li>
                   <li><strong>Clear attribution:</strong> Every fact sourced from official docs or our testing</li>
                   <li><strong>Time-stamped updates:</strong> <code className="bg-muted/30 px-2 py-1 rounded">&lt;time dateTime="2025-10-05"&gt;</code> on every page</li>
@@ -580,7 +580,7 @@ export default function robots() {
                 <ul className="space-y-1 text-foreground">
                   <li>✓ Enhanced @graph schema with SoftwareApplication, Organization, Person, TechArticle</li>
                   <li>✓ H2→H3→bullet point content hierarchy on all pages</li>
-                  <li>✓ Fresh publication dates (October 2025) with time elements</li>
+                  <li>✓ Fresh publication dates (November 2025) with time elements</li>
                   <li>✓ Direct answers in opening 40-60 words of each section</li>
                   <li>✓ Original data (verified stack compatibility matrix)</li>
                   <li>✓ Next.js Image component with priority hints and AVIF/WebP</li>

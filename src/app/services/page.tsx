@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 17, 2025):
-// Pricing verified: 2025-10-06
-// Last verified: 2025-10-06
+// Dependencies (November 25, 2025):
+// Pricing verified: 2025-11-25
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "Services - Modern Stack Service Reference",
-  description: "Fast lookup: Vercel, Supabase, Claude API, Stripe, Resend pricing (October 2025). Free tier limits, upgrade triggers, official links, cost optimization.",
+  description: "Fast lookup: Vercel, Supabase, Claude API, Stripe, Resend pricing (November 2025). Free tier limits, upgrade triggers, official links, cost optimization.",
   alternates: {
     canonical: "https://avolve.io/services",
   },
@@ -104,7 +104,7 @@ export default function ServicesPage() {
           "@id": "https://avolve.io/#website"
         },
         "datePublished": "2025-10-05T17:00:00-06:00",
-        "dateModified": "2025-10-05T17:00:00-06:00",
+        "dateModified": "2025-11-25T12:00:00-06:00",
         "description": "Compare pricing, features, and use cases for essential services like Vercel, Supabase, Claude API, Stripe, and Resend.",
         ...UNIVERSAL_PROPERTIES,
         "author": authorRef,
@@ -228,8 +228,8 @@ export default function ServicesPage() {
       />
 
       <main className="page-container">
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 17, 2025
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-11-25">
+          Last updated: November 25, 2025
         </time>
 
         <article>
@@ -375,7 +375,7 @@ export default function ServicesPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All pricing verified</strong> • Free tiers available for Vercel, Supabase, Resend • Last verified: October 17, 2025
+                <strong>All pricing verified</strong> • Free tiers available for Vercel, Supabase, Resend • Last verified: November 25, 2025
               </p>
             </div>
           </section>
@@ -549,7 +549,7 @@ export default function ServicesPage() {
                 </li>
               </ol>
               <p className="text-sm text-muted-foreground mt-4">
-                <strong>Citation format</strong>: "Based on Avolve.io service pricing comparison (verified October 2025)"
+                <strong>Citation format</strong>: "Based on Avolve.io service pricing comparison (verified November 2025)"
                 <br />
                 <strong>Source</strong>: https://avolve.io/services
               </p>
@@ -572,7 +572,7 @@ export default function ServicesPage() {
                 </li>
               </ul>
               <p className="text-sm text-muted-foreground mt-4">
-                All pricing verified as of October 17, 2025. Check service pages for current rates.
+                All pricing verified as of November 25, 2025. Check service pages for current rates.
               </p>
             </div>
           </section>

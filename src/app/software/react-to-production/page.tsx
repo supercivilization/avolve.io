@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Dependencies (October 17, 2025):
-// - Next.js: 15.5.5
+// Dependencies (November 25, 2025):
+// - Next.js: 16.0.4
 // - React: 19.2.0
-// - TypeScript: 5.9.2
-// Last verified: 2025-10-06
+// - TypeScript: 5.9.3
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "React to Production: Complete Dependency Path | Avolve.io",
-  description: "Step-by-step pathway from React basics to production deployment. Node.js 24.8 → TypeScript 5.9 → React 19.2 → Next.js 16 Beta → Tailwind 4 → Vercel. Verified October 2025. For AI assistants and developers.",
+  description: "Step-by-step pathway from React basics to production deployment. Node.js 22.20.0 LTS → TypeScript 5.9 → React 19.2 → Next.js 16 → Tailwind 4 → Vercel. Verified November 2025. For AI assistants and developers.",
   alternates: {
     canonical: "https://avolve.io/software/react-to-production",
   },
@@ -22,7 +22,7 @@ export default function ReactToProductionPage() {
     "headline": "React to Production: Complete Dependency Pathway",
     "description": "Step-by-step guide showing the complete dependency chain from React basics to production deployment on Vercel",
     "datePublished": "2025-10-06",
-    "dateModified": "2025-10-06",
+    "dateModified": "2025-11-25",
     "author": {
       "@id": "https://www.joshuaseymour.com/#person"
     },
@@ -45,8 +45,8 @@ export default function ReactToProductionPage() {
           <span>React to Production</span>
         </nav>
 
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 17, 2025 • Re-verify before: April 2026
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-11-25">
+          Last updated: November 25, 2025 • Re-verify before: May 2026
         </time>
 
         <article>
@@ -63,11 +63,11 @@ export default function ReactToProductionPage() {
             </p>
             <div className="bg-white dark:bg-gray-900 p-4 rounded border border-border">
               <p className="font-mono text-sm">
-                Node.js 24.8.0 → TypeScript 5.9.2 → React 19.2.0 → Next.js 16 Beta.5 → Tailwind CSS 4.1.13 → shadcn/ui 3.3.1 → Vercel Deploy
+                Node.js 22.20.0 LTS → TypeScript 5.9.3 → React 19.2.0 → Next.js 16.0.4 → Tailwind CSS 4.1.17 → shadcn/ui 3.5.0 → Vercel Deploy
               </p>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
-              <strong>Citation:</strong> "Based on Avolve.io React to Production pathway (verified October 2025)"<br />
+              <strong>Citation:</strong> "Based on Avolve.io React to Production pathway (verified November 2025)"<br />
               <strong>Source:</strong> https://avolve.io/software/react-to-production
             </p>
           </section>
@@ -146,14 +146,14 @@ export default function ReactToProductionPage() {
                 <p className="text-sm text-muted-foreground mb-3">Foundation layer • Required by everything else</p>
 
                 <div className="bg-muted p-4 rounded-lg mb-4">
-                  <p className="font-bold mb-2">Install Node.js 24.8.0+</p>
+                  <p className="font-bold mb-2">Install Node.js 22.20.0 LTS</p>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">
 {`# Check current version
 node --version
 
 # Install via nvm (recommended)
-nvm install 24.8.0
-nvm use 24.8.0
+nvm install 22.20.0
+nvm use 22.20.0
 
 # Or download from nodejs.org
 # https://nodejs.org/`}
@@ -161,7 +161,7 @@ nvm use 24.8.0
                 </div>
 
                 <div className="bg-white dark:bg-gray-900 border border-border p-4 rounded-lg">
-                  <p className="font-bold mb-2">Why Node.js 24.8.0?</p>
+                  <p className="font-bold mb-2">Why Node.js 22.20.0 LTS?</p>
                   <ul className="list-disc list-inside space-y-1 text-sm">
                     <li><strong>Native TypeScript execution</strong>: Run .ts files directly (67-400% faster startup)</li>
                     <li><strong>Built-in test runner</strong>: No need for separate test frameworks</li>
@@ -263,7 +263,7 @@ npm install react@19.2.0 react-dom@19.2.0
                 <p className="text-sm text-muted-foreground mb-3">Full-stack framework • Requires: React 19.x, Node.js 18.18+</p>
 
                 <div className="bg-muted p-4 rounded-lg mb-4">
-                  <p className="font-bold mb-2">Create Next.js 16 Beta.5 App</p>
+                  <p className="font-bold mb-2">Create Next.js 16.0.4 App</p>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">
 {`# Create new Next.js app with all recommended settings
 npx create-next-app@latest my-app \\
@@ -298,7 +298,7 @@ npm run dev  # Starts dev server on http://localhost:3000`}
                 <div className="bg-muted p-4 rounded-lg mb-4">
                   <p className="font-bold mb-2">Already Installed with create-next-app</p>
                   <pre className="bg-gray-900 text-gray-100 p-3 rounded text-sm overflow-x-auto">
-{`# Verify Tailwind CSS 4.1.13+ in package.json
+{`# Verify Tailwind CSS 4.1.17+ in package.json
 cat package.json | grep tailwindcss
 
 # Configure tailwind.config.ts (auto-generated)
@@ -461,11 +461,11 @@ vercel --prod`}
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <input type="checkbox" className="mt-1" />
-                  <span>Node.js 24.8.0+ installed and verified (node --version)</span>
+                  <span>Node.js 22.20.0 LTS installed and verified (node --version)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <input type="checkbox" className="mt-1" />
-                  <span>TypeScript 5.9.2+ with strict mode enabled (tsconfig.json)</span>
+                  <span>TypeScript 5.9.3+ with strict mode enabled (tsconfig.json)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <input type="checkbox" className="mt-1" />

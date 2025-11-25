@@ -1,9 +1,9 @@
 /**
  * Avolve.io Design System
- * Last verified: October 6, 2025
+ * Last verified: November 25, 2025
  * Dependencies:
- * - Tailwind CSS: 4.1.13 (Oxide engine, CSS-first configuration)
- * - shadcn/ui: 3.3.1 (Universal registry, OKLCH color format)
+ * - Tailwind CSS: 4.1.17 (Oxide engine, CSS-first configuration)
+ * - shadcn/ui: 3.5.0 (Universal registry, OKLCH color format)
  * - Geist Font: 1.5.1 (Next.js optimized variable fonts)
  *
  * Design Principles (2025 Industry Standards):
@@ -29,7 +29,7 @@
   /* shadcn/ui v3.0 - Neutral Base (OKLCH Format)
    * OKLCH provides perceptually uniform colors across light/dark modes
    * Format: oklch(lightness chroma hue)
-   * Verified: October 6, 2025 */
+   * Verified: November 25, 2025 */
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

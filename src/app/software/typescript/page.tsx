@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 17, 2025):
+// Dependencies (November 25, 2025):
 // - TypeScript: 5.9.3
 // - Node.js: 22.20.0 LTS (native TypeScript support)
-// - Next.js: 16.0.0-beta.0
-// Last verified: 2025-10-06
+// - Next.js: 16.0.4
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "TypeScript 5.9 - Strongly Typed JavaScript with 10x Faster Compiler | Avolve.io",
@@ -122,7 +122,7 @@ export default function TypeScriptPage() {
               <div className="border-l-2 border-border/30 pl-4">
                 <h3 className="text-xl font-bold mb-3 text-foreground">Native Execution Eliminates Build Pipeline</h3>
                 <p className="text-foreground mb-3">
-                  Node.js 24.8.0's native TypeScript support fundamentally changes the development workflow. Direct <code className="bg-gray-200 px-1 rounded">node app.ts</code> execution eliminates tsc, webpack, and babel from the build chain—reducing complexity, startup time, and infrastructure requirements.
+                  Node.js 22.20.0 LTS's native TypeScript support fundamentally changes the development workflow. Direct <code className="bg-gray-200 px-1 rounded">node app.ts</code> execution eliminates tsc, webpack, and babel from the build chain—reducing complexity, startup time, and infrastructure requirements.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-muted p-4 rounded-lg">
@@ -649,7 +649,7 @@ export async function getUser(id: number): Promise<User> {
               <div>
                 <h3 className="font-bold mb-2 text-foreground">Runs On:</h3>
                 <ul className="space-y-2 text-sm text-foreground">
-                  <li>• <Link href="/software/nodejs" className="text-primary hover:underline">Node.js 24.8.0</Link> - Native .ts execution</li>
+                  <li>• <Link href="/software/nodejs" className="text-primary hover:underline">Node.js 22.20.0 LTS</Link> - Native .ts execution</li>
                   <li>• Any JavaScript runtime (Deno, Bun)</li>
                   <li>• Browsers (after compilation)</li>
                 </ul>

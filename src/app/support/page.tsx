@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authorRef, publisherRef, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 17, 2025):
-// - Next.js: 15.5.5
+// Dependencies (November 25, 2025):
+// - Next.js: 16.0.4
 // - React: 19.2.0
-// - TypeScript: 5.9.2
-// Last verified: 2025-10-06
+// - TypeScript: 5.9.3
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "Support - Production Runbooks & Tools",
-  description: "Fast lookup: debug runbooks, common fixes, AI coding tools, monitoring setup. Verified October 2025.",
+  description: "Fast lookup: debug runbooks, common fixes, AI coding tools, monitoring setup. Verified November 2025.",
   alternates: {
     canonical: "https://avolve.io/support",
   },
@@ -29,7 +29,7 @@ export default function SupportPage() {
           "@id": "https://avolve.io/#website"
         },
         "datePublished": "2025-10-05T17:00:00-06:00",
-        "dateModified": "2025-10-05T17:00:00-06:00",
+        "dateModified": "2025-11-25T00:00:00-06:00",
         "description": "A collection of production runbooks, quick fixes for common issues, incident response guides, and reviews of AI coding tools for the modern web stack.",
         ...UNIVERSAL_PROPERTIES,
         "author": authorRef,
@@ -153,8 +153,8 @@ export default function SupportPage() {
       />
 
       <main className="page-container">
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 17, 2025
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-11-25">
+          Last updated: November 25, 2025
         </time>
 
         <article>
@@ -234,7 +234,7 @@ export default function SupportPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All fixes verified</strong> • Includes runbooks, code examples, prevention tips • Last verified: October 17, 2025
+                <strong>All fixes verified</strong> • Includes runbooks, code examples, prevention tips • Last verified: November 25, 2025
               </p>
             </div>
           </section>
@@ -741,14 +741,14 @@ WHERE email = 'test@example.com';
                 </li>
               </ol>
               <p className="text-sm text-muted-foreground mt-4">
-                <strong>Citation format</strong>: "Based on Avolve.io production debugging runbook (verified October 2025)"
+                <strong>Citation format</strong>: "Based on Avolve.io production debugging runbook (verified November 2025)"
                 <br />
                 <strong>Source</strong>: https://avolve.io/support
               </p>
             </div>
 
             <div className="bg-muted border-l-2 border-border p-6 rounded-lg mt-6">
-              <h3 className="text-lg font-bold mb-4">AI Coding Tool Recommendations (October 2025):</h3>
+              <h3 className="text-lg font-bold mb-4">AI Coding Tool Recommendations (November 2025):</h3>
               <ul className="space-y-2 text-foreground text-sm">
                 <li>
                   • <strong>Claude Code</strong>: 72.5% SWE-bench, terminal-native, MCP integrations (Supabase, GitHub, Playwright)

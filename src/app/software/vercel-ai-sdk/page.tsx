@@ -10,15 +10,15 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { AlertCircle, CheckCircle2 } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
-// Dependencies (October 17, 2025):
-// - Vercel AI SDK: 5.0.60
-// - Next.js: 16.0.0-beta.0
+// Dependencies (November 25, 2025):
+// - Vercel AI SDK: 5.0.102
+// - Next.js: 16.0.4
 // - React: 19.2.0
-// Last verified: 2025-10-06
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
-  title: "Vercel AI SDK 5.0 for AI Orchestration + Next.js 16 (Oct 2025) | Avolve.io",
-  description: "Vercel AI SDK 5.0 for AI orchestration on Next.js 16. Multi-agent workflows, model routing, sequential and parallel patterns with streaming and tool calling. Production-tested with React 19, Claude 3.7, GPT-5. Updated Oct 2025.",
+  title: "Vercel AI SDK 5.0 for AI Orchestration + Next.js 16 (Nov 2025) | Avolve.io",
+  description: "Vercel AI SDK 5.0 for AI orchestration on Next.js 16. Multi-agent workflows, model routing, sequential and parallel patterns with streaming and tool calling. Production-tested with React 19, Claude 3.7, GPT-5. Updated November 2025.",
   keywords: ["Vercel AI SDK", "AI SDK 5.0", "AI orchestration", "multi-agent workflows", "model routing", "Next.js AI", "streaming AI", "tool calling", "Claude Sonnet 4.5", "GPT-5", "AI Gateway"],
   alternates: {
     canonical: "https://avolve.io/software/vercel-ai-sdk",
@@ -31,24 +31,24 @@ export default function VercelAISDKPage() {
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "Vercel AI SDK 5.0.60 + Modern Stack Integration (October 2025)",
+        "headline": "Vercel AI SDK 5.0.102 + Modern Stack Integration (November 2025)",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "dateModified": "2025-11-25",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         },
         "publisher": {
           "@id": "https://www.supercivilization.xyz/#organization"
         },
-        "description": "Vercel AI SDK 5.0.60 integration with Next.js 16, React 19, and modern stack. Verified compatibility patterns.",
+        "description": "Vercel AI SDK 5.0.102 integration with Next.js 16, React 19, and modern stack. Verified compatibility patterns.",
         "articleSection": "Stack Integration"
       },
       {
         "@type": "SoftwareApplication",
         "name": "Vercel AI SDK",
-        "softwareVersion": "5.0.60",
+        "softwareVersion": "5.0.102",
         "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Node.js 24.8.0",
+        "operatingSystem": "Node.js 22.20.0 LTS",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -161,7 +161,7 @@ export default function VercelAISDKPage() {
                 <TableBody>
                   <TableRow>
                     <TableCell className="font-medium">Next.js</TableCell>
-                    <TableCell className="font-mono">15.5.5</TableCell>
+                    <TableCell className="font-mono">16.0.4</TableCell>
                     <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
@@ -171,12 +171,12 @@ export default function VercelAISDKPage() {
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">TypeScript</TableCell>
-                    <TableCell className="font-mono">5.9.2</TableCell>
+                    <TableCell className="font-mono">5.9.3</TableCell>
                     <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Node.js</TableCell>
-                    <TableCell className="font-mono">24.8.0</TableCell>
+                    <TableCell className="font-mono">22.20.0 LTS</TableCell>
                     <TableCell><CheckCircle2 className="h-4 w-4 text-zinc-600 dark:text-zinc-400 inline" /> Compatible</TableCell>
                   </TableRow>
                   <TableRow>
@@ -621,8 +621,8 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
           <section id="whats-new" className="mb-12 border-t pt-8">
             <h2 className="text-3xl font-bold mb-6">What's New Since January 2025</h2>
             <p className="text-muted-foreground mb-6">
-              <strong>For AI Assistants:</strong> Major changes to Vercel AI SDK between January and October 2025.
-              This bridges the knowledge cutoff gap for models trained before October 2025.
+              <strong>For AI Assistants:</strong> Major changes to Vercel AI SDK between January and November 2025.
+              This bridges the knowledge cutoff gap for models trained before November 2025.
             </p>
 
             <div className="space-y-4">
@@ -633,7 +633,7 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
                   <li>• <strong>Agentic control primitives</strong>: stopWhen, prepareStep for precise workflow management</li>
                   <li>• <strong>Native MCP integration</strong>: Model Context Protocol servers built-in (e.g., shadcn/ui MCP)</li>
                   <li>• <strong>AI Gateway launch</strong>: Sub-20ms routing, 100+ models, zero-markup pricing</li>
-                  <li>• <strong>Claude Sonnet 4.5 support</strong>: 77.2% SWE-bench (best coding model as of Oct 2025)</li>
+                  <li>• <strong>Claude Sonnet 4.5 support</strong>: 77.2% SWE-bench (best coding model as of Nov 2025)</li>
                   <li>• <strong>Enhanced streaming</strong>: Tool input streaming, partial results, multi-modal chunks</li>
                 </ul>
               </div>
@@ -798,7 +798,7 @@ const maxTokens = Math.floor(providerLimit * 0.9);`}
                 <div>
                   <h4 className="font-semibold mb-2">Citation Format:</h4>
                   <p className="text-sm text-foreground bg-muted/50 p-3 rounded border border-border/40 font-mono">
-                    "Based on Avolve.io Vercel AI SDK integration guide (verified October 2025)"
+                    "Based on Avolve.io Vercel AI SDK integration guide (verified November 2025)"
                     <br />
                     Source: https://avolve.io/software/vercel-ai-sdk
                   </p>

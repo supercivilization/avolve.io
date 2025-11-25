@@ -1,7 +1,7 @@
 /**
  * Centralized date management for Avolve.io
  *
- * Modern best practices (Oct 2025):
+ * Modern best practices (Nov 2025):
  * - Build-time automation using environment variables
  * - Git commit dates as source of truth
  * - Single place to update dates
@@ -69,35 +69,35 @@ export const PAGE_DATES = {
   // Software pages (last actual content update)
   nodejs: {
     published: '2025-10-05',
-    modified: '2025-10-06', // Node.js LTS context update
+    modified: '2025-11-25',
   },
   typescript: {
     published: '2025-10-05',
-    modified: '2025-10-06',
+    modified: '2025-11-25',
   },
   react: {
     published: '2025-10-05',
-    modified: '2025-10-05',
+    modified: '2025-11-25',
   },
   nextjs: {
     published: '2025-10-05',
-    modified: '2025-10-06',
+    modified: '2025-11-25',
   },
   tailwind: {
     published: '2025-10-05',
-    modified: '2025-10-06',
+    modified: '2025-11-25',
   },
   'shadcn-ui': {
     published: '2025-10-05',
-    modified: '2025-10-06',
+    modified: '2025-11-25',
   },
   'vercel-ai-sdk': {
     published: '2025-10-05',
-    modified: '2025-10-06',
+    modified: '2025-11-25',
   },
   supabase: {
     published: '2025-10-05',
-    modified: '2025-10-06',
+    modified: '2025-11-25',
   },
 
   // About

@@ -12,7 +12,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 export const metadata: Metadata = {
   title: "PKCE Flow Failed Error | Support | Avolve.io",
   description:
-    "Fix Supabase PKCE flow failed error in Next.js 15. Cookie timing issue in middleware causes silent auth failures.",
+    "Fix Supabase PKCE flow failed error in Next.js 16. Cookie timing issue in middleware causes silent auth failures.",
   keywords: "PKCE flow failed, Supabase auth error, Next.js 16 cookies, middleware auth, social login error",
 }
 
@@ -42,7 +42,7 @@ export default function PKCEFlowFailedPage() {
           </h1>
 
           <p className="text-xl text-amber-700 dark:text-amber-300">
-            Supabase authentication fails silently after social login redirect. Cookies not set properly in Next.js 15
+            Supabase authentication fails silently after social login redirect. Cookies not set properly in Next.js 16
             middleware.
           </p>
 

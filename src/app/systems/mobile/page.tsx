@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 17, 2025):
+// Dependencies (November 25, 2025):
 // - React Native: 0.81.3 (September 2025)
 // - Expo SDK: 54 (September 10, 2025)
-// - Next.js: 15.5.5 (for web sharing)
+// - Next.js: 16.0.4 (for web sharing)
 // - Nx/Turborepo: For monorepo management
-// Last verified: 2025-10-05
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "Mobile System - React Native/Expo + Next.js Monorepo | Avolve.io",

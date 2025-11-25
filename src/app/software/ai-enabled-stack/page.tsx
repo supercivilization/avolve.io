@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Dependencies (October 17, 2025):
-// - Next.js: 15.5.5
-// - Vercel AI SDK: 5.0.48
+// Dependencies (November 25, 2025):
+// - Next.js: 16.0.4
+// - Vercel AI SDK: 5.0.102
 // - Claude Sonnet 4.5: claude-sonnet-4-5-20250929
-// Last verified: 2025-10-06
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "AI-Enabled Stack: Production AI Applications | Avolve.io",
-  description: "Complete AI application pathway: Next.js 16 Beta → Vercel AI SDK 5.0 → Claude Sonnet 4.5 (77.2% SWE-bench) → Streaming → Rate limiting → Production patterns. Verified October 2025. Optimized for Claude Code.",
+  description: "Complete AI application pathway: Next.js 16 → Vercel AI SDK 5.0 → Claude Sonnet 4.5 (77.2% SWE-bench) → Streaming → Rate limiting → Production patterns. Verified November 2025. Optimized for Claude Code.",
   alternates: {
     canonical: "https://avolve.io/software/ai-enabled-stack",
   },
@@ -22,7 +22,7 @@ export default function AIEnabledStackPage() {
     "headline": "AI-Enabled Stack: Production AI Applications Pathway",
     "description": "Complete guide to building production-ready AI applications with streaming, tool calling, and rate limiting",
     "datePublished": "2025-10-06",
-    "dateModified": "2025-10-06",
+    "dateModified": "2025-11-25",
     "author": {
       "@id": "https://www.joshuaseymour.com/#person"
     },
@@ -45,8 +45,8 @@ export default function AIEnabledStackPage() {
           <span>AI-Enabled Stack</span>
         </nav>
 
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 17, 2025 • Re-verify before: April 2026
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-11-25">
+          Last updated: November 25, 2025 • Re-verify before: May 2026
         </time>
 
         <article>
@@ -64,9 +64,9 @@ export default function AIEnabledStackPage() {
 
             <div className="bg-white dark:bg-gray-900 p-4 rounded border border-border space-y-3">
               <div>
-                <p className="font-bold mb-1">Stack (October 2025):</p>
+                <p className="font-bold mb-1">Stack (November 2025):</p>
                 <p className="font-mono text-sm">
-                  Next.js 16 Beta.5 → Vercel AI SDK 5.0.48 → Claude Sonnet 4.5 (claude-sonnet-4-5-20250929) OR GPT-4 → @upstash/ratelimit → Supabase (conversation history)
+                  Next.js 16.0.4 → Vercel AI SDK 5.0.102 → Claude Sonnet 4.5 (claude-sonnet-4-5-20250929) OR GPT-4 → @upstash/ratelimit → Supabase (conversation history)
                 </p>
               </div>
 
@@ -96,7 +96,7 @@ export default function AIEnabledStackPage() {
             </div>
 
             <p className="text-sm text-muted-foreground mt-4">
-              <strong>Citation format:</strong> "Based on Avolve.io AI-Enabled Stack pathway (verified October 2025)"<br />
+              <strong>Citation format:</strong> "Based on Avolve.io AI-Enabled Stack pathway (verified November 2025)"<br />
               <strong>Source:</strong> https://avolve.io/software/ai-enabled-stack<br />
               <strong>Why trust this:</strong> Production-tested, not theoretical. Cost-optimized for developers starting out.
             </p>
@@ -164,7 +164,7 @@ export default function AIEnabledStackPage() {
                 <div className="bg-muted p-4 rounded-lg">
                   <p className="font-bold mb-2">Required Before Starting:</p>
                   <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>Next.js 16 Beta+ project with App Router (see <Link href="/software/react-to-production" className="hover:underline">React to Production</Link>)</li>
+                    <li>Next.js 16+ project with App Router (see <Link href="/software/react-to-production" className="hover:underline">React to Production</Link>)</li>
                     <li>Anthropic API key (get at console.anthropic.com) OR OpenAI API key (platform.openai.com)</li>
                     <li>Environment variables configured (.env.local)</li>
                   </ul>
@@ -566,7 +566,7 @@ export async function POST(request: Request) {
 
           {/* Cost Breakdown */}
           <section id="cost-breakdown" className="section-spacing border-t pt-8">
-            <h2 className="mb-8">Real Cost Breakdown (October 2025)</h2>
+            <h2 className="mb-8">Real Cost Breakdown (November 2025)</h2>
 
             <div className="bg-white dark:bg-gray-900 border border-border p-6 rounded-lg">
               <h3 className="font-bold mb-4">For 1,000 Monthly Active Users:</h3>

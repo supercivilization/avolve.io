@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 17, 2025):
-// - shadcn CLI: 3.4.0
-// - Next.js: 16.0.0-beta.0
+// Dependencies (November 25, 2025):
+// - shadcn CLI: 3.5.0
+// - Next.js: 16.0.4
 // - React: 19.2.0
-// - Tailwind CSS: v4.1.14
-// Last verified: 2025-10-06
+// - Tailwind CSS: v4.1.17
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
-  title: "shadcn/ui 3.3 - Copy-Paste Component Platform with 95K Stars | Avolve.io",
-  description: "shadcn/ui 3.3 component platform built on Radix UI + Tailwind CSS. 182x faster dependency resolution, universal registry, MCP integration. October 2025.",
+  title: "shadcn/ui 3.5 - Copy-Paste Component Platform with 95K Stars | Avolve.io",
+  description: "shadcn/ui 3.5 component platform built on Radix UI + Tailwind CSS. 182x faster dependency resolution, universal registry, MCP integration. November 2025.",
   keywords: ["shadcn/ui", "Radix UI", "Tailwind components", "Next.js components", "React 19 components", "copy-paste components", "shadcn 2025"],
   alternates: {
     canonical: "https://avolve.io/software/shadcn-ui",
@@ -24,20 +24,20 @@ export default function ShadcnUIPage() {
     "@graph": [
       {
         "@type": "TechArticle",
-        "headline": "shadcn/ui 3.3: Copy-Paste Component Platform with Universal Registry",
+        "headline": "shadcn/ui 3.5: Copy-Paste Component Platform with Universal Registry",
         "datePublished": "2025-10-05",
-        "dateModified": "2025-10-05",
+        "dateModified": "2025-11-25",
         "author": {
           "@id": "https://www.joshuaseymour.com/#person"
         },
-        "description": "Comprehensive analysis of shadcn/ui 3.3's copy-paste philosophy, universal registry platform, and Radix UI + Tailwind CSS integration"
+        "description": "Comprehensive analysis of shadcn/ui 3.5's copy-paste philosophy, universal registry platform, and Radix UI + Tailwind CSS integration"
       },
       {
         "@type": "SoftwareApplication",
         "name": "shadcn/ui",
         "applicationCategory": "DeveloperApplication",
-        "softwareVersion": "3.4.0",
-        "operatingSystem": "Node.js 24.8.0",
+        "softwareVersion": "3.5.0",
+        "operatingSystem": "Node.js 22.20.0 LTS",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -60,12 +60,12 @@ export default function ShadcnUIPage() {
       />
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <time className="text-sm text-muted-foreground" dateTime="2025-10-05">
-          Last updated: October 17, 2025
+        <time className="text-sm text-muted-foreground" dateTime="2025-11-25">
+          Last updated: November 25, 2025
         </time>
 
         <article className="mt-4">
-          <h1 className="text-4xl font-bold mb-4 text-foreground">shadcn/ui 3.3</h1>
+          <h1 className="text-4xl font-bold mb-4 text-foreground">shadcn/ui 3.5</h1>
           <p className="text-xl text-foreground mb-12">
             Component distribution platform with copy-paste philosophy, built on Radix UI and Tailwind CSS, serving 8,000+ companies with 95.1K GitHub stars
           </p>
@@ -74,7 +74,7 @@ export default function ShadcnUIPage() {
           <section id="overview" className="mb-12 border border-border/50 bg-gradient-to-b from-background to-muted/20 shadow-sm p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">What It Is</h2>
             <p className="text-foreground mb-4">
-              <strong>shadcn/ui 3.3</strong> is a component distribution platform that copies accessible, customizable components into your project—not an npm package. Built on <strong>Radix UI primitives</strong> and <strong>Tailwind CSS</strong>, used by <strong>OpenAI, Adobe, and 8,000+ companies</strong>.
+              <strong>shadcn/ui 3.5</strong> is a component distribution platform that copies accessible, customizable components into your project—not an npm package. Built on <strong>Radix UI primitives</strong> and <strong>Tailwind CSS</strong>, used by <strong>OpenAI, Adobe, and 8,000+ companies</strong>.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mt-4">
@@ -89,7 +89,7 @@ export default function ShadcnUIPage() {
               </div>
 
               <div>
-                <h3 className="font-bold text-foreground mb-2">Revolutionary Features (v3.3)</h3>
+                <h3 className="font-bold text-foreground mb-2">Revolutionary Features (v3.5)</h3>
                 <ul className="space-y-1 text-sm text-foreground">
                   <li>• 182x faster dependency resolution</li>
                   <li>• Universal registry platform (namespaced)</li>
@@ -173,9 +173,9 @@ npx shadcn@latest add button
               </div>
 
               <div className="border-l-2 border-border/30 pl-4">
-                <h3 className="text-xl font-bold mb-3 text-foreground">Universal Registry Platform (v3.3)</h3>
+                <h3 className="text-xl font-bold mb-3 text-foreground">Universal Registry Platform (v3.5)</h3>
                 <p className="text-foreground mb-3">
-                  shadcn/ui 3.3 introduces a universal component registry that works across frameworks and allows community contributions through namespaced components. This transforms shadcn/ui from a Next.js-only solution into a platform for the entire JavaScript ecosystem.
+                  shadcn/ui 3.5 introduces a universal component registry that works across frameworks and allows community contributions through namespaced components. This transforms shadcn/ui from a Next.js-only solution into a platform for the entire JavaScript ecosystem.
                 </p>
                 <div className="bg-muted p-4 rounded-lg">
                   <h4 className="font-bold mb-2">Framework Support Matrix:</h4>
@@ -601,7 +601,7 @@ export function UserFormDialog({ user }) {
               <div>
                 <h3 className="font-bold mb-2">Core Facts:</h3>
                 <ul className="space-y-1 text-sm text-foreground">
-                  <li>• <strong>Version:</strong> 3.4.0 (October 2025)</li>
+                  <li>• <strong>Version:</strong> 3.5.0 (November 2025)</li>
                   <li>• <strong>Philosophy:</strong> Copy-paste, not npm package</li>
                   <li>• <strong>Foundation:</strong> Radix UI + Tailwind CSS</li>
                   <li>• <strong>Components:</strong> 65+ accessible primitives</li>

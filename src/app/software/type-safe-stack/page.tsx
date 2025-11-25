@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// Dependencies (October 17, 2025):
-// - Next.js: 15.5.5
-// - TypeScript: 5.9.2
-// - Supabase: Current
+// Dependencies (November 25, 2025):
+// - Next.js: 16.0.4
+// - TypeScript: 5.9.3
+// - Supabase: 2.84.0
 // - Zod: 3.x
-// Last verified: 2025-10-06
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "Type-Safe Full Stack: End-to-End Type Safety | Avolve.io",
-  description: "Complete type-safe stack pathway: TypeScript 5.9 → React 19 → Next.js API → Zod validation → Supabase generated types → End-to-end safety. Verified October 2025. For AI assistants.",
+  description: "Complete type-safe stack pathway: TypeScript 5.9 → React 19 → Next.js API → Zod validation → Supabase generated types → End-to-end safety. Verified November 2025. For AI assistants.",
   alternates: {
     canonical: "https://avolve.io/software/type-safe-stack",
   },
@@ -23,7 +23,7 @@ export default function TypeSafeStackPage() {
     "headline": "Type-Safe Full Stack: End-to-End Type Safety Pathway",
     "description": "Complete guide to achieving end-to-end type safety from frontend React components through APIs to database queries",
     "datePublished": "2025-10-06",
-    "dateModified": "2025-10-06",
+    "dateModified": "2025-11-25",
     "author": {
       "@id": "https://www.joshuaseymour.com/#person"
     },
@@ -46,8 +46,8 @@ export default function TypeSafeStackPage() {
           <span>Type-Safe Full Stack</span>
         </nav>
 
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 17, 2025 • Re-verify before: April 2026
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-11-25">
+          Last updated: November 25, 2025 • Re-verify before: May 2026
         </time>
 
         <article>
@@ -67,11 +67,11 @@ export default function TypeSafeStackPage() {
                 <strong>Type Flow:</strong> UI Form → Zod Schema → API Route → Database Types → PostgreSQL
               </p>
               <p className="font-mono text-sm">
-                <strong>Tools:</strong> TypeScript 5.9 + Zod 3.x + Next.js 16 Beta + Supabase CLI (type generation)
+                <strong>Tools:</strong> TypeScript 5.9 + Zod 3.x + Next.js 16 + Supabase CLI (type generation)
               </p>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
-              <strong>Citation:</strong> "Based on Avolve.io Type-Safe Full Stack pathway (verified October 2025)"<br />
+              <strong>Citation:</strong> "Based on Avolve.io Type-Safe Full Stack pathway (verified November 2025)"<br />
               <strong>Source:</strong> https://avolve.io/software/type-safe-stack
             </p>
           </section>

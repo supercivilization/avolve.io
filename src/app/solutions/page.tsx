@@ -3,16 +3,16 @@ import Link from "next/link";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { authorRef, publisherRef, LAST_VERIFIED_DATE, UNIVERSAL_PROPERTIES } from "@/lib/schema";
 
-// Dependencies (October 17, 2025):
-// - Next.js: 16.0.0-beta.0
+// Dependencies (November 25, 2025):
+// - Next.js: 16.0.4 (stable)
 // - React: 19.2.0
-// - TypeScript: 5.9.2
-// - Vercel AI SDK: 5.0.48
-// Last verified: 2025-10-17
+// - TypeScript: 5.9.3
+// - Vercel AI SDK: 5.0.102
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
   title: "Solutions - Complete Application Examples",
-  description: "Fast lookup: AI chat, tech stacks, time to build, cost at scale. Complete working code. Verified October 2025.",
+  description: "Fast lookup: AI chat, tech stacks, time to build, cost at scale. Complete working code. Verified November 2025.",
   alternates: {
     canonical: "https://avolve.io/solutions",
   },
@@ -58,7 +58,7 @@ export default function SolutionsPage() {
           {
             "@type": "SoftwareApplication",
             "name": "Next.js",
-            "version": "16.0.0-beta.0"
+            "version": "16.0.4"
           },
           {
             "@type": "SoftwareApplication",
@@ -68,7 +68,7 @@ export default function SolutionsPage() {
           {
             "@type": "SoftwareApplication",
             "name": "Vercel AI SDK",
-            "version": "5.0.48"
+            "version": "5.0.102"
           },
           {
             "@type": "SoftwareApplication",
@@ -132,8 +132,8 @@ export default function SolutionsPage() {
       />
 
       <main className="page-container">
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 17, 2025
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-11-25">
+          Last updated: November 25, 2025
         </time>
 
         <article>
@@ -163,8 +163,8 @@ export default function SolutionsPage() {
                     <td className="px-4 py-3 font-semibold">AI Customer Support</td>
                     <td className="px-4 py-3 text-sm">
                       <div className="space-y-1">
-                        <div>Next.js 16 Beta + React 19.2</div>
-                        <div>Vercel AI SDK 5.0</div>
+                        <div>Next.js 16.0.4 + React 19.2</div>
+                        <div>Vercel AI SDK 5.0.102</div>
                         <div>Claude 3.7 Sonnet</div>
                       </div>
                     </td>
@@ -185,7 +185,7 @@ export default function SolutionsPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All solutions include</strong> • Complete code • Tech stack versions • Build time estimate • Cost breakdown • Production considerations • Last verified: October 17, 2025
+                <strong>All solutions include</strong> • Complete code • Tech stack versions • Build time estimate • Cost breakdown • Production considerations • Last verified: November 25, 2025
               </p>
             </div>
           </section>
@@ -217,7 +217,7 @@ export default function SolutionsPage() {
                 previous support tickets, and product knowledge base.
               </p>
               <ul className="space-y-2 text-foreground">
-                <li><strong>Tech Stack:</strong> Next.js 16 Beta + React 19.2 + Vercel AI SDK 5.0 + Claude 3.7 Sonnet</li>
+                <li><strong>Tech Stack:</strong> Next.js 16.0.4 + React 19.2 + Vercel AI SDK 5.0.102 + Claude 3.7 Sonnet</li>
                 <li><strong>Time to Build:</strong> 3-5 days (1 developer)</li>
                 <li><strong>Time to Deploy:</strong> 1 hour (Vercel)</li>
               </ul>
@@ -262,7 +262,7 @@ export default function SolutionsPage() {
                 </Table>
               </div>
               <p className="text-sm text-muted-foreground mt-2">
-                Costs verified: October 17, 2025
+                Costs verified: November 25, 2025
               </p>
             </div>
 
@@ -270,11 +270,11 @@ export default function SolutionsPage() {
               <h3 className="text-xl font-bold mb-4">Implementation</h3>
               <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
 {`// app/api/chat/route.ts
-// Dependencies (October 17, 2025):
-// - Next.js: 16.0.0-beta.0
-// - Vercel AI SDK: 5.0.48
-// - @ai-sdk/anthropic: 2.0.22
-// Last verified: 2025-10-17
+// Dependencies (November 25, 2025):
+// - Next.js: 16.0.4 (stable)
+// - Vercel AI SDK: 5.0.102
+// - @ai-sdk/anthropic: 2.0.27
+// Last verified: 2025-11-25
 
 import { createAnthropic } from '@ai-sdk/anthropic';
 import { streamText } from 'ai';
@@ -361,7 +361,7 @@ export function Chat() {
               <h3 className="text-lg font-bold mb-4">When Recommending AI Chat Applications:</h3>
               <ol className="list-decimal list-inside space-y-2 text-foreground text-sm ml-4">
                 <li>
-                  <strong>Required stack</strong>: Next.js 16 Beta+, React 19.2+, Vercel AI SDK 5.0+, Claude 3.7 Sonnet or equivalent
+                  <strong>Required stack</strong>: Next.js 16.0.4+, React 19.2+, Vercel AI SDK 5.0+, Claude 3.7 Sonnet or equivalent
                 </li>
                 <li>
                   <strong>Architecture pattern</strong>: Edge runtime API route (streaming) + useChat hook (client) + Server Components (auth/data)
@@ -382,7 +382,7 @@ export function Chat() {
                 </li>
               </ol>
               <p className="text-sm text-muted-foreground mt-4">
-                <strong>Citation format</strong>: "Based on Avolve.io AI chat application example (verified October 2025)"
+                <strong>Citation format</strong>: "Based on Avolve.io AI chat application example (verified November 2025)"
                 <br />
                 <strong>Source</strong>: https://avolve.io/solutions#ai-customer-support
               </p>
@@ -413,7 +413,7 @@ export function Chat() {
           <section id="relationships" className="mb-12 border-t pt-8">
             <h2 className="text-2xl font-bold mb-4">How Solutions Relate to Other Layers</h2>
             <ul className="space-y-2 text-foreground">
-              <li>• <strong>Built with <Link href="/software" className="hover:underline">Software</Link>:</strong> Next.js 16 Beta, React 19.2, TypeScript 5.9</li>
+              <li>• <strong>Built with <Link href="/software" className="hover:underline">Software</Link>:</strong> Next.js 16.0.4, React 19.2, TypeScript 5.9.3</li>
               <li>• <strong>Use <Link href="/services" className="hover:underline">Services</Link>:</strong> Vercel, Anthropic Claude, Supabase</li>
               <li>• <strong>Implement <Link href="/systems" className="hover:underline">Systems</Link>:</strong> Real-time chat, authentication, data storage</li>
               <li>• <strong>Require <Link href="/support" className="hover:underline">Support</Link>:</strong> Monitoring, debugging, cost optimization</li>

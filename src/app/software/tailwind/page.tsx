@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
-// Dependencies (October 17, 2025):
-// - Tailwind CSS: v4.1.14
-// - Next.js: 16.0.0-beta.0
+// Dependencies (November 25, 2025):
+// - Tailwind CSS: v4.1.17
+// - Next.js: 16.0.4
 // - React: 19.2.0
-// Last verified: 2025-10-06
+// Last verified: 2025-11-25
 
 export const metadata: Metadata = {
-  title: "Tailwind CSS v4.1.14 - 100x Faster CSS with Oxide Engine | Avolve.io",
-  description: "Tailwind CSS v4.1.14 with revolutionary Oxide engine: 100x faster builds, CSS-first configuration, native container queries. Complete architectural rewrite. October 2025.",
+  title: "Tailwind CSS v4.1.17 - 100x Faster CSS with Oxide Engine | Avolve.io",
+  description: "Tailwind CSS v4.1.17 with revolutionary Oxide engine: 100x faster builds, CSS-first configuration, native container queries. Complete architectural rewrite. November 2025.",
   keywords: ["Tailwind CSS v4", "Oxide engine", "CSS-first config", "utility CSS", "100x faster", "container queries", "Rust CSS"],
   alternates: {
     canonical: "https://avolve.io/software/tailwind",
@@ -35,8 +35,8 @@ export default function TailwindPage() {
         "@type": "SoftwareApplication",
         "name": "Tailwind CSS",
         "applicationCategory": "DeveloperApplication",
-        "softwareVersion": "v4.1.14",
-        "operatingSystem": "Node.js 24.8.0",
+        "softwareVersion": "v4.1.17",
+        "operatingSystem": "Node.js 22.20.0 LTS",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -472,7 +472,7 @@ export function Component() {
               <div>
                 <h3 className="font-bold mb-2 text-foreground">Depends On:</h3>
                 <ul className="space-y-2 text-sm text-foreground">
-                  <li>• <Link href="/software/nodejs" className="text-primary hover:underline">Node.js 24.8.0</Link> - Runtime for Oxide engine</li>
+                  <li>• <Link href="/software/nodejs" className="text-primary hover:underline">Node.js 22.20.0 LTS</Link> - Runtime for Oxide engine</li>
                   <li>• CSS parsing: Lightning CSS (replaces PostCSS)</li>
                 </ul>
               </div>
@@ -480,7 +480,7 @@ export function Component() {
                 <h3 className="font-bold mb-2 text-foreground">Enables:</h3>
                 <ul className="space-y-2 text-sm text-foreground">
                   <li>• <Link href="/software/shadcn-ui" className="text-primary hover:underline">shadcn/ui</Link> - Component styling foundation</li>
-                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 16 Beta</Link> - Works with Turbopack for &lt;1ms CSS updates</li>
+                  <li>• <Link href="/software/nextjs" className="text-primary hover:underline">Next.js 16</Link> - Works with Turbopack for &lt;1ms CSS updates</li>
                   <li>• <Link href="/software/react" className="text-primary hover:underline">React 19</Link> - Server Component styling without runtime overhead</li>
                 </ul>
               </div>

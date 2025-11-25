@@ -12,7 +12,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 export const metadata: Metadata = {
   title: "Dynamic Server Usage Error | Support | Avolve.io",
   description:
-    "Fix 'Dynamic server usage: cookies' error in Next.js 15. Async cookies require await and Suspense boundaries.",
+    "Fix 'Dynamic server usage: cookies' error in Next.js 16. Async cookies require await and Suspense boundaries.",
   keywords: "dynamic server usage, Next.js 16 cookies, async cookies error, Suspense boundaries, middleware cookies",
 }
 
