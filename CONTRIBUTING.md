@@ -6,7 +6,7 @@
 
 ## Before Contributing
 
-1. **Verify versions** - Test code with Next.js 15.5.5 + React 19.2.0 + TypeScript 5.9.2 + Node.js 24.8.0
+1. **Verify versions** - Test code with Next.js 16.0.4 + React 19.2.0 + TypeScript 5.9.3 + Node.js 22.20.0
 2. **Check existing patterns** - Review similar pages to match style and structure
 3. **No speculation** - Only document what you've verified in production or local testing
 
@@ -25,10 +25,10 @@
 4. **Metadata export** with title, description, keywords
 5. **Version comments** at top of file:
    ```typescript
-   // Dependencies (October 5, 2025):
-   // - Next.js: 15.5.5
+   // Dependencies (November 25, 2025):
+   // - Next.js: 16.0.4
    // - React: 19.2.0
-   // Last verified: 2025-10-05
+   // Last verified: 2025-11-25
    ```
 
 ### Content Hierarchy
@@ -114,8 +114,8 @@ const schemaData = {
       "@id": "https://avolve.io/systems/email#webpage",
       "url": "https://avolve.io/systems/email",
       "isPartOf": { "@id": "https://avolve.io/#website" },
-      "datePublished": "2025-10-05",
-      "dateModified": "2025-10-05"
+      "datePublished": "2025-11-25",
+      "dateModified": "2025-11-25"
     },
     {
       "@type": "TechArticle",
@@ -162,7 +162,7 @@ Before submitting:
 - [ ] Schema validates at [schema.org validator](https://validator.schema.org/)
 - [ ] Page renders correctly on mobile
 - [ ] Code examples are complete and tested
-- [ ] Verified versions are current (October 2025)
+- [ ] Verified versions are current (November 2025)
 - [ ] No console errors in browser
 - [ ] BreadcrumbSchema included
 - [ ] Fresh `dateModified` within 30 days
@@ -173,7 +173,7 @@ Before submitting:
 ❌ **Don't use placeholder code** - Real, tested implementations only
 ❌ **Don't add TODO comments** - Complete the feature or don't add it
 ❌ **Don't skip schema markup** - Required for AI citations
-❌ **Don't use outdated versions** - Verify against October 2025 stack
+❌ **Don't use outdated versions** - Verify against November 2025 stack
 ❌ **Don't add third-party services** - Focus on core stack (Next.js, React, Supabase, Vercel)
 ❌ **Don't speculate** - Only document verified, tested patterns
 

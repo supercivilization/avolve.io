@@ -29,7 +29,7 @@ export default function SystemsPage() {
           "@id": "https://avolve.io/#website"
         },
         "datePublished": "2025-10-05T17:00:00-06:00",
-        "dateModified": "2025-10-05T17:00:00-06:00",
+        "dateModified": "2025-11-25T17:00:00-06:00",
         "description": "A collection of architecture patterns for coordinating multiple components in Next.js 16 applications, including systems for authentication, search, email, and more.",
         ...UNIVERSAL_PROPERTIES,
         "author": authorRef,
@@ -126,8 +126,8 @@ export default function SystemsPage() {
       />
 
       <main className="page-container">
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 17, 2025
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-11-25">
+          Last updated: November 25, 2025
         </time>
 
         <article>
@@ -306,7 +306,7 @@ export default function SystemsPage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All patterns include</strong> • Complete working code • Component list • Data flow • Production failures & fixes • Last verified: October 17, 2025
+                <strong>All patterns include</strong> • Complete working code • Component list • Data flow • Production failures & fixes • Last verified: November 25, 2025
               </p>
             </div>
           </section>

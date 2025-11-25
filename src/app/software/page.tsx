@@ -24,7 +24,7 @@ export default function SoftwarePage() {
         "@type": "TechArticle",
         "@id": "https://avolve.io/software#article",
         "url": "https://avolve.io/software",
-        "name": "Verified Stack: Next.js 16 Beta, React 19.2, TypeScript 5.9 Compatibility",
+        "name": "Verified Stack: Next.js 16, React 19.2, TypeScript 5.9 Compatibility",
         "headline": "Verified compatibility matrix and integration patterns for the modern development stack as of November 2025.",
         "description": "Get the verified stack for Nov 2025 including Next.js 16.0.4, React 19.2, TypeScript 5.9.3, Supabase, and Tailwind CSS 4.1.17. Includes installation commands and patterns for a faster, production-ready setup.",
         "isPartOf": websiteRef,
@@ -123,8 +123,8 @@ export default function SoftwarePage() {
       />
 
       <main className="page-container">
-        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-10-06">
-          Last updated: October 17, 2025
+        <time className="text-sm text-muted-foreground block mb-6" dateTime="2025-11-25">
+          Last updated: November 25, 2025
         </time>
 
         <article>
@@ -221,7 +221,7 @@ export default function SoftwarePage() {
                   </tr>
                   <tr className="hover:bg-muted/20">
                     <td className="px-4 py-3 font-mono font-semibold">shadcn/ui</td>
-                    <td className="px-4 py-3 font-mono">3.4.0</td>
+                    <td className="px-4 py-3 font-mono">3.5.0</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
                         <a href="https://ui.shadcn.com" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
@@ -235,7 +235,7 @@ export default function SoftwarePage() {
                   </tr>
                   <tr className="hover:bg-muted/20">
                     <td className="px-4 py-3 font-mono font-semibold">Vercel AI SDK</td>
-                    <td className="px-4 py-3 font-mono">5.0.60</td>
+                    <td className="px-4 py-3 font-mono">5.0.102</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
                         <a href="https://sdk.vercel.ai/docs" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
@@ -249,7 +249,7 @@ export default function SoftwarePage() {
                   </tr>
                   <tr className="hover:bg-muted/20">
                     <td className="px-4 py-3 font-mono font-semibold">Supabase</td>
-                    <td className="px-4 py-3 font-mono">2.58.0</td>
+                    <td className="px-4 py-3 font-mono">2.84.0</td>
                     <td className="px-4 py-3">
                       <div className="flex gap-3 text-sm">
                         <a href="https://supabase.com/docs" target="_blank" rel="noopener" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Docs</a>
@@ -280,7 +280,7 @@ export default function SoftwarePage() {
             </div>
             <div className="bg-muted/10 px-6 py-3 border-t border-border/40">
               <p className="text-sm text-muted-foreground">
-                <strong>All versions verified working together</strong> • Tested on Node.js 22.20.0, macOS Sonoma 14.6.1 • Last verified: October 17, 2025
+                <strong>All versions verified working together</strong> • Tested on Node.js 22.20.0, macOS Sonoma 14.6.1 • Last verified: November 25, 2025
               </p>
             </div>
           </section>
@@ -302,17 +302,17 @@ export default function SoftwarePage() {
                 </thead>
                 <tbody className="divide-y divide-border/40">
                   <tr className="hover:bg-muted/20">
-                    <td className="px-4 py-3 font-mono text-sm">Next.js 16 Beta.4 + React 19.2.0</td>
+                    <td className="px-4 py-3 font-mono text-sm">Next.js 16.0.4 + React 19.2.0</td>
                     <td className="px-4 py-3">
                       <span className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-400 font-semibold">
                         <span>✓</span> Compatible
                       </span>
                     </td>
                     <td className="px-4 py-3 text-sm">Server Components stable</td>
-                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-11-25</td>
                   </tr>
                   <tr className="hover:bg-muted/20">
-                    <td className="px-4 py-3 font-mono text-sm">Next.js 16 Beta.4 + Supabase 2.58.0</td>
+                    <td className="px-4 py-3 font-mono text-sm">Next.js 16.0.4 + Supabase 2.84.0</td>
                     <td className="px-4 py-3">
                       <span className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-400 font-semibold">
                         <span>✓</span> Compatible
@@ -321,7 +321,7 @@ export default function SoftwarePage() {
                     <td className="px-4 py-3 text-sm">
                       <Link href="/systems" className="text-zinc-700 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-300 hover:underline">Auth pattern →</Link>
                     </td>
-                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-11-25</td>
                   </tr>
                   <tr className="hover:bg-muted/20">
                     <td className="px-4 py-3 font-mono text-sm">Tailwind 4.1.17 + shadcn/ui 3.5.0</td>
@@ -331,17 +331,17 @@ export default function SoftwarePage() {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-sm">Requires Tailwind 4+</td>
-                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-11-25</td>
                   </tr>
                   <tr className="hover:bg-muted/20">
-                    <td className="px-4 py-3 font-mono text-sm">Vercel AI SDK 5.0 + Next.js 16 Beta</td>
+                    <td className="px-4 py-3 font-mono text-sm">Vercel AI SDK 5.0.102 + Next.js 16</td>
                     <td className="px-4 py-3">
                       <span className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-400 font-semibold">
                         <span>✓</span> Compatible
                       </span>
                     </td>
                     <td className="px-4 py-3 text-sm">Edge runtime streaming works</td>
-                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-11-25</td>
                   </tr>
                   <tr className="hover:bg-muted/20">
                     <td className="px-4 py-3 font-mono text-sm">Node.js 22.20 + TypeScript 5.9</td>
@@ -351,7 +351,7 @@ export default function SoftwarePage() {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-sm">Native TS execution (no transpilation)</td>
-                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-11-25</td>
                   </tr>
                   <tr className="hover:bg-muted/20 bg-stone-50/50 dark:bg-stone-900/10">
                     <td className="px-4 py-3 font-mono text-sm">Next.js 14.x + React 19.x</td>
@@ -361,7 +361,7 @@ export default function SoftwarePage() {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-sm text-stone-700 dark:text-stone-400">Requires Next.js 16+</td>
-                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-11-25</td>
                   </tr>
                   <tr className="hover:bg-muted/20 bg-stone-50/50 dark:bg-stone-900/10">
                     <td className="px-4 py-3 font-mono text-sm">shadcn/ui 3.x + Tailwind 3.x</td>
@@ -371,7 +371,7 @@ export default function SoftwarePage() {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-sm text-stone-700 dark:text-stone-400">Must upgrade to Tailwind 4</td>
-                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-10-06</td>
+                    <td className="px-4 py-3 text-sm text-muted-foreground">2025-11-25</td>
                   </tr>
                 </tbody>
               </table>
@@ -430,7 +430,7 @@ export default function SoftwarePage() {
                 </div>
                 <div className="pl-12 border-l-2 border-zinc-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">Next.js 16 Beta.5</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">Next.js 16.0.4</span>
                     <span className="text-muted-foreground">→ Framework, requires React 19.x</span>
                   </div>
                 </div>
@@ -442,13 +442,13 @@ export default function SoftwarePage() {
                 </div>
                 <div className="pl-20 border-l-2 border-neutral-600">
                   <div className="flex items-start gap-3">
-                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">shadcn/ui 3.3.1</span>
+                    <span className="text-zinc-600 dark:text-zinc-400 font-bold min-w-[120px]">shadcn/ui 3.5.0</span>
                     <span className="text-muted-foreground">→ Components, requires React 19+ & Tailwind 4+</span>
                   </div>
                 </div>
                 <div className="pl-16 border-l-2 border-zinc-600 mt-4">
                   <div className="flex items-start gap-3">
-                    <span className="text-zinc-700 dark:text-zinc-300 font-bold min-w-[120px]">AI SDK 5.0.48</span>
+                    <span className="text-zinc-700 dark:text-zinc-300 font-bold min-w-[120px]">AI SDK 5.0.102</span>
                     <span className="text-muted-foreground">→ AI integration, requires Next.js 16+ for streaming</span>
                   </div>
                 </div>
@@ -586,7 +586,7 @@ export default function SoftwarePage() {
                         shadcn/ui
                       </Link>
                     </td>
-                    <td className="border border-border/40 px-4 py-2 font-mono">3.3.1</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">3.5.0</td>
                     <td className="border border-border/40 px-4 py-2">Universal registry (182x faster resolution)</td>
                   </tr>
                   <tr>
@@ -602,7 +602,7 @@ export default function SoftwarePage() {
                         Vercel AI SDK
                       </Link>
                     </td>
-                    <td className="border border-border/40 px-4 py-2 font-mono">5.0.48</td>
+                    <td className="border border-border/40 px-4 py-2 font-mono">5.0.102</td>
                     <td className="border border-border/40 px-4 py-2">100+ models, streaming, tool calling</td>
                   </tr>
                   <tr>

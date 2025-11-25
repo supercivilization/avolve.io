@@ -53,9 +53,9 @@ export function SiteFooter() {
         { href: "/software/nodejs", label: "Node.js 22/24" },
         { href: "/software/typescript", label: "TypeScript 5.9" },
         { href: "/software/react", label: "React 19.2" },
-        { href: "/software/nextjs", label: "Next.js 16 Beta" },
+        { href: "/software/nextjs", label: "Next.js 16" },
         { href: "/software/tailwind", label: "Tailwind 4.1" },
-        { href: "/software/shadcn-ui", label: "shadcn/ui 3.4" },
+        { href: "/software/shadcn-ui", label: "shadcn/ui 3.5" },
         { href: "/software/vercel-ai-sdk", label: "Vercel AI SDK 5.0" },
         { href: "/software/supabase", label: "Supabase (PG 15.8)" },
       ]
@@ -110,9 +110,9 @@ export function SiteFooter() {
               {/* Stack Info Bar */}
               <div className="mb-8 md:mb-12 flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-border/30 pb-6 md:pb-8 gap-4">
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">Verified Oct 17, 2025</span>
+                  <span className="font-semibold text-foreground">Verified Nov 25, 2025</span>
                   <span className="hidden sm:inline">•</span>
-                  <span>Next.js 16 Beta + React 19.2 + TypeScript 5.9 + Node.js 24 LTS</span>
+                  <span>Next.js 16 + React 19.2 + TypeScript 5.9 + Node.js 22 LTS</span>
                   <span className="hidden sm:inline">•</span>
                   <span className="font-medium text-foreground">Production-Tested</span>
                 </div>
