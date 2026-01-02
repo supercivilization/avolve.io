@@ -10,16 +10,14 @@ import { LAST_VERIFIED_DATE } from "@/lib/schema";
 export const metadata: Metadata = {
   metadataBase: new URL('https://avolve.io'),
   title: {
-    default: "Avolve - Making Sense of AI Development for Next.js",
-    template: "%s | Avolve.io"
+    default: "Avolve 365 - AI Accountability Partner for Solopreneurs",
+    template: "%s | Avolve 365"
   },
-  description: "Clear explanations of how AI development pieces fit together for Next.js 16 + React 19 applications. Understand multi-agent workflows, model routing, and tool orchestration with Vercel AI SDK, LangChain, and CrewAI. The map to modern AI development.",
+  description: "365 days of AI-powered accountability for solopreneurs. Daily check-ins, progress tracking, and an AI thinking partner that knows your journey. Only 365 spots available. $288/month or $2,888/year.",
   keywords: [
-    "AI orchestration explained", "Next.js 16 guide", "React 19 tutorial", "multi-agent workflows explained", "model routing guide",
-    "Vercel AI SDK", "LangChain", "CrewAI", "tool orchestration", "AI agents",
-    "TypeScript 5.9", "Tailwind CSS 4", "shadcn/ui",
-    "Vercel", "Supabase", "AI development guide", "learn AI orchestration",
-    "Server Components", "App Router", "AI development"
+    "AI accountability partner", "solopreneur accountability", "business accountability",
+    "AI coach", "daily accountability", "goal tracking", "progress tracking",
+    "entrepreneur support", "business transformation", "365 day challenge"
   ],
   authors: [{ name: "Joshua Seymour", url: "https://www.joshuaseymour.com" }],
   creator: "Joshua Seymour",
@@ -34,10 +32,10 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: "Avolve - Making Sense of AI Development for Next.js",
-    description: "Clear explanations of how AI development pieces fit together. Understand multi-agent workflows, model routing, and tool orchestration for Next.js 16 + React 19.",
+    title: "Avolve 365 - AI Accountability Partner for Solopreneurs",
+    description: "365 days of AI-powered accountability. Daily check-ins, progress tracking, and an AI thinking partner. Only 365 spots available.",
     url: "https://avolve.io",
-    siteName: "Avolve.io",
+    siteName: "Avolve 365",
     locale: "en_US",
     type: "website",
     images: [
@@ -45,14 +43,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Avolve - The Map to Modern AI Development for Next.js"
+        alt: "Avolve 365 - AI Accountability Partner for Solopreneurs"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Avolve - Making Sense of AI Development",
-    description: "Clear explanations of how AI development pieces fit together. Multi-agent workflows, model routing, tool orchestration for Next.js 16 + React 19.",
+    title: "Avolve 365 - AI Accountability Partner",
+    description: "365 days of AI-powered accountability for solopreneurs. Daily check-ins, progress tracking, and an AI thinking partner. Only 365 spots.",
     images: ["/og-image.png"]
   },
   robots: {
