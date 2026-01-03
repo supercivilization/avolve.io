@@ -6,6 +6,18 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
+// Subscription tier levels
+export type SubscriptionTier = 'individual_vip' | 'collective_pro' | 'ecosystem_ceo'
+
+// Subscription status
+export type SubscriptionStatus = 'active' | 'trialing' | 'past_due' | 'canceled' | 'unpaid' | 'incomplete'
+
+// Billing interval
+export type BillingInterval = 'month' | 'year'
+
+// Organization member role
+export type OrgMemberRole = 'owner' | 'admin' | 'member'
+
 export type Database = {
   public: {
     Tables: {
@@ -192,18 +204,24 @@ export type Database = {
           avatar_url: string | null
           id: string
           name: string | null
+          tier: SubscriptionTier | null
+          stripe_customer_id: string | null
         }
         Insert: {
           about?: string | null
           avatar_url?: string | null
           id: string
           name?: string | null
+          tier?: SubscriptionTier | null
+          stripe_customer_id?: string | null
         }
         Update: {
           about?: string | null
           avatar_url?: string | null
           id?: string
           name?: string | null
+          tier?: SubscriptionTier | null
+          stripe_customer_id?: string | null
         }
         Relationships: [
           {
@@ -214,6 +232,203 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      organizations: {
+        Row: {
+          id: string
+          name: string
+          slug: string
+          tier: SubscriptionTier
+          owner_id: string | null
+          stripe_customer_id: string | null
+          stripe_subscription_id: string | null
+          seat_limit: number
+          seats_used: number
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          name: string
+          slug?: string
+          tier?: SubscriptionTier
+          owner_id?: string | null
+          stripe_customer_id?: string | null
+          stripe_subscription_id?: string | null
+          seat_limit?: number
+          seats_used?: number
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          name?: string
+          slug?: string
+          tier?: SubscriptionTier
+          owner_id?: string | null
+          stripe_customer_id?: string | null
+          stripe_subscription_id?: string | null
+          seat_limit?: number
+          seats_used?: number
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "organizations_owner_id_fkey"
+            columns: ["owner_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      organization_members: {
+        Row: {
+          id: string
+          organization_id: string
+          user_id: string
+          role: OrgMemberRole
+          invited_by: string | null
+          invited_at: string | null
+          joined_at: string
+        }
+        Insert: {
+          id?: string
+          organization_id: string
+          user_id: string
+          role?: OrgMemberRole
+          invited_by?: string | null
+          invited_at?: string | null
+          joined_at?: string
+        }
+        Update: {
+          id?: string
+          organization_id?: string
+          user_id?: string
+          role?: OrgMemberRole
+          invited_by?: string | null
+          invited_at?: string | null
+          joined_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "organization_members_organization_id_fkey"
+            columns: ["organization_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "organization_members_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      subscriptions: {
+        Row: {
+          id: string
+          user_id: string | null
+          organization_id: string | null
+          tier: SubscriptionTier
+          status: SubscriptionStatus
+          billing_interval: BillingInterval
+          stripe_customer_id: string
+          stripe_subscription_id: string | null
+          stripe_price_id: string | null
+          current_period_start: string | null
+          current_period_end: string | null
+          cancel_at_period_end: boolean
+          canceled_at: string | null
+          trial_start: string | null
+          trial_end: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          user_id?: string | null
+          organization_id?: string | null
+          tier: SubscriptionTier
+          status?: SubscriptionStatus
+          billing_interval?: BillingInterval
+          stripe_customer_id: string
+          stripe_subscription_id?: string | null
+          stripe_price_id?: string | null
+          current_period_start?: string | null
+          current_period_end?: string | null
+          cancel_at_period_end?: boolean
+          canceled_at?: string | null
+          trial_start?: string | null
+          trial_end?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string | null
+          organization_id?: string | null
+          tier?: SubscriptionTier
+          status?: SubscriptionStatus
+          billing_interval?: BillingInterval
+          stripe_customer_id?: string
+          stripe_subscription_id?: string | null
+          stripe_price_id?: string | null
+          current_period_start?: string | null
+          current_period_end?: string | null
+          cancel_at_period_end?: boolean
+          canceled_at?: string | null
+          trial_start?: string | null
+          trial_end?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "subscriptions_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "subscriptions_organization_id_fkey"
+            columns: ["organization_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      feature_access: {
+        Row: {
+          id: string
+          tier: SubscriptionTier
+          feature_key: string
+          enabled: boolean
+          limits: Json | null
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          tier: SubscriptionTier
+          feature_key: string
+          enabled?: boolean
+          limits?: Json | null
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          tier?: SubscriptionTier
+          feature_key?: string
+          enabled?: boolean
+          limits?: Json | null
+          created_at?: string
+        }
+        Relationships: []
       }
       projects: {
         Row: {
@@ -350,7 +565,9 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      subscription_tier: SubscriptionTier
+      subscription_status: SubscriptionStatus
+      billing_interval: BillingInterval
     }
     CompositeTypes: {
       [_ in never]: never
