@@ -1,0 +1,50 @@
+{
+  "name": "next-app",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@4.1.1",
+  "scripts": {
+    "dev": "yarn with-env next dev",
+    "build": "cd ../.. && yarn build && cd apps/next && yarn next:build",
+    "next:build": "yarn with-env next build --webpack",
+    "next:build:turbopack": "yarn with-env next build",
+    "start": "yarn with-env next start",
+    "serve": "NODE_ENV=production yarn with-env next start --port 8151",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "with-env": "dotenv -e ../../.env -c --",
+    "check:type": "tsc --outDir /tmp",
+    "check:type:watch": "yarn check:type -w"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.1",
+    "@ai-sdk/openai": "^3.0.1",
+    "@my/ui": "*",
+    "@supabase/auth-helpers-nextjs": "^0.10.0",
+    "@supabase/auth-helpers-react": "^0.5.0",
+    "@supabase/supabase-js": "^2.87.1",
+    "@tamagui/next-theme": "^1.141.5",
+    "@tamagui/react-native-svg": "^1.141.5",
+    "@tanstack/react-query": "^5.90.12",
+    "@trpc/server": "^11.7.2",
+    "ai": "^6.0.3",
+    "app": "*",
+    "date-fns": "^4.1.0",
+    "foxact": "^0.2.49",
+    "next": "16.1.1",
+    "raf": "^3.4.1",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "react-native": "0.81.5",
+    "vercel": "latest",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "16.1.1",
+    "@next/eslint-plugin-next": "16.1.1",
+    "@tamagui/next-plugin": "^1.141.5",
+    "@types/node": "^22.14.0",
+    "dotenv-cli": "^8.0.0",
+    "typescript": "~5.9.3"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base",
+  "include": ["src"],
+  "exclude": [
+    "**/*.stories.tsx",
+    "**/*.stories.ts",
+    "**/bento/**",
+    "**/datepicker/**",
+    "**/pickers/**"
+  ],
+  "compilerOptions": {
+    "noEmit": true,
+    "composite": false,
+    "jsx": "react-jsx",
+    "skipLibCheck": true
+  }
+}
