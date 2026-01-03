@@ -1,4 +1,5 @@
-import { Database } from '@my/supabase/types'
+import type { Database } from '@my/supabase/types'
+import type { SupabaseClient } from '@supabase/supabase-js'
 import { Session, createPagesBrowserClient } from '@supabase/auth-helpers-nextjs'
 import { SessionContextProvider } from '@supabase/auth-helpers-react'
 import { useState } from 'react'
@@ -12,7 +13,10 @@ export type AuthProviderProps = {
 
 export const AuthProvider = ({ initialSession, children }: AuthProviderProps) => {
   // Create a new supabase browser client on every first render.
-  const [supabaseClient] = useState(() => createPagesBrowserClient<Database>())
+  // Note: auth-helpers is deprecated, migrate to @supabase/ssr in production
+  const [supabaseClient] = useState(() =>
+    createPagesBrowserClient<Database>() as unknown as SupabaseClient
+  )
 
   return (
     <SessionContextProvider supabaseClient={supabaseClient} initialSession={initialSession}>

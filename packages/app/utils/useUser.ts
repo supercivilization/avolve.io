@@ -1,7 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
+import type { Database } from '@my/supabase/types'
 
 import { useSessionContext } from './supabase/useSessionContext'
 import { useSupabase } from './supabase/useSupabase'
+
+type Profile = Database['public']['Tables']['profiles']['Row']
 
 function useProfile() {
   const { session } = useSessionContext()
@@ -9,7 +12,7 @@ function useProfile() {
   const supabase = useSupabase()
   const { data, isPending, refetch } = useQuery({
     queryKey: ['profile', user?.id],
-    queryFn: async () => {
+    queryFn: async (): Promise<Profile | null> => {
       if (!user?.id) return null
       const { data, error } = await supabase.from('profiles').select('*').eq('id', user.id).single()
       if (error) {
@@ -20,7 +23,7 @@ function useProfile() {
         }
         throw new Error(error.message)
       }
-      return data
+      return data as Profile
     },
   })
 

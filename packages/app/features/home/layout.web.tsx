@@ -13,10 +13,7 @@ import {
   getTokens,
   validToken,
 } from '@my/ui'
-import { CreateModal } from '@my/ui/src/components/CreateModal'
 import { Menu, Plus } from '@tamagui/lucide-icons'
-import { useGlobalStore } from 'app/utils/global-store'
-import { usePathname } from 'app/utils/usePathname'
 import { useUser } from 'app/utils/useUser'
 import { useRouter as useNextRouter } from 'next/router'
 import { useEffect, useState } from 'react'
@@ -167,43 +164,20 @@ export const MobileNavbar = ({ children }: { children: React.ReactNode }) => {
 }
 
 const CtaButton = (props: ButtonProps) => {
-  const { toggleCreateModal, setToggleCreateModal } = useGlobalStore()
-  const pathName = usePathname()
-
   return (
-    <>
-      <CreateModal toggleEvent={toggleCreateModal} setToggleEvent={setToggleCreateModal} />
-      <Theme inverse>
-        <Adapt when="sm">
-          <Button
-            {...useLink({ href: '/create' })}
-            size="$3"
-            space="$1.5"
-            my="$-1"
-            icon={Plus}
-            br="$10"
-            {...props}
-          >
-            Create
-          </Button>
-        </Adapt>
-        <Adapt when="gtSm">
-          <Button
-            onPress={() => {
-              if (pathName !== '/create') setToggleCreateModal()
-            }}
-            size="$3"
-            space="$1.5"
-            my="$-1"
-            icon={Plus}
-            br="$10"
-            {...props}
-          >
-            Create
-          </Button>
-        </Adapt>
-      </Theme>
-    </>
+    <Theme inverse>
+      <Button
+        {...useLink({ href: '/dashboard' })}
+        size="$3"
+        space="$1.5"
+        my="$-1"
+        icon={Plus}
+        br="$10"
+        {...props}
+      >
+        Get Started
+      </Button>
+    </Theme>
   )
 }
 

@@ -100,6 +100,7 @@
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.1",
     "@ai-sdk/openai": "^3.0.1",
+    "@ai-sdk/react": "^3.0.6",
     "ai": "^6.0.3",
     "resend": "^6.6.0",
     "tr46": "^6.0.0",
