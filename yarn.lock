@@ -9284,6 +9284,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/analytics@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "@vercel/analytics@npm:1.6.1"
+  peerDependencies:
+    "@remix-run/react": ^2
+    "@sveltejs/kit": ^1 || ^2
+    next: ">= 13"
+    react: ^18 || ^19 || ^19.0.0-rc
+    svelte: ">= 4"
+    vue: ^3
+    vue-router: ^4
+  peerDependenciesMeta:
+    "@remix-run/react":
+      optional: true
+    "@sveltejs/kit":
+      optional: true
+    next:
+      optional: true
+    react:
+      optional: true
+    svelte:
+      optional: true
+    vue:
+      optional: true
+    vue-router:
+      optional: true
+  checksum: 10/304c6cfef21cdec4c1a2c68c1664e323c1813d733972c9f3603b955ca899655b2a9a0084a34288548e6847ffb802c2916273e4b2bef70e5ce712254a18ae2f3c
+  languageName: node
+  linkType: hard
+
 "@vercel/backends@npm:0.0.17":
   version: 0.0.17
   resolution: "@vercel/backends@npm:0.0.17"
@@ -9612,6 +9642,33 @@ __metadata:
     "@iarna/toml": "npm:^2.2.5"
     execa: "npm:5"
   checksum: 10/da752ba62079c534b8e133b0d6151f263ec3089193e4197b10adcded2282c145d49686712d4bdc4c34fb91d73b136302f3e47287b290cc3e9ff0b5f1c646c305
+  languageName: node
+  linkType: hard
+
+"@vercel/speed-insights@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "@vercel/speed-insights@npm:1.3.1"
+  peerDependencies:
+    "@sveltejs/kit": ^1 || ^2
+    next: ">= 13"
+    react: ^18 || ^19 || ^19.0.0-rc
+    svelte: ">= 4"
+    vue: ^3
+    vue-router: ^4
+  peerDependenciesMeta:
+    "@sveltejs/kit":
+      optional: true
+    next:
+      optional: true
+    react:
+      optional: true
+    svelte:
+      optional: true
+    vue:
+      optional: true
+    vue-router:
+      optional: true
+  checksum: 10/64d82e980900961c144bdf0054a4a261c99bcb1150f2cc37614b0cf879143885f56077360325c4805c4491eba027bca908ebd8c7c200eb068b581b13533b2de1
   languageName: node
   linkType: hard
 
@@ -19418,6 +19475,8 @@ __metadata:
     "@trpc/server": "npm:^11.7.2"
     "@types/canvas-confetti": "npm:^1.9.0"
     "@types/node": "npm:^22.14.0"
+    "@vercel/analytics": "npm:^1.6.1"
+    "@vercel/speed-insights": "npm:^1.3.1"
     ai: "npm:^6.0.3"
     app: "npm:*"
     canvas-confetti: "npm:^1.9.3"

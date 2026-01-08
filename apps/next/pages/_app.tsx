@@ -6,6 +6,9 @@ import { ColorScheme, NextThemeProvider, useRootTheme } from '@tamagui/next-them
 import { Provider } from 'app/provider'
 import { AuthProviderProps } from 'app/provider/auth'
 import { api } from 'app/utils/api'
+import { AnalyticsTracker } from 'app/utils/analytics'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import 'raf/polyfill'
@@ -42,9 +45,12 @@ function MyApp({
         }}
       >
         <Provider initialSession={pageProps.initialSession}>
+          <AnalyticsTracker />
           {getLayout(<Component {...pageProps} />)}
         </Provider>
       </NextThemeProvider>
+      <Analytics />
+      <SpeedInsights />
     </>
   )
 }
