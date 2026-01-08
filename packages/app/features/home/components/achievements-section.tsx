@@ -20,32 +20,65 @@ const quarterMinusSpace = validToken(
   })
 )
 
-const achievementData: {
+interface AchievementData {
   title: string
   progress: { current: number; full: number; label: string }
   theme: ThemeName
-}[] = [
+  href: string
+}
+
+const achievementData: AchievementData[] = [
   {
     title: 'Make your first 100K',
     progress: { current: 81_500, full: 100_000, label: 'dollars made' },
     theme: 'green',
+    href: '#',
   },
   {
     title: 'Build your community',
     progress: { current: 280, full: 500, label: 'members' },
     theme: 'blue',
+    href: '#',
   },
   {
     title: 'Set up your profile',
     progress: { current: 2, full: 3, label: 'steps completed' },
     theme: 'orange',
+    href: '#',
   },
   {
     title: 'Refer 5 friends',
     progress: { current: 4, full: 5, label: 'friends referred' },
     theme: 'pink',
+    href: '#',
   },
 ]
+
+// Component wrapper to properly use hooks outside of map callback
+function AchievementCardWrapper({ achievement }: { achievement: AchievementData }) {
+  const linkProps = useLink({ href: achievement.href })
+
+  return (
+    <Theme name={achievement.theme}>
+      <AchievementCard
+        w={300}
+        $gtMd={{
+          w: halfMinusSpace,
+        }}
+        $gtLg={{
+          w: quarterMinusSpace,
+        }}
+        icon={DollarSign}
+        title={achievement.title}
+        progress={achievement.progress}
+        action={{
+          text: 'Boost your sales',
+          props: linkProps,
+        }}
+      />
+    </Theme>
+  )
+}
 
 export const AchievementsSection = () => {
   return (
@@ -62,24 +95,7 @@ export const AchievementsSection = () => {
       <ScrollAdapt>
         <XStack w="100%" px="$4" fw="wrap" f={1} gap="$3">
           {achievementData.map((achievement) => (
-            <Theme key={achievement.title} name={achievement.theme}>
-              <AchievementCard
-                w={300}
-                $gtMd={{
-                  w: halfMinusSpace,
-                }}
-                $gtLg={{
-                  w: quarterMinusSpace,
-                }}
-                icon={DollarSign}
-                title={achievement.title}
-                progress={achievement.progress}
-                action={{
-                  text: 'Boost your sales',
-                  props: useLink({ href: '#' }),
-                }}
-              />
-            </Theme>
+            <AchievementCardWrapper key={achievement.title} achievement={achievement} />
           ))}
         </XStack>
       </ScrollAdapt>
