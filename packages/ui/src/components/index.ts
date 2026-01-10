@@ -19,6 +19,7 @@ export * from './SubmitButton'
 export * from './TodoCard'
 export * from './LoadingOverlay'
 export * from './PricingTiers'
+export * from './Skeleton'
 
 // Bento UI components - import directly from './bento' if needed
 // These are third-party Tamagui Pro components with their own type definitions

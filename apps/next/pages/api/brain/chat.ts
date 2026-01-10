@@ -1,9 +1,9 @@
 // API Route: /api/brain/chat
-// RAG-powered chat with Claude for the Project Brain
+// RAG-powered chat with Google Gemini for the Project Brain
 
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { streamText } from 'ai'
-import { anthropic } from '@ai-sdk/anthropic'
+import { google } from '@ai-sdk/google'
 import { createClient } from '@supabase/supabase-js'
 import type { CSuiteDomain } from 'app/features/brain/types'
 import {
@@ -181,12 +181,12 @@ Use this context to provide more relevant and personalized responses. Cite sourc
     }
 
     // Stream the response with telemetry
+    // Using Gemini 2.0 Flash for cost efficiency (~70% cheaper than Claude)
     const result = streamText({
-      model: anthropic('claude-sonnet-4-20250514'),
+      model: google('gemini-2.0-flash'),
       system: systemPrompt,
       messages: [{ role: 'user', content: message }],
-      // @ts-expect-error - maxTokens is valid in AI SDK 5.0 but type definitions may be outdated
-      maxTokens: 2000,
+      maxOutputTokens: 2000,
       experimental_telemetry: {
         isEnabled: true,
         functionId: 'brain-chat',

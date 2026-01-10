@@ -87,6 +87,7 @@ module.exports = () => {
       */
     experimental: {
       scrollRestoration: true,
+      reactCompiler: true, // Enable React Compiler (stable in Next.js 16)
       // optimizeCss: true,
     },
     turbopack: {

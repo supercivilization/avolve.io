@@ -1,0 +1,87 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://superachiever.xyz/[username]",
+  "name": "[User Name]'s Superachiever Profile",
+  "description": "The Superachiever profile of [User Name]",
+  "url": "https://superachiever.xyz/[username]",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://superachiever.xyz/[username]#person",
+    "name": "[User Name]",
+    "givenName": "[First Name]",
+    "familyName": "[Last Name]",
+    "url": "https://superachiever.xyz/[username]",
+    "image": "[avatar_url]",
+    "description": "[Bio/tagline - max 160 chars]",
+    "jobTitle": "[Professional title]",
+    "email": "[email if public]",
+    "sameAs": [
+      "[twitter_url]",
+      "[linkedin_url]",
+      "[personal_website]"
+    ],
+    "memberOf": [
+      {
+        "@type": "ProgramMembership",
+        "programName": "Superachiever",
+        "membershipNumber": "[uuid]",
+        "membershipPointsEarned": 0,
+        "hostingOrganization": {
+          "@id": "https://supercivilization.xyz"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://superachievers.xyz",
+        "name": "Superachievers"
+      }
+    ],
+    "affiliation": [
+      {
+        "@type": "Organization",
+        "name": "[Team/Group Name]",
+        "url": "[group_url]"
+      }
+    ],
+    "knowsAbout": [
+      "[skill1]",
+      "[skill2]",
+      "[expertise_area]"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "[Certification Name]",
+        "credentialCategory": "certificate",
+        "recognizedBy": {
+          "@id": "https://supercivilization.xyz"
+        },
+        "dateCreated": "[certification_date]"
+      }
+    ],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "[Occupation]",
+      "occupationLocation": {
+        "@type": "Country",
+        "name": "[Country]"
+      }
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "[Company/Venture Name]",
+      "url": "[company_url]"
+    }
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://superachiever.xyz",
+    "name": "Superachiever",
+    "description": "Profile pages for Superachievers - super-entrepreneurs teamed with super-technology",
+    "url": "https://superachiever.xyz",
+    "publisher": {
+      "@id": "https://supercivilization.xyz"
+    }
+  }
+}

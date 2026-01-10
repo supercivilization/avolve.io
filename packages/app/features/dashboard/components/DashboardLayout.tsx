@@ -1,11 +1,14 @@
 'use client'
 
 import {
-  BookOpen,
-  Compass,
-  Cpu,
+  Plane,
+  Zap,
+  Layers,
+  Cog,
+  Fuel,
   LayoutDashboard,
-  Users,
+  Settings,
+  UsersRound,
 } from '@tamagui/lucide-icons'
 import {
   Button,
@@ -16,28 +19,38 @@ import {
   XStack,
   YStack,
 } from '@my/ui'
-import { useRouter as useNextRouter } from 'next/router'
 import { Link, useLink } from 'solito/link'
 
 import { useSubscription } from 'app/utils/subscription'
 
-export type DashboardSection = 'overview' | 'training' | 'techniques' | 'tools' | 'connect'
+// C-Suite Framework sections
+export type AppSection =
+  | 'overview'
+  | 'ceo' | 'cmo' | 'cvo' | 'coo' | 'cfo'
 
-interface DashboardLayoutProps {
+// Backwards compatibility alias
+export type DashboardSection = AppSection
+
+interface AppLayoutProps {
   children: React.ReactNode
-  activeSection?: DashboardSection
+  activeSection?: AppSection
 }
+
+// Backwards compatibility alias
+export type DashboardLayoutProps = AppLayoutProps
 
 interface NavItemProps {
   href: string
   icon: React.ReactNode
   label: string
+  sublabel?: string
   description?: string
   isActive?: boolean
   disabled?: boolean
+  theme?: string
 }
 
-function NavItem({ href, icon, label, description, isActive, disabled }: NavItemProps) {
+function NavItem({ href, icon, label, sublabel, description, isActive, disabled, theme }: NavItemProps) {
   const linkProps = useLink({ href })
 
   return (
@@ -64,13 +77,20 @@ function NavItem({ href, icon, label, description, isActive, disabled }: NavItem
         {icon}
       </YStack>
       <YStack flex={1}>
-        <SizableText
-          size="$4"
-          fontWeight={isActive ? '600' : '400'}
-          color={isActive ? '$color12' : '$color11'}
-        >
-          {label}
-        </SizableText>
+        <XStack gap="$2" alignItems="center">
+          <SizableText
+            size="$4"
+            fontWeight={isActive ? '600' : '400'}
+            color={isActive ? '$color12' : '$color11'}
+          >
+            {label}
+          </SizableText>
+          {sublabel && (
+            <SizableText size="$2" color="$color10">
+              {sublabel}
+            </SizableText>
+          )}
+        </XStack>
         {description && (
           <SizableText size="$2" color="$color10">
             {description}
@@ -81,45 +101,61 @@ function NavItem({ href, icon, label, description, isActive, disabled }: NavItem
   )
 }
 
-function DashboardNav({ activeSection }: { activeSection?: DashboardSection }) {
+function AppNav({ activeSection }: { activeSection?: AppSection }) {
   const { tier, hasAccess } = useSubscription()
 
-  const navItems: Array<NavItemProps & { section: DashboardSection }> = [
+  const navItems: Array<NavItemProps & { section: AppSection }> = [
     {
       section: 'overview',
-      href: '/dashboard',
+      href: '/',
       icon: <LayoutDashboard size={20} color="$color11" />,
       label: 'Overview',
-      description: 'Your progress at a glance',
+      description: 'Your business at a glance',
     },
     {
-      section: 'training',
-      href: '/dashboard/training',
-      icon: <BookOpen size={20} color="$color11" />,
-      label: 'Training',
-      description: 'The Map - Knowledge & docs',
+      section: 'ceo',
+      href: '/ceo',
+      icon: <Plane size={20} color="$purple10" />,
+      label: 'Focus',
+      sublabel: 'CEO',
+      description: 'The Cockpit - Leadership',
+      theme: 'purple',
     },
     {
-      section: 'techniques',
-      href: '/dashboard/techniques',
-      icon: <Compass size={20} color="$color11" />,
-      label: 'Techniques',
-      description: 'The Method - Playbooks & SOPs',
+      section: 'cmo',
+      href: '/cmo',
+      icon: <Zap size={20} color="$blue10" />,
+      label: 'Users',
+      sublabel: 'CMO',
+      description: 'The Engines - Marketing & Sales',
+      theme: 'blue',
     },
     {
-      section: 'tools',
-      href: '/dashboard/tools',
-      icon: <Cpu size={20} color="$color11" />,
-      label: 'Tools',
-      description: 'The Lever - Templates & code',
+      section: 'cvo',
+      href: '/cvo',
+      icon: <Layers size={20} color="$green10" />,
+      label: 'Value',
+      sublabel: 'CVO',
+      description: 'The Wings - Products & Services',
+      theme: 'green',
     },
     {
-      section: 'connect',
-      href: '/dashboard/connect',
-      icon: <Users size={20} color="$color11" />,
-      label: 'Connect',
-      description: 'The Artist - Expert guidance',
-      disabled: !hasAccess('technician_office_hours'),
+      section: 'coo',
+      href: '/coo',
+      icon: <Cog size={20} color="$orange10" />,
+      label: 'Admin',
+      sublabel: 'COO',
+      description: 'The Body - Operations',
+      theme: 'orange',
+    },
+    {
+      section: 'cfo',
+      href: '/cfo',
+      icon: <Fuel size={20} color="$yellow10" />,
+      label: 'Funds',
+      sublabel: 'CFO',
+      description: 'The Fuel Tanks - Cash Flow',
+      theme: 'yellow',
     },
   ]
 
@@ -183,7 +219,7 @@ function TierBadge() {
   )
 }
 
-export function DashboardLayout({ children, activeSection = 'overview' }: DashboardLayoutProps) {
+export function AppLayout({ children, activeSection = 'overview' }: AppLayoutProps) {
   return (
     <XStack flex={1} backgroundColor="$background">
       {/* Sidebar - Desktop */}
@@ -204,7 +240,7 @@ export function DashboardLayout({ children, activeSection = 'overview' }: Dashbo
         <Separator />
 
         {/* Navigation */}
-        <DashboardNav activeSection={activeSection} />
+        <AppNav activeSection={activeSection} />
 
         <YStack flex={1} />
 
@@ -212,14 +248,14 @@ export function DashboardLayout({ children, activeSection = 'overview' }: Dashbo
         <Separator />
         <YStack gap="$2">
           <NavItem
-            href="/settings"
-            icon={<Cpu size={18} color="$color10" />}
-            label="Settings"
+            href="/team"
+            icon={<UsersRound size={18} color="$color10" />}
+            label="Team"
           />
           <NavItem
-            href="/profile"
-            icon={<Users size={18} color="$color10" />}
-            label="Profile"
+            href="/settings"
+            icon={<Settings size={18} color="$color10" />}
+            label="Settings"
           />
         </YStack>
       </YStack>
@@ -231,3 +267,6 @@ export function DashboardLayout({ children, activeSection = 'overview' }: Dashbo
     </XStack>
   )
 }
+
+// Backwards compatibility alias
+export const DashboardLayout = AppLayout

@@ -1,0 +1,12 @@
+# Robots.txt for Avolve
+# https://avolve.io
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://avolve.io/sitemap.xml
+
+# Disallow admin/api routes
+Disallow: /api/
+Disallow: /dashboard/

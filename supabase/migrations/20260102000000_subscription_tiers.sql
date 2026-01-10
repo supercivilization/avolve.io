@@ -2,6 +2,13 @@
 -- Implements the 5S × 4T Framework with 3 subscription tiers
 
 -- ============================================================================
+-- EXTENSIONS
+-- ============================================================================
+
+-- Enable moddatetime extension for auto-updating timestamps
+create extension if not exists moddatetime with schema extensions;
+
+-- ============================================================================
 -- ENUMS
 -- ============================================================================
 
@@ -68,7 +75,7 @@ create trigger organizations_generate_slug
 -- Auto-update updated_at
 create trigger organizations_updated_at
   before update on organizations
-  for each row execute function moddatetime(updated_at);
+  for each row execute function extensions.moddatetime(updated_at);
 
 -- ============================================================================
 -- ORGANIZATION MEMBERS
@@ -133,7 +140,7 @@ create table subscriptions (
 
 create trigger subscriptions_updated_at
   before update on subscriptions
-  for each row execute function moddatetime(updated_at);
+  for each row execute function extensions.moddatetime(updated_at);
 
 -- ============================================================================
 -- FEATURE ACCESS (defines what each tier can access)

@@ -17,8 +17,7 @@
     "check:type:watch": "yarn check:type -w"
   },
   "dependencies": {
-    "@ai-sdk/anthropic": "^3.0.1",
-    "@ai-sdk/openai": "^3.0.1",
+    "@ai-sdk/google": "^3.0.6",
     "@my/ui": "*",
     "@supabase/auth-helpers-nextjs": "^0.10.0",
     "@supabase/auth-helpers-react": "^0.5.0",

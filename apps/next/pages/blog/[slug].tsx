@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Button,
   H1,
@@ -14,6 +12,8 @@ import {
 import { ArrowLeft, Calendar, Clock } from '@tamagui/lucide-icons'
 import { useRouter } from 'next/router'
 import { useLink } from 'solito/link'
+import type { GetStaticPaths, GetStaticProps } from 'next'
+import Head from 'next/head'
 
 // Sample blog post content - would be fetched from database/CMS
 const blogPosts: Record<string, {
@@ -159,16 +159,29 @@ The Profit First system transforms your relationship with money and ensures your
   },
 }
 
-export default function BlogPostPage() {
+interface BlogPostPageProps {
+  slug: string
+  post: typeof blogPosts[keyof typeof blogPosts] | null
+}
+
+export default function BlogPostPage({ slug, post }: BlogPostPageProps) {
   const router = useRouter()
-  const { slug } = router.query
   const media = useMedia()
 
   // All hooks must be called before any early returns
   const backLink = useLink({ href: '/blog' })
   const signUpLink = useLink({ href: '/sign-up' })
 
-  const post = typeof slug === 'string' ? blogPosts[slug] : null
+  // Handle fallback state
+  if (router.isFallback) {
+    return (
+      <ScrollView flex={1} backgroundColor="$background">
+        <YStack padding="$8" alignItems="center">
+          <Paragraph>Loading...</Paragraph>
+        </YStack>
+      </ScrollView>
+    )
+  }
 
   if (!post) {
     return (
@@ -184,10 +197,17 @@ export default function BlogPostPage() {
   }
 
   return (
-    <ScrollView flex={1} backgroundColor="$background">
-      <YStack>
-        {/* Header */}
-        <YStack
+    <>
+      <Head>
+        <title>{post.title} | Avolve Blog</title>
+        <meta name="description" content={post.content.substring(0, 160)} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:type" content="article" />
+      </Head>
+      <ScrollView flex={1} backgroundColor="$background">
+        <YStack>
+          {/* Header */}
+          <YStack
           paddingVertical="$8"
           paddingHorizontal="$4"
           alignItems="center"
@@ -302,5 +322,38 @@ export default function BlogPostPage() {
         </YStack>
       </YStack>
     </ScrollView>
+    </>
   )
+}
+
+// Generate static paths for all blog posts
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = Object.keys(blogPosts).map((slug) => ({
+    params: { slug },
+  }))
+
+  return {
+    paths,
+    fallback: true, // Enable ISR for new posts
+  }
+}
+
+// ISR: Regenerate every 6 hours
+export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params }) => {
+  const slug = params?.slug as string
+  const post = blogPosts[slug] || null
+
+  if (!post) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      slug,
+      post,
+    },
+    revalidate: 21600, // Revalidate every 6 hours
+  }
 }

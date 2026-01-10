@@ -1,4 +1,83 @@
 {
   "installCommand": "yarn set version 4.1.0 && yarn install",
-  "buildCommand": "yarn build:ci"
+  "buildCommand": "yarn build:ci",
+  "framework": "nextjs",
+  "firewall": {
+    "rules": [
+      {
+        "name": "Brain Chat Rate Limit",
+        "action": "rate_limit",
+        "paths": ["/api/brain/chat"],
+        "rateLimits": {
+          "requests": 20,
+          "window": "1m"
+        }
+      },
+      {
+        "name": "Brain Search Rate Limit",
+        "action": "rate_limit",
+        "paths": ["/api/brain/search"],
+        "rateLimits": {
+          "requests": 60,
+          "window": "1m"
+        }
+      },
+      {
+        "name": "Brain Sources Rate Limit",
+        "action": "rate_limit",
+        "paths": ["/api/brain/sources"],
+        "rateLimits": {
+          "requests": 30,
+          "window": "1m"
+        }
+      },
+      {
+        "name": "Stripe API Rate Limit",
+        "action": "rate_limit",
+        "paths": ["/api/stripe/*"],
+        "rateLimits": {
+          "requests": 10,
+          "window": "1m"
+        }
+      },
+      {
+        "name": "Auth API Rate Limit",
+        "action": "rate_limit",
+        "paths": ["/api/auth/*"],
+        "rateLimits": {
+          "requests": 20,
+          "window": "1m"
+        }
+      }
+    ]
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ],
+  "rewrites": []
 }

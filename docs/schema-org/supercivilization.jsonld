@@ -1,0 +1,94 @@
+{
+  "@context": "https://schema.org",
+  "@type": ["Consortium", "Cooperative"],
+  "@id": "https://supercivilization.xyz",
+  "name": "Supercivilization",
+  "alternateName": "The Supercivilization",
+  "description": "The ecosystem for thriving forever - containing individuals, collectives, and their ventures. A network of super-entrepreneurs teamed with super-technology.",
+  "slogan": "Thrive forever",
+  "url": "https://supercivilization.xyz",
+  "logo": "https://supercivilization.xyz/logo.png",
+  "image": "https://supercivilization.xyz/og-image.png",
+  "foundingDate": "2024",
+  "founder": {
+    "@type": "Person",
+    "@id": "https://joshuaseymour.com/#person",
+    "name": "Joshua Seymour"
+  },
+  "ethicsPolicy": "https://supercivilization.xyz/manifesto",
+  "publishingPrinciples": "https://supercivilization.xyz/values",
+  "sameAs": [
+    "https://twitter.com/supercivilization",
+    "https://linkedin.com/company/supercivilization",
+    "https://github.com/supercivilization"
+  ],
+  "subOrganization": [
+    {
+      "@type": "Organization",
+      "@id": "https://superachievers.xyz",
+      "name": "Superachievers"
+    }
+  ],
+  "owns": {
+    "@type": "SoftwareApplication",
+    "@id": "https://avolve.io",
+    "name": "Avolve"
+  },
+  "hasMemberProgram": {
+    "@type": "MemberProgram",
+    "@id": "https://supercivilization.xyz/#membership",
+    "name": "Superachiever",
+    "description": "Become a super-entrepreneur teamed with super-technology",
+    "url": "https://superachiever.xyz",
+    "hostingOrganization": {
+      "@id": "https://supercivilization.xyz"
+    },
+    "hasTiers": [
+      {
+        "@type": "MemberProgramTier",
+        "name": "Builder",
+        "description": "Individual Superachiever building their success puzzle",
+        "hasTierBenefit": [
+          "Core education content",
+          "Community access",
+          "AI assistant (100 msg/day)",
+          "3 active projects"
+        ]
+      },
+      {
+        "@type": "MemberProgramTier",
+        "name": "Operator",
+        "description": "Established Superachiever scaling operations",
+        "hasTierBenefit": [
+          "Advanced education and certifications",
+          "Team workspace (10 seats)",
+          "AI assistant (500 msg/day)",
+          "10 active projects",
+          "Monthly office hours",
+          "Quarterly group reviews"
+        ]
+      },
+      {
+        "@type": "MemberProgramTier",
+        "name": "Partner",
+        "description": "Superachiever organization with full ecosystem access",
+        "hasTierBenefit": [
+          "Custom training and 1-on-1 sessions",
+          "Unlimited team seats",
+          "Unlimited AI access",
+          "Dedicated technician partnership",
+          "Weekly calls and Slack access",
+          "White-glove support"
+        ]
+      }
+    ]
+  },
+  "knowsAbout": [
+    "Entrepreneurship",
+    "AI-Native Development",
+    "Business Strategy",
+    "Network States",
+    "Super-technology",
+    "Personal Development"
+  ]
+}

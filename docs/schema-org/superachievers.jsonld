@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://superachievers.xyz",
+  "name": "Superachievers",
+  "alternateName": "The Superachievers Collective",
+  "description": "The collective of individual Superachievers - super-entrepreneurs teamed with super-technology. Contains all members and their sub-organizations.",
+  "slogan": "Unify faster",
+  "url": "https://superachievers.xyz",
+  "logo": "https://superachievers.xyz/logo.png",
+  "image": "https://superachievers.xyz/og-image.png",
+  "parentOrganization": {
+    "@type": ["Consortium", "Cooperative"],
+    "@id": "https://supercivilization.xyz",
+    "name": "Supercivilization"
+  },
+  "memberOf": {
+    "@id": "https://supercivilization.xyz"
+  },
+  "sameAs": [
+    "https://twitter.com/superachievers",
+    "https://linkedin.com/company/superachievers"
+  ],
+  "mainEntityOfPage": {
+    "@type": "CollectionPage",
+    "@id": "https://superachievers.xyz/directory",
+    "name": "Superachievers Directory",
+    "description": "Browse the collective of Superachievers and their ventures"
+  },
+  "hasPart": {
+    "@type": "ItemList",
+    "name": "Superachiever Profiles",
+    "description": "Individual Superachiever profiles in the collective",
+    "itemListElement": []
+  }
+}

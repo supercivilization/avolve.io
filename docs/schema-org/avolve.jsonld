@@ -1,0 +1,175 @@
+{
+  "@context": "https://schema.org",
+  "@type": ["SoftwareApplication", "WebApplication"],
+  "@id": "https://avolve.io",
+  "name": "Avolve",
+  "alternateName": "Avolve Platform",
+  "description": "AI-powered platform for super-entrepreneurs to build, track, and scale their success. The official software application of the Supercivilization ecosystem.",
+  "url": "https://avolve.io",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": [
+    "Productivity",
+    "Education",
+    "Social Networking",
+    "Finance",
+    "Lifestyle"
+  ],
+  "operatingSystem": "Web, iOS, Android",
+  "browserRequirements": "Chrome 111+, Firefox 111+, Safari 16.4+, Edge 111+",
+  "softwareVersion": "1.0.0",
+  "datePublished": "2024",
+  "inLanguage": "en",
+  "isAccessibleForFree": false,
+  "creator": {
+    "@type": "Person",
+    "@id": "https://joshuaseymour.com/#person",
+    "name": "Joshua Seymour"
+  },
+  "publisher": {
+    "@type": ["Consortium", "Cooperative"],
+    "@id": "https://supercivilization.xyz",
+    "name": "Supercivilization"
+  },
+  "provider": {
+    "@id": "https://supercivilization.xyz"
+  },
+  "logo": "https://avolve.io/logo.png",
+  "image": "https://avolve.io/og-image.png",
+  "screenshot": [
+    "https://avolve.io/screenshots/dashboard.png",
+    "https://avolve.io/screenshots/brain.png",
+    "https://avolve.io/screenshots/community.png"
+  ],
+  "featureList": [
+    "AI-powered business assistant (Project Brain)",
+    "Personal Success Puzzle tracking",
+    "Business Success Puzzle management",
+    "Team collaboration workspaces",
+    "Financial tracking and forecasting",
+    "Education courses and certifications",
+    "Community and networking",
+    "Goal and habit tracking",
+    "Project management",
+    "Integration with external tools"
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Builder",
+      "description": "Individual Superachiever building their success puzzle",
+      "price": "28",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "28",
+        "priceCurrency": "USD",
+        "billingDuration": "P1M",
+        "unitText": "month"
+      },
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "user"
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://avolve.io/pricing#builder"
+    },
+    {
+      "@type": "Offer",
+      "name": "Builder (Annual)",
+      "description": "Individual Superachiever - annual billing",
+      "price": "288",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "288",
+        "priceCurrency": "USD",
+        "billingDuration": "P1Y",
+        "unitText": "year"
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://avolve.io/pricing#builder-annual"
+    },
+    {
+      "@type": "Offer",
+      "name": "Operator",
+      "description": "Established Superachiever scaling operations",
+      "price": "288",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "288",
+        "priceCurrency": "USD",
+        "billingDuration": "P1M",
+        "unitText": "month"
+      },
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "maxValue": 10,
+        "unitText": "users"
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://avolve.io/pricing#operator"
+    },
+    {
+      "@type": "Offer",
+      "name": "Operator (Annual)",
+      "description": "Established Superachiever - annual billing",
+      "price": "2888",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "2888",
+        "priceCurrency": "USD",
+        "billingDuration": "P1Y",
+        "unitText": "year"
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://avolve.io/pricing#operator-annual"
+    },
+    {
+      "@type": "Offer",
+      "name": "Partner",
+      "description": "Superachiever organization with full ecosystem access",
+      "price": "2888",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "2888",
+        "priceCurrency": "USD",
+        "billingDuration": "P1M",
+        "unitText": "month"
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://avolve.io/pricing#partner"
+    },
+    {
+      "@type": "Offer",
+      "name": "Partner (Annual)",
+      "description": "Superachiever organization - annual billing",
+      "price": "22888",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "22888",
+        "priceCurrency": "USD",
+        "billingDuration": "P1Y",
+        "unitText": "year"
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://avolve.io/pricing#partner-annual"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "100",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "maintainer": {
+    "@id": "https://supercivilization.xyz"
+  },
+  "releaseNotes": "https://avolve.io/changelog",
+  "softwareHelp": "https://avolve.io/help"
+}

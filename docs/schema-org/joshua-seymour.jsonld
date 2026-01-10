@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://joshuaseymour.com/#person",
+  "name": "Joshua Seymour",
+  "givenName": "Joshua",
+  "familyName": "Seymour",
+  "url": "https://joshuaseymour.com",
+  "image": "https://joshuaseymour.com/headshot.jpg",
+  "description": "Founder of Supercivilization. Building the ecosystem for super-entrepreneurs teamed with super-technology.",
+  "jobTitle": "Founder",
+  "sameAs": [
+    "https://twitter.com/joshuaseymour",
+    "https://linkedin.com/in/joshuaseymour",
+    "https://github.com/joshuaseymour"
+  ],
+  "knowsAbout": [
+    "AI-Native Development",
+    "Entrepreneurship",
+    "Network States",
+    "Web Development",
+    "Universal React",
+    "Business Strategy",
+    "Personal Development"
+  ],
+  "founder": {
+    "@type": ["Consortium", "Cooperative"],
+    "@id": "https://supercivilization.xyz",
+    "name": "Supercivilization"
+  },
+  "creator": {
+    "@type": ["SoftwareApplication", "WebApplication"],
+    "@id": "https://avolve.io",
+    "name": "Avolve"
+  },
+  "memberOf": [
+    {
+      "@type": "ProgramMembership",
+      "programName": "Superachiever",
+      "hostingOrganization": {
+        "@id": "https://supercivilization.xyz"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://superachievers.xyz",
+      "name": "Superachievers"
+    }
+  ],
+  "worksFor": {
+    "@id": "https://supercivilization.xyz"
+  },
+  "affiliation": {
+    "@id": "https://supercivilization.xyz"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://joshuaseymour.com",
+    "name": "Joshua Seymour - Founder of Supercivilization",
+    "description": "Personal website of Joshua Seymour, founder of Supercivilization and creator of Avolve"
+  }
+}
