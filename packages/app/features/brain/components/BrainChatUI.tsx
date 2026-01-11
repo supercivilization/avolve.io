@@ -27,6 +27,7 @@ import { useBrainChat, useRealtimeChat } from '../hooks'
 import type { BrainMessage, CSuiteDomain } from '../types'
 import { DOMAIN_CONFIG } from '../types'
 import { PresenceAvatars, TypingIndicatorText } from './PresenceAvatars'
+import { StreamingMarkdown } from './StreamingMarkdown'
 
 // Conditionally import FlashList for native only
 let FlashList: any = null
@@ -155,9 +156,13 @@ function MessageBubble({ message, isLast, domain, reducedMotion }: MessageBubble
           borderTopLeftRadius={isUser ? '$4' : '$1'}
           borderTopRightRadius={isUser ? '$1' : '$4'}
         >
-          <Paragraph size="$4" color="$color12">
-            {message.content}
-          </Paragraph>
+          {isUser ? (
+            <Paragraph size="$4" color="$color12">
+              {message.content}
+            </Paragraph>
+          ) : (
+            <StreamingMarkdown>{message.content}</StreamingMarkdown>
+          )}
         </Card>
       </XStack>
 
@@ -217,10 +222,7 @@ function StreamingBubble({ content, domain, reducedMotion }: StreamingBubbleProp
           padding="$3"
           borderTopLeftRadius="$1"
         >
-          <Paragraph size="$4" color="$color12">
-            {content}
-            <SizableText color="$color8">|</SizableText>
-          </Paragraph>
+          <StreamingMarkdown isStreaming>{content}</StreamingMarkdown>
         </Card>
       </XStack>
     </AnimatedYStack>
