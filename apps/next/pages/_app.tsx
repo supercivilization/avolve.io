@@ -11,7 +11,6 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { NextPage } from 'next'
 import Head from 'next/head'
-import 'raf/polyfill'
 import { ReactElement, ReactNode } from 'react'
 import type { SolitoAppProps } from 'solito'
 
@@ -34,8 +33,8 @@ function MyApp({
   return (
     <>
       <Head>
-        <title>Tamagui Universal App</title>
-        <meta name="description" content="Tamagui Universal Starter" />
+        <title>Avolve</title>
+        <meta name="description" content="Business management for solopreneurs" />
         <link rel="icon" href="/favicon.svg" />
         <link rel="stylesheet" href="/tamagui.css" />
       </Head>
