@@ -19,15 +19,18 @@ import type { CSuiteDomain } from '../types'
 import { DOMAIN_CONFIG, ACCEPTED_FILE_TYPES, MAX_FILE_SIZE_MB } from '../types'
 
 interface FileUploadFormProps {
-  domain: CSuiteDomain
+  domain?: CSuiteDomain
   onSuccess: () => void
   onCancel: () => void
 }
 
 type UploadState = 'idle' | 'uploading' | 'processing' | 'success' | 'error'
 
+const DEFAULT_COLOR = 'blue'
+
 export function FileUploadForm({ domain, onSuccess, onCancel }: FileUploadFormProps) {
-  const config = DOMAIN_CONFIG[domain]
+  const config = domain ? DOMAIN_CONFIG[domain] : null
+  const themeColor = config?.color || DEFAULT_COLOR
   const supabase = useSupabase()
   const createSource = useCreateSource()
   const processSource = useProcessSource()
@@ -82,7 +85,7 @@ export function FileUploadForm({ domain, onSuccess, onCancel }: FileUploadFormPr
         source_type: 'file',
         title: title.trim(),
         description: description.trim() || undefined,
-        domains: [domain],
+        domains: domain ? [domain] : [],
         metadata: {
           original_filename: file.name,
           mime_type: file.type,
@@ -176,10 +179,10 @@ export function FileUploadForm({ domain, onSuccess, onCancel }: FileUploadFormPr
         borderWidth={2}
         borderStyle="dashed"
         // @ts-expect-error - Dynamic color tokens work at runtime but TS can't verify
-        borderColor={file ? `$${config.color}8` : '$color6'}
+        borderColor={file ? `$${themeColor}8` : '$color6'}
         borderRadius="$4"
         // @ts-expect-error - Dynamic color tokens work at runtime but TS can't verify
-        backgroundColor={file ? `$${config.color}2` : '$color2'}
+        backgroundColor={file ? `$${themeColor}2` : '$color2'}
         alignItems="center"
         justifyContent="center"
         gap="$3"
@@ -211,9 +214,9 @@ export function FileUploadForm({ domain, onSuccess, onCancel }: FileUploadFormPr
         {file && uploadState === 'idle' && (
           <XStack gap="$2" alignItems="center">
             {/* @ts-expect-error - Dynamic color tokens */}
-            <FileText size={16} color={`$${config.color}10`} />
+            <FileText size={16} color={`$${themeColor}10`} />
             {/* @ts-expect-error - Dynamic color tokens */}
-            <SizableText size="$3" color={`$${config.color}11`} fontWeight="500">
+            <SizableText size="$3" color={`$${themeColor}11`} fontWeight="500">
               {file.name}
             </SizableText>
             <SizableText size="$2" color="$color9">
@@ -225,7 +228,7 @@ export function FileUploadForm({ domain, onSuccess, onCancel }: FileUploadFormPr
         {isProcessing && (
           <Progress value={uploadProgress} width="80%">
             {/* @ts-expect-error - Dynamic color tokens */}
-            <Progress.Indicator animation="bouncy" backgroundColor={`$${config.color}10`} />
+            <Progress.Indicator animation="bouncy" backgroundColor={`$${themeColor}10`} />
           </Progress>
         )}
       </YStack>
@@ -282,7 +285,7 @@ export function FileUploadForm({ domain, onSuccess, onCancel }: FileUploadFormPr
           Cancel
         </Button>
         <Button
-          theme={config.color as any}
+          theme={themeColor as any}
           onPress={handleSubmit}
           disabled={!file || isProcessing || uploadState === 'success'}
           icon={isProcessing ? <Loader size={16} /> : <Upload size={16} />}

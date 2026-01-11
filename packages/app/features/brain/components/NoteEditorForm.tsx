@@ -17,15 +17,18 @@ import type { CSuiteDomain } from '../types'
 import { DOMAIN_CONFIG } from '../types'
 
 interface NoteEditorFormProps {
-  domain: CSuiteDomain
+  domain?: CSuiteDomain
   onSuccess: () => void
   onCancel: () => void
 }
 
 type SubmitState = 'idle' | 'creating' | 'processing' | 'success' | 'error'
 
+const DEFAULT_COLOR = 'blue'
+
 export function NoteEditorForm({ domain, onSuccess, onCancel }: NoteEditorFormProps) {
-  const config = DOMAIN_CONFIG[domain]
+  const config = domain ? DOMAIN_CONFIG[domain] : null
+  const themeColor = config?.color || DEFAULT_COLOR
   const createSource = useCreateSource()
   const processSource = useProcessSource()
 
@@ -54,7 +57,7 @@ export function NoteEditorForm({ domain, onSuccess, onCancel }: NoteEditorFormPr
         source_type: 'note',
         title: title.trim(),
         content: content.trim(),
-        domains: [domain],
+        domains: domain ? [domain] : [],
         metadata: {
           word_count: content.trim().split(/\s+/).length,
           character_count: content.trim().length,
@@ -86,7 +89,7 @@ export function NoteEditorForm({ domain, onSuccess, onCancel }: NoteEditorFormPr
         <XStack
           padding="$4"
           // @ts-expect-error - Dynamic color tokens work at runtime
-          backgroundColor={`$${config.color}2`}
+          backgroundColor={`$${themeColor}2`}
           borderRadius="$4"
           gap="$3"
           alignItems="center"
@@ -96,12 +99,12 @@ export function NoteEditorForm({ domain, onSuccess, onCancel }: NoteEditorFormPr
             height={44}
             borderRadius="$3"
             // @ts-expect-error - Dynamic color tokens work at runtime
-            backgroundColor={`$${config.color}4`}
+            backgroundColor={`$${themeColor}4`}
             alignItems="center"
             justifyContent="center"
           >
             {/* @ts-expect-error - Dynamic color tokens */}
-            <StickyNote size={20} color={`$${config.color}10`} />
+            <StickyNote size={20} color={`$${themeColor}10`} />
           </YStack>
           <YStack flex={1}>
             <SizableText size="$3" fontWeight="500" numberOfLines={1}>
@@ -195,7 +198,7 @@ export function NoteEditorForm({ domain, onSuccess, onCancel }: NoteEditorFormPr
           Cancel
         </Button>
         <Button
-          theme={config.color as any}
+          theme={themeColor as any}
           onPress={handleSubmit}
           disabled={isProcessing || submitState === 'success'}
           icon={isProcessing ? <Loader size={16} /> : <StickyNote size={16} />}

@@ -21,6 +21,7 @@
     "@my/ui": "*",
     "@supabase/auth-helpers-nextjs": "^0.10.0",
     "@supabase/auth-helpers-react": "^0.5.0",
+    "@supabase/ssr": "^0.8.0",
     "@supabase/supabase-js": "^2.87.1",
     "@tamagui/next-theme": "^1.141.5",
     "@tamagui/react-native-svg": "^1.141.5",

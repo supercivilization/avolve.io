@@ -17,15 +17,18 @@ import type { CSuiteDomain } from '../types'
 import { DOMAIN_CONFIG } from '../types'
 
 interface UrlInputFormProps {
-  domain: CSuiteDomain
+  domain?: CSuiteDomain
   onSuccess: () => void
   onCancel: () => void
 }
 
 type SubmitState = 'idle' | 'validating' | 'creating' | 'processing' | 'success' | 'error'
 
+const DEFAULT_COLOR = 'blue'
+
 export function UrlInputForm({ domain, onSuccess, onCancel }: UrlInputFormProps) {
-  const config = DOMAIN_CONFIG[domain]
+  const config = domain ? DOMAIN_CONFIG[domain] : null
+  const themeColor = config?.color || DEFAULT_COLOR
   const createSource = useCreateSource()
   const processSource = useProcessSource()
 
@@ -94,7 +97,7 @@ export function UrlInputForm({ domain, onSuccess, onCancel }: UrlInputFormProps)
         title: title.trim(),
         description: description.trim() || undefined,
         url: url.trim(),
-        domains: [domain],
+        domains: domain ? [domain] : [],
         metadata: {
           original_url: url.trim(),
         },
@@ -124,7 +127,7 @@ export function UrlInputForm({ domain, onSuccess, onCancel }: UrlInputFormProps)
         <XStack
           padding="$4"
           // @ts-expect-error - Dynamic color tokens work at runtime
-          backgroundColor={`$${config.color}2`}
+          backgroundColor={`$${themeColor}2`}
           borderRadius="$4"
           gap="$3"
           alignItems="center"
@@ -134,12 +137,12 @@ export function UrlInputForm({ domain, onSuccess, onCancel }: UrlInputFormProps)
             height={44}
             borderRadius="$3"
             // @ts-expect-error - Dynamic color tokens work at runtime
-            backgroundColor={`$${config.color}4`}
+            backgroundColor={`$${themeColor}4`}
             alignItems="center"
             justifyContent="center"
           >
             {/* @ts-expect-error - Dynamic color tokens */}
-            <Globe size={20} color={`$${config.color}10`} />
+            <Globe size={20} color={`$${themeColor}10`} />
           </YStack>
           <YStack flex={1}>
             <SizableText size="$3" fontWeight="500" numberOfLines={1}>
@@ -244,7 +247,7 @@ export function UrlInputForm({ domain, onSuccess, onCancel }: UrlInputFormProps)
           Cancel
         </Button>
         <Button
-          theme={config.color as any}
+          theme={themeColor as any}
           onPress={handleSubmit}
           disabled={isProcessing || submitState === 'success'}
           icon={isProcessing ? <Loader size={16} /> : <Link2 size={16} />}

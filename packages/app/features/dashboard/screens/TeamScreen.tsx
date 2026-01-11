@@ -22,6 +22,7 @@ import { useState } from 'react'
 
 import { useSubscription } from 'app/utils/subscription'
 import { FeatureGate } from 'app/utils/subscription/FeatureGate'
+import { useTeam, type TeamMember } from '../hooks/useTeam'
 
 function TeamSkeleton() {
   return (
@@ -46,26 +47,17 @@ function TeamSkeleton() {
   )
 }
 
-interface TeamMember {
-  id: string
-  email: string
-  name?: string
-  role: 'owner' | 'admin' | 'member'
-  joinedAt: string
-}
-
-// Mock data - replace with real data from Supabase
-const mockMembers: TeamMember[] = [
-  {
-    id: '1',
-    email: 'owner@example.com',
-    name: 'Team Owner',
-    role: 'owner',
-    joinedAt: '2024-01-01',
-  },
-]
-
-function MemberRow({ member, isOwner }: { member: TeamMember; isOwner: boolean }) {
+function MemberRow({
+  member,
+  isOwner,
+  onRemove,
+  isRemoving,
+}: {
+  member: TeamMember
+  isOwner: boolean
+  onRemove?: (id: string) => void
+  isRemoving?: boolean
+}) {
   const roleColors = {
     owner: '$purple10' as const,
     admin: '$blue10' as const,
@@ -82,11 +74,15 @@ function MemberRow({ member, isOwner }: { member: TeamMember; isOwner: boolean }
     >
       <XStack gap="$3" alignItems="center" flex={1}>
         <Avatar circular size="$4">
-          <Avatar.Fallback backgroundColor="$color5" alignItems="center" justifyContent="center">
-            <SizableText size="$3" fontWeight="600">
-              {member.name?.charAt(0) || member.email.charAt(0).toUpperCase()}
-            </SizableText>
-          </Avatar.Fallback>
+          {member.avatarUrl ? (
+            <Avatar.Image src={member.avatarUrl} />
+          ) : (
+            <Avatar.Fallback backgroundColor="$color5" alignItems="center" justifyContent="center">
+              <SizableText size="$3" fontWeight="600">
+                {member.name?.charAt(0) || member.email.charAt(0).toUpperCase()}
+              </SizableText>
+            </Avatar.Fallback>
+          )}
         </Avatar>
         <YStack>
           <SizableText size="$4" fontWeight="500">
@@ -110,8 +106,15 @@ function MemberRow({ member, isOwner }: { member: TeamMember; isOwner: boolean }
           </SizableText>
         </XStack>
 
-        {isOwner && member.role !== 'owner' && (
-          <Button size="$2" chromeless circular icon={<Trash2 size={14} color="$red10" />} />
+        {isOwner && member.role !== 'owner' && onRemove && (
+          <Button
+            size="$2"
+            chromeless
+            circular
+            disabled={isRemoving}
+            onPress={() => onRemove(member.id)}
+            icon={isRemoving ? <Spinner size="small" /> : <Trash2 size={14} color="$red10" />}
+          />
         )}
       </XStack>
     </XStack>
@@ -192,32 +195,47 @@ function TeamUpgradePrompt() {
 }
 
 export function TeamScreen() {
-  const { tier, tierConfig, hasAccess, isLoading } = useSubscription()
-  const [members, setMembers] = useState<TeamMember[]>(mockMembers)
+  const { hasAccess, isLoading: isLoadingSubscription } = useSubscription()
+  const {
+    organization,
+    members,
+    isLoading: isLoadingTeam,
+    isOwner,
+    canInvite,
+    seatLimit,
+    seatsUsed,
+    inviteMember,
+    removeMember,
+    isInviting,
+    isRemoving,
+    inviteError,
+  } = useTeam()
 
   // Check if user has team access (Collective PRO or higher)
   const hasTeamAccess = hasAccess('team_workspace')
+  const isLoading = isLoadingSubscription || isLoadingTeam
 
   if (isLoading) {
     return <TeamSkeleton />
   }
-  const seatsLimit = tierConfig?.limits?.seats
-  const maxSeats = seatsLimit === 'unlimited' ? -1 : (seatsLimit || 1)
-  const usedSeats = members.length
+
+  const maxSeats = seatLimit === 0 ? -1 : seatLimit
+  const usedSeats = seatsUsed
 
   const handleInvite = async (email: string) => {
-    // TODO: Implement actual invite logic with Supabase
-    console.log('Inviting:', email)
-    // Add mock member for now
-    setMembers([
-      ...members,
-      {
-        id: Date.now().toString(),
-        email,
-        role: 'member',
-        joinedAt: new Date().toISOString(),
-      },
-    ])
+    try {
+      await inviteMember({ email, role: 'member' })
+    } catch (error) {
+      console.error('Failed to invite:', error)
+    }
+  }
+
+  const handleRemove = async (memberId: string) => {
+    try {
+      await removeMember(memberId)
+    } catch (error) {
+      console.error('Failed to remove member:', error)
+    }
   }
 
   if (!hasTeamAccess) {
@@ -309,7 +327,13 @@ export function TeamScreen() {
           <Separator />
           <YStack gap="$1">
             {members.map((member) => (
-              <MemberRow key={member.id} member={member} isOwner={true} />
+              <MemberRow
+                key={member.id}
+                member={member}
+                isOwner={isOwner}
+                onRemove={handleRemove}
+                isRemoving={isRemoving}
+              />
             ))}
           </YStack>
         </YStack>

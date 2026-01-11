@@ -21,13 +21,13 @@ type AddSourceType = 'file' | 'url' | 'note' | null
 interface AddSourceSheetProps {
   open: boolean
   onOpenChange: (open: boolean) => void
-  domain: CSuiteDomain
+  domain?: CSuiteDomain
   onSuccess?: () => void
 }
 
 export function AddSourceSheet({ open, onOpenChange, domain, onSuccess }: AddSourceSheetProps) {
   const [sourceType, setSourceType] = useState<AddSourceType>(null)
-  const config = DOMAIN_CONFIG[domain]
+  const config = domain ? DOMAIN_CONFIG[domain] : null
 
   const handleClose = () => {
     setSourceType(null)
@@ -77,7 +77,7 @@ export function AddSourceSheet({ open, onOpenChange, domain, onSuccess }: AddSou
                 {sourceType === 'file' && 'Upload File'}
                 {sourceType === 'url' && 'Add URL'}
                 {sourceType === 'note' && 'Create Note'}
-                {!sourceType && `Add to ${config.sublabel} Knowledge`}
+                {!sourceType && (config ? `Add to ${config.sublabel} Knowledge` : 'Add Knowledge Source')}
               </H3>
             </XStack>
             <Button

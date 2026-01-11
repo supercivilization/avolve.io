@@ -2,22 +2,71 @@
 // Tier-based feature gating using Vercel Flags SDK
 
 import { flag, dedupe } from 'flags/next'
+import { cookies } from 'next/headers'
+import { createServerClient } from '@supabase/ssr'
+import type { Database } from '@my/supabase/types'
 
-// Types for subscription tiers
-type SubscriptionTier = 'free' | 'starter' | 'pro' | 'enterprise'
+// Subscription tiers from database enum
+type SubscriptionTier = Database['public']['Enums']['subscription_tier'] | null
+
+// Map database tiers to feature levels
+// individual_vip = starter, collective_pro = pro, ecosystem_ceo = enterprise
+const tierLevel = (tier: SubscriptionTier): 'free' | 'starter' | 'pro' | 'enterprise' => {
+  if (!tier) return 'free'
+  switch (tier) {
+    case 'individual_vip':
+      return 'starter'
+    case 'collective_pro':
+      return 'pro'
+    case 'ecosystem_ceo':
+      return 'enterprise'
+    default:
+      return 'free'
+  }
+}
 
 interface FlagContext {
   user?: {
     id: string
-    tier: SubscriptionTier
+    tier: ReturnType<typeof tierLevel>
   }
 }
 
 // Dedupe function to get user context once per request
 const getUser = dedupe(async (): Promise<FlagContext['user'] | undefined> => {
-  // In real implementation, this would get the user from session/auth
-  // For now, we return undefined (will use defaults)
-  return undefined
+  try {
+    const cookieStore = await cookies()
+
+    const supabase = createServerClient<Database>(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+      {
+        cookies: {
+          getAll() {
+            return cookieStore.getAll()
+          },
+        },
+      }
+    )
+
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return undefined
+
+    // Get user's tier from profile
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('tier')
+      .eq('id', user.id)
+      .single()
+
+    return {
+      id: user.id,
+      tier: tierLevel(profile?.tier ?? null),
+    }
+  } catch {
+    // If cookies aren't available (e.g., during build), return undefined
+    return undefined
+  }
 })
 
 // =============================================================================
@@ -219,28 +268,33 @@ export const workflowAutomationEnabled = flag<boolean>({
 // PRECOMPUTED FLAGS (for server components)
 // =============================================================================
 
-export async function getFeatureFlags(userTier?: SubscriptionTier) {
-  // Mock user for flag evaluation
-  const mockUser = userTier ? { id: 'temp', tier: userTier } : undefined
+type FeatureTier = 'free' | 'starter' | 'pro' | 'enterprise'
+
+export async function getFeatureFlags(overrideTier?: FeatureTier) {
+  // Use real user context, or override for testing
+  const user = overrideTier
+    ? { id: 'override', tier: overrideTier }
+    : await getUser()
 
   return {
     brain: {
-      dailyLimit: mockUser ? await brainChatDailyLimit() : 10,
-      sourcesLimit: mockUser ? await brainSourcesLimit() : 5,
-      advancedRag: mockUser ? await advancedRagEnabled() : false,
+      dailyLimit: user ? await brainChatDailyLimit() : 10,
+      sourcesLimit: user ? await brainSourcesLimit() : 5,
+      advancedRag: user ? await advancedRagEnabled() : false,
     },
     dashboard: {
-      realtime: mockUser ? await realtimeEnabled() : false,
-      teamMembersLimit: mockUser ? await teamMembersLimit() : 0,
-      advancedAnalytics: mockUser ? await advancedAnalyticsEnabled() : false,
+      realtime: user ? await realtimeEnabled() : false,
+      teamMembersLimit: user ? await teamMembersLimit() : 0,
+      advancedAnalytics: user ? await advancedAnalyticsEnabled() : false,
     },
     export: {
-      pdf: mockUser ? await exportPdfEnabled() : false,
-      api: mockUser ? await apiAccessEnabled() : false,
+      pdf: user ? await exportPdfEnabled() : false,
+      api: user ? await apiAccessEnabled() : false,
     },
     experimental: {
       models: await experimentalModelsEnabled(),
       workflows: await workflowAutomationEnabled(),
     },
+    user: user ? { id: user.id, tier: user.tier } : null,
   }
 }
