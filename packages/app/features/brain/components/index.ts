@@ -6,4 +6,4 @@ export { UrlInputForm } from './UrlInputForm'
 export { NoteEditorForm } from './NoteEditorForm'
 export { BrainChatUI } from './BrainChatUI'
 export { PresenceAvatars, TypingIndicatorText } from './PresenceAvatars'
-export { StreamingMarkdown } from './StreamingMarkdown'
+// StreamingMarkdown now exported from @my/ui as Markdown

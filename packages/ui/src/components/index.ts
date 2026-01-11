@@ -18,6 +18,7 @@ export * from './Shake'
 export * from './SubmitButton'
 export * from './TodoCard'
 export * from './LoadingOverlay'
+export * from './Markdown'
 export * from './PricingTiers'
 export * from './Skeleton'
 
