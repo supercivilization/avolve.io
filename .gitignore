@@ -60,3 +60,4 @@ thumbs.db
 
 # Turborepo
 .turbo
+.env*.local

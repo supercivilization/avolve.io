@@ -1,7 +1,8 @@
 {
-  "installCommand": "yarn set version 4.1.0 && yarn install",
-  "buildCommand": "yarn build:ci",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
+  "installCommand": "corepack enable && yarn install",
+  "buildCommand": "yarn workspace next-app next build --webpack",
   "firewall": {
     "rules": [
       {
@@ -86,6 +87,5 @@
         }
       ]
     }
-  ],
-  "rewrites": []
+  ]
 }
