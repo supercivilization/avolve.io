@@ -1,6 +1,6 @@
-import { Avatar, Paragraph, Settings, XStack, YStack, getTokens, useWindowDimensions } from '@my/ui'
+import { Avatar, Paragraph, Settings, XStack, YStack, getTokens, useWindowDimensions, SizableText } from '@my/ui'
 import { DrawerContentScrollView } from '@react-navigation/drawer'
-import { Box, Cog, Milestone, ShoppingCart, User, Users } from '@tamagui/lucide-icons'
+import { Brain, Cog, LayoutDashboard, Plane, User } from '@tamagui/lucide-icons'
 import { useSafeAreaInsets } from 'app/utils/useSafeAreaInsets'
 import { useUser } from 'app/utils/useUser'
 import { SolitoImage } from 'solito/image'
@@ -27,19 +27,16 @@ export function ProfileScreen(props) {
           <Settings.Items>
             <Settings.Group>
               <Settings.Item icon={User} {...useLink({ href: '/profile/edit' })} accentTheme="pink">
-                Edit profile
+                Edit Profile
               </Settings.Item>
-              <Settings.Item icon={Box} accentTheme="green">
-                My Items
+              <Settings.Item icon={LayoutDashboard} {...useLink({ href: '/dashboard' })} accentTheme="purple">
+                Dashboard
               </Settings.Item>
-              <Settings.Item icon={Users} accentTheme="orange">
-                Refer Your Friends
+              <Settings.Item icon={Brain} {...useLink({ href: '/brain' })} accentTheme="blue">
+                Brain
               </Settings.Item>
-              <Settings.Item icon={Milestone} accentTheme="gray">
-                Address Info
-              </Settings.Item>
-              <Settings.Item icon={ShoppingCart} accentTheme="blue">
-                Purchase History
+              <Settings.Item icon={Plane} {...useLink({ href: '/ceo' })} accentTheme="green">
+                C-Suite Roles
               </Settings.Item>
               <Settings.Item {...useLink({ href: '/settings' })} icon={Cog}>
                 Settings
@@ -57,9 +54,14 @@ export function ProfileScreen(props) {
               height={getTokens().size['3'].val}
             />
           </Avatar>
-          <Paragraph ta="center" ml="$-1.5">
-            {name ?? 'No Name'}
-          </Paragraph>
+          <YStack>
+            <SizableText size="$4" fontWeight="600">
+              {name ?? 'No Name'}
+            </SizableText>
+            <SizableText size="$2" color="$color10">
+              Solopreneur
+            </SizableText>
+          </YStack>
         </XStack>
       </YStack>
     </DrawerContentScrollView>

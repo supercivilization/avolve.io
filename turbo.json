@@ -10,12 +10,30 @@
       "cache": false,
       "persistent": true
     },
-    "lint": {},
-    "//#check:type": {},
-    "lint:fix": {},
+    "lint": {
+      "dependsOn": ["^lint"],
+      "outputs": []
+    },
+    "check:type": {
+      "dependsOn": ["^check:type"],
+      "outputs": []
+    },
+    "//#check:type": {
+      "dependsOn": [],
+      "inputs": ["**/*.ts", "**/*.tsx", "tsconfig.json", "**/tsconfig.json"],
+      "outputs": []
+    },
+    "lint:fix": {
+      "outputs": []
+    },
     "clean": {
       "cache": false
     },
-    "check-circular-deps": {}
+    "check-circular-deps": {},
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"],
+      "inputs": ["**/*.ts", "**/*.tsx", "**/*.test.ts", "**/*.test.tsx"]
+    }
   }
 }

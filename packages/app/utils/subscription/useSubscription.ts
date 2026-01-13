@@ -97,12 +97,12 @@ export function useSubscription(): SubscriptionContextValue {
     queryFn: async (): Promise<SubscriptionData | null> => {
       if (!userId) return null
 
-      // First check direct user subscription
+      // First check direct user subscription (active OR trialing)
       const { data: userSub, error: userError } = await supabase
         .from('subscriptions')
         .select('tier, status, current_period_end, cancel_at_period_end, trial_end')
         .eq('user_id', userId)
-        .eq('status', 'active')
+        .in('status', ['active', 'trialing'])
         .order('created_at', { ascending: false })
         .limit(1)
         .single()
@@ -124,7 +124,7 @@ export function useSubscription(): SubscriptionContextValue {
           .from('subscriptions')
           .select('tier, status, current_period_end, cancel_at_period_end, trial_end')
           .eq('organization_id', orgMember.organization_id)
-          .eq('status', 'active')
+          .in('status', ['active', 'trialing'])
           .order('created_at', { ascending: false })
           .limit(1)
           .single()

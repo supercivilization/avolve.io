@@ -5,22 +5,12 @@ import { useRouter } from 'solito/router'
 
 const steps: OnboardingStepInfo[] = [
   {
-    theme: 'orange',
+    theme: 'purple',
     Content: () => (
       <StepContent
-        title="Kickstart"
+        title="Master 5 Roles"
         icon={Sparkles}
-        description="Auth, profile, settings, adaptive layouts and many more ready for you to build on top of"
-      />
-    ),
-  },
-  {
-    theme: 'green',
-    Content: () => (
-      <StepContent
-        title="Updates"
-        icon={ArrowUp}
-        description="As we make the starter better, we'll keep sending PRs with our GitHub app so your app keeps improving"
+        description="Step into the CEO, CMO, CVO, COO, and CFO seats. Run your business like a pilot flies a plane."
       />
     ),
   },
@@ -28,9 +18,19 @@ const steps: OnboardingStepInfo[] = [
     theme: 'blue',
     Content: () => (
       <StepContent
-        title="Deploy"
+        title="AI-Powered Brain"
+        icon={ArrowUp}
+        description="Upload documents, add notes, and chat with your AI business advisor. Your knowledge, always at hand."
+      />
+    ),
+  },
+  {
+    theme: 'green',
+    Content: () => (
+      <StepContent
+        title="Build & Soar"
         icon={Rocket}
-        description="The Takeout starter is the best way to go from zero to deploy and target all platforms at the same time."
+        description="Track progress, follow proven frameworks, and accelerate your growth as a solopreneur."
       />
     ),
   },

@@ -159,11 +159,11 @@ const EventCards = () => {
           </View>
         )}
 
-        <Theme name="blue_alt1">
+        <Theme name="purple_alt1">
           <Banner cur="pointer">
-            <H4>Upgrade Now!</H4>
+            <H4>Unlock Your C-Suite</H4>
             <Paragraph size="$2" mt="$1">
-              Upgrade to access exclusive features and more!
+              Upgrade to access AI coaching, advanced tools, and more!
             </Paragraph>
           </Banner>
         </Theme>
@@ -194,8 +194,8 @@ const TodoList = () => {
 }
 
 const todoData = [
-  { label: 'Contribute to OSS', checked: false },
-  { label: 'Contribute to OSS', checked: true },
-  { label: 'Upgrade to the new Expo version', checked: false },
-  { label: 'Do the dishes', checked: false },
+  { label: 'Define your mission statement', checked: false },
+  { label: 'Set up 5-account financial system', checked: false },
+  { label: 'Complete StoryBrand BrandScript', checked: false },
+  { label: 'Document core business processes', checked: false },
 ]

@@ -1,5 +1,5 @@
 {
-  "name": "unistack",
+  "name": "avolve",
   "private": true,
   "workspaces": [
     "apps/*",

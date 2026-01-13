@@ -6,6 +6,7 @@ import { createClient } from '@supabase/supabase-js'
 import type { SearchResponse } from 'app/features/brain/types'
 import { BrainSearchRequestSchema, validateRequest, sanitizeInput } from '../../../lib/validation'
 import { checkRateLimit, setRateLimitHeaders, RATE_LIMITS } from '../../../lib/rate-limit'
+import { getSubscriptionStatus, hasFeatureAccess } from '../../../lib/subscription'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
@@ -33,6 +34,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     if (authError || !user) {
       return res.status(401).json({ error: 'Invalid token' })
+    }
+
+    // Check subscription status
+    const subscriptionStatus = await getSubscriptionStatus(supabase, user.id)
+
+    // Require at least VIP tier for Brain search
+    if (!subscriptionStatus.tier || !hasFeatureAccess(subscriptionStatus.tier, 'ai_chat')) {
+      return res.status(403).json({
+        error: 'Subscription required',
+        message: 'Brain search requires an active subscription',
+        upgrade_url: '/pricing',
+      })
     }
 
     // Rate limiting - check before processing

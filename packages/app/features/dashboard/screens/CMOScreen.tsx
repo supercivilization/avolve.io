@@ -20,7 +20,6 @@ import {
   XStack,
   YStack,
 } from '@my/ui'
-import { useLink } from 'solito/link'
 
 import { useUser } from 'app/utils/useUser'
 import { useSubscription } from 'app/utils/subscription'
@@ -30,23 +29,24 @@ import { DomainKnowledgePanel } from 'app/features/brain'
 interface ActionCardProps {
   title: string
   description: string
-  href: string
   icon: React.ReactNode
-  status?: 'complete' | 'in-progress' | 'not-started'
+  status?: 'complete' | 'in-progress' | 'not-started' | 'coming-soon'
+  onPress?: () => void
 }
 
-function ActionCard({ title, description, href, icon, status = 'not-started' }: ActionCardProps) {
-  const linkProps = useLink({ href })
+function ActionCard({ title, description, icon, status = 'coming-soon', onPress }: ActionCardProps) {
+  const isComingSoon = status === 'coming-soon'
 
   return (
     <Card
-      {...linkProps}
       padding="$4"
       borderRadius="$4"
-      hoverStyle={{ backgroundColor: '$color3' }}
-      pressStyle={{ scale: 0.98 }}
+      hoverStyle={isComingSoon ? {} : { backgroundColor: '$color3' }}
+      pressStyle={isComingSoon ? {} : { scale: 0.98 }}
       animation="quick"
-      cursor="pointer"
+      cursor={isComingSoon ? 'default' : 'pointer'}
+      opacity={isComingSoon ? 0.7 : 1}
+      onPress={isComingSoon ? undefined : onPress}
     >
       <XStack gap="$3" alignItems="center">
         <YStack
@@ -60,18 +60,25 @@ function ActionCard({ title, description, href, icon, status = 'not-started' }: 
           {icon}
         </YStack>
         <YStack flex={1} gap="$1">
-          <SizableText size="$4" fontWeight="600">
-            {title}
-          </SizableText>
+          <XStack gap="$2" alignItems="center">
+            <SizableText size="$4" fontWeight="600">
+              {title}
+            </SizableText>
+            {isComingSoon && (
+              <XStack backgroundColor="$color4" paddingHorizontal="$2" paddingVertical="$1" borderRadius="$2">
+                <SizableText size="$1" color="$color10">Coming Soon</SizableText>
+              </XStack>
+            )}
+          </XStack>
           <Paragraph size="$3" color="$color11">
             {description}
           </Paragraph>
         </YStack>
         {status === 'complete' ? (
           <CheckCircle size={20} color="$green10" />
-        ) : (
+        ) : !isComingSoon ? (
           <ArrowRight size={18} color="$color10" />
-        )}
+        ) : null}
       </XStack>
     </Card>
   )
@@ -238,24 +245,24 @@ function SalesTalkingPointsSection() {
 }
 
 function MarketingToolsSection() {
-  const tools = [
+  const tools: Array<Omit<ActionCardProps, 'onPress'>> = [
     {
       title: 'Lead Generator',
       description: 'Create a compelling lead magnet that captures email addresses',
-      href: '/dashboard/cmo/lead-generator',
       icon: <Target size={22} color="$blue10" />,
+      status: 'coming-soon',
     },
     {
       title: 'Email Sequences',
       description: 'Nurture leads with automated email campaigns',
-      href: '/dashboard/cmo/email-sequences',
       icon: <MessageCircle size={22} color="$blue10" />,
+      status: 'coming-soon',
     },
     {
       title: 'Sales Pipeline',
       description: 'Track and manage your sales relationships',
-      href: '/dashboard/cmo/pipeline',
       icon: <Users size={22} color="$blue10" />,
+      status: 'coming-soon',
     },
   ]
 

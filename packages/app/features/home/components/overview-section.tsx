@@ -1,9 +1,30 @@
+'use client'
+
 import { Button, H4, OverviewCard, Theme, XStack, YStack } from '@my/ui'
 import { ArrowRight } from '@tamagui/lucide-icons'
 
 import { ScrollAdapt } from './scroll-adapt'
+import { useDashboardStats } from '../hooks/useDashboardStats'
 
 export const OverviewSection = () => {
+  const { profileCompletion, brainStats, roleStats } = useDashboardStats()
+
+  // Calculate metrics based on real data
+  // CEO Mission Clarity = profile completion + brain docs
+  const missionClarity = Math.min(
+    100,
+    Math.round((profileCompletion.percentage + brainStats.documentCount * 5) / 2)
+  )
+
+  // CMO Marketing Score = based on content creation (brain entities)
+  const marketingScore = Math.min(100, brainStats.entityCount * 10)
+
+  // CVO Product Health = brain conversations (product knowledge queries)
+  const productHealth = Math.min(100, brainStats.conversationCount * 15)
+
+  // COO Operations = roles visited completion
+  const operations = Math.round((roleStats.rolesVisited / roleStats.totalRoles) * 100)
+
   return (
     <YStack>
       <XStack px="$4.5" ai="center" gap="$2" jc="space-between" mb="$4">
@@ -19,22 +40,32 @@ export const OverviewSection = () => {
 
       <ScrollAdapt itemWidth={180} withSnap>
         <XStack fw="wrap" ai="flex-start" jc="flex-start" px="$4" gap="$8" mb="$4">
-          <OverviewCard title="MRR" value="$18,908" badgeText="+0.5%" badgeState="success" />
-
-          <OverviewCard title="ARR" value="$204,010" badgeText="+40.5%" badgeState="success" />
-
           <OverviewCard
-            title="Today's new users"
-            value="4 Users"
-            badgeText="+25%"
-            badgeState="success"
+            title="Mission Clarity"
+            value={`${missionClarity}%`}
+            badgeText="CEO"
+            badgeState={missionClarity >= 50 ? 'success' : 'warning'}
           />
 
           <OverviewCard
-            title="Weekly Post Views"
-            value="30,104"
-            badgeText="-2%"
-            badgeState="failure"
+            title="Marketing Score"
+            value={`${marketingScore}%`}
+            badgeText="CMO"
+            badgeState={marketingScore >= 50 ? 'success' : 'warning'}
+          />
+
+          <OverviewCard
+            title="Product Health"
+            value={`${productHealth}%`}
+            badgeText="CVO"
+            badgeState={productHealth >= 50 ? 'success' : 'warning'}
+          />
+
+          <OverviewCard
+            title="Operations"
+            value={`${operations}%`}
+            badgeText="COO"
+            badgeState={operations >= 50 ? 'success' : 'warning'}
           />
         </XStack>
       </ScrollAdapt>

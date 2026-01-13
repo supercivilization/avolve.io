@@ -1,10 +1,14 @@
+'use client'
+
+import { useMemo } from 'react'
 import { validToken, AchievementCard, Button, H4, Theme, XStack, YStack } from '@my/ui'
 import type { ThemeName } from 'tamagui'
-import { ArrowRight, DollarSign } from '@tamagui/lucide-icons'
+import { ArrowRight, Brain, Compass, Plane, User } from '@tamagui/lucide-icons'
 import { Platform } from 'react-native'
 import { useLink } from 'solito/link'
 
 import { ScrollAdapt } from './scroll-adapt'
+import { useDashboardStats } from '../hooks/useDashboardStats'
 
 const halfMinusSpace = validToken(
   Platform.select({
@@ -25,34 +29,8 @@ interface AchievementData {
   progress: { current: number; full: number; label: string }
   theme: ThemeName
   href: string
+  icon: typeof Plane
 }
-
-const achievementData: AchievementData[] = [
-  {
-    title: 'Make your first 100K',
-    progress: { current: 81_500, full: 100_000, label: 'dollars made' },
-    theme: 'green',
-    href: '#',
-  },
-  {
-    title: 'Build your community',
-    progress: { current: 280, full: 500, label: 'members' },
-    theme: 'blue',
-    href: '#',
-  },
-  {
-    title: 'Set up your profile',
-    progress: { current: 2, full: 3, label: 'steps completed' },
-    theme: 'orange',
-    href: '#',
-  },
-  {
-    title: 'Refer 5 friends',
-    progress: { current: 4, full: 5, label: 'friends referred' },
-    theme: 'pink',
-    href: '#',
-  },
-]
 
 // Component wrapper to properly use hooks outside of map callback
 function AchievementCardWrapper({ achievement }: { achievement: AchievementData }) {
@@ -68,11 +46,11 @@ function AchievementCardWrapper({ achievement }: { achievement: AchievementData 
         $gtLg={{
           w: quarterMinusSpace,
         }}
-        icon={DollarSign}
+        icon={achievement.icon}
         title={achievement.title}
         progress={achievement.progress}
         action={{
-          text: 'Boost your sales',
+          text: 'Get started',
           props: linkProps,
         }}
       />
@@ -81,6 +59,50 @@ function AchievementCardWrapper({ achievement }: { achievement: AchievementData 
 }
 
 export const AchievementsSection = () => {
+  const { profileCompletion, brainStats, roleStats } = useDashboardStats()
+
+  const achievementData: AchievementData[] = useMemo(
+    () => [
+      {
+        title: 'Master CEO Role',
+        progress: { current: roleStats.ceoVisited ? 1 : 0, full: 5, label: 'tasks completed' },
+        theme: 'purple',
+        href: '/ceo',
+        icon: Plane,
+      },
+      {
+        title: 'Build Your Brain',
+        progress: { current: brainStats.documentCount, full: 10, label: 'documents added' },
+        theme: 'blue',
+        href: '/brain',
+        icon: Brain,
+      },
+      {
+        title: 'Complete Profile',
+        progress: {
+          current: profileCompletion.completedFields,
+          full: profileCompletion.totalFields,
+          label: 'sections filled',
+        },
+        theme: 'orange',
+        href: '/profile/edit',
+        icon: User,
+      },
+      {
+        title: 'Explore All Roles',
+        progress: {
+          current: roleStats.rolesVisited,
+          full: roleStats.totalRoles,
+          label: 'roles visited',
+        },
+        theme: 'green',
+        href: '/dashboard',
+        icon: Compass,
+      },
+    ],
+    [profileCompletion, brainStats, roleStats]
+  )
+
   return (
     <YStack>
       <XStack px="$4.5" ai="center" gap="$2" jc="space-between" mb="$4">

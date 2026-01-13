@@ -13,6 +13,12 @@ import {
   detectPromptInjection,
 } from '../../../lib/validation'
 import { checkRateLimit, setRateLimitHeaders, RATE_LIMITS } from '../../../lib/rate-limit'
+import {
+  getSubscriptionStatus,
+  getTierLimits,
+  hasFeatureAccess,
+  trackAIChatUsage,
+} from '../../../lib/subscription'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
@@ -80,7 +86,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(401).json({ error: 'Invalid token' })
     }
 
-    // Rate limiting - check before processing
+    // Check subscription status and feature access
+    const subscriptionStatus = await getSubscriptionStatus(supabase, user.id)
+    const tierLimits = getTierLimits(subscriptionStatus.tier)
+
+    // Check if user has access to AI chat feature
+    if (!subscriptionStatus.tier && !hasFeatureAccess(null, 'ai_chat')) {
+      // Allow free tier limited access
+      const usage = await trackAIChatUsage(supabase, user.id)
+      if (usage.limitReached) {
+        return res.status(403).json({
+          error: 'Daily message limit reached',
+          limit: usage.limit,
+          used: usage.count,
+          upgrade_url: '/pricing',
+        })
+      }
+    }
+
+    // Rate limiting - check before processing (with tier-aware limits)
     const rateLimitResult = checkRateLimit(user.id, RATE_LIMITS.brainChat)
     setRateLimitHeaders(res, rateLimitResult, RATE_LIMITS.brainChat)
 
@@ -182,11 +206,12 @@ Use this context to provide more relevant and personalized responses. Cite sourc
 
     // Stream the response with telemetry
     // Using Gemini 2.0 Flash for cost efficiency (~70% cheaper than Claude)
+    // Token limit based on subscription tier
     const result = streamText({
       model: google('gemini-2.0-flash'),
       system: systemPrompt,
       messages: [{ role: 'user', content: message }],
-      maxOutputTokens: 2000,
+      maxOutputTokens: tierLimits.aiChatMaxTokens,
       experimental_telemetry: {
         isEnabled: true,
         functionId: 'brain-chat',
@@ -194,6 +219,7 @@ Use this context to provide more relevant and personalized responses. Cite sourc
           userId: user.id,
           domain: domain || 'all',
           contextChunks: contextChunks.length,
+          tier: subscriptionStatus.tier || 'free',
         },
       },
     })

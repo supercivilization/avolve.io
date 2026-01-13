@@ -25,6 +25,7 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 import { useUser } from 'app/utils/useUser'
+import { FeatureGate } from 'app/utils/subscription'
 import { BrainChatUI } from '../components/BrainChatUI'
 import { KnowledgeSearch } from '../components/KnowledgeSearch'
 import { AddSourceSheet } from '../components/AddSourceSheet'
@@ -128,27 +129,33 @@ export function BrainScreen() {
         </Tabs.List>
 
         <Tabs.Content value="chat" flex={1}>
-          <BrainChatUI
-            domain={activeDomain}
-            placeholder={
-              activeDomain
-                ? `Ask about ${activeDomain.toUpperCase()} topics...`
-                : 'Ask your brain anything...'
-            }
-            welcomeMessage={
-              activeDomain
-                ? `I'm your ${DOMAIN_CONFIG[activeDomain].label} advisor. Ask me anything about ${DOMAIN_CONFIG[activeDomain].description.toLowerCase()}.`
-                : "I'm your AI business advisor. Ask me anything about your knowledge base."
-            }
-          />
+          <FeatureGate feature="ai_chat">
+            <BrainChatUI
+              domain={activeDomain}
+              placeholder={
+                activeDomain
+                  ? `Ask about ${activeDomain.toUpperCase()} topics...`
+                  : 'Ask your brain anything...'
+              }
+              welcomeMessage={
+                activeDomain
+                  ? `I'm your ${DOMAIN_CONFIG[activeDomain].label} advisor. Ask me anything about ${DOMAIN_CONFIG[activeDomain].description.toLowerCase()}.`
+                  : "I'm your AI business advisor. Ask me anything about your knowledge base."
+              }
+            />
+          </FeatureGate>
         </Tabs.Content>
 
         <Tabs.Content value="search" flex={1} padding="$4">
-          <KnowledgeSearch domain={activeDomain} />
+          <FeatureGate feature="ai_chat">
+            <KnowledgeSearch domain={activeDomain} />
+          </FeatureGate>
         </Tabs.Content>
 
         <Tabs.Content value="sources" flex={1} padding="$4">
-          <SourcesPanel onAddSource={() => setShowAddSource(true)} />
+          <FeatureGate feature="ai_chat">
+            <SourcesPanel onAddSource={() => setShowAddSource(true)} />
+          </FeatureGate>
         </Tabs.Content>
       </Tabs>
 

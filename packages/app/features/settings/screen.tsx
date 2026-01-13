@@ -75,10 +75,10 @@ export const SettingsScreen = () => {
             <Settings.Group>
               <Settings.Item
                 icon={Twitter}
-                onPress={() => redirect('https://twitter.com/tamagui_js')}
+                onPress={() => redirect('https://twitter.com/aikifounder')}
                 accentTheme="blue"
               >
-                Our Twitter
+                Follow Us
               </Settings.Item>
             </Settings.Group>
             {isWeb && <Separator boc="$color3" mx="$-4" bw="$0.25" />}

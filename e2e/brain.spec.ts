@@ -1,23 +1,33 @@
 import { test, expect } from '@playwright/test'
+import { test as authTest } from './fixtures/auth.fixture'
 
 /**
  * Brain Feature E2E Tests
  *
- * STATUS: All tests are test.skip() pending feature completion.
+ * STATUS: Basic tests enabled. Full tests require authenticated session with seeded data.
  *
- * Prerequisites to enable these tests:
- * 1. Authentication fixtures - need test user login flow
- * 2. Brain feature UI completion - tests reference data-testid attributes
- *    that need to be added to components:
- *    - brain-chat-input
- *    - add-source-note, add-source-url, add-source-file
- *    - note-title-input, note-content-input, note-submit
- *    - url-input, url-title-input, url-submit
- *    - file-title-input, file-upload-submit
- *    - send-message, assistant-message
- *
- * To enable: Remove test.skip() after adding required test IDs and auth fixtures.
+ * To run all tests:
+ * 1. Set E2E_TEST_USER_EMAIL and E2E_TEST_USER_PASSWORD env vars
+ * 2. Ensure test user has ai_chat feature access (VIP subscription)
+ * 3. Run: yarn test:e2e
  */
+
+test.describe('Brain Page - Public Access', () => {
+  test('should redirect to sign-in when accessing brain page', async ({ page }) => {
+    await page.goto('/brain')
+    // Should redirect to sign-in for unauthenticated users
+    await expect(page).toHaveURL(/.*sign-in/)
+  })
+
+  test('should show sign-in page elements after redirect', async ({ page }) => {
+    await page.goto('/brain')
+    await page.waitForLoadState('networkidle')
+
+    // Verify we're on sign-in page
+    await expect(page.getByRole('heading', { name: /sign in/i })).toBeVisible()
+    await expect(page.getByLabel(/email/i)).toBeVisible()
+  })
+})
 
 test.describe('Project Brain Feature', () => {
   // Tests require authenticated user and completed Brain UI
@@ -255,5 +265,44 @@ test.describe('Brain Chat', () => {
     // Response should include citations if knowledge exists
     await expect(page.getByTestId('assistant-message')).toBeVisible({ timeout: 30000 })
     // Citations would be checked here
+  })
+})
+
+// Authenticated tests using auth fixture
+authTest.describe('Brain Feature - Authenticated', () => {
+  authTest.skip(
+    !process.env.E2E_TEST_USER_EMAIL || !process.env.E2E_TEST_USER_PASSWORD,
+    'Requires E2E_TEST_USER_EMAIL and E2E_TEST_USER_PASSWORD env vars'
+  )
+
+  authTest('should access brain page when authenticated', async ({ authenticatedPage }) => {
+    await authenticatedPage.goto('/brain')
+    await authenticatedPage.waitForLoadState('networkidle')
+
+    // Should see brain page content, not sign-in redirect
+    await expect(authenticatedPage.getByText(/brain/i)).toBeVisible()
+  })
+
+  authTest('should display brain tabs when authenticated', async ({ authenticatedPage }) => {
+    await authenticatedPage.goto('/brain')
+    await authenticatedPage.waitForLoadState('networkidle')
+
+    // Should see the three tabs
+    await expect(authenticatedPage.getByRole('tab', { name: /chat/i })).toBeVisible()
+    await expect(authenticatedPage.getByRole('tab', { name: /search/i })).toBeVisible()
+    await expect(authenticatedPage.getByRole('tab', { name: /sources/i })).toBeVisible()
+  })
+
+  authTest('should switch between brain tabs', async ({ authenticatedPage }) => {
+    await authenticatedPage.goto('/brain')
+    await authenticatedPage.waitForLoadState('networkidle')
+
+    // Click Search tab
+    await authenticatedPage.getByRole('tab', { name: /search/i }).click()
+    await expect(authenticatedPage.getByPlaceholder(/search/i)).toBeVisible()
+
+    // Click Sources tab
+    await authenticatedPage.getByRole('tab', { name: /sources/i }).click()
+    await expect(authenticatedPage.getByText(/knowledge sources/i)).toBeVisible()
   })
 })
