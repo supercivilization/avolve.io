@@ -12,9 +12,10 @@
 -- Jan 7, 2026 - Initial schema
 -- ============================================================================
 
--- Enable required extensions
-create extension if not exists vector with schema extensions;
-create extension if not exists pg_trgm with schema extensions;
+-- Note: vector and pg_trgm extensions are enabled in 20260106235959_enable_pgvector.sql
+
+-- Set search path to include extensions schema for vector type
+SET search_path TO public, extensions;
 
 -- ============================================================================
 -- ENUMS

@@ -1,9 +1,6 @@
--- Enable UUID extension
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
 -- Achievements table
 CREATE TABLE achievements (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   profile_id UUID REFERENCES auth.users(id),
   name VARCHAR(255) NOT NULL,
   progress INTEGER NOT NULL,
@@ -15,7 +12,7 @@ CREATE TABLE achievements (
 
 -- Events table
 CREATE TABLE events (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name VARCHAR(255) NOT NULL,
   description TEXT,
   start_time TIMESTAMPTZ,
@@ -27,7 +24,7 @@ CREATE TABLE events (
 
 -- Categories table
 CREATE TABLE categories (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name VARCHAR(255) NOT NULL,
   created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -35,7 +32,7 @@ CREATE TABLE categories (
 
 -- Posts table
 CREATE TABLE posts (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   profile_id UUID REFERENCES auth.users(id),
   category_id UUID REFERENCES categories(id),
   title VARCHAR(255) NOT NULL,
@@ -47,7 +44,7 @@ CREATE TABLE posts (
 
 -- User Stats table
 CREATE TABLE user_stats (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   profile_id UUID REFERENCES auth.users(id),
   mrr DECIMAL(10,2),
   arr DECIMAL(10,2),
@@ -58,7 +55,7 @@ CREATE TABLE user_stats (
 
 -- Referrals table
 CREATE TABLE referrals (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   referrer_id UUID REFERENCES auth.users(id),
   referred_id UUID REFERENCES auth.users(id),
   created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -67,7 +64,7 @@ CREATE TABLE referrals (
 
 -- Projects table
 CREATE TABLE projects (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     profile_id UUID REFERENCES auth.users(id),
     name VARCHAR(255) NOT NULL,
     description TEXT,

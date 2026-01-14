@@ -165,7 +165,7 @@ $$ language plpgsql security definer;
 
 -- Schedule cron job to process embeddings every minute
 -- Note: This requires pg_cron extension (Supabase Pro)
-do $$
+do $outer$
 begin
   -- Check if cron schema exists
   if exists (select 1 from pg_namespace where nspname = 'cron') then
@@ -176,7 +176,7 @@ begin
     perform cron.schedule(
       'process-embedding-queue',
       '* * * * *',  -- Every minute
-      $$select process_embedding_queue_batch()$$
+      $cmd$select process_embedding_queue_batch()$cmd$
     );
 
     raise notice 'Cron job scheduled: process-embedding-queue (every minute)';
@@ -187,10 +187,10 @@ exception
   when others then
     raise notice 'Could not schedule cron job: %', SQLERRM;
 end;
-$$;
+$outer$;
 
 -- Cleanup job - remove completed queue items older than 24 hours
-do $$
+do $outer$
 begin
   if exists (select 1 from pg_namespace where nspname = 'cron') then
     perform cron.unschedule('cleanup-embedding-queue');
@@ -198,7 +198,7 @@ begin
     perform cron.schedule(
       'cleanup-embedding-queue',
       '0 * * * *',  -- Every hour
-      $$delete from embedding_queue where status = 'completed' and processed_at < now() - interval '24 hours'$$
+      $cmd$delete from embedding_queue where status = 'completed' and processed_at < now() - interval '24 hours'$cmd$
     );
 
     raise notice 'Cron job scheduled: cleanup-embedding-queue (every hour)';
@@ -207,7 +207,7 @@ exception
   when others then
     raise notice 'Could not schedule cleanup job: %', SQLERRM;
 end;
-$$;
+$outer$;
 
 -- ============================================================================
 -- HELPER FUNCTION: Manual queue processing
