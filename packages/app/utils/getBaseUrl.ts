@@ -1,6 +1,6 @@
 import { isWeb } from '@my/ui'
 
-import { replaceLocalhost } from './getLocalhost.native'
+import { replaceLocalhost } from './getLocalhost'
 
 export function _getBaseUrl() {
   if (isWeb && typeof window !== 'undefined') {
