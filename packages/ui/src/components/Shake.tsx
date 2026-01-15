@@ -1,5 +1,6 @@
 import { useConfiguration } from '@tamagui/web'
 import { useEffect } from 'react'
+import { View } from 'tamagui'
 
 export const Shake = ({
   shakeKey,
@@ -25,6 +26,8 @@ export const Shake = ({
   const { animationDriver } = useConfiguration()
   if (!animationDriver) throw new Error('No animation driver found.')
   const { useAnimatedNumber, useAnimatedNumberStyle, View: AnimatedView } = animationDriver
+  // CSS animation driver doesn't provide View - use Tamagui View as fallback
+  const ViewComponent = AnimatedView || View
   const animatedNumber = useAnimatedNumber(0)
 
   useEffect(() => {
@@ -55,5 +58,5 @@ export const Shake = ({
     }
   })
 
-  return <AnimatedView style={animatedStyle}>{children}</AnimatedView>
+  return <ViewComponent style={animatedStyle}>{children}</ViewComponent>
 }
